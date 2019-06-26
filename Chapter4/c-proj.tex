@@ -6,10 +6,8 @@
 
 
 
-\chapter{Para--c--projective compactifications}
+\chapter{Para--c--projective Compactifications of the Einstein Metrics} \label{chap:c-proj}
 
-\section{Para-c-projective compactifications of Einstein metrics} 
-\label{section_c}
 
 In \cite{CG} the concept of $c$--projective compactification was
 defined. It is based on almost $c$--projective geometry \cite{c_proj},
@@ -17,10 +15,7 @@ an analogue of projective geometry defined for almost complex
 manifolds $(M,J)$ in which the equivalence class of connections
 defining the $c$--projective structure must be \textit{complex} and
 \textit{minimal}.\footnote{Recall that a connection on an almost
-  complex manifold $(M,J)$ is called \textit{complex} if it preserves
-  $J$ and \textit{minimal} if the torsion is just the Nijenhuis tensor
-  of $J$ up to a constant factor.} Here we review the definition of
-$c$--projective compactification, modifying to the ``para'' case where
+complex manifold $(M,J)$ is called \textit{complex} if it preserves $J$ and \textit{minimal} if the torsion is just the Nijenhuis tensor of $J$ up to a constant factor.} Here we review the definition of $c$--projective compactification, modifying to the ``para'' case where
 the para--almost--complex structure squares to $Id$ rather than $-Id$. We
 then introduce a class of $2n$--dimensional, neutral signature
 Einstein metrics arising from projective structures in dimension $n$,
@@ -77,37 +72,11 @@ ${\mathcal{U}}$, and a non--zero constant $C$ such that
 Then $g$ is $c$--projectively compact.
 \end{theo}
 The statement in  Theorem \ref{CGthm} does not depend on the choice of $T$. Different choices of $T$ result in rescalings of the contact form $\theta$ on the boundary by a nowhere vanishing function.
-\section{Example: A class of neutral signature Einstein metrics} 
+
+\section{Compactifying the Dunajski--Mettler Class} 
 \label{section_4}
 \newcommand{\ol}[1]{\overline{#1}} \newcommand{\bp}{\boldsymbol{p}}
 \newcommand{\cT}{\mathcal{T}} \newcommand{\cE}{\mathcal{E}} 
-In this Section we shall  introduce a class of para--Hermitian metrics, which we will show to be para--$c$--projectively compact by virtue of Theorem \ref{CGthm}.
-\begin{defi}
-A projective structure $[\nabla]$ on an $n$--dimensional manifold $N$ is an equivalence class of torsion--free affine
-connection on $N$ which share the same unparametrised geodesics.  Two connections $\overline{\nabla}$ and $\nabla$
-belong to the same projective class if they are related by (\ref{connection}) for some one--form
-$\Upsilon$ on $N$.
-\end{defi}
-Given a projective structure $[\nabla]$ on an $n$--dimensional manifold $N$, there exists  a canonical neutral signature Einstein metric $g$ with non-zero scalar curvature, as well as a symplectic form $\Omega$, on the total space $M$ of a certain rank $n$ affine bundle over $N$. The general construction of this metric and the proof of the projective invariance has been presented in \cite{DM}. Here we shall give an explicit coordinate description from \cite{DM}. In Theorem \ref{metric} we shall show how to recover the metric and the symplectic form (\ref{main_metric}) from the natural pairing on the co-tractor bundle.
-
-The sections of the affine bundle $M \rightarrow N$ are in one-to-one
-correspondence with the $[\nabla]$ representative connections, \footnote{Rod @ Maciej: I don't understand this statement. What do you want to say here? Also how should the reader see that $T^*N$ turns up?}
-and
-hence the choice of a representative connection $\nabla \in [\nabla]$
-provides a diffeomorphism $T^*N \rightarrow M$. Pulling back the pair
-$(g,\Omega)$ with this diffeomorphism gives a pair
-$(g_{\nabla},\Omega_{\nabla})$ on $T^*N$ which -- in local coordinates
-$(x^i,\xi_i)$ on the cotangent bundle $\nu : T^*N \to N$ -- takes the
-form
-\begin{align}
-\label{main_metric}
-g&=\left(d\xi_i-\left(\Gamma_{ij}^k \xi_k-\xi_i\xi_j-\Rho_{(ij)}\right)d x^i\right)\odot d x^j,\\
-\Omega&=d \xi_i\wedge d x^i+\Rho_{[ij]}\d x^i\wedge d x^j,
-\quad\mbox{where}\quad
-i, j =1, \dots, n.
-\nonumber
-\end{align}
-Here $\Gamma^i_{jk}$ denote the Christoffel symbols and $\Rho_{ij}$ is the Schouten tensor of of $\nabla$. 
 
 In \cite{DM} it was shown that the manifold $M$ can be identified with the
 complement of
@@ -125,7 +94,7 @@ from Definition \ref{defi_1} will play a role of a submanifold manifold
 separating two open sets in $\mathbb{P}(\cT^*)$ in the sense described 
 in the next sub-Section.
 
-\subsection{The constructions in tractor terms}\label{tractor-ver}
+\section{The Dunajski--Mettler construction in tractor terms}\label{tractor-ver}
 Let the  projective structure $(N, [\nabla])$, be represented by
 some torsion free affine connection $\nabla$ on $N$, where   the latter has
 dimension at least 2.  Let $\cE(1)\rightarrow N$ be  the line bundle which is the standard
@@ -171,7 +140,7 @@ We begin with
 compactification of the construction in \cite{DM}. For simplicity let us assume that $N$ is
 orientable.
 
-\subsubsection{Compactification by line projectiviation:}
+\subsection{Compactification by line projectiviation:}
 On the total space of $\cT^*$ we pullback
 $\pi:\cT^*\to N$ along $\pi$ to get $\pi^*(\cT^*)\to \cT^*$ as a
 vector bundle over the total space $\cT^*$. By construction this
@@ -381,7 +350,7 @@ either the hypersurface $\mathcal{Z}(\tau)$ (if $n$ odd) is not
 orientable, or $\mathcal{M}$ (if $n$ even) is not orientable.  
 
 
-\subsubsection{Compactification by ray-projectiviation:}
+\subsection{Compactification by ray-projectiviation:}
 \label{ray_sub}
 Instead we may follow the construction above but instead define
 $\mathcal{M}:= \pi^*(\mathbb{P}_+(\cT^*))$, where $\mathbb{P}_+(\cT^*)$ is
@@ -399,7 +368,7 @@ according to the sign of $\tau$. Moreover each of $\mathcal{M}\setminus
 M_{\mp}$ is a manifold that is globally a para-c-projective
 compactification of $M_{\pm}$ in sense of Theorem \ref{CGthm}.
 
-\subsubsection{Remark on continuing the tractor approach}
+\subsection{Remark on continuing the tractor approach}
 It would be possible to achieve our main aims by continuing the
 tractor approach.  We will not pursue this here as we want to
 emphasise that with little effort the main result now follows directly
@@ -422,7 +391,7 @@ the main results then follow from the general holonomy theory in
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\subsection{The main theorem}
+\section{The main theorem}
 In the previous subsection \ref{ray_sub} we have presented a candidate 
 $\overline{M}\equiv\mathcal{M}\setminus M_{\mp}$ for a para-c-projective
 compactification of the Einstein para-Kahler manifold $(M, g, \Omega)$ given 
@@ -705,7 +674,7 @@ $
 
 
 
-\subsection{The model via an orbit decomposition}
+\section{The model via an orbit decomposition}
 
 In this section we describe here the flat (in the sense of parabolic
 geometries) model \cite{CDT13, DM} of our construction in tractor

@@ -4,4 +4,281 @@
 %*******************************************************************************
 
 
-\chapter{Introduction}
+\chapter{Introduction}\label{chap:intro}
+
+%The relationship of geometry to non--linear PDEs is close and has long been known.
+%\begin{itemize}
+%%\item Can define objects on a manifold satisfying certain properties expressed in terms of PDEs in the coordinates. e.g. GR. Generalises to projective and conformal geometry. (chapters \ref{chap:KK_lift} and \ref{chap:c-proj})
+%\item Results from integrable systems reveal unexpected examples of PDEs which can be expressed in terms of geometrical conditions. (Ward). (chapter \ref{chap:EW_and_toda})
+%\item Geometry also important in the theory of solitons (e.g. Manton and Sutcliffe.) (chapter \ref{chap:wormhole}).
+%\end{itemize} 
+
+This thesis splits naturally into two parts. The first four chapters are concerned with a class of Einstein manifolds constructed in recent work by Dunajski and Mettler \cite{DM}, and discusses a number geometrical structures which are related to this class. There is a subclass which can be associated with so--called \textit{Einstein--Weyl} structures in dimension $3$, and hence with solutions of the $SU(\infty)$--Toda equation, a non--linear PDE arising in Toda field theory. Chapter \ref{chap:wormhole} also links geometry to a non--linear PDE, with the PDE arising as the equations of motion of the $\phi^4$--theory on a psuedo--Riemannian wormhole manifold.
+
+Chapter \ref{chap:wormhole} is self--contained, and possesses its own introduction. The remainder of this chapter will introduce some preliminaries for the first part of the thesis, culminating in the results of \cite{DM} on the Einstein manifolds which will form the basis of chapters \ref{chap:EW_and_toda}--\ref{chap:c-proj}. 
+
+%\section{Overview of Chapters \ref{chap:EW_and_toda}--\ref{chap:c-proj}}
+
+
+\begin{defi} A projective structure $(N,[\nabla])$
+on a manifold $N$ is an equivalence class $[\nabla]$ of affine connections
+on $N$ which have the same unparametrised geodesics. For two sets
+of connection components $\Gamma_{jk}^{i}$ to represent connections
+in the same projective class, they must be related by
+\begin{equation}
+\delta\Gamma_{jk}^{i}=\delta_{j}^{i}\Upsilon_{k}+\delta_{k}^{i}\Upsilon_{j}\label{eq:proj_change}
+\end{equation}
+for some 1-form $\Upsilon.$
+\end{defi}
+
+Given a projective structure on a manifold $N$ of dimension $n$,
+Dunajski and Mettler \cite{DM} construct a neutral signature Einstein metric $g$ with non-zero
+scalar curvature on a certain rank $n$ affine bundle $M\rightarrow N$.
+The $2n$--dimensional space $M$ also carries a natural symplectic form $\Omega$, and
+has a number of interesting properties which are worthy of further
+study.
+
+One reason this construction is interesting is that for $n=2$, the conformal
+curvature of $g$ is anti-self-dual. Recall that the Hodge operator
+$\star$ defined by a (Euclidean or) neutral signature metric in four
+dimensions is an involution on two-forms (i.e. squares to the identity).
+It thus has eigenvalues $\pm1$, and the space of two-forms splits
+into the corresponding eigenspaces, which are referred to as self-dual
+(SD) or anti-self-dual (ASD) respectively. Due to its index symmetries,
+the Weyl tensor can be thought of as a map from two-forms to two-forms,
+and therefore has a corresponding decomposition. Since the Weyl tensor
+encodes the conformal curvature, we say that a conformal or Riemannian
+manifold whose Weyl tensor is ASD is equipped with an \textit{ASD
+conformal structure}.
+
+The field equations corresponding to anti-self-duality of the Weyl
+tensor in four dimensions can be solved by a twistor construction,
+and are thus \textit{integrable. }This means that any systems of differential
+equations which can be obtained from them by symmetry reduction should
+also be integrable \cite{Tod1995}. In particular, the class of dispersionless
+integrable systems in 2+1 and 3 dimensions arise in this way. The
+construction \cite{DM} provides some examples of
+ASD conformal structures in neutral signature which, in the presence
+of a (non-null) symmetry, give rise to solutions of an integrable
+system called the $SU(\infty)$-Toda field equation via a $2+1$-dimensional
+Einstein-Weyl structure. In chapter \ref{chap:EW_and_toda} we discuss the extraction
+of all possible Toda solutions obtainable in this way.
+
+Additionally, $(M,g)$ is interesting by virtue of being an Einstein
+space. In chapter \ref{chap:KK_lift} we construct a Kaluza-Klein lift of $g$ to a metric $\mathcal{G}$ in $2n+1$ dimensions which we prove is also Einstein.
+
+Finally, it turns out that $(M,g)$ admits a so--called \textit{c--projective compactification} \cite{CG}. A proof of this fact is the main goal of chapter \ref{chap:c-proj}.
+
+
+
+
+\section{The Cartan Geometry of a Projective Structure}
+
+One way of understanding the construction of $(M,g)$ in \cite{DM}
+is via the Cartan bundle of the projective structure $(N,[\nabla])$.
+By virtue of being modelled on $\mathbb{RP}^{n},$ which can be viewed
+as a homogeneous space, projective structures admit a description
+as Cartan geometries. These generalise Klein's Erlangen programme,
+a study of homogeneous spaces $G/H$, to the curved case, in which
+the total space $G$ is replaced by a principal right $H$-bundle
+over a manifold $N$ such that the tangent space to $N$ is isomorphic
+to the Lie algebra quotient $\mathfrak{g}/\mathfrak{h}$. In the Riemannian
+case, this corresponds to generalising $\mathbb{R}^{n}\cong\mathrm{Euc}(n)/SO(n)$
+to a general, curved Riemannian manifold, whose orthonormal frame
+bundle is a principal $SO(n)$ bundle and whose tangent spaces are
+modelled on $\mathbb{R}^{n}\cong\mathfrak{Euc}(n)/\mathfrak{so}(n)$.
+
+The theory of Cartan geometries was developed as part of Cartan's
+\textit{method of moving frames}. In Riemannian geometry, one has
+an obvious subclass of frames which are ``adapted'' to the metric,
+i.e. those which are orthonormal. The idea of Cartan's method is to
+pick out some adapted frames for manifolds equipped with some non-metric
+structure. The bundle of such frames over a manifold is then a principal
+bundle $\pi:P\rightarrow S$ with structure group $H$.
+
+In addition, $P$ is equipped with a $\mathfrak{g}$-valued one-form
+$\theta$ called the Cartan connection. It satisfies a number of properties,
+in particular equivariance, i.e. $R_{h}^{*}\theta=\mathrm{Ad}(h^{-1})\theta$
+for all $h\in H$. It also defines an isomorphism $\theta:T_{p}P\rightarrow\mathfrak{g}$
+every point $p\in P$ such that the vertical subspace $V_{p}P\subset T_{p}P$
+is mapped to $\mathfrak{h}$ and the horizontal subpace $H_{p}P\subset T_{p}P$
+is defined as the inverse image of $\mathfrak{g}/\mathfrak{h}$. Note
+that it is not a connection in the usual sense of a principal bundle
+connection, since it takes value in a Lie algebra larger than that
+of the structure group. Further details can be found in \cite{Sharpe1997}.
+
+In the case of a projective surface, the model is $\mathbb{RP}^{n}\cong SL(n+1,\mathbb{R})/H$,
+where $SL(n+1,\mathbb{R})$ acts via the fundamental representation
+on homogenous coordinates $[X_1,X_2,\dots,X_n]$ in $\mathbb{RP}^{n}$, and $H$
+is the stabiliser subgroup of the point $[1,0,\dots,0]$, whose elements
+are matrices of the general form
+\[
+\begin{pmatrix}\mathrm{det}a^{-1} & b\\
+0 & a
+\end{pmatrix}
+\]
+for some $a\in GL(n,\mathbb{R})$ and $b\in\mathbb{R}_{n}$. We say
+that the Cartan geometry of a projective surface is of type $(SL(n+1,\mathbb{R}),H)$.
+We call it $(\pi:P\rightarrow N,\theta)$, where $\theta$ is the
+Cartan connection and takes values in $\mathfrak{sl}(n+1,\mathbb{R})$.
+It can be written as a matrix
+\[
+\theta=\begin{pmatrix}-\mathrm{tr}\phi & \eta\\
+\omega & \phi
+\end{pmatrix},
+\]
+where $\omega$, $\eta$ and $\phi$ are one-forms valued in $\mathbb{R}^{n}$,
+$\mathbb{R}_{n}$ and $\mathfrak{gl}(n,\mathbb{R})$ respectively.
+We will refer to the components of $\omega$ and $\eta$ with respect
+to the natural basis of $\mathfrak{sl}(n+1,\mathbb{R})$ as $\{\omega^{(i)}\}$
+and $\{\eta_{(i)}\}$, so that $\omega^{(i)}$ and $\eta_{(i)}$ are
+both one-forms. We also note for later use that the $\mathfrak{sl}(n+1,\mathbb{R})$-valued
+curvature two-form $\Theta$ satisfies
+\[
+\Theta=d\theta+\theta\wedge\theta=\begin{pmatrix}0 & L(\omega\wedge\omega)\\
+0 & W(\omega\wedge\omega)
+\end{pmatrix},
+\]
+where $L$ and $W$ are smooth curvature functions.
+
+
+\section{The Dunajski--Mettler Construction \cite{DM}}
+
+We can think of $M$ as a quotient of the total space $P$ of the
+Cartan geometry by $GL(n,\mathbb{R})$, which is embedded in $H$
+in the obvious way:
+\[
+GL(n,\mathbb{R})\ni a\longmapsto\begin{pmatrix}\mathrm{det}a^{-1} & 0\\
+0 & a
+\end{pmatrix}\in H.
+\]
+It is easily verified that 
+\[
+\begin{pmatrix}\mathrm{det}a^{-1} & 0\\
+0 & a
+\end{pmatrix}\begin{pmatrix}0 & \eta\\
+\omega & 0
+\end{pmatrix}\begin{pmatrix}\mathrm{det}a^{-1} & 0\\
+0 & a
+\end{pmatrix}^{-1}=\begin{pmatrix}0 & \eta a^{-1}\mathrm{det}a^{-1}\\
+(\mathrm{det}a)a\omega & 0
+\end{pmatrix},
+\]
+for any $a\in GL(n,\mathbb{R})$, meaning that due to the equivarience
+property of the Cartan connection, the natural contraction $\eta\omega:=\sum_{i}\eta_{(i)}\otimes\omega^{(i)}$
+defined by $\theta$ is presevered by the adjoint action of this $GL(n,\mathbb{R})$
+subgroup. It thus descends to a naturally defined object on the quotient
+$M=P/GL(n,\mathbb{R})$.
+
+\begin{theo}{\cite{DM}}\label{thm:DM}
+There exist a metric and two-form
+$(g,\Omega)$ on $\mbox{\ensuremath{M=P/GL(n,\mathbb{R})}}$ such
+that the quotient map $q:P\rightarrow M$ gives
+\begin{eqnarray*}
+q^{*}g & = & \mathrm{Sym}(\eta\omega)\\
+q^{*}\Omega & = & \mathrm{Ant}(\eta\omega),
+\end{eqnarray*}
+where $\mathrm{Sym}$ and $\mathrm{Ant}$ denote the symmetric and
+anti-symmetric parts of the $(0,2)$ tensor $\eta\omega$. Moreover,
+$\Omega$ is closed as a consequence of the Bianchi identity, $g$
+is Einstein with non-zero scalar curvature, and the two are related
+by an endomorphism $J$ satisying $J^{2}=\mathrm{id}$. Hence $(g,\Omega)$
+is an almost para-Kahler structure on $M$.
+\end{theo}
+
+Note that \cite{DM} is mainly concerned with the case $n=2$, and thus the full proof of theorem \ref{thm:DM} appears explicitly only in this case. It turns out that the proof can be generalised to $n>2$; this generalisation is discussed in the appendix of \cite{DM}.
+
+The quotient $M$ turns out to be an affine bundle over $N$ with
+structure group $H$, i.e. $H$ acts affinely on the fibers of $\rho:M\rightarrow N$,
+and sections of this bundle are in one-to-one correspondence with
+representative connections $\nabla\in[\nabla]$. This means that given
+some choice of connection $\nabla\in[\nabla]$ we have a diffeomorphism
+$\varphi:T^{*}N\rightarrow M$ with which we can pull back the pair
+$(g,\Omega)$. In canonical local coordinates $(x^{i},p_{i})$ on
+the cotangent bundle, we find
+
+\begin{eqnarray}
+\varphi^{*}g & = & \mathrm{d}p_{i}\odot\mathrm{d}x^{i}-(\Gamma_{ij}^{k}p_{k}-p_{i}p_{j}-P_{ij})\mathrm{d}x^{i}\odot\mathrm{d}x^{j},\label{eq:coord_form}\\
+\varphi^{*}\Omega & = & \mathrm{d}p_{i}\wedge\mathrm{d}x^{i}+P_{ij}\mathrm{d}x^{i}\wedge\mathrm{d}x^{j},\qquad i,j=1,\dots ,n.\nonumber 
+\end{eqnarray}
+Here $\Gamma_{jk}^{i}$ are the connection components of the representative
+connection $\nabla$ that we chose, and its Schouten tensor%
+\footnote{Recall that the Schouten tensor is given in terms of the Ricci tensor
+$R_{ij}$ by $P_{ij}=\frac{1}{n-1}R_{(ij)}+\frac{1}{n+1}R_{[ij]}$
+where $n$ is the dimension of the manifold.%
+} is denoted $P_{ij}$. This can be shown to be projectively invariant
+in the sense that a different choice of $\nabla\in[\nabla]$ corresponds
+to shifting the fiber coordinates $p_{i}$, i.e. metrics on $T^{*}N$
+resulting from pulling back $g$ using different representative connections
+are isometric. Explicitly, a projective transformation (\ref{eq:proj_change})
+corresponds to a change
+\begin{equation}
+P_{ij}\longrightarrow P_{ij}+\Upsilon_{i}\Upsilon_{j}-\nabla_{i}\Upsilon_{j},\qquad p_{i}\longrightarrow p_{i}+\Upsilon_{i}.\label{eq:p_change}
+\end{equation}
+
+
+In fact, the metric and symplectic form (\ref{eq:coord_form}) turn
+out to belong to a one-parameter family $\{g_{\Lambda}\}$, which
+can be written in local coordinates as 
+\begin{eqnarray}
+g_{\Lambda} & = & \mathrm{d}p_{i}\odot\mathrm{d}x^{i}-(\Gamma_{ij}^{k}p_{k}-\Lambda p_{i}p_{j}-\Lambda^{-1}P_{ij})\mathrm{d}x^{i}\odot\mathrm{d}x^{j}\label{eq:general_g}\\
+\Omega_{\Lambda} & = & \mathrm{d}p_{i}\wedge\mathrm{d}x^{i}+\frac{1}{\Lambda}P_{ij}\mathrm{d}x^{i}\wedge\mathrm{d}x^{j},\qquad i,j=1,\dots ,n.\label{eq:general_omega}
+\end{eqnarray}
+%Metrics of the form (\ref{eq:general_g}) are a subclass of so-called
+%Osserman metrics. More details can be found in \cite{No-louzao1991}.
+They are all ASD and Einstein, but for $\Lambda\neq1$ the relation to projective geometry is lost. This is the form we will consider for the remainder of the report,
+writing $g$ for $g_{\Lambda=1}$.
+
+
+\subsection{Symmetries of $(M,g_{\Lambda},\Omega_{\Lambda})$}
+
+Recall that a projective vector field on any manifold with a connection
+generates a 1-parameter family of transformations which preserve the
+geodesics of that connection up to parametrisation. Projective vectors
+fields thus naturally arise as the symmetries of a projective structure.
+Explicitly, a vector field $K$ is projective if it satisfies
+\begin{equation}
+\mathcal{L}_{K}\Gamma_{ij}^{k}=\delta_{i}^{k}\Upsilon_{j}+\delta_{j}^{k}\Upsilon_{i}\label{eq:proj_transf}
+\end{equation}
+for some 1-form $\Upsilon$, where $\Gamma_{ij}^{k}$ are the connection
+components, and their Lie derivative is defined (see \cite{Yano1955})
+by
+\begin{equation}
+\mathcal{L}_{K}\Gamma_{ij}^{k}\equiv\frac{\partial^{2}K^{k}}{\partial x^{i}\partial x^{j}}+K^{m}\frac{\partial\Gamma_{ij}^{k}}{\partial x^{m}}-\Gamma_{ij}^{m}\frac{\partial K^{k}}{\partial x^{m}}+\Gamma_{im}^{k}\frac{\partial K^{m}}{\partial x^{j}}+\Gamma_{mj}^{k}\frac{\partial K^{m}}{\partial x^{i}}.\label{eq:liederivGamma}
+\end{equation}
+
+
+One consequence of the above theorem is that for every open set $\mathcal{U}\subset N$
+we have an isomorphism between the Lie algebra of projective vector
+fields on $\mathcal{U}$ and the Lie algebra of vector fields on $\rho^{-1}(\mathcal{U})$
+which preserve both $g$ and $\Omega$. This follows from a standard
+result about Cartan geometries: projective vector fields on $\mathcal{U}$
+are in one-to-one correspondence with vector fields on $\pi^{-1}(\mathcal{U})$
+which preserve $\theta$ and are equivariant under the principal $H$-action.
+Such vector fields thus preserve the natural contraction $\eta\omega$
+and must descend to vector fields on $M$ preserving $(g,\Omega)$.
+In fact, it can be shown that every Killing vector field of $(M,g)$
+is also symplectic with respect to $\Omega$ and is therefore the
+lift of a projective vector field on $(N,[\nabla])$.
+
+Explicitly, for every projective vector field $K$ of $(N,[\nabla])$
+there is a corresponding Killing vector $\mathcal{K}$ of $(M,g_{\Lambda})$
+given in local coordinates by 
+\begin{equation}
+\mathcal{K}=K-p_{i}\frac{\partial K^{j}}{\partial x^{i}}\frac{\partial}{\partial p_{j}}+\frac{1}{\Lambda}\Upsilon_{i}\frac{\partial}{\partial p_{i}},\label{eq:kvf_from_pvf}
+\end{equation}
+where $\Upsilon_{i}$ is defined by (\ref{eq:proj_transf}).
+
+\subsection{Anti--Self--Duality for $n=2$}
+For $n=2$, a local of characterisation of the sapces $M$ is provided in
+\cite{DM}: they show that any 4-dimensional anti-self-dual
+Einstein space with scalar curvature $-24\Lambda$ and a parallel
+anti-self-dual totally null distribution can be considered as the
+total space of a rank 2 affine bundle $T^{*}S$ over a projective
+surface $S$ of the form (\ref{eq:coord_form}). The anti--self-duality property, in combination with the correspondence of symmetries of $(M,g)$ with symmetries of $(N,[\nabla])$, is important in the context of the applications of
+the work \cite{DM} to integrability. It means that
+if we start with a projective surface with at least one projective
+vector field, we will find an ASD Einstein space with at least one
+Killing vector field, and thus will be able to perform a symmetry
+reduction to obtain an Einstein-Weyl structure in $2+1$ dimensions
+and a corresponding solution to the $SU(\infty)$-Toda field equation. This is the subject of the next chapter.

@@ -3,32 +3,18 @@
 %****************************** Chapter 2: EW_and_toda *********************************
 %*******************************************************************************
 
-\chapter{Einstein metrics, projective structures and the $SU(\infty)$--Toda equation}
+\chapter{Einstein--Weyl structures from the Dunajski--Mettler class} \label{chap:EW_and_toda}
 
-We establish an explicit correspondence between two--dimensional projective structures admitting a projective vector field, and 
-a class of solutions to the $SU(\infty)$ Toda equation. We give several examples of new, explicit solutions of the
-Toda equation, and construct their mini--twistor spaces. Finally we discuss the projective-to-Einstein correspondence, which gives
-a neutral signature Einstein metric on a cotangent bundle  $T^*N$ of any projective structure $(N, [\nabla])$. We show that
-there is a canonical Einstein of metric on an $\R^*$--bundle over $T^*N$, with a connection whose curvature is the pull--back
-of the symplectic structure from $T^*N$.
+In this chapter, we focus on Einstein manifolds in the Dunajski--Mettler class which arise from projective surfaces with at least one symmetry. As discussed in chapter \ref{chap:intro}, it is shown in \cite{DM} that metrics in this subclass have anti--self--dual Weyl tensor and at least one Killing vector field. From the results of \cite{JT} and \cite{Tod_note}, this means that they are associated to solutions of the $SU(\infty)$--Toda equation via Lorentzian Einstein--Weyl structures in $2+1$ dimensions. The aim of this chapter is to exhibit every Einstein--Weyl structure obtainable from the Dunajski--Mettler class, resulting in several examples of new, explicit solutions of the Toda equation, and their associated mini--twistor spaces.
 
-\section{Introduction}
-The aim of this paper is two--fold:
-\begin{itemize}
-\item[(A)] To associate a Lorentzian Einstein--Weyl structure in $(2+1)$--dimensions with any projective
-structure on a surface which admits a one--parameter group of projective symmetries.
-\item[(B)] To construct an explicit class of solutions of the $SU(\infty)$--Toda equation
+\subsection{The $SU(\infty)$--Toda equation}
+
+The $SU(\infty)$--Toda equation is given by
 \be
 \label{md_toda}
 U_{XX}+U_{YY}=\epsilon(e^U)_{ZZ}, \quad\mbox{where}\quad U=U(X, Y, Z), \quad
 \mbox{and}\;\;\epsilon=\pm 1
 \ee
-with no continuous group of point symmetries.
-\end{itemize}
-We shall see that (B) is an explicit coordinate realisation of (A), but we 
-chose to separate the two constructions
-for the benefit of readers interested in integrable systems and solutions to (\ref{md_toda}) but not necessarily willing to study the relationships between the projective, conformal, and Weyl differential structures.
-
 Equation (\ref{md_toda}) has originally arisen in  the context of complex general relativity \cite{FP, BF82, Prz}, and then
 in Einstein--Weyl \cite{ward_toda} and (in Riemannian context, with
 $\epsilon=-1$) scalar--flat K\"ahler geometry \cite{LeBrun}. It belongs to a class
@@ -46,34 +32,35 @@ we find depend on two arbitrary functions of one variable, and arise from an ess
 \ee
 where the level sets of $U$ in $\R^3$ are real algebraic surfaces.
 
-Now we move on to describe the construction (A) which is based on a combination of the Jones--Tod correspondence
-\cite{JT}, a theorem of Tod \cite{Tod_note} (which improved the earlier result of Przanowski \cite{Prz}) and two theorems from \cite{DM}.
-In \cite{DM} it was shown that with any projective structure $[\nabla]$ on a surface $N$ one can associate
-a neutral signature Einstein metric with non--zero scalar--curvature, and an anti--self--dual (ASD) Weyl tensor. If the projective
-structure is represented by an affine connection $\nabla\in[\nabla]$ (see \S\ref{s_defini} for definitions), then the metric is given by
-\be
-\label{g}
-g= dz_A \odot dx^A - (\Gamma^C_{AB}z_C-z_Az_B-P_{AB})dx^A \odot dx^B, 
-\quad A, B, C=0, 1 , 
-\ee
-where $x^A$ are coordinates on $N$, $z_A$ are coordinates on the fibres of $T^*N$, $\Gamma^C_{AB}$ are connection components of $\nabla$, and $P_{AB}$ is the projective Schouten tensor of $\nabla$. The following Theorem has  been established 
-in \cite{DM} 
-\begin{theo}\cite{DM}
-\label{th1int}
-Let $(M, g)$ be an ASD Einstein manifold with scalar curvature 24 admitting a parallel ASD totally null distribution.  
-\begin{enumerate}
-\item
-Then $(M, g)$ is conformally flat, or it is locally isometric to 
-(\ref{g}) for
-some torsion-free connection $\nabla$ on a surface $N$.
-\item There is a one--to--one correspondence between projective vector fields of $(N, \nabla)$, and Killing vector fields of $(M, g)$ with
-the metric $g$ given by (\ref{g}).
-\end{enumerate}
-\end{theo}
-If the projective strucure $(N, [\nabla])$ admits a projective vector field, then the connection with
-the Einstein--Weyl geometry now follows from Theorem \ref{th1int}, 
-and the neutral signature
-version of the Jones--Tod correspondence:
+%Now we move on to describe the construction (A) which is based on a combination of the Jones--Tod correspondence
+%\cite{JT}, a theorem of Tod \cite{Tod_note} (which improved the earlier result of Przanowski \cite{Prz}) and two theorems from \cite{DM}.
+%In \cite{DM} it was shown that with any projective structure $[\nabla]$ on a surface $N$ one can associate
+%a neutral signature Einstein metric with non--zero scalar--curvature, and an anti--self--dual (ASD) Weyl tensor. If the projective
+%structure is represented by an affine connection $\nabla\in[\nabla]$ (see \S\ref{s_defini} for definitions), then the metric is given by
+%\be
+%\label{g}
+%g= dz_A \odot dx^A - (\Gamma^C_{AB}z_C-z_Az_B-P_{AB})dx^A \odot dx^B, 
+%\quad A, B, C=0, 1 , 
+%\ee
+%where $x^A$ are coordinates on $N$, $z_A$ are coordinates on the fibres of $T^*N$, $\Gamma^C_{AB}$ are connection components of $\nabla$, and $P_{AB}$ is the projective Schouten tensor of $\nabla$. The following Theorem has  been established 
+%in \cite{DM} 
+%\begin{theo}\cite{DM}
+%\label{th1int}
+%Let $(M, g)$ be an ASD Einstein manifold with scalar curvature 24 admitting a parallel ASD totally null distribution.  
+%\begin{enumerate}
+%\item
+%Then $(M, g)$ is conformally flat, or it is locally isometric to 
+%(\ref{g}) for
+%some torsion-free connection $\nabla$ on a surface $N$.
+%\item There is a one--to--one correspondence between projective vector fields of $(N, \nabla)$, and Killing vector fields of $(M, g)$ with
+%the metric $g$ given by (\ref{g}).
+%\end{enumerate}
+%\end{theo}
+%If the projective strucure $(N, [\nabla])$ admits a projective vector field, then the connection with
+%the Einstein--Weyl geometry now follows from Theorem \ref{th1int}, 
+%and 
+\subsection{The neutral signature
+version of the Jones--Tod correspondence}
 \begin{theo}\cite{JT}
 \label{theo_tod1}
 Let $(M, g)$ be a four--manifold with a neutral signature metric with ASD Weyl tensor, and a conformal Killing vector $K$. Let

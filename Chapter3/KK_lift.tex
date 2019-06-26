@@ -5,79 +5,8 @@
 
 \chapter{Kaluza--Klein lift to an $S^1$--bundle over $M$}
 \label{chap:KK_lift}
-In this section we consider the generalisation of the four-manifold
-$M$ to any even dimension $2n$, starting with a projective structure
-of dimension $n$. This is discussed in the appendix of \cite{DM}. The construction
-of \cite{DM} offers two different perspectives on $(M, g)$: one in terms of a gauge theory on $(N,[\nabla])$ and the other as a quotient of the Cartan bundle of $(N, [\nabla])$. It is the latter approach that we will take here. The aim is to construct a principal circle bundle over the $2n$--dimensional $M$ with a metric on the $2n+1$--dimensional total space which we will prove to be Einstein. This metric is interesting in the context of Kaluza-Klein theory.
-
-\subsection{The Cartan geometry of a projective structure}
-Our description follows \cite{Bryant} and \cite{DM}.
-A projective structure in dimension $n$ admits a description as a Cartan geometry by virtue of being modelled on $\RP^n$, since this can be viewed as a homogeneous space. Let $H$ be the stabiliser subgroup of the point $[1,0,\dots,0]$
-under the action of $SL(n+1,\mathbb{R})$ on homogeneous coordinates
-$[X^{0},\dots,X^{n}]$ in $\mathbb{RP}^{n}$ via its fundamental representation. Then by the orbit stabiliser theorem $\RP^n=SL(n+1,\R)/H$. The elements of $H$
-take the general form
-\[
-\begin{pmatrix}\mathrm{det}(a)^{-1} & b\\
-0 & a
-\end{pmatrix}
-\]
-for any $a\in GL(n,\mathbb{R})$ and $b\in\mathbb{R}_{n}$.
-
-\begin{defi}
-The Cartan geometry $(\pi:P\mapsto N,\theta)$ of a projective structure $(N,[\nabla])$ in dimension $n$ consists of a principal right $H$--bundle over $N$ carrying an $\mathfrak{sl}(n+1,\mathbb{R})$--valued one--form $\theta$ with the following properties:
-\begin{enumerate}
-\item{$\theta(X_v)=v$ for fundamental vector fields $X_v$ on $P$ corresponding to $v\in\mathfrak{h}$;}
-\item{$\theta_u:T_uP\rightarrow\mathfrak{sl}(n+1,\R)$ is an isomorphism for all $u\in P$;}
-\item{$R^{*}_h\theta=\mathrm{Ad}(h^{-1})\theta=h^{-1}\theta h$ for all $h\in H$.}
-\end{enumerate}
-The form $\theta$ is called the Cartan connection.
-\end{defi}
-
-\noindent We write the Cartan connection as
-\[
-\theta=\begin{pmatrix}-\mathrm{tr}(\phi) & \eta\\
-\omega & \phi
-\end{pmatrix}
-\]
-with the one-forms $\phi$, $\eta$ and $\omega$ taking values
-in $\mathfrak{gl}(n,\mathbb{R})$, $\mathbb{R}^{n}$ and $\mathbb{R}_{n}$
-respectively. The curvature two-form takes the general form
-\begin{equation}
-\Theta={d}\theta+\theta\wedge\theta=\begin{pmatrix}0 & L(\omega\wedge\omega)\\
-0 & W(\omega\wedge\omega)
-\end{pmatrix},\label{eq:curvature_2-form}
-\end{equation}
-where $L$ and $W$ are curvature functions valued in $\mathrm{Hom}(\R^n\wedge\R^n,\R_n)$ and $\mathrm{Hom}(\mathbb{R}^{n}\wedge\mathbb{R}^{n},\mathbb{R}_{n}\otimes\mathbb{R}^{n})$ respectively.
-
-\subsection{Construction of $(M,g)$ as quotient of the Cartan bundle}
-We can embed $GL(n,\mathbb{R})$ as a subgroup of $H$ via the map
-\begin{equation}
-GL(n,\mathbb{R})\ni a\longmapsto\begin{pmatrix}\mathrm{det}(a)^{-1} & 0\\
-0 & a
-\end{pmatrix}\in H,\label{eq:gl(n)_embed_H}
-\end{equation}
-finding that its adjoint action on $\theta$ preserves the natural
-contraction $\eta\omega:=\sum_{i}\eta_{(i)}\otimes\omega^{(i)}$,
-where $\eta_{(i)}$ and $\omega^{(i)}$ are the one-forms denoting
-the components of $\eta$ and $\omega$ in $\mathfrak{sl}(n+1,\mathbb{R})$. We deduce that the quotient $q:P\mapsto P/GL(n,\mathbb{R})$
-carries a natural metric $g$ of signature $(n,n)$ and a two-form
-$\Omega$ which are such that
-\begin{eqnarray*}
-q^{*}g & = & \mathrm{Sym}(\eta\omega)\\
-q^{*}\Omega & = & \mathrm{Ant}(\eta\omega),
-\end{eqnarray*}
-where $\mathrm{Sym}$ and $\mathrm{Ant}$ denote the symmetric and anti--symmetric parts of the $(0,2)$ tensor $\eta\omega$.
-It is shown in \cite{DM} that we can choose local coordinates such that they take the forms
-(\ref{g}) and (\ref{Omega}) respectively,
-where the indices $A,\,B$ now run from $0$ to $n-1$. The pair $(g,\Omega)$ forms a so--called bi--Lagrangian structure on $M$. The fact that $\Omega$ is symplectic follows from the Bianchi identity.
-
-In fact, the metric and symplectic form turn out to belong to a one--parameter family, which can be written in local coordinates as
-\begin{eqnarray}
-\label{g_Lambda}
-g_\Lambda &=& dz_A\odot dx^A-(\Gamma^C_{AB}z_C-\Lambda z_Az_B-\Lambda^{-1}P_{AB})dx^A\odot dx^B \\
-\Omega_\Lambda &=& dz_A\odot dx^A + \frac{1}{\Lambda}P_{AB}dx^A\wedge dx^B,\quad A,B=0,\dots,n-1 \nonumber
-\end{eqnarray}
-for $\Lambda\neq 0$. Metrics of the form (\ref{g_Lambda}) are a subclass of so--called Osserman metrics. More details can be found in \cite{osserman}. They are all Einstein with non--zero scalar curvature (calculated in  Appendix A), but for $\Lambda\neq 1$ the relation to projective geometry is lost. For the remainder of this section we will consider the full family $\{g_\Lambda\}$, although projective invariance will only hold in the case $\Lambda=1$.
+In this chapter, we show that there is a canonical Einstein of metric on an $\R^*$--bundle over $M$, with a connection whose curvature is the pull--back
+of the symplectic structure from $M$. This metric is interesting in the context of Kaluza-Klein theory.
 
 \subsection{Flat case}
 
