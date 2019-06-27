@@ -13,9 +13,9 @@
 %\item Geometry also important in the theory of solitons (e.g. Manton and Sutcliffe.) (chapter \ref{chap:wormhole}).
 %\end{itemize} 
 
-This thesis splits naturally into two parts. The first four chapters are concerned with a class of Einstein manifolds constructed in recent work by Dunajski and Mettler \cite{DM}, and discusses a number geometrical structures which are related to this class. There is a subclass which can be associated with so--called \textit{Einstein--Weyl} structures in dimension $3$, and hence with solutions of the $SU(\infty)$--Toda equation, a non--linear PDE arising in Toda field theory. Chapter \ref{chap:wormhole} also links geometry to a non--linear PDE, with the PDE arising as the equations of motion of the $\phi^4$--theory on a psuedo--Riemannian wormhole manifold.
+This thesis splits naturally into two parts. The first 4 chapters are concerned with a class of Einstein manifolds constructed in recent work by Dunajski and Mettler \cite{DM}, and discuss a number geometrical structures which are related to this class. There is a subclass which can be associated with so--called \textit{Einstein--Weyl} structures in dimension $3$, and hence with solutions of the $SU(\infty)$--Toda equation, a non--linear PDE arising in Toda field theory. Chapter \ref{chap:wormhole} also links geometry to a non--linear PDE, with the PDE arising as the equations of motion of the $\phi^4$--theory on a psuedo--Riemannian wormhole manifold.
 
-Chapter \ref{chap:wormhole} is self--contained, and possesses its own introduction. The remainder of this chapter will introduce some preliminaries for the first part of the thesis, culminating in the results of \cite{DM} on the Einstein manifolds which will form the basis of chapters \ref{chap:EW_and_toda}--\ref{chap:c-proj}. 
+Chapter \ref{chap:wormhole} is self--contained, and possesses its own introduction. The remainder of this chapter will introduce some preliminaries for the first part of the thesis, culminating in the results of \cite{DM} on the Einstein manifolds which will form the basis of chapters 2--4. 
 
 %\section{Overview of Chapters \ref{chap:EW_and_toda}--\ref{chap:c-proj}}
 
@@ -38,22 +38,25 @@ The $2n$--dimensional space $M$ also carries a natural symplectic form $\Omega$,
 has a number of interesting properties which are worthy of further
 study.
 
-One reason this construction is interesting is that for $n=2$, the conformal
+Firstly, $(M,g)$ is interesting by virtue of being an Einstein
+space. In chapter \ref{chap:KK_lift} we construct a Kaluza-Klein lift of $g$ to a metric $\mathcal{G}$ in $2n+1$ dimensions which we prove is also Einstein. It also turns out that $(M,g)$ admits a so--called \textit{c--projective compactification} \cite{CG}. A proof of this fact is the main goal of chapter \ref{chap:c-proj}.
+
+Another reason this construction is interesting is that for $n=2$ (so that $M$ has dimension $4$), the conformal
 curvature of $g$ is anti-self-dual. Recall that the Hodge operator
-$\star$ defined by a (Euclidean or) neutral signature metric in four
-dimensions is an involution on two-forms (i.e. squares to the identity).
+$\star$ defined by a Euclidean or neutral signature metric in four
+dimensions is an involution on two--forms (i.e. squares to the identity).
 It thus has eigenvalues $\pm1$, and the space of two-forms splits
-into the corresponding eigenspaces, which are referred to as self-dual
-(SD) or anti-self-dual (ASD) respectively. Due to its index symmetries,
+into the corresponding eigenspaces, which are referred to as self--dual
+(SD) or anti--self--dual (ASD) respectively. Due to its index symmetries,
 the Weyl tensor can be thought of as a map from two-forms to two-forms,
 and therefore has a corresponding decomposition. Since the Weyl tensor
-encodes the conformal curvature, we say that a conformal or Riemannian
+encodes the conformal curvature, we say that a conformal or (psuedo--)Riemannian
 manifold whose Weyl tensor is ASD is equipped with an \textit{ASD
 conformal structure}.
 
 The field equations corresponding to anti-self-duality of the Weyl
 tensor in four dimensions can be solved by a twistor construction,
-and are thus \textit{integrable. }This means that any systems of differential
+and are thus \textit{integrable.}\mynote{Cite Ward or someone.} This means that any systems of differential
 equations which can be obtained from them by symmetry reduction should
 also be integrable \cite{Tod1995}. In particular, the class of dispersionless
 integrable systems in 2+1 and 3 dimensions arise in this way. The
@@ -64,10 +67,7 @@ system called the $SU(\infty)$-Toda field equation via a $2+1$-dimensional
 Einstein-Weyl structure. In chapter \ref{chap:EW_and_toda} we discuss the extraction
 of all possible Toda solutions obtainable in this way.
 
-Additionally, $(M,g)$ is interesting by virtue of being an Einstein
-space. In chapter \ref{chap:KK_lift} we construct a Kaluza-Klein lift of $g$ to a metric $\mathcal{G}$ in $2n+1$ dimensions which we prove is also Einstein.
 
-Finally, it turns out that $(M,g)$ admits a so--called \textit{c--projective compactification} \cite{CG}. A proof of this fact is the main goal of chapter \ref{chap:c-proj}.
 
 
 
@@ -142,7 +142,7 @@ curvature two-form $\Theta$ satisfies
 where $L$ and $W$ are smooth curvature functions.
 
 
-\section{The Dunajski--Mettler Construction \cite{DM}}
+\section{The Dunajski--Mettler Construction $(M,g_\Lambda,\Omega_\Lambda)$}
 
 We can think of $M$ as a quotient of the total space $P$ of the
 Cartan geometry by $GL(n,\mathbb{R})$, which is embedded in $H$
@@ -186,7 +186,7 @@ by an endomorphism $J$ satisying $J^{2}=\mathrm{id}$. Hence $(g,\Omega)$
 is an almost para-Kahler structure on $M$.
 \end{theo}
 
-Note that \cite{DM} is mainly concerned with the case $n=2$, and thus the full proof of theorem \ref{thm:DM} appears explicitly only in this case. It turns out that the proof can be generalised to $n>2$; this generalisation is discussed in the appendix of \cite{DM}.
+Note that the full proof of theorem \ref{thm:DM} only appears explicitly in \cite{DM} in the case $n=2$, although it can be generalised to $n>2$. This generalisation is discussed in their appendix.
 
 The quotient $M$ turns out to be an affine bundle over $N$ with
 structure group $H$, i.e. $H$ acts affinely on the fibers of $\rho:M\rightarrow N$,
@@ -198,8 +198,8 @@ $(g,\Omega)$. In canonical local coordinates $(x^{i},p_{i})$ on
 the cotangent bundle, we find
 
 \begin{eqnarray}
-\varphi^{*}g & = & \mathrm{d}p_{i}\odot\mathrm{d}x^{i}-(\Gamma_{ij}^{k}p_{k}-p_{i}p_{j}-P_{ij})\mathrm{d}x^{i}\odot\mathrm{d}x^{j},\label{eq:coord_form}\\
-\varphi^{*}\Omega & = & \mathrm{d}p_{i}\wedge\mathrm{d}x^{i}+P_{ij}\mathrm{d}x^{i}\wedge\mathrm{d}x^{j},\qquad i,j=1,\dots ,n.\nonumber 
+\varphi^{*}g & = &  dp_{i}\odot dx^{i}-(\Gamma_{ij}^{k}p_{k}-p_{i}p_{j}-\Rho_{ij}) dx^{i}\odot dx^{j},\label{eq:coord_form}\\
+\varphi^{*}\Omega & = &  dp_{i}\wedge dx^{i}+\Rho_{ij} dx^{i}\wedge dx^{j},\qquad i,j=1,\dots ,n.\nonumber 
 \end{eqnarray}
 Here $\Gamma_{jk}^{i}$ are the connection components of the representative
 connection $\nabla$ that we chose, and its Schouten tensor%
@@ -213,7 +213,7 @@ resulting from pulling back $g$ using different representative connections
 are isometric. Explicitly, a projective transformation (\ref{eq:proj_change})
 corresponds to a change
 \begin{equation}
-P_{ij}\longrightarrow P_{ij}+\Upsilon_{i}\Upsilon_{j}-\nabla_{i}\Upsilon_{j},\qquad p_{i}\longrightarrow p_{i}+\Upsilon_{i}.\label{eq:p_change}
+\Rho_{ij}\longrightarrow \Rho_{ij}+\Upsilon_{i}\Upsilon_{j}-\nabla_{i}\Upsilon_{j},\qquad p_{i}\longrightarrow p_{i}+\Upsilon_{i}.\label{eq:p_change}
 \end{equation}
 
 
@@ -221,13 +221,12 @@ In fact, the metric and symplectic form (\ref{eq:coord_form}) turn
 out to belong to a one-parameter family $\{g_{\Lambda}\}$, which
 can be written in local coordinates as 
 \begin{eqnarray}
-g_{\Lambda} & = & \mathrm{d}p_{i}\odot\mathrm{d}x^{i}-(\Gamma_{ij}^{k}p_{k}-\Lambda p_{i}p_{j}-\Lambda^{-1}P_{ij})\mathrm{d}x^{i}\odot\mathrm{d}x^{j}\label{eq:general_g}\\
-\Omega_{\Lambda} & = & \mathrm{d}p_{i}\wedge\mathrm{d}x^{i}+\frac{1}{\Lambda}P_{ij}\mathrm{d}x^{i}\wedge\mathrm{d}x^{j},\qquad i,j=1,\dots ,n.\label{eq:general_omega}
+g_{\Lambda} & = &  dp_{i}\odot dx^{i}-(\Gamma_{ij}^{k}p_{k}-\Lambda p_{i}p_{j}-\Lambda^{-1}\Rho_{ij}) dx^{i}\odot dx^{j}\label{eq:general_g}\\
+\Omega_{\Lambda} & = &  dp_{i}\wedge dx^{i}+\frac{1}{\Lambda}\Rho_{ij} dx^{i}\wedge dx^{j},\qquad i,j=1,\dots ,n.\label{eq:general_omega}
 \end{eqnarray}
 %Metrics of the form (\ref{eq:general_g}) are a subclass of so-called
 %Osserman metrics. More details can be found in \cite{No-louzao1991}.
-They are all ASD and Einstein, but for $\Lambda\neq1$ the relation to projective geometry is lost. This is the form we will consider for the remainder of the report,
-writing $g$ for $g_{\Lambda=1}$.
+They are all Einstein and, for $n=2$, all ASD, but for $\Lambda\neq1$ the relation to projective geometry is lost. For the remainder of the thesis we will write $g$ for $g_{\Lambda=1}$ unless stated otherwise. Note that $\{g_\Lambda\}$ will be the subject of chapter \ref{chap:KK_lift}, whilst in chapters \ref{chap:c-proj} and \ref{chap:EW_and_toda} we will restrict our attention to $g$ because the projective geometry is a key aspect of the content of these chapters.
 
 
 \subsection{Symmetries of $(M,g_{\Lambda},\Omega_{\Lambda})$}
@@ -281,4 +280,4 @@ if we start with a projective surface with at least one projective
 vector field, we will find an ASD Einstein space with at least one
 Killing vector field, and thus will be able to perform a symmetry
 reduction to obtain an Einstein-Weyl structure in $2+1$ dimensions
-and a corresponding solution to the $SU(\infty)$-Toda field equation. This is the subject of the next chapter.
+and a corresponding solution to the $SU(\infty)$-Toda field equation. This is the subject of chapter \ref{chap:EW_and_toda}.

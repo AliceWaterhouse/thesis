@@ -1,0 +1,350 @@
+%!TEX root = ../thesis.tex
+%*******************************************************************************
+%****************************** Chapter 2: KK_lift *********************************
+%*******************************************************************************
+
+\chapter{An Einstein metric on an $S^1$--bundle over $(M,g_\Lambda,\Omega_\Lambda)$}
+\label{chap:KK_lift}
+In this chapter, we show that there is a canonical Einstein of metric on an $\R^*$--bundle over $M$, with a connection whose curvature is the pull--back
+of the symplectic structure from $M$. This metric is interesting in the context of Kaluza-Klein theory.
+
+\section{Flat case}
+
+We first note that taking the flat projective structure on $\mathbb{RP}^{n}$
+results in a one--parameter family of $2n$-dimensional Einstein spaces $M$ which are a Kaluza-Klein
+reductions of quadrics in $\mathbb{R}^{n+1,n+1}$. For $N=\RP^n$
+the metric and symplectic form on $M$ reduce to 
+\begin{eqnarray*}
+g_{\Lambda} & = &  dx^{i} dp_{i}+\Lambda(p_{i} dx^{i})^{2}\\
+\Omega_{\Lambda} & = &  dp_{i}\wedge dx^{i}.
+\end{eqnarray*}
+
+\begin{prop}
+The Einstein spaces $M$ corresponding to $\mathbb{RP}^{n}$
+are projections from the $2n+1$-dimensional quadrics $Q\subset\mathbb{R}^{n+1,n+1}$
+given by $X^{\alpha}Y_{\alpha}=\frac{1}{\Lambda}$, where $X,Y\in\mathbb{R}^{n+1}$
+are coordinates on $\mathbb{R}^{n+1,n+1}$ such that the metric is
+given by 
+\[
+G= dX^{\alpha} dY_{\alpha},
+\]
+ under the embedding
+\begin{eqnarray}
+X^{\alpha} & = & \begin{cases}
+x^{i}\mathrm{e}^{\tau}, & \alpha=i=1,\dots,n\\
+\mathrm{e}^{\tau}, & \alpha=n+1
+\end{cases}\nonumber \\
+Y_{\alpha} & = & \begin{cases}
+p_{i}\mathrm{e}^{-\tau}, & \alpha=i=1,\dots,n\\
+\mathrm{e}^{-\tau}\Bigl(\frac{1}{\Lambda}-x^{k}p_{k}\Bigr), & \alpha=n+1
+\end{cases}\label{eq:embedding-1}
+\end{eqnarray}
+following Kaluza-Klein reduction by the vector $\frac{\partial}{\partial\tau}.$
+\end{prop}
+\textbf{Proof. }We find the basis of coordinate 1-forms $\{ dX^{\alpha}, dY_{\alpha}\}$
+to be
+\begin{eqnarray*}
+ dX^{\alpha} & = & \begin{cases}
+\mathrm{e}^{\tau}( dx^{i}+x^{i} d\tau), & \alpha=i=1,\dots,n\\
+\mathrm{e}^{\tau} d\tau, & \alpha=n+1
+\end{cases}\\
+ dY_{\alpha} & = & \begin{cases}
+\mathrm{e}^{-\tau}( dp_{i}-p_{i} d\tau), & \alpha=i=1,\dots,n\\
+-\mathrm{e}^{-\tau}\biggl[\Bigl(\frac{1}{\Lambda}-x^{k}p_{k}\Bigr) d\tau+x^{k} dp_{k}+p_{k} dx^{k}\biggr], & \alpha=n+1.
+\end{cases}
+\end{eqnarray*}
+The metric is then given by
+\begin{eqnarray*}
+G & = & \mathrm{e}^{\tau}( dx^{i}+x^{i} d\tau)\mathrm{e}^{-\tau}( dp_{i}-p_{i} d\tau)\ -\ \mathrm{e}^{\tau} d\tau\mathrm{e}^{-\tau}\biggl[\Bigl(\frac{1}{\Lambda}-x^{k}p_{k}\Bigr) d\tau+x^{k} dp_{k}+p_{k} dx^{k}\biggr]\\
+ & = &  dx^{i} dp_{i}\ +\ (x^{i} dp_{i}-p_{i} dx^{i}) d\tau\ -\ (x^{i}p_{i}) d\tau^{2}\ -\  d\tau\biggl[\Bigl(\frac{1}{\Lambda}-x^{k}p_{k}\Bigr) d\tau+x^{k} dp_{k}+p_{k} dx^{k}\biggr]\\
+ & = &  dx^{i} dp_{i}\ -\ \frac{1}{\Lambda} d\tau^{2}\ -\ 2p_{i} dx^{i} d\tau\\
+ & = &  dx^{i} dp_{i}\ +\ \Lambda(p_{i} dx^{i})^{2}\ -\ \Lambda\Bigl(\frac{ d\tau}{\Lambda}+p_{i} dx^{i}\Bigr)^{2},
+\end{eqnarray*}
+which is clearly going to give $g_{\Lambda}$ under Kaluza-Klein reduction
+by $\frac{\partial}{\partial\tau}$.
+\koniec
+
+Note that the symplectic form $\Omega$ is the exterior derivative
+of the potential term $p_{i} dx^{i}$, implying a possible
+generalisation to the curved case.
+
+
+\section{Curved case}
+
+We now return to a general projective structure $(N,[\nabla])$. Since
+symplectic form picks out the antisymmetric part of the Schouten tensor,
+it has the fairly simple form
+\[
+\Omega_{\Lambda}= dp_{i}\wedge dx^{i}-\frac{\partial_{[i}\Gamma_{j]k}^{k}}{\Lambda(n+1)} dx^{i}\wedge dx^{j}.
+\]
+By inspection, this can be written $\Omega_{\Lambda}=d\mathcal{A}$,
+where
+\[
+\mathcal{A}=p_{i} dx^{i}-\frac{\Gamma_{ik}^{k}}{\Lambda(n+1)} dx^{i}.
+\]
+This is a trivialisation of the Kaluza-Klein bundle which we are about
+to construct. Note that for $\Lambda=1$, under a change of projective
+connection (\ref{eq:proj_change}) the corresponding change in the
+fiber coordinates (\ref{eq:p_change}) ensures that $\Omega$ and
+$\mathcal{A}$ are unchanged.
+
+Motivated by the Kaluza-Klein reduction in the flat case, we consider
+the following metric.
+\begin{theo}
+The metric
+\begin{equation}
+\mathcal{G}_{\Lambda}=g_{\Lambda}-\Lambda\Bigl(\frac{ d\tau}{\Lambda}+\mathcal{A}\Bigr)^{2}\label{eq:G}
+\end{equation}
+on a principal circle bundle $\sigma:\mathcal{Q}\mapsto M$ is Einstein,
+with Ricci scalar $2n(2n+1)\Lambda$.
+\end{theo}
+\textbf{Proof.} We prove this using the Cartan formalism. Our treatment
+parallels a calculation by Kobayashi \cite{Kobayashi1963}, who considered
+principal circle bundles over Kahler manifolds in order to study the
+topology of the base. Note that we temporarily surpress the constant
+$\Lambda$, writing $\mathcal{G}\equiv\mathcal{G}_{\Lambda}$ and
+$g\equiv g_{\Lambda}$, since the proof applies to any choice $\Lambda\neq0$
+within this family. consider a frame
+\begin{equation}
+e^{a}=\begin{cases}
+ dx^{i}, & a=i=1,\dots,n\\
+ dp_{i}-(\Gamma_{ij}^{k}p_{k}-\Lambda p_{i}p_{j}-\Lambda^{-1}P_{ij}) dx^{j}, & a=i+n=n+1,\dots2n.
+\end{cases}\label{eq:basis}
+\end{equation}
+In this basis the metric takes the form
+\begin{equation}
+g=e^{1}\odot e^{n+1}+\dots+e^{n}\odot e^{2n}.\label{eq:g_cov_const}
+\end{equation}
+We are interested in the metric
+\[
+\mathcal{G}=-e^{0}\odot e^{0}+g,
+\]
+where
+\[
+e^{0}=\sqrt{\Lambda}\biggl(\frac{ d\lambda}{\Lambda}+\mathcal{A}A\biggr).
+\]
+ We reserve Roman indices $a,b,\dots$ for the $2n$-metric components
+$1,\dots,2n$ and allow greek indices $\mu,\nu,\dots$ to take values
+$0,1,\dots,2n$. The dual basis to $\{e^{\mu}\}$ will be denoted
+$\{E_{\mu}\}$ and will act on functions as vector fields in the usual
+way. We wish to find the new connection 1-forms $\hat{\psi}_{\ \nu}^{\mu}$
+(defined by $ de^{\mu}=-\hat{\psi}_{\ \nu}^{\mu}\wedge e^{\nu}$)
+in terms of the old ones $\psi_{\ b}^{a}$ (defined by $ de^{a}=-\psi_{\ b}^{a}\wedge e^{b}$).
+Hence we examine
+\footnote{Note that our conventions are $(d\omega)_{ab\dots c}=\partial_{[a}\omega_{b\dots c]},$
+$(\eta\wedge\omega)_{a\dots d}=\eta_{[a\dots b}\omega_{c\dots d]},$
+$\omega=\omega_{a\dots b}dx^{a}\wedge\dots\wedge dx^{b},$
+and $F_{ab}{d}x^{a}\wedge{d}x^{b}=F_{[ab]}{d}x^{a}\otimes{d}x^{b}$
+implying ${d}x^{a}\wedge{d}x^{b}=\frac{1}{2}({d}x^{a}\otimes{d}x^{b}-{d}x^{b}\otimes{d}x^{a})$.
+} ${d}e^{0}$ to find $\hat{\psi}_{\ a}^{0}.$
+\[
+{d}e^{0}=\sqrt{\Lambda}{d}\mathcal{A}=\sqrt{\Lambda}\Omega_{ab}e^{a}\wedge e^{b}=-\hat{\psi}_{\ a}^{0}\wedge e^{a}\quad\implies\quad\hat{\psi}_{\ a}^{0}=\sqrt{\Lambda}\Omega_{[ab]}e^{b}=\sqrt{\Lambda}\Omega_{ab}e^{b},\qquad\hat{\psi}_{\ 0}^{a}=\sqrt{\Lambda}\Omega_{\ b}^{a}e^{b}.
+\]
+Since ${d}e^{a}$ is unchanged, we have that
+\[
+\hat{\psi}_{\ 0}^{a}\wedge e^{0}+\hat{\psi}_{\ b}^{a}\wedge e^{b}=\psi_{\ b}^{a}\wedge e^{b},
+\]
+thus
+\[
+\hat{\psi}_{\ b}^{a}\wedge e^{b}=\psi_{\ b}^{a}\wedge e^{b}-\sqrt{\Lambda}\Omega_{\ b}^{a}e^{b}\wedge e^{0}\qquad\implies\qquad\hat{\psi}_{\ b}^{a}=\psi_{\ b}^{a}+\sqrt{\Lambda}\Omega_{\ b}^{a}e^{0}.
+\]
+
+
+We now calculate the curvature 2-forms $\hat{\Psi}_{\ \nu}^{\mu}={d}\hat{\psi}_{\ \nu}^{\mu}+\hat{\psi}_{\ \rho}^{\mu}\wedge\hat{\psi}_{\ \nu}^{\rho}=\frac{1}{2}\mathcal{R}_{\rho\sigma\nu}^{\ \ \ \ \mu}e^{\rho}\wedge e^{\sigma}$
+in terms of $\Psi_{\ b}^{a}={d}\psi_{\ b}^{a}+\psi_{\ c}^{a}\wedge\psi_{\ b}^{c}$,
+where $\mathcal{R}_{\rho\sigma\nu}^{\ \ \ \ \mu}$ is the Riemann
+tensor of $\mathcal{Q}$. Note that we use the notation $\psi_{\ b}^{a}=\psi_{\ bc}^{a}e^{c}$
+\begin{eqnarray*}
+\hat{\Psi}_{\ b}^{a} & = & {d}\hat{\psi}_{\ b}^{a}+\hat{\psi}_{\ c}^{a}\wedge\hat{\psi}_{\ b}^{c}+\hat{\psi}_{\ 0}^{a}\wedge\hat{\psi}_{\ b}^{0}\\
+ & = & {d}\psi_{\ b}^{a}+{\sqrt{\Lambda}{d}}(\Omega_{\ b}^{a}e^{0})+\psi_{\ c}^{a}\wedge\psi_{\ b}^{c}+\sqrt{\Lambda}\Omega_{\ c}^{a}e^{0}\wedge\psi_{\ b}^{c}+\sqrt{\Lambda}\Omega_{\ b}^{c}\psi_{\ c}^{a}\wedge e^{0}+\Lambda\Omega_{\ [c}^{a}\Omega_{|b|d]}e^{c}\wedge e^{d}\\
+ & = & \Psi_{\ b}^{a}+\sqrt{\Lambda}E_{c}(\Omega_{\ b}^{a})e^{c}\wedge e^{0}+\Lambda(\Omega_{\ b}^{a}\Omega_{cd}+\Omega_{\ [c}^{a}\Omega_{|b|d]})e^{c}\wedge e^{d}+\sqrt{\Lambda}(\Omega_{\ b}^{c}\psi_{\ cd}^{a}-\Omega_{\ c}^{a}\psi_{\ bd}^{c})e^{d}\wedge e^{0}\\
+ & = & \Psi_{\ b}^{a}+\sqrt{\Lambda}\nabla_{c}\Omega_{\ b}^{a}e^{c}\wedge e^{0}+\Lambda(\Omega_{\ b}^{a}\Omega_{cd}+\Omega_{\ [c}^{a}\Omega_{|b|d]})e^{c}\wedge e^{d}.\\
+\hat{\Psi}_{\ a}^{0} & = & {d}\hat{\psi}_{\ a}^{0}+\hat{\psi}_{\ b}^{0}\wedge\hat{\psi}_{\ a}^{b}\\
+ & = & \sqrt{\Lambda}E_{[c}(\Omega_{|a|b]})\theta^{c}\wedge\theta^{b}-\sqrt{\Lambda}\Omega_{ab}\psi_{\ c}^{b}\wedge e^{c}+\sqrt{\Lambda}\Omega_{bc}e^{c}\wedge(\psi_{\ a}^{b}+\sqrt{\Lambda}\Omega_{\ a}^{b}e^{0})\\
+ & = & \sqrt{\Lambda}(E_{[d}(\Omega_{|a|b]})-\Omega_{ac}\psi_{\ [bd]}^{c}+\Omega_{c[d}\psi_{\ |a|b]}^{c})e^{d}\wedge e^{b}+\Lambda\Omega_{bc}\Omega_{\ a}^{b}e^{c}\wedge e^{0}\\
+ & = & \sqrt{\Lambda}\nabla_{[c}\Omega_{|a|d]}e^{c}\wedge e^{d}+\Lambda\Omega_{bc}\Omega_{\ a}^{b}e^{c}\wedge e^{0}.
+\end{eqnarray*}
+Hence we have that
+\begin{eqnarray*}
+\mathcal{R}_{cdb}^{\ \ \ a} & = & R_{cdb}^{\ \ \ a}+2\Lambda(\Omega_{\ b}^{a}\Omega_{cd}+\Omega_{\ [c}^{a}\Omega_{|b|d]})\\
+\mathcal{R}_{c0b}^{\ \ \ a} & = & \sqrt{\Lambda}\nabla_{c}\Omega_{\ b}^{a}\\
+\mathcal{R}_{cda}^{\ \ \ 0} & = & 2\sqrt{\Lambda}\nabla_{[c}\Omega_{|a|d]}\\
+\mathcal{R}_{c0a}^{\ \ \ 0} & = & \Lambda\Omega_{bc}\Omega_{\ a}^{b},
+\end{eqnarray*}
+and thus, using $\mathcal{R}_{\mu\nu}=\mathcal{R}_{\rho\mu\nu}^{\ \ \ \ \rho}$,
+\begin{eqnarray*}
+\mathcal{R}_{00} & = & \Lambda\Omega_{bc}\Omega^{bc}=-2n\Lambda=2n\Lambda\mathcal{G}_{00}\\
+\mathcal{R}_{b0} & = & \sqrt{\Lambda}\nabla_{c}\Omega_{\ b}^{c}=0\\
+\mathcal{R}_{db} & = & R_{db}+2\Lambda(\Omega_{\ b}^{c}\Omega_{cd}+\frac{1}{2}\Omega_{\ c}^{c}\Omega_{bd}-\frac{1}{2}\Omega_{\ d}^{c}\Omega_{bc})-\Lambda\Omega_{cd}\Omega_{\ b}^{c}\\
+ & = & R_{db}+2\Lambda\Omega_{b}^{\ c}\Omega_{dc}\\
+ & = & 2(n+1)\Lambda g_{db}-2\Lambda g_{db}=2n\Lambda g_{db}=2n\Lambda\mathcal{G}_{db}.
+\end{eqnarray*}
+
+
+Note that we have used the facts that $g$ is Einstein with Ricci
+scalar $4n(n+1)\Lambda$ and the symplectic form $\Omega$ is divergence-free;
+these are justified in the appendix. Since $\mathcal{G}_{a0}=0$,
+we conclude that
+\[
+\mathcal{R}_{\mu\nu}=2n\Lambda\mathcal{G}_{\mu\nu}=\frac{\mathcal{R}}{2n+1}\mathcal{G}_{\mu\nu},
+\]
+i.e. $\mathcal{G}$ is Einstein with Ricci scalar $2n(2n+1)\Lambda$.
+\koniec
+
+Physically, this is a Kaluza-Klein reduction with constant dilation
+field and where the Maxwell two-form is related to the reduced metric
+by $\Omega_{a}^{\ c}\Omega_{cb}=g_{ab}$. This is what allows both
+the reduced and lifted metric to be Einstein. A more general discussion
+can be found in \cite{Pope}.
+
+From the Cartan perspective, $\mathcal{G}_{\Lambda=1}$ can be thought
+of as a metric on the $2n+1$-dimensional space obtained by taking
+a quotient $\tilde{q}:P\mapsto P/SL(n,\mathbb{R})$ of the Cartan
+bundle, where we embed $SL(n,\mathbb{R})\subset GL(n,\mathbb{R})$
+in $H$ as in (\ref{eq:gl(n)_embed_H}) but with $a$ now denoting
+an element of $SL(n,\mathbb{R})$ (so that $\mathrm{det}a^{-1}=1$).
+This new subgroup acts adjointly on $\theta$ as
+\[
+\begin{pmatrix}1 & 0\\
+0 & a
+\end{pmatrix}\begin{pmatrix}-\mathrm{tr}\phi & \eta\\
+\omega & \phi
+\end{pmatrix}\begin{pmatrix}1 & 0\\
+0 & a^{-1}
+\end{pmatrix}=\begin{pmatrix}-\mathrm{tr}\phi & \eta a^{-1}\\
+a\omega & \phi
+\end{pmatrix},
+\]
+so not only is the inner product $\eta\omega$ invariant but also
+the $(0,0)$-component $\theta_{\ 0}^{0}=\mathrm{-tr}\phi$, which
+is a scalar one-form whose exterior derivative is constrained by (\ref{eq:curvature_2-form})
+to be $ d\theta_{\ 0}^{0}=-\theta_{\ i}^{0}\wedge\theta_{\ 0}^{i}=-\mathrm{Ant}(\eta\wedge\omega)$.
+Thus, denoting by $A$ the object on $\mathcal{Q}=P/SL(n,\mathbb{R})$
+which is such that $\tilde{q}^{*}A=\mathrm{tr}\phi$, we have that
+$ dA=\Omega$ (where we are now taking $\Omega$ and $g$
+to be defined on $\mathcal{Q}$ by $\tilde{q}^{*}\Omega=\mathrm{Ant}(\eta\wedge\omega)$
+and $\tilde{q}^{*}g=\mathrm{Sym}(\eta\wedge\omega)$ respectively,
+or equivalently redefining $\tilde{\Omega}=\sigma^{*}\Omega$ and
+$\tilde{g}=\sigma^{*}g$).
+
+We then have a natural way of constructing a metric $\mathcal{G}$
+on $\mathcal{Q}$ as a linear combination of $g$ and $e^{0}\odot e^{0}$,
+where $e^{0}$ is $A$ up to addition of some exact one-form. It turns
+out that the choice of linear combination such that $\mathcal{G}$
+is Einstein is 
+\[
+\mathcal{G}=-e^{0}\odot e^{0}+g.
+\]
+The fact that this metric is exactly (\ref{eq:G}) can be verified
+by constructing the Cartan connection of $(N,[\nabla])$ explicitly
+in terms of a representative connection $\nabla\in[\nabla]$.
+
+\subsection{Ricci scalar of $g_\Lambda$ and divergence of $\Omega_\Lambda$}
+
+We calculate these using the Cartan formalism, again using the basis
+(\ref{eq:basis}). In this basis we have $g$ as above (\ref{eq:g_cov_const})
+and
+\[
+\Omega=\sum_{i=1}^{n}e^{i}\wedge e^{i+n}\quad\implies\quad\Omega_{ab}=\sum_{i=1}^{n}\delta_{[a}^{i}\delta_{b]}^{i+n}.
+\]
+Note that from now on we will omit the summation sign and use the
+summation convention regardless of whether $i,j$-indices are up or
+down. As in section \ref{sec:quadric}, we look for $\psi_{\ b}^{a}$
+by considering $ de^{a}$ (recall that $i,j=1,\dots,n$ and
+$a,b=1,\dots,2n$):
+\begin{eqnarray*}
+ de^{i} & = & 0\\
+ de^{i+n} & = & -(E_{l}(\Gamma_{ij}^{k})p_{k}-\Lambda^{-1}E_{l}(P_{ij})) dx^{l}\wedge dx^{j}-(\Gamma_{ij}^{k}-2\Lambda p_{(i}\delta_{j)}^{k}) dp_{k}\wedge dx^{j}\\
+ & = & -(E_{l}(\Gamma_{ij}^{k})p_{k}-\Lambda^{-1}E_{l}(P_{ij}))e^{l}\wedge e^{j}\\
+ &  & -(\Gamma_{ij}^{k}-2\Lambda p_{(i}\delta_{j)}^{k})(e^{k+n}+(\Gamma_{km}^{l}p_{l}-\Lambda p_{k}p_{m}-\Lambda^{-1}P_{km})e^{m})\wedge e^{j}\\
+ & = & \bigl[\Lambda^{-1}E_{m}(P_{ij})-E_{m}(\Gamma_{ij}^{k})p_{k}+\Lambda^{-1}\Gamma_{ij}^{k}P_{km}-\Gamma_{ij}^{k}\Gamma_{km}^{l}p_{l}+\Lambda\Gamma_{ij}^{k}p_{m}p_{k}\\
+ &  & +2\Lambda p_{(i}(\Gamma_{j)m}^{l}p_{l}-\Lambda p_{j)}p_{m}-\Lambda^{-1}P_{j)m})\bigr]e^{m}\wedge e^{j}+(2\Lambda p_{(i}\delta_{j)}^{k}-\Gamma_{ij}^{k})e^{k+n}\wedge e^{j}\\
+ & = & \bigl[\Lambda^{-1}D_{m}P_{ij}-(D_{m}\Gamma_{ij}^{k})p_{k}-2p_{(i}P_{j)m}\bigr]e^{m}\wedge e^{j}+(2\Lambda p_{(i}\delta_{j)}^{k}-\Gamma_{ij}^{k})e^{k+n}\wedge e^{j}\\
+\end{eqnarray*}
+Note that we have used $D$ to denote the chosen connection on $N$
+with components $\Gamma_{jk}^{i}$. Next we wish to read off the spin
+connection $\psi_{\ b}^{a}$ such that ${d}e^{a}=-\psi_{\ b}^{a}\wedge e^{b}$
+and the following index symmetries are satisfied:
+\begin{eqnarray*}
+\psi_{\ j}^{i} & = & \frac{1}{2}\psi_{i+n\, j}=-\frac{1}{2}\psi_{j\, i+n}=-\psi_{\ i+n}^{j+n}\\
+\psi_{\ j+n}^{i} & = & \frac{1}{2}\psi_{i+n\, j+n}=-\frac{1}{2}\psi_{j+n\, i+n}=-\psi_{\ i+n}^{j}\\
+\psi_{\ j}^{i+n} & = & \frac{1}{2}\psi_{i\, j}=-\frac{1}{2}\psi_{j\, i}=-\psi_{\ i}^{j+n}
+\end{eqnarray*}
+We find that 
+\begin{eqnarray*}
+\psi_{\ k+n}^{i+n} & = & (2\Lambda p_{(i}\delta_{j)}^{k}-\Gamma_{ij}^{k})e^{j}=-\psi_{\ i}^{k}\\
+\psi_{\ j}^{i+n} & = & \bigl[2(D_{[i}\Gamma_{j]k}^{l})p_{l}-2\Lambda^{-1}D_{[i}P_{j]k}^{\mathrm{S}}-\Lambda^{-1}D_{k}P_{ij}^{\mathrm{A}}+2p_{(j}P_{k)i}-2p_{(i}P_{k)j}\bigr]e^{k}=:A_{ijk}e^{k}\\
+\psi_{\ j+n}^{i} & = & 0.
+\end{eqnarray*}
+One can check that these satisfy both the index symmetries above and
+are such that $ de^{a}=-\psi_{\ b}^{a}\wedge e^{b}$, and
+we know from theory that there is a unique set of $\psi_{\ b}^{a}$
+that have both of these properties. Note that we have used $P^{\mathrm{S}}$
+and $P^{\mathrm{A}}$ to denote the symmetric and antisymmetric parts
+of $P$ in order to avoid too much confusion from having multiple
+symmetrisation brackets in the indices.
+
+We are now ready to calculate the divergence of $\Omega$. Since it
+is covariantly constant in this basis, we obtain
+\[
+\nabla_{c}\Omega_{ab}=-\psi_{\ ac}^{d}\Omega_{db}-\psi_{\ bc}^{d}\Omega_{ad}=-\psi_{\ ac}^{d}\Omega_{db}+\psi_{\ bc}^{d}\Omega_{da}=2\Omega_{d[a}\psi_{\ b]c}^{d}.
+\]
+We can split the right hand side into
+\begin{eqnarray*}
+\Omega_{da}\psi_{\ bc}^{d} & = & \Omega_{ka}\psi_{\ bc}^{k}+\Omega_{k+n\, a}\psi_{\ bc}^{k+n}\\
+ & = & \delta_{[k}^{i}\delta_{a]}^{i+n}\psi_{\ bc}^{k}+\delta_{[k+n}^{i}\delta_{a]}^{i+n}\psi_{\ bc}^{k+n}\\
+ & = & \frac{1}{2}\Bigl(-\delta_{a}^{k+n}\delta_{b}^{i}\delta_{c}^{j}(2\Lambda p_{(i}\delta_{j)}^{k}-\Gamma_{ij}^{k})-\delta_{a}^{k}\delta_{b}^{l+n}\delta_{c}^{j}(2\Lambda p_{(k}\delta_{j)}^{l}-\Gamma_{kj}^{l})-\delta_{a}^{k}\delta_{b}^{l}\delta_{c}^{m}A_{klm}\Bigr).\\
+\end{eqnarray*}
+The first two terms are the same but with $a\leftrightarrow b$, so
+are lost in the antisymmetrisation. Thus
+\[
+\nabla_{c}\Omega_{ab}=-\delta_{[a}^{k}\delta_{b]}^{l}\delta_{c}^{m}A_{klm}.
+\]
+Tracing amounts to contracting this with $g^{ac}$:
+\[
+\nabla^{c}\Omega_{cb}=-\delta_{[a}^{k}\delta_{b]}^{l}g^{ac}\delta_{c}^{m}A_{klm}=-\delta_{[a}^{k}\delta_{b]}^{l}g^{am}A_{klm},
+\]
+but $g^{am}$ is non-zero only when $a=m+n>n$ and $\delta_{[a}^{k}\delta_{b]}^{l}$
+is non-zero only when $a=k\leq n$ or $a=l\leq n$. We can therefore
+conclude that the right hand side is zero and $\Omega$ is divergence-free.
+
+Finally, we calculate the Ricci scalar of $g$ (given that it's Einstein)
+via the curvature two-forms $\Psi_{\ b}^{a}={d}\psi_{\ b}^{a}+\psi_{\ c}^{a}\wedge\psi_{\ b}^{c}=\frac{1}{2}R_{cdb}^{\ \ \ a}e^{c}\wedge e^{d}$.
+We are only interested in non-zero components of the Ricci tensor
+such as $R_{i\, j+n}=R_{ci\, j+n}^{\ \ \ \ c}$. In fact, we will
+calculate only $R_{m+n\, j}$, for which we need to consider $R_{l\, m+n\, j}^{\ \ \ \ i}$
+and $R_{k+n\, m+n\, j}^{\ \ \ \ \ l+n}$, i.e. we need only calculate
+$\Psi_{\ j}^{i}$ and $\Psi_{\ \ j}^{l+n}$. 
+\[
+\Psi_{\ j}^{i}= d\Bigl((\Gamma_{jk}^{i}-2\Lambda p_{(j}\delta_{k)}^{i})e^{k}\Bigr)+\psi_{\ k}^{i}\wedge\psi_{\ j}^{k}+\psi_{\ k+n}^{i}\wedge\psi_{\ j}^{k+n}.
+\]
+The last term vanishes since $\psi_{\ j}^{k+n}=0$, and the middle
+term only has components that look like $\frac{1}{2}R_{lmj}^{\ \ \ i}e^{l}\wedge e^{m}$,
+so the only term we are interested in is 
+\[
+-2\Lambda dp_{(j}\delta_{k)}^{i}e^{k}=-2\Lambda\delta_{(k}^{i}(e^{j)+n}+(\Gamma_{j)m}^{l}p_{l}-\Lambda p_{j)}p_{m}-\Lambda^{-1}P_{j)m})e^{m})\wedge e^{k}.
+\]
+Again, discarding the $e^{m}\wedge e^{k}$ term gives
+\[
+-\Lambda(e^{j+n}\wedge e^{k}+\delta_{j}^{i}e^{k+n}\wedge e^{k})=\frac{1}{2}R_{l\, m+n\, j}^{\ \ \ \ i}e^{l}\wedge e^{m+n}+\frac{1}{2}R_{m+n\, l\, j}^{\ \ \ \ i}e^{m+n}\wedge e^{l},
+\]
+so we conclude
+\[
+R_{l\, m+n\, j}^{\ \ \ \ i}=\Lambda(\delta_{j}^{i}\delta_{l}^{m}+\delta_{l}^{i}\delta_{j}^{m}).
+\]
+The other Riemann tensor component we need to know to calculate $R_{m+n\, j}=R_{c\, m+n\, j}^{\ \ \ \ c}$
+is $R_{l+n\, m+n\, j}^{\ \ \ \ \ i+n}$, so we examine
+\[
+\Psi_{\ \ j}^{i+n}={d}\psi_{\ \ j}^{i+n}+\psi_{\ \ k}^{i+n}\wedge\psi_{\ j}^{k}+\psi_{\ \ k+n}^{i+n}\wedge\psi_{\ \ j}^{k+n},
+\]
+but none of these terms have $e^{l+n}\wedge e^{m+n}$ components,
+so $R_{l+n\, m+n\, j}^{\ \ \ \ \ i+n}=0$. Hence 
+\[
+R_{m+n\, j}=\delta_{l}^{i}R_{l\, m+n\, j}^{\ \ \ \ i}=\Lambda(\delta_{j}^{m}+n\delta_{j}^{m})=\Lambda(n+1)\delta_{j}^{m}.
+\]
+Setting this equal to $\frac{R}{2n}g_{m+n\, j}=\frac{R}{4n}\delta_{j}^{m}$
+we find 
+\[
+R=4n(n+1)\Lambda,
+\]
+as required.

@@ -1,11 +1,23 @@
 %!TEX root = ../thesis.tex
 %*******************************************************************************
-%****************************** Chapter 2: EW_and_toda *********************************
+%****************************** Chapter 4: EW_and_toda *********************************
 %*******************************************************************************
 
-\chapter{Einstein--Weyl structures from the Dunajski--Mettler class} \label{chap:EW_and_toda}
+\chapter{Einstein--Weyl structures from $(M,g,\Omega)$} \label{chap:EW_and_toda}
 
-In this chapter, we focus on Einstein manifolds in the Dunajski--Mettler class which arise from projective surfaces with at least one symmetry. As discussed in chapter \ref{chap:intro}, it is shown in \cite{DM} that metrics in this subclass have anti--self--dual Weyl tensor and at least one Killing vector field. From the results of \cite{JT} and \cite{Tod_note}, this means that they are associated to solutions of the $SU(\infty)$--Toda equation via Lorentzian Einstein--Weyl structures in $2+1$ dimensions. The aim of this chapter is to exhibit every Einstein--Weyl structure obtainable from the Dunajski--Mettler class, resulting in several examples of new, explicit solutions of the Toda equation, and their associated mini--twistor spaces.
+In this chapter, we focus on Einstein manifolds in the Dunajski--Mettler class which arise from projective surfaces with at least one symmetry. As discussed in chapter \ref{chap:intro}, it is shown in \cite{DM} that metrics in this subclass have anti--self--dual Weyl tensor and at least one Killing vector field. From the results of \cite{JT} and \cite{Tod_note}, this means that they are associated to solutions of the $SU(\infty)$--Toda equation via Lorentzian Einstein--Weyl structures in $2+1$ dimensions. The aim of this chapter is to exhibit every Einstein--Weyl structure obtainable from the Dunajski--Mettler class, resulting in several examples of new, explicit solutions of the Toda equation, and their associated mini--twistor spaces. Note that in the case $n=2$ we will write the metric and symplectic form as
+\begin{eqnarray}
+g =& dz_A \odot dx^A - (\Gamma^C_{AB}z_C-z_Az_B-\Rho_{AB})dx^A \odot dx^B, 
+ \label{g} \\
+{\Omega} =& dz_A\wedge dx^A + \Rho_{AB}dx^A \wedge dx^B, \qquad A, B, C=0, 1.
+\end{eqnarray} 
+
+
+where we have replaced $\{p_i\}$ with $\{z_A\}$ and shifted the indices from $i,j=1,2$ to $A,B=0,1$. This is helpful for the twistorial calculations because it agree with the usual notation for two--component spinor indices. Note that a change of projective connection is now given by
+\be
+\label{proj_change}
+\Gamma^{C}_{AB} \rightarrow \Gamma^{C}_{AB} + \delta^C_A\Upsilon_B + \delta^C_B\Upsilon_A, \quad z_A\rightarrow z_A + \Upsilon_A, \quad A,B,C=0,1.
+\ee
 
 \subsection{The $SU(\infty)$--Toda equation}
 
@@ -130,29 +142,8 @@ AW is grateful for support from the Sims Fund. We thank David Calderbank, Thomas
 Here we summarise basic facts about projective, Einstein--Weyl, 
 and anti--self--dual geometries.
 \subsection{Projective structures}
-In this section we review projective differential geometry. In the applications to the $SU(\infty)$--Toda equation we 
-shall focus on the surface case, where the dimension of the underlying manifold $N$ is two. In
-\S\ref{chap:KK_lift} we shall consider the general case where $\mbox{dim}(N)=n$.
-\begin{defi}
-A projective structure on a surface $N$ is an equivalence class $[\nabla]$ of torsion-free affine connections on $TN$ which share the same unparametrised geodesics.
-\end{defi}
-Let $\nabla \in [\nabla]$ be a connection in the projective equivalence class
-with connection symbols $\Gamma^{C}_{AB}$. Any other connection
-in $[\nabla]$  can be obtained from $\nabla$ in terms of a one-form $\Upsilon$ as
-\be
-\label{proj_change}
-\Gamma^{C}_{AB} \rightarrow \Gamma^{C}_{AB} + \delta^C_A\Upsilon_B + \delta^C_B\Upsilon_A, \quad A, B, C=1, 2, \dots, n. 
-\ee
-Let $R_{AB}$ be the (not necessarily symmetric) Ricci tensor of $\nabla$, and
-let $P_{AB}=1/(n-1)R_{(AB)}+1/(n+1) R_{[AB]}$ be the projective Schouten tensor
-(here we give the formula for the general $n$--dimensional projective structure).
-The change of representative connection (\ref{proj_change}) induces
-the following change
-\be
-\label{shouten_change}
-P_{AB} \rightarrow P_{AB} + \Upsilon_A\Upsilon_B - \nabla_A\Upsilon_B 
-\ee
-on the Schouten tensor. A two--dimensional 
+
+A two--dimensional 
 projective structure is called flat if the Cotton tensor
 $\nabla_{[A}P_{B]C}$ vanishes for any choice of the representative connection.
 
