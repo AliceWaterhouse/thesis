@@ -15,19 +15,7 @@
 
 This thesis splits naturally into two parts. The first 4 chapters are concerned with a class of Einstein manifolds which can be canonically constructed from projective structures as shown in recent work by Dunajski and Mettler \cite{DM}. Chapter \ref{chap:wormhole} discusses a solitonic solution of the equations of motion associated with $\phi^4$--field theory on a wormhole spacetime. Chapter \ref{chap:wormhole} is self--contained, and possesses its own introduction. The remainder of this chapter will introduce some preliminaries for the first part of the thesis, culminating in the results of \cite{DM} on the almost para--K\"ahler Einstein manifolds which will form the basis of chapters 2--4.
 
-
-
-
-\begin{defi} A projective structure $(N,[\nabla])$
-on a manifold $N$ is an equivalence class $[\nabla]$ of torsion--free affine connections
-on $N$ which have the same unparametrised geodesics. For two sets
-of connection components $\Gamma_{jk}^{i}$ to represent connections
-in the same projective class, they must be related by
-\begin{equation}
-\delta\Gamma_{jk}^{i}=\delta_{j}^{i}\Upsilon_{k}+\delta_{k}^{i}\Upsilon_{j}\label{eq:proj_change}
-\end{equation}
-for some 1-form $\Upsilon.$
-\end{defi}
+\mynote{Not sure whether to keep the rest of this because it is a slightly more fleshed out repeat of the abstract. Also, should I include some notation and conventions e.g. $i,j,k=1,...,n$ are indices for coordinates on $n$? and $\Gamma$ are connection components which are defined by... Curvature is defined by}
 
 Given a projective structure on a manifold $N$ of dimension $n$,
 Dunajski and Mettler \cite{DM} construct a neutral signature Einstein metric $g$ with non-zero
@@ -68,80 +56,119 @@ system called the $SU(\infty)$--Toda field equation via $2+1$--dimensional
 Einstein-Weyl structures. In chapter \ref{chap:EW_and_toda} we discuss the extraction
 of all possible Toda solutions obtainable in this way.
 
+\section{Projective Geometry}\label{sec:projgeom}
 
+Our discussion follows Eastwood \cite{Eastwood}.
 
+\begin{defi}\label{def:projstruct} A projective structure $(N,[\nabla])$
+on a manifold $N$ is an equivalence class $[\nabla]$ of torsion--free affine connections on $N$ which have the same unparametrised geodesics.
+\end{defi}
 
+The following proposition converts definition \ref{def:projstruct} to a to a more operational form.
 
+\begin{prop} Two torsion--free connections $\nabla$ and $\hat{\nabla}$ belong to the same projective class if and only if their components $\Gamma^i_{jk}$ and $\hat{\Gamma}^i_{jk}$ are related by
+\begin{equation}
+\hat{\Gamma}^i_{jk} - \Gamma^i_{jk} = \delta_{j}^{i}\Upsilon_{k}+\delta_{k}^{i}\Upsilon_{j}\label{eq:proj_change}
+\end{equation}
+for some one--form $\Upsilon.$
+\end{prop}
 
-\section{The Cartan Geometry of a Projective Structure}
+{\bf Proof.} We denote by $V$ the vertical sub--bundle of $T(TN)$, where $\nu:TN\rightarrow N$\mynote{Probably used $\nu$ elsewhere...} is the tangent bundle to $N$. A connection defines a splitting of the exact sequence
+\be \label{eq:TTMsequence}
+0 \longrightarrow V \longrightarrow T(TM) \longrightarrow \nu^*TN \longrightarrow 0
+\ee
+so that each $X^i\in T_pM$ has a unique pull--back in the horizontal sub--bundle complementary to $V$. The integral curves of these pull--backs, when projected down to $N$, then define the geodesics of the connection.
 
-One way of understanding the construction of $(M,g)$ in \cite{DM}
-is via the Cartan bundle of the projective structure $(N,[\nabla])$.
-By virtue of being modelled on $\mathbb{RP}^{n},$ which can be viewed
-as a homogeneous space, projective structures admit a description
-as Cartan geometries. These generalise Klein's Erlangen programme,
-a study of homogeneous spaces $G/H$, to the curved case, in which
-the total space $G$ is replaced by a principal right $H$-bundle
-over a manifold $N$ such that the tangent space to $N$ is isomorphic
-to the Lie algebra quotient $\mathfrak{g}/\mathfrak{h}$. In the Riemannian
-case, this corresponds to generalising $\mathbb{R}^{n}\cong\mathrm{Euc}(n)/SO(n)$
-to a general, curved Riemannian manifold, whose orthonormal frame
-bundle is a principal $SO(n)$ bundle and whose tangent spaces are
-modelled on $\mathbb{R}^{n}\cong\mathfrak{Euc}(n)/\mathfrak{so}(n)$.
+Any two connections are related by some $\delta\Gamma^k_{ij}$, which satisfies $\delta\Gamma^k_{ij}=\delta\Gamma^k_{(ij)}$ as long as both connections are torsion--free. A change of connection is equivalent to a change in the splitting of (\ref{eq:TTMsequence}). At $X^i\in T_pN$, the change is given by the homomorphism from $T_pN$ to $T_pN=V_p$ defined by the contraction $X^i\Gamma^k_{ij}$. Thus the two connections define the same geodesics if and only if $X^iX^j\Gamma^k_{ij}$ is a multiple of $X^k$ for all $X^i$. This is true if and only if there is a one--form $\Upsilon_i$ such that (\ref{eq:proj_change}) is satisfied.\footnote{To see this, take some one--form $\omega_i$ and note that $2X^iX^j\delta^k_{(i}\Upsilon_{j)}\omega_k$ vanishes if and only if $X^k\omega_k$ does.}
+\koniec
 
-The theory of Cartan geometries was developed as part of Cartan's
-\textit{method of moving frames}. In Riemannian geometry, one has
-an obvious subclass of frames which are ``adapted'' to the metric,
-i.e. those which are orthonormal. The idea of Cartan's method is to
-pick out some adapted frames for manifolds equipped with some non-metric
-structure. The bundle of such frames over a manifold is then a principal
-bundle $\pi:P\rightarrow S$ with structure group $H$.
+One can show that the curvature of a connection $\nabla$ in the projective class can be uniquely decomposed as
+\be \label{eq:projcurvdecomp}
+R_{ijk}^{\ \ \ l} = W_{ijk}^{\ \ \ l} + 2\delta^l_{[i}\Rho_{j]k} -2\Rho_{[ij]}\delta^l_k,
+\ee
+where the Weyl projective curvature tensor, $W_{ijk}^{\ \ \ l}$, is trace free, and the Schouten tensor, $\Rho_{ij}$, is given in terms of the Ricci tensor by
+\[
+\Rho_{ij}=\frac{1}{n-1}R_{(ij)}+\frac{1}{n+1}R_{[ij]}.
+\]
+The objects $W_{ijk}^{\ \ \ l}$ and $\Rho_{ij}$ transform as
+\be \label{eq:schout_change}
+\hat{W}_{ijk}^{\ \ \ l} = W_{ijk}^{\ \ \ l}, \qquad \hat{\Rho}_{ij} = \Rho_{ij} - \nabla_i\Upsilon_j + \Upsilon_i\Upsilon_j
+\ee
+under a change of representative connection (\ref{eq:proj_change}). Note that for $n=2$ the Weyl tensor is always vanishing.
 
-In addition, $P$ is equipped with a $\mathfrak{g}$-valued one-form
-$\theta$ called the Cartan connection. It satisfies a number of properties,
-in particular equivariance, i.e. $R_{h}^{*}\theta=\mathrm{Ad}(h^{-1})\theta$
-for all $h\in H$. It also defines an isomorphism $\theta:T_{p}P\rightarrow\mathfrak{g}$
-every point $p\in P$ such that the vertical subspace $V_{p}P\subset T_{p}P$
-is mapped to $\mathfrak{h}$ and the horizontal subpace $H_{p}P\subset T_{p}P$
-is defined as the inverse image of $\mathfrak{g}/\mathfrak{h}$. Note
-that it is not a connection in the usual sense of a principal bundle
-connection, since it takes value in a Lie algebra larger than that
-of the structure group. Further details can be found in \cite{Sharpe1997}.
+A projective structure in dimension $n$ is said to be flat if it is diffeomorphic to the real projective space $\RP^n$ with its standard flat projective structure.
+\begin{defi}
+The real projective space $\RP^n$ of dimension $n$ is the space of unoriented lines through the origin in $\R^{n+1}$, thought of as $\RP^n=(\R^{n+1}\backslash\{0\})/\R^*$, with geodesics given by straight lines in $\R^{n+1}$ under the projection $\kappa:\R^{n+1}\rightarrow\RP^n$.
+\end{defi}
+Let $X$ denote a non--zero point in $\R^{n+1}$ with coordinates $(X^0,X^1,\dots,X^n)^T$, and let $[X]$ denote the corresponding point in $\RP^n$, labelled by homogeneous coordinates. In a patch where $X^0\neq 0$, we can write $[X]=[1,X^1/X^0,\dots,X^n/X^0]$ and define inhomogeneous coordinates on $\RP^n$ by
+\[
+(x^1,\dots,x^n) = (X^1/X^0,\dots,X^n/X^0).
+\]
+If we combine this with coordinate patches where $X^i\neq 0,\ i=1,\dots,n$, we can build an atlas for $\RP^n$.
 
-In the case of a projective surface, the model is $\mathbb{RP}^{n}\cong SL(n+1,\mathbb{R})/H$,
-where $SL(n+1,\mathbb{R})$ acts via the fundamental representation
-on homogenous coordinates $[X_1,X_2,\dots,X_n]$ in $\mathbb{RP}^{n}$, and $H$
-is the stabiliser subgroup of the point $[1,0,\dots,0]$, whose elements
-are matrices of the general form
+Real projective space can be viewed as homogeneous space as follows. 
+The group $SL(n+1,\mathbb{R})$ acts from the left via the fundamental representation on coordinates $(X^0,\dots,X^n)^T$ in $\R^{n+1}$, and this descends to a transitive action on $\RP^n$. By the orbit stabiliser theorem, $\RP^n=SL(n+1,\R)/H$, where $H$ is a subgroup stabilising a point. If we choose the point $[1,0,\dots,0]$, the elements of $H$ are matrices of the general form
 \[
 \begin{pmatrix}\mathrm{det}a^{-1} & b\\
 0 & a
 \end{pmatrix}
 \]
-for some $a\in GL(n,\mathbb{R})$ and $b\in\mathbb{R}_{n}$. We say
-that the Cartan geometry of a projective surface is of type $(SL(n+1,\mathbb{R}),H)$.
-We call it $(\pi:P\rightarrow N,\theta)$, where $\theta$ is the
-Cartan connection and takes values in $\mathfrak{sl}(n+1,\mathbb{R})$.
-It can be written as a matrix
+for some $a\in GL(n,\mathbb{R})$ and $b\in\mathbb{R}_{n}$. 
+
+It can be shown that a projective structure in dimension $n>2$ is flat if and only if its Weyl projective curvature tensor vanishes. The necessary and sufficient condition in dimension $n=2$ is the vanishing of the Cotton tensor $\nabla_{[i}\Rho_{j]k}$ for any choice of representative connection.
+
+\subsection{The Cartan bundle}
+
+One way of understanding the construction of $(M,g)$ in \cite{DM}
+is via the Cartan bundle \cite{Cartan} of the projective structure $(N,[\nabla])$ (see also \cite{KobNag}). Cartan geometries generalise Klein's Erlangen programme \cite{Klein}, a study of homogeneous spaces $G/H$, to the curved case, in which the total space $G$ is replaced by a principal right $H$-bundle over a manifold $N$ such that the tangent space to $N$ at every point is isomorphic to the Lie algebra quotient $\mathfrak{g}/\mathfrak{h}$. Since projective structures are modelled on $\mathbb{RP}^{n}$, which can be viewed as a homogeneous space, they constitute a type of Cartan geometry.
+
+In the Riemannian case, the model space is $\mathbb{R}^{n}\cong\mathrm{Euc}(n)/SO(n)$. The corresponding Cartan geometry is a general, curved Riemannian manifold. One has an obvious subclass of frames which are ``adapted'' to the metric, i.e. those which are orthonormal. We can thus think of a curved Riemannian manifold as a principal $SO(n)$ bundle whose tangent spaces are modelled on $\mathbb{R}^{n}\cong\mathfrak{Euc}(n)/\mathfrak{so}(n)$. We say that Riemannian manifolds are Cartan geometries of type $(\mathrm{Euc}(n),SO(n))$.
+
+The theory of Cartan geometries was developed as part of Cartan's
+\textit{method of moving frames}. The idea is to pick out some adapted frames for manifolds equipped with some non-metric structure. The bundle of such frames over a manifold is then a principal bundle $\pi:P\rightarrow N$ with structure group $H$. In the projective case, the notion of a frame must be generalised to obtain an object which is correctly adaptive to the projective structure.
+
+The bundle $P$ is equipped with a $\mathfrak{g}$-valued one-form
+$\theta$ called the Cartan connection. It defines an isomorphism $\theta:T_{p}P\rightarrow\mathfrak{g}$ at every point $p\in P$ such that the vertical subspace $V_{p}P\subset T_{p}P$ is mapped to $\mathfrak{h}$ and the horizontal subpace $H_{p}P\subset T_{p}P$ is defined as the inverse image of $\mathfrak{g}/\mathfrak{h}$. Note that it is not a connection in the usual sense of a principal bundle connection, since it takes value in a Lie algebra larger than that of the structure group. Further details can be found in \cite{Sharpe}.
+
+%The importance of the Cartan connection is that it satisfies a number of properties, in particular equivariance, i.e. $R_{h}^{*}\theta=\mathrm{Ad}(h^{-1})\theta$ for all $h\in H$. 
+
+Our definition of a Cartan geometry in the projective case relies on our description above of $H$ as the stabiliser subgroup of a point in $\RP^n$.
+
+\begin{defi}
+The Cartan geometry of a projective structure $(N,[\nabla])$ consists of a principal right $H$--bundle $\pi:P\rightarrow N$ carrying a one--form $\theta$ called the Cartan connection, which takes values in $\mathfrak{sl}(n+1)\mathbb{R})$ and has the following properties:
+\begin{enumerate}
+\item $\theta_u:T_uP\rightarrow\mathfrak{sl}(n+1,\R)$ is an isomorphism for all $u\in P$;
+\item $\theta(X_v)=v$ for all fundamental vector fields $X_v$ on $P$;
+\item $R^*_h\theta = \mathrm{Ad}(h^{-1})\theta=h^{-1}\theta h$ for all $h\in H$.
+\end{enumerate}
+\end{defi}
+
+If we choose the point which is stabilised by $H$ to be $[1,0,\dots,0]$, the Cartan connection can be written as a matrix
 \[
 \theta=\begin{pmatrix}-\mathrm{tr}\phi & \eta\\
 \omega & \phi
 \end{pmatrix},
 \]
-where $\omega$, $\eta$ and $\phi$ are one-forms valued in $\mathbb{R}^{n}$,
-$\mathbb{R}_{n}$ and $\mathfrak{gl}(n,\mathbb{R})$ respectively.
+where $\omega$, $\eta$ and $\phi$ are one-forms valued in $\mathbb{R}^{n}$, $\mathbb{R}_{n}$ and $\mathfrak{gl}(n,\mathbb{R})$ respectively.
 We will refer to the components of $\omega$ and $\eta$ with respect
-to the natural basis of $\mathfrak{sl}(n+1,\mathbb{R})$ as $\{\omega^{(i)}\}$
-and $\{\eta_{(i)}\}$, so that $\omega^{(i)}$ and $\eta_{(i)}$ are
-both one-forms. We also note for later use that the $\mathfrak{sl}(n+1,\mathbb{R})$-valued
+to the natural basis of $\mathfrak{sl}(n+1,\mathbb{R})$ as $\{\omega^{(i)}\}$ and $\{\eta_{(i)}\}$, so that $\omega^{(i)}$ and $\eta_{(i)}$ are both one-forms. Using this notation, we can write the following two conditions which are also satisfied by the Cartan connection of a projective structure.
+\begin{enumerate}[resume]
+\item If $X$ is a vector field on $P$ with the property that $\eta(X)=\phi(X)=0$ and $\omega(X)\in\R^n\backslash\{0\}$, then the integral curve of $X$ projects down to a geodesic on $N$ and conversely every geodesic of $[\nabla]$ arises in this way.
+\item The $\mathfrak{sl}(n+1,\mathbb{R})$-valued
 curvature two-form $\Theta$ satisfies
 \[
 \Theta=d\theta+\theta\wedge\theta=\begin{pmatrix}0 & L(\omega\wedge\omega)\\
 0 & W(\omega\wedge\omega)
 \end{pmatrix},
 \]
-where $L$ and $W$ are smooth curvature functions.
+where $L$ and $W$ are smooth curvature functions valued in $\mathrm{Hom}(\R^n\wedge\R^n,R_n)$ and $\mathrm{Hom}(\R^n\wedge\R^n,R_n\otimes\R^n)$ respectively. The function $W$ represents the Weyl projective curvature tensor appearing in (\ref{eq:projcurvdecomp}).
+\end{enumerate}
 
+The Cartan geometry of a projective structure is unique in the sense that for any two Cartan geometries $(\hat{\pi}:\hat{P}\rightarrow N,\hat{\theta})$ and $(\pi:P\rightarrow N,\theta)$ of type $(SL(n+1,\R),H)$ satisfying the above properties there is a $H$--bundle isomorphism $\psi:P\rightarrow\hat{P}$ such that $\psi^*\hat{\theta}=\theta$. %This means that although we cannot choose a unique connection on the tangent bundle to $N$, we can choose a unique connection on the Cartan bundle. 
+
+The Cartan connection also gives us a unique connection on any bundle associated to $P$ via some $H$--module.
+
+\subsection{The Tractor bundle}
 
 \section{The Dunajski--Mettler Construction $(M,g_\Lambda,\Omega_\Lambda)$}
 
@@ -203,11 +230,7 @@ the cotangent bundle, we find
 \varphi^{*}\Omega & = &  dp_{i}\wedge dx^{i}+\Rho_{ij} dx^{i}\wedge dx^{j},\qquad i,j=1,\dots ,n.\nonumber 
 \end{eqnarray}
 Here $\Gamma_{jk}^{i}$ are the connection components of the representative
-connection $\nabla$ that we chose, and its Schouten tensor%
-\footnote{Recall that the Schouten tensor is given in terms of the Ricci tensor
-$R_{ij}$ by $P_{ij}=\frac{1}{n-1}R_{(ij)}+\frac{1}{n+1}R_{[ij]}$
-where $n$ is the dimension of the manifold.%
-} is denoted $P_{ij}$. This can be shown to be projectively invariant
+connection $\nabla$ that we chose, and its Schouten tensor is denoted $P_{ij}$. This can be shown to be projectively invariant
 in the sense that a different choice of $\nabla\in[\nabla]$ corresponds
 to shifting the fiber coordinates $p_{i}$, i.e. metrics on $T^{*}N$
 resulting from pulling back $g$ using different representative connections
