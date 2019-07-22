@@ -74,7 +74,6 @@ The statement in  Theorem \ref{CGthm} does not depend on the choice of $T$. Diff
 \section{Compactifying the Dunajski--Mettler Class} 
 \label{section_4}
 \newcommand{\ol}[1]{\overline{#1}} \newcommand{\bp}{\boldsymbol{p}}
-\newcommand{\cT}{\mathcal{T}} \newcommand{\cE}{\mathcal{E}} 
 
 In \cite{DM} it was shown that the manifold $M$ can be identified with the
 complement of
@@ -139,232 +138,10 @@ compactification of the construction in \cite{DM}. For simplicity let us assume 
 orientable.
 
 \subsection{Compactification by line projectiviation:}
-On the total space of $\cT^*$ we pullback
-$\pi:\cT^*\to N$ along $\pi$ to get $\pi^*(\cT^*)\to \cT^*$ as a
-vector bundle over the total space $\cT^*$. By construction this
-bundle has a tautological section $U\in \Gamma (\pi^*(\cT^*))$.  We
-also have $\pi^*(\cT(w))$ for any weight $w$, and we
-shall write simply $X\in \Gamma(\pi^*(\cT(1)))$ for the pullback to
-$\cT^*$ of the canonical tractor $X$ on $N$.
-
-There is  a canonical density $\tau\in \Gamma(\pi^*\cE(1))$ given by
-$$
-\tau:= X\hook U .
-$$
-%% and this is homogeneous of degree 1 up the fibres of $\pi$ in the total space $\cT^*$.
+ 
 
 
-Now define
-\be
-\label{projection_map}
-\kappa: \cT^*\longrightarrow \mathcal{M}:=\mathbb{P}(\cT^*)
-\ee
-by the fibrewise
-projectivisation, and use also $\pi$ for the map to $N$:
-$$
-\pi:\mathcal{M}\to N.
-$$ Note that $\tau$ is homogeneous of degree 1 up the fibres of the
-map $\cT^*\to \mathcal{M}$. Thus $\tau$ determines, and is equivalent
-to, a section (that we also denote) $\tau$ of a certain density bundle
-$\pi^*(\cE(1))\otimes \cE_{\cT^*}(1)$, on $\mathcal{M}$ that for
-simplicity we shall denote $\cE(1,1)$.  So $\mathcal{M}$ is stratified according to
-whether or not $\tau$ is vanishing, and we write $\mathcal{Z}(\tau)$
-to denote, in particular, the zero locus of $\tau$.
 
-%\rs{Note the
-%  second density bundle is not necessarily orientable.}
-To elaborate
-on the densities used here, and their generalisation to arbitrary
-weights: By $\cE_{\cT^*}(w')$, for $w'\in \mathbb{R}$, we mean the line
-bundle on $\mathbb{P}(\cT^*)$ whose sections correspond to functions
-$f: \pi^*\cT^* \to\mathbb{R} $ that are homogeneous of degree $w$ in
-the fibres of $\pi^*\cT^*\to \mathbb{P}(\cT^*)$. Then for any weight $w$ we also have $\cE(w)$ on $N$ and its pull back to the bundle $\pi^*\cE(w)\to \mathbb{P}(\cT^*)$.
-Then
-$$
-\ce(w,w'):= \pi^*\cE(w) \otimes \cE_{\cT^*}(w').
-$$
-
-
-Using these tools we can recover the metric of \cite{DM}:
-\begin{theo}\label{metric} 
-  There is a neutral signature metric on $\mathcal{M}\setminus \mathcal{Z}(\tau)$ determined by the canonical pairing of the horizontal and vertical subspaces
-of $T(\cT^*)$. This metric is Einstein, with non--zero Ricci scalar, and 
-agrees with (\ref{main_metric}).
-\end{theo}
-{\bf Proof.}
- Considering first the total space $\cT^*$ and then its tangent
- bundle, note that there is an exact sequence
-  \begin{equation}\label{TM}
-0\to \pi^* \cT^*\to T(\cT^*)\to \pi^*TN\to 0,
-  \end{equation}
-  where we have identified $\pi^* \cT^*$ as the vertical sub-bundle of $T(\cT^*)$.
-A connection on the vector bundle $\cT^*\to N$ is equivalent to a
-splitting of this sequence; a connection identifies $\pi^*TN$ with a distinguished  sub-bundle of horizontal subspaces in 
-$ T(\cT^*)$.
-Thus, in particular, the projective tractor
-connection on $\cT^*\to N$ gives a canonical splitting of the sequence (\ref{TM}).
-So we have 
-\begin{equation}\label{HV}
-T(\cT^*)=  \pi^*TN\oplus \pi^* \cT^* .
-\end{equation}
-
-
-We move now to the total
-space of $\mathbb{P} {\cT^*}$, and we note that again the tractor
-(equivalently, Cartan) connection determines a splitting of the
-tangent bundle $T(\mathbb{P} {\cT^*})$, see \cite{CGH-duke}. From the usual Euler sequence
-of projective space (or see (\ref{useful}) in the last Section) it
-follows that for $T(\mathbb{P} {\cT^*})$ the second term of the
-display (\ref{HV}) is replaced by a quotient of $\pi^* \cT^*(0,1)$.  Indeed, if
-we work at a point $p\in \mathbb{P}(\cT^*)$, observe that $\pi^*
-\cT^*(0,1)$ has a filtration
-\begin{equation}\label{quotient}
-0\to \cE (0,0)_p\stackrel{U_p}{\to}  \pi^* \cT^*(0,1)|_p \to  \pi^* \cT^*(0,1)|_p/\langle U_p \rangle \to 0
-\end{equation}
-where, as usual, $U$ is the canonical section. 
-But away from $\mathcal{Z}(\tau )$, we have that  $U$ canonically splits 
-the appropriately re-weighted pull back of  the sequence (\ref{co-euler})
-$$
-0\to \pi^* T^*N(1,1)   \to \pi^* \cT^*(0,1) \stackrel{X/\tau}{\to} \cE(0,0) \to 0 .
-$$
-This identifies the quotient in (\ref{quotient}), and thus we have canonically
-$$
-T(\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau))=  \pi^*TN\oplus \pi^*T^*N(1,1).
-$$
-It follows that on  $\mathcal{M}$
-there is canonically a metric $\boldsymbol{g}$ and symplectic form $\boldsymbol{\Omega}$ taking values in $\cE(1,1)$, given by
-\begin{eqnarray*}
-\boldsymbol{g}(w_1,w_2)&=& \frac{1}{2}\Big(
-\pp_H(w_1)\hook \pp_V(w_2)+\pp_H(w_2)\hook\pp_V(w_1)\Big) \quad \mbox{and} \\
-\boldsymbol{\Omega}(w_1,w_2)&=& \frac{1}{2}\Big(\pp_H(w_1)\hook \pp_V(w_2)-\pp_H(w_2)\hook\pp_V(w_1)\Big)
-\end{eqnarray*}
-where
-$$
-\pp_H: T(\mathcal{M}\setminus \mathcal{Z}(\tau))\to \pi^*TN \quad \mbox{and} \quad \pp_V: T(\mathcal{M}\setminus \mathcal{Z}(\tau))\to \pi^* T^*N(1,1)
-$$
-are the projections.
-Then we obtain the metric and symplectic form by
-\be
-\label{almost_there}
-g:=\frac{1}{\tau}\boldsymbol{g} \qquad \mbox{and} \qquad \Omega:=\frac{1}{\tau}\boldsymbol{\Omega} .
-\ee
-What remains to be done, is to show that (\ref{almost_there}) agrees
-with the normal form (\ref{main_metric}) once a trivialisation of
-$\cT^*\rightarrow N$ has been chosen.
-
-Let $p\in N$ and let ${\mathcal W}\subset N$ be an open 
-neighbourhood of $p$ with 
-local coordinates $(x^1, \dots, x^n)$ such that
-$T_pN=\mbox{span}(\p/\p x^1, \dots, \p/\p x^n)$. The connection 
-(\ref{tractor_con}) gives a splitting of $T(\cT^*)$ into the horizontal and
-vertical sub-bundles
-\[
-T(\cT^*)=H(\cT^*)\oplus V(\cT^*),
-\]
-as in (\ref{HV}).
-To obtain the explicit form of this splitting, let $V_\alpha, \alpha=0, 1, \dots, n$ be components of a local section of $\cT^*$ in the trivialisation over ${\mathcal{W}}$.
-Then
-\[
-\nabla^{\cT^*} V_\beta=d V_\beta-\gamma_{\beta}^{\alpha} V_\alpha,
-\]
-where $\gamma_{\alpha}^\beta= \gamma_{i\alpha}^\beta dx^i$, and the components
-of the co-tractor connection 
-$\gamma_{i\alpha}^\beta$  are given in terms of the connection
-$\nabla$ on $N$, and its Schouten tensor, and 
-can be read--off from (\ref{tractor_con}):
-\[
-\gamma_{i0}^0=0, \quad \gamma_{i0}^j=\delta_i^j,\quad
-\gamma_{ij}^k=\Gamma_{ij}^k, \quad \gamma_{ij}^0=-\Rho_{ij}.
-\]
-In terms of these components we can write
-\[
-H(\cT^*)=\mbox{span}
-\Big( \frac{\p}{\p x^i}+ {\gamma_{i\alpha}^\beta} V_\beta
-\frac{\p}{\p V_{\alpha}}, i=1, \dots, n \Big),
-\quad V(\cT^*)=\mbox{span}\Big(\frac{\p}{\p V_{\alpha}}, \alpha=0, 1, 
-\dots, n\Big).
-\]
-Setting $\xi_i=V_i/V_0$, where $\tau=V_0\neq 0$ \footnote{Rod @ Maciej: I have added $V_0=\tau$. You agree, right!?} on the complement of 
-$\mathcal{Z}(\tau)$, 
-  we can compute the push forwards
-of these spaces to $\mathbb{P}(\cT^*)\setminus {\mathcal{Z}(\tau)}$:
-\[
-\kappa_* H(\cT^*)=\mbox{span}\Big(h_i\equiv
-\frac{\p}{\p x^i}-
-(\Rho_{ij}+\xi_i\xi_j  -\Gamma_{ij}^k\;\xi_k)\frac{\p}{\partial \xi_j}
-\Big), \quad \kappa_* V(\cT^*)=\mbox{span}\Big(v^i\equiv\frac{\p}{\p \xi_i}
-\Big).
-\]
-The non--zero components of the  metric (\ref{almost_there}) are given by
-\[
-g(v^i, h_j)={\delta^i}_j
-\]
-which indeed agrees with (\ref{main_metric}) which is known to be Einstein
-\cite{DM}.
-\koniec
-
-Next we observe that $\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau)$ is an affine bundle modelled on $T^* N$.
-The point is that given
-  $\nabla$ in the projective class there is a  there is a smooth fibre bundle isomorphism
-  \begin{equation}\label{key-id}
-\iota : T^* N\to \mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau).
-    \end{equation}
-First, given  $\nabla$, we can represent an element $U\in
-  \cT^*_p$ ($p\in N$) by the pair $(\tau , \mu) \in \cE (1)_p\oplus
-  T_p^*N(1)$,  or, if we choose coordinates on $N$, by collection
-\be
-\label{tractor_U}
-U=(\tau, \mu_i), \quad i=1, \dots, n .
-\ee
-  Then, dropping the choice $\nabla \in [\nabla]$, $U\in
-  \cT^*_p$ is an equivalence class of such pairs by the equivalence
-  relation (\ref{ttrans}) that covers the
-  equivalence relation between elements of $[\nabla]$. 
-
-  Thus, given $\nabla$, and  from the naturality of all maps, it
-  follows that the total space of $T^*N$ can be identified with $\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau)$
-  by (for each $p\in N$)
-\begin{equation}
-T_p^*N\ni \xi_i  \mapsto [(1,\xi_i)]=[(\tau,\tau \xi_i)]\in
-\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau) .
-\end{equation}
-
-%%\rs{Maciej and TM's Thm 5.1 in fact shows the connection is
-%%invariant not on $T*N$ but on an affine space modelled on that}
-Thus we may view $\mathcal{M}$ as a
-compactification of $T^*N$  and, by construction,
-this is a closed manifold iff $N$ is closed.
-
-
-Note that by this construction it is easily verified that the zero
-locus of $\tau$ is a smoothly
-embedded hypersurface in $\mathcal{M}$,  and from (\ref{co-euler}) it follows
-at once that this may be identified with the total space of the
-fibrewise projectivisation $\mathbb{P}(T^*N)$ (which is well known to
-have a para-CR structure). 
-
-A feature of this construction is that in each dimension $n$ (of $N$)
-either the hypersurface $\mathcal{Z}(\tau)$ (if $n$ odd) is not
-orientable, or $\mathcal{M}$ (if $n$ even) is not orientable.  
-
-
-\subsection{Compactification by ray-projectiviation:}
-\label{ray_sub}
-Instead we may follow the construction above but instead define
-$\mathcal{M}:= \pi^*(\mathbb{P}_+(\cT^*))$, where $\mathbb{P}_+(\cT^*)$ is
-the ray-projectivisation of $\cT^*$ (i.e.\ the fibres of $\cT^*\to
-\mathbb{P}_+(\cT^*)$ are isomorphic to $\mathbb{R}_+$). Then the bundles $\ce(w,w')$
-should also be defined via ray homogeneity.
-In this case, for $N$ orientable,
-both $\mathcal{Z}(\tau)$ and $\mathcal{M}$ are orientable, and again
-$\mathcal{M}$ is closed iff $N$ is. Now from (\ref{co-euler}) we have that
-$\mathcal{Z}(\tau)$ may be identified with the
-fibrewise ray-projectivisation $\mathbb{P}_+(T^*N)$.
-In this variant of the
-construction there are two copies $M_{\pm}$ of $T^*N$ in $\mathcal{M}$
-according to the sign of $\tau$. Moreover each of $\mathcal{M}\setminus
-M_{\mp}$ is a manifold that is globally a para-c-projective
-compactification of $M_{\pm}$ in sense of Theorem \ref{CGthm}.
 
 \subsection{Remark on continuing the tractor approach}
 It would be possible to achieve our main aims by continuing the
@@ -397,6 +174,9 @@ by (\ref{main_metric}). What remains to be done is to show that near
 the boundary ${\mathcal{Z}}(\tau)=0$ of $\overline{M}$ the metric 
 (\ref{main_metric}) can be put in the local normal form of Theorem 
 \ref{CGthm}.
+
+\mynote{I think if we are compactifying by line projectivisation (which I think we are...) our candidate is actually $\cM$?}
+
 
 The endomorphism $J:TM\rightarrow TM$ defined by
 $\Omega(X, Y)=g(JX, Y)$ satisfies $J^2=Id$, and the associated Libermann connection $\nabla^{L}$ \cite{Lieb} is given by

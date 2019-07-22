@@ -76,16 +76,16 @@ on a manifold $N$ is an equivalence class $[\nabla]$ of torsion--free affine con
 
 The following proposition converts definition \ref{def:projstruct} to a to a more operational form.
 
-\begin{prop} Two torsion--free connections $\nabla$ and $\hat{\nabla}$ belong to the same projective class if and only if their components $\Gamma^i_{jk}$ and $\hat{\Gamma}^i_{jk}$ are related by
+\begin{prop} Two torsion--free connections $\nabla$ and $\widehat{\nabla}$ belong to the same projective class if and only if their components $\Gamma^i_{jk}$ and $\widehat{\Gamma}^i_{jk}$ are related by
 \begin{equation}
-\hat{\Gamma}^i_{jk} - \Gamma^i_{jk} = \delta_{j}^{i}\Upsilon_{k}+\delta_{k}^{i}\Upsilon_{j}\label{eq:proj_change}
+\widehat{\Gamma}^i_{jk} - \Gamma^i_{jk} = \delta_{j}^{i}\Upsilon_{k}+\delta_{k}^{i}\Upsilon_{j}\label{eq:proj_change}
 \end{equation}
 for some one--form $\Upsilon.$
 \end{prop}
 
 {\bf Proof.} We denote by $V$ the vertical sub--bundle of $T(TN)$, where $\nu:TN\rightarrow N$\mynote{Probably used $\nu$ elsewhere...} is the tangent bundle to $N$. A connection defines a splitting of the exact sequence
 \be \label{eq:TTMsequence}
-0 \longrightarrow V \longrightarrow T(TM) \longrightarrow \nu^*TN \longrightarrow 0
+0 \longrightarrow V \longrightarrow T(TN) \longrightarrow \nu^*TN \longrightarrow 0
 \ee
 so that each $X^i\in T_pM$ has a unique pull--back in the horizontal sub--bundle complementary to $V$. The integral curves of these pull--backs, when projected down to $N$, then define the geodesics of the connection.
 
@@ -102,7 +102,7 @@ where the Weyl projective curvature tensor, $W_{ijk}^{\ \ \ l}$, is trace free, 
 \]
 The objects $W_{ijk}^{\ \ \ l}$ and $\Rho_{ij}$ transform as
 \be \label{eq:schout_change}
-\hat{W}_{ijk}^{\ \ \ l} = W_{ijk}^{\ \ \ l}, \qquad \hat{\Rho}_{ij} = \Rho_{ij} - \nabla_i\Upsilon_j + \Upsilon_i\Upsilon_j
+\widehat{W}_{ijk}^{\ \ \ l} = W_{ijk}^{\ \ \ l}, \qquad \widehat{\Rho}_{ij} = \Rho_{ij} - \nabla_i\Upsilon_j + \Upsilon_i\Upsilon_j
 \ee
 under a change of representative connection (\ref{eq:proj_change}). Note that for $n=2$ the Weyl tensor is always vanishing.
 
@@ -135,34 +135,29 @@ is via the Cartan bundle \cite{Cartan} of the projective structure $(N,[\nabla])
 In the Riemannian case, the model space is $\mathbb{R}^{n}\cong\mathrm{Euc}(n)/SO(n)$. The corresponding Cartan geometry is a general, curved Riemannian manifold. One has an obvious subclass of frames which are ``adapted'' to the metric, i.e. those which are orthonormal. We can thus think of a curved Riemannian manifold as a principal $SO(n)$ bundle whose tangent spaces are modelled on $\mathbb{R}^{n}\cong\mathfrak{Euc}(n)/\mathfrak{so}(n)$. We say that Riemannian manifolds are Cartan geometries of type $(\mathrm{Euc}(n),SO(n))$.
 
 The theory of Cartan geometries was developed as part of Cartan's
-\textit{method of moving frames}. The idea is to pick out some adapted frames for manifolds equipped with some non-metric structure. The bundle of such frames over a manifold is then a principal bundle $\pi:P\rightarrow N$ with structure group $H$. In the projective case, the notion of a frame must be generalised to obtain an object which is correctly adaptive to the projective structure.
+\textit{method of moving frames}. The idea is to pick out some adapted frames for manifolds equipped with some non-metric structure. The bundle of such frames over a manifold is then a principal bundle $\pi:P\rightarrow N$ with structure group $H$. In the projective case, the notion of a \textit{second order frame} must be introduced to obtain an object which is correctly adapted to the projective structure.
 
 The bundle $P$ is equipped with a $\mathfrak{g}$-valued one-form
 $\theta$ called the Cartan connection. It defines an isomorphism $\theta:T_{p}P\rightarrow\mathfrak{g}$ at every point $p\in P$ such that the vertical subspace $V_{p}P\subset T_{p}P$ is mapped to $\mathfrak{h}$ and the horizontal subpace $H_{p}P\subset T_{p}P$ is defined as the inverse image of $\mathfrak{g}/\mathfrak{h}$. Note that it is not a connection in the usual sense of a principal bundle connection, since it takes value in a Lie algebra larger than that of the structure group. Further details can be found in \cite{Sharpe}.
 
 %The importance of the Cartan connection is that it satisfies a number of properties, in particular equivariance, i.e. $R_{h}^{*}\theta=\mathrm{Ad}(h^{-1})\theta$ for all $h\in H$. 
 
-Our definition of a Cartan geometry in the projective case relies on our description above of $H$ as the stabiliser subgroup of a point in $\RP^n$.
+In the projective case, if we choose the point which is stabilised by $H$ to be $[1,0,\dots,0]$, the Cartan connection can be written as a matrix
+\be \label{eq:cartan_connection}
+\theta=\begin{pmatrix}-\mathrm{tr}\phi & \eta\\
+\omega & \phi
+\end{pmatrix},
+\ee
+where $\omega$, $\eta$ and $\phi$ are one-forms valued in $\mathbb{R}^{n}$, $\mathbb{R}_{n}$ and $\mathfrak{gl}(n,\mathbb{R})$ respectively.
+We will refer to the components of $\omega$ and $\eta$ with respect
+to the natural basis of $\mathfrak{sl}(n+1,\mathbb{R})$ as $\{\omega^{(i)}\}$ and $\{\eta_{(i)}\}$, so that $\omega^{(i)}$ and $\eta_{(i)}$ are both one-forms.
 
 \begin{defi}
-The Cartan geometry of a projective structure $(N,[\nabla])$ consists of a principal right $H$--bundle $\pi:P\rightarrow N$ carrying a one--form $\theta$ called the Cartan connection, which takes values in $\mathfrak{sl}(n+1)\mathbb{R})$ and has the following properties:
+The Cartan geometry of a projective structure $(N,[\nabla])$ consists of a principal right $H$--bundle $\pi_P:P\rightarrow N$ carrying a one--form $\theta$ called the Cartan connection, which takes values in $\mathfrak{sl}(n+1,\mathbb{R})$, can be written in the form (\ref{eq:cartan_connection}) and has the following properties:
 \begin{enumerate}
 \item $\theta_u:T_uP\rightarrow\mathfrak{sl}(n+1,\R)$ is an isomorphism for all $u\in P$;
 \item $\theta(X_v)=v$ for all fundamental vector fields $X_v$ on $P$;
 \item $R^*_h\theta = \mathrm{Ad}(h^{-1})\theta=h^{-1}\theta h$ for all $h\in H$.
-\end{enumerate}
-\end{defi}
-
-If we choose the point which is stabilised by $H$ to be $[1,0,\dots,0]$, the Cartan connection can be written as a matrix
-\[
-\theta=\begin{pmatrix}-\mathrm{tr}\phi & \eta\\
-\omega & \phi
-\end{pmatrix},
-\]
-where $\omega$, $\eta$ and $\phi$ are one-forms valued in $\mathbb{R}^{n}$, $\mathbb{R}_{n}$ and $\mathfrak{gl}(n,\mathbb{R})$ respectively.
-We will refer to the components of $\omega$ and $\eta$ with respect
-to the natural basis of $\mathfrak{sl}(n+1,\mathbb{R})$ as $\{\omega^{(i)}\}$ and $\{\eta_{(i)}\}$, so that $\omega^{(i)}$ and $\eta_{(i)}$ are both one-forms. Using this notation, we can write the following two conditions which are also satisfied by the Cartan connection of a projective structure.
-\begin{enumerate}[resume]
 \item If $X$ is a vector field on $P$ with the property that $\eta(X)=\phi(X)=0$ and $\omega(X)\in\R^n\backslash\{0\}$, then the integral curve of $X$ projects down to a geodesic on $N$ and conversely every geodesic of $[\nabla]$ arises in this way.
 \item The $\mathfrak{sl}(n+1,\mathbb{R})$-valued
 curvature two-form $\Theta$ satisfies
@@ -173,8 +168,9 @@ curvature two-form $\Theta$ satisfies
 \]
 where $L$ and $W$ are smooth curvature functions valued in $\mathrm{Hom}(\R^n\wedge\R^n,R_n)$ and $\mathrm{Hom}(\R^n\wedge\R^n,R_n\otimes\R^n)$ respectively. The function $W$ represents the Weyl projective curvature tensor appearing in (\ref{eq:projcurvdecomp}).
 \end{enumerate}
+\end{defi}
 
-The Cartan geometry of a projective structure is unique in the sense that for any two Cartan geometries $(\hat{\pi}:\hat{P}\rightarrow N,\hat{\theta})$ and $(\pi:P\rightarrow N,\theta)$ of type $(SL(n+1,\R),H)$ satisfying the above properties there is a $H$--bundle isomorphism $\psi:P\rightarrow\hat{P}$ such that $\psi^*\hat{\theta}=\theta$. %This means that although we cannot choose a unique connection on the tangent bundle to $N$, we can choose a unique connection on the Cartan bundle. 
+The Cartan geometry of a projective structure is unique in the sense that for any two Cartan geometries $(\widehat{\pi}_P:\widehat{P}\rightarrow N,\widehat{\theta})$ and $(\pi_P:P\rightarrow N,\theta)$ of type $(SL(n+1,\R),H)$ satisfying the above properties there is a $H$--bundle isomorphism $\psi:P\rightarrow\widehat{P}$ such that $\psi^*\widehat{\theta}=\theta$. %This means that although we cannot choose a unique connection on the tangent bundle to $N$, we can choose a unique connection on the Cartan bundle. 
 
 The Cartan connection also gives us a unique connection on any bundle associated to $P$ via some $H$--module.
 
@@ -185,31 +181,30 @@ A particularly important example of a bundle associated to $P$ is the \textit{co
 
 \mynote{Thomas' notes about the tractor bundle, inc. the tractor connection in terms of the Cartan connection and anything else which is useful.}
 
-Although the above construction of $\mathcal{T}^*$ relied on the Cartan bundle, it is possible to construct it independently. To do so, we consider the transformation of the derivative of a volume form under a projective change (\ref{eq:proj_change}). This approach can be motivated by the fact that the special linear group $SL(n,\R)$, which we have already seen to be important in projective geometry, is the group of volume preserving transformations of $\R^n$.
-
+Although the above construction of $\mathcal{T}^*$ relied on the Cartan bundle, it is possible to construct it independently. %To do so, we consider the transformation of the derivative of a volume form under a projective change (\ref{eq:proj_change}). This approach can be motivated by the fact that the special linear group $SL(n,\R)$, which we have already seen to be important in projective geometry, is the group of volume preserving transformations of $\R^n$.
 From the projective change of connection (\ref{eq:proj_change}) we can derive the the corresponding change in $\nabla\chi$ for some $p$--form $\chi$ on $N$:
 \be \label{eq:p-form_change}
-\hat{\nabla}_i\chi_{jk\dots l} = \nabla_i\chi_{jk\dots l} - (p+1)\Upsilon_i\chi_{jk\dots l} - (p+1)\Upsilon_{[i}\chi_{jk\dots l]}.
+\widehat{\nabla}_i\chi_{jk\dots l} = \nabla_i\chi_{jk\dots l} - (p+1)\Upsilon_i\chi_{jk\dots l} - (p+1)\Upsilon_{[i}\chi_{jk\dots l]}.
 \ee
 In particular, for a volume form ($p=n$) we find
 \[
-\hat{\nabla}_i\chi_{jk\dots l} = \nabla_i\chi_{jk\dots l} - (n+1)\Upsilon_i\chi_{jk\dots l},
+\widehat{\nabla}_i\chi_{jk\dots l} = \nabla_i\chi_{jk\dots l} - (n+1)\Upsilon_i\chi_{jk\dots l},
 \]
 where the final term in (\ref{eq:p-form_change}) has vanished because it contains a symmetrisation over $n+1$ indices. We can write this in a more compact way as
 \[
-\hat{\nabla}_i\chi = \nabla_i\chi - (n+1)\Upsilon_i\chi.
+\widehat{\nabla}_i\chi = \nabla_i\chi - (n+1)\Upsilon_i\chi.
 \]
 
 Note that for sections $\chi$ of the bundle $\mathcal{E}(w):=(\Lambda^n)^{-w/(n+1)}$ we have
 \be \label{eq:ddensity_change}
-\hat{\nabla}_i\chi = \nabla_i\chi + w\Upsilon_i\chi.
+\widehat{\nabla}_i\chi = \nabla_i\chi + w\Upsilon_i\chi.
 \ee
 We called such sections \textit{projective densities of weight $w$}, and for any vector bundle $\mathcal{B}\rightarrow N$ we write $\mathcal{B}(w)$ for the tensor product of $\mathcal{B}$ with $\mathcal{E}(w)$. For example, $T^*N(w)$ is the bundle of one--forms with projective weight $w$, and for sections $\mu_i$ of $T^*N(w)$ we have
 \be \label{eq:dweighted_form_change}
-\hat{\nabla}_i\mu_j = \nabla_i\mu_j + (w-1)\Upsilon_i\mu_j - \Upsilon_j\mu_i.
+\widehat{\nabla}_i\mu_j = \nabla_i\mu_j + (w-1)\Upsilon_i\mu_j - \Upsilon_j\mu_i.
 \ee
 
-We can now define the cotractor bundle $\mathcal{T}^*$. For a choice of connection in the projective class we identify
+We can now define the cotractor bundle $\pi:\mathcal{T}^*\rightarrow N$. For a choice of connection in the projective class we identify
 \be \label{eq:T*splitting}
 \mathcal{T}^* = \mathcal{E}(1)\oplus T^*N(1).
 \ee
@@ -226,7 +221,7 @@ Note the exact sequence
 \be \label{eq:T*sequence}
 0\longrightarrow T^*N(1)\longrightarrow \mathcal{T}^* \overset{X}\longrightarrow \mathcal{E}(1)\longrightarrow 0,
 \ee
-where we call the map $X$ the projective \textit{canonical tractor}. A choice of connection in the projective class defines a splitting (\ref{eq:T*splitting}) of (\ref{eq:T*sequence}).\footnote{In fact $X$ is a section of a bundle $\mathcal{T}(1)$, where $\mathcal{T}$ can be identified with the direct sum $\mathcal{E}(1)\oplus TN(1)$ given a choice of connection in the projective class. The natural pairing between $\mathcal{T}$ and $\mathcal{T}^*$ defines the map $X:\mathcal{T}^*\rightarrow\mathcal{E}(1)$.}
+where we call the map $X$ the projective \textit{canonical tractor}. A choice of connection in the projective class defines a splitting (\ref{eq:T*splitting}) of (\ref{eq:T*sequence}).\footnote{In fact $X$ is a section of a bundle $\mathcal{T}(1)$, where $\mathcal{T}$ can be identified with a direct sum $\mathcal{E}(1)\oplus TN(1)$ given a choice of connection in the projective class. The natural pairing between $\mathcal{T}$ and $\mathcal{T}^*$ defines the map $X:\mathcal{T}^*\rightarrow\mathcal{E}(1)$.}
 
 The bundle $\mathcal{T}^*$ admits a projectively invariant \textit{tractor connection} given by
 \be \label{eq:tractor_connection}
@@ -272,11 +267,13 @@ where we have used (\ref{eq:chi_mu_change}) in the first line, (\ref{eq:tractor_
 \chi \\ \mu_j
 \end{pmatrix}}
 \end{align*}
-using (\ref{eq:tractor_connection}) and the change of splitting in the bundle \mynote{Of what bundle is grad(chi,mu) a section?} corresponding to (\ref{eq:chi_mu_change}).
+using (\ref{eq:tractor_connection}) and the change of splitting (\ref{eq:chi_mu_change}) adapted to the tensor product of $T^*N$ and $ \cT^*$ of which the derivative is a section.
 
 \mynote{With a bit more work Eastwood calculates the curvature of the tractor connection and proves the statements about when projective structures are flat which I made above. Could add this.}
 
-\section{The Dunajski--Mettler Construction $(M,g_\Lambda,\Omega_\Lambda)$}
+Any bundle associated to $P$ via some $H$--module is equipped with a tractor connection which is inherited from the connection on the standard cotractor bundle, or equivalently from the Cartan connection. It is this connection, with its special equivariance property, that allows us to construct an Einstein metric as in invariant of the projective structure. This construction is the subject of the following section.
+
+\section{The Dunajski--Mettler construction $(M,g_\Lambda,\Omega_\Lambda)$}
 
 We can think of $M$ as a quotient of the total space $P$ of the
 Cartan geometry by $GL(n,\mathbb{R})$, which is embedded in $H$
@@ -308,10 +305,10 @@ $M=P/GL(n,\mathbb{R})$.
 There exist a metric and two-form
 $(g,\Omega)$ on $\mbox{\ensuremath{M=P/GL(n,\mathbb{R})}}$ such
 that the quotient map $q:P\rightarrow M$ gives
-\begin{eqnarray*}
-q^{*}g & = & \mathrm{Sym}(\eta\omega)\\
-q^{*}\Omega & = & \mathrm{Ant}(\eta\omega),
-\end{eqnarray*}
+\begin{eqnarray} 
+q^{*}g & = & \mathrm{Sym}(\eta\omega) \label{eq:g_cartan} \\
+q^{*}\Omega & = & \mathrm{Ant}(\eta\omega), \label{eq:Omega_cartan}
+\end{eqnarray}
 where $\mathrm{Sym}$ and $\mathrm{Ant}$ denote the symmetric and
 anti-symmetric parts of the $(0,2)$ tensor $\eta\omega$. Moreover,
 $\Omega$ is closed as a consequence of the Bianchi identity, $g$
@@ -322,29 +319,245 @@ is an almost para-Kahler structure on $M$.
 
 Note that the full proof of theorem \ref{thm:DM} only appears explicitly in \cite{DM} in the case $n=2$, although it can be generalised to $n>2$. This generalisation is discussed in their appendix.
 
-The quotient $M$ turns out to be an affine bundle over $N$ with
-structure group $H$, i.e. $H$ acts affinely on the fibers of $\rho:M\rightarrow N$,
-and sections of this bundle are in one-to-one correspondence with
-representative connections $\nabla\in[\nabla]$. This means that given
-some choice of connection $\nabla\in[\nabla]$ we have a diffeomorphism
-$\varphi:T^{*}N\rightarrow M$ with which we can pull back the pair
-$(g,\Omega)$. In canonical local coordinates $(x^{i},p_{i})$ on
-the cotangent bundle, we find
+%The quotient $M$ turns out to be an affine bundle over $N$ with
+%structure group $H$, i.e. $H$ acts affinely on the fibers of $\rho:M\rightarrow N$,
+%and sections of this bundle are in one-to-one correspondence with
+%representative connections $\nabla\in[\nabla]$. This means that given
+%some choice of connection $\nabla\in[\nabla]$ we have a diffeomorphism
+%$\varphi:T^{*}N\rightarrow M$ with which we can pull back the pair
+%$(g,\Omega)$. In canonical local coordinates $(x^{i},p_{i})$ on
+%the cotangent bundle, we find
+%\begin{eqnarray}
+%\varphi^{*}g & = &  dp_{i}\odot dx^{i}-(\Gamma_{ij}^{k}p_{k}-p_{i}p_{j}-\Rho_{ij}) dx^{i}\odot dx^{j},\label{eq:coord_form}\\
+%\varphi^{*}\Omega & = &  dp_{i}\wedge dx^{i}+\Rho_{ij} dx^{i}\wedge dx^{j},\qquad i,j=1,\dots ,n.\nonumber 
+%\end{eqnarray}
+%Here $\Gamma_{jk}^{i}$ are the connection components of the representative
+%connection $\nabla$ that we chose, and its Schouten tensor is denoted $P_{ij}$. This can be shown to be projectively invariant
+%in the sense that a different choice of $\nabla\in[\nabla]$ corresponds
+%to shifting the fiber coordinates $p_{i}$, i.e. metrics on $T^{*}N$
+%resulting from pulling back $g$ using different representative connections
+%are isometric. Explicitly, a projective transformation (\ref{eq:proj_change})
+%corresponds to a change
+%\begin{equation}
+%\Rho_{ij}\longrightarrow \Rho_{ij}+\Upsilon_{i}\Upsilon_{j}-\nabla_{i}\Upsilon_{j},\qquad p_{i}\longrightarrow p_{i}+\Upsilon_{i}.\label{eq:p_change}
+%\end{equation}
 
+A coordinate expression for the metric $g$ and two--form $\Omega$ can be obtained by writing out the Cartan connection $\theta$ explicitly for some choice of connection in the projective class. Alternatively, one can take a tractor approach using the tractor connection (\ref{eq:tractor_connection}). This approach is a product of \cite{DGW}.
+
+\subsection{Tractor construction}
+On the total space of $\cT^*$ we pullback $\pi:\cT^*\to N$ along $\pi$ to get $\pi^*(\cT^*)\to \cT^*$ as a vector bundle over the total space $\cT^*$. By construction this bundle has a tautological section $U\in \Gamma (\pi^*(\cT^*))$.  We also have $\pi^*(\cT(w))$ for any weight $w$, and we shall write simply $X\in \Gamma(\pi^*(\cT(1)))$ for the pullback to $\cT^*$ of the canonical tractor $X$ on $N$.
+
+Now define
+\be
+\label{projection_map}
+\kappa: \cT^*\longrightarrow \mathcal{M}:=\mathbb{P}(\cT^*)
+\ee
+by the fibrewise projectivisation, and use $\pi_\cM$ for the map
+$$
+\pi_\cM:\mathcal{M}\to N.
+$$
+We denote by $\cE_{\cT^*}(w')$, for $w'\in \mathbb{R}$, the line
+bundle on $\mathbb{P}(\cT^*)$ whose sections correspond to functions
+$f: \pi^*\cT^* \to\mathbb{R} $ that are homogeneous of degree $w^\prime$ in
+the fibres of $\pi^*\cT^*\to \mathbb{P}(\cT^*)$. For any weight $w$ we also have $\cE(w)$ on $N$ and its pull back to the bundle $\pi_\cM^*\cE(w)\to \mathbb{P}(\cT^*)$.
+We define the product of these two density bundles on $\cM$ as
+$$
+\ce(w,w'):= \pi^*\cE(w) \otimes \cE_{\cT^*}(w').
+$$
+
+On $\cT^*$ there is  a canonical density $\tau\in \Gamma(\pi^*\cE(1))$ given by
+$$
+\tau:= X\hook U .
+$$
+%% and this is homogeneous of degree 1 up the fibres of $\pi$ in the total space $\cT^*$.
+Note that $\tau$ is homogeneous of degree 1 up the fibres of the
+map $\cT^*\to \mathcal{M}$. Thus $\tau$ determines, and is equivalent
+to, a section (that we also denote) $\tau$ of the density bundle $\cE(1,1)$. So $\mathcal{M}$ is stratified according to
+whether or not $\tau$ is vanishing, and we write $\mathcal{Z}(\tau)$
+to denote, in particular, the zero locus of $\tau$. With these tools we can recover the construction in \cite{DM}.
+
+%\rs{Note the
+%  second density bundle is not necessarily orientable.}
+
+\begin{theo}\cite{DGW}\label{metric} 
+There is a metric $g$ and two--form $\Omega$ on $\mathcal{M}\setminus \mathcal{Z}(\tau)$ determined by the canonical pairing of the horizontal and vertical subspaces of $T(\cT^*)$. The pair $(g,\Omega)$ agrees with (\ref{eq:g_cartan}, \ref{eq:Omega_cartan}).
+\end{theo}
+{\bf Proof.}
+ Considering first the total space $\cT^*$ and then its tangent
+ bundle, note that there is an exact sequence
+  \begin{equation}\label{TM}
+0\to \pi^* \cT^*\to T(\cT^*)\to \pi^*TN\to 0,
+  \end{equation}
+  where we have identified $\pi^* \cT^*$ as the vertical sub-bundle of $T(\cT^*)$.
+The tractor connection on the vector bundle $\cT^*\to N$ is equivalent to a splitting of this sequence, identifying $\pi^*TN$ with a distinguished  sub-bundle of horizontal subspaces in 
+$ T(\cT^*)$ so that we have 
+\begin{equation}\label{HV}
+T(\cT^*)=  \pi^*TN\oplus \pi^* \cT^* .
+\end{equation}
+
+%From the usual Euler sequence of projective space (or see (\ref{useful}) in the last Section) it follows that
+We move now to the total space of $\mathbb{P} {\cT^*}$, and we note that again the tractor (equivalently, Cartan) connection determines a splitting of the tangent bundle $T(\mathbb{P} {\cT^*})$ in which the second term of the display (\ref{HV}) is replaced by a quotient of $\pi^* \cT^*(0,1)$ \cite{CGH-duke}. Indeed, if we work at a point $p\in \mathbb{P}(\cT^*)$, observe that $\pi^*\cT^*(0,1)$ has a filtration
+\begin{equation}\label{quotient}
+0\to \cE (0,0)_p\stackrel{U_p}{\to}  \pi_\cM^* \cT^*(0,1)|_p \to  \pi_\cM^* \cT^*(0,1)|_p/\langle U_p \rangle \to 0
+\end{equation}
+where, as usual, $U$ is the canonical section. 
+But away from $\mathcal{Z}(\tau )$, we have that  $U$ canonically splits 
+the appropriately re-weighted pull back of  the sequence (\ref{eq:T*sequence})
+$$
+0\to \pi_\cM^* T^*N(1,1)   \to \pi_\cM^* \cT^*(0,1) \stackrel{X/\tau}{\to} \cE(0,0) \to 0 .
+$$
+This identifies the quotient in (\ref{quotient}), and thus we have canonically
+$$
+T(\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau))=  \pi_\cM^*TN\oplus \pi_\cM^*T^*N(1,1).
+$$
+It follows that on  $\mathcal{M}$
+there is canonically a metric $\boldsymbol{g}$ and symplectic form $\boldsymbol{\Omega}$ taking values in $\cE(1,1)$, given by
+\begin{eqnarray*}
+\boldsymbol{g}(w_1,w_2)&=& \frac{1}{2}\Big(
+\pp_H(w_1)\hook \pp_V(w_2)+\pp_H(w_2)\hook\pp_V(w_1)\Big) \quad \mbox{and} \\
+\boldsymbol{\Omega}(w_1,w_2)&=& \frac{1}{2}\Big(\pp_H(w_1)\hook \pp_V(w_2)-\pp_H(w_2)\hook\pp_V(w_1)\Big)
+\end{eqnarray*}
+where
+$$
+\pp_H: T(\mathcal{M}\setminus \mathcal{Z}(\tau))\to \pi_\cM^*TN \quad \mbox{and} \quad \pp_V: T(\mathcal{M}\setminus \mathcal{Z}(\tau))\to \pi_\cM^* T^*N(1,1)
+$$
+are the projections.
+Then we obtain the metric and symplectic form by
+\be
+\label{almost_there}
+g:=\frac{1}{\tau}\boldsymbol{g} \qquad \mbox{and} \qquad \Omega:=\frac{1}{\tau}\boldsymbol{\Omega} .
+\ee
+What remains to be done, is to show that (\ref{almost_there}) agrees
+with the form obtained in \cite{DM} once a trivialisation of
+$\cT^*\rightarrow N$ has been chosen.
+
+Let $p\in N$ and let ${\mathcal W}\subset N$ be an open 
+neighbourhood of $p$ with 
+local coordinates $(x^1, \dots, x^n)$ such that
+$T_pN=\mbox{span}(\p/\p x^1, \dots, \p/\p x^n)$. The connection 
+(\ref{tractor_con}) gives a splitting of $T(\cT^*)$ into the horizontal and
+vertical sub-bundles
+\[
+T(\cT^*)=H(\cT^*)\oplus V(\cT^*),
+\]
+as in (\ref{HV}).
+To obtain the explicit form of this splitting, let $V_\alpha,\ \alpha=0, 1, \dots, n$ be components of a local section of $\cT^*$ in the trivialisation over ${\mathcal{W}}$.
+Then
+\[
+\nabla^{\cT^*} V_\beta=d V_\beta-\gamma_{\beta}^{\alpha} V_\alpha,
+\]
+where $\gamma_{\alpha}^\beta= \gamma_{i\alpha}^\beta dx^i$, and the components
+of the co-tractor connection 
+$\gamma_{i\alpha}^\beta$  are given in terms of the connection
+$\nabla$ on $N$, and its Schouten tensor, and 
+can be read--off from (\ref{eq:tractor_connection}):
+\[
+\gamma_{i0}^0=0, \quad \gamma_{i0}^j=\delta_i^j,\quad
+\gamma_{ij}^k=\Gamma_{ij}^k, \quad \gamma_{ij}^0=-\Rho_{ij}.
+\]
+In terms of these components we can write
+\begin{align*}
+H(\cT^*)&=\mbox{span}
+\Big( \frac{\p}{\p x^i}+ {\gamma_{i\alpha}^\beta} V_\beta
+\frac{\p}{\p V_{\alpha}}, i=1, \dots, n \Big), \\
+ V(\cT^*)&=\mbox{span}\Big(\frac{\p}{\p V_{\alpha}}, \alpha=0, 1, 
+\dots, n\Big).
+\end{align*}
+Setting $p_i=V_i/V_0$, where $\tau=V_0\neq 0$ %\footnote{Rod @ Maciej: I have added $V_0=\tau$. You agree, right!?}
+on the complement of 
+$\mathcal{Z}(\tau)$, 
+  we can compute the push forwards
+of these subspaces to $\mathbb{P}(\cT^*)\setminus {\mathcal{Z}(\tau)}$:
+\[
+\kappa_* H(\cT^*)=\mbox{span}\Big(h_i\equiv
+\frac{\p}{\p x^i}-
+(\Rho_{ij}+p_ip_j  -\Gamma_{ij}^kp_k)\frac{\p}{\partial p_j}
+\Big), \quad \kappa_* V(\cT^*)=\mbox{span}\Big(v^i\equiv\frac{\p}{\p p_i}
+\Big).
+\]
+The non--zero components of the  metric (\ref{almost_there}) are given by
+\[
+g(v^i, h_j)={\delta^i}_j,
+\]
+or in local coordinates $(x^1,\dots,x^n,p_1,\dots,p_n)$ on $\cM\setminus {\mathcal{Z}(\tau)}$,
 \begin{eqnarray}
-\varphi^{*}g & = &  dp_{i}\odot dx^{i}-(\Gamma_{ij}^{k}p_{k}-p_{i}p_{j}-\Rho_{ij}) dx^{i}\odot dx^{j},\label{eq:coord_form}\\
-\varphi^{*}\Omega & = &  dp_{i}\wedge dx^{i}+\Rho_{ij} dx^{i}\wedge dx^{j},\qquad i,j=1,\dots ,n.\nonumber 
+g & = &  dp_{i}\odot dx^{i}-(\Gamma_{ij}^{k}p_{k}-p_{i}p_{j}-\Rho_{ij}) dx^{i}\odot dx^{j},\label{eq:coord_form}\\
+\Omega & = &  dp_{i}\wedge dx^{i}+\Rho_{ij} dx^{i}\wedge dx^{j},\qquad i,j=1,\dots ,n.\nonumber 
 \end{eqnarray}
-Here $\Gamma_{jk}^{i}$ are the connection components of the representative
-connection $\nabla$ that we chose, and its Schouten tensor is denoted $P_{ij}$. This can be shown to be projectively invariant
-in the sense that a different choice of $\nabla\in[\nabla]$ corresponds
-to shifting the fiber coordinates $p_{i}$, i.e. metrics on $T^{*}N$
-resulting from pulling back $g$ using different representative connections
-are isometric. Explicitly, a projective transformation (\ref{eq:proj_change})
-corresponds to a change
-\begin{equation}
+This is identical to the form appearing in \cite{DM}.
+\koniec
+
+The expressions (\ref{eq:coord_form}) can be shown to be projectively invariant in the sense that a different choice of $\nabla\in[\nabla]$ corresponds to shifting the fiber coordinates $p_{i}$, i.e. metrics corresponding to different representative connections are isometric. Explicitly, a projective transformation (\ref{eq:proj_change}) corresponds to a change \begin{equation}
 \Rho_{ij}\longrightarrow \Rho_{ij}+\Upsilon_{i}\Upsilon_{j}-\nabla_{i}\Upsilon_{j},\qquad p_{i}\longrightarrow p_{i}+\Upsilon_{i}.\label{eq:p_change}
 \end{equation}
+
+Next we observe that $\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau)$ is an affine bundle modelled on $T^* N$.
+The point is that given
+  $\nabla$ in the projective class there is a  there is a smooth fibre bundle isomorphism
+  \begin{equation}\label{key-id}
+\iota : T^* N\to \mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau).
+    \end{equation}
+First, given  $\nabla$, we can represent an element $U\in
+  \cT^*_p$ ($p\in N$) by the pair $(\tau , \mu) \in \cE (1)_p\oplus
+  T_p^*N(1)$,  or, if we choose coordinates on $N$, by collection
+\be
+\label{tractor_U}
+U=(\tau, \mu_i), \quad i=1, \dots, n .
+\ee
+  Then, dropping the choice $\nabla \in [\nabla]$, $U\in
+  \cT^*_p$ is an equivalence class of such pairs by the equivalence
+  relation (\ref{ttrans}) that covers the
+  equivalence relation between elements of $[\nabla]$. 
+
+  Thus, given $\nabla$, and  from the naturality of all maps, it
+  follows that the total space of $T^*N$ can be identified with $\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau)$
+  by (for each $p\in N$)
+\begin{equation}
+T_p^*N\ni \xi_i  \mapsto [(1,\xi_i)]=[(\tau,\tau \xi_i)]\in
+\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau) .
+\end{equation}
+
+%%\rs{Maciej and TM's Thm 5.1 in fact shows the connection is
+%%invariant not on $T*N$ but on an affine space modelled on that}
+Thus we may view $\mathcal{M}$ as a
+compactification of $T^*N$  and, by construction,
+this is a closed manifold iff $N$ is closed.
+
+
+Note that by this construction it is easily verified that the zero
+locus of $\tau$ is a smoothly
+embedded hypersurface in $\mathcal{M}$,  and from (\ref{co-euler}) it follows
+at once that this may be identified with the total space of the
+fibrewise projectivisation $\mathbb{P}(T^*N)$ (which is well known to
+have a para-CR structure). 
+
+A feature of this construction is that in each dimension $n$ (of $N$)
+either the hypersurface $\mathcal{Z}(\tau)$ (if $n$ odd) is not
+orientable, or $\mathcal{M}$ (if $n$ even) is not orientable. 
+
+%\subsection{Compactification by ray-projectiviation:}
+%\label{ray_sub}
+%Instead we may follow the construction above but instead define
+%$\mathcal{M}:= \pi^*(\mathbb{P}_+(\cT^*))$, where $\mathbb{P}_+(\cT^*)$ is
+%the ray-projectivisation of $\cT^*$ (i.e.\ the fibres of $\cT^*\to
+%\mathbb{P}_+(\cT^*)$ are isomorphic to $\mathbb{R}_+$). Then the bundles $\ce(w,w')$
+%should also be defined via ray homogeneity.
+%In this case, for $N$ orientable,
+%both $\mathcal{Z}(\tau)$ and $\mathcal{M}$ are orientable, and again
+%$\mathcal{M}$ is closed iff $N$ is. Now from (\ref{co-euler}) we have that
+%$\mathcal{Z}(\tau)$ may be identified with the
+%fibrewise ray-projectivisation $\mathbb{P}_+(T^*N)$.
+%In this variant of the
+%construction there are two copies $M_{\pm}$ of $T^*N$ in $\mathcal{M}$
+%according to the sign of $\tau$. Moreover each of $\mathcal{M}\setminus
+%M_{\mp}$ is a manifold that is globally a para-c-projective
+%compactification of $M_{\pm}$ in sense of Theorem \ref{CGthm}.
+
+
+
+
+
+
 
 
 In fact, the metric and symplectic form (\ref{eq:coord_form}) turn
