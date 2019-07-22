@@ -15,13 +15,17 @@
 
 This thesis splits naturally into two parts. The first 4 chapters are concerned with a class of Einstein manifolds which can be canonically constructed from projective structures as shown in recent work by Dunajski and Mettler \cite{DM}. Chapter \ref{chap:wormhole} discusses a solitonic solution of the equations of motion associated with $\phi^4$--field theory on a wormhole spacetime. Chapter \ref{chap:wormhole} is self--contained, and possesses its own introduction. The remainder of this chapter will introduce some preliminaries for the first part of the thesis, culminating in the results of \cite{DM} on the almost para--K\"ahler Einstein manifolds which will form the basis of chapters 2--4.
 
-\mynote{Not sure whether to keep the rest of this because it is a slightly more fleshed out repeat of the abstract. Also, should I include some notation and conventions e.g. $i,j,k=1,...,n$ are indices for coordinates on $n$? and $\Gamma$ are connection components which are defined by... Curvature is defined by}
+\mynote{Projective geometry, based on geodesics as unparametrised curves, initiated in ... by ...}
+
+\mynote{General point - should be more than in abstract but not repeating the actual intro below.}
 
 Given a projective structure on a manifold $N$ of dimension $n$,
 Dunajski and Mettler \cite{DM} construct a neutral signature Einstein metric $g$ with non-zero
 scalar curvature on a certain rank $n$ affine bundle $M\rightarrow N$.
 The $2n$--dimensional space $M$ also carries a natural symplectic form $\Omega$, and
 an endomorphism $J:TM\rightarrow TM$ which is such that $J^2$ is the identity and $g(\cdot\ ,\cdot)=\Omega(\cdot\ ,J\cdot)$. This makes $(M,g,\Omega)$ a so--called \textit{almost para--K\"ahler} structure. It is interesting for a number of different reasons.
+
+\mynote{It expresses the second order object which is the projective structure as a first order object on a larger space. See if you can find the slides of the talk Thomas gave in damtp where he talked about this?}
 
 Firstly, $(M,g)$ is interesting by virtue of being an Einstein
 space. In fact, it turns out that $g$ arises as the Kaluza--Klein reduction of an Einstein metric $\mathcal{G}$ on an $\R^*$ bundle $\sigma:\mathcal{Q}\rightarrow M$ which has curvature form $\sigma^*(\Omega)$. In chapter \ref{chap:KK_lift} we will construct $\mathcal{G}$ explicitly, and give an interpretation of the manifold $(\mathcal{Q},\mathcal{G})$ in terms of the projective geometry on $N$.
@@ -55,6 +59,12 @@ of a (non--null) symmetry, give rise to solutions of an integrable
 system called the $SU(\infty)$--Toda field equation via $2+1$--dimensional
 Einstein-Weyl structures. In chapter \ref{chap:EW_and_toda} we discuss the extraction
 of all possible Toda solutions obtainable in this way.
+
+\mynote{some notation and conventions e.g. $i,j,k=1,...,n$ are indices for coordinates on $n$? and $\Gamma$ are connection components which are defined by... Curvature is defined by}
+\begin{itemize}
+\item We denote the bundle of anti--symmetrised covariant tensors of degree $p$ as $\Lambda^p$, and call sections of this bundle $p$--forms.
+\item $N$ is oriented.
+\end{itemize}
 
 \section{Projective Geometry}\label{sec:projgeom}
 
@@ -168,7 +178,103 @@ The Cartan geometry of a projective structure is unique in the sense that for an
 
 The Cartan connection also gives us a unique connection on any bundle associated to $P$ via some $H$--module.
 
-\subsection{The Tractor bundle}
+\mynote{Definition of associated bundle as given by Thomas in his Warsaw notes}
+
+\subsection{The cotractor bundle}
+A particularly important example of a bundle associated to $P$ is the \textit{cotractor bundle}, which is a vector bundle associated to $P$ via the canonical right action of $H$ on $\R_3$.
+
+\mynote{Thomas' notes about the tractor bundle, inc. the tractor connection in terms of the Cartan connection and anything else which is useful.}
+
+Although the above construction of $\mathcal{T}^*$ relied on the Cartan bundle, it is possible to construct it independently. To do so, we consider the transformation of the derivative of a volume form under a projective change (\ref{eq:proj_change}). This approach can be motivated by the fact that the special linear group $SL(n,\R)$, which we have already seen to be important in projective geometry, is the group of volume preserving transformations of $\R^n$.
+
+From the projective change of connection (\ref{eq:proj_change}) we can derive the the corresponding change in $\nabla\chi$ for some $p$--form $\chi$ on $N$:
+\be \label{eq:p-form_change}
+\hat{\nabla}_i\chi_{jk\dots l} = \nabla_i\chi_{jk\dots l} - (p+1)\Upsilon_i\chi_{jk\dots l} - (p+1)\Upsilon_{[i}\chi_{jk\dots l]}.
+\ee
+In particular, for a volume form ($p=n$) we find
+\[
+\hat{\nabla}_i\chi_{jk\dots l} = \nabla_i\chi_{jk\dots l} - (n+1)\Upsilon_i\chi_{jk\dots l},
+\]
+where the final term in (\ref{eq:p-form_change}) has vanished because it contains a symmetrisation over $n+1$ indices. We can write this in a more compact way as
+\[
+\hat{\nabla}_i\chi = \nabla_i\chi - (n+1)\Upsilon_i\chi.
+\]
+
+Note that for sections $\chi$ of the bundle $\mathcal{E}(w):=(\Lambda^n)^{-w/(n+1)}$ we have
+\be \label{eq:ddensity_change}
+\hat{\nabla}_i\chi = \nabla_i\chi + w\Upsilon_i\chi.
+\ee
+We called such sections \textit{projective densities of weight $w$}, and for any vector bundle $\mathcal{B}\rightarrow N$ we write $\mathcal{B}(w)$ for the tensor product of $\mathcal{B}$ with $\mathcal{E}(w)$. For example, $T^*N(w)$ is the bundle of one--forms with projective weight $w$, and for sections $\mu_i$ of $T^*N(w)$ we have
+\be \label{eq:dweighted_form_change}
+\hat{\nabla}_i\mu_j = \nabla_i\mu_j + (w-1)\Upsilon_i\mu_j - \Upsilon_j\mu_i.
+\ee
+
+We can now define the cotractor bundle $\mathcal{T}^*$. For a choice of connection in the projective class we identify
+\be \label{eq:T*splitting}
+\mathcal{T}^* = \mathcal{E}(1)\oplus T^*N(1).
+\ee
+Under a change of projective connection (\ref{eq:proj_change}), this splitting changes according to
+\be \label{eq:chi_mu_change}
+\widehat{\begin{pmatrix}
+{\chi} \\ {\mu}_i
+\end{pmatrix}} =
+\begin{pmatrix}
+\chi \\ \mu_i + \Upsilon_i\chi
+\end{pmatrix}.
+\ee
+Note the exact sequence
+\be \label{eq:T*sequence}
+0\longrightarrow T^*N(1)\longrightarrow \mathcal{T}^* \overset{X}\longrightarrow \mathcal{E}(1)\longrightarrow 0,
+\ee
+where we call the map $X$ the projective \textit{canonical tractor}. A choice of connection in the projective class defines a splitting (\ref{eq:T*splitting}) of (\ref{eq:T*sequence}).\footnote{In fact $X$ is a section of a bundle $\mathcal{T}(1)$, where $\mathcal{T}$ can be identified with the direct sum $\mathcal{E}(1)\oplus TN(1)$ given a choice of connection in the projective class. The natural pairing between $\mathcal{T}$ and $\mathcal{T}^*$ defines the map $X:\mathcal{T}^*\rightarrow\mathcal{E}(1)$.}
+
+The bundle $\mathcal{T}^*$ admits a projectively invariant \textit{tractor connection} given by
+\be \label{eq:tractor_connection}
+\nabla^\mathcal{T}_i \begin{pmatrix}
+\chi \\ \mu_j
+\end{pmatrix}
+= \begin{pmatrix}
+\nabla_i \chi - \mu_i \\
+\nabla_i\mu_j + \Rho_{ij}\chi
+\end{pmatrix},
+\ee
+which turns out to agree with (\ref{eq:df-ftheta}). \mynote{Reference Thomas' expression for the Tractor connection in terms of the Cartan connection.} Under a change of projective connection (\ref{eq:proj_change}), we find
+\begin{align*}
+\widehat{\nabla}^\mathcal{T}_i\widehat{\begin{pmatrix}
+\chi \\ \mu_j
+\end{pmatrix}}
+&= \widehat{\nabla}^\mathcal{T}_i\begin{pmatrix}
+\chi \\ \mu_j + \Upsilon_j\chi \end{pmatrix} \\
+&= \begin{pmatrix}
+\widehat{\nabla}_i\chi - (\mu_i + \Upsilon_i\chi) \\
+\widehat{\nabla}_i(\mu_j+\Upsilon_j\chi) + \widehat{\Rho}_{ij}\chi
+\end{pmatrix} \\
+&= \begin{pmatrix}
+\nabla_i\chi + \Upsilon_i\chi - (\mu_i + \Upsilon_i\chi) \\
+\nabla_i(\mu_j + \Upsilon_j\chi) - \Upsilon_j(\mu_i + \Upsilon_i\chi)
++ (\Rho_{ij} - \nabla_i\Upsilon_j + \Upsilon_i\Upsilon_j) \chi
+\end{pmatrix},
+\end{align*}
+where we have used (\ref{eq:chi_mu_change}) in the first line, (\ref{eq:tractor_connection}) in the second and (\ref{eq:ddensity_change}), (\ref{eq:dweighted_form_change}) and (\ref{eq:schout_change}) in the third. After some cancellation, we identify
+\begin{align*}
+\widehat{\nabla}^\mathcal{T}_i\widehat{\begin{pmatrix}
+\chi \\ \mu_j
+\end{pmatrix}}
+&= \begin{pmatrix}
+\nabla_i\chi - \mu_i \\
+\nabla_i\mu_j + \Upsilon_j\nabla_i\chi - \Upsilon_j\mu_i + \Rho_{ij}\chi
+\end{pmatrix} \\
+&= \widehat{\begin{pmatrix}
+\nabla_i\chi - \mu_i \\
+\nabla_i\mu_j + \Rho_{ij}\chi
+\end{pmatrix}}
+= \widehat{\nabla^\mathcal{T}_i \begin{pmatrix}
+\chi \\ \mu_j
+\end{pmatrix}}
+\end{align*}
+using (\ref{eq:tractor_connection}) and the change of splitting in the bundle \mynote{Of what bundle is grad(chi,mu) a section?} corresponding to (\ref{eq:chi_mu_change}).
+
+\mynote{With a bit more work Eastwood calculates the curvature of the tractor connection and proves the statements about when projective structures are flat which I made above. Could add this.}
 
 \section{The Dunajski--Mettler Construction $(M,g_\Lambda,\Omega_\Lambda)$}
 
