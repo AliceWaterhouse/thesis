@@ -275,6 +275,7 @@ Any bundle associated to $P$ via some $H$--module is equipped with a tractor con
 
 \section{The Dunajski--Mettler construction $(M,g_\Lambda,\Omega_\Lambda)$}
 
+\mynote{Have we introduced $M$ yet?}
 We can think of $M$ as a quotient of the total space $P$ of the
 Cartan geometry by $GL(n,\mathbb{R})$, which is embedded in $H$
 in the obvious way:
@@ -345,6 +346,9 @@ Note that the full proof of theorem \ref{thm:DM} only appears explicitly in \cit
 A coordinate expression for the metric $g$ and two--form $\Omega$ can be obtained by writing out the Cartan connection $\theta$ explicitly for some choice of connection in the projective class. Alternatively, one can take a tractor approach using the tractor connection (\ref{eq:tractor_connection}). This approach is a product of \cite{DGW}.
 
 \subsection{Tractor construction}
+
+From the tractor perspective, the space $M$ will turn out to be the projectivised cotractor bundle of $N$ with an $\RP^{n-1}$ sub--bundle removed from each fiber. We can see this as follows.
+
 On the total space of $\cT^*$ we pullback $\pi:\cT^*\to N$ along $\pi$ to get $\pi^*(\cT^*)\to \cT^*$ as a vector bundle over the total space $\cT^*$. By construction this bundle has a tautological section $U\in \Gamma (\pi^*(\cT^*))$.  We also have $\pi^*(\cT(w))$ for any weight $w$, and we shall write simply $X\in \Gamma(\pi^*(\cT(1)))$ for the pullback to $\cT^*$ of the canonical tractor $X$ on $N$.
 
 Now define
@@ -487,79 +491,47 @@ g & = &  dp_{i}\odot dx^{i}-(\Gamma_{ij}^{k}p_{k}-p_{i}p_{j}-\Rho_{ij}) dx^{i}\o
 This is identical to the form appearing in \cite{DM}.
 \koniec
 
-The expressions (\ref{eq:coord_form}) can be shown to be projectively invariant in the sense that a different choice of $\nabla\in[\nabla]$ corresponds to shifting the fiber coordinates $p_{i}$, i.e. metrics corresponding to different representative connections are isometric. Explicitly, a projective transformation (\ref{eq:proj_change}) corresponds to a change \begin{equation}
-\Rho_{ij}\longrightarrow \Rho_{ij}+\Upsilon_{i}\Upsilon_{j}-\nabla_{i}\Upsilon_{j},\qquad p_{i}\longrightarrow p_{i}+\Upsilon_{i}.\label{eq:p_change}
+\begin{rmk}
+The expressions (\ref{eq:coord_form}) are projectively invariant in the sense that a different choice of $\nabla\in[\nabla]$ corresponds to shifting the fiber coordinates $p_{i}$, i.e. metrics corresponding to different representative connections are isometric. Explicitly, a projective transformation (\ref{eq:proj_change}) corresponds to a change \begin{equation}
+p_{i}\longrightarrow p_{i}+\Upsilon_{i},\label{eq:p_change}
 \end{equation}
+as can be seen from (\ref{eq:chi_mu_change}) and the definitions of $V_i$ and $p_i$.
+\end{rmk}
 
-Next we observe that $\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau)$ is an affine bundle modelled on $T^* N$.
-The point is that given
-  $\nabla$ in the projective class there is a  there is a smooth fibre bundle isomorphism
+\begin{rmk}
+Next we observe that $\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau)$ is an affine bundle modelled on $T^* N$. Given a connection in the projective class and hence a decomposition (\ref{eq:T*splitting}), there is a smooth fibre bundle isomorphism
   \begin{equation}\label{key-id}
 \iota : T^* N\to \mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau).
     \end{equation}
-First, given  $\nabla$, we can represent an element $U\in
-  \cT^*_p$ ($p\in N$) by the pair $(\tau , \mu) \in \cE (1)_p\oplus
-  T_p^*N(1)$,  or, if we choose coordinates on $N$, by collection
-\be
-\label{tractor_U}
-U=(\tau, \mu_i), \quad i=1, \dots, n .
-\ee
-  Then, dropping the choice $\nabla \in [\nabla]$, $U\in
-  \cT^*_p$ is an equivalence class of such pairs by the equivalence
-  relation (\ref{ttrans}) that covers the
-  equivalence relation between elements of $[\nabla]$. 
-
-  Thus, given $\nabla$, and  from the naturality of all maps, it
-  follows that the total space of $T^*N$ can be identified with $\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau)$
-  by (for each $p\in N$)
+%First, given  $\nabla$, we can represent an element $U\in
+%  \cT^*_p$ ($p\in N$) by the pair $(\tau , \mu) \in \cE (1)_p\oplus
+%  T_p^*N(1)$,  or, if we choose coordinates on $N$, by collection
+%\be
+%\label{tractor_U}
+%U=(\tau, \mu_i), \quad i=1, \dots, n .
+%\ee
+%  Then, dropping the choice $\nabla \in [\nabla]$, $U\in
+%  \cT^*_p$ is an equivalence class of such pairs by the equivalence
+%  relation (\ref{ttrans}) that covers the
+%  equivalence relation between elements of $[\nabla]$. 
+%
+ % Thus, given $\nabla$, and  from the naturality of all maps, it
+ % follows that the total space of $T^*N$ can be identified with $\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau)$
+ % by (for each $p\in N$)
+given by
 \begin{equation}
-T_p^*N\ni \xi_i  \mapsto [(1,\xi_i)]=[(\tau,\tau \xi_i)]\in
-\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau) .
+T_p^*N\ni p_i  \mapsto [(1,p_i)]=[(\tau,\tau p_i)]\in
+\mathbb{P}(\cT_p^*)\setminus \mathcal{Z}(\tau) .
 \end{equation}
+\end{rmk}
 
-%%\rs{Maciej and TM's Thm 5.1 in fact shows the connection is
-%%invariant not on $T*N$ but on an affine space modelled on that}
-Thus we may view $\mathcal{M}$ as a
-compactification of $T^*N$  and, by construction,
-this is a closed manifold iff $N$ is closed.
-
-
-Note that by this construction it is easily verified that the zero
-locus of $\tau$ is a smoothly
-embedded hypersurface in $\mathcal{M}$,  and from (\ref{co-euler}) it follows
-at once that this may be identified with the total space of the
-fibrewise projectivisation $\mathbb{P}(T^*N)$ (which is well known to
-have a para-CR structure). 
-
+\begin{rmk}
 A feature of this construction is that in each dimension $n$ (of $N$)
 either the hypersurface $\mathcal{Z}(\tau)$ (if $n$ odd) is not
-orientable, or $\mathcal{M}$ (if $n$ even) is not orientable. 
+orientable, or $\mathcal{M}$ (if $n$ even) is not orientable.
+\end{rmk} 
 
-%\subsection{Compactification by ray-projectiviation:}
-%\label{ray_sub}
-%Instead we may follow the construction above but instead define
-%$\mathcal{M}:= \pi^*(\mathbb{P}_+(\cT^*))$, where $\mathbb{P}_+(\cT^*)$ is
-%the ray-projectivisation of $\cT^*$ (i.e.\ the fibres of $\cT^*\to
-%\mathbb{P}_+(\cT^*)$ are isomorphic to $\mathbb{R}_+$). Then the bundles $\ce(w,w')$
-%should also be defined via ray homogeneity.
-%In this case, for $N$ orientable,
-%both $\mathcal{Z}(\tau)$ and $\mathcal{M}$ are orientable, and again
-%$\mathcal{M}$ is closed iff $N$ is. Now from (\ref{co-euler}) we have that
-%$\mathcal{Z}(\tau)$ may be identified with the
-%fibrewise ray-projectivisation $\mathbb{P}_+(T^*N)$.
-%In this variant of the
-%construction there are two copies $M_{\pm}$ of $T^*N$ in $\mathcal{M}$
-%according to the sign of $\tau$. Moreover each of $\mathcal{M}\setminus
-%M_{\mp}$ is a manifold that is globally a para-c-projective
-%compactification of $M_{\pm}$ in sense of Theorem \ref{CGthm}.
-
-
-
-
-
-
-
-
+\begin{rmk}
 In fact, the metric and symplectic form (\ref{eq:coord_form}) turn
 out to belong to a one-parameter family $\{g_{\Lambda}\}$, which
 can be written in local coordinates as 
@@ -569,7 +541,8 @@ g_{\Lambda} & = &  dp_{i}\odot dx^{i}-(\Gamma_{ij}^{k}p_{k}-\Lambda p_{i}p_{j}-\
 \end{eqnarray}
 %Metrics of the form (\ref{eq:general_g}) are a subclass of so-called
 %Osserman metrics. More details can be found in \cite{No-louzao1991}.
-They are all Einstein and, for $n=2$, all ASD, but for $\Lambda\neq1$ the relation to projective geometry is lost. For the remainder of the thesis we will write $g$ for $g_{\Lambda=1}$ unless stated otherwise. Note that $\{g_\Lambda\}$ will be the subject of chapter \ref{chap:KK_lift}, whilst in chapters \ref{chap:c-proj} and \ref{chap:EW_and_toda} we will restrict our attention to $g$ because the projective geometry is a key aspect of the content of these chapters.
+They are all Einstein with non--zero scalar curvature and, for $n=2$, all ASD, but for $\Lambda\neq1$ the relation to projective geometry is lost. For the remainder of the thesis we will write $g$ for $g_{\Lambda=1}$ unless stated otherwise. Note that $\{g_\Lambda\}$ will be the subject of chapter \ref{chap:KK_lift}, whilst in chapters \ref{chap:c-proj} and \ref{chap:EW_and_toda} we will restrict our attention to $g$ because the projective geometry is a key aspect of the content of these chapters.
+\end{rmk}
 
 
 \subsection{Symmetries of $(M,g_{\Lambda},\Omega_{\Lambda})$}
@@ -583,20 +556,20 @@ Explicitly, a vector field $K$ is projective if it satisfies
 \mathcal{L}_{K}\Gamma_{ij}^{k}=\delta_{i}^{k}\Upsilon_{j}+\delta_{j}^{k}\Upsilon_{i}\label{eq:proj_transf}
 \end{equation}
 for some 1-form $\Upsilon$, where $\Gamma_{ij}^{k}$ are the connection
-components, and their Lie derivative is defined (see \cite{Yano1955})
+components, and their Lie derivative is defined (see \cite{yano})
 by
 \begin{equation}
 \mathcal{L}_{K}\Gamma_{ij}^{k}\equiv\frac{\partial^{2}K^{k}}{\partial x^{i}\partial x^{j}}+K^{m}\frac{\partial\Gamma_{ij}^{k}}{\partial x^{m}}-\Gamma_{ij}^{m}\frac{\partial K^{k}}{\partial x^{m}}+\Gamma_{im}^{k}\frac{\partial K^{m}}{\partial x^{j}}+\Gamma_{mj}^{k}\frac{\partial K^{m}}{\partial x^{i}}.\label{eq:liederivGamma}
 \end{equation}
 
 
-One consequence of the above theorem is that for every open set $\mathcal{U}\subset N$
+One consequence of theorem \ref{thm:DM} is that for every open set $\mathcal{U}\subset N$
 we have an isomorphism between the Lie algebra of projective vector
 fields on $\mathcal{U}$ and the Lie algebra of vector fields on $\rho^{-1}(\mathcal{U})$
 which preserve both $g$ and $\Omega$. This follows from a standard
 result about Cartan geometries: projective vector fields on $\mathcal{U}$
 are in one-to-one correspondence with vector fields on $\pi^{-1}(\mathcal{U})$
-which preserve $\theta$ and are equivariant under the principal $H$-action.
+which preserve $\theta$ and are equivariant under the principal $H$-action. \mynote{Maybe I should say this in the Cartan geom section? Thomas' Warsaw notes will probs say it.}
 Such vector fields thus preserve the natural contraction $\eta\omega$
 and must descend to vector fields on $M$ preserving $(g,\Omega)$.
 In fact, it can be shown that every Killing vector field of $(M,g)$
@@ -612,12 +585,14 @@ given in local coordinates by
 where $\Upsilon_{i}$ is defined by (\ref{eq:proj_transf}).
 
 \subsection{Anti--Self--Duality for $n=2$}
+\mynote{Probs be good to properly define anti--self--duality. And expand this section. Not sure what the right balance is between putting stuff here and putting it in chapter \ref{chap:EW_and_toda}. Probs want to motivate that chapter but not say things that the reader will have forgotten by the time they get there.}
+
 For $n=2$, a local of characterisation of the sapces $M$ is provided in
 \cite{DM}: they show that any 4-dimensional anti-self-dual
 Einstein space with scalar curvature $-24\Lambda$ and a parallel
 anti-self-dual totally null distribution can be considered as the
-total space of a rank 2 affine bundle $T^{*}S$ over a projective
-surface $S$ of the form (\ref{eq:coord_form}). The anti--self-duality property, in combination with the correspondence of symmetries of $(M,g)$ with symmetries of $(N,[\nabla])$, is important in the context of the applications of
+total space of a rank 2 affine bundle $T^{*}N$ over a projective
+surface $N$ of the form (\ref{eq:coord_form}). The anti--self-duality property, in combination with the correspondence of symmetries of $(M,g)$ with symmetries of $(N,[\nabla])$, is important in the context of the applications of
 the work \cite{DM} to integrability. It means that
 if we start with a projective surface with at least one projective
 vector field, we will find an ASD Einstein space with at least one
