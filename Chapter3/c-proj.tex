@@ -6,27 +6,53 @@
 
 
 
-\chapter{Para--c--projective compactification of $(M,g,\Omega)$} \label{chap:c-proj}
-
-\mynote{Motivate by talking about conformal compactification.}
-
+\chapter{Para--$c$--projective compactification of $(M,g,\Omega)$} \label{chap:c-proj}
 In \cite{CG} the concept of $c$--projective compactification was
 defined. It is based on almost $c$--projective geometry \cite{c_proj},
 an analogue of projective geometry defined for almost complex
-manifolds $(M,J)$ in which the equivalence class of connections
-defining the $c$--projective structure must be \textit{complex} and
-\textit{minimal}.\footnote{Recall that a connection on an almost
-complex manifold $(M,J)$ is called \textit{complex} if it preserves $J$ and \textit{minimal} if the torsion is just the Nijenhuis tensor of $J$ up to a constant factor.} Here we review the definition of $c$--projective compactification, modifying to the ``para'' case where
-the para--almost--complex structure squares to $Id$ rather than $-Id$. We then show that the $2n$--dimensional, neutral signature
-Einstein metrics (\ref{eq:coord_form}) admit a compactification which we call \textit{para}--$c$--projective.
+manifolds, i.e., even--dimensional manifolds $M$ carrying a smooth endomorphism $J$ of $TM$ which satisfies $J^2=-Id$. In $c$--projective geometry, the equivalence class of torsion--free connections is replaced by an equivalence class of connections which are adapted to the almost complex structure $J$ in a natural way. In this chapter we discuss a notion of compactification which is modified to the {\it{``para''}} case, i.e. where the endomorphism $J$ squares to $Id$ rather than $-Id$. We show that the almost para--complex structure $J$ on $M$ defined by $g(J\cdot\,,\cdot)=\Omega(\cdot\,,\cdot)$  admits a type of compactification which we call \textit{para}--$c$--projective. The content of this chapter is based on material appearing in \cite{DGW}.
 
+\section{Para--$c$--projective geometry}
+
+The purpose of this section is to introduce the definitions which are required to state the main results of \cite{CG}.
+
+\begin{defi}
+The Nijenhuis tensor of an endomorphism $J$ of $TM$ is defined by
+\be \label{eq:Nijenhuis_def}
+\mathcal{N}(X,Y):=[X,Y] - [JX,JY] + J([JX,Y] + [X,JY]),
+\ee
+where $X,Y$ are vector fields on $M$ and $[\cdot\,,\cdot]$ denotes the Lie bracket of vector fields. This is equivalent to
+\be \label{eq:Nijenhuis_index_def}
+\mathcal{N}^a_{bc}=J^d_{\ [b}\p_{|d|}J^a_{\ c]}-J^d_{\ [b}\p_{c]}J^a_{\ d}.
+\ee
+\end{defi}
+
+Let $M$ be a complex manifold of (complex) dimension $n$, in the sense of having complex coordinates and complex transition functions. Then multiplication of the coordinates by $i$ defines an endomorphism $J$ of $TM$ which squares to $-Id$, so complex manifolds are a subset of almost complex manifolds. In the complex case, $J$ has eigenvalues $\pm i$, and the corresponding splitting of $TM$ into eigen--bundles is Frobenius integrable, meaning each of the two sub--bundles is tangent to a sub--manifold of real dimension $n$ at every point. The Newlander--Nirenberg theorem describes complex manifolds in terms of the Nijenhuis tensor (\ref{eq:Nijenhuis_def}).
+
+\begin{theo}[\cite{CG}]
+An almost complex manifold $(M,J)$ is a complex manifold if and only if the Nijenhuis tensor of $J$ vanishes. In this case, we call the almost complex structure $J$ integrable.
+\end{theo}
+
+
+An endomorphism $J$ which squares to $Id$ defines an analogous splitting of the tangent bundle into sub--bundles with eigenvalues $\pm 1$, and this splitting is also Frobenius integrable if and only if the Nijenhuis tensor of $J$ vanishes. We thus call an almost para--complex structure $J$ with vanishing Nijenhuis tensor a para--complex structure, and say that in this case $J$ is integrable.
+
+\mynote{define complex and minimal and also para Hermitian. Should I retitle this section to reflect the fact that Hermitian metrics have nothing to do with c-projective geometry? Is that even true?}
+
+%the equivalence class of connections
+%defining the $c$--projective structure must be \textit{complex} and
+%\textit{minimal}. Recall that a connection on an almost
+%complex manifold $(M,J)$ is called \textit{complex} if it preserves $J$ and \textit{minimal} if the torsion is just the Nijenhuis tensor of $J$ up to a constant factor.
+
+
+
+\section{Para--$c$--projective compactification}
 Although $c$--projective compactification is defined for any almost complex manifold, the definition can be applied to pseudo--Riemannian metrics $g$ which are Hermitian with respect to the almost complex structure so long as there exists a connection which preserves both $g$ and $J$ and has minimal torsion. Such Hermitian metrics are said to be \textit{admissible}.  Note that such a connection, if it exists, is uniquely defined, since the conditions that it be complex and minimal determine its torsion. It is thus given by the Levi--Civita connection of $g$ plus a constant multiple of the Nijenhuis tensor of $J$.
 
 We make the following definition in the para--$c$--projective case.
 %It is shown in \cite{CG} that the existence of such a connection is equivalent to the structure $(M, g, J)$ being quasi--K\"ahler in the sense of \cite{gray}\aw{comment on whether this extends to the para case?}.
 
 \begin{defi}
-\label{defi_1}  Let $(M,g,J)$ be a para--Hermitian manifold, and let $\nabla^L$ be a connection which preserves both $g$ and $J$ and has minimal torsion. The structure $(M, g, J)$
+\label{defi_1}  Let $(M,g,J)$ be a \mynote{n almost?} para--Hermitian manifold, and let $\nabla^L$ be a connection which preserves both $g$ and $J$ and has minimal torsion. The structure $(M, g, J)$
 admits a para--$c$--projective compactification to a manifold with boundary $\ov{M}=M\cup\p M$,
 if there exists a function $T:\ov{M}\rightarrow \R$ such that $\mathcal{Z}(T)$ is the boundary
 $\p M\subset \ov{M}$, the differential $dT$ does not vanish on $\p M$, and the
@@ -70,40 +96,6 @@ ${\mathcal{U}}$, and a non--zero constant $C$ such that
 Then $g$ is $c$--projectively compact.
 \end{theo}
 The statement in  Theorem \ref{CGthm} does not depend on the choice of $T$. Different choices of $T$ result in rescalings of the contact form $\theta$ on the boundary by a nowhere vanishing function.
-
-\section{The DM construction in tractor terms}
-%%\rs{Maciej and TM's Thm 5.1 in fact shows the connection is
-%%invariant not on $T*N$ but on an affine space modelled on that}
-%Thus we may view $\mathcal{M}$ as a
-%compactification of $T^*N$  and, by construction,
-%this is a closed manifold iff $N$ is closed.
-
-\begin{rmk}
-Note that by this construction it is easily verified that the zero
-locus of $\tau$ is a smoothly
-embedded hypersurface in $\mathcal{M}$,  and from (\ref{co-euler}) it follows
-at once that this may be identified with the total space of the
-fibrewise projectivisation $\mathbb{P}(T^*N)$ (which is well known to
-have a para-CR structure). 
-\end{rmk}
-
-%\subsection{Compactification by ray-projectiviation:}
-%\label{ray_sub}
-%Instead we may follow the construction above but instead define
-%$\mathcal{M}:= \pi^*(\mathbb{P}_+(\cT^*))$, where $\mathbb{P}_+(\cT^*)$ is
-%the ray-projectivisation of $\cT^*$ (i.e.\ the fibres of $\cT^*\to
-%\mathbb{P}_+(\cT^*)$ are isomorphic to $\mathbb{R}_+$). Then the bundles $\ce(w,w')$
-%should also be defined via ray homogeneity.
-%In this case, for $N$ orientable,
-%both $\mathcal{Z}(\tau)$ and $\mathcal{M}$ are orientable, and again
-%$\mathcal{M}$ is closed iff $N$ is. Now from (\ref{co-euler}) we have that
-%$\mathcal{Z}(\tau)$ may be identified with the
-%fibrewise ray-projectivisation $\mathbb{P}_+(T^*N)$.
-%In this variant of the
-%construction there are two copies $M_{\pm}$ of $T^*N$ in $\mathcal{M}$
-%according to the sign of $\tau$. Moreover each of $\mathcal{M}\setminus
-%M_{\mp}$ is a manifold that is globally a para-c-projective
-%compactification of $M_{\pm}$ in sense of Theorem \ref{CGthm}.
 
 
 \section{Compactifying the Dunajski--Mettler Class} 
@@ -172,8 +164,38 @@ We begin with
 compactification of the construction in \cite{DM}. For simplicity let us assume that $N$ is
 orientable.
 
-\subsection{Compactification by line projectiviation:}
- 
+%%\rs{Maciej and TM's Thm 5.1 in fact shows the connection is
+%%invariant not on $T*N$ but on an affine space modelled on that}
+%Thus we may view $\mathcal{M}$ as a
+%compactification of $T^*N$  and, by construction,
+%this is a closed manifold iff $N$ is closed.
+
+\begin{rmk}
+Note that by this construction it is easily verified that the zero
+locus of $\tau$ is a smoothly
+embedded hypersurface in $\mathcal{M}$,  and from (\ref{co-euler}) it follows
+at once that this may be identified with the total space of the
+fibrewise projectivisation $\mathbb{P}(T^*N)$ (which is well known to
+have a para-CR structure). 
+\end{rmk}
+
+%\subsection{Compactification by ray-projectiviation:}
+%\label{ray_sub}
+%Instead we may follow the construction above but instead define
+%$\mathcal{M}:= \pi^*(\mathbb{P}_+(\cT^*))$, where $\mathbb{P}_+(\cT^*)$ is
+%the ray-projectivisation of $\cT^*$ (i.e.\ the fibres of $\cT^*\to
+%\mathbb{P}_+(\cT^*)$ are isomorphic to $\mathbb{R}_+$). Then the bundles $\ce(w,w')$
+%should also be defined via ray homogeneity.
+%In this case, for $N$ orientable,
+%both $\mathcal{Z}(\tau)$ and $\mathcal{M}$ are orientable, and again
+%$\mathcal{M}$ is closed iff $N$ is. Now from (\ref{co-euler}) we have that
+%$\mathcal{Z}(\tau)$ may be identified with the
+%fibrewise ray-projectivisation $\mathbb{P}_+(T^*N)$.
+%In this variant of the
+%construction there are two copies $M_{\pm}$ of $T^*N$ in $\mathcal{M}$
+%according to the sign of $\tau$. Moreover each of $\mathcal{M}\setminus
+%M_{\mp}$ is a manifold that is globally a para-c-projective
+%compactification of $M_{\pm}$ in sense of Theorem \ref{CGthm}. 
 
 
 
@@ -426,11 +448,7 @@ J|_{\mathcal{D}}= &-\frac{\p}{\p X^A}\otimes dX^A +Z_A\frac{\p}{\p Y}\otimes dX^
 \]
 and (\ref{boundary_compatibility}) is satisfied.
 
-For the Nijenhuis condition, we use the formula
-\[
-\mathcal{N}^a_{bc}=J^d_{\ [b}\p_{|d|}J^a_{\ c]}-J^d_{\ [b}\p_{c]}J^a_{\ d}.
-\]
-Note that we need only consider components of this with $a=T$, and thus only need to work with the $\p/\p T$ components of $J$ to find the terms which look like $\p J$. This is a one--form which we shall call $J^{(T)}$ and find to be
+For the Nijenhuis condition, we use the formula (\ref{eq:Nijenhuis_index_def}). Note that we need only consider components of this with $a=T$, and thus only need to work with the $\p/\p T$ components of $J$ to find the terms which look like $\p J$. This is a one--form which we shall call $J^{(T)}$ and find to be
 \[
 \begin{split}
 J^{(T)}=&\bigg(-\frac{Z_B}{K} + \frac{T[2Z_B + (\Gamma^D_{AB}Z_D+\Gamma^n_{AB})X^A + (\Gamma^D_{nB}Z_D+\Gamma^n_{nB})Y]}{K} - T^2[\Rho_{AB}X^A+\Rho_{nB}Y]\bigg)dX^B \\

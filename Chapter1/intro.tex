@@ -22,17 +22,16 @@ This thesis splits naturally into two parts. The first 4 chapters are concerned 
 Given a projective structure on a manifold $N$ of dimension $n$,
 Dunajski and Mettler \cite{DM} construct a neutral signature Einstein metric $g$ with non-zero
 scalar curvature on a certain rank $n$ affine bundle $M\rightarrow N$.
-The $2n$--dimensional space $M$ also carries a natural symplectic form $\Omega$, and
-an endomorphism $J:TM\rightarrow TM$ which is such that $J^2$ is the identity and $g(\cdot\ ,\cdot)=\Omega(\cdot\ ,J\cdot)$. This makes $(M,g,\Omega)$ a so--called \textit{almost para--K\"ahler} structure. It is interesting for a number of different reasons.
+The $2n$--dimensional space $M$ also carries a natural symplectic form $\Omega$, and an endomorphism $J:TM\rightarrow TM$ which is such that $J^2$ is the identity and $g(J\cdot\,,\cdot)=\Omega(\cdot\,,\cdot)$. This makes $(M,g,\Omega)$ a so--called \textit{almost para--K\"ahler} structure. It is interesting for a number of different reasons.
 
-\mynote{It expresses the second order object which is the projective structure as a first order object on a larger space. See if you can find the slides of the talk Thomas gave in damtp where he talked about this?}
+\mynote{It expresses the second order object which is the projective structure as a first order object on a larger space. See if you can find the slides of the talk Thomas gave in damtp where he talked about this? If I put in Thomas' explicit construction of $g$ (i.e. define the second order coframe bundle) this point would be more relevant.}
 
 Firstly, $(M,g)$ is interesting by virtue of being an Einstein
 space. In fact, it turns out that $g$ arises as the Kaluza--Klein reduction of an Einstein metric $\mathcal{G}$ on an $\R^*$ bundle $\sigma:\mathcal{Q}\rightarrow M$ which has curvature form $\sigma^*(\Omega)$. In chapter \ref{chap:KK_lift} we will construct $\mathcal{G}$ explicitly, and give an interpretation of the manifold $(\mathcal{Q},\mathcal{G})$ in terms of the projective geometry on $N$.
 
-It also turns out that $(M,g,\Omega)$ can be thought of as compactifiable in a certain sense. Recall that a (psuedo--)Riemannian manifold $(M,g)$ is said to be \textit{conformally compact} if there is a smooth positive function $T$ such that $T^2g$ smoothly extends to a manifold with boundary $\ov{M}=M\cup\p M$, and the set $\{p\in\ov{M}:T(p)=0\}$ is a hypersurface which coincides with the boundary $\p M$.  This is a useful concept because $(M,T^2g)$ has the same conformal structure, and hence the same \textit{causual} structure, as $(M,g)$. It has been used to study said causual structure in both general relativity \cite{penrose65} and quantum field theory \cite{witten}. It is also useful for formulating the boundary conditions of conformally invariant field equations such as those arising in Yang--Mills theory \cite{uhlen}.
+It also turns out that $(M,g,\Omega)$ can be thought of as compactifiable in a certain sense. Recall that a (psuedo--)Riemannian manifold $(M,g)$ is said to be \textit{conformally compact} if there is a smooth positive function $T$ such that $T^2g$ smoothly extends to a manifold with boundary $\ov{M}=M\cup\p M$, and the set $\{p\in\ov{M}:T(p)=0\}$ is a hypersurface which coincides with the boundary $\p M$.  This is a useful concept because $(M,T^2g)$ has the same conformal structure, and hence the same \textit{causal} structure, as $(M,g)$. It has been used to study said causal structure in both general relativity \cite{penrose65} and quantum field theory \cite{witten}. It is also useful for formulating the boundary conditions of conformally invariant field equations such as those arising in Yang--Mills theory \cite{uhlen}.
 
-A mathematical summary of conformal compactification is that some weakening of the (psuedo--)Riemannian geometry on $M$ extends to a manifold with boundary $\ov{M}$. Recent work by \v Cap and Gover \cite{CG0,CG} has generalised this idea to other geometrical structures which admit some weakening which extends to a manifold with boundary. In particular, on an almost complex manifold $(M,J)$ with complex connection $\nabla$, one can define the $c$--projective equivalence class $[\nabla]$ to which $\nabla$ belongs, and show that the $c$--projective structure $(M,J,[\nabla])$ extends to a manifold with boundary $\ov{M}$ \cite{CG}. The main goal of chapter \ref{chap:c-proj} is to adapt the work of \cite{CG} to the para--$c$--projective case, and to show that the almost complex structure $J$ on $M$ has a complex connection which admits a so--called para--$c$--projective compactification. The result of this is that the manifolds $(M,g,\Omega)$ can be thought of as para--$c$--projectively compact.
+Recent work by \v Cap and Gover \cite{CG0,CG} has generalised this idea to other geometrical structures which admit some weakening which extends to a manifold with boundary. In particular, on an almost complex manifold $(M,J)$ with complex connection $\nabla$, one can define the $c$--projective equivalence class $[\nabla]$ to which $\nabla$ belongs, and show that the $c$--projective structure $(M,J,[\nabla])$ extends to a manifold with boundary $\ov{M}$ \cite{CG}. The main goal of chapter \ref{chap:c-proj} is to adapt the work of \cite{CG} to the para--$c$--projective case, and to show that the almost complex structure $J$ on $M$ has a complex connection which admits a so--called para--$c$--projective compactification. The result of this is that the manifolds $(M,g,\Omega)$ can be thought of as para--$c$--projectively compact.
 
 Another reason this construction is interesting is that for $n=2$ (so that $M$ has dimension $4$), the conformal
 curvature of $g$ is anti-self-dual. Recall that the Hodge operator
@@ -62,8 +61,13 @@ of all possible Toda solutions obtainable in this way.
 
 \mynote{some notation and conventions e.g. $i,j,k=1,...,n$ are indices for coordinates on $n$? and $\Gamma$ are connection components which are defined by... Curvature is defined by}
 \begin{itemize}
-\item We denote the bundle of anti--symmetrised covariant tensors of degree $p$ as $\Lambda^p$, and call sections of this bundle $p$--forms.
-\item $N$ is oriented.
+\item We denote the bundle of anti--symmetrised covariant tensors of degree $m$ as $\Lambda^m$, and call sections of this bundle $m$--forms.
+\item Note that our conventions are $(d\omega)_{ab\dots c}=\partial_{[a}\omega_{b\dots c]},$
+$(\eta\wedge\omega)_{a\dots d}=\eta_{[a\dots b}\omega_{c\dots d]},$
+$\omega=\omega_{a\dots b}dx^{a}\wedge\dots\wedge dx^{b},$
+and $F_{ab}{d}x^{a}\wedge{d}x^{b}=F_{[ab]}{d}x^{a}\otimes{d}x^{b}$
+implying ${d}x^{a}\wedge{d}x^{b}=\frac{1}{2}({d}x^{a}\otimes{d}x^{b}-{d}x^{b}\otimes{d}x^{a})$.
+\item $N$ is oriented. \mynote{something about which part of $SL(n+1)$ we mean?}
 \end{itemize}
 
 \section{Projective Geometry}\label{sec:projgeom}
@@ -83,7 +87,7 @@ The following proposition converts definition \ref{def:projstruct} to a to a mor
 for some one--form $\Upsilon.$
 \end{prop}
 
-{\bf Proof.} We denote by $V$ the vertical sub--bundle of $T(TN)$, where $\nu:TN\rightarrow N$\mynote{Probably used $\nu$ elsewhere...} is the tangent bundle to $N$. A connection defines a splitting of the exact sequence
+{\bf Proof.} We denote by $V$ the vertical sub--bundle of $T(TN)$, where $\nu:TN\rightarrow N$ is the tangent bundle to $N$. A connection defines a splitting of the exact sequence
 \be \label{eq:TTMsequence}
 0 \longrightarrow V \longrightarrow T(TN) \longrightarrow \nu^*TN \longrightarrow 0
 \ee
@@ -153,7 +157,7 @@ We will refer to the components of $\omega$ and $\eta$ with respect
 to the natural basis of $\mathfrak{sl}(n+1,\mathbb{R})$ as $\{\omega^{(i)}\}$ and $\{\eta_{(i)}\}$, so that $\omega^{(i)}$ and $\eta_{(i)}$ are both one-forms.
 
 \begin{defi}
-The Cartan geometry of a projective structure $(N,[\nabla])$ consists of a principal right $H$--bundle $\pi_P:P\rightarrow N$ carrying a one--form $\theta$ called the Cartan connection, which takes values in $\mathfrak{sl}(n+1,\mathbb{R})$, can be written in the form (\ref{eq:cartan_connection}) and has the following properties:
+The Cartan geometry of a projective structure $(N,[\nabla])$ consists of a principal right $H$--bundle $\pi_P:P\rightarrow N$, where the right--action of some $h\in H$ on $P$ is denoted by $R_h$, carrying a one--form $\theta$ called the Cartan connection, which takes values in $\mathfrak{sl}(n+1,\mathbb{R})$, can be written in the form (\ref{eq:cartan_connection}) and has the following properties:
 \begin{enumerate}
 \item $\theta_u:T_uP\rightarrow\mathfrak{sl}(n+1,\R)$ is an isomorphism for all $u\in P$;
 \item $\theta(X_v)=v$ for all fundamental vector fields $X_v$ on $P$;
@@ -161,17 +165,25 @@ The Cartan geometry of a projective structure $(N,[\nabla])$ consists of a princ
 \item If $X$ is a vector field on $P$ with the property that $\eta(X)=\phi(X)=0$ and $\omega(X)\in\R^n\backslash\{0\}$, then the integral curve of $X$ projects down to a geodesic on $N$ and conversely every geodesic of $[\nabla]$ arises in this way.
 \item The $\mathfrak{sl}(n+1,\mathbb{R})$-valued
 curvature two-form $\Theta$ satisfies
-\[
+\be \label{eq:curvature_2-form}
 \Theta=d\theta+\theta\wedge\theta=\begin{pmatrix}0 & L(\omega\wedge\omega)\\
 0 & W(\omega\wedge\omega)
 \end{pmatrix},
-\]
+\ee
 where $L$ and $W$ are smooth curvature functions valued in $\mathrm{Hom}(\R^n\wedge\R^n,R_n)$ and $\mathrm{Hom}(\R^n\wedge\R^n,R_n\otimes\R^n)$ respectively. The function $W$ represents the Weyl projective curvature tensor appearing in (\ref{eq:projcurvdecomp}).
 \end{enumerate}
 \end{defi}
 
-The Cartan geometry of a projective structure is unique in the sense that for any two Cartan geometries $(\widehat{\pi}_P:\widehat{P}\rightarrow N,\widehat{\theta})$ and $(\pi_P:P\rightarrow N,\theta)$ of type $(SL(n+1,\R),H)$ satisfying the above properties there is a $H$--bundle isomorphism $\psi:P\rightarrow\widehat{P}$ such that $\psi^*\widehat{\theta}=\theta$. %This means that although we cannot choose a unique connection on the tangent bundle to $N$, we can choose a unique connection on the Cartan bundle. 
+\begin{rmk}The Cartan geometry of a projective structure is unique in the sense that for any two Cartan geometries $(\widehat{\pi}_P:\widehat{P}\rightarrow N,\widehat{\theta})$ and $(\pi_P:P\rightarrow N,\theta)$ of type $(SL(n+1,\R),H)$ satisfying the above properties there is a $H$--bundle isomorphism $\psi:P\rightarrow\widehat{P}$ such that $\psi^*\widehat{\theta}=\theta$. %This means that although we cannot choose a unique connection on the tangent bundle to $N$, we can choose a unique connection on the Cartan bundle.
+\end{rmk}
 
+\begin{rmk} \label{rmk:theta_symmetry}
+For every open set $\mathcal{U}\subset N$, projective vector fields on $\mathcal{U}$ are in one-to-one correspondence with vector fields on $\pi^{-1}(\mathcal{U})$
+which preserve $\theta$ and are equivariant \mynote{what do I mean by this} under the principal $H$-action.
+\end{rmk}
+
+
+\begin{rmk}
 The Cartan connection also gives us a unique connection on any bundle associated to $P$ via some $H$--module. In particular, let $E$ be a vector space and $\rho:H\rightarrow GL(E)$ a representation of $H$ acting on $E$. We can construct an \textit{associated bundle}
 \[\pi_E:P\times_\rho E\rightarrow N \]
 where points in $P\times_\rho E$ are equivalence classes of pairs $[u,v]$, where $u\in P$ and $v\in E$, up to the equivalence relation
@@ -180,6 +192,7 @@ where points in $P\times_\rho E$ are equivalence classes of pairs $[u,v]$, where
 \]
 
 We thus obtain a vector bundle over $N$ whose fibers are diffeomorphic to $E$. A section $s:N\rightarrow P\times_\rho E$ is represented by a map $\sigma_s:P\rightarrow E$ which is \textit{equivariant} in the sense that $ \sigma_s(uh)=\rho(h^{-1})\sigma_s(u)$ for all $h\in H$. Importantly, any such bundle inherits a connection from the Cartan connection $\theta$ on $P$.
+\end{rmk}
 
 
 \subsection{The cotractor bundle}
@@ -187,9 +200,14 @@ A particularly important example of a vector bundle associated to $P$ is the \te
 \be \label{eq:df-ftheta}
 d\sigma - \sigma\theta.
 \ee
-This turns out to be 
+This turns out to be a \textit{semi--basic}\footnote{Recall that a semi--basic form on a fiber bundle $P\rightarrow N$ is a form which is a linear combination, with coefficients parametrised by the fibers, of basic forms on $P$ (i.e. forms which are the pull-backs of forms on $N$).} one--form satisfying
+\[
+R_h^*(d\sigma-\sigma\theta) = (d\sigma - \sigma\theta)\rho(h^{-1}),
+\]
+making $\sigma\mapsto d\sigma-\sigma\theta$ an equivariant connection on $\cT^*$.
 
-Although the above construction of $\mathcal{T}^*$ relied on the Cartan bundle, it is possible to construct it independently. %To do so, we consider the transformation of the derivative of a volume form under a projective change (\ref{eq:proj_change}). This approach can be motivated by the fact that the special linear group $SL(n,\R)$, which we have already seen to be important in projective geometry, is the group of volume preserving transformations of $\R^n$.
+Although this construction of $\mathcal{T}^*$ relies on the Cartan bundle, it is possible to construct it independently. In order to do so we need the notion of a \textit{projective density}.%To do so, we consider the transformation of the derivative of a volume form under a projective change (\ref{eq:proj_change}). This approach can be motivated by the fact that the special linear group $SL(n,\R)$, which we have already seen to be important in projective geometry, is the group of volume preserving transformations of $\R^n$.
+\subsubsection{Projective densities}
 From the projective change of connection (\ref{eq:proj_change}) we can derive the the corresponding change in $\nabla\chi$ for some $m$--form $\chi$ on $N$:
 \be \label{eq:p-form_change}
 \widehat{\nabla}_i\chi_{jk\dots l} = \nabla_i\chi_{jk\dots l} - (m+1)\Upsilon_i\chi_{jk\dots l} - (m+1)\Upsilon_{[i}\chi_{jk\dots l]}.
@@ -281,17 +299,19 @@ using (\ref{eq:tractor_connection}) and the change of splitting (\ref{eq:chi_mu_
 
 Any bundle associated to $P$ via some $H$--module is equipped with a tractor connection which is inherited from the connection on the standard cotractor bundle, or equivalently from the Cartan connection. It is this connection, with its special equivariance property, that allows us to construct an Einstein metric as in invariant of the projective structure. This construction is the subject of the following section.
 
-\section{The Dunajski--Mettler construction $(M,g_\Lambda,\Omega_\Lambda)$}
+\section{The projective to Einstein correspondence}
+The work of \cite{DM} can be understood from two perspectives, one of which is based on the Cartan bundle of the projective structure and one of which is based on the cotractor bundle. We will make use of both, since the Cartan and tractor approaches are most natural in chapters \ref{chap:KK_lift} and \ref{chap:c-proj} respectively. We begin by describing the viewpoint based on the Cartan geometry.
 
-\mynote{Have we introduced $M$ yet?}
-We can think of $M$ as a quotient of the total space $P$ of the
-Cartan geometry by $GL(n,\mathbb{R})$, which is embedded in $H$
+\subsection{Cartan perspective}
+
+Consider a quotient of the total space $P$ of the
+Cartan bundle by $GL(n,\mathbb{R})$, which is embedded in $H$
 in the obvious way:
-\[
+\be \label{eq:GL(n)_embedding}
 GL(n,\mathbb{R})\ni a\longmapsto\begin{pmatrix}\mathrm{det}a^{-1} & 0\\
 0 & a
 \end{pmatrix}\in H.
-\]
+\ee
 It is easily verified that 
 \[
 \begin{pmatrix}\mathrm{det}a^{-1} & 0\\
@@ -326,7 +346,9 @@ by an endomorphism $J$ satisying $J^{2}=\mathrm{id}$. Hence $(g,\Omega)$
 is an almost para-Kahler structure on $M$.
 \end{theo}
 
-Note that the full proof of theorem \ref{thm:DM} only appears explicitly in \cite{DM} in the case $n=2$, although it can be generalised to $n>2$. This generalisation is discussed in their appendix.
+Note that the full proof of theorem \ref{thm:DM} only appears explicitly in \cite{DM} in the case $n=2$, although it can be generalised to $n>2$. This generalisation is discussed in their appendix. They show that the Ricci scalar of $g$ is $24$ in the case $n=2$. In chapter \ref{chap:KK_lift} we will need the Ricci scalar for general $n$. We will calculate this under the assumption (stated without proof in \cite{DM}) that $g$ is Einstein.
+
+\mynote{Motivate chapter \ref{chap:KK_lift} here by mentioned the alternative quotient?}
 
 %The quotient $M$ turns out to be an affine bundle over $N$ with
 %structure group $H$, i.e. $H$ acts affinely on the fibers of $\rho:M\rightarrow N$,
@@ -352,8 +374,9 @@ Note that the full proof of theorem \ref{thm:DM} only appears explicitly in \cit
 %\end{equation}
 
 A coordinate expression for the metric $g$ and two--form $\Omega$ can be obtained by writing out the Cartan connection $\theta$ explicitly for some choice of connection in the projective class. Alternatively, one can take a tractor approach using the tractor connection (\ref{eq:tractor_connection}). This approach is a product of \cite{DGW}.
+\mynote{Might be good to add Thomas' construction explicitly. This would be better for justifying the comments made in chapter \ref{chap:KK_lift} about the lifted metric being a different quotient of the Cartan bundle.}
 
-\subsection{Tractor construction}
+\subsection{Tractor perspective}
 
 From the tractor perspective, the space $M$ will turn out to be the projectivised cotractor bundle of $N$ with an $\RP^{n-1}$ sub--bundle removed from each fiber. We can see this as follows.
 
@@ -507,6 +530,7 @@ as can be seen from (\ref{eq:chi_mu_change}) and the definitions of $V_i$ and $p
 \end{rmk}
 
 \begin{rmk}
+\mynote{If I add an explicit construction from Thomas, this might be easier to motivate from his perspective.}
 Next we observe that $\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau)$ is an affine bundle modelled on $T^* N$. Given a connection in the projective class and hence a decomposition (\ref{eq:T*splitting}), there is a smooth fibre bundle isomorphism
   \begin{equation}\label{key-id}
 \iota : T^* N\to \mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau).
@@ -549,11 +573,11 @@ g_{\Lambda} & = &  dp_{i}\odot dx^{i}-(\Gamma_{ij}^{k}p_{k}-\Lambda p_{i}p_{j}-\
 \end{eqnarray}
 %Metrics of the form (\ref{eq:general_g}) are a subclass of so-called
 %Osserman metrics. More details can be found in \cite{No-louzao1991}.
-They are all Einstein with non--zero scalar curvature and, for $n=2$, all ASD, but for $\Lambda\neq1$ the relation to projective geometry is lost. For the remainder of the thesis we will write $g$ for $g_{\Lambda=1}$ unless stated otherwise. Note that $\{g_\Lambda\}$ will be the subject of chapter \ref{chap:KK_lift}, whilst in chapters \ref{chap:c-proj} and \ref{chap:EW_and_toda} we will restrict our attention to $g$ because the projective geometry is a key aspect of the content of these chapters.
+They are all Einstein with non--zero scalar curvature $24\Lambda$, but for $\Lambda\neq1$ the relation to projective geometry is lost. For the remainder of the thesis we will write $g$ for $g_{\Lambda=1}$ unless stated otherwise. Note that $\{g_\Lambda\}$ will be the subject of chapter \ref{chap:KK_lift}, whilst in chapters \ref{chap:c-proj} and \ref{chap:EW_and_toda} we will restrict our attention to $g$ because the projective geometry is a key aspect of the content of these chapters.
 \end{rmk}
 
 
-\subsection{Symmetries of $(M,g_{\Lambda},\Omega_{\Lambda})$}
+ \subsection{Symmetries of $(M,g_{\Lambda},\Omega_{\Lambda})$}
 
 Recall that a projective vector field on any manifold with a connection
 generates a 1-parameter family of transformations which preserve the
@@ -571,18 +595,7 @@ by
 \end{equation}
 
 
-One consequence of theorem \ref{thm:DM} is that for every open set $\mathcal{U}\subset N$
-we have an isomorphism between the Lie algebra of projective vector
-fields on $\mathcal{U}$ and the Lie algebra of vector fields on $\rho^{-1}(\mathcal{U})$
-which preserve both $g$ and $\Omega$. This follows from a standard
-result about Cartan geometries: projective vector fields on $\mathcal{U}$
-are in one-to-one correspondence with vector fields on $\pi^{-1}(\mathcal{U})$
-which preserve $\theta$ and are equivariant under the principal $H$-action. \mynote{Maybe I should say this in the Cartan geom section? Thomas' Warsaw notes will probs say it.}
-Such vector fields thus preserve the natural contraction $\eta\omega$
-and must descend to vector fields on $M$ preserving $(g,\Omega)$.
-In fact, it can be shown that every Killing vector field of $(M,g)$
-is also symplectic with respect to $\Omega$ and is therefore the
-lift of a projective vector field on $(N,[\nabla])$.
+One consequence of the symmetry property of the Cartan connection discussed in remark \ref{rmk:theta_symmetry} is that for every open set $\mathcal{U}\subset N$ we have an isomorphism between the Lie algebra of projective vector fields on $\mathcal{U}$ and the Lie algebra of vector fields on $\pi_P^{-1}(\mathcal{U})$ preserving the natural contraction $\eta\omega$. Such vector fields must descend to vector fields on $\pi_\cM^{-1}(\mathcal{U})$ preserving $(g,\Omega)$. In fact, it can be shown that every Killing vector field of $(M,g_\Lambda)$ is also symplectic with respect to $\Omega_\Lambda$ and is therefore the lift of a projective vector field on $(N,[\nabla])$.
 
 Explicitly, for every projective vector field $K$ of $(N,[\nabla])$
 there is a corresponding Killing vector $\mathcal{K}$ of $(M,g_{\Lambda})$
