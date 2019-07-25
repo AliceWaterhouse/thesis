@@ -12,7 +12,7 @@ defined. It is based on almost $c$--projective geometry \cite{c_proj},
 an analogue of projective geometry defined for almost complex
 manifolds, i.e., even--dimensional manifolds $M$ carrying a smooth endomorphism $J$ of $TM$ which satisfies $J^2=-Id$. In $c$--projective geometry, the equivalence class of torsion--free connections is replaced by an equivalence class of connections which are adapted to the almost complex structure $J$ in a natural way. In this chapter we discuss a notion of compactification which is modified to the {\it{``para''}} case, i.e. where the endomorphism $J$ squares to $Id$ rather than $-Id$. We show that the almost para--complex structure $J$ on $M$ defined by $g(J\cdot\,,\cdot)=\Omega(\cdot\,,\cdot)$  admits a type of compactification which we call \textit{para}--$c$--projective. The content of this chapter is based on material appearing in \cite{DGW}.
 
-\section{Para--$c$--projective geometry}
+\section{Classes of almost (para--)complex geometry}
 
 The purpose of this section is to introduce the definitions which are required to state the main results of \cite{CG}.
 
@@ -36,13 +36,21 @@ An almost complex manifold $(M,J)$ is a complex manifold if and only if the Nije
 
 An endomorphism $J$ which squares to $Id$ defines an analogous splitting of the tangent bundle into sub--bundles with eigenvalues $\pm 1$, and this splitting is also Frobenius integrable if and only if the Nijenhuis tensor of $J$ vanishes. We thus call an almost para--complex structure $J$ with vanishing Nijenhuis tensor a para--complex structure, and say that in this case $J$ is integrable.
 
-\mynote{define complex and minimal and also para Hermitian. Should I retitle this section to reflect the fact that Hermitian metrics have nothing to do with c-projective geometry? Is that even true?}
+\begin{defi}
+A (para--)Hermitian metric on an almost (para--)complex manifold $(M,J)$ is a metric $g$ satisfying
+\[
+g(J\cdot\,,J\cdot) = g(\cdot\,,\cdot).
+\]
+The triple $(M,J,g)$ then defines a (para--)Hermitian manifold.
+\end{defi}
 
-%the equivalence class of connections
-%defining the $c$--projective structure must be \textit{complex} and
-%\textit{minimal}. Recall that a connection on an almost
-%complex manifold $(M,J)$ is called \textit{complex} if it preserves $J$ and \textit{minimal} if the torsion is just the Nijenhuis tensor of $J$ up to a constant factor.
+Note that every (para--)Hermitian manifold has a naturally defined two--form $\Omega(\cdot\,,\cdot)=g(J\cdot\,,\cdot)$, and can alternatively be specified as $(M,J,\Omega)$ or $(M,g,\Omega)$. An almost (para--)K\"ahler manifold $(M,J,g)$ is a (para--)Hermitian manifold whose associated two--form is closed, meaning $M$ carries compatible complex, pseudo--Riemannian and symplectic structures. The manifolds $M$ arising in the projective to Einstein correspondence are almost para--K\"ahler, and para--K\"ahler when the underlying projective structure is flat.
 
+\begin{defi}
+A connection on an almost (para--)complex manifold $(M,J)$ is called complex if it preserves $J$, and minimal if its torsion is equal to the Nijenhuis tensor of $J$ up to a constant factor.
+\end{defi}
+
+\mynote{define a (para--)$c$--projective structure}
 
 
 \section{Para--$c$--projective compactification}
