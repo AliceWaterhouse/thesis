@@ -10,9 +10,11 @@
 In \cite{CG} the concept of $c$--projective compactification was
 defined. It is based on almost $c$--projective geometry \cite{c_proj},
 an analogue of projective geometry defined for almost complex
-manifolds, i.e., even--dimensional manifolds $M$ carrying a smooth endomorphism $J$ of $TM$ which satisfies $J^2=-Id$. In $c$--projective geometry, the equivalence class of torsion--free connections is replaced by an equivalence class of connections which are adapted to the almost complex structure $J$ in a natural way. In this chapter we discuss a notion of compactification which is modified to the {\it{``para''}} case, i.e. where the endomorphism $J$ squares to $Id$ rather than $-Id$. We show that the almost para--complex structure $J$ on $M$ defined by $g(J\cdot\,,\cdot)=\Omega(\cdot\,,\cdot)$  admits a type of compactification which we call \textit{para}--$c$--projective. The content of this chapter is based on material appearing in \cite{DGW}.
+manifolds, i.e., even--dimensional manifolds $M$ carrying a smooth endomorphism $J$ of $TM$ which satisfies $J^2=-Id$. In $c$--projective geometry, the equivalence class of torsion--free connections is replaced by an equivalence class of connections which are adapted to the almost complex structure $J$ in a natural way. In this chapter we discuss a notion of compactification which is modified to the {\it{``para''}} case, i.e. where the endomorphism $J$ squares to $Id$ rather than $-Id$. We show that the natural almost para--complex structure $J$ on any manifold $M$ arising in the projective to Einstein correspondence admits a type of compactification which we call \textit{para}--$c$--projective. The content of this chapter is based on material appearing in \cite{DGW}.
 
-\section{Classes of almost (para--)complex geometry}
+\section{Background and definitions}
+
+\subsection{Almost (para--)complex geometry}
 
 The purpose of this section is to introduce the definitions which are required to state the main results of \cite{CG}.
 
@@ -27,75 +29,82 @@ where $X,Y$ are vector fields on $M$ and $[\cdot\,,\cdot]$ denotes the Lie brack
 \ee
 \end{defi}
 
-Let $M$ be a complex manifold of (complex) dimension $n$, in the sense of having complex coordinates and complex transition functions. Then multiplication of the coordinates by $i$ defines an endomorphism $J$ of $TM$ which squares to $-Id$, so complex manifolds are a subset of almost complex manifolds. In the complex case, $J$ has eigenvalues $\pm i$, and the corresponding splitting of $TM$ into eigen--bundles is Frobenius integrable, meaning each of the two sub--bundles is tangent to a sub--manifold of real dimension $n$ at every point. The Newlander--Nirenberg theorem describes complex manifolds in terms of the Nijenhuis tensor (\ref{eq:Nijenhuis_def}).
+Let $M$ be a complex manifold of (complex) dimension $n$, in the sense of having complex coordinates and complex transition functions. Then multiplication of the coordinates by $i$ defines an endomorphism $J$ of $TM$ which squares to $-Id$, so complex manifolds are a subset of almost complex manifolds. In this case, $J$ has eigenvalues $\pm i$, and the corresponding splitting of $TM$ into eigen--bundles is Frobenius integrable, meaning each of the two sub--bundles is tangent to a foliation of sub--manifolds of real dimension $n$ at every point. The Newlander--Nirenberg theorem describes complex manifolds in terms of the Nijenhuis tensor (\ref{eq:Nijenhuis_def}).
 
 \begin{theo}[\cite{CG}]
 An almost complex manifold $(M,J)$ is a complex manifold if and only if the Nijenhuis tensor of $J$ vanishes. In this case, we call the almost complex structure $J$ integrable.
 \end{theo}
 
 
-An endomorphism $J$ which squares to $Id$ defines an analogous splitting of the tangent bundle into sub--bundles with eigenvalues $\pm 1$, and this splitting is also Frobenius integrable if and only if the Nijenhuis tensor of $J$ vanishes. We thus call an almost para--complex structure $J$ with vanishing Nijenhuis tensor a para--complex structure, and say that in this case $J$ is integrable.
+An endomorphism $J$ which squares to $Id$ defines an analogous splitting of the tangent bundle into sub--bundles with eigenvalues $\pm 1$, and this splitting is also Frobenius integrable if and only if the Nijenhuis tensor of $J$ vanishes. We thus call an almost para--complex structure $J$ with vanishing Nijenhuis tensor a para--complex structure, and say that in this case $J$ is integrable. In all the definitions below, the word \textit{almost} can be removed if the (para--)complex structure $J$ is integrable.
+
+\subsection{Metrics and connections}
 
 \begin{defi}
 A (para--)Hermitian metric on an almost (para--)complex manifold $(M,J)$ is a metric $g$ satisfying
 \[
 g(J\cdot\,,J\cdot) = g(\cdot\,,\cdot).
 \]
-The triple $(M,J,g)$ then defines a (para--)Hermitian manifold.
+The triple $(M,J,g)$ then defines an almost (para--)Hermitian manifold.
 \end{defi}
 
-Note that every (para--)Hermitian manifold has a naturally defined two--form $\Omega(\cdot\,,\cdot)=g(J\cdot\,,\cdot)$, and can alternatively be specified as $(M,J,\Omega)$ or $(M,g,\Omega)$. An almost (para--)K\"ahler manifold $(M,J,g)$ is a (para--)Hermitian manifold whose associated two--form is closed, meaning $M$ carries compatible complex, pseudo--Riemannian and symplectic structures. The manifolds $M$ arising in the projective to Einstein correspondence are almost para--K\"ahler, and para--K\"ahler when the underlying projective structure is flat.
+Note that every (para--)Hermitian manifold has a naturally defined two--form $\Omega(\cdot\,,\cdot)=g(J\cdot\,,\cdot)$, and can alternatively be specified as $(M,J,\Omega)$ or $(M,g,\Omega)$. An almost (para--)K\"ahler manifold $(M,J,g)$ is a (para--)Hermitian manifold whose associated two--form is closed, meaning $M$ carries compatible complex, pseudo--Riemannian and symplectic structures. The manifolds $M$ arising in the projective to Einstein correspondence are almost para--K\"ahler, and para--K\"ahler when the underlying projective structure is flat \cite{DM}.
 
 \begin{defi}
-A connection on an almost (para--)complex manifold $(M,J)$ is called complex if it preserves $J$, and minimal if its torsion is equal to the Nijenhuis tensor of $J$ up to a constant factor.
+A connection on an almost (para--)complex manifold $(M,J)$ is called complex if it preserves $J$.
 \end{defi}
 
-\mynote{define a (para--)$c$--projective structure}
+Note that, in contrast to a metric connection, it is not always possible to define a complex connection which is torsion--free. In fact, this is possible if and only if the Nijenhuis tensor (\ref{eq:Nijenhuis_def}) of $J$ vanishes. However, one can always define a complex connection whose torsion is equal to the Nijenhuis tensor of $J$ up to a constant multiplicative factor \cite{c_proj}. Such connections are called \textit{minimal}.
 
-
-\section{Para--$c$--projective compactification}
-Although $c$--projective compactification is defined for any almost complex manifold, the definition can be applied to pseudo--Riemannian metrics $g$ which are Hermitian with respect to the almost complex structure so long as there exists a connection which preserves both $g$ and $J$ and has minimal torsion. Such Hermitian metrics are said to be \textit{admissible}.  Note that such a connection, if it exists, is uniquely defined, since the conditions that it be complex and minimal determine its torsion. It is thus given by the Levi--Civita connection of $g$ plus a constant multiple of the Nijenhuis tensor of $J$.
-
-We make the following definition in the para--$c$--projective case.
-%It is shown in \cite{CG} that the existence of such a connection is equivalent to the structure $(M, g, J)$ being quasi--K\"ahler in the sense of \cite{gray}\aw{comment on whether this extends to the para case?}.
+\subsection{(Para--)$c$--projective geometry}
 
 \begin{defi}
-\label{defi_1}  Let $(M,g,J)$ be a \mynote{n almost?} para--Hermitian manifold, and let $\nabla^L$ be a connection which preserves both $g$ and $J$ and has minimal torsion. The structure $(M, g, J)$
-admits a para--$c$--projective compactification to a manifold with boundary $\ov{M}=M\cup\p M$,
-if there exists a function $T:\ov{M}\rightarrow \R$ such that $\mathcal{Z}(T)$ is the boundary
-$\p M\subset \ov{M}$, the differential $dT$ does not vanish on $\p M$, and the
-connection
-\[
-\overline{\nabla^L}_X Y={\nabla^L}_X Y+\Upsilon(X)Y+\Upsilon(JX)JX
-+\Upsilon(Y)X+\Upsilon(JY)JX, \quad\mbox{where}\quad\Upsilon=\frac{dT}{2T},
-\]
-extends to $\ov{M}$.
+Two affine connections $\nabla$ and $\ol{\nabla}$ on an almost (para--)complex manifold $(M,J)$ are called (para--)$c$--projectively equivalent if there is a one--form $\Upsilon_a$ on $M$ such that their components $\Gamma^a_{bc}$ and $\ol{\Gamma}^a_{bc}$ are related by
+\be \label{eq:c-proj_change}
+\ol{\Gamma}^a_{bc} - \Gamma^a_{bc} = \delta_{b}^{a}\Upsilon_{c}+\delta_{c}^{a}\Upsilon_{b} \pm (\Upsilon_d J^d_{\ b} J^a_{\ c} + \Upsilon_d J^d_{\ c} J^a_{\ b}),
+\ee
+where the $+$ corresponds to the case $J^2=Id$ and the $-$ corresponds to the case $J^2=-Id$.
 \end{defi}
 
-Note that the para--$c$--projective change of connection $\nabla^L\rightarrow \ov{\nabla^L}$ differs from the $c$--projective case in the signs of some of the terms, to account for the fact that $J$ squares to the $Id$ rather than $-Id$.
+Note that the para--$c$--projective change of connection differs from the $c$--projective case in the signs of some of the terms, to account for the fact that $J$ squares to the $Id$ rather than $-Id$. It is easy to show that if $\nabla$ is complex then so is $\ol{\nabla}$, and the index symmetry of the right hand side of (\ref{eq:c-proj_change}) means that if $\nabla$ is minimal then so is $\ol{\nabla}$. An almost (para--)$c$--projective structure on a manifold $M$ comprises an almost (para--)complex structure $J$ and a (para--)$c$--projective equivalence class $[\nabla]$ of complex minimal connections.
 
-It follows easily from this definition that the endomorphism $J$ on $M$ naturally extends to all of $\ov{M}$ by parallel transport with respect to $\ov{\nabla^L}$. It thus defines an almost para--CR structure on the hypersurface distribution $\mathcal{D}$ defined by $\mathcal{D}_x:=T_x\p M \cap J(T_x \p M)$. It can be shown (see Lemma 5 of \cite{CG} and modify to the case $J^2=Id$) that this almost para--CR structure is non--degenerate if and only if for any local defining function $T$ the one--form $\theta=dT\circ J$ restricts to a contact form on $\p M$.
 
-The first main result of \cite{CG} is  Theorem 8 in this reference, which gives a local form for an admissible Hermitian metric which is sufficient for the corresponding $c$--projective structure to be $c$--projectively compact. The theorem is stated below, adapted to the para--$c$--projective case. Note that this includes an assumption that the Nijenhuis tensor $\mathcal{N}$ of $J$ takes so--called \textit{asymptotically tangential values}. This is equivalent to the following statement in index notation:
+\subsection{Para--$c$--projective compactification}
+
+We now specialise to the ``para'' case, where $J^2=Id$. Note that all the corresponding results for $J^2=-Id$ can be found in the original paper \cite{CG}.
+
+\begin{defi}
+\label{defi_1}  Let $(M,J)$ be an almost para--complex manifold, and let $\nabla$ be a complex minimal connection. The structure $(M,J)$ admits a para--$c$--projective compactification to a manifold with boundary $\ol{M}=M\cup\p M$
+if there exists a function $T:\ol{M}\rightarrow \R$ such that $\mathcal{Z}(T)$ is the boundary
+$\p M\subset \ol{M}$, the differential $dT$ does not vanish on $\p M$, and the connection $\ol{\nabla}$ related to $\nabla$ by (\ref{eq:c-proj_change}) with $\Upsilon = dT/(2T)$ extends to $\ol{M}$.
+\end{defi}
+
+
+
+It follows easily from this definition that the endomorphism $J$ on $M$ naturally extends to all of $\ol{M}$ by parallel transport with respect to $\ol{\nabla}$. It thus defines an almost para--CR structure on the hypersurface distribution $\mathcal{D}$ defined by $\mathcal{D}_x:=T_x\p M \cap J(T_x \p M)$ for all $x\in\p M$. It can be shown (see Lemma 5 of \cite{CG} and modify to the case $J^2=Id$) that this almost para--CR structure is non--degenerate if and only if for any local defining function $T$ the one--form $\theta=dT\circ J$ restricts to a contact form on $\p M$.
+
+\mynote{Need to define CR structure, degeneracy of a CR structure and contact form. I am a bit confused because a contact form requires complete non--integrability of the hypersurface distribution, but \cite{CG} is saying that Nijenhuis taking asymptotically tangential values means the boundary structure is partially integrable.}
+
+Although $c$--projective compactification is defined for any almost complex manifold, the definition can be applied to pseudo--Riemannian metrics $g$ which are Hermitian with respect to the almost complex structure so long as there exists a connection which preserves both $g$ and $J$ and has minimal torsion. Such Hermitian metrics are said to be \textit{admissible}.  Note that such a connection, if it exists, is uniquely defined, since the conditions that it be complex and minimal determine its torsion. It is thus given by the Levi--Civita connection of $g$ plus a constant multiple of the Nijenhuis tensor (\ref{eq:Nijenhuis_def}) of $J$.
+
+The first main result of \cite{CG} is  Theorem 8 in this reference, which gives a local form for an admissible Hermitian metric which is sufficient for the corresponding $c$--projective structure to be $c$--projectively compact. The theorem is stated below, adapted to the para--$c$--projective case. Note that this includes an assumption that the Nijenhuis tensor (\ref{eq:Nijenhuis_def}) of $J$ takes so--called \textit{asymptotically tangential values}. This is equivalent to the following statement in index notation:
 \be
 \label{Nijenhuis_condition}
-\Big({\mathcal{N}^{a}}_{bc}\nabla_a T\Big)|_{T=0}=0.  \ee
+\Big({\mathcal{N}^{a}}_{bc}\nabla_a T\Big)\Big|_{T=0}=0.  \ee
 The
 following result arises by a trivial adaption of the arguments in
-\cite{CG} for the almost complex case, and so further details may be obtained from that source.
+\cite{CG} for the para--complex case, and so further details may be obtained from that source.
 
 \begin{theo}[\cite{CG}] \label{CGthm}
-Let $\ov{M}$ be a smooth manifold with boundary $\p M$ and interior $M$. Let $J$ be an almost para--complex structure on $\ov{M}$, such that $\p M$ is non--degenerate and the Nijenhuis tensor $\mathcal{N}$ of $J$ has asymptotically tangential values. Let $g$ be an admissible pseudo--Riemannian Hermitian metric on $M$. For a local defining function $T$ for the boundary defined on an open 
-subset ${\mathcal U}\subset \ov{M}$, put $\theta=dT\circ J$ and, given a non--zero real 
-constant $C$, define a Hermitian $\big(\negthinspace\begin{smallmatrix}
-0 \\ 2
-\end{smallmatrix}\negthinspace\big)$--tensor field $h_{T,C}$ on 
+Let $\ol{M}$ be a smooth manifold with boundary $\p M$ and interior $M$. Let $J$ be an almost para--complex structure on $\ol{M}$, such that $\p M$ is non--degenerate and the Nijenhuis tensor $\mathcal{N}$ of $J$ has asymptotically tangential values. Let $g$ be an admissible pseudo--Riemannian Hermitian metric on $M$. For a local defining function $T$ for the boundary defined on an open 
+subset ${\mathcal U}\subset \ol{M}$, put $\theta=dT\circ J$ and, given a non--zero real 
+constant $C$, define a Hermitian tensor field $h_{T,C}$ on 
 ${\mathcal U}\cap M$ by
 \[
 h_{T,C}:=Tg+\frac{C}{T}(dT^2-\theta^2).
 \]
 Suppose that for each $x\in\p M$ there is an open neighbourhood 
-${\mathcal{U}}$ of $x$ in $\ov{M}$, a local defining function $T$ defined on 
+${\mathcal{U}}$ of $x$ in $\ol{M}$, a local defining function $T$ defined on 
 ${\mathcal{U}}$, and a non--zero constant $C$ such that
 \begin{itemize}
 \item $h_{T,C}$ admits a smooth extension to all of $\mathcal{U}$
@@ -103,172 +112,49 @@ ${\mathcal{U}}$, and a non--zero constant $C$ such that
 \end{itemize}
 Then $g$ is $c$--projectively compact.
 \end{theo}
-The statement in  Theorem \ref{CGthm} does not depend on the choice of $T$. Different choices of $T$ result in rescalings of the contact form $\theta$ on the boundary by a nowhere vanishing function.
+Note that the statement in  Theorem \ref{CGthm} does not depend on the choice of $T$. Different choices of $T$ result in rescalings of the contact form $\theta$ on the boundary by a nowhere vanishing function.
 
 
 \section{Compactifying the Dunajski--Mettler Class} 
-\label{section_4}
-\newcommand{\ol}[1]{\overline{#1}} \newcommand{\bp}{\boldsymbol{p}}
 
-In \cite{DM} it was shown that the manifold $M$ can be identified with the
-complement of
-an $\RP^{n-1}$ sub-bundle in the  projectivisation $\mathbb{P}(\cT^*)$ of a certain rank $(n+1)$ vector bundle (the so called co-tractor bundle) $\cT^*$  
-over $N$. In the special case where $N=\RP^n$, and $[\nabla]$ is projectively 
-flat the manifold $M=SL(n+1, \R)/GL(n, \R)$ can be identified with the projection of $\R^{n+1}\times \R_{n+1}\setminus {\mathcal Z}$, where ${\mathcal Z}$ denotes the set
-of incident pairs (point, hyperplane).
+In section \ref{sec:trac_construction} it was shown that the manifolds $M$ arising in the projective to Einstein correspondence can be identified with the projectivised cotractor bundle of $N$ where the zero locus of the canonical density $\tau$ has been removed. In the special case where $N=\RP^n$, and $[\nabla]$ is projectively flat the manifold $M=SL(n+1, \R)/GL(n, \R)$ can be identified with the projection of $\R^{n+1}\times \R_{n+1}\setminus {\mathcal Z}$, where ${\mathcal Z}$ denotes the set of incident pairs (point, hyperplane). \mynote{Need to decide what to do with the model via orbit decomp section to know what to do with this.}
 
 The compactification procedure described in  
-the Theorem \ref{our_thm} will, for the model, attach these incident pairs back to $M$, 
-and more generally
-(in case of a curved projective structure on $N$) will attach
-the  $\RP^{n-1}$ sub-bundle of $\mathbb{P}(\cT^*)$. The boundary $\p M$ 
-from Definition \ref{defi_1} will play a role of a submanifold manifold
-separating two open sets in $\mathbb{P}(\cT^*)$ in the sense described 
-in the next sub-Section.
-
-\section{The Dunajski--Mettler construction in tractor terms}\label{tractor-ver}
-Let the  projective structure $(N, [\nabla])$, be represented by
-some torsion free affine connection $\nabla$ on $N$, where   the latter has
-dimension at least 2.  Let $\cE(1)\rightarrow N$ be  the line bundle which is the standard
-$-2(n+1)$th root % $\cE(-2n-2)$ is
-of the square of the canonical bundle of
-$N$ (which, note, is canonically oriented).  For any
-vector bundle $\mathcal{B}$ and line bundle $\cE(w)$ we write
-$\mathcal{B}(w)$ as a shorthand for $\mathcal{B}\otimes \cE(w) $.
-
-Canonically on  the projective manifold  $(N, [\nabla])$ there is the rank $(n+1)$
-cotractor bundle \cite{BEG}
-\[
-\cT^*\rightarrow N .
-\]
-This has a composition sequence
-\begin{equation}\label{co-euler}
-0\to T^*N(1)\to \cT^*\stackrel{X}{\to}\cE(1)\to 0,
-\end{equation}
-where the map $X\in \Gamma(\cT(1))$ is called the (projective) {\em canonical
-  tractor}.
-Choosing a connection in $[\nabla]$ determines a splitting of this sequence and so then have
-$\cT^*= \cE(1) \oplus  T^*N(1)$, and we can represent an element $V$ of $\cT^*$ as a pair
-$(\sigma, \mu)=[V]_\nabla$ (see e.g. \cite{CG0}). Any other connection $\ol{\nabla}$ in $[\nabla]$ is related to $\nabla$ by (\ref{connection}), for some  1-form field  $\Upsilon$ on $N$, and the corresponding transformation 
-\begin{equation}\label{ttrans}
-  [V]_\nabla=(\sigma, \mu)\mapsto (\sigma, \mu +\sigma \Upsilon)=[V]_{\ol{\nabla}}.
-\end{equation}
-The main importance of $\cT^*$ is that it admits a canonical
-projectively invariant {\em tractor connection} $\nabla^{\cT^*}$ given by
-\be
-\label{tractor_con}
-{\quad{\nabla^{\cT}}_i \left(\begin{array}{c}
-\sigma\\ 
-\mu_j
-\end{array} \right)= 
-\left(\begin{array}{c} \nabla_i\sigma-\mu_i \\ 
-\nabla_i\mu_j+\Rho_{ij}\sigma
-\end{array} \right).}
-\ee
-We shall now present two variants of the 
-construction of \cite{DM}, and then its compactification (to be made precise
-in Theorem \ref{our_thm}).
-We begin with
-compactification of the construction in \cite{DM}. For simplicity let us assume that $N$ is
-orientable.
-
-%%\rs{Maciej and TM's Thm 5.1 in fact shows the connection is
-%%invariant not on $T*N$ but on an affine space modelled on that}
-%Thus we may view $\mathcal{M}$ as a
-%compactification of $T^*N$  and, by construction,
-%this is a closed manifold iff $N$ is closed.
-
-\begin{rmk}
-Note that by this construction it is easily verified that the zero
-locus of $\tau$ is a smoothly
-embedded hypersurface in $\mathcal{M}$,  and from (\ref{co-euler}) it follows
-at once that this may be identified with the total space of the
-fibrewise projectivisation $\mathbb{P}(T^*N)$ (which is well known to
-have a para-CR structure). 
-\end{rmk}
-
-%\subsection{Compactification by ray-projectiviation:}
-%\label{ray_sub}
-%Instead we may follow the construction above but instead define
-%$\mathcal{M}:= \pi^*(\mathbb{P}_+(\cT^*))$, where $\mathbb{P}_+(\cT^*)$ is
-%the ray-projectivisation of $\cT^*$ (i.e.\ the fibres of $\cT^*\to
-%\mathbb{P}_+(\cT^*)$ are isomorphic to $\mathbb{R}_+$). Then the bundles $\ce(w,w')$
-%should also be defined via ray homogeneity.
-%In this case, for $N$ orientable,
-%both $\mathcal{Z}(\tau)$ and $\mathcal{M}$ are orientable, and again
-%$\mathcal{M}$ is closed iff $N$ is. Now from (\ref{co-euler}) we have that
-%$\mathcal{Z}(\tau)$ may be identified with the
-%fibrewise ray-projectivisation $\mathbb{P}_+(T^*N)$.
-%In this variant of the
-%construction there are two copies $M_{\pm}$ of $T^*N$ in $\mathcal{M}$
-%according to the sign of $\tau$. Moreover each of $\mathcal{M}\setminus
-%M_{\mp}$ is a manifold that is globally a para-c-projective
-%compactification of $M_{\pm}$ in sense of Theorem \ref{CGthm}. 
-
-
-
-
-\subsection{Remark on continuing the tractor approach}
-It would be possible to achieve our main aims by continuing the
-tractor approach.  We will not pursue this here as we want to
-emphasise that with little effort the main result now follows directly
-form the properties of the metric.  However we sketch just the basic idea: By
-our construction above it follows that $\mathcal{M}$ has a canonical
-para-c-projective geometry. In the notation as above, $\pi^*{\cT}\oplus
-\pi^*{\cT^*}$ is the corresponding para-c-projective tractor bundle
-and this has a canonical tractor connection that trivially
-extends (in fibre directions) the pull back of the projective
-connection (that is available in horizontal directions). The
-dual pairing between $\pi^*{\cT}$ and $\pi^*{\cT^*}$ determines a
-fibre metric and compatible symplectic form on the bundle
-$\pi^*{\cT}\oplus \pi^*{\cT^*}$ and this is obviously preserved by the
-connection. What remains is to show that the tractor connection so
-constructed satisfies properties that mean that it is {\em normal} in
-the sense defined in e.g.\ \cite{CS-book}. With this established then
-the main results then follow from the general holonomy theory in
-\cite{CGH-duke}.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\section{The main theorem}
-In the previous subsection \ref{ray_sub} we have presented a candidate 
-$\overline{M}\equiv\mathcal{M}\setminus M_{\mp}$ for a para-c-projective
-compactification of the Einstein para-Kahler manifold $(M, g, \Omega)$ given 
-by (\ref{main_metric}). What remains to be done is to show that near
-the boundary ${\mathcal{Z}}(\tau)=0$ of $\overline{M}$ the metric 
-(\ref{main_metric}) can be put in the local normal form of Theorem 
+the theorem \ref{our_thm} below will, for the model, attach these incident pairs back to $M$, and more generally (in case of a curved projective structure on $N$) will attach the zero locus of $\tau$ back into $\mathbb{P}(\cT^*)$. The boundary $\p M$ from definition \ref{defi_1} will play a role of a submanifold
+separating two open sets in $\mathbb{P}(\cT^*)$ which have $\tau>0$ and $\tau<0$ respectively. The method of the proof will be to show that near
+the boundary ${\mathcal{Z}}(\tau)=0$ of $\ol{M}$ the metric 
+(\ref{eq:coord_form}) can be put in the local normal form of theorem 
 \ref{CGthm}.
 
-\mynote{I think if we are compactifying by line projectivisation (which I think we are...) our candidate is actually $\cM$?}
+%Before we state the theorem, we note that the Libermann connection $\nabla^{L}$ \cite{Lieb} associated to $(M,g,\Omega)$ is given by
+%\be
+%\label{lib}
+%{\nabla^L}_a X_b={\nabla^{\bf g}}_a X_b-{G^c}_{ab} X_c,\quad \mbox{where}\quad
+%{{G^c}_{ab}}=-{{\Omega}^{cd}}{\nabla^{\bf g}}_d {\Omega_{ab}}
+%\ee
+%and $\nabla^{\bf g}$ is the Levi--Civita connection of $g$.
 
+%\mynote{Where do we use this? And is $G^c_{ab}$ Nijenhuis?}
 
-The endomorphism $J:TM\rightarrow TM$ defined by
-$\Omega(X, Y)=g(JX, Y)$ satisfies $J^2=Id$, and the associated Libermann connection $\nabla^{L}$ \cite{Lieb} is given by
-\be
-\label{lib}
-{\nabla^L}_a X_b={\nabla^{\bf g}}_a X_b-{G^c}_{ab} X_c,\quad \mbox{where}\quad
-{{G^c}_{ab}}=-{{\Omega}^{cd}}{\nabla^{\bf g}}_d {\Omega_{ab}}
-\ee
-and $\nabla^{\bf g}$ is the Levi--Civita connection of $g$. This connection is metric, has minimal torsion, and preserves the almost para--complex structure $J$. It thus belongs to a para--$c$--projective equivalence class which we will show to be compactifiable in the sense of Theorem 
-\ref{CGthm}.
+%This connection is metric, has minimal torsion, and preserves the almost para--complex structure $J$. It thus belongs to a para--$c$--projective equivalence class which we will show to be compactifiable in the sense of definition \ref{defi_1}.
 
 \begin{theo}
 \label{our_thm}
 The Einstein almost para--K\"ahler metric $(M, g, \Omega)$ given by 
-(\ref{main_metric}) admits a para--$c$--projective compactification
-$\overline{M}$. The structure on the
-$(2n-1)$--dimensional boundary $\p M\cong \mathbb{P}(T^* N)$ of $\overline{M}$ includes a contact structure together with a conformal structure 
+(\ref{eq:coord_form}) admits a para--$c$--projective compactification
+$\ol{M}$. The structure on the
+$(2n-1)$--dimensional boundary $\p M\cong \mathbb{P}(T^* N)$ of $\ol{M}$ includes a contact structure together with a conformal structure 
 and a para--CR structure
 defined on the contact distribution.
 \end{theo}
+\mynote{Here we stated that $\p M\cong \mathbb{P}(T^* N)$ but I moved the comment about this to after the proof. I'm not sure where best to put it.}
 \noindent
 {\bf Proof.}
 In the proof below we shall explicitly construct the boundary $\p M$ together with the contact structure and the associated conformal structure on the contact distribution. We shall
 first deal with the model $M=SL(n+1)/GL(n)$, and then explain how the curvature
 of $(N, [\nabla])$ modifies the compactification.
 
-In the model case we can define coordinates $x^i$ on $N=\mathbb{RP}^n$ by taking $X=(1,x^1,\dots,x^n)$, where $(X^0,\dots,X^n)$ are homogeneous coordinates and we are working in an open set where $X^0\neq 0$. The ${x^i}$ are flat coordinates, so the connection components (and hence the Schouten tensor) vanish and (\ref{main_metric}) reduces to
+In the model case we can define coordinates $x^i$ on $N=\mathbb{RP}^n$ by taking $X=(1,x^1,\dots,x^n)$, where $(X^0,\dots,X^n)$ are homogeneous coordinates and we are working in an open set where $X^0\neq 0$. The ${x^i}$ are flat coordinates, so the connection components (and hence the Schouten tensor) vanish and (\ref{eq:coord_form}) reduces to
 \be
 \label{model_metric}
 g=d\xi_i\odot dx^i + \xi_i\xi_jdx^i\odot dx^j, \qquad
@@ -276,11 +162,8 @@ g=d\xi_i\odot dx^i + \xi_i\xi_jdx^i\odot dx^j, \qquad
 \mbox{where}\quad
 i, j =1, \dots, n.
 \ee
-We can relate \cite{DM} the affine coordinates $\xi_i$ on the fibres of $T^*N$ to the tractor coordinates (\ref{tractor_U}) by setting $\xi_i=\mu_i/\tau$ on the complement of the zero locus ${\mathcal Z}(\tau)$ of $\tau$.
-%Let us first recall \cite{DM} how the affine coordinates $\xi_i$ on the fibres
-%of $T^*N$ relate to the tractor coordinates (\ref{tractor_U}).
-%On the complement of the zero locus ${\mathcal Z}(\tau)$ of $\tau$ we set
-%$\xi_i=\mu_i/\tau$.
+We can relate \cite{DM} the affine coordinates $\xi_i$ on the fibres of $T^*N$ to the tractor coordinates (\ref{eq:T*coords}) by setting $\xi_i=\mu_i/\tau$ on the complement of the zero locus ${\mathcal Z}(\tau)$ of $\tau$.
+\mynote{In Rod's tractor bit my $\chi$ in (\ref{eq:T*coords}) was replaced by $\tau$. Are they the same thing? I though $\tau$ took values in a different density bundle?}
 
 Now consider an open set  ${\mathcal U}\subset M$ given
 by  $\xi_ix^i>0$, and define the function $T$ on ${\mathcal U}$ by
@@ -289,19 +172,19 @@ by  $\xi_ix^i>0$, and define the function $T$ on ${\mathcal U}$ by
 T=\frac{1}{\xi_i x^i}.
 \ee
 We shall attach a boundary  $\p \mathcal{U}$ to the open set $\mathcal{U}$ 
-such that $T$ extends to a function $\overline{T}$ on $\mathcal{U}\cup \p \mathcal{U}$, and
-$\overline{T}$ is  the defining function for this boundary.
+such that $T$ extends to a function $\ol{T}$ on $\mathcal{U}\cup \p \mathcal{U}$, and
+$\ol{T}$ is  the defining function for this boundary.
 We then investigate the geometry on $M$ in the limit $T\rightarrow 0$.
 It is clear from above that
-the zero locus of $\overline{T}$ will be contained in the zero locus $\mathcal{Z}(\tau)$ of $\tau$, and
-therefore belongs to the boundary of $\overline{M}$. We will 
-use $\overline{T}$ as a defining function for $\overline{M}$ in an open set $\overline{\mathcal{U}}\subset\overline{M}$.
+the zero locus of $\ol{T}$ will be contained in the zero locus $\mathcal{Z}(\tau)$ of $\tau$, and
+therefore belongs to the boundary of $\ol{M}$. We will 
+use $\ol{T}$ as a defining function for $\ol{M}$ in an open set $\ol{\mathcal{U}}\subset\ol{M}$.
 The strategy of the proof is to extend $T$ to a coordinate system on 
 $\mathcal{U}$, such that near the boundary the metric $g$ takes a form
 as in Theorem \ref{CGthm}.
 
 
-First define $\theta\in \Lambda^1(\overline{M})$
+First define $\theta\in \Lambda^1(\ol{M})$ $\ov{M}$
 by 
 \be
 \label{def_theta}
@@ -313,8 +196,8 @@ where $J$ is the para--complex structure of $(g,  \Omega)$. Using (\ref{model_me
 \theta=2T(1-T)\xi_id x^i-dT.
 \]
 We need $n$  open sets $U_1, \dots, U_n$ such that $\xi_k\neq 0$ on $U_k$
-to cover the zero locus of $T$. Here we chose $k=n$, and adapt
-a coordinate system (which we will prove to be Pfaff) given by
+to cover the zero locus of $T$. Here we chose $k=n$, and use
+a coordinate system given by
 \[
 (T, Z_1, \dots, Z_{n-1}, X^1, \dots,
  X^{n-1}, Y),
@@ -511,9 +394,27 @@ $
 \theta_0,  h_{\mathcal D}=\theta_1\odot\theta_2.
 $
 
+\subsection{Why is $(M,g,\Omega)$ para--$c$--projectively compact?}
+Note that by construction in section \ref{sec:trac_construction} it is easily verified that the zero locus of $\tau$ is a smoothly embedded hypersurface in $\mathcal{M}$,  and from (\ref{eq:T*sequence}) it follows at once that this may be identified with the total space of the fibrewise projectivisation $\mathbb{P}(T^*N)$ (which is well known to have a para-CR structure).
+
+It would be possible to show that the structures $(M,g\Omega)$ arising in the projective to Einstein correspondence are para--$c$--projectively compact using a tractor approach. By our construction above it follows that $\mathcal{M}$ has a canonical para-c-projective geometry. In the notation as above, $\pi^*{\cT}\oplus
+\pi^*{\cT^*}$ is the corresponding para-c-projective tractor bundle
+and this has a canonical tractor connection that trivially
+extends (in fibre directions) the pull back of the projective
+connection (that is available in horizontal directions). The
+dual pairing between $\pi^*{\cT}$ and $\pi^*{\cT^*}$ determines a
+fibre metric and compatible symplectic form on the bundle
+$\pi^*{\cT}\oplus \pi^*{\cT^*}$ and this is obviously preserved by the
+connection. What remains is to show that the tractor connection so
+constructed satisfies properties that mean that it is {\em normal} in
+the sense defined in e.g.\ \cite{CS-book}. With this established then
+the main results then follow from the general holonomy theory in
+\cite{CGH-duke}.
 
 
 \section{The model via an orbit decomposition}
+
+\mynote{Not really sure what to do with this section. It seems only to show $g$ is Einstein without having to explicitly calculate its Ricci tensor, otherwise I think it's pretty much equivalent to the general construction in the intro?}
 
 In this section we describe here the flat (in the sense of parabolic
 geometries) model \cite{CDT13, DM} of our construction in tractor

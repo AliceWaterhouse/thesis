@@ -80,9 +80,9 @@ on a manifold $N$ is an equivalence class $[\nabla]$ of torsion--free affine con
 
 The following proposition converts definition \ref{def:projstruct} to a to a more operational form.
 
-\begin{prop} Two torsion--free connections $\nabla$ and $\widehat{\nabla}$ belong to the same projective class if and only if their components $\Gamma^i_{jk}$ and $\widehat{\Gamma}^i_{jk}$ are related by
+\begin{prop} Two torsion--free connections $\nabla$ and $\ov{\nabla}$ belong to the same projective class if and only if their components $\Gamma^i_{jk}$ and $\ov{\Gamma}^i_{jk}$ are related by
 \begin{equation}
-\widehat{\Gamma}^i_{jk} - \Gamma^i_{jk} = \delta_{j}^{i}\Upsilon_{k}+\delta_{k}^{i}\Upsilon_{j}\label{eq:proj_change}
+\ov{\Gamma}^i_{jk} - \Gamma^i_{jk} = \delta_{j}^{i}\Upsilon_{k}+\delta_{k}^{i}\Upsilon_{j}\label{eq:proj_change}
 \end{equation}
 for some one--form $\Upsilon.$
 \end{prop}
@@ -106,7 +106,7 @@ where the Weyl projective curvature tensor, $W_{ijk}^{\ \ \ l}$, is trace free, 
 \]
 The objects $W_{ijk}^{\ \ \ l}$ and $\Rho_{ij}$ transform as
 \be \label{eq:schout_change}
-\widehat{W}_{ijk}^{\ \ \ l} = W_{ijk}^{\ \ \ l}, \qquad \widehat{\Rho}_{ij} = \Rho_{ij} - \nabla_i\Upsilon_j + \Upsilon_i\Upsilon_j
+\ov{W}_{ijk}^{\ \ \ l} = W_{ijk}^{\ \ \ l}, \qquad \ov{\Rho}_{ij} = \Rho_{ij} - \nabla_i\Upsilon_j + \Upsilon_i\Upsilon_j
 \ee
 under a change of representative connection (\ref{eq:proj_change}). Note that for $n=2$ the Weyl tensor is always vanishing.
 
@@ -210,33 +210,39 @@ Although this construction of $\mathcal{T}^*$ relies on the Cartan bundle, it is
 \subsubsection{Projective densities}
 From the projective change of connection (\ref{eq:proj_change}) we can derive the the corresponding change in $\nabla\chi$ for some $m$--form $\chi$ on $N$:
 \be \label{eq:p-form_change}
-\widehat{\nabla}_i\chi_{jk\dots l} = \nabla_i\chi_{jk\dots l} - (m+1)\Upsilon_i\chi_{jk\dots l} - (m+1)\Upsilon_{[i}\chi_{jk\dots l]}.
+\ov{\nabla}_i\chi_{jk\dots l} = \nabla_i\chi_{jk\dots l} - (m+1)\Upsilon_i\chi_{jk\dots l} - (m+1)\Upsilon_{[i}\chi_{jk\dots l]}.
 \ee
 In particular, for a volume form ($m=n$) we find
 \[
-\widehat{\nabla}_i\chi_{jk\dots l} = \nabla_i\chi_{jk\dots l} - (n+1)\Upsilon_i\chi_{jk\dots l},
+\ov{\nabla}_i\chi_{jk\dots l} = \nabla_i\chi_{jk\dots l} - (n+1)\Upsilon_i\chi_{jk\dots l},
 \]
 where the final term in (\ref{eq:p-form_change}) has vanished because it contains a symmetrisation over $n+1$ indices. We can write this in a more compact way as
 \[
-\widehat{\nabla}_i\chi = \nabla_i\chi - (n+1)\Upsilon_i\chi.
+\ov{\nabla}_i\chi = \nabla_i\chi - (n+1)\Upsilon_i\chi.
 \]
 
 Note that for sections $\chi$ of the bundle $\mathcal{E}(w):=(\Lambda^n)^{-w/(n+1)}$ we have
 \be \label{eq:ddensity_change}
-\widehat{\nabla}_i\chi = \nabla_i\chi + w\Upsilon_i\chi.
+\ov{\nabla}_i\chi = \nabla_i\chi + w\Upsilon_i\chi.
 \ee
 We called such sections \textit{projective densities of weight $w$}, and for any vector bundle $\mathcal{B}\rightarrow N$ we write $\mathcal{B}(w)$ for the tensor product of $\mathcal{B}$ with $\mathcal{E}(w)$. For example, $T^*N(w)$ is the bundle of one--forms with projective weight $w$, and for sections $\mu_i$ of $T^*N(w)$ we have
 \be \label{eq:dweighted_form_change}
-\widehat{\nabla}_i\mu_j = \nabla_i\mu_j + (w-1)\Upsilon_i\mu_j - \Upsilon_j\mu_i.
+\ov{\nabla}_i\mu_j = \nabla_i\mu_j + (w-1)\Upsilon_i\mu_j - \Upsilon_j\mu_i.
 \ee
 
 We can now define the cotractor bundle $\pi:\mathcal{T}^*\rightarrow N$. For a choice of connection in the projective class we identify
 \be \label{eq:T*splitting}
-\mathcal{T}^* = \mathcal{E}(1)\oplus T^*N(1).
+\mathcal{T}^* = \mathcal{E}(1)\oplus T^*N(1),
+\ee
+so that a section can be represented by a pair
+\be \label{eq:T*coords}
+\begin{pmatrix}
+{\chi} \\ {\mu}_i
+\end{pmatrix}.
 \ee
 Under a change of projective connection (\ref{eq:proj_change}), this splitting changes according to
 \be \label{eq:chi_mu_change}
-\widehat{\begin{pmatrix}
+\ov{\begin{pmatrix}
 {\chi} \\ {\mu}_i
 \end{pmatrix}} =
 \begin{pmatrix}
@@ -261,14 +267,14 @@ The bundle $\mathcal{T}^*$ admits a projectively invariant \textit{tractor conne
 \ee
 which turns out to agree with (\ref{eq:df-ftheta}). Under a change of projective connection (\ref{eq:proj_change}), we find
 \begin{align*}
-\widehat{\nabla}^\mathcal{T}_i\widehat{\begin{pmatrix}
+\ov{\nabla}^\mathcal{T}_i\ov{\begin{pmatrix}
 \chi \\ \mu_j
 \end{pmatrix}}
-&= \widehat{\nabla}^\mathcal{T}_i\begin{pmatrix}
+&= \ov{\nabla}^\mathcal{T}_i\begin{pmatrix}
 \chi \\ \mu_j + \Upsilon_j\chi \end{pmatrix} \\
 &= \begin{pmatrix}
-\widehat{\nabla}_i\chi - (\mu_i + \Upsilon_i\chi) \\
-\widehat{\nabla}_i(\mu_j+\Upsilon_j\chi) + \widehat{\Rho}_{ij}\chi
+\ov{\nabla}_i\chi - (\mu_i + \Upsilon_i\chi) \\
+\ov{\nabla}_i(\mu_j+\Upsilon_j\chi) + \ov{\Rho}_{ij}\chi
 \end{pmatrix} \\
 &= \begin{pmatrix}
 \nabla_i\chi + \Upsilon_i\chi - (\mu_i + \Upsilon_i\chi) \\
@@ -278,18 +284,18 @@ which turns out to agree with (\ref{eq:df-ftheta}). Under a change of projective
 \end{align*}
 where we have used (\ref{eq:chi_mu_change}) in the first line, (\ref{eq:tractor_connection}) in the second and (\ref{eq:ddensity_change}), (\ref{eq:dweighted_form_change}) and (\ref{eq:schout_change}) in the third. After some cancellation, we identify
 \begin{align*}
-\widehat{\nabla}^\mathcal{T}_i\widehat{\begin{pmatrix}
+\ov{\nabla}^\mathcal{T}_i\ov{\begin{pmatrix}
 \chi \\ \mu_j
 \end{pmatrix}}
 &= \begin{pmatrix}
 \nabla_i\chi - \mu_i \\
 \nabla_i\mu_j + \Upsilon_j\nabla_i\chi - \Upsilon_j\mu_i + \Rho_{ij}\chi
 \end{pmatrix} \\
-&= \widehat{\begin{pmatrix}
+&= \ov{\begin{pmatrix}
 \nabla_i\chi - \mu_i \\
 \nabla_i\mu_j + \Rho_{ij}\chi
 \end{pmatrix}}
-= \widehat{\nabla^\mathcal{T}_i \begin{pmatrix}
+= \ov{\nabla^\mathcal{T}_i \begin{pmatrix}
 \chi \\ \mu_j
 \end{pmatrix}}
 \end{align*}
@@ -376,7 +382,7 @@ Note that the full proof of theorem \ref{thm:DM} only appears explicitly in \cit
 A coordinate expression for the metric $g$ and two--form $\Omega$ can be obtained by writing out the Cartan connection $\theta$ explicitly for some choice of connection in the projective class. Alternatively, one can take a tractor approach using the tractor connection (\ref{eq:tractor_connection}). This approach is a product of \cite{DGW}.
 \mynote{Might be good to add Thomas' construction explicitly. This would be better for justifying the comments made in chapter \ref{chap:KK_lift} about the lifted metric being a different quotient of the Cartan bundle.}
 
-\subsection{Tractor perspective}
+\subsection{Tractor perspective} \label{sec:trac_construction}
 
 From the tractor perspective, the space $M$ will turn out to be the projectivised cotractor bundle of $N$ with an $\RP^{n-1}$ sub--bundle removed from each fiber. We can see this as follows.
 
