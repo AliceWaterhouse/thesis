@@ -38,8 +38,6 @@ An almost complex manifold $(M,J)$ is a complex manifold if and only if the Nije
 
 An endomorphism $J$ which squares to $Id$ defines an analogous splitting of the tangent bundle into sub--bundles with eigenvalues $\pm 1$, and this splitting is also Frobenius integrable if and only if the Nijenhuis tensor of $J$ vanishes. We thus call an almost para--complex structure $J$ with vanishing Nijenhuis tensor a para--complex structure, and say that in this case $J$ is integrable. In all the definitions below, the word \textit{almost} can be removed if the (para--)complex structure $J$ is integrable.
 
-\subsection{Metrics and connections}
-
 \begin{defi}
 A (para--)Hermitian metric on an almost (para--)complex manifold $(M,J)$ is a metric $g$ satisfying
 \[
@@ -50,13 +48,33 @@ The triple $(M,J,g)$ then defines an almost (para--)Hermitian manifold.
 
 Note that every (para--)Hermitian manifold has a naturally defined two--form $\Omega(\cdot\,,\cdot)=g(J\cdot\,,\cdot)$, and can alternatively be specified as $(M,J,\Omega)$ or $(M,g,\Omega)$. An almost (para--)K\"ahler manifold $(M,J,g)$ is a (para--)Hermitian manifold whose associated two--form is closed, meaning $M$ carries compatible complex, pseudo--Riemannian and symplectic structures. The manifolds $M$ arising in the projective to Einstein correspondence are almost para--K\"ahler, and para--K\"ahler when the underlying projective structure is flat \cite{DM}.
 
+\subsection{Almost (para--)CR structures and contact distributions}
+
+\begin{defi}
+An almost (para--)CR structure $(\mathcal{Z},\mathcal{D},J)$ on a manifold $\mathcal{Z}$ is a sub--bundle $\mathcal{D}\subset T\mathcal{Z}$ of the tangent bundle together with a fiber--preserving endomorphism $J:\mathcal{D}\rightarrow\mathcal{D}$ which satisfies $J^2=Id$ or $J^2=-Id$ depending on whether or not we are talking about the ``para'' case.
+\end{defi}
+
+We will be interested in the case where $\mathcal{D}$ is a hyperplane distribution on $\mathcal{Z}$; then $(\mathcal{Z},\mathcal{D},J)$ is called an almost (para--)CR structure of \textit{hypersurface type}. An almost (para--)complex structure $(M,J)$ of dimension $2n$ defines an almost (para--)CR structure of hypersurface type on any hypersurface $\mathcal{Z}\subset M$ given by the restriction of $J$ to the hyperplane distribution $T\mathcal{Z}\cap J(T\mathcal{Z})$ on $\mathcal{Z}$. Note that this distribution must have dimension $2n-2$. An almost (para--)CR structure is a (para--)CR structure if and only if the splitting of $\mathcal{D}$ into eigen--bundles induced by $J$ is Frobenius integrable.
+
+\mynote{define Levi form and degeneracy of a CR structure}
+
+\begin{defi}
+A contact structure on a manifold $\mathcal{Z}$ of dimension $2n-1$ is a hyperplane distribution $\mathcal{D}\subset T\mathcal{Z}$ specified as the kernel of a one--form $\theta$ on $\mathcal{Z}$ which satisfies the complete non--integrability condition
+\[
+\theta\wedge \underbrace{(d\theta \wedge \dots\wedge d\theta)}_{n-1\ \mathrm{times}} \neq 0.
+\]
+\end{defi}
+
+The complete non--integrability condition can be thought of as the opposite of Frobenius integrability of the hyperplane distribution, see for example \cite{arnold}.
+
+
+\subsection{Connections and (para--)$c$--projective equivalence}
+
 \begin{defi}
 A connection on an almost (para--)complex manifold $(M,J)$ is called complex if it preserves $J$.
 \end{defi}
 
 Note that, in contrast to a metric connection, it is not always possible to define a complex connection which is torsion--free. In fact, this is possible if and only if the Nijenhuis tensor (\ref{eq:Nijenhuis_def}) of $J$ vanishes. However, one can always define a complex connection whose torsion is equal to the Nijenhuis tensor of $J$ up to a constant multiplicative factor \cite{c_proj}. Such connections are called \textit{minimal}.
-
-\subsection{(Para--)$c$--projective geometry}
 
 \begin{defi}
 Two affine connections $\nabla$ and $\ol{\nabla}$ on an almost (para--)complex manifold $(M,J)$ are called (para--)$c$--projectively equivalent if there is a one--form $\Upsilon_a$ on $M$ such that their components $\Gamma^a_{bc}$ and $\ol{\Gamma}^a_{bc}$ are related by
@@ -83,7 +101,7 @@ $\p M\subset \ol{M}$, the differential $dT$ does not vanish on $\p M$, and the c
 
 It follows easily from this definition that the endomorphism $J$ on $M$ naturally extends to all of $\ol{M}$ by parallel transport with respect to $\ol{\nabla}$. It thus defines an almost para--CR structure on the hypersurface distribution $\mathcal{D}$ defined by $\mathcal{D}_x:=T_x\p M \cap J(T_x \p M)$ for all $x\in\p M$. It can be shown (see Lemma 5 of \cite{CG} and modify to the case $J^2=Id$) that this almost para--CR structure is non--degenerate if and only if for any local defining function $T$ the one--form $\theta=dT\circ J$ restricts to a contact form on $\p M$.
 
-\mynote{Need to define CR structure, degeneracy of a CR structure and contact form. I am a bit confused because a contact form requires complete non--integrability of the hypersurface distribution, but \cite{CG} is saying that Nijenhuis taking asymptotically tangential values means the boundary structure is partially integrable.}
+\mynote{I am a bit confused because a contact form requires complete non--integrability of the hypersurface distribution, but \cite{CG} is saying that Nijenhuis taking asymptotically tangential values means the boundary structure is partially integrable. Oh but I guess integrability of the hypersurface distribution (dim 2n-2) is different from integrability of the $J$ eigen--bundles on $\p M$ (dim n-1)}
 
 Although $c$--projective compactification is defined for any almost complex manifold, the definition can be applied to pseudo--Riemannian metrics $g$ which are Hermitian with respect to the almost complex structure so long as there exists a connection which preserves both $g$ and $J$ and has minimal torsion. Such Hermitian metrics are said to be \textit{admissible}.  Note that such a connection, if it exists, is uniquely defined, since the conditions that it be complex and minimal determine its torsion. It is thus given by the Levi--Civita connection of $g$ plus a constant multiple of the Nijenhuis tensor (\ref{eq:Nijenhuis_def}) of $J$.
 
@@ -117,10 +135,12 @@ Note that the statement in  Theorem \ref{CGthm} does not depend on the choice of
 
 \section{Compactifying the Dunajski--Mettler Class} 
 
-In section \ref{sec:trac_construction} it was shown that the manifolds $M$ arising in the projective to Einstein correspondence can be identified with the projectivised cotractor bundle of $N$ where the zero locus of the canonical density $\tau$ has been removed. In the special case where $N=\RP^n$, and $[\nabla]$ is projectively flat the manifold $M=SL(n+1, \R)/GL(n, \R)$ can be identified with the projection of $\R^{n+1}\times \R_{n+1}\setminus {\mathcal Z}$, where ${\mathcal Z}$ denotes the set of incident pairs (point, hyperplane). \mynote{Need to decide what to do with the model via orbit decomp section to know what to do with this.}
+In section \ref{sec:trac_construction} it was shown that the manifolds $M$ arising in the projective to Einstein correspondence can be identified with the projectivised cotractor bundle of $N$ where the zero locus of the canonical density $\tau$ has been removed. Note that by construction in section \ref{sec:trac_construction} it is easily verified that the zero locus of $\tau$ is a smoothly embedded hypersurface in $\mathcal{M}$,  and from (\ref{eq:T*sequence}) it follows at once that this may be identified with the total space of the fibrewise projectivisation $\mathbb{P}(T^*N)$ (which is well known to have a para-CR structure). \mynote{why can $\mathcal{Z}(\tau)$ be identified with $\mathbb{P}(T^*N)$? and is there a way to justify this "well known" fact?}
 
-The compactification procedure described in  
-the theorem \ref{our_thm} below will, for the model, attach these incident pairs back to $M$, and more generally (in case of a curved projective structure on $N$) will attach the zero locus of $\tau$ back into $\mathbb{P}(\cT^*)$. The boundary $\p M$ from definition \ref{defi_1} will play a role of a submanifold
+In the special case where $N=\RP^n$, and $[\nabla]$ is projectively flat the manifold $M=SL(n+1, \R)/GL(n, \R)$ can be identified with the projection of $\R^{n+1}\times \R_{n+1}\setminus {\mathcal Z}$, where ${\mathcal Z}$ denotes the set of incident pairs (point, hyperplane).
+\mynote{Do I need to explain why this is? possibly in the intro?}
+ The compactification procedure described in  
+the theorem \ref{our_thm} below will, for the model, attach these incident pairs back to $M$, and more generally (in case of a curved projective structure $(N,[\nabla])$) will attach the zero locus of $\tau$ back into $\mathbb{P}(\cT^*)$. The boundary $\p M \cong \mathcal{Z}(\tau)$ from definition \ref{defi_1} will play a role of a submanifold
 separating two open sets in $\mathbb{P}(\cT^*)$ which have $\tau>0$ and $\tau<0$ respectively. The method of the proof will be to show that near
 the boundary ${\mathcal{Z}}(\tau)=0$ of $\ol{M}$ the metric 
 (\ref{eq:coord_form}) can be put in the local normal form of theorem 
@@ -147,7 +167,7 @@ $(2n-1)$--dimensional boundary $\p M\cong \mathbb{P}(T^* N)$ of $\ol{M}$ include
 and a para--CR structure
 defined on the contact distribution.
 \end{theo}
-\mynote{Here we stated that $\p M\cong \mathbb{P}(T^* N)$ but I moved the comment about this to after the proof. I'm not sure where best to put it.}
+\mynote{Here we stated that $\p M\cong \mathbb{P}(T^* N)$ but unless I can justify why this carries a para--CR structure it might be better to leave this out or put $\p M\cong \mathcal{Z}(\tau)$.}
 \noindent
 {\bf Proof.}
 In the proof below we shall explicitly construct the boundary $\p M$ together with the contact structure and the associated conformal structure on the contact distribution. We shall
@@ -394,8 +414,9 @@ $
 \theta_0,  h_{\mathcal D}=\theta_1\odot\theta_2.
 $
 
-\subsection{Why is $(M,g,\Omega)$ para--$c$--projectively compact?}
-Note that by construction in section \ref{sec:trac_construction} it is easily verified that the zero locus of $\tau$ is a smoothly embedded hypersurface in $\mathcal{M}$,  and from (\ref{eq:T*sequence}) it follows at once that this may be identified with the total space of the fibrewise projectivisation $\mathbb{P}(T^*N)$ (which is well known to have a para-CR structure).
+\section{An alternative approach to theorem \ref{our_thm}}
+
+\mynote{I need to read a bit more of \cite{CGH-duke} to understand this section.}
 
 It would be possible to show that the structures $(M,g\Omega)$ arising in the projective to Einstein correspondence are para--$c$--projectively compact using a tractor approach. By our construction above it follows that $\mathcal{M}$ has a canonical para-c-projective geometry. In the notation as above, $\pi^*{\cT}\oplus
 \pi^*{\cT^*}$ is the corresponding para-c-projective tractor bundle
@@ -412,9 +433,9 @@ the main results then follow from the general holonomy theory in
 \cite{CGH-duke}.
 
 
-\section{The model via an orbit decomposition}
+\subsection{The alternative approach applied in the model case}
 
-\mynote{Not really sure what to do with this section. It seems only to show $g$ is Einstein without having to explicitly calculate its Ricci tensor, otherwise I think it's pretty much equivalent to the general construction in the intro?}
+\mynote{This section is nice in that it applies orbit decomposition \cite{CGH-duke} to the model. But only to show $g$ is Einstein, not that it's para--Kahler, and it doesn't mention the boundary geometry. So I'm not really sure if it's worth keeping.}
 
 In this section we describe here the flat (in the sense of parabolic
 geometries) model \cite{CDT13, DM} of our construction in tractor
@@ -550,6 +571,6 @@ $$
 The metric $g$ is easily seen to have neutral signature.  It is
 Einstein because the tractor metric on $\mathcal{T}$ is parallel for the
 tractor connection (see \cite{CGH-duke} for the analogous c-projective
-case). The tractor connecction arises from the usual parallel transport on the
+case). The tractor connection arises from the usual parallel transport on the
 vector space $V\oplus V^*$ viewed as an affine manifold.
 
