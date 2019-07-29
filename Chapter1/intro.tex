@@ -221,9 +221,9 @@ where the final term in (\ref{eq:p-form_change}) has vanished because it contain
 \ov{\nabla}_i\chi = \nabla_i\chi - (n+1)\Upsilon_i\chi.
 \]
 
-Note that for sections $\chi$ of the bundle $\mathcal{E}(w):=(\Lambda^n)^{-w/(n+1)}$ we have
+Note that for sections $\tau$ of the bundle $\mathcal{E}(w):=(\Lambda^n)^{-w/(n+1)}$ we have
 \be \label{eq:ddensity_change}
-\ov{\nabla}_i\chi = \nabla_i\chi + w\Upsilon_i\chi.
+\ov{\nabla}_i\tau = \nabla_i\tau + w\Upsilon_i\tau.
 \ee
 We called such sections \textit{projective densities of weight $w$}, and for any vector bundle $\mathcal{B}\rightarrow N$ we write $\mathcal{B}(w)$ for the tensor product of $\mathcal{B}$ with $\mathcal{E}(w)$. For example, $T^*N(w)$ is the bundle of one--forms with projective weight $w$, and for sections $\mu_i$ of $T^*N(w)$ we have
 \be \label{eq:dweighted_form_change}
@@ -237,16 +237,16 @@ We can now define the cotractor bundle $\pi:\mathcal{T}^*\rightarrow N$. For a c
 so that a section can be represented by a pair
 \be \label{eq:T*coords}
 \begin{pmatrix}
-{\chi} \\ {\mu}_i
+{\tau} \\ {\mu}_i
 \end{pmatrix}.
 \ee
 Under a change of projective connection (\ref{eq:proj_change}), this splitting changes according to
 \be \label{eq:chi_mu_change}
 \ov{\begin{pmatrix}
-{\chi} \\ {\mu}_i
+{\tau} \\ {\mu}_i
 \end{pmatrix}} =
 \begin{pmatrix}
-\chi \\ \mu_i + \Upsilon_i\chi
+\tau \\ \mu_i + \Upsilon_i\tau
 \end{pmatrix}.
 \ee
 Note the exact sequence
@@ -258,45 +258,45 @@ where we call the map $X$ the projective \textit{canonical tractor}. A choice of
 The bundle $\mathcal{T}^*$ admits a projectively invariant \textit{tractor connection} given by
 \be \label{eq:tractor_connection}
 \nabla^\mathcal{T}_i \begin{pmatrix}
-\chi \\ \mu_j
+\tau \\ \mu_j
 \end{pmatrix}
 = \begin{pmatrix}
-\nabla_i \chi - \mu_i \\
-\nabla_i\mu_j + \Rho_{ij}\chi
+\nabla_i \tau - \mu_i \\
+\nabla_i\mu_j + \Rho_{ij}\tau
 \end{pmatrix},
 \ee
 which turns out to agree with (\ref{eq:df-ftheta}). Under a change of projective connection (\ref{eq:proj_change}), we find
 \begin{align*}
 \ov{\nabla}^\mathcal{T}_i\ov{\begin{pmatrix}
-\chi \\ \mu_j
+\tau \\ \mu_j
 \end{pmatrix}}
 &= \ov{\nabla}^\mathcal{T}_i\begin{pmatrix}
-\chi \\ \mu_j + \Upsilon_j\chi \end{pmatrix} \\
+\tau \\ \mu_j + \Upsilon_j\tau \end{pmatrix} \\
 &= \begin{pmatrix}
-\ov{\nabla}_i\chi - (\mu_i + \Upsilon_i\chi) \\
-\ov{\nabla}_i(\mu_j+\Upsilon_j\chi) + \ov{\Rho}_{ij}\chi
+\ov{\nabla}_i\tau - (\mu_i + \Upsilon_i\tau) \\
+\ov{\nabla}_i(\mu_j+\Upsilon_j\tau) + \ov{\Rho}_{ij}\tau
 \end{pmatrix} \\
 &= \begin{pmatrix}
-\nabla_i\chi + \Upsilon_i\chi - (\mu_i + \Upsilon_i\chi) \\
-\nabla_i(\mu_j + \Upsilon_j\chi) - \Upsilon_j(\mu_i + \Upsilon_i\chi)
-+ (\Rho_{ij} - \nabla_i\Upsilon_j + \Upsilon_i\Upsilon_j) \chi
+\nabla_i\tau + \Upsilon_i\tau - (\mu_i + \Upsilon_i\tau) \\
+\nabla_i(\mu_j + \Upsilon_j\tau) - \Upsilon_j(\mu_i + \Upsilon_i\tau)
++ (\Rho_{ij} - \nabla_i\Upsilon_j + \Upsilon_i\Upsilon_j) \tau
 \end{pmatrix},
 \end{align*}
 where we have used (\ref{eq:chi_mu_change}) in the first line, (\ref{eq:tractor_connection}) in the second and (\ref{eq:ddensity_change}), (\ref{eq:dweighted_form_change}) and (\ref{eq:schout_change}) in the third. After some cancellation, we identify
 \begin{align*}
 \ov{\nabla}^\mathcal{T}_i\ov{\begin{pmatrix}
-\chi \\ \mu_j
+\tau \\ \mu_j
 \end{pmatrix}}
 &= \begin{pmatrix}
-\nabla_i\chi - \mu_i \\
-\nabla_i\mu_j + \Upsilon_j\nabla_i\chi - \Upsilon_j\mu_i + \Rho_{ij}\chi
+\nabla_i\tau - \mu_i \\
+\nabla_i\mu_j + \Upsilon_j\nabla_i\tau - \Upsilon_j\mu_i + \Rho_{ij}\tau
 \end{pmatrix} \\
 &= \ov{\begin{pmatrix}
-\nabla_i\chi - \mu_i \\
-\nabla_i\mu_j + \Rho_{ij}\chi
+\nabla_i\tau - \mu_i \\
+\nabla_i\mu_j + \Rho_{ij}\tau
 \end{pmatrix}}
 = \ov{\nabla^\mathcal{T}_i \begin{pmatrix}
-\chi \\ \mu_j
+\tau \\ \mu_j
 \end{pmatrix}}
 \end{align*}
 using (\ref{eq:tractor_connection}) and the change of splitting (\ref{eq:chi_mu_change}) adapted to the tensor product of $T^*N$ and $ \cT^*$ of which the derivative is a section.
@@ -362,21 +362,21 @@ Note that the full proof of theorem \ref{thm:DM} only appears explicitly in \cit
 %representative connections $\nabla\in[\nabla]$. This means that given
 %some choice of connection $\nabla\in[\nabla]$ we have a diffeomorphism
 %$\varphi:T^{*}N\rightarrow M$ with which we can pull back the pair
-%$(g,\Omega)$. In canonical local coordinates $(x^{i},p_{i})$ on
+%$(g,\Omega)$. In canonical local coordinates $(x^{i},\zeta_{i})$ on
 %the cotangent bundle, we find
 %\begin{eqnarray}
-%\varphi^{*}g & = &  dp_{i}\odot dx^{i}-(\Gamma_{ij}^{k}p_{k}-p_{i}p_{j}-\Rho_{ij}) dx^{i}\odot dx^{j},\label{eq:coord_form}\\
-%\varphi^{*}\Omega & = &  dp_{i}\wedge dx^{i}+\Rho_{ij} dx^{i}\wedge dx^{j},\qquad i,j=1,\dots ,n.\nonumber 
+%\varphi^{*}g & = &  d\zeta_{i}\odot dx^{i}-(\Gamma_{ij}^{k}\zeta_{k}-\zeta_{i}\zeta_{j}-\Rho_{ij}) dx^{i}\odot dx^{j},\label{eq:coord_form}\\
+%\varphi^{*}\Omega & = &  d\zeta_{i}\wedge dx^{i}+\Rho_{ij} dx^{i}\wedge dx^{j},\qquad i,j=1,\dots ,n.\nonumber 
 %\end{eqnarray}
 %Here $\Gamma_{jk}^{i}$ are the connection components of the representative
 %connection $\nabla$ that we chose, and its Schouten tensor is denoted $P_{ij}$. This can be shown to be projectively invariant
 %in the sense that a different choice of $\nabla\in[\nabla]$ corresponds
-%to shifting the fiber coordinates $p_{i}$, i.e. metrics on $T^{*}N$
+%to shifting the fiber coordinates $\zeta_{i}$, i.e. metrics on $T^{*}N$
 %resulting from pulling back $g$ using different representative connections
 %are isometric. Explicitly, a projective transformation (\ref{eq:proj_change})
 %corresponds to a change
 %\begin{equation}
-%\Rho_{ij}\longrightarrow \Rho_{ij}+\Upsilon_{i}\Upsilon_{j}-\nabla_{i}\Upsilon_{j},\qquad p_{i}\longrightarrow p_{i}+\Upsilon_{i}.\label{eq:p_change}
+%\Rho_{ij}\longrightarrow \Rho_{ij}+\Upsilon_{i}\Upsilon_{j}-\nabla_{i}\Upsilon_{j},\qquad \zeta_{i}\longrightarrow \zeta_{i}+\Upsilon_{i}.\label{eq:\zeta_change}
 %\end{equation}
 
 A coordinate expression for the metric $g$ and two--form $\Omega$ can be obtained by writing out the Cartan connection $\theta$ explicitly for some choice of connection in the projective class. Alternatively, one can take a tractor approach using the tractor connection (\ref{eq:tractor_connection}). This approach is a product of \cite{DGW}.
@@ -504,7 +504,7 @@ H(\cT^*)&=\mbox{span}
  V(\cT^*)&=\mbox{span}\Big(\frac{\p}{\p V_{\alpha}}, \alpha=0, 1, 
 \dots, n\Big).
 \end{align*}
-Setting $p_i=V_i/V_0$, where $\tau=V_0\neq 0$ %\footnote{Rod @ Maciej: I have added $V_0=\tau$. You agree, right!?}
+Setting $\zeta_i=V_i/V_0$, where $\tau=V_0\neq 0$ %\footnote{Rod @ Maciej: I have added $V_0=\tau$. You agree, right!?}
 on the complement of 
 $\mathcal{Z}(\tau)$, 
   we can compute the push forwards
@@ -512,27 +512,27 @@ of these subspaces to $\mathbb{P}(\cT^*)\setminus {\mathcal{Z}(\tau)}$:
 \[
 \kappa_* H(\cT^*)=\mbox{span}\Big(h_i\equiv
 \frac{\p}{\p x^i}-
-(\Rho_{ij}+p_ip_j  -\Gamma_{ij}^kp_k)\frac{\p}{\partial p_j}
-\Big), \quad \kappa_* V(\cT^*)=\mbox{span}\Big(v^i\equiv\frac{\p}{\p p_i}
+(\Rho_{ij}+\zeta_i\zeta_j  -\Gamma_{ij}^k\zeta_k)\frac{\p}{\partial \zeta_j}
+\Big), \quad \kappa_* V(\cT^*)=\mbox{span}\Big(v^i\equiv\frac{\p}{\p \zeta_i}
 \Big).
 \]
 The non--zero components of the  metric (\ref{almost_there}) are given by
 \[
 g(v^i, h_j)={\delta^i}_j,
 \]
-or in local coordinates $(x^1,\dots,x^n,p_1,\dots,p_n)$ on $\cM\setminus {\mathcal{Z}(\tau)}$,
+or in local coordinates $(x^1,\dots,x^n,\zeta_1,\dots,\zeta_n)$ on $\cM\setminus {\mathcal{Z}(\tau)}$,
 \begin{eqnarray}
-g & = &  dp_{i}\odot dx^{i}-(\Gamma_{ij}^{k}p_{k}-p_{i}p_{j}-\Rho_{ij}) dx^{i}\odot dx^{j},\label{eq:coord_form}\\
-\Omega & = &  dp_{i}\wedge dx^{i}+\Rho_{ij} dx^{i}\wedge dx^{j},\qquad i,j=1,\dots ,n.\nonumber 
+g & = &  d\zeta_{i}\odot dx^{i}-(\Gamma_{ij}^{k}\zeta_{k}-\zeta_{i}\zeta_{j}-\Rho_{ij}) dx^{i}\odot dx^{j},\label{eq:coord_form}\\
+\Omega & = &  d\zeta_{i}\wedge dx^{i}+\Rho_{ij} dx^{i}\wedge dx^{j},\qquad i,j=1,\dots ,n.\nonumber 
 \end{eqnarray}
 This is identical to the form appearing in \cite{DM}.
 \koniec
 
 \begin{rmk}
-The expressions (\ref{eq:coord_form}) are projectively invariant in the sense that a different choice of $\nabla\in[\nabla]$ corresponds to shifting the fiber coordinates $p_{i}$, i.e. metrics corresponding to different representative connections are isometric. Explicitly, a projective transformation (\ref{eq:proj_change}) corresponds to a change \begin{equation}
-p_{i}\longrightarrow p_{i}+\Upsilon_{i},\label{eq:p_change}
+The expressions (\ref{eq:coord_form}) are projectively invariant in the sense that a different choice of $\nabla\in[\nabla]$ corresponds to shifting the fiber coordinates $\zeta_{i}$, i.e. metrics corresponding to different representative connections are isometric. Explicitly, a projective transformation (\ref{eq:proj_change}) corresponds to a change \begin{equation}
+\zeta_{i}\longrightarrow \zeta_{i}+\Upsilon_{i},\label{eq:p_change}
 \end{equation}
-as can be seen from (\ref{eq:chi_mu_change}) and the definitions of $V_i$ and $p_i$.
+as can be seen from (\ref{eq:chi_mu_change}) and the definitions of $V_i$ and $\zeta_i$.
 \end{rmk}
 
 \begin{rmk}
@@ -557,8 +557,8 @@ Next we observe that $\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau)$ is an affine
  % follows that the total space of $T^*N$ can be identified with $\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau)$
  % by (for each $p\in N$)
 given by
-\begin{equation}
-T_p^*N\ni p_i  \mapsto [(1,p_i)]=[(\tau,\tau p_i)]\in
+\begin{equation} \label{eq:T*N_is_M}
+T_p^*N\ni \zeta_i  \mapsto [(1,\zeta_i)]=[(\tau,\tau \zeta_i)]\in
 \mathbb{P}(\cT_p^*)\setminus \mathcal{Z}(\tau) .
 \end{equation}
 \end{rmk}
@@ -576,8 +576,8 @@ In fact, the metric and symplectic form (\ref{eq:coord_form}) turn
 out to belong to a one-parameter family $\{g_{\Lambda}\}$, which
 can be written in local coordinates as 
 \begin{eqnarray}
-g_{\Lambda} & = &  dp_{i}\odot dx^{i}-(\Gamma_{ij}^{k}p_{k}-\Lambda p_{i}p_{j}-\Lambda^{-1}\Rho_{ij}) dx^{i}\odot dx^{j}\label{eq:general_g}\\
-\Omega_{\Lambda} & = &  dp_{i}\wedge dx^{i}+\frac{1}{\Lambda}\Rho_{ij} dx^{i}\wedge dx^{j},\qquad i,j=1,\dots ,n.\label{eq:general_omega}
+g_{\Lambda} & = &  d\zeta_{i}\odot dx^{i}-(\Gamma_{ij}^{k}\zeta_{k}-\Lambda \zeta_{i}\zeta_{j}-\Lambda^{-1}\Rho_{ij}) dx^{i}\odot dx^{j}\label{eq:general_g}\\
+\Omega_{\Lambda} & = &  d\zeta_{i}\wedge dx^{i}+\frac{1}{\Lambda}\Rho_{ij} dx^{i}\wedge dx^{j},\qquad i,j=1,\dots ,n.\label{eq:general_omega}
 \end{eqnarray}
 %Metrics of the form (\ref{eq:general_g}) are a subclass of so-called
 %Osserman metrics. More details can be found in \cite{No-louzao1991}.
@@ -609,7 +609,7 @@ Explicitly, for every projective vector field $K$ of $(N,[\nabla])$
 there is a corresponding Killing vector $\mathcal{K}$ of $(M,g_{\Lambda})$
 given in local coordinates by 
 \begin{equation}
-\mathcal{K}=K-p_{i}\frac{\partial K^{j}}{\partial x^{i}}\frac{\partial}{\partial p_{j}}+\frac{1}{\Lambda}\Upsilon_{i}\frac{\partial}{\partial p_{i}},\label{eq:kvf_from_pvf}
+\mathcal{K}=K-\zeta_{i}\frac{\partial K^{j}}{\partial x^{i}}\frac{\partial}{\partial \zeta_{j}}+\frac{1}{\Lambda}\Upsilon_{i}\frac{\partial}{\partial \zeta_{i}},\label{eq:kvf_from_pvf}
 \end{equation}
 where $\Upsilon_{i}$ is defined by (\ref{eq:proj_transf}).
 

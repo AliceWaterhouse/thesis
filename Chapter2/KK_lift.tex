@@ -17,8 +17,8 @@ results in a one--parameter family of $2n$-dimensional Einstein spaces $M$ which
 reductions of quadrics in $\mathbb{R}^{n+1,n+1}$. For $N=\RP^n$
 the metric and symplectic form on $M$ reduce to 
 \begin{eqnarray*}
-g_{\Lambda} & = &  dx^{i} dp_{i}+\Lambda(p_{i} dx^{i})^{2}\\
-\Omega_{\Lambda} & = &  dp_{i}\wedge dx^{i}.
+g_{\Lambda} & = &  dx^{i} \odot d\zeta_{i}+\Lambda(\zeta_{i} dx^{i})^{2}\\
+\Omega_{\Lambda} & = &  d\zeta_{i}\wedge dx^{i}.
 \end{eqnarray*}
 
 \begin{prop}
@@ -37,8 +37,8 @@ x^{i}\mathrm{e}^{t}, & \alpha=i=1,\dots,n\\
 \mathrm{e}^{t}, & \alpha=n+1
 \end{cases}\nonumber \\
 Y_{\alpha} & = & \begin{cases}
-p_{i}\mathrm{e}^{-t}, & \alpha=i=1,\dots,n\\
-\mathrm{e}^{-t}\Bigl(\frac{1}{\Lambda}-x^{k}p_{k}\Bigr), & \alpha=n+1
+\zeta_{i}\mathrm{e}^{-t}, & \alpha=i=1,\dots,n\\
+\mathrm{e}^{-t}\Bigl(\frac{1}{\Lambda}-x^{k}\zeta_{k}\Bigr), & \alpha=n+1
 \end{cases}\label{eq:embedding-1}
 \end{eqnarray}
 following Kaluza-Klein reduction by the vector $\frac{\partial}{\partial t}.$
@@ -51,23 +51,23 @@ to be
 \mathrm{e}^{t} dt, & \alpha=n+1
 \end{cases}\\
  dY_{\alpha} & = & \begin{cases}
-\mathrm{e}^{-t}( dp_{i}-p_{i} dt), & \alpha=i=1,\dots,n\\
--\mathrm{e}^{-t}\biggl[\Bigl(\frac{1}{\Lambda}-x^{k}p_{k}\Bigr) dt+x^{k} dp_{k}+p_{k} dx^{k}\biggr], & \alpha=n+1.
+\mathrm{e}^{-t}( d\zeta_{i}-\zeta_{i} dt), & \alpha=i=1,\dots,n\\
+-\mathrm{e}^{-t}\biggl[\Bigl(\frac{1}{\Lambda}-x^{k}\zeta_{k}\Bigr) dt+x^{k} d\zeta_{k}+\zeta_{k} dx^{k}\biggr], & \alpha=n+1.
 \end{cases}
 \end{eqnarray*}
 The metric is then given by
 \begin{eqnarray*}
-G & = & \mathrm{e}^{t}( dx^{i}+x^{i} dt)\mathrm{e}^{-t}( dp_{i}-p_{i} dt)\ -\ \mathrm{e}^{t} dt\mathrm{e}^{-t}\biggl[\Bigl(\frac{1}{\Lambda}-x^{k}p_{k}\Bigr) dt+x^{k} dp_{k}+p_{k} dx^{k}\biggr]\\
- & = &  dx^{i} dp_{i}\ +\ (x^{i} dp_{i}-p_{i} dx^{i}) dt\ -\ (x^{i}p_{i}) dt^{2}\ -\  dt\biggl[\Bigl(\frac{1}{\Lambda}-x^{k}p_{k}\Bigr) dt+x^{k} dp_{k}+p_{k} dx^{k}\biggr]\\
- & = &  dx^{i} dp_{i}\ -\ \frac{1}{\Lambda} dt^{2}\ -\ 2p_{i} dx^{i} dt\\
- & = &  dx^{i} dp_{i}\ +\ \Lambda(p_{i} dx^{i})^{2}\ -\ \Lambda\Bigl(\frac{ dt}{\Lambda}+p_{i} dx^{i}\Bigr)^{2},
+G & = & \mathrm{e}^{t}( dx^{i}+x^{i} dt)\mathrm{e}^{-t}( d\zeta_{i}-\zeta_{i} dt)\ -\ \mathrm{e}^{t} dt\mathrm{e}^{-t}\biggl[\Bigl(\frac{1}{\Lambda}-x^{k}\zeta_{k}\Bigr) dt+x^{k} d\zeta_{k}+\zeta_{k} dx^{k}\biggr]\\
+ & = &  dx^{i} d\zeta_{i}\ +\ (x^{i} d\zeta_{i}-\zeta_{i} dx^{i}) dt\ -\ (x^{i}\zeta_{i}) dt^{2}\ -\  dt\biggl[\Bigl(\frac{1}{\Lambda}-x^{k}\zeta_{k}\Bigr) dt+x^{k} d\zeta_{k}+\zeta_{k} dx^{k}\biggr]\\
+ & = &  dx^{i} d\zeta_{i}\ -\ \frac{1}{\Lambda} dt^{2}\ -\ 2\zeta_{i} dx^{i} dt\\
+ & = &  dx^{i} d\zeta_{i}\ +\ \Lambda(\zeta_{i} dx^{i})^{2}\ -\ \Lambda\Bigl(\frac{ dt}{\Lambda}+\zeta_{i} dx^{i}\Bigr)^{2},
 \end{eqnarray*}
 which is clearly going to give $g_{\Lambda}$ under Kaluza-Klein reduction
 by $\frac{\partial}{\partial t}$.
 \koniec
 
 Note that the symplectic form $\Omega$ is the exterior derivative
-of the potential term $p_{i} dx^{i}$, implying a possible
+of the potential term $\zeta_{i} dx^{i}$, implying a possible
 generalisation to the curved case.
 
 
@@ -77,12 +77,12 @@ We now return to a general projective structure $(N,[\nabla])$. Since
 symplectic form picks out the antisymmetric part of the Schouten tensor,
 it has the fairly simple form
 \[
-\Omega_{\Lambda}= dp_{i}\wedge dx^{i}-\frac{\partial_{[i}\Gamma_{j]k}^{k}}{\Lambda(n+1)} dx^{i}\wedge dx^{j}.
+\Omega_{\Lambda}= d\zeta_{i}\wedge dx^{i}-\frac{\partial_{[i}\Gamma_{j]k}^{k}}{\Lambda(n+1)} dx^{i}\wedge dx^{j}.
 \]
 By inspection, this can be written $\Omega_{\Lambda}=d\mathcal{A}$,
 where
 \[
-\mathcal{A}=p_{i} dx^{i}-\frac{\Gamma_{ik}^{k}}{\Lambda(n+1)} dx^{i}.
+\mathcal{A}=\zeta_{i} dx^{i}-\frac{\Gamma_{ik}^{k}}{\Lambda(n+1)} dx^{i}.
 \]
 This is a trivialisation of the Kaluza-Klein bundle which we are about
 to construct. Note that for $\Lambda=1$, under a change of projective
@@ -109,7 +109,7 @@ Consider a frame
 \begin{equation}
 e^{a}=\begin{cases}
  dx^{i}, & a=i=1,\dots,n\\
- dp_{i}-(\Gamma_{ij}^{k}p_{k}-\Lambda p_{i}p_{j}-\Lambda^{-1}P_{ij}) dx^{j}, & a=i+n=n+1,\dots2n.
+ d\zeta_{i}-(\Gamma_{ij}^{k}\zeta_{k}-\Lambda \zeta_{i}\zeta_{j}-\Lambda^{-1}\Rho_{ij}) dx^{j}, & a=i+n=n+1,\dots2n.
 \end{cases}\label{eq:basis}
 \end{equation}
 In this basis the metric takes the form
@@ -257,12 +257,12 @@ by considering $ de^{a}$ (recall that $i,j=1,\dots,n$ and
 $a,b=1,\dots,2n$):
 \begin{eqnarray*}
  de^{i} & = & 0\\
- de^{i+n} & = & -(E_{l}(\Gamma_{ij}^{k})p_{k}-\Lambda^{-1}E_{l}(P_{ij})) dx^{l}\wedge dx^{j}-(\Gamma_{ij}^{k}-2\Lambda p_{(i}\delta_{j)}^{k}) dp_{k}\wedge dx^{j}\\
- & = & -(E_{l}(\Gamma_{ij}^{k})p_{k}-\Lambda^{-1}E_{l}(P_{ij}))e^{l}\wedge e^{j}\\
- &  & -(\Gamma_{ij}^{k}-2\Lambda p_{(i}\delta_{j)}^{k})(e^{k+n}+(\Gamma_{km}^{l}p_{l}-\Lambda p_{k}p_{m}-\Lambda^{-1}P_{km})e^{m})\wedge e^{j}\\
- & = & \bigl[\Lambda^{-1}E_{m}(P_{ij})-E_{m}(\Gamma_{ij}^{k})p_{k}+\Lambda^{-1}\Gamma_{ij}^{k}P_{km}-\Gamma_{ij}^{k}\Gamma_{km}^{l}p_{l}+\Lambda\Gamma_{ij}^{k}p_{m}p_{k}\\
- &  & +2\Lambda p_{(i}(\Gamma_{j)m}^{l}p_{l}-\Lambda p_{j)}p_{m}-\Lambda^{-1}P_{j)m})\bigr]e^{m}\wedge e^{j}+(2\Lambda p_{(i}\delta_{j)}^{k}-\Gamma_{ij}^{k})e^{k+n}\wedge e^{j}\\
- & = & \bigl[\Lambda^{-1}D_{m}P_{ij}-(D_{m}\Gamma_{ij}^{k})p_{k}-2p_{(i}P_{j)m}\bigr]e^{m}\wedge e^{j}+(2\Lambda p_{(i}\delta_{j)}^{k}-\Gamma_{ij}^{k})e^{k+n}\wedge e^{j}\\
+ de^{i+n} & = & -(E_{l}(\Gamma_{ij}^{k})\zeta_{k}-\Lambda^{-1}E_{l}(\Rho_{ij})) dx^{l}\wedge dx^{j}-(\Gamma_{ij}^{k}-2\Lambda \zeta_{(i}\delta_{j)}^{k}) d\zeta_{k}\wedge dx^{j}\\
+ & = & -(E_{l}(\Gamma_{ij}^{k})\zeta_{k}-\Lambda^{-1}E_{l}(\Rho_{ij}))e^{l}\wedge e^{j}\\
+ &  & -(\Gamma_{ij}^{k}-2\Lambda \zeta_{(i}\delta_{j)}^{k})(e^{k+n}+(\Gamma_{km}^{l}\zeta_{l}-\Lambda \zeta_{k}\zeta_{m}-\Lambda^{-1}\Rho_{km})e^{m})\wedge e^{j}\\
+ & = & \bigl[\Lambda^{-1}E_{m}(\Rho_{ij})-E_{m}(\Gamma_{ij}^{k})\zeta_{k}+\Lambda^{-1}\Gamma_{ij}^{k}\Rho_{km}-\Gamma_{ij}^{k}\Gamma_{km}^{l}\zeta_{l}+\Lambda\Gamma_{ij}^{k}\zeta_{m}\zeta_{k}\\
+ &  & +2\Lambda \zeta_{(i}(\Gamma_{j)m}^{l}\zeta_{l}-\Lambda \zeta_{j)}\zeta_{m}-\Lambda^{-1}\Rho_{j)m})\bigr]e^{m}\wedge e^{j}+(2\Lambda \zeta_{(i}\delta_{j)}^{k}-\Gamma_{ij}^{k})e^{k+n}\wedge e^{j}\\
+ & = & \bigl[\Lambda^{-1}D_{m}\Rho_{ij}-(D_{m}\Gamma_{ij}^{k})\zeta_{k}-2\zeta_{(i}\Rho_{j)m}\bigr]e^{m}\wedge e^{j}+(2\Lambda \zeta_{(i}\delta_{j)}^{k}-\Gamma_{ij}^{k})e^{k+n}\wedge e^{j}\\
 \end{eqnarray*}
 Note that we have used $D$ to denote the chosen connection on $N$
 with components $\Gamma_{jk}^{i}$. Next we wish to read off the spin
@@ -275,8 +275,8 @@ and the following index symmetries are satisfied:
 \end{eqnarray*}
 We find that 
 \begin{eqnarray*}
-\psi_{\ k+n}^{i+n} & = & (2\Lambda p_{(i}\delta_{j)}^{k}-\Gamma_{ij}^{k})e^{j}=-\psi_{\ i}^{k}\\
-\psi_{\ j}^{i+n} & = & \bigl[2(D_{[i}\Gamma_{j]k}^{l})p_{l}-2\Lambda^{-1}D_{[i}P_{j]k}^{\mathrm{S}}-\Lambda^{-1}D_{k}P_{ij}^{\mathrm{A}}+2p_{(j}P_{k)i}-2p_{(i}P_{k)j}\bigr]e^{k}=:A_{ijk}e^{k}\\
+\psi_{\ k+n}^{i+n} & = & (2\Lambda \zeta_{(i}\delta_{j)}^{k}-\Gamma_{ij}^{k})e^{j}=-\psi_{\ i}^{k}\\
+\psi_{\ j}^{i+n} & = & \bigl[2(D_{[i}\Gamma_{j]k}^{l})\zeta_{l}-2\Lambda^{-1}D_{[i}\Rho_{j]k}^{\mathrm{S}}-\Lambda^{-1}D_{k}\Rho_{ij}^{\mathrm{A}}+2\zeta_{(j}\Rho_{k)i}-2\zeta_{(i}\Rho_{k)j}\bigr]e^{k}=:A_{ijk}e^{k}\\
 \psi_{\ j+n}^{i} & = & 0.
 \end{eqnarray*}
 One can check that these satisfy both the index symmetries above and
@@ -296,7 +296,7 @@ We can split the right hand side into
 \begin{eqnarray*}
 \Omega_{da}\psi_{\ bc}^{d} & = & \Omega_{ka}\psi_{\ bc}^{k}+\Omega_{k+n\, a}\psi_{\ bc}^{k+n}\\
  & = & \delta_{[k}^{i}\delta_{a]}^{i+n}\psi_{\ bc}^{k}+\delta_{[k+n}^{i}\delta_{a]}^{i+n}\psi_{\ bc}^{k+n}\\
- & = & \frac{1}{2}\Bigl(-\delta_{a}^{k+n}\delta_{b}^{i}\delta_{c}^{j}(2\Lambda p_{(i}\delta_{j)}^{k}-\Gamma_{ij}^{k})-\delta_{a}^{k}\delta_{b}^{l+n}\delta_{c}^{j}(2\Lambda p_{(k}\delta_{j)}^{l}-\Gamma_{kj}^{l})-\delta_{a}^{k}\delta_{b}^{l}\delta_{c}^{m}A_{klm}\Bigr).\\
+ & = & \frac{1}{2}\Bigl(-\delta_{a}^{k+n}\delta_{b}^{i}\delta_{c}^{j}(2\Lambda \zeta_{(i}\delta_{j)}^{k}-\Gamma_{ij}^{k})-\delta_{a}^{k}\delta_{b}^{l+n}\delta_{c}^{j}(2\Lambda \zeta_{(k}\delta_{j)}^{l}-\Gamma_{kj}^{l})-\delta_{a}^{k}\delta_{b}^{l}\delta_{c}^{m}A_{klm}\Bigr).\\
 \end{eqnarray*}
 The first two terms are the same but with $a\leftrightarrow b$, so
 are lost in the antisymmetrisation. Thus
@@ -323,13 +323,13 @@ calculate only $R_{m+n\, j}$, for which we need to consider $R_{l\, m+n\, j}^{\ 
 and $R_{k+n\, m+n\, j}^{\ \ \ \ \ l+n}$, i.e. we need only calculate
 $\Psi_{\ j}^{i}$ and $\Psi_{\ \ j}^{l+n}$. 
 \[
-\Psi_{\ j}^{i}= d\Bigl((\Gamma_{jk}^{i}-2\Lambda p_{(j}\delta_{k)}^{i})e^{k}\Bigr)+\psi_{\ k}^{i}\wedge\psi_{\ j}^{k}+\psi_{\ k+n}^{i}\wedge\psi_{\ j}^{k+n}.
+\Psi_{\ j}^{i}= d\Bigl((\Gamma_{jk}^{i}-2\Lambda \zeta_{(j}\delta_{k)}^{i})e^{k}\Bigr)+\psi_{\ k}^{i}\wedge\psi_{\ j}^{k}+\psi_{\ k+n}^{i}\wedge\psi_{\ j}^{k+n}.
 \]
 The last term vanishes since $\psi_{\ j}^{k+n}=0$, and the middle
 term only has components that look like $\frac{1}{2}R_{lmj}^{\ \ \ i}e^{l}\wedge e^{m}$,
 so the only term we are interested in is 
 \[
--2\Lambda dp_{(j}\delta_{k)}^{i}e^{k}=-2\Lambda\delta_{(k}^{i}(e^{j)+n}+(\Gamma_{j)m}^{l}p_{l}-\Lambda p_{j)}p_{m}-\Lambda^{-1}P_{j)m})e^{m})\wedge e^{k}.
+-2\Lambda d\zeta_{(j}\delta_{k)}^{i}e^{k}=-2\Lambda\delta_{(k}^{i}(e^{j)+n}+(\Gamma_{j)m}^{l}\zeta_{l}-\Lambda \zeta_{j)}\zeta_{m}-\Lambda^{-1}\Rho_{j)m})e^{m})\wedge e^{k}.
 \]
 Again, discarding the $e^{m}\wedge e^{k}$ term gives
 \[

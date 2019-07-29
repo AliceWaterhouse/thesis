@@ -7,6 +7,14 @@
 
 
 \chapter{Para--$c$--projective compactification of $(M,g,\Omega)$} \label{chap:c-proj}
+
+\mynote{Remaining notes:}
+\begin{itemize}
+\item Need to define Levi form and degeneracy of an almost (para--)CR structure.
+\item How to justify the "well--known fact" that there is a para--CR structure on the projectivised cotangent bundle.
+\item Relating to the note about proving the main theorem using tractor methods: what does the Cartan/tractor bundle of a para--$c$--projective structure look like? What is it in this case? And put in some background about orbit decompositions from \cite{CGH-duke} and how they relate to compactifications.
+\item On the last section about the model - I think maybe some of it needs to go in the introduction, and maybe some of it chucked depending on the outcome of the item above. \end{itemize}
+
 In \cite{CG} the concept of $c$--projective compactification was
 defined. It is based on almost $c$--projective geometry \cite{c_proj},
 an analogue of projective geometry defined for almost complex
@@ -60,9 +68,9 @@ We will be interested in the case where $\mathcal{D}$ is a hyperplane distributi
 
 \begin{defi}
 A contact structure on a manifold $\mathcal{Z}$ of dimension $2n-1$ is a hyperplane distribution $\mathcal{D}\subset T\mathcal{Z}$ specified as the kernel of a one--form $\theta$ on $\mathcal{Z}$ which satisfies the complete non--integrability condition
-\[
+\be \label{eq:non_integrability}
 \theta\wedge \underbrace{(d\theta \wedge \dots\wedge d\theta)}_{n-1\ \mathrm{times}} \neq 0.
-\]
+\ee
 \end{defi}
 
 The complete non--integrability condition can be thought of as the opposite of Frobenius integrability of the hyperplane distribution, see for example \cite{arnold}.
@@ -99,9 +107,7 @@ $\p M\subset \ol{M}$, the differential $dT$ does not vanish on $\p M$, and the c
 
 
 
-It follows easily from this definition that the endomorphism $J$ on $M$ naturally extends to all of $\ol{M}$ by parallel transport with respect to $\ol{\nabla}$. It thus defines an almost para--CR structure on the hypersurface distribution $\mathcal{D}$ defined by $\mathcal{D}_x:=T_x\p M \cap J(T_x \p M)$ for all $x\in\p M$. It can be shown (see Lemma 5 of \cite{CG} and modify to the case $J^2=Id$) that this almost para--CR structure is non--degenerate if and only if for any local defining function $T$ the one--form $\theta=dT\circ J$ restricts to a contact form on $\p M$.
-
-\mynote{I am a bit confused because a contact form requires complete non--integrability of the hypersurface distribution, but \cite{CG} is saying that Nijenhuis taking asymptotically tangential values means the boundary structure is partially integrable. Oh but I guess integrability of the hypersurface distribution (dim 2n-2) is different from integrability of the $J$ eigen--bundles on $\p M$ (dim n-1)}
+It follows easily from this definition that the endomorphism $J$ on $M$ naturally extends to all of $\ol{M}$ by parallel transport with respect to $\ol{\nabla}$. It thus defines an almost para--CR structure on the hyperplane distribution $\mathcal{D}$ defined by $\mathcal{D}_x:=T_x\p M \cap J(T_x \p M)$ for all $x\in\p M$. It can be shown (see Lemma 5 of \cite{CG} and modify to the case $J^2=Id$) that this almost para--CR structure is non--degenerate if and only if for any local defining function $T$ the one--form $\theta=dT\circ J$, whose restriction to $\p M$ has kernel $\mathcal{D}$, satisfies the complete non--integrability condition (\ref{eq:non_integrability}) making $\mathcal{D}$ a contact distribution on $\p M$. Note the distinction between the integrability (or not) of the ($2n-2$)--dimensional distribution $\mathcal{D}$ and the integrability (or not) of the two ($n-1$)--dimensional distributions given by the eigenvalue decomposition of $\mathcal{D}$ under the action of $J$.
 
 Although $c$--projective compactification is defined for any almost complex manifold, the definition can be applied to pseudo--Riemannian metrics $g$ which are Hermitian with respect to the almost complex structure so long as there exists a connection which preserves both $g$ and $J$ and has minimal torsion. Such Hermitian metrics are said to be \textit{admissible}.  Note that such a connection, if it exists, is uniquely defined, since the conditions that it be complex and minimal determine its torsion. It is thus given by the Levi--Civita connection of $g$ plus a constant multiple of the Nijenhuis tensor (\ref{eq:Nijenhuis_def}) of $J$.
 
@@ -131,11 +137,12 @@ ${\mathcal{U}}$, and a non--zero constant $C$ such that
 Then $g$ is $c$--projectively compact.
 \end{theo}
 Note that the statement in  Theorem \ref{CGthm} does not depend on the choice of $T$. Different choices of $T$ result in rescalings of the contact form $\theta$ on the boundary by a nowhere vanishing function.
+\mynote{I think non--degeneracy of $h$ is equivalent to non--degeneracy of the para--CR structure on $\p M$, and hence guarantees that $\theta$ is a contact form on $\p M$. Is this right?}
 
 
 \section{Compactifying the Dunajski--Mettler Class} 
 
-In section \ref{sec:trac_construction} it was shown that the manifolds $M$ arising in the projective to Einstein correspondence can be identified with the projectivised cotractor bundle of $N$ where the zero locus of the canonical density $\tau$ has been removed. Note that by construction in section \ref{sec:trac_construction} it is easily verified that the zero locus of $\tau$ is a smoothly embedded hypersurface in $\mathcal{M}$,  and from (\ref{eq:T*sequence}) it follows at once that this may be identified with the total space of the fibrewise projectivisation $\mathbb{P}(T^*N)$ (which is well known to have a para-CR structure). \mynote{why can $\mathcal{Z}(\tau)$ be identified with $\mathbb{P}(T^*N)$? and is there a way to justify this "well known" fact?}
+In section \ref{sec:trac_construction} it was shown that the manifolds $M$ arising in the projective to Einstein correspondence can be identified with the projectivised cotractor bundle of $N$ where the zero locus of the canonical density $\tau$ has been removed. Note that by construction in section \ref{sec:trac_construction} it is easily verified that the zero locus of $\tau$ is a smoothly embedded hypersurface in $\mathcal{M}$,  and from (\ref{eq:T*N_is_M}) it follows at once that this may be identified with the total space of the fibrewise projectivisation $\mathbb{P}(T^*N)$ (which is well known to have an almost para--CR structure). \mynote{Is there a way to justify this "well known" fact?}
 
 In the special case where $N=\RP^n$, and $[\nabla]$ is projectively flat the manifold $M=SL(n+1, \R)/GL(n, \R)$ can be identified with the projection of $\R^{n+1}\times \R_{n+1}\setminus {\mathcal Z}$, where ${\mathcal Z}$ denotes the set of incident pairs (point, hyperplane).
 \mynote{Do I need to explain why this is? possibly in the intro?}
@@ -177,19 +184,18 @@ of $(N, [\nabla])$ modifies the compactification.
 In the model case we can define coordinates $x^i$ on $N=\mathbb{RP}^n$ by taking $X=(1,x^1,\dots,x^n)$, where $(X^0,\dots,X^n)$ are homogeneous coordinates and we are working in an open set where $X^0\neq 0$. The ${x^i}$ are flat coordinates, so the connection components (and hence the Schouten tensor) vanish and (\ref{eq:coord_form}) reduces to
 \be
 \label{model_metric}
-g=d\xi_i\odot dx^i + \xi_i\xi_jdx^i\odot dx^j, \qquad
-\Omega=d \xi_i\wedge d x^i \quad
+g=d\zeta_i\odot dx^i + \zeta_i\zeta_jdx^i\odot dx^j, \qquad
+\Omega=d \zeta_i\wedge d x^i \quad
 \mbox{where}\quad
 i, j =1, \dots, n.
 \ee
-We can relate \cite{DM} the affine coordinates $\xi_i$ on the fibres of $T^*N$ to the tractor coordinates (\ref{eq:T*coords}) by setting $\xi_i=\mu_i/\tau$ on the complement of the zero locus ${\mathcal Z}(\tau)$ of $\tau$.
-\mynote{In Rod's tractor bit my $\chi$ in (\ref{eq:T*coords}) was replaced by $\tau$. Are they the same thing? I though $\tau$ took values in a different density bundle?}
+As noted in section \ref{sec:trac_construction}, we can use (\ref{eq:T*N_is_M}) relate the affine coordinates $\zeta_i$ on the fibres of $T^*N$ to the tractor coordinates (\ref{eq:T*coords}) by setting $\zeta_i=\mu_i/\tau$ on the complement of the zero locus ${\mathcal Z}(\tau)$ of $\tau$.
 
 Now consider an open set  ${\mathcal U}\subset M$ given
-by  $\xi_ix^i>0$, and define the function $T$ on ${\mathcal U}$ by
+by  $\zeta_ix^i>0$, and define the function $T$ on ${\mathcal U}$ by
 \be
 \label{formula_for_T}
-T=\frac{1}{\xi_i x^i}.
+T=\frac{1}{\zeta_i x^i}.
 \ee
 We shall attach a boundary  $\p \mathcal{U}$ to the open set $\mathcal{U}$ 
 such that $T$ extends to a function $\ol{T}$ on $\mathcal{U}\cup \p \mathcal{U}$, and
@@ -213,9 +219,9 @@ V\hook \theta=J(V)\hook d T, \quad\mbox{or equivalently}\quad
 \ee
 where $J$ is the para--complex structure of $(g,  \Omega)$. Using (\ref{model_metric}) this  gives
 \[
-\theta=2T(1-T)\xi_id x^i-dT.
+\theta=2T(1-T)\zeta_id x^i-dT.
 \]
-We need $n$  open sets $U_1, \dots, U_n$ such that $\xi_k\neq 0$ on $U_k$
+We need $n$  open sets $U_1, \dots, U_n$ such that $\zeta_k\neq 0$ on $U_k$
 to cover the zero locus of $T$. Here we chose $k=n$, and use
 a coordinate system given by
 \[
@@ -225,17 +231,17 @@ a coordinate system given by
 where $T$ is
 given by (\ref{formula_for_T}) and
 \[
-Z_A=\frac {\xi_A}{\xi_n}, \quad X^A=x^A, \quad Y=x^{n}, \quad\mbox{where}\quad
+Z_A=\frac {\zeta_A}{\zeta_n}, \quad X^A=x^A, \quad Y=x^{n}, \quad\mbox{where}\quad
 A=1, \dots, n-1.
 \]
 We compute
 \[
 \theta=2(1-T)\frac{dY+Z_AdX^A}{K}-dT, \quad
-\xi_n=\frac{1}{KT}, \quad \mbox{where}\quad K\equiv Y+Z_AX^A,
+\zeta_n=\frac{1}{KT}, \quad \mbox{where}\quad K\equiv Y+Z_AX^A,
 \]
 and substitute
 \[
-\xi_i dx^i=\frac{1}{KT}(dY+Z_AdX^A)
+\zeta_i dx^i=\frac{1}{KT}(dY+Z_AdX^A)
 \]
 into (\ref{model_metric}). This gives
 \be
@@ -251,10 +257,10 @@ asymptotic form in Theorem \ref{CGthm} (see \cite{CG} for further details).
 
 %Note that (\ref{def_theta}) defines the one form $\theta$ on the boundary $T=0$  only up to a overall multiple of a positive function.
 The restriction $h$ to $\p M$ gives a metric on a distribution ${\mathcal D}=\mbox{Ker} (\theta|_{T=0})$
-\be
-\label{h000}
-\theta|_{T=0}=2\frac{dY+Z_A dX^A}{Y+Z_AX^A}, \quad h_0=\frac{1}{4}{(\theta|_{T=0})}^2+\frac{1}{2(Y+Z_AX^A)}(2dZ_A\odot dX^A-X^AdZ_A\odot(\theta|_{T=0})).
-\ee
+\begin{gather}
+\theta|_{T=0}=2\frac{dY+Z_A dX^A}{Y+Z_AX^A}, \nonumber \\
+h_0=\frac{1}{4}{(\theta|_{T=0})}^2+\frac{1}{2(Y+Z_AX^A)}(2dZ_A\odot dX^A-X^AdZ_A\odot(\theta|_{T=0})). \label{h000}
+\end{gather}
  Note that $T$ is only defined up to multiplication by a positive function. Changing the defining function in this way results in a conformal rescalling of $\theta|_{T=0}$, thus the metric on the contact distribution is also defined up to an overall conformal scale. We shall choose the scale so that
 the contact form is given  by $\theta_0\equiv K\theta|_{T=0}$ on $T(\p M)$,
 with the metric on ${\mathcal D}$ given by
@@ -274,12 +280,12 @@ h_{\mathcal D}=dZ_A\odot dX^A.
 
 We now move on to deal with the
 curved case where the metric on $M$ is given by 
-(\ref{main_metric}).
-%g=\left(d\xi_a-\left(\Gamma_{ab}^c \xi_c- \xi_a\xi_b- \Rho_{ab}\right)\d %x^b\right)\odot \d x^a%
+(\ref{eq:coord_form}).
+%g=\left(d\zeta_a-\left(\Gamma_{ab}^c \zeta_c- \zeta_a\zeta_b- \Rho_{ab}\right)\d %x^b\right)\odot \d x^a%
 The coordinate system $(T, Z_A, X^A, Y)$ is as above, and
 the one--form $\theta$ in (\ref{def_theta}) is given by
 \[
-\theta=2T(1-T)\xi_idx^i-dT+2T^2(\Rho_{ij}-\Gamma_{ij}^k\xi_k)x^idx^j,
+\theta=2T(1-T)\zeta_idx^i-dT+2T^2(\Rho_{ij}-\Gamma_{ij}^k\zeta_k)x^idx^j,
 \]
 or in the $(T, Z_A, X^A, Y)$ coordinates,
 \[
@@ -302,18 +308,18 @@ Guided by the formula (\ref{CG_Form}) we define
 h=Tg-\frac{1}{4T}(\theta^2-dT^2),
 \]
 which we find to be
-\be
+\begin{equation*}
 \begin{split}
 h=&
 \frac{1}{4(1-T)}(\theta^2-dT^2)+\frac{1}{K}\Big(dZ_A\odot dX^A-\frac{1}{2(1-T)}
 X^A dZ_A\odot (\theta+dT)\Big)\\
--&\frac{1}{K}\Big(
+&-\frac{1}{K}\Big(
 (\Gamma_{AB}^CZ_C+\Gamma_{AB}^n)dX^A\odot dX^B+
-(\Gamma_{nn}^CZ_C+\Gamma_{nn}^n)dY\odot dY+
-2(\Gamma_{An}^CZ_C+\Gamma_{An}^n)dX^A\odot dY\Big)\\
-+&T(\Rho_{AB}dX^A\odot dX^B+2\Rho_{An}dX^A\odot dY+\Rho_{nn}dY\odot dY).
+(\Gamma_{nn}^CZ_C+\Gamma_{nn}^n)dY\odot dY \\
+&\qquad\quad + 2(\Gamma_{An}^CZ_C+\Gamma_{An}^n)dX^A\odot dY\Big)\\
+&+T(\Rho_{AB}dX^A\odot dX^B+2\Rho_{An}dX^A\odot dY+\Rho_{nn}dY\odot dY).
 \end{split}
-\ee
+\end{equation*}
 This is  smooth as $T\rightarrow 0$.
 
 Restricting $h$ to $T=0$ yields a metric which differs from
@@ -330,16 +336,16 @@ h_{\mathcal D}&=&(dZ_A-\Theta_{AB}dX^B)\odot dX^A,\quad
 defined on the contact distribution ${\mathcal D}=\mbox{Ker}(\theta_0)$, 
 where $\theta_0=2(dY+Z_AdX^A)$.
 
-We now invoke Theorem \ref{CGthm},  verifying
-by explicit computation that the remaining two conditions are satisfied. The first of these conditions is that the metric $h_{\mathcal{D}}$ is compatible with the  
-Levi--form of the almost para--CR structure induced on $\p M$ by $J$, i.e.
+We now invoke theorem \ref{CGthm},  verifying
+by explicit computation that the remaining two conditions are satisfied. The first of these conditions is that the metric $h_{\mathcal{D}}$ is compatible with the Levi--form of the almost para--CR structure induced on $\p M$ by $J$, i.e.
 \be
 \label{boundary_compatibility}
-h_{\mathcal D}(X, Y)=d\theta_0(JX, Y), \quad\mbox{for}\quad X\in\mathcal{D}.
+h_{\mathcal D}(X, Y)=Cd\theta_0(JX, Y), \quad\mbox{for}\quad X\in\mathcal{D}.
 \ee
+\mynote{I think this is slightly different but I guess equivalent to the form given in the theorem. Might need a comment?}
 The second is that the Nijenhuis tensor takes asymptotically tangential values, i.e. that (\ref{Nijenhuis_condition}) is satisfied.
 
-Both of these follow from computing the para--complex structure $J$ in the $(T, Z_A, X^A, Y)$ coordinates. We find
+Both of these can be checked by computing the almost para--complex structure $J$ in the $(T, Z_A, X^A, Y)$ coordinates. We find
 \be
 \begin{split}
 \label{J_T=0}
@@ -362,8 +368,10 @@ and (\ref{boundary_compatibility}) is satisfied.
 For the Nijenhuis condition, we use the formula (\ref{eq:Nijenhuis_index_def}). Note that we need only consider components of this with $a=T$, and thus only need to work with the $\p/\p T$ components of $J$ to find the terms which look like $\p J$. This is a one--form which we shall call $J^{(T)}$ and find to be
 \[
 \begin{split}
-J^{(T)}=&\bigg(-\frac{Z_B}{K} + \frac{T[2Z_B + (\Gamma^D_{AB}Z_D+\Gamma^n_{AB})X^A + (\Gamma^D_{nB}Z_D+\Gamma^n_{nB})Y]}{K} - T^2[\Rho_{AB}X^A+\Rho_{nB}Y]\bigg)dX^B \\
-&\bigg(-\frac{1}{K} + \frac{T[2 + (\Gamma^D_{An}Z_D+\Gamma^n_{An})X^A + (\Gamma^D_{nn}Z_D+\Gamma^n_{nn})Y]}{K} - T^2[\Rho_{An}X^A+\Rho_{nn}Y]\bigg)dY.
+J^{(T)}=&\bigg(-\frac{Z_B}{K} + \frac{T[2Z_B + (\Gamma^D_{AB}Z_D+\Gamma^n_{AB})X^A + (\Gamma^D_{nB}Z_D+\Gamma^n_{nB})Y]}{K} \\
+&\quad - T^2[\Rho_{AB}X^A+\Rho_{nB}Y]\bigg)dX^B \\
+&+\bigg(-\frac{1}{K} + \frac{T[2 + (\Gamma^D_{An}Z_D+\Gamma^n_{An})X^A + (\Gamma^D_{nn}Z_D+\Gamma^n_{nn})Y]}{K} \\
+&\qquad - T^2[\Rho_{An}X^A+\Rho_{nn}Y]\bigg)dY.
 \end{split}
 \]
 Note that this agrees with (\ref{J_T=0}) when $T=0$. We use it to calculate ${\mathcal{N}^{a}}_{bc}\nabla_a T$, dropping terms which vanish when $T=0$ to verify (\ref{Nijenhuis_condition}).
@@ -416,10 +424,10 @@ $
 
 \section{An alternative approach to theorem \ref{our_thm}}
 
-\mynote{I need to read a bit more of \cite{CGH-duke} to understand this section.}
+\mynote{If I am going to keep this section, I probably need to put in some background about the orbit decompositions in \cite{CGH-duke} and how these different compactifications arise from them/are related to them. I would also want to understand enough about the Cartan/tractor bundle of a para--$c$--projective geometry to justify the statements about it made below.}
 
-It would be possible to show that the structures $(M,g\Omega)$ arising in the projective to Einstein correspondence are para--$c$--projectively compact using a tractor approach. By our construction above it follows that $\mathcal{M}$ has a canonical para-c-projective geometry. In the notation as above, $\pi^*{\cT}\oplus
-\pi^*{\cT^*}$ is the corresponding para-c-projective tractor bundle
+It would be possible to show that the structures $(M,g,\Omega)$ arising in the projective to Einstein correspondence are para--$c$--projectively compact using a tractor approach. By our construction above it follows that $\mathcal{M}$ has a canonical para--$c$--projective geometry. In the notation of section \ref{sec:trac_construction}, $\pi^*{\cT}\oplus
+\pi^*{\cT^*}$ is the corresponding para--$c$--projective tractor bundle
 and this has a canonical tractor connection that trivially
 extends (in fibre directions) the pull back of the projective
 connection (that is available in horizontal directions). The
@@ -435,7 +443,7 @@ the main results then follow from the general holonomy theory in
 
 \subsection{The alternative approach applied in the model case}
 
-\mynote{This section is nice in that it applies orbit decomposition \cite{CGH-duke} to the model. But only to show $g$ is Einstein, not that it's para--Kahler, and it doesn't mention the boundary geometry. So I'm not really sure if it's worth keeping.}
+\mynote{This section is nice in that it applies orbit decomposition \cite{CGH-duke} to the model. But only to show $g$ is Einstein, not that it's para--Kahler, and it doesn't mention the boundary geometry. So I'm not really sure if it's worth keeping. Also some part of it might be better placed in the intro.}
 
 In this section we describe here the flat (in the sense of parabolic
 geometries) model \cite{CDT13, DM} of our construction in tractor
@@ -445,7 +453,7 @@ The flat projective structure on $N=\RP^n$ gives rise to
 the neutral signature para--K\"ahler Einstein metric on $M=SL(n+1)/GL(n)$
 \be
 \label{DM_metric}
-g=d\xi_i\odot dx^i+(\xi_i dx^i)^2, \quad \Omega= d\xi_i\wedge dx^i, \quad\mbox{where}\quad
+g=d\zeta_i\odot dx^i+(\zeta_i dx^i)^2, \quad \Omega= d\zeta_i\wedge dx^i, \quad\mbox{where}\quad
 i, j, \dots =1, \dots, n.
 \ee
 In \cite{DM}, \S 7.1 it was explained how this homogeneous model
