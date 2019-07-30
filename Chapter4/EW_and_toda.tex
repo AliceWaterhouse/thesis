@@ -3,185 +3,79 @@
 %****************************** Chapter 4: EW_and_toda *********************************
 %*******************************************************************************
 
-\chapter{Einstein--Weyl structures from $(M,g,\Omega)$} \label{chap:EW_and_toda}
+\chapter{Einstein--Weyl structures and $SU(\infty)$--Toda fields} \label{chap:EW_and_toda}
 
-In this chapter, we focus on Einstein manifolds arise via the projective to Einstein correspondence from projective surfaces with at least one symmetry. As discussed in chapter \ref{chap:intro}, it is shown in \cite{DM} that metrics in this subclass have anti--self--dual Weyl tensor and at least one Killing vector field. From the results of \cite{JT} and \cite{Tod_note}, this means that they are associated to solutions of the $SU(\infty)$--Toda equation via Lorentzian Einstein--Weyl structures in $2+1$ dimensions. The aim of this chapter is to exhibit every Einstein--Weyl structure obtainable from the Dunajski--Mettler class, resulting in several examples of new, explicit solutions of the Toda equation, and their associated mini--twistor spaces. Note that in the case $n=2$ we will write the metric and symplectic form as
+In this chapter, we focus on Einstein manifolds that arise via the projective to Einstein correspondence from projective surfaces with at least one symmetry. As discussed in chapter \ref{chap:intro}, it is shown in \cite{DM} that the Einstein metrics in this subclass have anti--self--dual Weyl tensor and at least one Killing vector field. From the results of \cite{JT} and \cite{Tod_note}, this means that they are associated to solutions of the $SU(\infty)$--Toda equation via Lorentzian Einstein--Weyl structures in $2+1$ dimensions.
+
+The aim of this chapter is to exhibit every Einstein--Weyl structure obtainable in this way, resulting in several examples of new, explicit solutions of the Toda equation, and of the corresponding mini--twistor spaces. We also give an explicit criterion for a vector field that generates a symmetry of the a Weyl structure, and prove some results about the Einstein manifold and corresponding twistor space arising from the flat projective structure $\RP^2$. The content of this chapter is based on some of the work in \cite{DW}.
+
+In the case $n=2$ we will write the metric and symplectic form as
 \begin{eqnarray}
 g =& dz_A \odot dx^A - (\Gamma^C_{AB}z_C-z_Az_B-\Rho_{AB})dx^A \odot dx^B, 
  \label{g} \\
 {\Omega} =& dz_A\wedge dx^A + \Rho_{AB}dx^A \wedge dx^B, \qquad A, B, C=0, 1.
-\end{eqnarray} 
-
-
-where we have replaced $\{p_i\}$ with $\{z_A\}$ and shifted the indices from $i,j=1,2$ to $A,B=0,1$. This is helpful for the twistorial calculations because it agree with the usual notation for two--component spinor indices. Note that a change of projective connection is now given by
+\end{eqnarray}
+where we have replaced $\{\zeta_i\}$ with $\{z_A\}$ and shifted the indices from $i,j=1,2$ to $A,B=0,1$. This is helpful for the twistorial calculations because it agrees with the usual notation for two--component spinor indices. Note that a change of projective connection is now given by
 \be
 \label{proj_change}
-\Gamma^{C}_{AB} \rightarrow \Gamma^{C}_{AB} + \delta^C_A\Upsilon_B + \delta^C_B\Upsilon_A, \quad z_A\rightarrow z_A + \Upsilon_A, \quad A,B,C=0,1.
+\Gamma^{C}_{AB} \rightarrow \Gamma^{C}_{AB} + \delta^C_A\Upsilon_B + \delta^C_B\Upsilon_A, \qquad z_A\rightarrow z_A + \Upsilon_A, \qquad A,B,C=0,1.
 \ee
 
-\subsection{The $SU(\infty)$--Toda equation}
+ 
 
-The $SU(\infty)$--Toda equation is given by
+ 
+
+
+\section{Background}
+\label{sec:background}
+
+\subsection{A classification of projective surfaces}
+Recall (see, for example, \cite{BDE}) that a projective structure on a surface can be locally specified by a single second order ODE: taking coordinates $(x,y)$ on the surface we find that geodesics on which $\dot{x}\neq 0$ can be written as unparametrised curves $y(x)$ such that
 \be
-\label{md_toda}
-U_{XX}+U_{YY}=\epsilon(e^U)_{ZZ}, \quad\mbox{where}\quad U=U(X, Y, Z), \quad
-\mbox{and}\;\;\epsilon=\pm 1
+\label{odealice}
+y^{\prime \prime} + a_0(x,y)+3a_1(x,y)y^{\prime}+3a_2(x,y)(y^{\prime})^2 + a_3(x,y)(y^\prime)^3=0,
 \ee
-Equation (\ref{md_toda}) has originally arisen in  the context of complex general relativity \cite{FP, BF82, Prz}, and then
-in Einstein--Weyl \cite{ward_toda} and (in Riemannian context, with
-$\epsilon=-1$) scalar--flat K\"ahler geometry \cite{LeBrun}. It belongs to a class
-of dispersionless systems integrable by the twistor transform 
-\cite{MW, MDbook, ADM}, 
-the method of  hydrodynamic reduction \cite{F},  and  the Manakov--Santini approach \cite{MS}. 
-The equation
-is nevertheless not linearisable and most known explicit solutions admit Lie point or other symmetries (there are exceptions - see 
-\cite{c_toda, CT,martina, Sheftel}). 
-The solutions
-we find depend on two arbitrary functions of one variable, and arise from an essentially linear procedure, where no non--linear PDEs/ODEs have to be solved. An example of a solution in our class is given by an implicit relation\footnote{MD: this one has a symmetry}
-\be
-\label{example_int}
-4Y^2e^U(e^UX^2-Z^2)^3+(2e^{2U}X^4-3e^UX^2Z^2+Z^4+2Z^2)^2=0,
-\ee
-where the level sets of $U$ in $\R^3$ are real algebraic surfaces.
-
-%Now we move on to describe the construction (A) which is based on a combination of the Jones--Tod correspondence
-%\cite{JT}, a theorem of Tod \cite{Tod_note} (which improved the earlier result of Przanowski \cite{Prz}) and two theorems from \cite{DM}.
-%In \cite{DM} it was shown that with any projective structure $[\nabla]$ on a surface $N$ one can associate
-%a neutral signature Einstein metric with non--zero scalar--curvature, and an anti--self--dual (ASD) Weyl tensor. If the projective
-%structure is represented by an affine connection $\nabla\in[\nabla]$ (see \S\ref{s_defini} for definitions), then the metric is given by
-%\be
-%\label{g}
-%g= dz_A \odot dx^A - (\Gamma^C_{AB}z_C-z_Az_B-P_{AB})dx^A \odot dx^B, 
-%\quad A, B, C=0, 1 , 
-%\ee
-%where $x^A$ are coordinates on $N$, $z_A$ are coordinates on the fibres of $T^*N$, $\Gamma^C_{AB}$ are connection components of $\nabla$, and $P_{AB}$ is the projective Schouten tensor of $\nabla$. The following Theorem has  been established 
-%in \cite{DM} 
-%\begin{theo}\cite{DM}
-%\label{th1int}
-%Let $(M, g)$ be an ASD Einstein manifold with scalar curvature 24 admitting a parallel ASD totally null distribution.  
-%\begin{enumerate}
-%\item
-%Then $(M, g)$ is conformally flat, or it is locally isometric to 
-%(\ref{g}) for
-%some torsion-free connection $\nabla$ on a surface $N$.
-%\item There is a one--to--one correspondence between projective vector fields of $(N, \nabla)$, and Killing vector fields of $(M, g)$ with
-%the metric $g$ given by (\ref{g}).
-%\end{enumerate}
-%\end{theo}
-%If the projective strucure $(N, [\nabla])$ admits a projective vector field, then the connection with
-%the Einstein--Weyl geometry now follows from Theorem \ref{th1int}, 
-%and 
-\subsection{The neutral signature
-version of the Jones--Tod correspondence}
-\begin{theo}\cite{JT}
-\label{theo_tod1}
-Let $(M, g)$ be a four--manifold with a neutral signature metric with ASD Weyl tensor, and a conformal Killing vector $K$. Let
-\be 
-\label{EWgen}
-h=|K|^{-2}g-|K|^{-4}{\bf{K}}\odot{\bf{K}},\qquad \omega=\frac{2}{|K|^2}\star({\bf{K}}\wedge d{\bf{K}}),
-\ee
-where $|K|^2=g(K,K)$, ${\bf{K}}=g(K, \cdot)$ and $\star$ is the Hodge operator defined by $g$. Then $(h, \omega)$ is a solution of the Einstein--Weyl equations  on the space of orbits $W$ of $K$ in $M$. All Lorentzian Einstein--Weyl structures
-arise from some anti-self-dual $(M, g, K)$.
-\end{theo}
-The final step is the occurrence of the $SU(\infty)$--Toda equation 
-(\ref{md_toda}). This is a consequence of the following result
-of Tod
-\begin{theo}
-\label{th3int}\cite{Tod_note}
-Let $(h, \omega)$ be the Einstein--Weyl structure arising from Theorem \ref{theo_tod1}, under the additional assumption that
-the ASD conformal structure $(M, g)$ is Einstein, and with non--zero Ricci scalar. 
-\begin{enumerate}
-\item The Einsten--Weyl structure admits a shear--free, twist--free geodesic
-congruence.
-\item There exists $h\in [h]$, and
-coordinates $(X, Y, Z)$ on an open set in $W$ such that
-(assuming the signature of $h$ is $(2, 1)$ and the congruence is time--like)
-\be
-\label{metric_toda}
-h=e^U(dX^2+dY^2)-dZ^2, \quad \omega =2U_ZdZ
-\ee
-and the function $U=U(X, Y, Z)$ satisfies the $SU(\infty)$--Toda equation
-(\ref{md_toda}) 
-with $\epsilon=1$.
-\end{enumerate}
-\end{theo}
-The whole construction can now be summarised in the following diagram
-\begin{eqnarray}
-\label{diagram}
-\text{Projective structure with symmetry} &\overset{\text{Thm}\;\ref{th1int}}
-{\longrightarrow}& \text{ASD Einstein with symmetry}\nonumber\\
-\downarrow & & \downarrow \text{Thm}\;\ref{theo_tod1}\\
-\text{Solution to}\;SU(\infty)\; \text{Toda} &\overset{\text{Thm}\;\ref{th3int}}\longleftarrow&\text{Einstein--Weyl}\nonumber
-\end{eqnarray}
-%\be
-%\label{diagram}
-%A \xrightarrow{\text{Theorem}} \text{ASD Einstein with symmetry}\xrightarrow{\t%ext{Theorem}} \text{Einstein--Weyl} \xrightarrow{\text{Theorem}} SU(\infty)\; \%text{Toda}
-%\ee
-The paper is organised as follows. In the next section we summarise the basic facts and relevant formulae underlying Theorems
-\ref{th1int} and \ref{theo_tod1}. In \S \ref{general}, Proposition \ref{prop1} 
-we present the most general class of EW spaces arising from our construction, and show how to associate  solutions of the $SU(\infty)$--Toda equation with this class. In \S\ref{neat} 
-and \S\ref{neat2}
-we give several examples corresponding to $SL(2, \R)$, and $SL(3, \R)$
-invariant projective structures. In the latter case the four--manifold $(M, g)$ of Theorem \ref{th1int} is $SL(3)/GL(2)$, and the mini--twistor space
-of the $SU(\infty)$--Toda equation can be constructed explicitly by quotiening the flag manifold $F_{12}(\mathbb{C}^3)$ by a $\mathbb{C}^*$ action. 
-In Poposition \ref{ewsymprop} we give an explicit criterion, in terms of the representative metric $h\in [h]$ and the one form $\omega$ for a vector field the generate a symmetry of the Weyl structure.
-In Proposition \ref{propHH} we show that the Einstein metric on $SL(3)/GL(2)$  is also pseudo--hyper--Hermitian, and its twistor space fibers holomorphicaly over $\CP^1$. In \S\ref{ODEs} we make contact with the Cartan approach to Einstein--Weyl geometry via
-special 3rd order ODEs.
-In \S \ref{chap:KK_lift} we shall prove (Theorem \ref{theokk}) that the 
-$2n$--dimensional analogue of the Einstein metric (\ref{g}) canonically lifts
-to an Einstein metric of signature $(n, n+1)$ on the $\R^*$ bundle 
-${\mathcal Q}$ over $M$ with a connection whose curvature is the pullback of 
-the symplectic form from $M$ to ${\mathcal Q}$. Some calculations
-underlying the proof of Theorem \ref{theokk} are relegated to Appendix A.
-In the Appendix B we shall present a solution to the elliptic $SU(\infty)$--Toda equation corresponding to an ALH gravitational instanton.
-\subsection*{Acknowledgments} 
-The work of MD has been partially supported by STFC consolidated grant no. ST/P000681/1. 
-AW is grateful for support from the Sims Fund. We thank David Calderbank, Thomas Mettler and Jacek Tafel for useful discussions.
-\section{Projective, Einstein, and Weyl geometries}
-\label{s_defini}
-Here we summarise basic facts about projective, Einstein--Weyl, 
-and anti--self--dual geometries.
-\subsection{Projective structures}
-
-A two--dimensional 
-projective structure is called flat if the Cotton tensor
-$\nabla_{[A}P_{B]C}$ vanishes for any choice of the representative connection.
-
-
-Let $(N, \nabla)$ be a manifold with an affine connection. A projective vector
-field $k$ is a generator of a one--parameter group of transformations
-mapping unparametrised geodesics of $\nabla$ to unparametrised geodesics.
-At the infinitesimal level the projective condition is
-\be 
-\label{projvf}
-\mathcal{L}_k\Gamma^C_{AB}=\delta^C_A\Upsilon_B+\delta^C_B\Upsilon_A,
-\ee 
-where the Lie derivate of the connection components is defined as in \cite{yano}.
-In general no projective vector field exist on $(N, \nabla)$. The possible Lie algebras of projective vector fields on a surface are $\mathfrak{sl}(3, \R)$, 
-$\mathfrak{sl}(2, \R)$, $\mathfrak{a}_2$ (the two--dimensional affine Lie algebra) or $\R$. See \cite{Bryant}.
-\subsection{Einstein--Weyl structures}
-\begin{defi}
-A Weyl Structure $(W,\mathcal{D},[h])$ is a conformal equivalence class of metrics $[h]$ on a manifold $W$ along with a fixed torsion--free affine connection $\mathcal{D}$ which preserves any representative $h\in[h]$ up to conformal class. That is, for some one-form $\omega$,
+where the coefficients $\{a_i\}$ are given by the projectively invariant formulae
 \[
-\mathcal{D}h=\omega\otimes h.
+a_0=\Gamma^1_{00},\quad
+3a_1=-\Gamma^0_{00}+2\Gamma^1_{01},\quad
+3a_2=-2\Gamma^0_{01}+\Gamma^1_{11},\quad
+a_3=-\Gamma^0_{11}.
 \]
-\end{defi}
-A pair $(h,\omega)$ uniquely defines the connection and hence the Weyl structure, but there is an equivalence class of such pairs which define the same Weyl structure. These are related by transformations
-\be
-\label{weyl_tr}
-h\rightarrow \rho^2h,\quad\omega\rightarrow\omega+2d\mathrm{ln}(\rho),
-\ee
-where $\rho$ is a smooth, non-zero function on $W$. 
-Physically, the Weyl condition in Lorentzian signature corresponds to the statement that null geodesics of the conformal structure $[h]$ are also geodesics of the connection $\mathcal{D}$.
 
-If additionally the symmetric part of the Ricci tensor of $\mathcal{D}$ is a scalar multiple of $h$, then $W$ is said to carry an Einstein-Weyl structure.
-This condition is invariant under (\ref{weyl_tr}). The Einstein--Weyl equations
-give a set of five non--linear PDEs on the pair $(h, \omega)$. These equations
-are integrable by the twistor transform of Hitchin \cite{hitchin}, which 
-(by Theorem \ref{theo_tod1}) can be regarded as a reduction of Penrose's twistor transform \cite{penrose} for ASD conformal structures.
-A trivial Einstein--Weyl structure is one whose one--form $\omega$ is closed, so that it is locally exact and thus may be set to zero by a change of scale (\ref{weyl_tr}). Then $\mathcal{D}$ is the Levi--Civita connection of some representative $h\in[h]$, and this representative is Einstein.
-\subsection{Anti--self--dual Einstein metrics}
-Let $M$ be an oriented four--dimensional manifold with a metric
+As we saw in chapter \ref{chap:intro}, the maximally symmetric projective surface $\RP^2$ has symmetry group $SL(3,\R)$. In fact, the possible The possible symmetry groups of projective surfaces are $SL(3, \R)$, $SL(2,\R)$, the two--dimensional affine group, and $\R$. A partial classification is given in \cite{Bryant}.
+
+\begin{enumerate}
+\item On {\bf the flat projective surface} $\RP^2$ described in section \ref{def:RPn}, geodesics $y(x)$ are described in inhomogeneous coordinates $(x,y)=({X^0}/{X^2},{X^1}/{X^2})$ by the ODE
+\[
+y^{\prime\prime}=0.
+\]
+\item {\bf The punctured plane $\R^2\backslash\{0\}$} has symmetry group $SL(2,\R)$ acting via its fundamental representation. In this case there is a one--parameter family of projective structures falling into three distinct equivalence classes, with geodesics $y(x;\mu)$ described by the differential equation
+\[
+y^{\prime\prime} = -\mu(y-xy^\prime)^3,
+\]
+where $(x,y)$ are standard Euclidean coordinates on $\R^2$ and $\mu$ is a constant parameter. The equivalence class that a given projective structure falls into depends on the value of $\mu$: those with $\mu>0$ from one of the classes, those with $\mu<0$ from another, and those with $\mu=0$ form the third. \mynote{ermmm but if $\mu=0$ the projective structure is flat so what's going on there? Also we used $\mu$ for a tractor coordinate.}
+\item {\bf The two--dimensional Lie group of affine transformations on $\R$}, which we denote $\mathrm{Aff}(1)$, is generated by the unique non--abelian two--dimensional Lie algebra $\{v_1,v_2\}$, where we choose a basis such that $[v_1,v_2]=v_1$. We can choose coordinates on $\mathrm{Aff}$(1) such that these correspond to vector fields
+\[
+\frac{\p}{\p y},\quad \frac{\p}{\p x} + y\frac{\p}{\p y},
+\]
+and using invariance under these vector fields, the geodesic equation can be cast in the form \cite{FLL}
+\[
+y^{\prime\prime} = e^{-2x}(y^\prime)^3 + Ay^\prime + Be^x,
+\]
+where $A$ and $B$ are constants.
+\item {\bf The general projective surface with a symmetry}, after a choice of coordinates such that the symmetry is $\frac{\p}{\p x}$, corresponds to a set of geodesics $y(x)$ which satisfy an ODE that can be written uniquely in the form \cite{FLL}
+\be \label{eq:1symode}
+y^{\prime\prime} = A(y)(y^\prime)^3 + B(y)(y^\prime)^2 + 1.
+\ee
+\end{enumerate}
+
+Note that each of these classes of projective structures forms a subset of the next, and this can be seen explicitly by some changes of coordinates. For example, the general projective surface with a symmetry is flat when $A(y)=B(y)=0$.
+
+\subsection{Anti--self--duality and spin bundles}
+Let $M$ be an oriented 
+\mynote{According to Rod, because of the way we projectivised $\cT^*$ $M$ is not oriented for $n$ even...}
+four--dimensional manifold with a metric
 $g$ of signature $(2, 2)$. The Hodge $\ast$ operator on the space of two forms is an involution, and induces a decomposition \cite{AHS}
 \be 
 \label{split_ad}
@@ -240,29 +134,10 @@ that its tangent plane at every point is an $\alpha$--plane ($\beta$--plane).
 Penrose's Nonlinear Graviton Theorem \cite{penrose} states that   a 
 maximal, three dimensional, family of $\alpha$--surfaces exists 
 in $M$ iff $C_+=0$.
-\subsubsection{ASD Einstein metrics from projective structures}
+
 A general ASD metric depends, in the real--analytic category, on six arbitrary functions of the variables. Theorem \ref{th1int} gives an explicit subclass of such metrics which are additionaly Einstein, and depend on two arbitrary functions of two variables. Any projective structure $(N, [\nabla])$ gives rise to an ASD Einstein metric.
+\mynote{Where am I putting Thomas and Maciej's local characterisation? I think if it can be expressed without spinors, it should go in the intro. Then this section just expresses it with spinors. Also, is their characterisation referring to ASD'ty in the sense of Calderbank? I think it is.}
 
-There is an additional structure on four--manifolds arising from Theorem 
-\ref{th1int}
-given by a para--Hermitian structure.
-For any choice of a connection in a projective class $[\nabla]$ there exists diffeomorphism\footnote{In \cite{DGW} it is shown how to extend 
-this metric to a $c$--projective compactification.}
- $\varphi:T^{*}N \rightarrow M$ via which we can pull back the metric $g$ and symplectic form $\Omega$ to obtain, in canonical local coordinates $(x^A,z_A)$ on the cotangent bundle, the metric $g$ given by (\ref{g}) and the
-two--form ${{\Omega}}$
-\be
-\label{Omega}
-\varphi^{*}{\Omega} = dz_A\wedge dx^A + P_{AB}dx^A \wedge dx^B.
-\ee
-The pair $(g, \Omega)$ is projectively invariant under the changes 
-(\ref{projvf}) if $z_A\rightarrow z_A+\Upsilon_A$.
-
-If $k$ is a projective vector field on $(N, \nabla)$, then the corresponding Killing vector field on $(M, g)$ is symplectic, and 
-is given in local coordinates by
-\be 
-\label{symlift}
-K=k-z_A\frac{\p k^B}{\p x^A}\frac{\p}{\p z_B} + \Upsilon_A\frac{\p}{\p z_A}.
-\ee
 \subsubsection{ASD $\beta$--foliation}
 It follows from the general construction of Calderbank \cite{Cal1}
 and West \cite{West}
@@ -283,35 +158,116 @@ We shall call such foliations ASD $\beta$--surface foliations. In our coordinate
 \ee
 where $d\mathcal{A}=\Omega$, and $\Omega$ is the symplectic form on $M$, whose anti-self-duality implies (\ref{dm3}) for a rescaling of $\mathcal{A}$. In \S\ref{model} we will consider the model case where $M=SL(3)/GL(2)$, for which we can find the Ward transform of this ASD Maxwell two-form to the twistor space $F_{12}(\mathbb{C}^3)$
 explicitly, and we will find that there is a second ASD $\beta$--surface foliation with a different two--form.
-\section{From projective structures to $SU(\infty)$ 
-Toda fields}
-\label{general}
-Recall (see, e.g. \cite{BDE}) that a projective structure on a surface can be locally specified by a single 2nd order ODE: taking coordinates $(x,y)$ on the surface we find that geodesics on which $\dot{x}\neq 0$ can be written as unparametrised curves $y(x)$ such that
-\be
-\label{odealice}
-y^{\prime \prime} + a_0(x,y)+3a_1(x,y)y^{\prime}+3a_2(x,y)(y^{\prime})^2 + a_3(x,y)(y^\prime)^3=0,
-\ee
-where the coefficients $\{a_i\}$ are given by the projectively invariant formulae
+
+
+\subsection{Einstein--Weyl structures}
+\begin{defi}
+A Weyl Structure $(W,\mathcal{D},[h])$ is a conformal equivalence class of metrics $[h]$ on a manifold $W$ along with a fixed torsion--free affine connection $\mathcal{D}$ which preserves any representative $h\in[h]$ up to conformal class. That is, for some one-form $\omega$,
 \[
-a_0=\Gamma^1_{00},\quad
-3a_1=-\Gamma^0_{00}+2\Gamma^1_{01},\quad
-3a_2=-2\Gamma^0_{01}+\Gamma^1_{11},\quad
-a_3=-\Gamma^0_{11}.
+\mathcal{D}h=\omega\otimes h.
 \]
+\end{defi}
+\mynote{$\mathcal{D}$ was the name of the boundary distribution in the c-proj chapter.}
+A pair $(h,\omega)$ uniquely defines the connection and hence the Weyl structure, but there is an equivalence class of such pairs which define the same Weyl structure. These are related by transformations
+\be
+\label{weyl_tr}
+h\rightarrow \rho^2h,\quad\omega\rightarrow\omega+2d\mathrm{ln}(\rho),
+\ee
+where $\rho$ is a smooth, non-zero function on $W$. 
+Physically, the Weyl condition in Lorentzian signature corresponds to the statement that null geodesics of the conformal structure $[h]$ are also geodesics of the connection $\mathcal{D}$.
+
+If additionally the symmetric part of the Ricci tensor of $\mathcal{D}$ is a scalar multiple of $h$, then $W$ is said to carry an Einstein-Weyl structure.
+This condition is invariant under (\ref{weyl_tr}). A trivial Einstein--Weyl structure is one whose one--form $\omega$ is closed, so that it is locally exact and thus may be set to zero by a change of scale (\ref{weyl_tr}). Then $\mathcal{D}$ is the Levi--Civita connection of some representative $h\in[h]$, and this representative is Einstein.
+
+The Einstein--Weyl equations
+give a set of five non--linear PDEs on the pair $(h, \omega)$. These equations
+are integrable by the twistor transform of Hitchin \cite{hitchin}, which 
+ can be regarded as a reduction of Penrose's twistor transform \cite{penrose} for ASD conformal structures by the following theorem of Tod.
+ 
+\begin{theo}\cite{JT}
+\label{theo_tod1}
+Let $(M, g)$ be a four--manifold with a neutral signature metric with ASD Weyl tensor, and a conformal Killing vector $K$. Let
+\be 
+\label{EWgen}
+h=|K|^{-2}g-|K|^{-4}{\bf{K}}\odot{\bf{K}},\qquad \omega=\frac{2}{|K|^2}\star({\bf{K}}\wedge d{\bf{K}}),
+\ee
+where $|K|^2=g(K,K)$, ${\bf{K}}=g(K, \cdot)$ and $\star$ is the Hodge operator defined by $g$. Then $(h, \omega)$ is a solution of the Einstein--Weyl equations  on the space of orbits $W$ of $K$ in $M$. All Lorentzian Einstein--Weyl structures
+arise from some anti-self-dual $(M, g, K)$.
+\end{theo}
+\mynote{Need to make sure my notation for a symmetry matches the notation in the intro. Currently it does not.}
+
+\subsection{The $SU(\infty)$--Toda equation}
+
+The $SU(\infty)$--Toda equation is given by
+\be
+\label{md_toda}
+U_{XX}+U_{YY}=\epsilon(e^U)_{ZZ}, \quad\mbox{where}\quad U=U(X, Y, Z), \quad
+\mbox{and}\;\;\epsilon=\pm 1
+\ee
+Equation (\ref{md_toda}) has originally arisen in  the context of complex general relativity \cite{FP, BF82, Prz}, and then
+in Einstein--Weyl \cite{ward_toda} and (in Riemannian context, with
+$\epsilon=-1$) scalar--flat K\"ahler geometry \cite{LeBrun}. It belongs to a class
+of dispersionless systems integrable by the twistor transform 
+\cite{MW, MDbook, ADM}, 
+the method of  hydrodynamic reduction \cite{F},  and  the Manakov--Santini approach \cite{MS}. 
+The equation
+is nevertheless not linearisable and most known explicit solutions admit Lie point or other symmetries (there are exceptions - see 
+\cite{c_toda, CT,martina, Sheftel}).
+
+
+The $SU(\infty)$--Toda equation is related to a subclass of Einstein--Weyl structure by the following result
+of Tod which improved the earlier result of Przanowski \cite{Prz}.
+\begin{theo}
+\label{th3int}\cite{Tod_note}
+Let $(h, \omega)$ be the Einstein--Weyl structure arising from Theorem \ref{theo_tod1}, under the additional assumption that
+the ASD conformal structure $(M, [g])$ has a representative $g\in[g]$ which is Einstein, and with non--zero Ricci scalar. 
+\begin{enumerate}
+\item The Einsten--Weyl structure admits a shear--free, twist--free geodesic
+congruence.
+\item There exists $h\in [h]$, and
+coordinates $(X, Y, Z)$ on an open set in $W$ such that
+(assuming the signature of $h$ is $(2, 1)$ and the congruence is time--like)
+\be
+\label{metric_toda}
+h=e^U(dX^2+dY^2)-dZ^2, \quad \omega =2U_ZdZ
+\ee
+and the function $U=U(X, Y, Z)$ satisfies the $SU(\infty)$--Toda equation
+(\ref{md_toda}) 
+with $\epsilon=1$.
+\end{enumerate}
+\end{theo}
+
+\subsection{Summary}
+The whole construction can now be summarised in the following diagram
+\begin{eqnarray}
+\label{diagram}
+\text{Projective structure with symmetry} &\overset{\text{Thm}\;\ref{th1int}}
+{\longrightarrow}& \text{ASD Einstein with symmetry}\nonumber\\
+\downarrow & & \downarrow \text{Thm}\;\ref{theo_tod1}\\
+\text{Solution to}\;SU(\infty)\; \text{Toda} &\overset{\text{Thm}\;\ref{th3int}}\longleftarrow&\text{Einstein--Weyl}\nonumber
+\end{eqnarray}
+%\be
+%\label{diagram}
+%A \xrightarrow{\text{Theorem}} \text{ASD Einstein with symmetry}\xrightarrow{\t%ext{Theorem}} \text{Einstein--Weyl} \xrightarrow{\text{Theorem}} SU(\infty)\; \%text{Toda}
+%\ee
+
+ In the latter case the four--manifold $(M, g)$ of Theorem \ref{th1int} is $SL(3)/GL(2)$, and the mini--twistor space
+of the $SU(\infty)$--Toda equation can be constructed explicitly by quotienting the flag manifold $F_{12}(\mathbb{C}^3)$ by a $\mathbb{C}^*$ action. 
+
+In Proposition \ref{propHH} we show that the Einstein metric on $SL(3)/GL(2)$  is also pseudo--hyper--Hermitian, and its twistor space fibers holomorphicaly over $\CP^1$.
+
+\section{The general projective surface with at least one symmetry}
+\label{general}
+
+
+
+
 Consider the most general Einstein--Weyl structure arising from the combination
 of Theorem \ref{th1int} and Theorem \ref{theo_tod1}. Because of the correspondence 
 (Theorem \ref{th1int}, part 2.)
-between symmetries of $(M, g)$ and symmetries of the projective surface $(N, [\nabla])$, the construction must begin with the general projective surface with at least one symmetry. In this case, the unparametrised geodesics can be written uniquely as integral curves of
-the ODE
-\be
-\label{1symODE}
-y^{\prime \prime}=A(y)(y^{\prime})^3+B(y)(y^{\prime})^2+1,
-\ee
-(there are other, equivalent, choices. The one we made has been explored in \cite{FLL})
-where we have made a choice of coordinates such that the symmetry is 
-$k=\frac{\p}{\p x}$. The resulting projective structure is flat iff both
-$A$ and $B$ are constant.
-By trial and error, we chose a representative connection for (\ref{1symODE}) such that (\ref{g}) had the simplest possible form. The choice of connection we took was
+between symmetries of $(M, g)$ and symmetries of the projective surface $(N, [\nabla])$, the construction must begin with the general projective surface with at least one symmetry. 
+ 
+By trial and error, we chose a representative connection for (\ref{eq:1symode}) such that (\ref{g}) had the simplest possible form. The choice of connection we took was
 \[
 \Gamma^{0}_{11}=A(y),\quad \Gamma^{1}_{00}=-1, \quad \Gamma^{1}_{11}=-B(y)
 \]
@@ -464,7 +420,7 @@ V_M=-pV, \quad \alpha_V=qdy-p\alpha.
 \]
 \section{An example from the submaximally symmetric projective surface}
 \label{neat}
-The submaximally symmetric projective surface is the punctured plane $N=\mathbb{R}^2\backslash{0}$, with the symmetry group $SL(2)$ acting via its fundamental representation. Here we have a one parameter family of projective structures falling into three distinct equivalence classes, with geodesics described by the differential equation
+The submaximally symmetric projective surface is the punctured plane $N=\mathbb{R}^2\backslash\{0\}$, with the symmetry group $SL(2)$ acting via its fundamental representation. Here we have a one parameter family of projective structures falling into three distinct equivalence classes, with geodesics described by the differential equation
 \be
 \label{neatODE}
 y^{\prime \prime}=-\mu(y-xy^\prime)^3,
