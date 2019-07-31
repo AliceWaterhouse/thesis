@@ -22,7 +22,7 @@ This thesis splits naturally into two parts. The first 4 chapters are concerned 
 Given a projective structure on a manifold $N$ of dimension $n$,
 Dunajski and Mettler \cite{DM} construct a neutral signature Einstein metric $g$ with non-zero
 scalar curvature on a certain rank $n$ affine bundle $M\rightarrow N$.
-The $2n$--dimensional space $M$ also carries a natural symplectic form $\Omega$, and an endomorphism $J:TM\rightarrow TM$ which is such that $J^2$ is the identity and $g(J\cdot\,,\cdot)=\Omega(\cdot\,,\cdot)$. This makes $(M,g,\Omega)$ a so--called \textit{almost para--K\"ahler} structure. It is interesting for a number of different reasons.
+The $2n$--dimensional space $M$ also carries a natural symplectic form $\Omega$, and an endomorphism $J:TM\rightarrow TM$ which is such that $J^2$ is the identity and $g(\cdot\,,\cdot)=\Omega(\cdot\,,J\cdot)$. This makes $(M,g,\Omega)$ a so--called \textit{almost para--K\"ahler} structure. It is interesting for a number of different reasons.
 
 \mynote{It expresses the second order object which is the projective structure as a first order object on a larger space. See if you can find the slides of the talk Thomas gave in damtp where he talked about this? If I put in Thomas' explicit construction of $g$ (i.e. define the second order coframe bundle) this point would be more relevant.}
 
@@ -68,6 +68,7 @@ $\omega=\omega_{a\dots b}dx^{a}\wedge\dots\wedge dx^{b},$
 and $F_{ab}{d}x^{a}\wedge{d}x^{b}=F_{[ab]}{d}x^{a}\otimes{d}x^{b}$
 implying ${d}x^{a}\wedge{d}x^{b}=\frac{1}{2}({d}x^{a}\otimes{d}x^{b}-{d}x^{b}\otimes{d}x^{a})$.
 \item $N$ is oriented. \mynote{something about which part of $SL(n+1)$ we mean?}
+\item Probably a convention for the Hodge operator
 \end{itemize}
 
 \section{Projective Geometry}\label{sec:projgeom}
@@ -563,11 +564,9 @@ T_p^*N\ni \zeta_i  \mapsto [(1,\zeta_i)]=[(\tau,\tau \zeta_i)]\in
 \end{equation}
 \end{rmk}
 
-\begin{rmk}
-A feature of this construction is that in each dimension $n$ (of $N$)
-either the hypersurface $\mathcal{Z}(\tau)$ (if $n$ odd) is not
-orientable, or $\mathcal{M}$ (if $n$ even) is not orientable.
-\end{rmk} 
+%\begin{rmk}
+%A feature of this construction is that in each dimension $n$ (of $N$) either the hypersurface $\mathcal{Z}(\tau)$ (if $n$ odd) is not orientable, or $\mathcal{M}$ (if $n$ even) is not orientable.
+%\end{rmk} 
 
 \mynote{Make a comment about the model case? Motivated by chapter \ref{chap:c-proj} and maybe \ref{chap:EW_and_toda}?}
 
