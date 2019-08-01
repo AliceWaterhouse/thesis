@@ -7,24 +7,19 @@
 
 In this chapter, we focus on Einstein manifolds that arise via the projective to Einstein correspondence from projective surfaces with at least one symmetry. As discussed in chapter \ref{chap:intro}, it is shown in \cite{DM} that the Einstein metrics in this subclass have anti--self--dual Weyl tensor and at least one Killing vector field. From the results of \cite{JT} and \cite{Tod_note}, this means that they are associated to solutions of the $SU(\infty)$--Toda equation via Lorentzian Einstein--Weyl structures in $2+1$ dimensions.
 
-The aim of this chapter is to exhibit every Einstein--Weyl structure obtainable in this way, resulting in several examples of new, explicit solutions of the Toda equation, and of the corresponding mini--twistor spaces. We also give an explicit criterion for a vector field that generates a symmetry of the a Weyl structure, and prove some results about the Einstein manifold and corresponding twistor space arising from the flat projective structure $\RP^2$. The content of this chapter is based on some of the work in \cite{DW}.
+The aim of this chapter is to exhibit the Einstein--Weyl structures obtainable in this way, resulting in several examples of new, explicit solutions of the Toda equation, and of the corresponding mini--twistor spaces. We also give an explicit criterion for a vector field that generates a symmetry of the a Weyl structure, and prove some results about the Einstein manifold and corresponding twistor space arising from the flat projective structure $\RP^2$. The content of this chapter is based on some of the work in \cite{DW}.
 
 In the case $n=2$ we will write the metric and symplectic form as
 \begin{eqnarray}
 g =& dz_A \odot dx^A - (\Gamma^C_{AB}z_C-z_Az_B-\Rho_{AB})dx^A \odot dx^B, 
- \label{g} \\
-{\Omega} =& dz_A\wedge dx^A + \Rho_{AB}dx^A \wedge dx^B, \qquad A, B, C=0, 1.
+ \label{eq:g4} \\
+{\Omega} =& dz_A\wedge dx^A + \Rho_{AB}dx^A \wedge dx^B, \qquad A, B, C=0, 1. \label{eq:Omega4}
 \end{eqnarray}
 where we have replaced $\{\zeta_i\}$ with $\{z_A\}$ and shifted the indices from $i,j=1,2$ to $A,B=0,1$. This is helpful for the twistorial calculations because it agrees with the usual notation for two--component spinor indices. Note that a change of projective connection is now given by
 \be
 \label{proj_change}
 \Gamma^{C}_{AB} \rightarrow \Gamma^{C}_{AB} + \delta^C_A\Upsilon_B + \delta^C_B\Upsilon_A, \qquad z_A\rightarrow z_A + \Upsilon_A, \qquad A,B,C=0,1.
 \ee
-
- 
-
- 
-
 
 \section{Background}
 \label{sec:background}
@@ -72,9 +67,7 @@ y^{\prime\prime} = A(y)(y^\prime)^3 + B(y)(y^\prime)^2 + 1.
 
 Note that each of these classes of projective structures forms a subset of the next, and this can be seen explicitly by some changes of coordinates. For example, the general projective surface with a symmetry is flat when $A(y)=B(y)=0$.
 
-\subsection{Anti--self--duality and spin bundles}
-\mynote{I want to add more explanation to this section. Possibly from Maciej's book or maybe from a book that has better explanations.}
-
+\subsection{Anti--self--duality and totally null distributions}
 Let $M$ be an oriented four--dimensional manifold with a metric
 $g$ of signature $(2, 2)$. The Hodge operator $\ast$ on the space of two forms is an involution, and induces a decomposition \cite{AHS}
 \be 
@@ -123,6 +116,8 @@ for $v_1, v_2\in \Gamma(\spp)$ and $w_1, w_2\in \Gamma(\spp')$.
 A vector $V\in \Gamma(TM)$ is called null if $g(V, V)=0$. Any null vector is of the form
 $V=\lambda \otimes \pi$ where $\lambda$, and $\pi$ are sections of
 $\spp$ and $\spp'$ respectively.
+\mynote{More detail here.}
+
 An $\alpha$--plane (respectively a $\beta$--plane) 
 is a two--dimensional plane in $T_pM$
 spanned by null vectors of the above form with $\pi$ (respectively
@@ -134,16 +129,19 @@ Penrose's Nonlinear Graviton Theorem \cite{penrose} states that   a
 maximal, three dimensional, family of $\alpha$--surfaces exists 
 in $M$ iff $C_+=0$.
 
-A general ASD metric depends, in the real--analytic category, on six arbitrary functions of the variables. Theorem \ref{th1int} gives an explicit subclass of such metrics which are additionaly Einstein, and depend on two arbitrary functions of two variables. Any projective structure $(N, [\nabla])$ gives rise to an ASD Einstein metric.
-\mynote{Where am I putting Thomas and Maciej's local characterisation? I think if it can be expressed without spinors, it should go in the intro. Then this section just expresses it with spinors. Also, is their characterisation referring to ASD'ty in the sense of Calderbank? I think it is. }
-\mynote{To see if it is possible, look at twistor model2 in write ups draft and maybe Maciej's book. If not, another option is to take out most of that bit in the introduction or like convert it to a remark and put their local characterisation here.}
+The spin bundles are useful for describing a special class of distributions which are totally null in the following sense.
 
+\begin{defi}
+A distribution $D$ on a pseudo--Riemannian manifold $(M,g)$ is called totally null if $g(X,Y)=0$ for all $X,Y\in\Gamma(D)$, and parallel if $^g\nabla_XY\in\Gamma(D)$ for all $X\in \Gamma(TM),\ Y\in\Gamma(D)$.
+\end{defi}
+Note that a parallel distribution is necessarily Frobenius integrable, since
+\[
+[X,Y]= {^g}\nabla_XY- {^g}\nabla_YX\in\Gamma(D)\quad\mbox{for all}\quad X,Y\in\Gamma(D).
+\]
 
-\subsubsection{ASD $\beta$--foliation}
-It follows from the general construction of Calderbank \cite{Cal1}
-and West \cite{West}
-that any ASD conformal structure arising from Theorem \ref{th1int} 
-carries a foliation by $\beta$--surfaces defined by an ASD two--form
+Any two--dimensional distribution on a four--manifold $M$ can be expressed as the kernel of a two--form, \mynote{Decompose two--form using spinors. Describe a totally null distribution in terms of the two--form. Describe alpha and beta distributions, and alpha and beta surfaces (including the paragraph from above, and then the nonlinear graviton. Then say a beta distribution is intrinsically SD, but there is a subclass of beta distributions which are also SD or ASD in the sense of Calderbank.}
+
+e$\beta$--surfaces defined by an ASD two--form
 $\Sigma_{ab}=\iota_A\iota_B\epsilon_{A'B'}$, and  such that
 the spinor $\iota_A$ satisfies
 \be
@@ -152,12 +150,20 @@ the spinor $\iota_A$ satisfies
 \ee
 where $d\mathcal{A}$ is an ASD Maxwell field.
 
-We shall call such foliations ASD $\beta$--surface foliations. In our coordinates $\Sigma=dx^0\wedge dx^1$ and ${D}=\mathrm{span}\{\p/\p z_0,\p/\p z_1\}$. We find that
+We shall call such foliations ASD $\beta$--surface foliations. \mynote{Add the justification from West's thesis that integrability implies (\ref{dm3}), if you can understand why his condition about $\iota\iota\nabla\iota$ is equivalent to integrability.}
+
+A general ASD metric depends, in the real--analytic category, on six arbitrary functions of the variables. Theorem \ref{thm:DM} gives an explicit subclass of such metrics which are additionally constrained by the following local characterisation.
+
+\begin{theo}\cite{DM} \label{thm:DMcharacterisation}
+Let $(M,g)$ be an ASD Einstein manifold with scalar curvature $24$ admitting a totally null distribution which is parallel with respect to the Levi--Civita connection of $g$ and ASD in the sense of Calderbank \cite{Cal1} (see also \cite{West}). Then $(M,g)$ is conformally flat, or it is locally isometric to (\ref{eq:g4}).
+\end{theo}
+
+In our coordinates this distribution is given by the two--form $\Sigma=dx^0\wedge dx^1$, and ${D}=\mathrm{span}\{\p/\p z_0,\p/\p z_1\}$. We find that
 \be
 \label{beta_eq}
-\nabla\Sigma=6\mathcal{A}\otimes \Sigma,
+^g\nabla\Sigma=6\mathcal{A}\otimes \Sigma,
 \ee
-where $d\mathcal{A}=\Omega$, and $\Omega$ is the symplectic form on $M$, whose anti-self-duality implies (\ref{dm3}) for a rescaling of $\mathcal{A}$. In \S\ref{model} we will consider the model case where $M=SL(3)/GL(2)$, for which we can find the Ward transform of this ASD Maxwell two-form to the twistor space $F_{12}(\mathbb{C}^3)$
+where $d\mathcal{A}=\Omega$, and $\Omega$ is the symplectic form on $M$, whose anti-self-duality implies (\ref{dm3}) for a rescaling of $\mathcal{A}$. In section \ref{model} we will consider the model case where $M=SL(3)/GL(2)$, for which we can find the Ward transform of this ASD Maxwell two-form to the twistor space $F_{12}(\mathbb{C}^3)$
 explicitly, and we will find that there is a second ASD $\beta$--surface foliation with a different two--form.
 
 
@@ -168,7 +174,7 @@ A Weyl Structure $(W,\mathcal{D},[h])$ is a conformal equivalence class of metri
 \mathcal{D}h=\omega\otimes h.
 \]
 \end{defi}
-\mynote{$\mathcal{D}$ was the name of the boundary distribution in the c-proj chapter.}
+\mynote{h is also the name of a metric in c-proj...}
 A pair $(h,\omega)$ uniquely defines the connection and hence the Weyl structure, but there is an equivalence class of such pairs which define the same Weyl structure. These are related by transformations
 \be
 \label{weyl_tr}
@@ -195,7 +201,6 @@ h=|K|^{-2}g-|K|^{-4}{\bf{K}}\odot{\bf{K}},\qquad \omega=\frac{2}{|K|^2}\star({\b
 where $|K|^2=g(K,K)$, ${\bf{K}}=g(K, \cdot)$ and $\star$ is the Hodge operator defined by $g$. Then $(h, \omega)$ is a solution of the Einstein--Weyl equations  on the space of orbits $W$ of $K$ in $M$. All Lorentzian Einstein--Weyl structures
 arise from some anti-self-dual $(M, g, K)$.
 \end{theo}
-\mynote{Need to make sure my notation for a symmetry matches the notation in the intro. Currently it does not.}
 
 \subsection{The $SU(\infty)$--Toda equation}
 
@@ -223,7 +228,7 @@ of Tod which improved the earlier result of Przanowski \cite{Prz}.
 Let $(h, \omega)$ be the Einstein--Weyl structure arising from Theorem \ref{theo_tod1}, under the additional assumption that
 the ASD conformal structure $(M, [g])$ has a representative $g\in[g]$ which is Einstein, and with non--zero Ricci scalar. 
 \begin{enumerate}
-\item The Einsten--Weyl structure admits a shear--free, twist--free geodesic
+\item The Einstein--Weyl structure admits a shear--free, twist--free geodesic
 congruence.
 \item There exists $h\in [h]$, and
 coordinates $(X, Y, Z)$ on an open set in $W$ such that
@@ -238,64 +243,58 @@ with $\epsilon=1$.
 \end{enumerate}
 \end{theo}
 
-\subsection{Summary}
+\mynote{Need to define a congruence and its shear and twist, or modify the statement of Tod's theorem to be independent of the congruence.}
+
+\subsection{From projective surfaces to $SU(\infty)$--Toda fields}
 The whole construction can now be summarised in the following diagram
 \begin{eqnarray}
 \label{diagram}
-\text{Projective structure with symmetry} &\overset{\text{Thm}\;\ref{th1int}}
+\text{Projective structure with symmetry} &\overset{\text{thm}\;\ref{thm:DM}}
 {\longrightarrow}& \text{ASD Einstein with symmetry}\nonumber\\
-\downarrow & & \downarrow \text{Thm}\;\ref{theo_tod1}\\
-\text{Solution to}\;SU(\infty)\; \text{Toda} &\overset{\text{Thm}\;\ref{th3int}}\longleftarrow&\text{Einstein--Weyl}\nonumber
+\downarrow & & \downarrow \scriptstyle{\text{thm}\;\ref{theo_tod1}}\\
+\text{Solution to}\;SU(\infty)\; \text{Toda} &\overset{\text{thm}\;\ref{th3int}}\longleftarrow&\text{Einstein--Weyl}\nonumber
 \end{eqnarray}
 %\be
 %\label{diagram}
 %A \xrightarrow{\text{Theorem}} \text{ASD Einstein with symmetry}\xrightarrow{\t%ext{Theorem}} \text{Einstein--Weyl} \xrightarrow{\text{Theorem}} SU(\infty)\; \%text{Toda}
 %\ee
 
- In the latter case the four--manifold $(M, g)$ of Theorem \ref{th1int} is $SL(3)/GL(2)$, and the mini--twistor space
-of the $SU(\infty)$--Toda equation can be constructed explicitly by quotienting the flag manifold $F_{12}(\mathbb{C}^3)$ by a $\mathbb{C}^*$ action. 
-
-In Proposition \ref{propHH} we show that the Einstein metric on $SL(3)/GL(2)$  is also pseudo--hyper--Hermitian, and its twistor space fibers holomorphicaly over $\CP^1$.
-
-\section{The general projective surface with at least one symmetry}
+\section{The general projective surface with symmetry}
 \label{general}
 
-
-
-
 Consider the most general Einstein--Weyl structure arising from the combination
-of Theorem \ref{th1int} and Theorem \ref{theo_tod1}. Because of the correspondence 
-(Theorem \ref{th1int}, part 2.)
-between symmetries of $(M, g)$ and symmetries of the projective surface $(N, [\nabla])$, the construction must begin with the general projective surface with at least one symmetry. 
+of Theorem \ref{thm:DM} and Theorem \ref{theo_tod1}. Because of the correspondence (\ref{eq:kvf_from_pvf}) between symmetries of $(M, g)$ and symmetries of the projective surface $(N, [\nabla])$, the construction must begin with the general projective surface with at least one symmetry. 
  
-By trial and error, we chose a representative connection for (\ref{eq:1symode}) such that (\ref{g}) had the simplest possible form. The choice of connection we took was
+By trial and error, we chose a representative connection for (\ref{eq:1symode}) such that the metric (\ref{eq:g4}) had the simplest possible form. The choice of connection we took was
 \[
 \Gamma^{0}_{11}=A(y),\quad \Gamma^{1}_{00}=-1, \quad \Gamma^{1}_{11}=-B(y)
 \]
-with all other components vanishing. Note that this choice of connection has a symmetric Ricci tensor, so the Schouten tensor is also symmetric and the symplectic form (\ref{Omega}) pulls back to just $dz_A\wedge dx^A$. Thus we can write the Maxwell potential $\mathcal{A}$ which is such that $d\mathcal{A}=\Omega$ as $\mathcal{A}=z_Adx^A$. Writing $x^A=(x,y)$, $z_A=(p,q)$, the resulting metric (\ref{g}) is
+with all other components vanishing. Note that this choice of connection has a symmetric Ricci tensor, so the Schouten tensor is also symmetric and the symplectic form (\ref{eq:Omega4}) pulls back to just $dz_A\wedge dx^A$. Thus we can write the Maxwell potential $\mathcal{A}$ which is such that $d\mathcal{A}=\Omega$ as $\mathcal{A}=z_Adx^A$. Writing $x^A=(x,y)$, $z_A=(p,q)$, the resulting metric (\ref{eq:g4}) is
 \be
 \label{einstein_1}
 g=(B(y) + p^2 +q)dx^2+2(pq+A(y))dxdy + (-A(y)p+B(y)q+q^2)dy^2 + dxdp +dydq.
 \ee
-Factoring by $K=\frac{\p}{\p x}$, and following the algorithm of Theorem
-\ref{theo_tod1} gives the following
+Factoring by $K=\frac{\p}{\p x}$ following the algorithm of Theorem
+\ref{theo_tod1}, equation (\ref{EWgen}) gives the following form for the Einstein--Weyl structure.
 \begin{prop}
 \label{prop1}
 The most general  Einstein--Weyl structure arising
-from the procedure (\ref{diagram}) is locally equivalent to\footnote{MD: something wrong}
+from the procedure (\ref{diagram}) is locally equivalent to
 \begin{eqnarray}
 \label{ew_final}
 h&=&\frac{1}{V}\big((Bq -Ap+ q^2)dy+dq\big)dy
 -\Big({pq+A}dy+\frac{1}{2}dp\Big)^2, \label{genh} \\
 \omega&=&V(4dq+2 pdp), \quad\mbox{where}\quad V=
-({B}+ p^2+q)^{-1}\nonumber
+({B}+ p^2+q)^{-1}.\nonumber
 \end{eqnarray}
-where $(p, q, y)$ are local coordinates on $W$, and $A, B$ are arbitrary functions of $y$.
+Here $(p, q, y)$ are local coordinates on $W$ and $A(y), B(y)$ are arbitrary functions of $y$.
 \end{prop}
+
+
 \subsection{Solution to the $SU(\infty)$--Toda equation}
 \label{steps_sec}
 The procedure for extracting the corresponding solution to the $SU(\infty)$--Toda equation is given in \cite{Tod_note} 
-(see also \cite{LeBrun} and\footnote{MD: me and paul} \cite{}). It involves finding the coordinates $(X,Y,Z)$ that put the metric (\ref{genh}) in the 
+(see also \cite{LeBrun} and \cite{DT}). It involves finding the coordinates $(X,Y,Z)$ that put the metric (\ref{genh}) in the 
 form (\ref{metric_toda}). Given an ASD Einstein metric $(M, g)$ with a
 Killing vector $K$
 \begin{enumerate}
@@ -363,24 +362,25 @@ e^U(e^UX^2-Z^2)^3+Z^4=0.
 \subsubsection{Example 2.}
 To simplify the form of (\ref{toda_implicit1}) set
 \[
-G=\int\exp{\Big(-2\int B(y)dy\Big)}, \quad T=\frac{2Z^2}{Z^2p^2+4}
+G=\int\exp{\Big(-2\int B(y)dy\Big)}, \quad T=\frac{2Z^2}{Z^2p^2+4}.
 \]
 Then (\ref{toda_implicit1}) becomes
-\be
-\label{toda_impl2}
+\[
 e^U=\frac{Z^4}{8T^3 (G')^2}, \quad Y=G+G'T\Big(\frac{4T}{Z^2}-1\Big), \quad
 X^2=\frac{4T^4(G')^2}{Z^2}\Big(\frac{2}{T}-\frac{4}{Z^2} \Big).
-\ee
-Eliminating $(T, y)$ between these three equations gives one relation between $(X, Y, Z)$ and  $U$ - this is our implicit solution.
+\]
+Eliminating $(T, y)$ between these three equations gives one relation between $(X, Y, Z)$ and  $U$ which is our implicit solution.
 The elimination can be carried over explicitly if $G=y^k$ for any integer $k$, or if $G=\exp{y}$. In the later case the solution is given by
-(\ref{example_int}).
+\[
+4Y^2e^U(e^UX^2-Z^2)^3+(2e^{2U}X^4-3e^UX^2Z^2+Z^4+2Z^2)^2=0.
+\]
 \subsection{Two monopoles}
 The Einstein--Weyl structures  (\ref{genh}) we have constructed in Proposition \ref{prop1}
 are special, as they belong to the $SU(\infty)$--Toda class, and so
 (as shown by Tod \cite{Tod_toda}) admit a non--null geodesic congruence which has vanishing shear and twist.
 The general solution to the $SU(\infty)$--Toda equation depends (in the real analytic category) on 
 two arbitrary functions of two variables, but the solutions of the form (\ref{genh}) depend on two functions of one variable. The additional constraints on the solutions can be traced back to the four dimensional ASD conformal structures
-which give rise (by the Jones--Tod construction) to (\ref{genh}). In addition to their being ASD and Einstein
+which give rise (by the Jones--Tod construction) to (\ref{genh}). As discussed above, in addition to their being ASD and Einstein
 they are  characterised \cite{DM} by a $\beta$--distribution which is parallel with respect to the Levi--Civita connection and ASD in the sense of Calderbank \cite{Cal1}.
 The corresponding $\beta$--surfaces do not generically intersect with a given $\alpha$--surface, however if they do intersect then they will intersect in curves (null geodesics) which descend to the Einstein--Weyl structures, and give
 rise to another (in addition to the Tod shear--free, twist--free) geodesic congruence.
@@ -419,7 +419,7 @@ we find
 \[
 V_M=-pV, \quad \alpha_V=qdy-p\alpha.
 \]
-\section{An example from the submaximally symmetric projective surface}
+\section{The submaximally symmetric projective surface}
 \label{neat}
 The submaximally symmetric projective surface is the punctured plane $N=\mathbb{R}^2\backslash\{0\}$, with the symmetry group $SL(2)$ acting via its fundamental representation. Here we have a one parameter family of projective structures falling into three distinct equivalence classes, with geodesics described by the differential equation
 \be
@@ -559,17 +559,18 @@ In the case of the Weyl structure (\ref{ew_neat}), the infinitesimal symmetry is
 \mathcal{K}=\frac{\p}{\p v}.
 \]
 Since we have chosen a scale such that $\mathcal{K}$ is in fact a Killing vector of $h$, we have that $\mathcal{K}\hook d(\mathrm{ln}(\mathrm{det}(h))=0$, so the one--form $\omega$ is also preserved by $\mathcal{K}$. This is consistent with the fact that it has no explicit $v$--dependence.
-\section{The model $SL(3)/GL(2)$ and its reductions}
+\section{The flat projective surface}
 \label{model}
 In the following section we discuss the four--manifold $(M,g)$ obtained from the maximally symmetric flat 
-projective surface $N=\RP^2$. In this case, $g$ is the indefinite analogue of the Fubini--Study metric, and is not only bi--Lagrangian but also para--K\"ahler, since the symplectic form $\Omega$ is parallel with respect to the Levi--Civita connection of $g$. Chosing a representative connection with
+projective surface $N=\RP^2$. In this case, $g$ is the indefinite analogue of the Fubini--Study metric given by the quotient $SL(3)/GL(2)$, and is not only almost para--K\"ahler but in fact para--K\"ahler, since the symplectic form $\Omega$ is parallel with respect to the Levi--Civita connection of $g$. Chosing a representative connection with
 $\Gamma_{AB}^C=0$ gives $g$ as
 \be
 \label{special_ein}
 g=dz_A\odot dx^A+ z_Az_B dx^A\odot dx^B.
 \ee
+
 We begin by discussing the  conformal structure
-of (\ref{special_ein}), both explicitly and in terms of twistor lines. We then note some structure which is unique to the model case: hyper-hermiticity and a second foliation by $\beta$--surfaces which is ASD in the sense of Calderbank\footnote{MD: we do not actually do that}. 
+of (\ref{special_ein}), both explicitly and in terms of its twistor space, which is the flag manifold $F_{12}(\mathbb{C}^3)$. We then note some structure which is unique to the model case: \mynote{para? pseudo?} hyper-hermiticity and a second foliation by $\beta$--surfaces which is ASD in the sense of Calderbank\mynote{MD: we do not actually do that}. We also note that the twistor space  $F_{12}(\mathbb{C}^3)$ fibers holomorphicaly over $\CP^1$.
 
 Finally, we present a classification of the Einstein--Weyl structures which can be obtained by Jones--Tod factorisation of $SL(3)/GL(2)$ and exhibit an explicit example of such a factorisation from the twistor perspective, reconstructing the conformal structure on $W$ from minitwistor curves.
 \subsection{Conformal Structure}

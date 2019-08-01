@@ -590,25 +590,25 @@ Recall that a projective vector field on any manifold with a connection
 generates a 1-parameter family of transformations which preserve the
 geodesics of that connection up to parametrisation. Projective vectors
 fields thus naturally arise as the symmetries of a projective structure.
-Explicitly, a vector field $K$ is projective if it satisfies
+Explicitly, a vector field $\tilde{K}$ is projective if it satisfies
 \begin{equation}
-\mathcal{L}_{K}\Gamma_{ij}^{k}=\delta_{i}^{k}\Upsilon_{j}+\delta_{j}^{k}\Upsilon_{i}\label{eq:proj_transf}
+\mathcal{L}_{\tilde{K}}\Gamma_{ij}^{k}=\delta_{i}^{k}\Upsilon_{j}+\delta_{j}^{k}\Upsilon_{i}\label{eq:proj_transf}
 \end{equation}
 for some 1-form $\Upsilon$, where $\Gamma_{ij}^{k}$ are the connection
 components, and their Lie derivative is defined (see \cite{yano})
 by
 \begin{equation}
-\mathcal{L}_{K}\Gamma_{ij}^{k}\equiv\frac{\partial^{2}K^{k}}{\partial x^{i}\partial x^{j}}+K^{m}\frac{\partial\Gamma_{ij}^{k}}{\partial x^{m}}-\Gamma_{ij}^{m}\frac{\partial K^{k}}{\partial x^{m}}+\Gamma_{im}^{k}\frac{\partial K^{m}}{\partial x^{j}}+\Gamma_{mj}^{k}\frac{\partial K^{m}}{\partial x^{i}}.\label{eq:liederivGamma}
+\mathcal{L}_{\tilde{K}}\Gamma_{ij}^{k}\equiv\frac{\partial^{2}\tilde{K}^{k}}{\partial x^{i}\partial x^{j}}+\tilde{K}^{m}\frac{\partial\Gamma_{ij}^{k}}{\partial x^{m}}-\Gamma_{ij}^{m}\frac{\partial \tilde{K}^{k}}{\partial x^{m}}+\Gamma_{im}^{k}\frac{\partial \tilde{K}^{m}}{\partial x^{j}}+\Gamma_{mj}^{k}\frac{\partial \tilde{K}^{m}}{\partial x^{i}}.\label{eq:liederivGamma}
 \end{equation}
 
 
 One consequence of the symmetry property of the Cartan connection discussed in remark \ref{rmk:theta_symmetry} is that for every open set $\mathcal{U}\subset N$ we have an isomorphism between the Lie algebra of projective vector fields on $\mathcal{U}$ and the Lie algebra of vector fields on $\pi_P^{-1}(\mathcal{U})$ preserving the natural contraction $\eta\omega$. Such vector fields must descend to vector fields on $\pi_\cM^{-1}(\mathcal{U})$ preserving $(g,\Omega)$. In fact, it can be shown that every Killing vector field of $(M,g_\Lambda)$ is also symplectic with respect to $\Omega_\Lambda$ and is therefore the lift of a projective vector field on $(N,[\nabla])$.
 
-Explicitly, for every projective vector field $K$ of $(N,[\nabla])$
-there is a corresponding Killing vector $\mathcal{K}$ of $(M,g_{\Lambda})$
+Explicitly, for every projective vector field $\tilde{K}$ of $(N,[\nabla])$
+there is a corresponding Killing vector $K$ of $(M,g_{\Lambda})$
 given in local coordinates by 
 \begin{equation}
-\mathcal{K}=K-\zeta_{i}\frac{\partial K^{j}}{\partial x^{i}}\frac{\partial}{\partial \zeta_{j}}+\frac{1}{\Lambda}\Upsilon_{i}\frac{\partial}{\partial \zeta_{i}},\label{eq:kvf_from_pvf}
+{K}=\tilde{K}-\zeta_{i}\frac{\partial \tilde{K}^{j}}{\partial x^{i}}\frac{\partial}{\partial \zeta_{j}}+\frac{1}{\Lambda}\Upsilon_{i}\frac{\partial}{\partial \zeta_{i}},\label{eq:kvf_from_pvf}
 \end{equation}
 where $\Upsilon_{i}$ is defined by (\ref{eq:proj_transf}).
 
