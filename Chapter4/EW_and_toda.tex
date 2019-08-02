@@ -67,7 +67,8 @@ y^{\prime\prime} = A(y)(y^\prime)^3 + B(y)(y^\prime)^2 + 1.
 
 Note that each of these classes of projective structures forms a subset of the next, and this can be seen explicitly by some changes of coordinates. For example, the general projective surface with a symmetry is flat when $A(y)=B(y)=0$.
 
-\subsection{Anti--self--duality and totally null distributions}
+\subsection{Anti--self--duality, spinors and totally null distributions}
+\mynote{Can this be motivated better? Could also write all this in spinor terms (see e.g. Huggett and Tod) but it would be a lot of work and probs unnecessary.}
 Let $M$ be an oriented four--dimensional manifold with a metric
 $g$ of signature $(2, 2)$. The Hodge operator $\ast$ on the space of two forms is an involution, and induces a decomposition \cite{AHS}
 \be 
@@ -100,23 +101,46 @@ trace-free Ricci curvature, and $-24\Lambda$ is the scalar curvature which acts
 by scalar multiplication. 
 The metric $g$ is Einstein if $\phi=0$, and the corresponding conformal structure $[g]$ is ASD if $C_+=0$. If both of these conditions are satisfied then
 the Riemann tensor is also anti-self-dual.
-\vskip3pt
-Locally there exist real rank two vector bundles $\spp, \spp'$  (spin bundles) over $M$ equipped with parallel symplectic structures
+
+The symmetry group of a metric in signature $(+,+,-,-)$ decomposes under the Lie group isomorphism
+\[
+SO(2,2)\cong SL(2,\R) \times SL(2,\R)/\mathbb{Z}_2.
+\]
+Locally\footnote{$\spp,\spp'$ are defined globally if $M$ satisfies some topological restrictions; see \cite{penroserindler}.} there exist real rank two vector bundles $\spp, \spp'$  (spin bundles) over $M$ equipped with parallel symplectic structures
 $\ep, \ep'$ such that
 \be
 \label{can_bun_iso}
 T M\cong {\spp}\otimes {\spp'}
 \ee
 is a  canonical bundle isomorphism, and
-\[
+\be \label{eq:g=epseps}
 g(v_1\otimes w_1,v_2\otimes w_2)
 =\varepsilon(v_1,v_2)\varepsilon'(w_1, w_2)
+\ee
+for $v_1, v_2\in \Gamma(\spp)$ and $w_1, w_2\in \Gamma(\spp')$. 
+\mynote{Huggett and Tod introduce $\varepsilon$ (after taking tensor products of $\spp,\spp'$) as the unique non--zero two index spinor up to scale, then use symmetry arguments to show $g=\varepsilon\otimes\varepsilon'$...}
+
+We will use the usual notation $v^A\in\Gamma(\spp),w^{A'}\in\Gamma(\spp')$, then in index notation we can write (\ref{eq:g=epseps}) as
+\be \label{eq:g(UAA'VBB'}
+g_{ab}U^aV^b=\varepsilon_{AB}\varepsilon_{A'B'} U^{AA'}V^{BB'}.
+\ee
+We identify $\spp$ with its dual according to
+\[
+v_A=v^B\varepsilon_{BA},\qquad v^A=\varepsilon^{AB}v_B,
 \]
-for $v_1, v_2\in \Gamma(\spp)$ and $w_1, w_2\in \Gamma(\spp')$.
-A vector $V\in \Gamma(TM)$ is called null if $g(V, V)=0$. Any null vector is of the form
-$V=\lambda \otimes \pi$ where $\lambda$, and $\pi$ are sections of
-$\spp$ and $\spp'$ respectively.
-\mynote{More detail here.}
+and similarly for $\spp'$. Note that the contraction is always over adjacent indices descending to the right, and $\varepsilon^{AB}\varepsilon_{CB}=\delta_C^{\ A}$. In higher valence spinors, the relative order of primed and unprimed indices is unimportant.
+
+A vector $V\in \Gamma(TM)$ is called null if $g(V, V)=0$. For $U=V$ the right hand side of \ref{eq:g(UAA'VBB'} is just the determinant of $V^{AA'} $ viewed as a matrix, so any null vector is of the form
+$V=v \otimes w$ where $v$, and $w$ are sections of
+$\spp$ and $\spp'$ respectively. The antisymmetry of $\varepsilon$ means that $\varepsilon(v,v)=0$ for any section $v\in\Gamma(\spp)$ (and similarly for any $w\in\spp'$), so the converse is also true (i.e. any vector that can be written $V=v\otimes w$ is null).
+
+Since $\spp,\spp'$ have dimension two, any spinor of valence $n$ which is skew on a pair of indices can be factorised as the tensor product of a spinor of valence $n-2$ and either $\varepsilon$ or $\varepsilon'$. This leads to the decomposition of a two--form $F_{ab}=F_{AA'BB'}=F_{ABA'B'}$ as
+\[
+F_{ABA'B'} = \varepsilon_{AB}\Phi_{A'B'} + \varepsilon_{A'B'}\Psi_{AB},
+\]
+where $\Phi_{A'B'}=\Phi_{(A'B')}$ and $\Psi_{AB}=\Psi_{(AB)}$. One can show using an analogous decomposition of the volume form that $\Phi_{A'B'}$ and $\Psi_{AB}$ are the SD and ASD parts of $F_{ab}$ respectively.
+
+Any two--dimensional distribution on a four--manifold $M$ can be expressed as the kernel of a two--form, and we define a distribution to be (A)SD if the corresponding two--form is (A)SD. Taking any $v^A\in\Gamma(\spp)$ and $w^{A'}\in\spp'$, the two--forms $v_Av_B\varepsilon_{A'B'}$ and $w_{A'}w_{B'}\varepsilon_{AB}$ define distributions which are totally null in the sense that $g(U,V)=0$ for all $U,V\in\Gamma(D)$. \mynote{right?}
 
 An $\alpha$--plane (respectively a $\beta$--plane) 
 is a two--dimensional plane in $T_pM$
@@ -129,17 +153,8 @@ Penrose's Nonlinear Graviton Theorem \cite{penrose} states that   a
 maximal, three dimensional, family of $\alpha$--surfaces exists 
 in $M$ iff $C_+=0$.
 
-The spin bundles are useful for describing a special class of distributions which are totally null in the following sense.
 
-\begin{defi}
-A distribution $D$ on a pseudo--Riemannian manifold $(M,g)$ is called totally null if $g(X,Y)=0$ for all $X,Y\in\Gamma(D)$, and parallel if $^g\nabla_XY\in\Gamma(D)$ for all $X\in \Gamma(TM),\ Y\in\Gamma(D)$.
-\end{defi}
-Note that a parallel distribution is necessarily Frobenius integrable, since
-\[
-[X,Y]= {^g}\nabla_XY- {^g}\nabla_YX\in\Gamma(D)\quad\mbox{for all}\quad X,Y\in\Gamma(D).
-\]
-
-Any two--dimensional distribution on a four--manifold $M$ can be expressed as the kernel of a two--form, \mynote{Decompose two--form using spinors. Describe a totally null distribution in terms of the two--form. Describe alpha and beta distributions, and alpha and beta surfaces (including the paragraph from above, and then the nonlinear graviton. Then say a beta distribution is intrinsically SD, but there is a subclass of beta distributions which are also SD or ASD in the sense of Calderbank.}
+a beta distribution is intrinsically SD, but there is a subclass of beta distributions which are also SD or ASD in the sense of Calderbank...
 
 e$\beta$--surfaces defined by an ASD two--form
 $\Sigma_{ab}=\iota_A\iota_B\epsilon_{A'B'}$, and  such that
@@ -152,13 +167,21 @@ where $d\mathcal{A}$ is an ASD Maxwell field.
 
 We shall call such foliations ASD $\beta$--surface foliations. \mynote{Add the justification from West's thesis that integrability implies (\ref{dm3}), if you can understand why his condition about $\iota\iota\nabla\iota$ is equivalent to integrability.}
 
+\cite{Cal1} (see also \cite{West}). 
+
+
 A general ASD metric depends, in the real--analytic category, on six arbitrary functions of the variables. Theorem \ref{thm:DM} gives an explicit subclass of such metrics which are additionally constrained by the following local characterisation.
 
 \begin{theo}\cite{DM} \label{thm:DMcharacterisation}
-Let $(M,g)$ be an ASD Einstein manifold with scalar curvature $24$ admitting a totally null distribution which is parallel with respect to the Levi--Civita connection of $g$ and ASD in the sense of Calderbank \cite{Cal1} (see also \cite{West}). Then $(M,g)$ is conformally flat, or it is locally isometric to (\ref{eq:g4}).
+Let $(M,g)$ be an ASD Einstein manifold with scalar curvature $24$ admitting a totally null distribution which is ASD in the sense of Calderbank and parallel in the sense that $^g\nabla_XY\in\Gamma(D)$ for all $X\in \Gamma(TM),\ Y\in\Gamma(D)$. Then $(M,g)$ is conformally flat, or it is locally isometric to (\ref{eq:g4}).
 \end{theo}
 
-In our coordinates this distribution is given by the two--form $\Sigma=dx^0\wedge dx^1$, and ${D}=\mathrm{span}\{\p/\p z_0,\p/\p z_1\}$. We find that
+Note that a parallel distribution is necessarily Frobenius integrable, since
+\[
+[X,Y]= {^g}\nabla_XY- {^g}\nabla_YX\in\Gamma(D)\quad\mbox{for all}\quad X,Y\in\Gamma(D).
+\]
+
+In our coordinates $D$ is the kernel of the two--form $\Sigma=dx^0\wedge dx^1$, and can be written as ${D}=\mathrm{span}\{\p/\p z_0,\p/\p z_1\}$. We find that
 \be
 \label{beta_eq}
 ^g\nabla\Sigma=6\mathcal{A}\otimes \Sigma,
