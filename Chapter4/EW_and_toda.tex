@@ -68,7 +68,7 @@ y^{\prime\prime} = A(y)(y^\prime)^3 + B(y)(y^\prime)^2 + 1.
 Note that each of these classes of projective structures forms a subset of the next, and this can be seen explicitly by some changes of coordinates. For example, the general projective surface with a symmetry is flat when $A(y)=B(y)=0$.
 
 \subsection{Anti--self--duality, spinors and totally null distributions}
-\mynote{Can this be motivated better? Could also write all this in spinor terms (see e.g. Huggett and Tod) but it would be a lot of work and probs unnecessary.}
+\mynote{Can this be motivated better? Could also write all this in spinor terms and even prove Penrose's nonlinear graviton theorem (see e.g. Huggett and Tod) but it would be a lot of work and probs unnecessary.}
 Let $M$ be an oriented four--dimensional manifold with a metric
 $g$ of signature $(2, 2)$. The Hodge operator $\ast$ on the space of two forms is an involution, and induces a decomposition \cite{AHS}
 \be 
@@ -140,40 +140,24 @@ F_{ABA'B'} = \varepsilon_{AB}\Phi_{A'B'} + \varepsilon_{A'B'}\Psi_{AB},
 \]
 where $\Phi_{A'B'}=\Phi_{(A'B')}$ and $\Psi_{AB}=\Psi_{(AB)}$. One can show using an analogous decomposition of the volume form that $\Phi_{A'B'}$ and $\Psi_{AB}$ are the SD and ASD parts of $F_{ab}$ respectively.
 
-Any two--dimensional distribution on a four--manifold $M$ can be expressed as the kernel of a two--form, and we define a distribution to be (A)SD if the corresponding two--form is (A)SD. Taking any $v^A\in\Gamma(\spp)$ and $w^{A'}\in\spp'$, the two--forms $v_Av_B\varepsilon_{A'B'}$ and $w_{A'}w_{B'}\varepsilon_{AB}$ define distributions which are totally null in the sense that $g(U,V)=0$ for all $U,V\in\Gamma(D)$. \mynote{right?}
+Any two--dimensional distribution on a four--manifold $M$ can be expressed as the kernel of a two--form, and we define a distribution to be (A)SD if the corresponding two--form is (A)SD. Taking any $\iota^A\in\Gamma(\spp)$, the two--form $\iota_A\iota_B\varepsilon_{A'B'}$ defines an ASD distribution $D=\{\iota^Aw^{A'},w^{A'}\in\Gamma(\spp')\}$ which is totally null in the sense that $g(U,V)=0$ for all $U,V\in\Gamma(D)$. We call this a $\beta$--distribution. One can similarly define a totally null SD distribution called an $\alpha$--distribution given any $o^{A'}\in\Gamma(\spp')$. An $\alpha$--surface (respectively $\beta$--surface) is a two--dimensional surface in $M$ which is tangent to an $\alpha$--($\beta$--)distribution at every point. Penrose's Nonlinear Graviton Theorem \cite{penrose} states that a 
+maximal, three dimensional family of $\alpha$--surfaces exists in $M$ if and only if its conformal curvature is ASD, i.e. $C_+=0$.
 
-An $\alpha$--plane (respectively a $\beta$--plane) 
-is a two--dimensional plane in $T_pM$
-spanned by null vectors of the above form with $\pi$ (respectively
-$\lambda$) fixed, and
-an $\alpha$--surface ($\beta$--surface) is a two--dimensional surface in $M$ 
-such 
-that its tangent plane at every point is an $\alpha$--plane ($\beta$--plane). 
-Penrose's Nonlinear Graviton Theorem \cite{penrose} states that   a 
-maximal, three dimensional, family of $\alpha$--surfaces exists 
-in $M$ iff $C_+=0$.
-
-
-a beta distribution is intrinsically SD, but there is a subclass of beta distributions which are also SD or ASD in the sense of Calderbank...
-
-e$\beta$--surfaces defined by an ASD two--form
-$\Sigma_{ab}=\iota_A\iota_B\epsilon_{A'B'}$, and  such that
-the spinor $\iota_A$ satisfies
+Although a $\beta$--distribution is intrinsically ASD, there are two subclasses of $\beta$--distribution which we shall call SD or ASD \textit{in the sense of Calderbank} \cite{Cal1} (see also \cite{West}). Let $D$ be a $\beta$--distribution defined by an ASD two--form $\Sigma_{ab}=\iota_A\iota_B\epsilon_{A'B'}$, and  such that the spinor $\iota_A$ satisfies
 \be
 \label{dm3}
 \nabla_{A'(A}\iota_{B)}=\mathcal{A}_{A'(A}\iota_{B)}
 \ee
-where $d\mathcal{A}$ is an ASD Maxwell field.
+where $d\mathcal{A}$ is an (A)SD Maxwell field. Then $D$ is (A)SD in the sense of Calderbank.
+\mynote{Add the justification from West's thesis that integrability implies (\ref{dm3}), if you can understand why his condition about $\iota\iota\nabla\iota$ is equivalent to integrability.}
 
-We shall call such foliations ASD $\beta$--surface foliations. \mynote{Add the justification from West's thesis that integrability implies (\ref{dm3}), if you can understand why his condition about $\iota\iota\nabla\iota$ is equivalent to integrability.}
-
-\cite{Cal1} (see also \cite{West}). 
+ 
 
 
 A general ASD metric depends, in the real--analytic category, on six arbitrary functions of the variables. Theorem \ref{thm:DM} gives an explicit subclass of such metrics which are additionally constrained by the following local characterisation.
 
 \begin{theo}\cite{DM} \label{thm:DMcharacterisation}
-Let $(M,g)$ be an ASD Einstein manifold with scalar curvature $24$ admitting a totally null distribution which is ASD in the sense of Calderbank and parallel in the sense that $^g\nabla_XY\in\Gamma(D)$ for all $X\in \Gamma(TM),\ Y\in\Gamma(D)$. Then $(M,g)$ is conformally flat, or it is locally isometric to (\ref{eq:g4}).
+Let $(M,g)$ be an ASD Einstein manifold with scalar curvature $24$ admitting a totally null distribution $D$ which is ASD in the sense of Calderbank and parallel in the sense that $^g\nabla_XY\in\Gamma(D)$ for all $X\in \Gamma(TM),\ Y\in\Gamma(D)$. Then $(M,g)$ is conformally flat, or it is locally isometric to (\ref{eq:g4}).
 \end{theo}
 
 Note that a parallel distribution is necessarily Frobenius integrable, since
