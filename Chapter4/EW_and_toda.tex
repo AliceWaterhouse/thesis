@@ -140,6 +140,7 @@ where $\Phi_{A'B'}=\Phi_{(A'B')}$ and $\Psi_{AB}=\Psi_{(AB)}$. One can show usin
 
 Any two--dimensional distribution on a four--manifold $M$ can be expressed as the kernel of a two--form, and we define a distribution to be (A)SD if the corresponding two--form is (A)SD. Taking any $\iota^A\in\Gamma(\spp)$, the two--form $\iota_A\iota_B\varepsilon_{A'B'}$ defines an ASD distribution $D=\{\iota^Aw^{A'},w^{A'}\in\Gamma(\spp')\}$ which is totally null in the sense that $g(U,V)=0$ for all $U,V\in\Gamma(D)$. We call this a $\beta$--distribution. One can similarly define a totally null SD distribution called an $\alpha$--distribution given any $o^{A'}\in\Gamma(\spp')$. An $\alpha$--surface (respectively $\beta$--surface) is a two--dimensional surface in $M$ which is tangent to an $\alpha$--($\beta$--)distribution at every point. Penrose's Nonlinear Graviton Theorem \cite{penrose} states that a 
 maximal, three dimensional family of $\alpha$--surfaces exists in $M$ if and only if its conformal curvature is ASD, i.e. $C_+=0$. The \textit{twistor space} of $M$ is then defined as the three--dimensional manifold comprising the set of all $\alpha$--surfaces in $M$. \mynote{Except twistor space is a complex manifold...}
+\mynote{Something about normal bundles and twistor distributions.}
 
 Although a $\beta$--distribution is intrinsically ASD, there are two subclasses of $\beta$--distribution which we shall call SD or ASD \textit{in the sense of Calderbank} \cite{Cal1} (see also \cite{West}). Let $D$ be a $\beta$--distribution defined by an ASD two--form $\Sigma_{ab}=\iota_A\iota_B\epsilon_{A'B'}$, and  such that the spinor $\iota_A$ satisfies
 \be
@@ -726,15 +727,24 @@ I^2=-Id, \quad S^2=T^2=Id, \quad IST=Id,
 \]
 and such that $aI+bS+cT$ is an integrable complex structure for any point 
 on the hyperboloid $a^2-b^2-c^2=1$.
-A neutral signature metric $g$ on a pseudo--hyper--complex four--manifold is pseudo-hyper-Hermitian
+A neutral signature metric $g$ on a pseudo--hyper--complex four--manifold is pseudo--hyper--Hermitian
 if
 \[
 g(V, V)=g(IV, IV)=-g(SV, SV)=-g(TV, TV)
 \]
-for any vector field $V$ on $M$. There is a unique conformal structure compatible
-with each pseudo--hyper--complex structure. With a natural choice of orientation
+for any vector field $V$ on $M$.
+
+Given a pseudo--hyper--complex structure $(M,\{I,S,T\})$ and any vector field $V$ on $M$, the frame $(V,IV,SV,TV)$ defines a conformal structure on $M$. With a natural choice of orientation
 which makes the fundamental two--forms of $I, S, T$  self--dual, 
-this conformal structure is anti--self--dual.
+this conformal structure is anti--self--dual. \mynote{Can we justify this?}
+Let $\Sigma^{A'B'}$ be a basis of SD two--forms on $M$. The following result is proved in \cite{D99} (see also \cite{boyer}) in the Riemannian (i.e. hyper--complex) case.
+\begin{theo}[\cite{D99}]\label{thm:D99}
+A four--manifold $M$ equipped with a neutral signature metric $g$ is pseudo--hyper--Hermitian if there exists a one--form $A$ depending only on $g$ such that
+\[
+d\Sigma^{A'B}+A\wedge \Sigma^{A'B'} = 0.
+\]
+\end{theo}
+In fact, this condition is necessary and sufficient for hyper--Hermiticity \cite{D99,boyer}.
 \begin{prop}
 \label{propHH}
 The Einstein metric (\ref{special_ein}) on $SL(3)/GL(2)$ is pseudo--hyper--Hermitian.
@@ -761,11 +771,10 @@ We can verify that
 \label{lie_form}
 d\Sigma^{AB}+2{{\mathcal{A}}}\wedge\Sigma^{AB}=0,
 \ee
-where ${{\mathcal A}}= z_Adx^A$ is such that $d{{\mathcal{A}}}= \Omega$. 
-The condition (\ref{lie_form}) is neccesary and sufficient for (para) hyper--Hermiticity
-\cite{boyer, D99}.
-Thus the ASD
-Maxwell fields arising from the para--K\"ahler structure on $M$, and the para hyper--Hermitian structure coincide.
+where ${{\mathcal A}}= z_Adx^A$ is such that $d{{\mathcal{A}}}= \Omega$,
+so from Theorem \ref{thm:D99} we have that $M$ carries a hyper--Hermitian structure, and in fact the corresponding ASD Maxwell field $d\mathcal{A}=\Omega$ coincides with the one arising from the para--K\"ahler structure on $M$ via (\ref{beta_eq}).
+
+\mynote{If I am keeping this last paragraph, the twistor distribution ought to have already been introduced. And the lack of vertical terms mentioned above with thm \ref{thm:D99}.}
 To this end note that the twistor distribution form $(M,  g)$ is
 \be
 \label{tdistribution}
@@ -840,10 +849,12 @@ is indeed the ASD para--K\"ahler structure.
 \label{neat2}
 If a metric with ASD Weyl tensor has more than one conformal symmetry, then distinct Einstein--Weyl structures are obtained on the space of orbits of conformal Killing vectors which are not conjugate with respect to an isometry \cite{PT}. We can thus classify the Einstein--Weyl structures obtainable from $SL(3)/GL(2)$ by first classifying its symmetries up to conjugation.
 \begin{prop}
-The non--trivial Einstein--Weyl structures obtainable from $SL(3)/GL(2)$ by the Jones--Tod correspondence consist of a two--parameter family, and two additional cases which do not belong to this family.
+The non--trivial Einstein--Weyl structures obtainable from the ASD Einstein metric (\ref{special_ein}) on $SL(3)/GL(2)$ by the Jones--Tod correspondence consist of a two--parameter family, and two additional cases which do not belong to this family.
 \end{prop}
 \noindent
-{\bf Proof. }Since we have an isomorphism between the Lie algebra of projective vector fields on $(N,[\nabla])$ and the Lie algebra of Killing vectors on $(M,g)$, the problem of classifying the symmetries of $M=SL(3)/GL(2)$ is reduced to a classification of the infinitesimal  projective symmetries of $\RP^2$, i.e. the near--identity elements of $SL(3)$, up to conjugation. Non--singular complex matrices are determined up to similarity by their Jordan normal form (JNF). While real matrices do not have such a canonical form, all of the information they contain is determined (up to similarity) by the JNF that they would have if they were considered as complex matrices. Thus we can still discuss the JNF of a real matrix, even if it cannot always be obtained from the real matrix by a real similarity transformation. The possible non--trivial Jordan normal forms of matrices in $SL(3)$ are shown below.
+{\bf Proof. }Since we have an isomorphism between the Lie algebra of projective vector fields on $(N,[\nabla])$ and the Lie algebra of Killing vectors on $(M,g)$, the problem of classifying the symmetries of (\ref{special_ein}) on $M=SL(3)/GL(2)$ is reduced to a classification of the infinitesimal  projective symmetries of $\RP^2$, i.e. the near--identity elements of $SL(3)$, up to conjugation.
+
+Non--singular complex matrices are determined up to similarity by their Jordan normal form (JNF). While real matrices do not have such a canonical form, all of the information they contain is determined (up to similarity) by the JNF that they would have if they were considered as complex matrices. Thus we can still discuss the JNF of a real matrix, even if it cannot always be obtained from the real matrix by a real similarity transformation. The possible non--trivial Jordan normal forms of matrices in $SL(3)$ are shown below.
 \[
 \begin{pmatrix}\lambda & 0 & 0\\
 0 & \mu & 0\\
@@ -886,10 +897,10 @@ This has characteristic polynomial
 \]
 Evidently the important degrees of freedom are $a+d$ and $ad-bc$, so we can use these to encode every near--identity element of the class with three distinct eigenvalues. The bottom--right entry will be determined by our choice of $a+d$ and $ad-bc$.
 
-Taking a projective vector field on $\mathbb{RP}^2$, we can find the corresponding Killing vector on $SL(3)/GL(2)$ using (\ref{symlift}), and factor to Einstein--Weyl using (\ref{EWgen}). We find by explicit calculation that vector fields arising from the second and fourth JNFs above give trivial Einstein--Weyl structures, so restricting to the non--trivial cases we have a two--parameter family of Einstein--Weyl structures coming from the first class, and two additional Einstein--Weyl structures coming from the third and fifth, as claimed.
-\begin{flushright}
-$\square$
-\par\end{flushright}
+Taking a projective vector field on $\mathbb{RP}^2$, we can find the corresponding Killing vector on $SL(3)/GL(2)$ using (\ref{eq:kvf_from_pvf}), and factor to Einstein--Weyl using (\ref{EWgen}). We find by explicit calculation that vector fields arising from the second and fourth JNFs above give trivial Einstein--Weyl structures, so restricting to the non--trivial cases we have a two--parameter family of Einstein--Weyl structures coming from the first class, and two additional Einstein--Weyl structures coming from the third and fifth, as claimed.
+\koniec
+
+\mynote{Why does the third class not give a one--parameter family?}
 \subsection{Mini--twistor correspondence}
 \label{mini_twistor}
 Below we investigate a one--parameter subfamily of the two--parameter family. We use the holomorphic vector field on 
