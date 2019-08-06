@@ -100,6 +100,7 @@ of the conformal Weyl tensor\footnote{Note this is a different object to the pro
 trace-free Ricci curvature, and $-24\Lambda$ is the scalar curvature which acts
 by scalar multiplication. The metric $g$ is Einstein if $\phi=0$, and the corresponding conformal structure $[g]$ is ASD if $C_+=0$. We will call $g$ \textit{conformally ASD} if it has ASD Weyl tensor. If both of these conditions are satisfied then the Riemann tensor is also anti-self-dual.
 
+\subsubsection{Two--component spinors}
 The symmetry group of a metric in signature $(+,+,-,-)$ decomposes under the Lie group isomorphism
 \[
 SO(2,2)\cong SL(2,\R) \times SL(2,\R)/\mathbb{Z}_2.
@@ -138,20 +139,66 @@ F_{ABA'B'} = \varepsilon_{AB}\Phi_{A'B'} + \varepsilon_{A'B'}\Psi_{AB},
 \]
 where $\Phi_{A'B'}=\Phi_{(A'B')}$ and $\Psi_{AB}=\Psi_{(AB)}$. One can show using an analogous decomposition of the volume form that $\Phi_{A'B'}$ and $\Psi_{AB}$ are the SD and ASD parts of $F_{ab}$ respectively.
 
-Any two--dimensional distribution on a four--manifold $M$ can be expressed as the kernel of a two--form, and we define a distribution to be (A)SD if the corresponding two--form is (A)SD. Taking any $\iota^A\in\Gamma(\spp)$, the two--form $\iota_A\iota_B\varepsilon_{A'B'}$ defines an ASD distribution $D=\{\iota^Aw^{A'},w^{A'}\in\Gamma(\spp')\}$ which is totally null in the sense that $g(U,V)=0$ for all $U,V\in\Gamma(D)$. We call this a $\beta$--distribution. One can similarly define a totally null SD distribution called an $\alpha$--distribution given any $o^{A'}\in\Gamma(\spp')$. An $\alpha$--surface (respectively $\beta$--surface) is a two--dimensional surface in $M$ which is tangent to an $\alpha$--($\beta$--)distribution at every point. Penrose's Nonlinear Graviton Theorem \cite{penrose} states that a 
-maximal, three dimensional family of $\alpha$--surfaces exists in $M$ if and only if its conformal curvature is ASD, i.e. $C_+=0$. The \textit{twistor space} of $M$ is then defined as the three--dimensional manifold comprising the set of all $\alpha$--surfaces in $M$. \mynote{Except twistor space is a complex manifold...}
-\mynote{Something about normal bundles and twistor distributions.}
+\subsubsection{The nonlinear graviton}
+\mynote{Need to sort out the complexifying part.}
+Any two--dimensional distribution on a four--manifold $M$ can be expressed as the kernel of a two--form, and we define a distribution to be (A)SD if the corresponding two--form is (A)SD. Taking any $\iota^A\in\Gamma(\spp)$, the two--form $\iota_A\iota_B\varepsilon_{A'B'}$ defines an ASD distribution $D_\beta=\{\iota^Aw^{A'},w^{A'}\in\Gamma(\spp')\}$ which is totally null in the sense that $g(U,V)=0$ for all $U,V\in\Gamma(D)$. We call this a $\beta$--distribution. Note that it is only defined up to scale, which means that there is a $\CP^1$ worth of $\beta$--planes at every point in $M$. Given any $\pi^{A'}\in\Gamma(\spp')$, one can similarly define a totally null SD distribution called an $\alpha$--distribution by
+\be \label{eq:alpha_dist}
+D_\alpha = \{\iota^A\pi^{A'},\iota^{A}\in\Gamma(\spp)\}=\mathrm{span}\{\pi^{A'}\mathsf{e}_{AA'}\},
+\ee
+where $\{\mathsf{e}_{AA'}\}$ is a null tetrad of vector fields.
 
-Although a $\beta$--distribution is intrinsically ASD, there are two subclasses of $\beta$--distribution which we shall call SD or ASD \textit{in the sense of Calderbank} \cite{Cal1} (see also \cite{West}). Let $D$ be a $\beta$--distribution defined by an ASD two--form $\Sigma_{ab}=\iota_A\iota_B\epsilon_{A'B'}$, and  such that the spinor $\iota_A$ satisfies
+An $\alpha$--surface (respectively $\beta$--surface) is a two--dimensional surface in $M$ which is tangent to an $\alpha$--($\beta$--)distribution at every point. Penrose's Nonlinear Graviton Theorem \cite{penrose} states that a 
+maximal, three dimensional family of $\alpha$--surfaces exists in $M$ if and only if its conformal curvature is ASD, i.e. $C_+=0$. The \textit{twistor space} $\mathscr{T}$ of $M$ is then defined as the three--dimensional manifold comprising the set of all $\alpha$--surfaces in $M$. Each point $p\in M$ corresponds to a subset $\mathscr{L}_p\subset\mathscr{T}$ of $\alpha$--surfaces which pass through $p$. Since an $\alpha$--surface at $p$ is defined by a $\pi^{A'}\in\spp'|_p$ up to scale, $\mathscr{L}_p$ is an embedding $\CP^1\subset\mathscr{T}$. We denote the lift of the distribution (\ref{eq:alpha_dist}) to $\spp'$ by
+\[
+\mathcal{D}=\mathrm{span}\{L_A:=\pi^{A'}\tilde{\mathsf{e}}_{AA'}\},
+\]
+where $\{\tilde{\mathsf{e}}_{AA'}\}$ are the lifts of the null tetrad $\{\mathsf{e}_{AA'}\}$ to $\spp'$ (which are uniquely defined from the connection on $\spp'$ inherited from the Levi--Civita connection of $g$). We call $\mathcal{D}$ the \textit{twistor distribution}.
+
+The Nonlinear Graviton allows us to express an ASD conformal structure in terms of the algebraic geometry of $\mathscr{T}$. First note that if two points $p_1,p_2\in M$ are null--separated, then the corresponding curves $\mathscr{L}_{p_1},\mathscr{L}_{p_2}$ intersect at a single point. This is because any null geodesic must have a tangent vector field of the form $\iota^A\pi^{A'}$ for some sections $\iota^A\in\Gamma(\spp)$ and $\pi^{A'}\in\Gamma(\spp')$, and thus the geodesic is contained within the unique $\alpha$--surface spanned by $\pi^{A'}\mathsf{e}_{AA'}$. This unique $\alpha$--surface corresponds to the point in $\mathscr{T}$ where the curves $\mathscr{L}_{p_1},\mathscr{L}_{p_2}$ meet.
+
+In order to go the other way, i.e. recover an ASD conformal structure from $\mathscr{T}$, we need to understand the \textit{normal bundle} $N(L_p):=\cup_{Z\in \mathscr{L}_p}\{T_Z\mathscr{T}/T_Z\mathscr{L}_p\}$ over a $\CP^1$ embedding $\mathscr{L}_p$. To this end, we define the \textit{correspondence space} $\mathcal{F}=M\times\CP^1$ with local coordinates $(x^a,\lambda):=(x^a,\pi_{0'}/\pi_{1'})$, where $\pi^{A'}$ parametrises the set of $\alpha$--surfaces through the point in $M$ with coordinates $x^a$. Note that $\mathcal{F}$ can be obtained from the primed spin bundle $\spp'\rightarrow M$ by projectivising each fibre. Now consider a holomorphic function on $\spp'$ which is homogeneous of degree $n$ in the fibres. We can think of this as a section of a line bundle on $\mathcal{F}$ which we will denote $\mathcal{O}(n)$. \mynote{Something about transition functions.}
+
+The correspondence space has the alternative definition
+\[
+\mathcal{F}=\{(Z,p)\in \mathscr{T}\times M \ :\  Z\in L_p\},
+\]
+leading to the double fibration
+\[
+M\xleftarrow{r}\mathcal{F}\xrightarrow{q}\mathscr{T}.
+\]
+We are now ready to state the following lemma.
+
+\begin{lemma}[\cite{penrose}]
+The normal bundle of the holomorphic curves $L_p=q(r^{-1}(p))$ corresponding to points $p\in M$ can be identified with $\mathcal{O}(1)\oplus\mathcal{O}(1)$.
+\end{lemma}
+\noindent
+{\bf Proof.} The double fibration picture allows us to identify the normal bundle with the quotient $r^*(T_pM)/\mathrm{span}\{L_A\}$. In their homogeneous form the operators $L_A$ have weight one, and the distribution spanned by them is isomorphic to the bundle $\mathbb{C}^2\otimes\mathcal{O}(1)$. The definition of the normal bundle as a quotient gives the exact sequence
+\[
+0\rightarrow \mathbb{C}^2\otimes\mathcal{O}(1)\rightarrow\mathbb{C}^4\rightarrow N\rightarrow 0
+\]
+and thus $N=\mathcal{O}(1)\oplus\mathcal{O}(1)$, since the last map is given explicitly by $V^{AA'}\mapsto V^{AA'}\pi_{A'}$ in spinor notation.
+\mynote{I don't understand this proof. I basically copied it out of Maciej's book. It might be better to just explain it rather than stating it formally as a lemma.}
+\koniec
+
+The Nonlinear Graviton Theorem can now be stated as follows.
+\begin{theo}[\cite{penrose}]
+There is a one--to--one correspondence between complex ASD conformal structures and three--dimensional complex manifolds containing a four--parameter family of $\CP^1$ embeddings with normal bundle $\mathcal{O}(1)\oplus\mathcal{O}(1)$.
+\end{theo}
+\noindent
+From the results of Kodaira \cite{Kodaira} we have that a vector at a point $p\in M$ corresponds to a holomorphic section of the normal bundle $\mathcal{O}(1)\oplus\mathcal{O}(1)$ of the curve $\mathscr{L}_p$ in $\mathscr{T}$. Penrose shows that we obtain an ASD conformal structure from $\mathscr{T}$ by defining a vector to be null if the corresponding holomorphic section of $\mathcal{O}(1)\oplus\mathcal{O}(1)$ has a zero. Note that the vanishing of such a section is a quadratic condition, since $V^{AA'}\pi_{A'}$ can be solved for $\pi_{A'}$ if $\mathrm{det}(V^{AA'})=0$.
+
+
+\subsubsection{(Anti--)self--duality in the sense of Calderbank}
+Although a $\beta$--distribution is intrinsically ASD, there are two subclasses of $\beta$--distribution which we shall call SD or ASD \textit{in the sense of Calderbank} \cite{Cal1} (see also \cite{West}). Let $D_\beta$ be a $\beta$--distribution defined by an ASD two--form $\Sigma_{ab}=\iota_A\iota_B\epsilon_{A'B'}$, and  such that the spinor $\iota_A$ satisfies
 \be
 \label{dm3}
 \nabla_{A'(A}\iota_{B)}=\mathcal{A}_{A'(A}\iota_{B)}
 \ee
-where $d\mathcal{A}$ is an (A)SD Maxwell field. Then $D$ is (A)SD in the sense of Calderbank.
+where $d\mathcal{A}$ is an (A)SD Maxwell field. Then $D_\beta$ is (A)SD in the sense of Calderbank.
 \mynote{Add the justification from West's thesis that integrability implies (\ref{dm3}), if you can understand why his condition about $\iota\iota\nabla\iota$ is equivalent to integrability.}
 
  
-
+\subsubsection{Local characterisation of the Einstein manifolds $(M,g)$}
 
 A general ASD metric depends, in the real--analytic category, on six arbitrary functions of the variables. Theorem \ref{thm:DM} gives an explicit subclass of such metrics which are additionally constrained by the following local characterisation.
 
@@ -187,9 +234,9 @@ and we will find that there is a second $\beta$--surface foliation with a differ
 
 \subsection{Einstein--Weyl structures}
 \begin{defi}
-A Weyl Structure $(W,\mathcal{D},[h])$ is a conformal equivalence class of metrics $[h]$ on a manifold $W$ along with a fixed torsion--free affine connection $\mathcal{D}$ which preserves any representative $h\in[h]$ up to conformal class. That is, for some one-form $\omega$,
+A Weyl Structure $(W,\mathscr{D},[h])$ is a conformal equivalence class of metrics $[h]$ on a manifold $W$ along with a fixed torsion--free affine connection $\mathscr{D}$ which preserves any representative $h\in[h]$ up to conformal class. That is, for some one-form $\omega$,
 \[
-\mathcal{D}h=\omega\otimes h.
+\mathscr{D}h=\omega\otimes h.
 \]
 \end{defi}
 \mynote{h is also the name of a metric in c-proj...}
@@ -199,10 +246,10 @@ A pair $(h,\omega)$ uniquely defines the connection and hence the Weyl structure
 h\rightarrow \rho^2h,\quad\omega\rightarrow\omega+2d\mathrm{ln}(\rho),
 \ee
 where $\rho$ is a smooth, non-zero function on $W$. 
-Physically, the Weyl condition in Lorentzian signature corresponds to the statement that null geodesics of the conformal structure $[h]$ are also geodesics of the connection $\mathcal{D}$.
+Physically, the Weyl condition in Lorentzian signature corresponds to the statement that null geodesics of the conformal structure $[h]$ are also geodesics of the connection $\mathscr{D}$.
 
-If additionally the symmetric part of the Ricci tensor of $\mathcal{D}$ is a scalar multiple of $h$, then $W$ is said to carry an Einstein-Weyl structure.
-This condition is invariant under (\ref{weyl_tr}). A trivial Einstein--Weyl structure is one whose one--form $\omega$ is closed, so that it is locally exact and thus may be set to zero by a change of scale (\ref{weyl_tr}). Then $\mathcal{D}$ is the Levi--Civita connection of some representative $h\in[h]$, and this representative is Einstein.
+If additionally the symmetric part of the Ricci tensor of $\mathscr{D}$ is a scalar multiple of $h$, then $W$ is said to carry an Einstein-Weyl structure.
+This condition is invariant under (\ref{weyl_tr}). A trivial Einstein--Weyl structure is one whose one--form $\omega$ is closed, so that it is locally exact and thus may be set to zero by a change of scale (\ref{weyl_tr}). Then $\mathscr{D}$ is the Levi--Civita connection of some representative $h\in[h]$, and this representative is Einstein.
 
 The Einstein--Weyl equations
 give a set of five non--linear PDEs on the pair $(h, \omega)$. These equations
@@ -506,20 +553,20 @@ and is given by
 Note that the  formulae (\ref{ew_neat}) are independent of the coordinate $v$, and therefore have a symmetry. This was unexpected because there is no other symmetry of $(M,g)$ that commutes with $K_3$. However, it is possible for symmetries to appear in the Einstein-Weyl structure without a corresponding symmetry of the ASD conformal structure. This can be seen from the general formula (\ref{EWgen}); the function $V$ may depend on the coordinate $v$ so that $g$ depends on $v$ even though $h$ does not. For example, the Gibbons-Hawking metrics \cite{GH} give a trivial Einstein--Weyl structure with the maximal symmetry group, but the four-metric is in general not so symmetric. Our discovery of this unexpected symmetry motivated a more concrete description of a symmetry of a Weyl structure.
 
 \begin{defi}
-An infinitesimal symmetry of a Weyl structure $(W,\mathcal{D},[h])$ is a vector field $\mathcal{K}$ which is both an affine vector field with respect to the connection\footnote{Recall that an affine vector field of a connection $\mathcal{D}$ is one which preserves its components, i.e. $\mathcal{L}_\mathcal{K}\Gamma^i_{jk}=0$.} $\mathcal{D}$ and a conformal Killing vector with respect to the conformal structure $[h]$.
+An infinitesimal symmetry of a Weyl structure $(W,\mathscr{D},[h])$ is a vector field $\mathcal{K}$ which is both an affine vector field with respect to the connection\footnote{Recall that an affine vector field of a connection $\mathscr{D}$ is one which preserves its components, i.e. $\mathcal{L}_\mathcal{K}\Gamma^i_{jk}=0$.} $\mathscr{D}$ and a conformal Killing vector with respect to the conformal structure $[h]$.
 \end{defi}
 
 \begin{prop}
 \label{ewsymprop}
-Given an infinitesimal symmetry $\mathcal{K}$ of a Weyl structure $(W,\mathcal{D},[h])$ in dimension $N$, and a representative $h\in[h]$ such that $\mathcal{D}h=\omega\otimes h$, there exists a smooth function $f:W\rightarrow \R$ such that
+Given an infinitesimal symmetry $\mathcal{K}$ of a Weyl structure $(W,\mathscr{D},[h])$ in dimension $N$, and a representative $h\in[h]$ such that $\mathscr{D}h=\omega\otimes h$, there exists a smooth function $f:W\rightarrow \R$ such that
 \be
 \label{EWsym}
 \mathcal{L}_\mathcal{K}h=fh,\qquad\mathcal{L}_\mathcal{K}\omega=\frac{1}{N}d[\mathcal{K}\hook d(\mathrm{ln}(\mathrm{det}(h)))].
 \ee
 \end{prop}
-\noindent\textbf{Proof.} The first equation follows immediately from the fact that $\mathcal{K}$ is a conformal Killing vector of $h$. It remains to evaluate the Lie derivative of the one--form $\omega$ along the flow of $\mathcal{K}$ given that $\mathcal{L}_\mathcal{K}h=fh$ and $\mathcal{L}_\mathcal{K}\Gamma^i_{jk}=0$, where $\Gamma^i_{jk}$ are the components of the connection $\mathcal{D}$. We do this by considering the Lie derivative of $\mathcal{D}h$:
+\noindent\textbf{Proof.} The first equation follows immediately from the fact that $\mathcal{K}$ is a conformal Killing vector of $h$. It remains to evaluate the Lie derivative of the one--form $\omega$ along the flow of $\mathcal{K}$ given that $\mathcal{L}_\mathcal{K}h=fh$ and $\mathcal{L}_\mathcal{K}\Gamma^i_{jk}=0$, where $\Gamma^i_{jk}$ are the components of the connection $\mathscr{D}$. We do this by considering the Lie derivative of $\mathscr{D}h$:
 \begin{align*}
-\mathcal{L}_\mathcal{K}(\mathcal{D}_ih_{jk}) &= \mathcal{L}_\mathcal{K}(\p_ih_{jk})-\mathcal{L}_\mathcal{K}(\Gamma^l_{ji}h_{lk}+\Gamma^l_{ki}h_{jl}) \\
+\mathcal{L}_\mathcal{K}(\mathscr{D}_ih_{jk}) &= \mathcal{L}_\mathcal{K}(\p_ih_{jk})-\mathcal{L}_\mathcal{K}(\Gamma^l_{ji}h_{lk}+\Gamma^l_{ki}h_{jl}) \\
 &= \mathcal{L}_\mathcal{K}(\p_ih_{jk}) - f(\Gamma^l_{ji}h_{lk}+\Gamma^l_{ki}h_{jl}).
 \end{align*}
 Now
@@ -533,9 +580,9 @@ The term with square brackets is just
 \]
 so we have
 \[
-\mathcal{L}_\mathcal{K}(\mathcal{D}_ih_{jk})=f\mathcal{D}_ih_{jk}+\p_ifh_{jk}- (\p_i\p_j\mathcal{K}^l)h_{lk} - (\p_i\p_k\mathcal{K}^l)h_{jl}.
+\mathcal{L}_\mathcal{K}(\mathscr{D}_ih_{jk})=f\mathscr{D}_ih_{jk}+\p_ifh_{jk}- (\p_i\p_j\mathcal{K}^l)h_{lk} - (\p_i\p_k\mathcal{K}^l)h_{jl}.
 \]
-Setting this equal to $\mathcal{L}_\mathcal{K}(\omega_ih_{jk})=(\mathcal{L}_\mathcal{K}\omega_i)h_{jk}+f\omega_ih_{jk}$ and cancelling $f\omega_ih_{jk}$ with $f\mathcal{D}_ih_{jk}$, we find
+Setting this equal to $\mathcal{L}_\mathcal{K}(\omega_ih_{jk})=(\mathcal{L}_\mathcal{K}\omega_i)h_{jk}+f\omega_ih_{jk}$ and cancelling $f\omega_ih_{jk}$ with $f\mathscr{D}_ih_{jk}$, we find
 \begin{eqnarray}
 (\mathcal{L}_\mathcal{K}\omega_i)g_{jk} &=& \p_ifh_{jk} - (\p_i\p_j\mathcal{K}^l)h_{lk} - (\p_i\p_k\mathcal{K}^l)h_{jl}\nonumber \\
 \label{liederivom}
@@ -596,9 +643,15 @@ of (\ref{special_ein}), both explicitly and in terms of its twistor space, which
 Finally, we present a classification of the Einstein--Weyl structures which can be obtained by Jones--Tod factorisation of $SL(3)/GL(2)$ and exhibit an explicit example of such a factorisation from the twistor perspective, reconstructing the conformal structure on $W$ from minitwistor curves.
 \subsection{Conformal Structure}
 \label{model_conf}
-\mynote{Explain duality of projective surfaces, and explain why $M$ is the same thing as what the sentence below says.}
-Let $M\subset \RP^2\times {\RP^2}^*$ be the set of non--incident pairs 
-$(P, L)$, where $P\in \RP^2$, and $L\subset \RP^2$ is a line. 
+\mynote{Should I put this in the intro?}
+\mynote{Is it clear why $M$ is the same thing as what the sentence below says, or do we take it from the fact that the conformal structures agree?}
+\mynote{Is it clear that the right thing to do is to replace the $\RP^n$s with $\CP^n$s?}
+We first discuss the notion of duality in projective geometry. Consider the set of planes through the origin in $\R^3$. These can be specified by their normal vector, which is defined only up to multiplication by $\R^*$. Let us denote such a plane by a non--zero row vector $L\in\R_3$. A point $P\in\R^3$ lies in the plane defined by $L$ if and only if $L\cdot P=0$.
+
+When we projectivise the $\R^3$, any $P\neq 0$ descends to a point $[P]\in\RP^2$, and any plane descends to a line $[L]\subset\RP^2$. The incidence relation $L\cdot P=0$ is now equivalent to the point $[P]$ lying in the line $[L]$. The homogeneous coordinates $[L]$ parametrise a second projective surface which we think of as the dual to the $\RP^2$ parametrised by $[P]$, and denote $\RP^{2*}$.
+
+In what follows we will drop the square brackets and understand points $[P]\in\RP^2$ and lines $[L]\in\RP^{2*}$ to be represented by vectors $P\in\R^3$ and $L\in\R_3$. Let $M\subset \RP^2\times {\RP^2}^*$ be the set of non--incident pairs 
+$(P, L)$.
 \begin{prop}
 \label{prop_cone}
 Two pairs $(P, L)$ and $(\tP, \tL)$ are null--separated
@@ -607,15 +660,12 @@ if there exists
 a line which contains three points $(P, \tP, L\cap \tL)$. 
 \end{prop}
 {\bf Proof.}
-The  null condition of Proposition \ref{prop_cone}
+First not that the  null condition of Proposition \ref{prop_cone}
 defines a co--dimension one cone in $TN$: 
-generically there is no line through three given points.
+generically there is no line through three given points. To make explicit the condition for such a line to exist, consider two pairs  $(P, L)$ and $(\tP, \tL)$ 
+of non--incident points and lines. By thinking of $L,\tL$ as normal vectors to planes in $\R^3$, we see that $L+t\tL$ is a plane which intersects $L$ and $tL$ at their intersection, thus defining a line in $\RP^2$ which intersects the lines $L,\tL\subset\RP^2$ at their intersection.
 
-To find an analytic expression for the resulting conformal structure 
-consider two pairs  $(P, L)$ and $(\tP, \tL)$ 
-of non--incident points and lines. Let $L+t\tL$ be a pencil of lines.
-\mynote{Explain that $L+t\tL$ is a line which intersects $L$ and $\tL$ at their intersection, and then if $(P, \tP, L\cap \tL)$ are colinear, then...}
-There exists $t$ such that 
+If $P,\tP,L\cap\tL$ are co--linear then there exists $t$ such that both $P$ and $\tP$ lie on $L+t\tL$, i.e.
 \be
 \label{dm1}
 P\cdot (L+t\tL)=0,  \quad
@@ -668,19 +718,19 @@ The pair $(p,l)$ lies in $F_{12}$ if $p$ lies on $l$, i.e. if $p\cdot l=0$, so t
 We shall now give an explicit parametrisation of twistor lines, and show how 
 the metric (\ref{dm_metric}) arises from the Penrose condition 
 \cite{penrose, ward}.
-Let $P\in \PP^2$. The corresponding $l\in {\PP^2}^*$ is
-\[
+Let $P\in \PP^2$. The corresponding $l\in {\PP^2}^*$ is represented by some normal vector which is perpendicular to $P$ in $\R^3$, i.e.
+\be \label{eq:l=Pwedgepi}
 l=P\wedge \pi, \quad \mbox{where}\quad  \pi\sim a\pi+b P,
-\]
+\ee
 where $a\in \R^*, b\in \R$. Thus $\pi$ parametrises a projective line $\PP^1$,
 and by making a choice of $b$ we can take
 $
 \pi=[\pi^0, \pi^1, 0], 
 $ where $\pi^A=[\pi^0, \pi^1]\in \PP^1$. The constraint $P\cdot l=0$ now holds.
 To satisfy the remaining constraints in (\ref{dm2}) we take
-\[
+\be \label{eq:p=Lwedgel}
 p=L\wedge l=(L\cdot\pi)P-(L\cdot P)\pi.
-\]
+\ee
 Substituting (\ref{DM_parameter}) gives 
 the corresponding twistor line parametrised by $[\pi]\in\PP^1$ 
 \be
@@ -693,30 +743,34 @@ We shall now derive the expression for the conformal structure. According
 to the Nonlinear Graviton prescription of Penrose \cite{penrose} a vector
 $V\in \Gamma(T_mM)$ is null if the corresponding section
 of the normal bundle $N(L_m)={\mathcal O}(1)\oplus{\mathcal O}(1)$ has a 
-single zero.  To compute the normal bundle, let $([l(\pi, P, L)], 
+single zero. 
+
+\mynote{I can at least explain what the normal bundle is, and why a vector corresponds to a section of the normal bundle?}
+\mynote{Basically I still don't quite understand why $N(L_m)={\mathcal O}(1)\oplus{\mathcal O}(1)$ or even what the RHS means.}
+
+To compute the normal bundle, let $([l(\pi, P, L)], 
 [p(\pi, P, L)])$
-be the twistor line corresponding to a point $m=(P, L)$ in $M$. The neighbouring line is $([l+\delta l], [p+\delta p])$, where
+be the twistor line corresponding to a point $m=(P, L)$ in $M$. The neighbouring line is $([l+\delta l], [p+\delta p])$, where from (\ref{eq:l=Pwedgepi}) and (\ref{eq:p=Lwedgel}) we have
 \[
 \delta l=\delta P\wedge \pi, \quad
 \delta p= (\delta L\cdot \pi)P+(L\cdot\pi) \delta P-\delta (L\cdot P)\pi.
 \]
-The lines  $(l+\delta l, p+\delta p)$  and $(l, p)$ intersect at one point
-which correspond to some particular value of $\pi$. \mynote{Bit confused from here.} Therefore
+
+The lines  $(l+\delta l, p+\delta p)$  and $(l, p)$ intersect if there exists some $[\pi]$ such that $l+\delta l\sim l$ and $p+\delta p\sim p$ (note that this point, if it exists, is unique, since projective lines in $\RP^2$ cannot meet more than once). We thus find
 \[
-l+\delta l\sim l, \quad\mbox{so}\quad \pi\sim\delta P=[\delta x^1, \delta x^2, 0].
+l+\delta l\sim l \quad \iff \quad\pi\sim\delta P=[\delta x^1, \delta x^2, 0].
 \]
-The other condition is $p+\delta p\sim p$ which holds iff 
+And $p+\delta p\sim p \quad \iff$
 \[
 0=p\wedge \delta p=(L\cdot \pi)^2P\wedge \delta P-(L\cdot P)
 (\delta L\cdot \pi)\pi\wedge P-(L\cdot \pi)\delta (L\cdot P)P\wedge \pi-
 (L\cdot P)(L\cdot \pi) \pi\wedge \delta P.
 \]
-Substituting $\pi\sim\delta P$, we find that all terms on the RHS are proportional to $P\wedge \delta P=[0, 0, x\cdot dx]$.
-Therefore
+Substituting $\pi\sim\delta P$, we find that all terms on the RHS are proportional to $P\wedge \delta P=[0, 0, x\cdot dx]$, with
 \[
-(L\cdot \pi)^2-(L\cdot \pi)\delta(L\cdot P)+(L\cdot P)(\delta L\cdot \pi)=0,
+(L\cdot \delta P)^2-(L\cdot \delta P)\delta(L\cdot P)+(L\cdot P)(\delta L\cdot \delta P)=0.
 \]
-together with $L\cdot P=1$.  This gives the conformal structure 
+Setting $L\cdot P=1$ this gives the conformal structure 
 (\ref{dm_metric}).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Pseudo--hyper--Hermitian structure}
@@ -744,7 +798,7 @@ A four--manifold $M$ equipped with a neutral signature metric $g$ is pseudo--hyp
 d\Sigma^{A'B}+A\wedge \Sigma^{A'B'} = 0.
 \]
 \end{theo}
-In fact, this condition is necessary and sufficient for hyper--Hermiticity \cite{D99,boyer}.
+\noindent In fact, this condition is necessary and sufficient for hyper--Hermiticity \cite{D99,boyer}.
 \begin{prop}
 \label{propHH}
 The Einstein metric (\ref{special_ein}) on $SL(3)/GL(2)$ is pseudo--hyper--Hermitian.
@@ -901,6 +955,8 @@ Taking a projective vector field on $\mathbb{RP}^2$, we can find the correspondi
 \koniec
 
 \mynote{Why does the third class not give a one--parameter family?}
+
+\mynote{Give the example corresponding to the mini--twistor factorisation below.}
 \subsection{Mini--twistor correspondence}
 \label{mini_twistor}
 Below we investigate a one--parameter subfamily of the two--parameter family. We use the holomorphic vector field on 
