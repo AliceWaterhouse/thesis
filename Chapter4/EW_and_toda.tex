@@ -11,14 +11,14 @@ The aim of this chapter is to exhibit the Einstein--Weyl structures obtainable i
 
 In the case $n=2$ we will write the metric and symplectic form as
 \begin{eqnarray}
-g =& dz_A \odot dx^A - (\Gamma^C_{AB}z_C-z_Az_B-\Rho_{AB})dx^A \odot dx^B, 
+g =& dz_{A'} \odot dx^{A'} - (\Gamma^{C'}_{A'B'}z_{C'}-z_{A'}z_{B'}-\Rho_{A'B'})dx^{A'} \odot dx^{B'}, 
  \label{eq:g4} \\
-{\Omega} =& dz_A\wedge dx^A + \Rho_{AB}dx^A \wedge dx^B, \qquad A, B, C=0, 1. \label{eq:Omega4}
+{\Omega} =& dz_{A'}\wedge dx^{A'} + \Rho_{A'B'}dx^{A'} \wedge dx^{B'}, \qquad A', B', C'=0, 1. \label{eq:Omega4}
 \end{eqnarray}
-where we have replaced $\{\zeta_i\}$ with $\{z_A\}$ and shifted the indices from $i,j=1,2$ to $A,B=0,1$. This is helpful for the twistorial calculations because it agrees with the usual notation for two--component spinor indices. Note that a change of projective connection is now given by
+where we have replaced $\{\zeta_i\}$ with $\{z_{A'}\}$ and shifted the indices from $i,j=1,2$ to $A',B'=0,1$. This is helpful for the twistorial calculations because it agrees with the usual notation for two--component spinor indices. Note that a change of projective connection is now given by
 \be
 \label{proj_change}
-\Gamma^{C}_{AB} \rightarrow \Gamma^{C}_{AB} + \delta^C_A\Upsilon_B + \delta^C_B\Upsilon_A, \qquad z_A\rightarrow z_A + \Upsilon_A, \qquad A,B,C=0,1.
+\Gamma^{C'}_{A'B'} \rightarrow \Gamma^{C'}_{A'B'} + \delta^{C'}_{A'}\Upsilon_{B'} + \delta^{C'}_{B'}\Upsilon_{A'}, \qquad z_{A'}\rightarrow z_{A'} + \Upsilon_{A'}, \qquad A',B',C'=0,1.
 \ee
 
 \section{Background}
@@ -149,9 +149,9 @@ where $\{\mathsf{e}_{AA'}\}$ is a null tetrad of vector fields.
 
 An $\alpha$--surface (respectively $\beta$--surface) is a two--dimensional surface in $M$ which is tangent to an $\alpha$--($\beta$--)distribution at every point. Penrose's Nonlinear Graviton Theorem \cite{penrose} states that a 
 maximal, three dimensional family of $\alpha$--surfaces exists in $M$ if and only if its conformal curvature is ASD, i.e. $C_+=0$. The \textit{twistor space} $\mathscr{T}$ of $M$ is then defined as the three--dimensional manifold comprising the set of all $\alpha$--surfaces in $M$. Each point $p\in M$ corresponds to a subset $\mathscr{L}_p\subset\mathscr{T}$ of $\alpha$--surfaces which pass through $p$. Since an $\alpha$--surface at $p$ is defined by a $\pi^{A'}\in\spp'|_p$ up to scale, $\mathscr{L}_p$ is an embedding $\CP^1\subset\mathscr{T}$. We denote the lift of the distribution (\ref{eq:alpha_dist}) to $\spp'$ by
-\[
+\be \label{eq:twistor_dist}
 \mathcal{D}=\mathrm{span}\{L_A:=\pi^{A'}\tilde{\mathsf{e}}_{AA'}\},
-\]
+\ee
 where $\{\tilde{\mathsf{e}}_{AA'}\}$ are the lifts of the null tetrad $\{\mathsf{e}_{AA'}\}$ to $\spp'$ (which are uniquely defined from the connection on $\spp'$ inherited from the Levi--Civita connection of $g$). We call $\mathcal{D}$ the \textit{twistor distribution}.
 
 The Nonlinear Graviton allows us to express an ASD conformal structure in terms of the algebraic geometry of $\mathscr{T}$. First note that if two points $p_1,p_2\in M$ are null--separated, then the corresponding curves $\mathscr{L}_{p_1},\mathscr{L}_{p_2}$ intersect at a single point. This is because any null geodesic must have a tangent vector field of the form $\iota^A\pi^{A'}$ for some sections $\iota^A\in\Gamma(\spp)$ and $\pi^{A'}\in\Gamma(\spp')$, and thus the geodesic is contained within the unique $\alpha$--surface spanned by $\pi^{A'}\mathsf{e}_{AA'}$. This unique $\alpha$--surface corresponds to the point in $\mathscr{T}$ where the curves $\mathscr{L}_{p_1},\mathscr{L}_{p_2}$ meet.
@@ -172,9 +172,9 @@ We are now ready to state the following lemma.
 The normal bundle of the holomorphic curves $L_p=q(r^{-1}(p))$ corresponding to points $p\in M$ can be identified with $\mathcal{O}(1)\oplus\mathcal{O}(1)$.
 \end{lemma}
 \noindent
-{\bf Proof.} The double fibration picture allows us to identify the normal bundle with the quotient $r^*(T_pM)/\mathrm{span}\{L_A\}$. In their homogeneous form the operators $L_A$ have weight one, and the distribution spanned by them is isomorphic to the bundle $\mathbb{C}^2\otimes\mathcal{O}(1)$. The definition of the normal bundle as a quotient gives the exact sequence
+{\bf Proof.} The double fibration picture allows us to identify the normal bundle with the quotient $r^*(T_pM)/\mathrm{span}\{L_A\}$. In their homogeneous form the operators $L_A$ have weight one, and the distribution spanned by them is isomorphic to the bundle $\mathbb{C}^2\otimes\mathcal{O}(-1)$. The definition of the normal bundle as a quotient gives the exact sequence
 \[
-0\rightarrow \mathbb{C}^2\otimes\mathcal{O}(1)\rightarrow\mathbb{C}^4\rightarrow N\rightarrow 0
+0\rightarrow \mathbb{C}^2\otimes\mathcal{O}(-1)\rightarrow\mathbb{C}^4\rightarrow N\rightarrow 0
 \]
 and thus $N=\mathcal{O}(1)\oplus\mathcal{O}(1)$, since the last map is given explicitly by $V^{AA'}\mapsto V^{AA'}\pi_{A'}$ in spinor notation.
 \mynote{I don't understand this proof. I basically copied it out of Maciej's book. It might be better to just explain it rather than stating it formally as a lemma.}
@@ -211,7 +211,7 @@ Note that a parallel distribution is necessarily Frobenius integrable, since
 [X,Y]= {^g}\nabla_XY- {^g}\nabla_YX\in\Gamma(D)\quad\mbox{for all}\quad X,Y\in\Gamma(D).
 \]
 
-In our coordinates $D$ is the kernel of the two--form $\Sigma=dx^0\wedge dx^1$, and can be written as ${D}=\mathrm{span}\{\p/\p z_0,\p/\p z_1\}$. We find that
+In our coordinates $D$ is the kernel of the two--form $\Sigma=dx^{0'}\wedge dx^{1'}$, and can be written as ${D}=\mathrm{span}\{\p/\p z_{0'},\p/\p z_{1'}\}$. We find that
 \be
 \label{beta_eq}
 ^g\nabla\Sigma=6\mathcal{A}\otimes \Sigma,
@@ -347,7 +347,7 @@ By trial and error, we chose a representative connection for (\ref{eq:1symode}) 
 \[
 \Gamma^{0}_{11}=A(y),\quad \Gamma^{1}_{00}=-1, \quad \Gamma^{1}_{11}=-B(y)
 \]
-with all other components vanishing. Note that this choice of connection has a symmetric Ricci tensor, so the Schouten tensor is also symmetric and the symplectic form (\ref{eq:Omega4}) pulls back to just $dz_A\wedge dx^A$. Thus we can write the Maxwell potential $\mathcal{A}$ which is such that $d\mathcal{A}=\Omega$ as $\mathcal{A}=z_Adx^A$. Writing $x^A=(x,y)$, $z_A=(p,q)$, the resulting metric (\ref{eq:g4}) is
+with all other components vanishing. Note that this choice of connection has a symmetric Ricci tensor, so the Schouten tensor is also symmetric and the symplectic form (\ref{eq:Omega4}) pulls back to just $dz_{A'}\wedge dx^{A'}$. Thus we can write the Maxwell potential $\mathcal{A}$ which is such that $d\mathcal{A}=\Omega$ as $\mathcal{A}=z_{A'}dx^{A'}$. Writing $x^{A'}=(x,y)$, $z_{A'}=(p,q)$, the resulting metric (\ref{eq:g4}) is
 \be
 \label{einstein_1}
 g=(B(y) + p^2 +q)dx^2+2(pq+A(y))dxdy + (-A(y)p+B(y)q+q^2)dy^2 + dxdp +dydq.
@@ -634,7 +634,7 @@ projective surface $N=\RP^2$. In this case, $g$ is the indefinite analogue of th
 $\Gamma_{AB}^C=0$ gives $g$ as
 \be
 \label{special_ein}
-g=dz_A\odot dx^A+ z_Az_B dx^A\odot dx^B.
+g=dz_{A'}\odot dx^{A'}+ z_{A'}z_{B'} dx^{A'}\odot dx^{B'}.
 \ee
 
 We begin by discussing the  conformal structure
@@ -690,7 +690,7 @@ g={dP\cdot dL}+(L\cdot dP)^2.
 We take affine coordinates 
 \be
 \label{DM_parameter}
-P=[x^A, 1],\quad L=[z_A, 1-x^Az_A]
+P=[x^{A'}, 1],\quad L=[z_{A'}, 1-x^{A'}z_{A'}]
 \ee 
 with a normalisation $P\cdot L=1$ to recover the metric (\ref{special_ein}).
 \koniec
@@ -735,20 +735,15 @@ Substituting (\ref{DM_parameter}) gives
 the corresponding twistor line parametrised by $[\pi]\in\PP^1$ 
 \be
 \label{sl3curves}
-p^{\alpha}=[(z\cdot \pi)x^A-\pi^A, z\cdot \pi], \quad l_\alpha=[\pi_A, -\pi\cdot x],
+p^{\alpha}=[(z\cdot \pi)x^{A'}-\pi^A, z\cdot \pi], \quad l_\alpha=[\pi_A, -\pi\cdot x],
 \ee
-where the spinor indices are raised and lowered with $\epsilon^{AB}$ and its inverse, and  $z\cdot x\equiv z_Ax^A$. 
+where the spinor indices are raised and lowered with $\epsilon^{AB}$ and its inverse, and  $z\cdot x\equiv z_{A'}x^{A'}$. 
 
 We shall now derive the expression for the conformal structure. According
 to the Nonlinear Graviton prescription of Penrose \cite{penrose} a vector
 $V\in \Gamma(T_mM)$ is null if the corresponding section
 of the normal bundle $N(L_m)={\mathcal O}(1)\oplus{\mathcal O}(1)$ has a 
-single zero. 
-
-\mynote{I can at least explain what the normal bundle is, and why a vector corresponds to a section of the normal bundle?}
-\mynote{Basically I still don't quite understand why $N(L_m)={\mathcal O}(1)\oplus{\mathcal O}(1)$ or even what the RHS means.}
-
-To compute the normal bundle, let $([l(\pi, P, L)], 
+single zero. To compute the normal bundle, let $([l(\pi, P, L)], 
 [p(\pi, P, L)])$
 be the twistor line corresponding to a point $m=(P, L)$ in $M$. The neighbouring line is $([l+\delta l], [p+\delta p])$, where from (\ref{eq:l=Pwedgepi}) and (\ref{eq:p=Lwedgel}) we have
 \[
@@ -798,20 +793,19 @@ A four--manifold $M$ equipped with a neutral signature metric $g$ is pseudo--hyp
 d\Sigma^{A'B}+A\wedge \Sigma^{A'B'} = 0.
 \]
 \end{theo}
-\noindent In fact, this condition is necessary and sufficient for hyper--Hermiticity \cite{D99,boyer}.
+\noindent In fact, this condition is necessary and sufficient for hyper--Hermiticity \cite{D99,boyer}. Given some $(M,g)$ which is conformally ASD, it can also be shown (see Lemma 2 in \cite{D99} and Theorem  7.1 in \cite{Cal2}) that a lack of vertical $\p/\p \pi$ terms in the twistor distribution (\ref{eq:twistor_dist}) implies hyper--Hermiticity of $(M,g)$. \mynote{This is not clear to me from a brief look at \cite{D99,Cal2}...}
 \begin{prop}
 \label{propHH}
 The Einstein metric (\ref{special_ein}) on $SL(3)/GL(2)$ is pseudo--hyper--Hermitian.
 \end{prop}
 \noindent
 {\bf Proof.}
-First a note about conventions.
-Our model metric is ASD, so it is the primed Weyl spinor which vanishes. This makes all indices on both the EW space and the projective surface primed. Lets therefore swap the role of primed and unprimed indices. The null frame for the 4-metric is
-\[
-e^{0'A}=dx^A, \quad e^{1'A}=dz^A+z^A(z\cdot dx), \quad\mbox{so that}\quad
-g=\epsilon_{A'B'}\epsilon_{AB}e^{A'A}e^{B'B}.
-\]
-Thus the forms $\Sigma=dx^0\wedge dx^1$ and $\Omega=dz_A\wedge dx^A$ are ASD. The basis of SD two forms is spanned by
+The null frame for the 4-metric is
+\be \label{eq:null_frame}
+e^{0A'}=dx^{A'}, \quad e^{1A'}=dz^{A'}+z^{A'}(z\cdot dx), \quad\mbox{so that}\quad
+g=\epsilon_{A'B'}\epsilon_{AB}e^{AA'}e^{BB'}.
+\ee
+Thus the forms $\Sigma=dx^{0'}\wedge dx^{1'}$ and $\Omega=dz_{A'}\wedge dx^{A'}$ are ASD. The basis of SD two forms is spanned by
 \[
 dx\wedge dq+ q^2 dx\wedge dy,\quad
 dx\wedge dp-dy\wedge dq+2 pq dx\wedge dy,
@@ -819,26 +813,24 @@ dx\wedge dp-dy\wedge dq+2 pq dx\wedge dy,
 -dy\wedge dp+ p^2 dx\wedge dy
 \]
 or, in a more compact notation, by
-$\Sigma^{AB}=dx^{(A}\wedge dz^{B)}+z^Az^B \Sigma$.
+$\Sigma^{A'B'}=dx^{(A'}\wedge dz^{B')}+z^{A'}z^{B'} \Sigma$.
 We can verify that
 \be
 \label{lie_form}
-d\Sigma^{AB}+2{{\mathcal{A}}}\wedge\Sigma^{AB}=0,
+d\Sigma^{A'B'}+2{{\mathcal{A}}}\wedge\Sigma^{A'B'}=0,
 \ee
-where ${{\mathcal A}}= z_Adx^A$ is such that $d{{\mathcal{A}}}= \Omega$,
+where ${{\mathcal A}}= z_{A'}dx^{A'}$ is such that $d{{\mathcal{A}}}= \Omega$,
 so from Theorem \ref{thm:D99} we have that $M$ carries a hyper--Hermitian structure, and in fact the corresponding ASD Maxwell field $d\mathcal{A}=\Omega$ coincides with the one arising from the para--K\"ahler structure on $M$ via (\ref{beta_eq}).
 
-\mynote{If I am keeping this last paragraph, the twistor distribution ought to have already been introduced. And the lack of vertical terms mentioned above with thm \ref{thm:D99}.}
-To this end note that the twistor distribution form $(M,  g)$ is
+Alternatively, note that the twistor distribution (\ref{eq:twistor_dist}), having chosen the basis (\ref{eq:null_frame}), is given by
 \be
 \label{tdistribution}
-L_{0'}=\pi\cdot\frac{\p}{\p x}+(z\cdot\pi) z\cdot\frac{\p}{\p z}, \quad
-L_{1'}=\pi\cdot\frac{\p}{\p z}.
+L_{0}=\pi\cdot\frac{\p}{\p x}+(z\cdot\pi) z\cdot\frac{\p}{\p z}, \quad
+L_{1}=\pi\cdot\frac{\p}{\p z},
 \ee
-It is Frobenius integrable, as $[L_{0'}, L_{1'}]=-(\pi\cdot z)L_{1'}$. It also does not contain the vertical $\p/\partial \pi$ terms which again confirms the hyper--Hermiticity
-of $(M, g)$ (see Lemma 2 in \cite{D99} and Theorem  7.1 in \cite{Cal2}). The SD part of the
+which have no vertical terms. We can easily verify that it is Frobenius integrable, as $[L_{0}, L_{1}]=-(\pi\cdot z)L_{1}$. The SD part of the
 spin connection is given in terms of ${\mathcal A}$ as
-$\Gamma_{A'ABC}=-2{\mathcal A}_{A'(B}\epsilon_{C)A}$.
+$\Gamma_{AA'B'C'}=-2{\mathcal A}_{A(B'}\epsilon_{C')A'}$.
 \koniec
 In the next section we shall show how to encode
 ${\mathcal A}$ in the twisted--photon Ward bundle over the twistor space
@@ -871,28 +863,28 @@ $H=\ln{(p_2)}$ is holomorphic in the pre--image of $U$ in the correspondence spa
 $\widetilde{H}=\ln{(p_3)}$ is holomorphic in the pre--image of
 $\widetilde{U}$. Note that $F$ is a twistor  function, but 
 $H, \widetilde{H}$ are not. Therefore
-$L_{A'}F=0$, where the twistor distribution $L_{A'}$
+$L_{A}F=0$, where the twistor distribution $L_{A}$
 is given by (\ref{tdistribution}). This, 
 together with the Liouville theorem
 implies
 that
 \[
-L_{A'}H=L_{A'}\widetilde{H}=\pi^A\mathcal{A}_{A'A}
+L_{A}H=L_{A}\widetilde{H}=\pi^{A'}\mathcal{A}_{AA'}
 \]
 for some one--form $\mathcal{A}$ on $M$, 
 as the LHS is holomorphic on  $\CP^1$ and homogeneous of degree
 one. To construct this one--form recall the parametrisation
 of twistor curves (\ref{sl3curves}). This gives
 \[
-H=\ln{(z\cdot\pi)}, \quad\widetilde{H}=\ln{((z\cdot\pi)x^1-\pi^1)}
+H=\ln{(z\cdot\pi)}, \quad\widetilde{H}=\ln{((z\cdot\pi)x^{1'}-\pi^{1'})}
 \]
 and
 \[
-L_{1'}(H)=L_{1'}(\widetilde{H})=0, \quad
-L_{0'}(H)=L_{0'}(\widetilde{H})=\pi\cdot z.
+L_{1}(H)=L_{1}(\widetilde{H})=0, \quad
+L_{0}(H)=L_{0}(\widetilde{H})=\pi\cdot z.
 \]
-Therefore ${\mathcal A}_{1'A}=0, {\mathcal A}_{0'A}=z_A$
-which gives ${\mathcal A}=z_Adx^A$, and $d{\mathcal A}$
+Therefore ${\mathcal A}_{1A'}=0, {\mathcal A}_{0A'}=z_{A'}$
+which gives ${\mathcal A}=z_{A'}dx^{A'}$, and $d{\mathcal A}$
 is indeed the ASD para--K\"ahler structure.
 %which I THINK is 
 %\be
@@ -997,7 +989,7 @@ Substituting in our parametrisation (\ref{sl3curves}) and using the freedom to p
 Q &= \frac{(\lambda t-u-1)\lambda}{v\lambda+\lambda-\frac{uv}{t}}\\
 R &= \lambda^a\Big(-\lambda-\frac{v}{t}\Big)^{1-a},\nonumber
 \end{align}
-where we have defined $\lambda=\pi_0/\pi_1$, and the Einstein-Weyl coordinates
+where we have defined $\lambda=\pi_{0'}/\pi_{1'}$, and the Einstein-Weyl coordinates
 \[
 u=xp,\quad v=yq, \quad t=x^aq.
 \]
