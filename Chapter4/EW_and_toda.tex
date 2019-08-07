@@ -67,7 +67,7 @@ y^{\prime\prime} = A(y)(y^\prime)^3 + B(y)(y^\prime)^2 + 1.
 
 Note that each of these classes of projective structures forms a subset of the next, and this can be seen explicitly by some changes of coordinates. For example, the general projective surface with a symmetry is flat when $A(y)=B(y)=0$.
 
-\subsection{Anti--self--duality, spinors and totally null distributions}
+\subsection{Anti--self--duality, spinors and totally null distributions} \label{sec:ASD'ty}
 Let $M$ be an oriented four--dimensional manifold with a metric
 $g$ of signature $(2, 2)$. The Hodge operator $\ast$ on the space of two forms is an involution, and induces a decomposition \cite{AHS}
 \be 
@@ -157,47 +157,47 @@ where $\{\tilde{\mathsf{e}}_{AA'}\}$ are the lifts of the null tetrad $\{\mathsf
 
 The Nonlinear Graviton allows us to express an ASD conformal structure in terms of the algebraic geometry of $\mathscr{T}$. First note that if two points $p_1,p_2\in M$ are null--separated, then the corresponding curves $\mathscr{L}_{p_1},\mathscr{L}_{p_2}$ intersect at a single point. This is because any null geodesic must have a tangent vector field of the form $\iota^A\pi^{A'}$ for some sections $\iota^A\in\Gamma(\spp)$ and $\pi^{A'}\in\Gamma(\spp')$, and thus the geodesic is contained within the unique $\alpha$--surface spanned by $\pi^{A'}\mathsf{e}_{AA'}$. This unique $\alpha$--surface corresponds to the point in $\mathscr{T}$ where the curves $\mathscr{L}_{p_1},\mathscr{L}_{p_2}$ meet.
 
-In order to understand this correspondence at an infinitesimal level and thereby recover an ASD conformal structure from $\mathscr{T}$, we need to understand the \textit{normal bundle} $N(\mathscr{L}_p):=\cup_{Z\in \mathscr{L}_p}\{T_Z\mathscr{T}/T_Z\mathscr{L}_p\}$ over a $\CP^1$ embedding $\mathscr{L}_p$. This is evidently a complex vector bundle, and in fact it is a \textit{holomorphic} vector bundle, meaning that the total space is a complex manifold and the projection $N(\mathscr{L}_p)\rightarrow\mathscr{L}_p$ is holomorphic. It is thus subject to the following theorem due to Birkhoff and Grothendieck (see for example \cite{complex_mfds} for a proof).
+In order to understand this correspondence at an infinitesimal level and thereby explicitly recover an ASD conformal structure from $\mathscr{T}$, we need to understand the \textit{normal bundle} $N(\mathscr{L}_p):=\cup_{Z\in \mathscr{L}_p}\{T_Z\mathscr{T}/T_Z\mathscr{L}_p\}$ over a $\CP^1$ embedding $\mathscr{L}_p$. This is evidently a complex vector bundle, and in fact it is a \textit{holomorphic} vector bundle, meaning that the total space is a complex manifold and the projection $N(\mathscr{L}_p)\rightarrow\mathscr{L}_p$ is holomorphic. It is thus subject to the following theorem due to Birkhoff and Grothendieck (see for example \cite{complex_mfds} for a proof).
 \begin{theo}[Birkhoff--Grothendieck]
 Any rank $k$ holomorphic vector bundle is isomorphic to a direct sum of $k$ complex line bundles $\mathcal{O}(m_i),1\leq i\leq k$, each with first Chern class $m_i$. 
 \end{theo}
 
-The first Chern class completely classifies complex line bundles topologically. For us, $\mathcal{O}(n)$ will mean a line bundle over $\CP^1$ with transition functions $\lambda^{-n}$, where $\lambda$ is the inhomogeneous coordinate on $\CP^1$. A section of $\mathcal{O}(n)$ is given by functions $s(\lambda),\tilde{s}(\tilde{\lambda})$ on patches $\mathcal{U},\tilde{\mathcal{U}}$ which are related by
+The first Chern class completely classifies complex line bundles topologically. For us, $\mathcal{O}(n),n\in\mathbb{Z}$ will mean a line bundle over $\CP^1=\mathcal{U}_0\cup\mathcal{U}_1$, where $\mathcal{U}_i=\{Z_i\neq 0\}\subset\CP^1$ for homogeneous coordinates $[Z^0,Z^1]^T$ on $\CP^1$, with transition functions such that local trivialisations $(\lambda_i,v_i)\in\mathcal{U}_i\times\mathbb{C}$ are related on the overlap by $v_1=\lambda_0^{-n}v_0$, where $\lambda_0=\lambda_1^{-1}=Z^1/Z^0$. Note that $\mathcal{O}(-n)$ is dual to $\mathcal{O}(n)$, and $\mathcal{O}(n)$ is the tensor product of $n$ copies of $\mathcal{O}(1)$. A section of $\mathcal{O}(n)$ is represented by functions $s_i(\lambda_i)$ such that $(\lambda_0,s_0(\lambda_0))$ and $(\lambda_1,s_1(\lambda_1))$ correspond to the same point, i.e.
 \[
-s(\lambda)=\lambda^n\tilde{s}(\tilde{\lambda}).
+s_1(\lambda_1)=\lambda_0^{-n}s_0(\lambda_0).
 \]
-If we expand these as power series in the local coordinates and use the fact that $\tilde{\lambda}=\lambda^{-1}$, we find by equating coefficients that they are polynomials of degree at most $n$, making the space of holomorphic sections $n+1$--dimensional.
+If we expand these as power series in the local coordinates and use the fact that ${\lambda}_1=\lambda_0^{-1}$, we find by equating coefficients that they are polynomials of degree at most $n$, making the space of global holomorphic sections $n+1$--dimensional for $n\geq 0$.
 
-We now define the \textit{correspondence space} $\mathcal{F}=M\times\CP^1$ with local coordinates $(x^a,\lambda):=(x^a,\pi_{0'}/\pi_{1'})$, where $\pi^{A'}$ parametrises the set of $\alpha$--surfaces through the point in $M$ with coordinates $x^a$. Note that $\mathcal{F}$ can be obtained from the primed spin bundle $\spp'\rightarrow M$ by projectivising each fibre. Now consider a holomorphic function on $\spp'$ which is homogeneous of degree $n$ in the fibres. This corresponds to a section of $\mathcal{O}(n)$ over the $\CP^1$ factor of $\mathcal{F}$. 
+%We now define the \textit{correspondence space} $\mathcal{F}=M\times\CP^1$ with local coordinates $(x^a,\lambda):=(x^a,\pi_{0'}/\pi_{1'})$, where $\pi^{A'}$ parametrises the set of $\alpha$--surfaces through the point in $M$ with coordinates $x^a$. Note that $\mathcal{F}$ can be obtained from the primed spin bundle $\spp'\rightarrow M$ by projectivising each fibre. Now consider a holomorphic function on $\spp'$ which is homogeneous of degree $n$ in the fibres. This corresponds to a section of $\mathcal{O}(n)$ over the $\CP^1$ factor of $\mathcal{F}$. 
 
-The correspondence space has the alternative definition
-\[
-\mathcal{F}=\{(Z,p)\in \mathscr{T}\times M \ :\  Z\in L_p\},
-\]
-leading to the double fibration
-\[
-M\xleftarrow{r}\mathcal{F}\xrightarrow{q}\mathscr{T}.
-\]
-We are now ready to state the following lemma.
+%The correspondence space has the alternative definition
+%\[
+%\mathcal{F}=\{(Z,p)\in \mathscr{T}\times M \ :\  Z\in L_p\},
+%\]
+%leading to the double fibration
+%\[
+%M\xleftarrow{r}\mathcal{F}\xrightarrow{q}\mathscr{T}.
+%\]
+%We are now ready to state the following lemma.
 
-\begin{lemma}[\cite{penrose}]
-The normal bundle of the holomorphic curves $L_p=q(r^{-1}(p))$ corresponding to points $p\in M$ can be identified with $\mathcal{O}(1)\oplus\mathcal{O}(1)$.
-\end{lemma}
-\noindent
-{\bf Proof.} The double fibration picture allows us to identify the normal bundle with the quotient $r^*(T_pM)/\mathrm{span}\{L_A\}$. In their homogeneous form the operators $L_A$ have weight one, and the distribution spanned by them is isomorphic to the bundle $\mathbb{C}^2\otimes\mathcal{O}(-1)$. The definition of the normal bundle as a quotient gives the exact sequence
-\[
-0\rightarrow \mathbb{C}^2\otimes\mathcal{O}(-1)\rightarrow\mathbb{C}^4\rightarrow N\rightarrow 0
-\]
-and thus $N=\mathcal{O}(1)\oplus\mathcal{O}(1)$, since the last map is given explicitly by $V^{AA'}\mapsto V^{AA'}\pi_{A'}$ in spinor notation.
-\mynote{I don't understand this proof. I basically copied it out of Maciej's book. It might be better to just explain it rather than stating it formally as a lemma.}
-\koniec
+%\begin{lemma}[\cite{penrose}]
+%The normal bundle of the holomorphic curves $L_p=q(r^{-1}(p))$ corresponding to points $p\in M$ can be identified with $\mathcal{O}(1)\oplus\mathcal{O}(1)$.
+%\end{lemma}
+%\noindent
+%{\bf Proof.} The double fibration picture allows us to identify the normal bundle with the quotient $r^*(T_pM)/\mathrm{span}\{L_A\}$. In their homogeneous form the operators $L_A$ have weight one, and the distribution spanned by them is isomorphic to the bundle $\mathbb{C}^2\otimes\mathcal{O}(-1)$. The definition of the normal bundle as a quotient gives the exact sequence
+%\[
+%0\rightarrow \mathbb{C}^2\otimes\mathcal{O}(-1)\rightarrow\mathbb{C}^4\rightarrow N\rightarrow 0
+%\]
+%and thus $N=\mathcal{O}(1)\oplus\mathcal{O}(1)$, since the last map is given explicitly by $V^{AA'}\mapsto V^{AA'}\pi_{A'}$ in spinor notation.
+%\mynote{I don't understand this proof. I basically copied it out of Maciej's book. It might be better to just explain it rather than stating it formally as a lemma.}
+%\koniec
 
 The Nonlinear Graviton Theorem can now be stated as follows.
 \begin{theo}[\cite{penrose}]
 There is a one--to--one correspondence between complex ASD conformal structures and three--dimensional complex manifolds containing a four--parameter family of $\CP^1$ embeddings with normal bundle $\mathcal{O}(1)\oplus\mathcal{O}(1)$.
 \end{theo}
 \noindent
-From the results of Kodaira \cite{Kodaira} we have that a vector at a point $p\in M$ corresponds to a holomorphic section of the normal bundle $\mathcal{O}(1)\oplus\mathcal{O}(1)$ of the curve $\mathscr{L}_p$ in $\mathscr{T}$. Penrose shows that we obtain an ASD conformal structure from $\mathscr{T}$ by defining a vector to be null if the corresponding holomorphic section of $\mathcal{O}(1)\oplus\mathcal{O}(1)$ has a zero. Note that the vanishing of such a section is a quadratic condition, since $V^{AA'}\pi_{A'}$ can be solved for $\pi_{A'}$ if $\mathrm{det}(V^{AA'})=0$.
+From the results of Kodaira \cite{Kodaira} we have that a vector at a point $p\in M$ corresponds to a holomorphic section of the normal bundle $\mathcal{O}(1)\oplus\mathcal{O}(1)$ of the curve $\mathscr{L}_p$ in $\mathscr{T}$ (which we know from above belongs to a four--dimensional space). Penrose shows that we obtain an ASD conformal structure from $\mathscr{T}$ by defining a vector to be null if the corresponding holomorphic section of $\mathcal{O}(1)\oplus\mathcal{O}(1)$ has a zero. This is the infinitesimal version of the intersection condition on $\mathscr{L}_{p_1}$ and $\mathscr{L}_{p_2}$ above. %Note that the vanishing of such a section is a quadratic condition, since $V^{AA'}\pi_{A'}$ can be solved for $\pi_{A'}$ if $\mathrm{det}(V^{AA'})=0$.
 
 
 \subsubsection{(Anti--)self--duality in the sense of Calderbank}
@@ -228,7 +228,7 @@ In our coordinates $D$ is the kernel of the two--form $\Sigma=dx^{0'}\wedge dx^{
 \label{beta_eq}
 ^g\nabla\Sigma=6\mathcal{A}\otimes \Sigma,
 \ee
-where $d\mathcal{A}=\Omega$, and $\Omega$ is the symplectic form on $M$. Writing $\Sigma_{ab}=\iota_A\iota_B\epsilon_{A'B'}$, (\ref{beta_eq}) implies (\ref{dm3}) for a rescaling of $\mathcal{A}$, so it is the anti--self--duality of $\Omega$ which makes $D$ ASD in the sense of Calderbank. \mynote{I believe this is the first time we have mentioned the ASD'ty of $\Omega$. Can we also justify this?}
+where $d\mathcal{A}=\Omega$, and $\Omega$ is the symplectic form on $M$. Writing $\Sigma_{ab}=\iota_A\iota_B\epsilon_{A'B'}$, (\ref{beta_eq}) implies (\ref{dm3}) for a rescaling of $\mathcal{A}$, so it is the anti--self--duality of $\Omega$ which makes $D$ ASD in the sense of Calderbank. \mynote{I believe this is the first time we have mentioned the ASD'ty of $\Omega$. Can we also justify this? It is justified in section \ref{sec:model} for the model, but not in general.}
 
 In section \ref{sec:model} we will consider the model case where $M$ is constructed from the flat projective structure on $\RP^2$. In this case, we can explicitly describe the ASD Maxwell two--form $\Omega$ in terms of the twistor space of $M$,
 and we will find that $M$ carries a so--called \textit{pseudo--hyper--Hermitian} structure, in which $\mathcal{A}$ plays an important role.
@@ -263,15 +263,10 @@ Physically, the Weyl condition in Lorentzian signature corresponds to the statem
 If additionally the symmetric part of the Ricci tensor of $\mathscr{D}$ is a scalar multiple of $h$, then $W$ is said to carry an Einstein-Weyl structure.
 This condition is invariant under (\ref{weyl_tr}). A trivial Einstein--Weyl structure is one whose one--form $\omega$ is closed, so that it is locally exact and thus may be set to zero by a change of scale (\ref{weyl_tr}). Then $\mathscr{D}$ is the Levi--Civita connection of some representative $h\in[h]$, and this representative is Einstein.
 
-The Einstein--Weyl equations
-give a set of five non--linear PDEs on the pair $(h, \omega)$. These equations
-are integrable by the twistor transform of Hitchin \cite{hitchin}, which 
- can be regarded as a reduction of Penrose's twistor transform \cite{penrose} for ASD conformal structures by the following theorem of Tod.
- 
-\begin{theo}\cite{JT}
-\label{theo_tod1}
-\begin{enumerate}
-\item Let $(M, g)$ be a neutral signature, conformally ASD four--manifold with a conformal Killing vector $K$. Let
+In three dimensions, the Einstein--Weyl equations give a set of five non--linear PDEs on the pair $(h, \omega)$ which are integrable by the twistor transform of Hitchin \cite{hitchin}. Hitchin shows that there is a one--to--one correspondence between three--dimensional Einstein--Weyl structures and two--dimensional complex manifolds containing a three--parameter family of $\CP^1$ embeddings with normal bundle $\mathcal{O}(2)$. The conformal structure $[h]$ is obtained by demanding that a vector on $W$ is null if and only if the corresponding section of $\mathcal{O}(2)$ has a single zero. This condition is equivalent to the quadratic function $s(\lambda)$ which represents the section having vanishing discriminant.
+
+Hitchin's results can be regarded as a reduction of Penrose's twistor transform for ASD conformal structures by the following theorem of Tod.
+\begin{theo}\cite{JT} \label{theo_tod1} \begin{enumerate} \item Let $(M, g)$ be a neutral signature, conformally ASD four--manifold with a conformal Killing vector $K$. Let
 \be 
 \label{EWgen}
 h=|K|^{-2}g-|K|^{-4}{\bf{K}}\odot{\bf{K}},\qquad \omega=\frac{2}{|K|^2}\star({\bf{K}}\wedge d{\bf{K}}),
@@ -747,19 +742,15 @@ p^{\alpha}=[(z\cdot \pi)x^{A'}-\pi^A, z\cdot \pi], \quad l_\alpha=[\pi_A, -\pi\c
 \ee
 where the spinor indices are raised and lowered with $\epsilon^{AB}$ and its inverse, and  $z\cdot x\equiv z_{A'}x^{A'}$. 
 
-We shall now derive the expression for the conformal structure. According
-to the Nonlinear Graviton prescription of Penrose \cite{penrose} a vector
-$V\in \Gamma(T_mM)$ is null if the corresponding section
-of the normal bundle $N(L_m)={\mathcal O}(1)\oplus{\mathcal O}(1)$ has a 
-single zero. To compute the normal bundle, let $([l(\pi, P, L)], 
+We shall now derive the expression for the conformal structure using the Nonlinear Graviton prescription described in section \ref{sec:ASD'ty}. To compute the normal bundle, let $([l(\pi, P, L)], 
 [p(\pi, P, L)])$
-be the twistor line corresponding to a point $m=(P, L)$ in $M$. The neighbouring line is $([l+\delta l], [p+\delta p])$, where from (\ref{eq:l=Pwedgepi}) and (\ref{eq:p=Lwedgel}) we have
+be the twistor line corresponding to a point $m=(P, L)$ in $M$. The vector in the direction of a nearby point $(P+\delta P,L+\delta L)$ corresponds to the neighbouring line $([l+\delta l], [p+\delta p])$, where from (\ref{eq:l=Pwedgepi}) and (\ref{eq:p=Lwedgel}) we have
 \[
 \delta l=\delta P\wedge \pi, \quad
 \delta p= (\delta L\cdot \pi)P+(L\cdot\pi) \delta P-\delta (L\cdot P)\pi.
 \]
 
-The lines  $(l+\delta l, p+\delta p)$  and $(l, p)$ intersect if there exists some $[\pi]$ such that $l+\delta l\sim l$ and $p+\delta p\sim p$ (note that this point, if it exists, is unique, since projective lines in $\RP^2$ cannot meet more than once). We thus find
+The lines  $(l+\delta l, p+\delta p)$  and $(l, p)$ define a section of the normal bundle to $(l,p)$, which has a zero if and only if this vector is null. Vanishing of the section is equivalent to intersection of the two lines, and this happens if there exists some $[\pi]$ such that $l+\delta l\sim l$ and $p+\delta p\sim p$ (note that the intersection point, if it exists, is unique, since projective lines in $\RP^2$ cannot meet more than once). We thus find
 \[
 l+\delta l\sim l \quad \iff \quad\pi\sim\delta P=[\delta x^1, \delta x^2, 0].
 \]
@@ -775,6 +766,7 @@ Substituting $\pi\sim\delta P$, we find that all terms on the RHS are proportion
 \]
 Setting $L\cdot P=1$ this gives the conformal structure 
 (\ref{dm_metric}).
+\mynote{Is it possible to write this in the language of vectors, like we do in the mini--twistor section? To make it about a section of the normal bundle rather than the neighbouring line? I guess you'd divide (\ref{sl3curves}) by $\pi^{0'}$ like we do in the minitwistor section.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Pseudo--hyper--Hermitian structure}
 A pseudo--hyper--complex structure on a four manifold $M$ is a triple of endomorphisms
@@ -844,10 +836,11 @@ In the next section we shall show how to encode
 ${\mathcal A}$ in the twisted--photon Ward bundle over the twistor space
 of $(M, g)$.
 \subsection{The twisted photon}
+\mynote{Maybe discuss splitting in section \ref{sec:ASD'ty}.}
 The twistor space $F_{12}$ described in \S\ref{twist_SSS} is the projectivised tangent bundle ${T(\CP^2)}^*$ of the minitwistor space of the flat projective structure: a point in $F_{12}$ consists of $l\in\CP^2$, and a direction through $l$. Thus the twistor space of $M$ is the correspondence space
 of $\CP^2$ and ${\CP^2}^*$. 
 There are many open sets needed to cover
-$\CP(T\CP^2)$, but it is sufficient to consider two:
+$\PP(T\CP^2)$, but it is sufficient to consider two:
 $U$, where $(l_1, \neq 0, p^2\neq 0)$, and $(l_2/l_1, l_3/l_1, p^3/p^2)$ are coordinates, and $\widetilde{U}$ where
 $(l_1\neq 0, p^3\neq 0)$, and  $(l_2/l_1, l_3/l_1, p^2/p^3)$
 are coordinates. Now consider the total
@@ -962,7 +955,7 @@ Taking a projective vector field on $\mathbb{RP}^2$, we can find the correspondi
 Below we investigate a one--parameter subfamily of the two--parameter family. We use the holomorphic vector field on 
 the twistor space
 $F_{12}$  (see \S\ref{twist_SSS})
-corresponding to the chosen symmetry, and reconstruct the conformal structure $[h]$ on $N$ using minitwistor curves 
+corresponding to the chosen symmetry, and reconstruct the conformal structure $[h]$ on $W$ using minitwistor curves 
 (in the sense of \cite{hitchin})
 on the space of orbits. Take $a\in \mathbb{R}$ and
 \be
@@ -997,7 +990,7 @@ Substituting in our parametrisation (\ref{sl3curves}) and using the freedom to p
 Q &= \frac{(\lambda t-u-1)\lambda}{v\lambda+\lambda-\frac{uv}{t}}\\
 R &= \lambda^a\Big(-\lambda-\frac{v}{t}\Big)^{1-a},\nonumber
 \end{align}
-where we have defined $\lambda=\pi_{0'}/\pi_{1'}$, and the Einstein-Weyl coordinates
+where we have defined $\lambda=\pi_{0'}/\pi_{1'}$, \mynote{Think this $\lambda$ differs by a minus sign from the one I'm using in section \ref{sec:ASD'ty}.} and the Einstein-Weyl coordinates
 \[
 u=xp,\quad v=yq, \quad t=x^aq.
 \]
