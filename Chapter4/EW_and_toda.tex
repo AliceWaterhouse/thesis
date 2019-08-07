@@ -5,7 +5,7 @@
 
 \chapter{Einstein--Weyl structures and $SU(\infty)$--Toda fields} \label{chap:EW_and_toda}
 
-In this chapter, we focus on the four--dimensional Einstein manifolds that arise from the projective to Einstein correspondence in the case $n=2$. As discussed in chapter \ref{chap:intro}, it is shown in \cite{DM} that the Einstein manifolds in this subclass have anti--self--dual Weyl tensor, and are therefore associated with a twistor space \cite{penrose}. If they also carry a Killing vector field arising from a symmetry of the underlying projective surface, they are associated to solutions of the $SU(\infty)$--Toda equation via symmetry reduction to Lorentzian Einstein--Weyl structures in $2+1$ dimensions \cite{JT,Tod_note}.
+In this chapter, we focus on the four--dimensional Einstein manifolds that arise from the projective to Einstein correspondence in the case $n=2$. As discussed in chapter \ref{chap:intro}, it is shown in \cite{DM} that the Einstein manifolds in this subclass have anti--self--dual Weyl tensor, and are therefore associated with a twistor space \cite{penrose}. If they also carry a Killing vector field arising from a symmetry of the underlying projective surface, one can extract solutions of the $SU(\infty)$--Toda equation via symmetry reduction to Lorentzian Einstein--Weyl structures in $2+1$ dimensions \cite{JT,Tod_note}.
 
 The aim of this chapter is to exhibit the Einstein--Weyl structures obtainable in this way, resulting in several examples of new, explicit solutions of the Toda equation. We also give an explicit criterion for a vector field that generates a symmetry of a Weyl structure, and prove some results about the Einstein manifold and corresponding twistor space arising from the flat projective surface $\RP^2$. The content of this chapter is based on some of the work in \cite{DW}.
 
@@ -145,10 +145,12 @@ Any two--dimensional distribution on a four--manifold $M$ can be expressed as th
 \be \label{eq:alpha_dist}
 D_\alpha = \{\iota^A\pi^{A'},\iota^{A}\in\Gamma(\spp)\}=\mathrm{span}\{\pi^{A'}\mathsf{e}_{AA'}\},
 \ee
-where $\{\mathsf{e}_{AA'}\}$ is a null tetrad of vector fields.
+where $\{\mathsf{e}_{AA'}\}$ is a null tetrad of vector fields. \mynote{Do I need to write this in terms of an orthonormal basis for $\spp,\spp'$?} An $\alpha$--surface (respectively $\beta$--surface) is a two--dimensional surface in $M$ which is tangent to an $\alpha$--($\beta$--)distribution at every point. Penrose's Nonlinear Graviton Theorem \cite{penrose} states that a 
+maximal, three dimensional family of $\alpha$--surfaces exists in $M$ if and only if its conformal curvature is ASD, i.e. $C_+=0$.
 
-An $\alpha$--surface (respectively $\beta$--surface) is a two--dimensional surface in $M$ which is tangent to an $\alpha$--($\beta$--)distribution at every point. Penrose's Nonlinear Graviton Theorem \cite{penrose} states that a 
-maximal, three dimensional family of $\alpha$--surfaces exists in $M$ if and only if its conformal curvature is ASD, i.e. $C_+=0$. The \textit{twistor space} $\mathscr{T}$ of $M$ is then defined as the three--dimensional manifold comprising the set of all $\alpha$--surfaces in $M$. Each point $p\in M$ corresponds to a subset $\mathscr{L}_p\subset\mathscr{T}$ of $\alpha$--surfaces which pass through $p$. Since an $\alpha$--surface at $p$ is defined by a $\pi^{A'}\in\spp'|_p$ up to scale, $\mathscr{L}_p$ is an embedding $\CP^1\subset\mathscr{T}$. We denote the lift of the distribution (\ref{eq:alpha_dist}) to $\spp'$ by
+In fact, Penrose considers four dimensional \textit{complex} manifolds\footnote{Note that familiar facts from real geometry such as a unique Levi--Civita connection and the Frobenius theorem carry over to holomorphic geometry. See \cite{LeBrun83} for details.} $M$ carrying a metric which is \textit{holomorphic} in the sense that the metric components depend on the coordinates on $M$ and not on their complex conjugates. Then $\spp,\spp'$ are complex vector bundles over $M$ and $\varepsilon,\varepsilon'$ are holomorphic symplectic forms. A real conformally ASD metric in a given signature can then be obtained by choosing the correct reality conditions. In neutral signature this amounts to identifying spinors with their complex conjugates. \mynote{??? What is the correct choice in neutral signature? I'm not sure I understand what reality conditions are when we are not in Minkowski spacetime.}
+
+The \textit{twistor space} $\mathscr{T}$ of $M$ is defined as the three--dimensional complex manifold comprising the set of all $\alpha$--surfaces in $M$. Each point $p\in M$ corresponds to a subset $\mathscr{L}_p\subset\mathscr{T}$ of $\alpha$--surfaces which pass through $p$. Since an $\alpha$--surface at $p$ is defined by a $\pi^{A'}\in\spp'|_p$ up to scale, $\mathscr{L}_p$ is an embedding $\CP^1\subset\mathscr{T}$. We denote the lift of the distribution (\ref{eq:alpha_dist}) to $\spp'$ by
 \be \label{eq:twistor_dist}
 \mathcal{D}=\mathrm{span}\{L_A:=\pi^{A'}\tilde{\mathsf{e}}_{AA'}\},
 \ee
@@ -203,7 +205,7 @@ where $d\mathcal{A}$ is an (A)SD Maxwell field. Then $D_\beta$ is (A)SD in the s
 A general ASD metric depends, in the real--analytic category, on six arbitrary functions of the variables. Theorem \ref{thm:DM} gives an explicit subclass of such metrics which are additionally constrained by the following local characterisation.
 
 \begin{theo}\cite{DM} \label{thm:DMcharacterisation}
-Let $(M,g)$ be an ASD Einstein manifold with scalar curvature $24$ admitting a totally null distribution $D$ which is ASD in the sense of Calderbank and parallel in the sense that $^g\nabla_XY\in\Gamma(D)$ for all $X\in \Gamma(TM),\ Y\in\Gamma(D)$. Then $(M,g)$ is conformally flat, or it is locally isometric to (\ref{eq:g4}).
+Let $(M,g)$ be an real ASD Einstein manifold with scalar curvature $24$ admitting a totally null distribution $D$ which is ASD in the sense of Calderbank and parallel in the sense that $^g\nabla_XY\in\Gamma(D)$ for all $X\in \Gamma(TM),\ Y\in\Gamma(D)$. Then $(M,g)$ is conformally flat, or it is locally isometric to (\ref{eq:g4}).
 \end{theo}
 \noindent
 Note that a parallel distribution is necessarily Frobenius integrable, since
@@ -218,8 +220,8 @@ In our coordinates $D$ is the kernel of the two--form $\Sigma=dx^{0'}\wedge dx^{
 \ee
 where $d\mathcal{A}=\Omega$, and $\Omega$ is the symplectic form on $M$. Writing $\Sigma_{ab}=\iota_A\iota_B\epsilon_{A'B'}$, (\ref{beta_eq}) implies (\ref{dm3}) for a rescaling of $\mathcal{A}$, so it is the anti--self--duality of $\Omega$ which makes $D$ ASD in the sense of Calderbank. \mynote{I believe this is the first time we have mentioned the ASD'ty of $\Omega$. Can we also justify this?}
 
-In section \ref{model} we will consider the model case where $M$ is constructed from the flat projective structure on $\RP^2$. In this case, we can explicitly describe the ASD Maxwell two--form $\Omega$ in terms of the twistor space of $M$,
-and we will find that there is a second $\beta$--surface foliation with a different two--form which is also ASD in the sense of Calderbank. \mynote{According to Maciej we do not actually do that.}
+In section \ref{sec:model} we will consider the model case where $M$ is constructed from the flat projective structure on $\RP^2$. In this case, we can explicitly describe the ASD Maxwell two--form $\Omega$ in terms of the twistor space of $M$,
+and we will find that $M$ carries a so--called \textit{pseudo--hyper--Hermitian} structure, in which $\mathcal{A}$ plays an important role.
 
 
 
@@ -628,7 +630,7 @@ In the case of the Weyl structure (\ref{ew_neat}), the infinitesimal symmetry is
 \]
 Since we have chosen a scale such that $\mathcal{K}$ is in fact a Killing vector of $h$, we have that $\mathcal{K}\hook d(\mathrm{ln}(\mathrm{det}(h))=0$, so the one--form $\omega$ is also preserved by $\mathcal{K}$. This is consistent with the fact that it has no explicit $v$--dependence.
 \section{The flat projective surface}
-\label{model}
+\label{sec:model}
 In the following section we discuss the four--manifold $(M,g)$ obtained from the maximally symmetric flat 
 projective surface $N=\RP^2$. In this case, $g$ is the indefinite analogue of the Fubini--Study metric given by the quotient $SL(3)/GL(2)$, and is not only almost para--K\"ahler but in fact para--K\"ahler, since the symplectic form $\Omega$ is parallel with respect to the Levi--Civita connection of $g$. Chosing a representative connection with
 $\Gamma_{AB}^C=0$ gives $g$ as
@@ -638,14 +640,10 @@ g=dz_{A'}\odot dx^{A'}+ z_{A'}z_{B'} dx^{A'}\odot dx^{B'}.
 \ee
 
 We begin by discussing the  conformal structure
-of (\ref{special_ein}), both explicitly and in terms of its twistor space, which is the flag manifold $F_{12}(\mathbb{C}^3)$. We then note some structure which is unique to the model case: pseudo--hyper--hermiticity and a second foliation by $\beta$--surfaces which is ASD in the sense of Calderbank\mynote{MD: we do not actually do that}. We also note that the twistor space  $F_{12}(\mathbb{C}^3)$ fibers holomorphicaly over $\CP^1$.
-
-Finally, we present a classification of the Einstein--Weyl structures which can be obtained by Jones--Tod factorisation of $SL(3)/GL(2)$ and exhibit an explicit example of such a factorisation from the twistor perspective, reconstructing the conformal structure on $W$ from minitwistor curves.
+of (\ref{special_ein}), both explicitly and in terms of its twistor space. We then note a pseudo--hyper--Hermiticity property which is unique to the model case, and find that the twistor space fibers holomorphicaly over $\CP^1$. Finally, we present a classification of the Einstein--Weyl structures which can be obtained by Jones--Tod factorisation of $SL(3)/GL(2)$ and exhibit an explicit example of such a factorisation from the twistor perspective, reconstructing the conformal structure on $W$ from minitwistor curves.
 \subsection{Conformal Structure}
 \label{model_conf}
 \mynote{Should I put this in the intro?}
-\mynote{Is it clear why $M$ is the same thing as what the sentence below says, or do we take it from the fact that the conformal structures agree?}
-\mynote{Is it clear that the right thing to do is to replace the $\RP^n$s with $\CP^n$s?}
 We first discuss the notion of duality in projective geometry. Consider the set of planes through the origin in $\R^3$. These can be specified by their normal vector, which is defined only up to multiplication by $\R^*$. Let us denote such a plane by a non--zero row vector $L\in\R_3$. A point $P\in\R^3$ lies in the plane defined by $L$ if and only if $L\cdot P=0$.
 
 When we projectivise the $\R^3$, any $P\neq 0$ descends to a point $[P]\in\RP^2$, and any plane descends to a line $[L]\subset\RP^2$. The incidence relation $L\cdot P=0$ is now equivalent to the point $[P]$ lying in the line $[L]$. The homogeneous coordinates $[L]$ parametrise a second projective surface which we think of as the dual to the $\RP^2$ parametrised by $[P]$, and denote $\RP^{2*}$.
@@ -696,10 +694,10 @@ with a normalisation $P\cdot L=1$ to recover the metric (\ref{special_ein}).
 \koniec
 \subsection{Twistor space}
 \label{twist_SSS}
-\mynote{As I understand it, this section could be rephrased as a proposition that the conformal structure described above is reproduced by the twistor space $F_{12}$. Need to add something about normal bundles to the ASd'ty section above. Also, explain here what a flag manifold is.}
-Let $F_{12}(\mathbb{C}^3)\in \PP^2\times {\PP^2}^*$ be set of incident pairs 
-$(p, l)$, so that $p\cdot l=0$. This is the twistor space of $(M, g)$.
-A $\PP^1$ embedding corresponding to a point $(P, L)$
+\mynote{As I understand it, this section could be rephrased as a proposition that the conformal structure described above is reproduced by the twistor space $F_{12}$.}
+To understand $(M,[g])$ from the twistor perspective, we need to move to the complex picture. In what follows, we will view $M$ as the set of non--incident pairs in $\CP^2\times\CP^{2*}$. \mynote{Is it obvious that this is the right thing to do?} Let $F_{12}(\mathbb{C}^3)\subset \CP^2\times {\CP^2}^*$ be set of incident pairs 
+$(p, l)$, so that $p\cdot l=0$. Note that, since $l$ and $p$ correspond to planes and lines in $\mathbb{C}^3$ respectively, and since $p\cdot l=0$ is the condition for the line $p$ lying in the plane $l$, $F_{12}(\mathbb{C}^3$ coincides with the flag manifold of type $(1,2)$ in $\mathbb{C}^3$, i.e. the collection of one-- and two--dimensional vector subspaces $(p,l)$ in $\mathbb{C}^3$ such that $p\subset l$. This is the twistor space of $(M, g)$.
+A $\CP^1$ embedding corresponding to a point $(P, L)\in M$
 consists of all lines $l$ thorough $P$, and all points
 $p=l\cap L$:
 \be
@@ -707,32 +705,32 @@ $p=l\cap L$:
 P\cdot l=0, \quad p\cdot L=0, \quad p\cdot l=0.
 \ee
 
-Let $(P, L)$ and $(\tP, \tL)$ be points in $M$. These uniquely define a point $p=L\cap\tL\in\PP^2$ and line $l\subset\PP^2$ such that $P,\tP\in l$ given by
+Let $(P, L)$ and $(\tP, \tL)$ be points in $M$. These uniquely define a point $p=L\cap\tL\in\CP^2$ and line $l\subset\CP^2$ such that $P,\tP\in l$ given by
 \[
 p=L\wedge \tL, \quad l=P\wedge \tP,
 \]
 where $[L\wedge\tL]^{\alpha}=\epsilon^{\alpha\beta\gamma}L_{\alpha}\tL_{\beta}$ etc.
 The pair $(p,l)$ lies in $F_{12}$ if $p$ lies on $l$, i.e. if $p\cdot l=0$, so that $(P, L)$ and $(\tP, \tL)$ are null--separated with respect to the conformal structure
-(\ref{dm1}). Then $(p,l)$ is the intersection of the $\PP^1$ embeddings corresponding to $(P, L)$ and $(\tP, \tL)$. The contact structure on $F_{12}$ is $(l\cdot dp-p\cdot dl)/2=p\cdot dl$. \mynote{Contact structure on $F_{12}$?}
+(\ref{dm1}). Then $(p,l)$ is the intersection of the $\CP^1$ embeddings corresponding to $(P, L)$ and $(\tP, \tL)$. The contact structure on $F_{12}$ is $(l\cdot dp-p\cdot dl)/2=p\cdot dl$. \mynote{Contact structure on $F_{12}$?}
 
 We shall now give an explicit parametrisation of twistor lines, and show how 
 the metric (\ref{dm_metric}) arises from the Penrose condition 
 \cite{penrose, ward}.
-Let $P\in \PP^2$. The corresponding $l\in {\PP^2}^*$ is represented by some normal vector which is perpendicular to $P$ in $\R^3$, i.e.
+Let $P\in \CP^2$. The corresponding $l\in {\CP^2}^*$ is represented by some normal vector which is perpendicular to $P$ in $\mathbb{C}^3$, i.e.
 \be \label{eq:l=Pwedgepi}
 l=P\wedge \pi, \quad \mbox{where}\quad  \pi\sim a\pi+b P,
 \ee
-where $a\in \R^*, b\in \R$. Thus $\pi$ parametrises a projective line $\PP^1$,
+where $a\in \R^*, b\in \R$. \mynote{Should these $\R$s be $\mathbb{C}$s?} Thus $\pi$ parametrises a projective line $\CP^1$,
 and by making a choice of $b$ we can take
 $
 \pi=[\pi^0, \pi^1, 0], 
-$ where $\pi^A=[\pi^0, \pi^1]\in \PP^1$. The constraint $P\cdot l=0$ now holds.
+$ where $\pi^A=[\pi^0, \pi^1]\in \CP^1$. The constraint $P\cdot l=0$ now holds.
 To satisfy the remaining constraints in (\ref{dm2}) we take
 \be \label{eq:p=Lwedgel}
 p=L\wedge l=(L\cdot\pi)P-(L\cdot P)\pi.
 \ee
 Substituting (\ref{DM_parameter}) gives 
-the corresponding twistor line parametrised by $[\pi]\in\PP^1$ 
+the corresponding twistor line parametrised by $[\pi]\in\CP^1$ 
 \be
 \label{sl3curves}
 p^{\alpha}=[(z\cdot \pi)x^{A'}-\pi^A, z\cdot \pi], \quad l_\alpha=[\pi_A, -\pi\cdot x],
@@ -836,18 +834,18 @@ In the next section we shall show how to encode
 ${\mathcal A}$ in the twisted--photon Ward bundle over the twistor space
 of $(M, g)$.
 \subsection{The twisted photon}
-The twistor space $F_{12}$ described in \S\ref{twist_SSS} is the projectivised tangent bundle ${T(\PP^2)}^*$ of the minitwistor space of the flat projective structure: a point in $F_{12}$ consists of $l\in\PP^2$, and a direction through $l$. Thus the twistor space of $M$ is the correspondence space
-of $\PP^2$ and ${\PP^2}^*$. 
+The twistor space $F_{12}$ described in \S\ref{twist_SSS} is the projectivised tangent bundle ${T(\CP^2)}^*$ of the minitwistor space of the flat projective structure: a point in $F_{12}$ consists of $l\in\CP^2$, and a direction through $l$. Thus the twistor space of $M$ is the correspondence space
+of $\CP^2$ and ${\CP^2}^*$. 
 There are many open sets needed to cover
-$\PP(T\PP^2)$, but it is sufficient to consider two:
+$\CP(T\CP^2)$, but it is sufficient to consider two:
 $U$, where $(l_1, \neq 0, p^2\neq 0)$, and $(l_2/l_1, l_3/l_1, p^3/p^2)$ are coordinates, and $\widetilde{U}$ where
 $(l_1\neq 0, p^3\neq 0)$, and  $(l_2/l_1, l_3/l_1, p^2/p^3)$
 are coordinates. Now consider the total
-space of $T\PP^2$ (or perhaps it is $T\PP^2$ tensored
+space of $T\CP^2$ (or perhaps it is $T\CP^2$ tensored
 with some power of the canonical bundle to make it trivial on twistor
 lines), and restrict it to the intersection of (pre--images in
-$T\PP^2$
-of) $U$ and $\widetilde{U}$. The coordinates on $T\PP^2$ in these
+$T\CP^2$
+of) $U$ and $\widetilde{U}$. The coordinates on $T\CP^2$ in these
 region are $(l_2/l_1, l_3/l_1, p^2/p^1, p^3/p^1)$, and the fiber
 coordinates over $\tau$ over $U$ and $\tilde{\tau}$ over 
 $\widetilde{U}$ are related by\footnote{Here we are following Ward \cite{wardtf},
