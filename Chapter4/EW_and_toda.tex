@@ -218,10 +218,6 @@ A general ASD metric depends, in the real--analytic category, on six arbitrary f
 Let $(M,g)$ be an real ASD Einstein manifold with scalar curvature $24$ admitting a totally null distribution $D$ which is ASD in the sense of Calderbank and parallel in the sense that $^g\nabla_XY\in\Gamma(D)$ for all $X\in \Gamma(TM),\ Y\in\Gamma(D)$. Then $(M,g)$ is conformally flat, or it is locally isometric to (\ref{eq:g4}).
 \end{theo}
 \noindent
-Note that a parallel distribution is necessarily Frobenius integrable, since
-\[
-[X,Y]= {^g}\nabla_XY- {^g}\nabla_YX\in\Gamma(D)\quad\mbox{for all}\quad X,Y\in\Gamma(D).
-\]
 
 In our coordinates $D$ is the kernel of the two--form $\Sigma=dx^{0'}\wedge dx^{1'}$, and can be written as ${D}=\mathrm{span}\{\p/\p z_{0'},\p/\p z_{1'}\}$. We find that
 \be
@@ -311,13 +307,13 @@ of Tod which improved the earlier result of Przanowski \cite{Prz}.
 \begin{theo}
 \label{th3int}\cite{Tod_note}
 Let $(W,h, \omega)$ be an Einstein--Weyl structure arising from the first part of Theorem \ref{theo_tod1}, under the additional assumption that
-the ASD conformal structure $(M, [g])$ has a representative $g\in[g]$ which is Einstein with non--zero Ricci scalar. 
-\begin{enumerate}
-\item The Einstein--Weyl structure admits a shear--free, twist--free geodesic
-congruence.
-\item There exists $h\in [h]$, and
+the ASD conformal structure $(M, [g])$ has a representative $g\in[g]$ which is Einstein with non--zero Ricci scalar. Then 
+%\begin{enumerate}
+%\item The Einstein--Weyl structure admits a shear--free, twist--free geodesic congruence.
+%\item
+there exists $h\in [h]$, and
 coordinates $(X, Y, Z)$ on an open set in $W$ such that
-(assuming the signature of $h$ is $(2, 1)$ and the congruence is time--like)
+(assuming the signature of $h$ is $(2, 1)$ and the one--form $dZ$ corresponds to a time--like vector)
 \be
 \label{metric_toda}
 h=e^U(dX^2+dY^2)-dZ^2, \quad \omega =2U_ZdZ
@@ -325,10 +321,12 @@ h=e^U(dX^2+dY^2)-dZ^2, \quad \omega =2U_ZdZ
 and the function $U=U(X, Y, Z)$ satisfies the $SU(\infty)$--Toda equation
 (\ref{md_toda}) 
 with $\epsilon=1$.
-\end{enumerate}
+%\end{enumerate}
 \end{theo}
 
-\mynote{Need to define a congruence and its shear and twist, or modify the statement of Tod's theorem to be independent of the congruence.}
+Note that the assumptions about the signature of $h$ and the timelike character of $dZ$ in the above theorem are satisfied for all the Einstein--Weyl structures that can be obtained from the projective to Einstein correspondence.
+
+%\mynote{Need to define a congruence and its shear and twist, or modify the statement of Tod's theorem to be independent of the congruence.}
 
 \subsection{From projective surfaces to $SU(\infty)$--Toda fields}
 The whole construction can now be summarised in the following diagram
@@ -372,7 +370,7 @@ h&=&\frac{1}{V}\big((Bq -Ap+ q^2)dy+dq\big)dy
 \omega&=&V(4dq+2 pdp), \quad\mbox{where}\quad V=
 ({B}+ p^2+q)^{-1}.\nonumber
 \end{eqnarray}
-Here $(p, q, y)$ are local coordinates on $W$, $A(y), B(y)$ are arbitrary functions of $y$, and the corresponding solution to the monopole equation (\ref{eq:monopole_eq}) is the pair $(V,\alpha)$, where
+Here $(p, q, y)$ are local coordinates on $W$, $A(y), B(y)$ are arbitrary functions of $y$, and the solution to the monopole equation (\ref{eq:monopole_eq}) arising from the second part of Theorem \ref{theo_tod1} is the pair $(V,\alpha)$, where
 \[
 \alpha=V( pq+A)dy+\frac{V}{2}dp.
 \]
@@ -466,24 +464,13 @@ Note that even the flat projective surface can yield a non--trivial solution to 
 
 
 \subsection{Two monopoles}
-The Einstein--Weyl structures  (\ref{genh}) we have constructed in Proposition \ref{prop1}
-are special, as they belong to the $SU(\infty)$--Toda class, and so
-(as shown by Tod \cite{Tod_toda}) admit a non--null geodesic congruence which has vanishing shear and twist.
+The Einstein--Weyl structures $(W,h,\omega)$ in (\ref{genh}) that we have constructed in Proposition \ref{prop1}
+are special, as they belong to the $SU(\infty)$--Toda class. %, and so (as shown by Tod \cite{Tod_toda}) admit a non--null geodesic congruence which has vanishing shear and twist.
 The general solution to the $SU(\infty)$--Toda equation depends (in the real analytic category) on 
 two arbitrary functions of two variables, but the solutions of the form (\ref{genh}) depend on two functions of one variable. The additional constraints on the solutions can be traced back to the four dimensional ASD conformal structures
 which give rise (by the Jones--Tod construction) to (\ref{genh}).
-
-As discussed above, in addition to their being ASD and Einstein
-they are  characterised \cite{DM} by a $\beta$--distribution which is parallel with respect to the Levi--Civita connection and ASD in the sense of Calderbank \cite{Cal1}.
-The corresponding $\beta$--surfaces do not generically intersect with a given $\alpha$--surface, however if they do intersect then they will intersect in curves (null geodesics) which descend to the Einstein--Weyl structures, and give
-rise to another (in addition to the Tod shear--free, twist--free) geodesic congruence.
-In what follows we shall point out how some of this structure arises from a couple of solutions to the Abelian monopole
-equation on EW  backgrounds.
-
-
-
-
-
+%As discussed above, in addition to their being ASD and Einstein they are  characterised \cite{DM} by a $\beta$--distribution which is parallel with respect to the Levi--Civita connection and ASD in the sense of Calderbank \cite{Cal1}. The corresponding $\beta$--surfaces do not generically intersect with a given $\alpha$--surface, however if they do intersect then they will intersect in curves (null geodesics) which descend to the Einstein--Weyl structures, and give rise to another (in addition to the Tod shear--free, twist--free) geodesic congruence.
+In what follows we shall point out how some of the additional structure on $W$ arises as a couple of solutions to the Abelian monopole equation.
 
 Let us call the solution $(V,\alpha)$ arising in Proposition \ref{prop1} the Einstein monopole, as the resulting conformal class contains an Einstein metric
 (\ref{einstein_1}). The second solution $(V_M, \alpha_M)$ (which we shall call the Maxwell monopole)
@@ -497,8 +484,7 @@ we find
 \[
 V_M=-pV, \quad \alpha_M=qdy-p\alpha.
 \]
-\mynote{This is not related back to the congruence, so I need to either delete the congruence chat above or related this monopole solution to the congruence.}
-\mynote{Also I don't quite understand how this second monopole arises from $\mathcal{A}$.}
+\mynote{I want to understand and explain this better.}
 \section{The submaximally symmetric projective surface}
 \label{neat}
 \mynote{Say something about $\mathrm{Aff}(1)$?}
@@ -836,9 +822,10 @@ In the next section we shall show how to encode
 ${\mathcal A}$ in the twisted--photon Ward bundle over the twistor space
 of $(M, g)$.
 \subsection{The twisted photon}
-\mynote{Maybe discuss splitting in section \ref{sec:ASD'ty}.}
-The twistor space $F_{12}$ described in \S\ref{twist_SSS} is the projectivised tangent bundle ${T(\CP^2)}^*$ of the minitwistor space of the flat projective structure: a point in $F_{12}$ consists of $l\in\CP^2$, and a direction through $l$. Thus the twistor space of $M$ is the correspondence space
-of $\CP^2$ and ${\CP^2}^*$. 
+\mynote{Maybe discuss splitting and correspondence spaces and the projective twistor transform in section \ref{sec:ASD'ty}.}
+The twistor space $F_{12}$ described in \S\ref{twist_SSS} can be identified with the projectivised tangent bundle ${\PP(T\CP^{2*})}$, of the minitwistor space of the flat projective structure, since a point $(p,l)$ in $F_{12}\subset\CP^2\times\CP^{2*}$ consists of a point $l\in\CP^{2*}$, and a line $p\subset\CP^{2*}$ through $l$ which we can identify with a direction in the tangent space $T_l\CP^{2*}$. Thus the twistor space of $M$ is the correspondence space (in a twistorial sense) of $\CP^2$ and its twistor space ${\CP^2}^*$.
+ 
+\mynote{I think what he is showing here is that $T\CP^2$ fibers trivially over $\PP(\CP^2)$, but I thought he said in the intro to our paper that we are showing that the twistor space of $M$ (i.e. $\PP(\CP^2)$) fibers trivially over... something. Twistor lines? The twistor space of the flat projective surface?}
 There are many open sets needed to cover
 $\PP(T\CP^2)$, but it is sufficient to consider two:
 $U$, where $(l_1, \neq 0, p^2\neq 0)$, and $(l_2/l_1, l_3/l_1, p^3/p^2)$ are coordinates, and $\widetilde{U}$ where

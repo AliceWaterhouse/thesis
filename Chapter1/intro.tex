@@ -70,6 +70,7 @@ implying ${d}x^{a}\wedge{d}x^{b}=\frac{1}{2}({d}x^{a}\otimes{d}x^{b}-{d}x^{b}\ot
 \item $N$ is oriented. \mynote{Although $\RP^n$ is not oriented right?? also something about which part of $SL(n+1)$ we mean?}
 \item Probably a convention for the Hodge operator
 \item Probably a convention for $\varepsilon_{AB}$ and matching indices descending to the right
+\item Line projectivisation except where stated otherwise.
 \end{itemize}
 
 \section{Projective Geometry}\label{sec:projgeom}
@@ -350,11 +351,17 @@ where $\mathrm{Sym}$ and $\mathrm{Ant}$ denote the symmetric and
 anti-symmetric parts of the $(0,2)$ tensor $\eta\omega$. Moreover,
 $\Omega$ is closed as a consequence of the Bianchi identity, $g$
 is Einstein with non-zero scalar curvature, and the two are related
-by an endomorphism $J$ satisying $J^{2}=\mathrm{id}$. Hence $(g,\Omega)$
-is an almost para-Kahler structure on $M$.
+by an endomorphism $J$ satisying $J^{2}=Id$. Hence $(g,\Omega)$
+is an almost para--Kahler structure on $M$.
 \end{theo}
 
-Note that the full proof of theorem \ref{thm:DM} only appears explicitly in \cite{DM} in the case $n=2$, although it can be generalised to $n>2$. This generalisation is discussed in their appendix. They show that the Ricci scalar of $g$ is $24$ in the case $n=2$. In chapter \ref{chap:KK_lift} we will need the Ricci scalar for general $n$. We will calculate this under the assumption (stated without proof in \cite{DM}) that $g$ is Einstein.
+\begin{rmk}
+The full proof of theorem \ref{thm:DM} only appears explicitly in \cite{DM} in the case $n=2$, although it can be generalised to $n>2$. This generalisation is discussed in their appendix. They show that the Ricci scalar of $g$ is $24$ in the case $n=2$. In chapter \ref{chap:KK_lift} we will need the Ricci scalar for general $n$. We will calculate this under the assumption (stated without proof in \cite{DM}) that $g$ is Einstein.
+\end{rmk}
+
+\begin{rmk}
+Note that an endomorphism $J$ which squares to the identity defines two $n$--dimensional sub--bundles of the tangent bundle $TM$ defined at each $p\in M$ as the vector subspaces of $T_pM$ which have eigenvalues $\pm 1$ with respect to $J$. These sub--bundles form a pair of smooth distributions $D_\pm$ in $TM$. Further discussion of the endomorphism $J$ will appear in chapter \ref{chap:c-proj}.
+\end{rmk}
 
 \mynote{Motivate chapter \ref{chap:KK_lift} here by mentioned the alternative quotient?}
 
@@ -381,8 +388,10 @@ Note that the full proof of theorem \ref{thm:DM} only appears explicitly in \cit
 %\Rho_{ij}\longrightarrow \Rho_{ij}+\Upsilon_{i}\Upsilon_{j}-\nabla_{i}\Upsilon_{j},\qquad \zeta_{i}\longrightarrow \zeta_{i}+\Upsilon_{i}.\label{eq:\zeta_change}
 %\end{equation}
 
+\begin{rmk}
 A coordinate expression for the metric $g$ and two--form $\Omega$ can be obtained by writing out the Cartan connection $\theta$ explicitly for some choice of connection in the projective class. Alternatively, one can take a tractor approach using the tractor connection (\ref{eq:tractor_connection}). This approach is a product of \cite{DGW}.
 \mynote{Might be good to add Thomas' construction explicitly. This would be better for justifying the comments made in chapter \ref{chap:KK_lift} about the lifted metric being a different quotient of the Cartan bundle.}
+\end{rmk}
 
 \subsection{Tractor perspective} \label{sec:trac_construction}
 
@@ -569,8 +578,6 @@ T_p^*N\ni \zeta_i  \mapsto [(1,\zeta_i)]=[(\tau,\tau \zeta_i)]\in
 %A feature of this construction is that in each dimension $n$ (of $N$) either the hypersurface $\mathcal{Z}(\tau)$ (if $n$ odd) is not orientable, or $\mathcal{M}$ (if $n$ even) is not orientable.
 %\end{rmk} 
 
-\mynote{Make a comment about the model case? Motivated by chapter \ref{chap:c-proj} and maybe \ref{chap:EW_and_toda}?}
-
 \begin{rmk}
 In fact, the metric and symplectic form (\ref{eq:coord_form}) turn
 out to belong to a one-parameter family $\{g_{\Lambda}\}$, which
@@ -579,13 +586,14 @@ can be written in local coordinates as
 g_{\Lambda} & = &  d\zeta_{i}\odot dx^{i}-(\Gamma_{ij}^{k}\zeta_{k}-\Lambda \zeta_{i}\zeta_{j}-\Lambda^{-1}\Rho_{ij}) dx^{i}\odot dx^{j}\label{eq:general_g}\\
 \Omega_{\Lambda} & = &  d\zeta_{i}\wedge dx^{i}+\frac{1}{\Lambda}\Rho_{ij} dx^{i}\wedge dx^{j},\qquad i,j=1,\dots ,n.\label{eq:general_omega}
 \end{eqnarray}
-%Metrics of the form (\ref{eq:general_g}) are a subclass of so-called
-%Osserman metrics. More details can be found in \cite{No-louzao1991}.
+Metrics of the form (\ref{eq:general_g}) are a subclass of so-called
+Osserman metrics. More details can be found in \cite{No-louzao1991}.
 They are all Einstein with non--zero scalar curvature $24\Lambda$, but for $\Lambda\neq1$ the relation to projective geometry is lost. For the remainder of the thesis we will write $g$ for $g_{\Lambda=1}$ unless stated otherwise. Note that $\{g_\Lambda\}$ will be the subject of chapter \ref{chap:KK_lift}, whilst in chapters \ref{chap:c-proj} and \ref{chap:EW_and_toda} we will restrict our attention to $g$ because the projective geometry is a key aspect of the content of these chapters.
 \end{rmk}
 
 
- \subsection{Symmetries of $(M,g_{\Lambda},\Omega_{\Lambda})$}
+
+\subsection{Symmetries of $(M,g_{\Lambda},\Omega_{\Lambda})$}
 
 Recall that a projective vector field on any manifold with a connection
 generates a 1-parameter family of transformations which preserve the
@@ -613,8 +621,32 @@ given in local coordinates by
 \end{equation}
 where $\Upsilon_{i}$ is defined by (\ref{eq:proj_transf}).
 
+\subsection{The model case} \label{sec:intro_model}
+When $(N,[\nabla])$ is the flat projective structure $\RP^n$, the metric and symplectic form (\ref{eq:coord_form}) reduce to
+\[
+g = d\zeta_i\odot dx^i + (\zeta_idx^i)^2, \quad \Omega = d\zeta_i\wedge dx^i,\quad i,j=1,\dots,n.
+\]
+In this case $M$ is simply the Lie group quotient $SL(n+1,\R)/GL(n,\R)$. It is particularly interesting for a number of reasons.
+
+Firstly, in the model case, the symplectic form $\Omega$ is parallel with respect to the Levi--Civita connection $^g\nabla$ of $g$, meaning that the endomorphism $J$ of $TM$ which relates $g$ and $\Omega$ is also parallel. \mynote{Can this be justified from the tractor perspective below? If so, put it below.} As a result of this, the distributions $D_\pm$ defined by the two $n$--dimensional eigen--bundles of $J$ are parallel in the sense that $^g\nabla_XY\in\Gamma(D_\pm)$ for all $X\in \Gamma(TM),\ Y\in\Gamma(D_\pm)$. This makes the distributions \textit{Frobenius integrable}, meaning that the Lie bracket of any two sections of either distribution is also a section of that distribution, or equivalently (as shown by Frobenius) that each of the two distributions is tangent to a foliation of sub--manifolds of dimension $n$ at every point. To see that a parallel distribution is necessarily Frobenius integrable, note that the Lie bracket can be written
+\[
+[X,Y]= \nabla_XY- \nabla_YX\in\Gamma(D_\pm)\quad\mbox{for all}\quad X,Y\in\Gamma(D_\pm),
+\]
+where $D$ is a distribution which is parallel with respect to a connection $\nabla$. The Frobenius integrability of $D_\pm$ makes $(M,g,\Omega)$ not only almost para--K\"ahler but also para--K\"ahler. Further discussion can be found in chapter \ref{chap:c-proj}.
+
+Secondly, in the model case one can see that the metric $g$ is Einstein using the results of \cite{CGH-duke} on \textit{holonomy reductions} of Cartan geometries. \mynote{Actually since this case is not a \textit{curved} orbit decomp I don't think it is due to CGH. I need to look at the notes I made from Rod's course in Srni.}
+\begin{itemize}
+\item Recall that holonomy group is...
+\item Holonomy of a Cartan connection
+\item A parallel section of a tractor bundle induces a holonomy reduction and orbit decomposition.
+\item From a parallel metric on a projective tractor bundle you get Einstein geometries in the open orbits. Is this right? Is $\cT\oplus\cT^*$ still a projective tractor bundle? Or is our metric actually just on $\cT$?
+\item In the model case, if you replace line projectivisation by ray projectivisation, the tractor bundle is trivial so $M$ is $\RP^n\times\RP^{n*}$, aka $\PP(\mathcal{T})\times\PP(\mathcal{T}^*)$. $\mathcal{T}\times\mathcal{T}^*$ has a dual pairing which induces a parallel tractor metric, which induces the Einstein metrics in the open orbits. Is it clear that this is the same metric as we get above in the general case? It is clear that both are based on a natural contraction between horizontal and vertical parts of the tangent bundle of a bundle. So probably.
+\item Neat description of the conformal structure for $n=2$? (does it generalise to $n>2$?) This would lead nicely into the ASD'ty section.
+\end{itemize}
+
+
 \subsection{Anti--Self--Duality for $n=2$}
-\mynote{Probs be good to expand this section. Not sure what the right balance is between putting stuff here and putting it in chapter \ref{chap:EW_and_toda}. Probs want to motivate that chapter but not say things that the reader will have forgotten by the time they get there.}
+\mynote{Probs be good to expand this section, and include ASD'ty of $\Omega$. Not sure what the right balance is between putting stuff here and putting it in chapter \ref{chap:EW_and_toda}. Probs want to motivate that chapter but not say things that the reader will have forgotten by the time they get there.}
 
 For $n=2$, a local of characterisation of the sapces $M$ is provided in
 \cite{DM}: they show that any 4-dimensional anti-self-dual
