@@ -7,17 +7,6 @@
 
 
 \chapter{Para--$c$--projective compactification of $(M,g,\Omega)$} \label{chap:c-proj}
-
-\mynote{Remaining non--trivial notes:}
-\begin{itemize}
-\item How to justify the "well--known fact" that there is a para--CR structure on the projectivised cotangent bundle.
-\item Relating to the note about proving the main theorem using tractor methods: what does the Cartan/tractor bundle of a para--$c$--projective structure look like? What is it in this case? And put in some background about orbit decompositions from \cite{CGH-duke} and how they relate to compactifications.
-\item On the last section about the model - I think maybe some of it needs to go in the introduction, and maybe some of it chucked depending on the outcome of the item above.
-\item There is a 2 paragraph proof in \cite{CG} that the Nijenhuis condition is equivalent to Hermiticity of $d\theta$ on $\p M$ which I could adapt to the para case and put in section 3.1.4.
-\item It would be nice also to check that my explicit calculations on $J$ agree with the convention for how $g$ and $\Omega$ are related and there is a similar uncertainty about $h_H $ and $d\theta_0$.
-\end{itemize}
-\mynote{In fact in the theorem we are not talking about $h$ and $d\theta$ restricted to $H $, we are talking about $h$ and $d\theta$ on $\p M$, so maybe what I showed below is not the full condition?}
-
 In \cite{CG} the concept of $c$--projective compactification was
 defined. It is based on almost $c$--projective geometry \cite{c_proj},
 an analogue of projective geometry defined for almost complex
@@ -160,10 +149,7 @@ Note that the statement in  Theorem \ref{CGthm} does not depend on the choice of
 
 In section \ref{sec:trac_construction} it was shown that the manifolds $M$ arising in the projective to Einstein correspondence can be identified with the projectivised cotractor bundle of $N$ where the zero locus of the canonical density $\tau$ has been removed. Note that by construction in section \ref{sec:trac_construction} it is easily verified that the zero locus of $\tau$ is a smoothly embedded hypersurface in $\mathcal{M}$,  and from (\ref{eq:T*N_is_M}) it follows at once that this may be identified with the total space of the fibrewise projectivisation $\mathbb{P}(T^*N)$ (which is well known to have an almost para--CR structure). \mynote{Is there a way to justify this "well known" fact?}
 
-In the special case where $N=\RP^n$, and $[\nabla]$ is projectively flat the manifold $M=SL(n+1, \R)/GL(n, \R)$ can be identified with the projection of $\R^{n+1}\times \R_{n+1}\setminus {\mathcal Z}$, where ${\mathcal Z}$ denotes the set of incident pairs (point, hyperplane).
-\mynote{Do I need to explain why this is? possibly in the intro?}
- The compactification procedure described in  
-the theorem \ref{our_thm} below will, for the model, attach these incident pairs back to $M$, and more generally (in case of a curved projective structure $(N,[\nabla])$) will attach the zero locus of $\tau$ back into $\mathbb{P}(\cT^*)$. The boundary $\p M \cong \mathcal{Z}(\tau)$ from definition \ref{defi_1} will play a role of a submanifold
+As noted in chapter \ref{chap:intro}, in the special case where $N=\RP^n$ and $[\nabla]$ is projectively flat, the manifold $M=SL(n+1, \R)/GL(n, \R)$ can be identified with the projectivisation of $\R^{n+1}\times \R_{n+1}\setminus {\mathcal Z}$, where ${\mathcal Z}$ denotes the set of incident pairs (point, hyperplane). The compactification procedure described in the theorem \ref{our_thm} below will, for the model, attach these incident pairs back to $M$, and more generally (in case of a curved projective structure $(N,[\nabla])$) will attach the zero locus of $\tau$ back into $\mathbb{P}(\cT^*)$. The boundary $\p M \cong \mathcal{Z}(\tau)$ from definition \ref{defi_1} will play the role of a submanifold
 separating two open sets in $\mathbb{P}(\cT^*)$ which have $\tau>0$ and $\tau<0$ respectively. The method of the proof will be to show that near
 the boundary ${\mathcal{Z}}(\tau)=0$ of $\ol{M}$ the metric 
 (\ref{eq:coord_form}) can be put in the local normal form of theorem 
@@ -442,7 +428,14 @@ $
 
 \section{An alternative approach to theorem \ref{our_thm}}
 
-\mynote{If I am going to keep this section, I probably need to put in some background about the orbit decompositions in \cite{CGH-duke} and how these different compactifications arise from them/are related to them. I would also want to understand enough about the Cartan/tractor bundle of a para--$c$--projective geometry to justify the statements about it made below.}
+\begin{itemize}
+\item Recall that holonomy group is...
+\item Holonomy of a Cartan connection
+\item A parallel section of a tractor bundle induces a holonomy reduction and orbit decomposition.
+\item From a parallel metric on a projective tractor bundle you get Einstein geometries in the open orbits. Is this right? Is $\cT\oplus\cT^*$ still a projective tractor bundle? Or is our metric actually just on $\cT$?
+\item In the model case, if you replace line projectivisation by ray projectivisation, the tractor bundle is trivial so $M$ is $\RP^n\times\RP^{n*}$, aka $\PP(\mathcal{T})\times\PP(\mathcal{T}^*)$. $\mathcal{T}\times\mathcal{T}^*$ has a dual pairing which induces a parallel tractor metric, which induces the Einstein metrics in the open orbits. Is it clear that this is the same metric as we get above in the general case? It is clear that both are based on a natural contraction between horizontal and vertical parts of the tangent bundle of a bundle. So probably.
+\item Neat description of the conformal structure for $n=2$? (does it generalise to $n>2$?) This would lead nicely into the ASD'ty section.
+\end{itemize}
 
 It would be possible to show that the structures $(M,g,\Omega)$ arising in the projective to Einstein correspondence are para--$c$--projectively compact using a tractor approach. By our construction above it follows that $\mathcal{M}$ has a canonical para--$c$--projective geometry. In the notation of section \ref{sec:trac_construction}, $\pi^*{\cT}\oplus
 \pi^*{\cT^*}$ is the corresponding para--$c$--projective tractor bundle
@@ -460,8 +453,6 @@ the main results then follow from the general holonomy theory in
 
 
 \subsection{The alternative approach applied in the model case}
-
-\mynote{This section is nice in that it applies orbit decomposition \cite{CGH-duke} to the model. But only to show $g$ is Einstein, not that it's para--Kahler, and it doesn't mention the boundary geometry. So I'm not really sure if it's worth keeping. Also some part of it might be better placed in the intro.}
 
 In this section we describe here the flat (in the sense of parabolic
 geometries) model \cite{CDT13, DM} of our construction in tractor

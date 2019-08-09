@@ -626,27 +626,24 @@ given in local coordinates by
 where $\Upsilon_{i}$ is defined by (\ref{eq:proj_transf}).
 
 \subsection{The model case} \label{sec:intro_model}
-When $(N,[\nabla])$ is the flat projective structure $\RP^n$, the metric and symplectic form (\ref{eq:coord_form}) reduce to
+When $(N,[\nabla])$ is the flat projective structure $\RP^n$,the metric and symplectic form (\ref{eq:coord_form}) reduce to
 \[
 g = d\zeta_i\odot dx^i + (\zeta_idx^i)^2, \quad \Omega = d\zeta_i\wedge dx^i,\quad i,j=1,\dots,n.
 \]
-In this case $M$ is simply the Lie group quotient $SL(n+1,\R)/GL(n,\R)$. It is particularly interesting for a number of reasons.
+In this case the Cartan bundle of $N$ is just $SL(n+1,\R)$, and $M$ is simply the Lie group quotient $SL(n+1,\R)/GL(n,\R)$. The cotractor bundle has zero curvature, and although it is not trivial, its restriction to the set $\mathcal{Z}(\tau)\neq 0$ is. %in fact if we instead take $N$ to be the sphere $S^n$ with its standard flat projective structure where the geodesics are great circles, the tractor bundle is trivial. Note that $S^n$ is a double cover of $\RP^n$ which is orientable in all dimensions, and consists of the set of \textit{oriented} lines in $\R^{n+1}$. We obtain it by taking an analogous quotient of $\R^{n+1}$ where points are considered equivalent only up to multiplication by a \textit{positive} number. Replacing $\RP^n$ with $S^n$ allows us to write $cT=S^n\times\R^3$, so
+We can thus write $M$ as
+\[
+M=\{([P],[L])\in\RP^n\times\RP_n\ |\ P\cdot L\neq 0\}.
+\]
 
-Firstly, in the model case, the symplectic form $\Omega$ is parallel with respect to the Levi--Civita connection $^g\nabla$ of $g$, meaning that the endomorphism $J$ of $TM$ which relates $g$ and $\Omega$ is also parallel. \mynote{Can this be justified from the tractor perspective below? If so, put it below.} As a result of this, the distributions $D_\pm$ defined by the two $n$--dimensional eigen--bundles of $J$ are parallel in the sense that $^g\nabla_XY\in\Gamma(D_\pm)$ for all $X\in \Gamma(TM),\ Y\in\Gamma(D_\pm)$. This makes the distributions \textit{Frobenius integrable}, meaning that the Lie bracket of any two sections of either distribution is also a section of that distribution, or equivalently (as shown by Frobenius) that each of the two distributions is tangent to a foliation of sub--manifolds of dimension $n$ at every point. To see that a parallel distribution is necessarily Frobenius integrable, note that the Lie bracket can be written
+As discussed in section \ref{sec:projgeom}, a point $[L]\in\RP_n$ represents a line $[L]\subset\RP^n$ which passes through $P\in\RP^n$ if and only if $L\cdot P=0$. In chapter \ref{chap:EW_and_toda} we will show that the conformal structure on $M$ can be obtained by demanding that two pairs $([P], [L])$ and $([\tP], [\tL])$ are null--separated if there exists a line which contains the three points $([P], [\tP], [L]\cap [\tL])$. \mynote{Can I justify this from the tractor perspective?}
+
+We also find in the model case that the symplectic form $\Omega$ is parallel with respect to the Levi--Civita connection $^g\nabla$ of $g$, meaning that the endomorphism $J$ of $TM$ which relates $g$ and $\Omega$ is also parallel. \mynote{Can this be justified from the tractor perspective?} As a result of this, the distributions $D_\pm$ defined by the two $n$--dimensional eigen--bundles of $J$ are parallel in the sense that $^g\nabla_XY\in\Gamma(D_\pm)$ for all $X\in \Gamma(TM),\ Y\in\Gamma(D_\pm)$. This makes the distributions \textit{Frobenius integrable}, meaning that the Lie bracket of any two sections of either distribution is also a section of that distribution, or equivalently (as shown by Frobenius) that each of the two distributions is tangent to a foliation of sub--manifolds of dimension $n$ at every point. To see that a parallel distribution is necessarily Frobenius integrable, note that the Lie bracket can be written
 \[
 [X,Y]= \nabla_XY- \nabla_YX\in\Gamma(D_\pm)\quad\mbox{for all}\quad X,Y\in\Gamma(D_\pm),
 \]
-where $D$ is a distribution which is parallel with respect to a connection $\nabla$. The Frobenius integrability of $D_\pm$ makes $(M,g,\Omega)$ not only almost para--K\"ahler but also para--K\"ahler. Further discussion can be found in chapter \ref{chap:c-proj}.
+where $D$ is a distribution which is parallel with respect to a connection $\nabla$. The Frobenius integrability of $D_\pm$ makes $(M,g,\Omega)$ not only almost para--K\"ahler but also para--K\"ahler. Further discussion about this distinction can be found in chapter \ref{chap:c-proj}.
 
-Secondly, in the model case one can see that the metric $g$ is Einstein using the results of \cite{CGH-duke} on \textit{holonomy reductions} of Cartan geometries. \mynote{Actually since this case is not a \textit{curved} orbit decomp I don't think it is due to CGH. I need to look at the notes I made from Rod's course in Srni.}
-\begin{itemize}
-\item Recall that holonomy group is...
-\item Holonomy of a Cartan connection
-\item A parallel section of a tractor bundle induces a holonomy reduction and orbit decomposition.
-\item From a parallel metric on a projective tractor bundle you get Einstein geometries in the open orbits. Is this right? Is $\cT\oplus\cT^*$ still a projective tractor bundle? Or is our metric actually just on $\cT$?
-\item In the model case, if you replace line projectivisation by ray projectivisation, the tractor bundle is trivial so $M$ is $\RP^n\times\RP^{n*}$, aka $\PP(\mathcal{T})\times\PP(\mathcal{T}^*)$. $\mathcal{T}\times\mathcal{T}^*$ has a dual pairing which induces a parallel tractor metric, which induces the Einstein metrics in the open orbits. Is it clear that this is the same metric as we get above in the general case? It is clear that both are based on a natural contraction between horizontal and vertical parts of the tangent bundle of a bundle. So probably.
-\item Neat description of the conformal structure for $n=2$? (does it generalise to $n>2$?) This would lead nicely into the ASD'ty section.
-\end{itemize}
 
 
 \subsection{Anti--Self--Duality for $n=2$}
