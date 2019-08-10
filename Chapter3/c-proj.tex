@@ -92,7 +92,7 @@ Two affine connections $\nabla$ and $\ol{\nabla}$ on an almost (para--)complex m
 where the $+$ corresponds to the case $J^2=Id$ and the $-$ corresponds to the case $J^2=-Id$.
 \end{defi}
 
-Note that the para--$c$--projective change of connection differs from the $c$--projective case in the signs of some of the terms, to account for the fact that $J$ squares to the $Id$ rather than $-Id$. It is easy to show that if $\nabla$ is complex then so is $\ol{\nabla}$, and the index symmetry of the right hand side of (\ref{eq:c-proj_change}) means that if $\nabla$ is minimal then so is $\ol{\nabla}$. An almost (para--)$c$--projective structure on a manifold $M$ comprises an almost (para--)complex structure $J$ and a (para--)$c$--projective equivalence class $[\nabla]$ of complex minimal connections.
+Note that the para--$c$--projective change of connection differs from the $c$--projective case in the signs of some of the terms, to account for the fact that $J$ squares to the $Id$ rather than $-Id$. It is easy to show that if $\nabla$ is complex then so is $\ol{\nabla}$, and the index symmetry of the right hand side of (\ref{eq:c-proj_change}) means that if $\nabla$ is minimal then so is $\ol{\nabla}$. An almost (para--)$c$--projective structure on a manifold $M$ comprises an almost (para--)complex structure $J$ and a (para--)$c$--projective equivalence class $[\nabla]$ of complex minimal connections. We note here for later use that (para--)$c$--projective geometry can be expressed as a Cartan geometry (see \cite{c_proj} for the $c$--projective case). \mynote{What is the homogeneous case?}
 
 
 \subsection{Para--$c$--projective compactification}
@@ -428,84 +428,67 @@ $
 
 \section{An alternative approach to theorem \ref{our_thm}}
 
-\begin{itemize}
-\item Recall that holonomy group is...
-\item Holonomy of a Cartan connection
-\item A parallel section of a tractor bundle induces a holonomy reduction and orbit decomposition.
-\item From a parallel metric on a projective tractor bundle you get Einstein geometries in the open orbits. Is this right? Is $\cT\oplus\cT^*$ still a projective tractor bundle? Or is our metric actually just on $\cT$?
-\item In the model case, if you replace line projectivisation by ray projectivisation, the tractor bundle is trivial so $M$ is $\RP^n\times\RP^{n*}$, aka $\PP(\mathcal{T})\times\PP(\mathcal{T}^*)$. $\mathcal{T}\times\mathcal{T}^*$ has a dual pairing which induces a parallel tractor metric, which induces the Einstein metrics in the open orbits. Is it clear that this is the same metric as we get above in the general case? It is clear that both are based on a natural contraction between horizontal and vertical parts of the tangent bundle of a bundle. So probably.
-\item Neat description of the conformal structure for $n=2$? (does it generalise to $n>2$?) This would lead nicely into the ASD'ty section.
-\end{itemize}
+\mynote{This section needs a bit more work.}
 
-It would be possible to show that the structures $(M,g,\Omega)$ arising in the projective to Einstein correspondence are para--$c$--projectively compact using a tractor approach. By our construction above it follows that $\mathcal{M}$ has a canonical para--$c$--projective geometry. In the notation of section \ref{sec:trac_construction}, $\pi^*{\cT}\oplus
-\pi^*{\cT^*}$ is the corresponding para--$c$--projective tractor bundle
-and this has a canonical tractor connection that trivially
+It would be possible to show that the structures $(M,g,\Omega)$ arising in the projective to Einstein correspondence are para--$c$--projectively compact using a purely tractor--based approach, without relying on theorem \ref{CGthm} and the local form (\ref{eq:coord_form}). The basis for this alternative method is the \textit{curved orbit decompositions} appearing in \cite{CGH-duke}, which arise from \textit{holonomy reductions} of Cartan geometries.
+
+Recall first that a connection $\theta$ on a principal $H$--bundle $\pi:P\rightarrow M$ defines a unique horizontal lift of any smooth curve on $M$, and the we can define the \textit{holonomy group} of $\theta$ based at $p\in P$ as
+\begin{align*}
+\mathrm{Hol}_p(\theta)=\{h\in H\ |&\ p\mbox{ can be joined to }ph\mbox{ by the}\\
+&\mbox{ horizontal lift of a loop in }M\mbox{ based at }\pi(p)\}.
+\end{align*}
+Then $\mathrm{Hol}_p(\theta)$ is a subgroup of $H$, and if $M$ is connected then holonomy groups at different basepoints are related by conjugation in $H$. We can thus forget about the basepoint $p$ by defining $\mathrm{Hol}(\theta)$ as a conjugacy class of subgroups of $H$.
+
+Any subgroup $\tilde{H}$ such that $\mathrm{Hol}(\theta)\subset \tilde{H}\subset H$ defines a reduced bundle $P\times_H H/\tilde{H}$ with structure group $\tilde{H}$ on which $\theta$ induces a connection. In particular, if some associated vector bundle to $P$ carries some addition structure which is parallel with respect to the associated connection, then the symmetry group of this structure is an example of a possible subgroup $\tilde{H}$.
+
+Although the Cartan connection is not a principal bundle connection in the usual sense, one can still define a notion of holonomy for Cartan connections, and it turns out \cite{CGH-duke} that a parallel section of an associated tractor bundle defines an analogous holonomy reduction by a subgroup $\tilde{H}\subset H$. The subgroup $\tilde{H}$ decomposes the homogeneous model $G/H$ into orbits, and it turns out that there is a corresponding decomposition in the curved case, given by the Cartan holonomy reduction by $\tilde{H}$, hence the name \textit{curved orbit decomposition}. \mynote{Get reduced Cartan geometries on the orbits.}
+
+By our construction above it follows that $\mathcal{M}$ has a canonical para--$c$--projective geometry. In the notation of section \ref{sec:trac_construction}, $\pi^*{\cT}\oplus
+\pi^*{\cT^*}$ is the corresponding para--$c$--projective tractor bundle and this has a canonical tractor connection that trivially
 extends (in fibre directions) the pull back of the projective
 connection (that is available in horizontal directions). The
 dual pairing between $\pi^*{\cT}$ and $\pi^*{\cT^*}$ determines a
 fibre metric and compatible symplectic form on the bundle
-$\pi^*{\cT}\oplus \pi^*{\cT^*}$ and this is obviously preserved by the
-connection. What remains is to show that the tractor connection so
+$\pi^*{\cT}\oplus \pi^*{\cT^*}$ which is parallel with respect to the connection. This will induce the curved orbit decomposition. What remains is to show that the tractor connection so
 constructed satisfies properties that mean that it is {\em normal} in
 the sense defined in e.g.\ \cite{CS-book}. With this established then
 the main results then follow from the general holonomy theory in
 \cite{CGH-duke}.
 
 
-\subsection{The alternative approach applied in the model case}
+\subsection{The alternative approach in the model case}
 
-In this section we describe here the flat (in the sense of parabolic
-geometries) model \cite{CDT13, DM} of our construction in tractor
-terms.
+In this section we describe the homogeneous model case as an orbit decomposition. Recall from section \ref{sec:intro_model} that the flat projective structure on $N=\RP^n$ gives rise to 
+the neutral signature para--K\"ahler Einstein metric (\ref{eq:intro_model_g}) on the manifold
+\begin{align*}
+M=SL(n+1)/GL(n)=&\{([P],[L])\in\RP^n\times\RP_n\ |\ P\cdot L\neq 0\} \\
+=& \mathcal{M}\backslash\mathcal{Z}(\tau),
+\end{align*}
+where $\mathcal{M}$ was the projectivised cotractor bundle $\PP(\cT^*)$ of $\RP^n$ and $\mathcal{Z}(\tau)$ was the zero locus of the density $\tau$.
 
-The flat projective structure on $N=\RP^n$ gives rise to 
-the neutral signature para--K\"ahler Einstein metric on $M=SL(n+1)/GL(n)$
-\be
-\label{DM_metric}
-g=d\zeta_i\odot dx^i+(\zeta_i dx^i)^2, \quad \Omega= d\zeta_i\wedge dx^i, \quad\mbox{where}\quad
-i, j, \dots =1, \dots, n.
-\ee
-In \cite{DM}, \S 7.1 it was explained how this homogeneous model
-corresponds to the projectivised co-tractor bundle of $\RP^n$, with
-an $\RP_{n-1}$ removed from each $\RP_n$ fiber. This $\RP_{n-1}$
-corresponds to incident pairs of points and hyperplanes in $\R^{n+1}\times\R_{n+1}$.
+Here we shall instead take $N$ to be the sphere $S^n$ with its standard flat projective structure where the geodesics are great circles, so that $N$ is orientable in all dimensions and the cotractor bundle is trivial. Note that $S^n$ is a double cover of $\RP^n$ which consists of the set of \textit{oriented} lines in $\R^{n+1}$. We obtain it by taking an analogous quotient of $\R^{n+1}$ where points are considered equivalent only up to multiplication by a \textit{positive} number. We call this ray projectivisation and denote it $\PP_+(\R^{n+1})$.
 
+Replacing $\RP^n$ with $S^n$ allows us to write the cotractor bundle of $N$ as $\cT^*=S^n\times\R_3$, and if we also projectify the fibers by ray projectivisation, we obtain a larger manifold
+\[
+\widetilde{\mathcal{M}}=\PP_+(\cT^*)=S^n\times S_n,
+\]
+where $S_n$ is the dual to $S^n$ in the same sense that $\RP_n$ is dual to $\RP^n$. Then $\widetilde{\mathcal{M}}$ contains two copies of $M$ which are separated by the hypersurface $\mathcal{Z}(\tau)$. We now express this decomposition of $\widetilde{\mathcal{M}}$ as an orbit decomposition.
 
-Here we shall instead take $N$ to be the sphere $S^n$ with its standard
-projective structure as this is orientable in all dimensions and, more
-importantly, on this (double cover of $\mathbb{R}\mathbb{P}^n$) the
-tractor bundle is trivial, and this simplifies the discussion.  The
-underlying space of the (compactified) model of dimension $2n$ is
-$S^n\times S_n$ where both $S_n$ and $S^n$ denote spheres that are
-dual as we shall explain.
+Consider first two vector spaces $V,W$ each isomorphic to $\mathbb{R}^{n+1}$, and view each as a representation space for an $SL(n+1,\mathbb{R})$ action. Define $G:= SL(V)\times SL(W)$ with its action on $V\times W$. Note that we may
+wlog consider $V$ and $W$ as respectively the $\pm 1$ eigenspaces of the single vector space $\mathbb{V}:=V\oplus W$ equipped with a
+$\mathbb{J}$ s.t. $\mathbb{J}^2=1$.
 
-Consider first two vector spaces each isomorphic to $\mathbb{R}^{n+1}$:
-$$
-V\cong \mathbb{R}^{n+1} \qquad \mbox W \cong \mathbb{R}^{n+1}
-$$
-and view each as a representation space for an $SL(n+1,\mathbb{R})$
-action.  So $G:= SL(V)\times SL(W)$ acts on $V\times W$. (Note that we may
-wlog consider $V$ and $W$ as respectively the $\pm 1$ eigenspaces of
-the single vector space $\mathbb{V}:=V\oplus W$ equipped with a
-$\mathbb{J}$ s.t. $\mathbb{J}^2=1$.)
-
-Now the action of $SL(V)$ descends to a transitive action on the ray
-projectivisation $\mathbb{P}_+(V)$ and similarly $SL(W)$ acts
-transitively on $\mathbb{P}_+(W)$. Thus  $G:= SL(V)\times SL(W)$ acts transitively on the manifold
-$$
-{\mathcal M}:= \mathbb{P}_+(V) \times \mathbb{P}_+(W).
-$$
-We can represent an element of $\mathcal{M}$ in terms of pairs of homogeneous coordinates
-$([Y],[Z])$ where $0\neq Y\in V$ and $0\neq Z\in W$.
-
-Note that as a smooth manifold $\mathcal{M}=S^n\times S^n$, but as a homogeneous manifold it is
-$$
-G/P = \big( SL(V)/P_X \big)\times \big( SL(W)/P_U \big)
-$$
+We can write 
+\[
+\mathbb{P}_+(V) \times \mathbb{P}_+(W)=G/H=\big( SL(V)/P_X \big)\times \big( SL(W)/P_U \big)
+\]
 where $P_X$ (resp.\ $P_U$) is the parabolic subgroup in $SL(V)$
 that stabilises a point $[X]$ in $\mathbb{P}_+(V)$ (resp.\ $[U] \in \mathbb{P}_+(W)$
-), and $P$ is the group product $P_X\times P_W$ which itself is a
+), and $H$ is the group product $P_X\times P_W$ which itself is a
 parabolic subgroup of the semisimple group $G$.
+Since the action of $SL(V)$ descends to a transitive action on the ray projectivisation $\mathbb{P}_+(V)$ and similarly $SL(W)$ acts
+transitively on $\mathbb{P}_+(W)$, we have that $G:= SL(V)\times SL(W)$ acts transitively on the manifold $\mathbb{P}_+(V) \times \mathbb{P}_+(W)$.
+
 
 Now introduce an additional structure which breaks the $G$
 symmetry. 
@@ -513,81 +496,57 @@ Namely we fix an isomorphism
 $$
 I:W\to V^*
 $$
-where $V^*$ denotes the dual space to $V$. The subgroup $H\cong SL(n+1,\mathbb{R})$ of $G$
+where $V^*$ denotes the dual space to $V$. The subgroup $\tilde{H}\cong SL(n+1,\mathbb{R})$ of $G$
 that fixes this may be identified with $SL(V)$ which acts on a pair
-$(Y,Z)\in V\times V^*$ by the defining representation and on the first
-factor and by the dual representation on the second factor.
+$(X,U)\in V\times V^*$ by the defining representation and on the first
+factor and by the dual representation on the second factor. Note in particular that this action preserves $U(X)$.
 
-Given this structure we may now (suppress $I$ and) view ${\mathcal{M}}$ as
-consisting of pairs $([X],[U])$ where $0\neq X\in V$ and $0\neq U\in
-V^*$. That is 
+Given this structure we may now (suppress $I$ and) write
 $$
-{\mathcal{M}}= \mathbb{P}_+(V) \times \mathbb{P}_+(V^*).
+\widetilde{\mathcal{M}}= \mathbb{P}_+(V) \times \mathbb{P}_+(V^*).
 $$
-
-This is useful as follows: Each element $[U]$ in
-$\mathbb{P}_+(V^*)$ determines an oriented  hyperplane in $V$ and each $[X]\in
-\mathbb{P}_+(V)$ an oriented line in $V$.  So now we consider the $H$
-action on $M$. This has two open orbits and a closed orbit. The last
+The $\tilde{H}$ action on $\widetilde{\mathcal{M}}$ has two open orbits and a closed orbit. The last
 is the incidence space 
 $$
 \mathcal{Z}=\{ ([X],[U])\in \mathcal{M} \mid U(X)=0 \} 
 $$
-which sits as smooth orientable separating hypersurface in $\mathcal{M}$. Then there are the open orbits
+which sits as smooth orientable separating hypersurface in $\widetilde{\mathcal{M}}$. Then there are the open orbits
 $$
 M_+=\{ ([X],[U])\in \mathcal{M} \mid U(X)>0 \} \qquad \mbox{and} \qquad
 M_-=\{ ([X],[U])\in \mathcal{M} \mid U(X)<0 \}.
 $$
-We may think of $\mathcal{Z}$ as the `boundary' (at infinity) for the open orbits $M_\pm$.
+We may think of $\mathcal{Z}$ as the `boundary' (at infinity) for the open orbits $M_\pm$, each of which is a copy of our para--K\"ahler Einstein manifold $M$.
 
-We now describe the geometries on the orbits. The claim is that there
-are Einstein metrics in $M_\pm$, while $\mathcal{Z}$ is well known as
-the model for so-called contact Langrangian (or sometimes called
-para--CR) geometry, this is a real analogue of hypersurface type CR
-geometry.
+We therefore have an orbit decomposition of the homogeneous space $G/H$, where the additional structure $I$ has induced a reduction of the holonomy group by $\tilde{H}$. Based on the results of \cite{CGH-duke} for the analogous c-projective case, we expect the closed orbit $\mathcal{Z}$ to carry a para--CR structure and the open orbits $M_\pm$ to carry para--K\"ahler Einstein metrics which are induced by the dual pairing between $V$ and $V^*$ just as we saw in section \ref{sec:trac_construction}.
 
-First observe that $N_V:=\mathbb{P}_+(V)$
-is the flat model of projective
-geometry. So in particular we have
-$$
-0\to \ce_V(-1)\stackrel{X}{\to}\cT_V\to TN_V(-1)\to 0
-$$
-where $\cT_V$ is the projective tractor bundle on $N_V$ and $X$ is the
-tautological section of $\cT(1)$, which coincides with the canonical tractor.
-Similarly there a sequence on
-$N^W:= \mathbb{P}_+(V^*)$
-\begin{equation}\label{useful}
-0\to \ce^W(-1)\stackrel{U}{\to}\cT^W \to TN^W(-1)\to 0 .
-\end{equation}
+\mynote{I think maybe they're para--K\"ahler because $\pi^*{\cT}\oplus\pi^*{\cT^*}$ is the para--$c$--proj tractor bundle, and Einstein because this is also somehow a projective tractor bundle? But I'm not totally clear on this.}
 
-There is a natural tractor bundle $\mathcal{T}:=\cT_V\oplus \cT^W $ on $M$. 
-Where $X$ and $U$ are not incident this induces a metric on $M$ as
-follows. Observe that, at a point $([X],[U])$ where $X\hook U \neq 0$, the  tractor field  $U$ splits the first sequence by $\nu\in \Gamma (\ce(-1,0))$ defined by
-$$
-\nu:=U/\tau
-$$
-with $\tau:=X\hook U$ (and where we have used an obvious weight
-notation). This follows as $X\hook \nu=1$. Similarly
-$$
-x:=X/\tau \in \Gamma (\ce(0,-1))
-$$
-splits the second short exact sequence because $x \hook U=1$. Thus we
-obtain a neutral signature metric on $TN_V\oplus TN^W$ by these
-two steps: First, using  these splittings yields a bundle
-monomorphism
-$$
-TN_V(-1,0)\oplus TN^W(0,-1) \to \cT_V\oplus \cT^W .
-$$ Second, this gives a symmetric form $\boldsymbol{g}$ and symplectic form
-$\boldsymbol{\Omega}$ on $TN_V(-1,0)\oplus TN^W(0,-1)$ by then using
-the canonical metric and symplectic form on $\cT_V\oplus \cT^W $ given
-by the duality of $\cT_V$ and $ \cT^W$. Thus $\boldsymbol{g}\in \Gamma
-(S^2T^*M(1,1))$ and $\boldsymbol{\Omega}\in \Gamma
-(\Lambda^2T^*M(1,1))$. Then set
-$$ g:=\frac{1}{\tau}\boldsymbol{g} \qquad \mbox{and} \qquad  \Omega:=\frac{1}{\tau}\boldsymbol{\Omega}.
-$$
-The metric $g$ is easily seen to have neutral signature.  It is
-Einstein because the tractor metric on $\mathcal{T}$ is parallel for the
-tractor connection (see \cite{CGH-duke} for the analogous c-projective
-case). The tractor connection arises from the usual parallel transport on the
-vector space $V\oplus V^*$ viewed as an affine manifold.
+
+
+%We now describe the geometries on the orbits. The claim is that there are Einstein metrics in $M_\pm$, while $\mathcal{Z}$ is well known as the model for so-called contact Langrangian (or sometimes called para--CR) geometry, this is a real analogue of hypersurface type CR geometry.
+
+%First observe that $N_V:=\mathbb{P}_+(V)$ is the flat model of projective geometry. So in particular we have
+%$$
+%0\to \ce_V(-1)\stackrel{X}{\to}\cT_V\to TN_V(-1)\to 0
+%$$
+%where $\cT_V$ is the projective tractor bundle on $N_V$ and $X$ is the tautological section of $\cT(1)$, which coincides with the canonical tractor. Similarly there a sequence on $N^W:= \mathbb{P}_+(V^*)$
+%\begin{equation}\label{useful}
+%0\to \ce^W(-1)\stackrel{U}{\to}\cT^W \to TN^W(-1)\to 0 .
+%\end{equation}
+
+%There is a natural tractor bundle $\mathcal{T}:=\cT_V\oplus \cT^W $ on $M$.  Where $X$ and $U$ are not incident this induces a metric on $M$ as follows. Observe that, at a point $([X],[U])$ where $X\hook U \neq 0$, the  tractor field  $U$ splits the first sequence by $\nu\in \Gamma (\ce(-1,0))$ defined by
+%$$
+%\nu:=U/\tau
+%$$
+%with $\tau:=X\hook U$ (and where we have used an obvious weight notation). This follows as $X\hook \nu=1$. Similarly
+%$$
+%x:=X/\tau \in \Gamma (\ce(0,-1))
+%$$
+%splits the second short exact sequence because $x \hook U=1$. Thus we obtain a neutral signature metric on $TN_V\oplus TN^W$ by these two steps: First, using  these splittings yields a bundle monomorphism
+%$$
+%TN_V(-1,0)\oplus TN^W(0,-1) \to \cT_V\oplus \cT^W .
+%$$ Second, this gives a symmetric form $\boldsymbol{g}$ and symplectic form $\boldsymbol{\Omega}$ on $TN_V(-1,0)\oplus TN^W(0,-1)$ by then using the canonical metric and symplectic form on $\cT_V\oplus \cT^W $ given by the duality of $\cT_V$ and $ \cT^W$. Thus $\boldsymbol{g}\in \Gamma (S^2T^*M(1,1))$ and $\boldsymbol{\Omega}\in \Gamma (\Lambda^2T^*M(1,1))$. Then set
+%$$ g:=\frac{1}{\tau}\boldsymbol{g} \qquad \mbox{and} \qquad  \Omega:=\frac{1}{\tau}\boldsymbol{\Omega}.
+%$$
+%The metric $g$ is easily seen to have neutral signature.  It is Einstein because the tractor metric on $\mathcal{T}$ is parallel for the tractor connection (see \cite{CGH-duke} for the analogous c-projective case). The tractor connection arises from the usual parallel transport on the vector space $V\oplus V^*$ viewed as an affine manifold.
 
