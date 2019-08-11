@@ -13,27 +13,23 @@
 %\item Geometry also important in the theory of solitons (e.g. Manton and Sutcliffe.) (chapter \ref{chap:wormhole}).
 %\end{itemize} 
 
-This thesis splits naturally into two parts. The first 4 chapters are concerned with a class of Einstein manifolds which can be canonically constructed from projective structures as shown in recent work by Dunajski and Mettler \cite{DM}. Chapter \ref{chap:wormhole} discusses a solitonic solution of the equations of motion associated with $\phi^4$--field theory on a wormhole spacetime. Chapter \ref{chap:wormhole} is self--contained, and possesses its own introduction and notation. The remainder of this chapter will introduce some preliminaries for the first part of the thesis, culminating in the results of \cite{DM} on the almost para--K\"ahler Einstein manifolds which will form the basis of chapters 2--4.
+This thesis splits naturally into two parts. The first four chapters are concerned with a class of Einstein manifolds which can be canonically constructed from projective structures as shown in recent work by Dunajski and Mettler \cite{DM}. Chapter \ref{chap:wormhole} discusses a solitonic solution of the equations of motion associated with $\phi^4$--field theory on a wormhole spacetime. Chapter \ref{chap:wormhole} is self--contained, and possesses its own introduction and notation. The remainder of this chapter will introduce some preliminaries for the first part of the thesis, culminating in the results of \cite{DM} on the almost para--K\"ahler Einstein manifolds which will form the basis of chapters 2--4.
 
-\mynote{Projective geometry, based on geodesics as unparametrised curves, initiated in ... by ...}
-
-\mynote{General point - should be more than in abstract but not repeating the actual intro below.}
+A projective structure on a manifold specifies a preferred curve in every direction at every point. It can be understood as an equivalence class of affine connections which share the same geodesics up to parametrisation. Because it is defined at the level of the connection rather than a first order structure such as a metric, it is an intrinsically second order object.
 
 Given a projective structure on a manifold $N$ of dimension $n$,
-Dunajski and Mettler \cite{DM} construct a neutral signature Einstein metric $g$ with non-zero
-scalar curvature on a certain rank $n$ affine bundle $M\rightarrow N$.
+Dunajski and Mettler \cite{DM} canonically construct a neutral signature Einstein metric $g$ with non-zero
+scalar curvature on a certain rank $n$ affine bundle $M\rightarrow N$. They thus convert a second order object into a first order object on a larger manifold.
 The $2n$--dimensional space $M$ also carries a natural symplectic form $\Omega$, and an endomorphism $J:TM\rightarrow TM$ which is such that $J^2$ is the identity and $g(\cdot\,,\cdot)=\Omega(\cdot\,,J\cdot)$. This makes $(M,g,\Omega)$ a so--called \textit{almost para--K\"ahler} structure. It is interesting for a number of different reasons.
-
-\mynote{It expresses the second order object which is the projective structure as a first order object on a larger space. See if you can find the slides of the talk Thomas gave in damtp where he talked about this? If I put in Thomas' explicit construction of $g$ (i.e. define the second order coframe bundle) this point would be more relevant.}
 
 Firstly, $(M,g)$ is interesting by virtue of being an Einstein
 space. In fact, it turns out that $g$ arises as the Kaluza--Klein reduction of an Einstein metric $\mathcal{G}$ on an $\R^*$ bundle $\sigma:\mathcal{Q}\rightarrow M$ which has curvature form $\sigma^*(\Omega)$. In chapter \ref{chap:KK_lift} we will construct $\mathcal{G}$ explicitly, and give an interpretation of the manifold $(\mathcal{Q},\mathcal{G})$ in terms of the projective geometry on $N$.
 
-It also turns out that $(M,g,\Omega)$ can be thought of as compactifiable in a certain sense. Recall that a (psuedo--)Riemannian manifold $(M,g)$ is said to be \textit{conformally compact} if there is a smooth positive function $T$ such that $T^2g$ smoothly extends to a manifold with boundary $\ov{M}=M\cup\p M$, and the set $\{p\in\ov{M}:T(p)=0\}$ is a hypersurface which coincides with the boundary $\p M$.  This is a useful concept because $(M,T^2g)$ has the same conformal structure, and hence the same \textit{causal} structure, as $(M,g)$. It has been used to study said causal structure in both general relativity \cite{penrose65} and quantum field theory \cite{witten}. It is also useful for formulating the boundary conditions of conformally invariant field equations such as those arising in Yang--Mills theory \cite{uhlen}.
+In chapter \ref{chap:c-proj} we show that the structure $(M,g,\Omega)$ can also be thought of as compactifiable in a certain sense. Recall that a (psuedo--)Riemannian manifold $(M,g)$ is said to be \textit{conformally compact} if there is a smooth positive function $T$ such that $T^2g$ smoothly extends to a manifold with boundary $\ov{M}=M\cup\p M$, and the set $\{p\in\ov{M}:T(p)=0\}$ is a hypersurface which coincides with the boundary $\p M$.  This is a useful concept because $(M,T^2g)$ has the same conformal structure, and hence the same \textit{causal} structure, as $(M,g)$. It has been used to study said causal structure in both general relativity \cite{penrose65} and quantum field theory \cite{witten}. It is also useful for formulating the boundary conditions of conformally invariant field equations such as those arising in Yang--Mills theory \cite{uhlen}.
 
-Recent work by \v Cap and Gover \cite{CG0,CG} has generalised this idea to other geometrical structures which admit some weakening which extends to a manifold with boundary. In particular, on an almost complex manifold $(M,J)$ with complex connection $\nabla$, one can define the $c$--projective equivalence class $[\nabla]$ to which $\nabla$ belongs, and show that the $c$--projective structure $(M,J,[\nabla])$ extends to a manifold with boundary $\ov{M}$ \cite{CG}. The main goal of chapter \ref{chap:c-proj} is to adapt the work of \cite{CG} to the para--$c$--projective case, and to show that the almost complex structure $J$ on $M$ has a complex connection which admits a so--called para--$c$--projective compactification. The result of this is that the manifolds $(M,g,\Omega)$ can be thought of as para--$c$--projectively compact.
+Recent work by \v Cap and Gover \cite{CG0,CG} has generalised this idea to other geometrical structures which admit some weakening which extends to a manifold with boundary. In particular, on an almost complex manifold $(M,J)$ with a connection $\nabla$ which is correctly adapted to $J$, one can define the $c$--projective equivalence class $[\nabla]$ to which $\nabla$ belongs, and show that the $c$--projective structure $(M,J,[\nabla])$ extends to a manifold with boundary $\ov{M}$ \cite{CG}. The main goal of chapter \ref{chap:c-proj} is to adapt the work of \cite{CG} to the para--$c$--projective case, and to show that the almost complex structure $J$ on $M$ has a complex connection which admits a so--called para--$c$--projective compactification. The result of this is that the manifolds $(M,g,\Omega)$ can be thought of as para--$c$--projectively compact.
 
-Another reason this construction is interesting is that for $n=2$ (so that $M$ has dimension $4$), the conformal
+The work in chapter \ref{chap:EW_and_toda} is based on the fact that for $n=2$ (so that $M$ has dimension $4$), the conformal
 curvature of $g$ is anti-self-dual. Recall that the Hodge operator
 $\star$ defined by a Euclidean or neutral signature metric in four
 dimensions is an involution on two--forms (i.e. squares to the identity).
@@ -67,7 +63,7 @@ $(\eta\wedge\omega)_{a\dots d}=\eta_{[a\dots b}\omega_{c\dots d]},$
 $\omega=\omega_{a\dots b}dx^{a}\wedge\dots\wedge dx^{b},$
 and $F_{ab}{d}x^{a}\wedge{d}x^{b}=F_{[ab]}{d}x^{a}\otimes{d}x^{b}$
 implying ${d}x^{a}\wedge{d}x^{b}=\frac{1}{2}({d}x^{a}\otimes{d}x^{b}-{d}x^{b}\otimes{d}x^{a})$.
-\item $N$ is oriented. \mynote{Although $\RP^n$ is not oriented right?? also something about which part of $SL(n+1)$ we mean?}
+%\item $N$ is oriented. \mynote{Although $\RP^n$ is not oriented right?? also something about which part of $SL(n+1)$ we mean?}
 \item Probably a convention for the Hodge operator
 \item Probably a convention for $\varepsilon_{AB}$ and matching indices descending to the right
 \item Line projectivisation except where stated otherwise.
@@ -438,7 +434,7 @@ to denote, in particular, the zero locus of $\tau$. With these tools we can reco
 \begin{theo}\cite{DGW}\label{metric} 
 There is a metric $g$ and two--form $\Omega$ on $\mathcal{M}\setminus \mathcal{Z}(\tau)$ determined by the canonical pairing of the horizontal and vertical subspaces of $T(\cT^*)$. The pair $(g,\Omega)$ agrees with (\ref{eq:g_cartan}, \ref{eq:Omega_cartan}).
 \end{theo}
-{\bf Proof.}
+\noindent {\bf Proof.}
  Considering first the total space $\cT^*$ and then its tangent
  bundle, note that there is an exact sequence
   \begin{equation}\label{TM}
@@ -595,9 +591,11 @@ Osserman metrics. More details can be found in \cite{No-louzao1991}.
 They are all Einstein with non--zero scalar curvature $24\Lambda$, but for $\Lambda\neq1$ the relation to projective geometry is lost. For the remainder of the thesis we will write $g$ for $g_{\Lambda=1}$ unless stated otherwise. Note that $\{g_\Lambda\}$ will be the subject of chapter \ref{chap:KK_lift}, whilst in chapters \ref{chap:c-proj} and \ref{chap:EW_and_toda} we will restrict our attention to $g$ because the projective geometry is a key aspect of the content of these chapters.
 \end{rmk}
 
+\begin{rmk}
+As mentioned above, in the special case where the $(N,[\nabla])$ is a projective surface, $M$ has dimension four, and so anti--self--duality is defined. It turns out that the symplectic form $\Omega$ and the conformal curvature of $g$ are anti--self--dual. Both of these facts will play an important role in chapter \ref{chap:EW_and_toda}.
+\end{rmk}
 
-
-\subsection{Symmetries of $(M,g_{\Lambda},\Omega_{\Lambda})$}
+\subsection{Symmetries of the Einstein manifold}
 
 Recall that a projective vector field on any manifold with a connection
 generates a 1-parameter family of transformations which preserve the
@@ -646,18 +644,4 @@ where $D$ is a distribution which is parallel with respect to a connection $\nab
 
 
 
-\subsection{Anti--Self--Duality for $n=2$}
-\mynote{Probs be good to expand this section, and include ASD'ty of $\Omega$. Not sure what the right balance is between putting stuff here and putting it in chapter \ref{chap:EW_and_toda}. Probs want to motivate that chapter but not say things that the reader will have forgotten by the time they get there.}
 
-For $n=2$, a local of characterisation of the sapces $M$ is provided in
-\cite{DM}: they show that any 4-dimensional anti-self-dual
-Einstein space with scalar curvature $-24\Lambda$ and a parallel
-anti-self-dual totally null distribution can be considered as the
-total space of a rank 2 affine bundle $T^{*}N$ over a projective
-surface $N$ of the form (\ref{eq:coord_form}). The anti--self-duality property, in combination with the correspondence of symmetries of $(M,g)$ with symmetries of $(N,[\nabla])$, is important in the context of the applications of
-the work \cite{DM} to integrability. It means that
-if we start with a projective surface with at least one projective
-vector field, we will find an ASD Einstein space with at least one
-Killing vector field, and thus will be able to perform a symmetry
-reduction to obtain an Einstein-Weyl structure in $2+1$ dimensions
-and a corresponding solution to the $SU(\infty)$-Toda field equation. This is the subject of chapter \ref{chap:EW_and_toda}.
