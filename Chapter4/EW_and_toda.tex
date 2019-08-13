@@ -122,7 +122,7 @@ where $q$ is the quotient of $\mathcal{F}$ by the leaves of the distribution $\t
 
 The Nonlinear Graviton allows us to express an ASD conformal structure in terms of the algebraic geometry of $\mathscr{T}$. First note that if two points $p_1,p_2\in M$ are null--separated, then the corresponding curves $\mathscr{L}_{p_1},\mathscr{L}_{p_2}$ intersect at a single point. This is because any null geodesic must have a tangent vector field of the form $\iota^A\pi^{A'}$ for some sections $\iota^A\in\Gamma(\spp)$ and $\pi^{A'}\in\Gamma(\spp')$, and thus the geodesic is contained within the unique $\alpha$--surface spanned by $\pi^{A'}\mathsf{e}_{AA'}$. This unique $\alpha$--surface corresponds to the point in $\mathscr{T}$ where the curves $\mathscr{L}_{p_1},\mathscr{L}_{p_2}$ meet.
 
-In order to understand this correspondence at an infinitesimal level and thereby explicitly recover an ASD conformal structure from $\mathscr{T}$, we need to understand the \textit{normal bundle} $N(\mathscr{L}_p):=\cup_{Z\in \mathscr{L}_p}\{T_Z\mathscr{T}/T_Z\mathscr{L}_p\}$ over a $\CP^1$ embedding $\mathscr{L}_p$. This is evidently a complex vector bundle, and in fact it is a \textit{holomorphic} vector bundle, meaning that the total space is a complex manifold and the projection $N(\mathscr{L}_p)\rightarrow\mathscr{L}_p$ is holomorphic. It is thus subject to the following theorem due to Birkhoff and Grothendieck (see for example \cite{complex_mfds} for a proof).
+In order to understand this correspondence at an infinitesimal level and thereby explicitly recover an ASD conformal structure from $\mathscr{T}$, we need to understand the \textit{normal bundle} $\mathbb{N}(\mathscr{L}_p):=\cup_{Z\in \mathscr{L}_p}\{T_Z\mathscr{T}/T_Z\mathscr{L}_p\}$ over a $\CP^1$ embedding $\mathscr{L}_p$. This is evidently a complex vector bundle, and in fact it is a \textit{holomorphic} vector bundle, meaning that the total space is a complex manifold and the projection $\mathbb{N}(\mathscr{L}_p)\rightarrow\mathscr{L}_p$ is holomorphic. It is thus subject to the following theorem due to Birkhoff and Grothendieck (see for example \cite{complex_mfds} for a proof).
 \begin{theo}[Birkhoff--Grothendieck]
 Any rank $k$ holomorphic vector bundle is isomorphic to a direct sum of $k$ complex line bundles $\mathcal{O}(m_i),1\leq i\leq k$, each with first Chern class $m_i$. 
 \end{theo}
@@ -151,9 +151,9 @@ If we expand these as power series in the local coordinates and use the fact tha
 %\noindent
 %{\bf Proof.} The double fibration picture allows us to identify the normal bundle with the quotient $r^*(T_pM)/\mathrm{span}\{L_A\}$. In their homogeneous form the operators $L_A$ have weight one, and the distribution spanned by them is isomorphic to the bundle $\mathbb{C}^2\otimes\mathcal{O}(-1)$. The definition of the normal bundle as a quotient gives the exact sequence
 %\[
-%0\rightarrow \mathbb{C}^2\otimes\mathcal{O}(-1)\rightarrow\mathbb{C}^4\rightarrow N\rightarrow 0
+%0\rightarrow \mathbb{C}^2\otimes\mathcal{O}(-1)\rightarrow\mathbb{C}^4\rightarrow \mathbb{N}\rightarrow 0
 %\]
-%and thus $N=\mathcal{O}(1)\oplus\mathcal{O}(1)$, since the last map is given explicitly by $V^{AA'}\mapsto V^{AA'}\pi_{A'}$ in spinor notation.
+%and thus $\mathbb{N}=\mathcal{O}(1)\oplus\mathcal{O}(1)$, since the last map is given explicitly by $V^{AA'}\mapsto V^{AA'}\pi_{A'}$ in spinor notation.
 %\mynote{I don't understand this proof. I basically copied it out of Maciej's book. It might be better to just explain it rather than stating it formally as a lemma.}
 %\koniec
 
@@ -385,14 +385,14 @@ The most general  Einstein--Weyl structure arising
 from the procedure (\ref{diagram}) is locally equivalent to
 \begin{eqnarray}
 \label{ew_final}
-h&=&\frac{1}{V}\big((Bq -Ap+ q^2)dy+dq\big)dy
+h&=&\frac{1}{\mathscr{V}}\big((Bq -Ap+ q^2)dy+dq\big)dy
 -\Big({pq+A}dy+\frac{1}{2}dp\Big)^2, \label{genh} \\
-\omega&=&V(4dq+2 pdp), \quad\mbox{where}\quad V=
+\omega&=&\mathscr{V}(4dq+2 pdp), \quad\mbox{where}\quad \mathscr{V}=
 ({B}+ p^2+q)^{-1}.\nonumber
 \end{eqnarray}
-Here $(p, q, y)$ are local coordinates on $W$, $A(y), B(y)$ are arbitrary functions of $y$, and the solution to the monopole equation (\ref{eq:monopole_eq}) arising from the second part of Theorem \ref{theo_tod1} is the pair $(V,\alpha)$, where
+Here $(p, q, y)$ are local coordinates on $W$, $A(y), B(y)$ are arbitrary functions of $y$, and the solution to the monopole equation (\ref{eq:monopole_eq}) arising from the second part of Theorem \ref{theo_tod1} is the pair $(\mathscr{V},\alpha)$, where
 \[
-\alpha=V( pq+A)dy+\frac{V}{2}dp.
+\alpha=\mathscr{V}( pq+A)dy+\frac{\mathscr{V}}{2}dp.
 \]
 \end{prop}
 
@@ -411,17 +411,17 @@ c={|d{\bf K}+*_g d{\bf K}|_{g}}^{-1/2}
 has a property that
 the rescaled self--dual derivative of $K$
 \[
-\Theta\equiv c^3\Big(\frac{1}{2}(d{\bf K}+*_g d{\bf K})\Big)
+\vartheta\equiv c^3\Big(\frac{1}{2}(d{\bf K}+*_g d{\bf K})\Big)
 \]
 is parallel with respect to $\hat{g}=c^2 g$.
 The metric $\hat{g}$ is K\"ahler with  self--dual 
-K\"ahler form $\Theta$, and admits a Killing vector $K$, as
+K\"ahler form $\vartheta$, and admits a Killing vector $K$, as
 ${\mathcal L}_K(c)=0$.
 \item
 Define a function $Z:M\rightarrow \R$ to be the moment map:
 \be
 \label{ztilde}
-dZ=K\hook \Theta.
+dZ=K\hook \vartheta.
 \ee
 It is well defined, as the K\"ahler form is Lie--derived along $K$.
 \item
@@ -492,17 +492,17 @@ which give rise (by the Jones--Tod construction) to (\ref{genh}).
 %As discussed above, in addition to their being ASD and Einstein they are  characterised \cite{DM} by a $\beta$--distribution which is parallel with respect to the Levi--Civita connection and ASD in the sense of Calderbank \cite{Cal1}. The corresponding $\beta$--surfaces do not generically intersect with a given $\alpha$--surface, however if they do intersect then they will intersect in curves (null geodesics) which descend to the Einstein--Weyl structures, and give rise to another (in addition to the Tod shear--free, twist--free) geodesic congruence.
 In what follows we shall point out how some of the additional structure on $W$ arises as a couple of solutions to the Abelian monopole equation.
 
-Let us call the solution $(V,\alpha)$ arising in Proposition \ref{prop1} the Einstein monopole, as the resulting conformal class contains an Einstein metric
-(\ref{einstein_1}). The second solution $(V_M, \alpha_M)$ (which we shall call the Maxwell monopole)
+Let us call the solution $(\mathscr{V},\alpha)$ arising in Proposition \ref{prop1} the Einstein monopole, as the resulting conformal class contains an Einstein metric
+(\ref{einstein_1}). The second solution $(\mathscr{V}_M, \alpha_M)$ (which we shall call the Maxwell monopole)
 arises
 as a symmetry reduction of the ASD Maxwell potential
 \[
-{\mathcal A}=pdx+qdy=-V_M K+\alpha_M,
+{\mathcal A}=pdx+qdy=-\mathscr{V}_M K+\alpha_M,
 \]
 where $K=K_{\mu}dx^{\mu}$ is the Killing one--form, and
 we find
 \[
-V_M=-pV, \quad \alpha_M=qdy-p\alpha.
+\mathscr{V}_M=-p\mathscr{V}, \quad \alpha_M=qdy-p\alpha.
 \]
 \mynote{I want to understand and explain this better.}
 \section{The submaximally symmetric projective surface}
@@ -1008,16 +1008,16 @@ T=\frac{\p Q}{\p \lambda} \frac{\p}{\p Q} + \frac{\p R}{\p \lambda} \frac{\p}{\p
 \]
 Hence we can write the normal vector field as
 \begin{align*}
-N &=dQ\frac{\p}{\p Q} + dR\frac{\p}{\p R} \enskip \mathrm{mod}\, T\\
+\xi_\mathbb{N} &=dQ\frac{\p}{\p Q} + dR\frac{\p}{\p R} \enskip \mathrm{mod}\, T\\
 &= \bigg(\frac{\p R}{\p \lambda}\bigg)^{-1}\bigg(dQ\frac{\p R}{\p \lambda}-dR\frac{\p Q}{\p \lambda}\bigg)\frac{\p}{\p Q},
 \end{align*}
 where
 \[
 dQ=\frac{\p Q}{\p u}du + \frac{\p Q}{\p v}dv + \frac{\p Q}{\p t}dt
 \]
-and similarly for $dR$. Calculating $N$ using (\ref{QR}), we find
+and similarly for $dR$. Calculating $\xi_\mathbb{N}$ using (\ref{QR}), we find
 \[
-N\propto(A\lambda^2+B\lambda+C)\frac{\p}{\p Q},
+\xi_\mathbb{N}\propto(A\lambda^2+B\lambda+C)\frac{\p}{\p Q},
 \]
 where
 \begin{align*}
