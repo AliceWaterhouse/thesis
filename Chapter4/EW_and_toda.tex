@@ -114,13 +114,13 @@ where $\{\tilde{\mathsf{e}}_{AA'}\}$ are the lifts of the null tetrad $\{\mathsf
 
 In fact, Penrose considers four dimensional \textit{complex} manifolds\footnote{Note that familiar facts from real geometry such as a unique Levi--Civita connection and the Frobenius theorem carry over to holomorphic geometry. See \cite{LeBrun83} for details.} $M$ carrying a metric which is \textit{holomorphic} in the sense that the metric components depend on the coordinates on $M$ and not on their complex conjugates. Then $\spp,\spp'$ are complex vector bundles over $M$ and $\varepsilon,\varepsilon'$ are holomorphic symplectic forms. A real conformally ASD metric in a given signature can then be obtained by choosing the correct reality conditions. In neutral signature this amounts to identifying spinors with their complex conjugates. \mynote{right?}
 
-The \textit{twistor space} $\mathscr{T}$ of $M$ is then defined as the three--dimensional complex manifold comprising the set of all $\alpha$--surfaces in $M$. Each point $p\in M$ corresponds to a subset $\mathscr{L}_p\subset\mathscr{T}$ of $\alpha$--surfaces which pass through $p$. Since an $\alpha$--surface at $p$ is defined by a $\pi^{A'}\in\spp'|_p$ up to scale, $\mathscr{L}_p$ is an embedding $\CP^1\subset\mathscr{T}$. The \textit{correspondence space} $\mathcal{F}=M\times\CP^1$ has local coordinates $(x^a,\lambda):=(x^a,\pi_{0'}/\pi_{1'})$, where $\pi^{A'}$ parametrises the set of $\alpha$--surfaces through the point in $M$ with coordinates $x^a$. Note that $\mathcal{F}$ can be obtained from the primed spin bundle $\spp'\rightarrow M$ by projectivising each fibre, and carries a distribution $\tilde{\mathcal{D}}=\mathrm{span}\{\tilde{L}_A\}$ given by the push forward of the twistor distribution $\mathcal{D}$ to $\mathcal{F}=\PP(\spp')$. We also call $\tilde{\mathcal{D}}$ the twistor distribution. Note that $\mathcal{F}$ has the alternative definition $\mathcal{F}=\{(Z,p)\in \mathscr{T}\times M \ :\  Z\in L_p\}$, leading to the double fibration
+The \textit{twistor space} $\mathscr{T}$ of $M$ is then defined as the three--dimensional complex manifold comprising the set of all $\alpha$--surfaces in $M$. Each point $m\in M$ corresponds to a subset $\mathscr{L}_m\subset\mathscr{T}$ of $\alpha$--surfaces which pass through $m$. Since an $\alpha$--surface at $m$ is defined by a $\pi^{A'}\in\spp'|_m$ up to scale, $\mathscr{L}_m$ is an embedding $\CP^1\subset\mathscr{T}$. The \textit{correspondence space} $\mathcal{F}=M\times\CP^1$ has local coordinates $(x^a,\lambda):=(x^a,\pi_{0'}/\pi_{1'})$, where $\pi^{A'}$ parametrises the set of $\alpha$--surfaces through the point in $M$ with coordinates $x^a$. Note that $\mathcal{F}$ can be obtained from the primed spin bundle $\spp'\rightarrow M$ by projectivising each fibre, and carries a distribution $\tilde{\mathcal{D}}=\mathrm{span}\{\tilde{L}_A\}$ given by the push forward of the twistor distribution $\mathcal{D}$ to $\mathcal{F}=\PP(\spp')$. We also call $\tilde{\mathcal{D}}$ the twistor distribution. Note that $\mathcal{F}$ has the alternative definition $\mathcal{F}=\{(Z,m)\in \mathscr{T}\times M \ :\  Z\in L_m\}$, leading to the double fibration
 \[
-M\xleftarrow{r}\mathcal{F}\xrightarrow{q}\mathscr{T},
+M\leftarrow\mathcal{F}\rightarrow\mathscr{T},
 \]
-where $q$ is the quotient of $\mathcal{F}$ by the leaves of the distribution $\tilde{\mathcal{D}}$. A twistor function is a function on $\mathcal{F}$ which is constant along $\tilde{\mathcal{D}}$. %We can also define the \textit{non--projective twistor space} of $M$ as the quotient of $\spp'$ by the leaves of $\mathcal{D}$.
+where the map $\mathcal{F}\rightarrow\mathscr{T}$ is the quotient of $\mathcal{F}$ by the leaves of the distribution $\tilde{\mathcal{D}}$. A twistor function is a function on $\mathcal{F}$ which is constant along $\tilde{\mathcal{D}}$. %We can also define the \textit{non--projective twistor space} of $M$ as the quotient of $\spp'$ by the leaves of $\mathcal{D}$.
 
-The Nonlinear Graviton allows us to express an ASD conformal structure in terms of the algebraic geometry of $\mathscr{T}$. First note that if two points $p_1,p_2\in M$ are null--separated, then the corresponding curves $\mathscr{L}_{p_1},\mathscr{L}_{p_2}$ intersect at a single point. This is because any null geodesic must have a tangent vector field of the form $\iota^A\pi^{A'}$ for some sections $\iota^A\in\Gamma(\spp)$ and $\pi^{A'}\in\Gamma(\spp')$, and thus the geodesic is contained within the unique $\alpha$--surface spanned by $\pi^{A'}\mathsf{e}_{AA'}$. This unique $\alpha$--surface corresponds to the point in $\mathscr{T}$ where the curves $\mathscr{L}_{p_1},\mathscr{L}_{p_2}$ meet.
+The Nonlinear Graviton allows us to express an ASD conformal structure in terms of the algebraic geometry of $\mathscr{T}$. First note that if two points $m_1,m_2\in M$ are null--separated, then the corresponding curves $\mathscr{L}_{m_1},\mathscr{L}_{m_2}$ intersect at a single point. This is because any null geodesic must have a tangent vector field of the form $\iota^A\pi^{A'}$ for some sections $\iota^A\in\Gamma(\spp)$ and $\pi^{A'}\in\Gamma(\spp')$, and thus the geodesic is contained within the unique $\alpha$--surface spanned by $\pi^{A'}\mathsf{e}_{AA'}$. This unique $\alpha$--surface corresponds to the point in $\mathscr{T}$ where the curves $\mathscr{L}_{m_1},\mathscr{L}_{m_2}$ meet.
 
 In order to understand this correspondence at an infinitesimal level and thereby explicitly recover an ASD conformal structure from $\mathscr{T}$, we need to understand the \textit{normal bundle} $\mathbb{N}(\mathscr{L}_p):=\cup_{Z\in \mathscr{L}_p}\{T_Z\mathscr{T}/T_Z\mathscr{L}_p\}$ over a $\CP^1$ embedding $\mathscr{L}_p$. This is evidently a complex vector bundle, and in fact it is a \textit{holomorphic} vector bundle, meaning that the total space is a complex manifold and the projection $\mathbb{N}(\mathscr{L}_p)\rightarrow\mathscr{L}_p$ is holomorphic. It is thus subject to the following theorem due to Birkhoff and Grothendieck (see for example \cite{complex_mfds} for a proof).
 \begin{theo}[Birkhoff--Grothendieck]
@@ -162,7 +162,7 @@ The Nonlinear Graviton Theorem can now be stated as follows.
 There is a one--to--one correspondence between complex ASD conformal structures and three--dimensional complex manifolds containing a four--parameter family of $\CP^1$ embeddings with normal bundle $\mathcal{O}(1)\oplus\mathcal{O}(1)$.
 \end{theo}
 \noindent
-From the results of Kodaira \cite{Kodaira} we have that a vector at a point $p\in M$ corresponds to a holomorphic section of the normal bundle $\mathcal{O}(1)\oplus\mathcal{O}(1)$ of the curve $\mathscr{L}_p$ in $\mathscr{T}$ (which we know from above belongs to a four--dimensional space). Penrose shows that we obtain an ASD conformal structure from $\mathscr{T}$ by defining a vector to be null if the corresponding holomorphic section of $\mathcal{O}(1)\oplus\mathcal{O}(1)$ has a zero. This is the infinitesimal version of the intersection condition on $\mathscr{L}_{p_1}$ and $\mathscr{L}_{p_2}$ above. %Note that the vanishing of such a section is a quadratic condition, since $V^{AA'}\pi_{A'}$ can be solved for $\pi_{A'}$ if $\mathrm{det}(V^{AA'})=0$.
+From the results of Kodaira \cite{Kodaira} we have that a vector at a point $m\in M$ corresponds to a holomorphic section of the normal bundle $\mathcal{O}(1)\oplus\mathcal{O}(1)$ of the curve $\mathscr{L}_m$ in $\mathscr{T}$ (which we know from above belongs to a four--dimensional space). Penrose shows that we obtain an ASD conformal structure from $\mathscr{T}$ by defining a vector to be null if the corresponding holomorphic section of $\mathcal{O}(1)\oplus\mathcal{O}(1)$ has a zero. This is the infinitesimal version of the intersection condition on $\mathscr{L}_{m_1}$ and $\mathscr{L}_{m_2}$ above. %Note that the vanishing of such a section is a quadratic condition, since $V^{AA'}\pi_{A'}$ can be solved for $\pi_{A'}$ if $\mathrm{det}(V^{AA'})=0$.
 
 
 \subsubsection{(Anti--)self--duality in the sense of Calderbank}
@@ -233,13 +233,13 @@ Hitchin's results can be regarded as a reduction of Penrose's twistor transform 
 h=|K|^{-2}g-|K|^{-4}{\bf{K}}\odot{\bf{K}},\qquad \omega=\frac{2}{|K|^2}\star({\bf{K}}\wedge d{\bf{K}}),
 \ee
 where $|K|^2=g(K,K)$, ${\bf{K}}=g(K, \cdot)$ and $\star$ is the Hodge operator defined by $g$. Then $(h, \omega)$ is a solution of the Einstein--Weyl equations  on the space of orbits $W$ of $K$ in $M$.
-\item Given an Einstein--Weyl structure $(W,h,\omega)$ there is a one--to--one correspondence between solutions $(V,\alpha)$ to the Abelian monopole equation
+\item Given an Einstein--Weyl structure $(W,h,\omega)$ there is a one--to--one correspondence between solutions $(\mathscr{V},\alpha)$ to the Abelian monopole equation
 \be \label{eq:monopole_eq}
-dV+\frac{1}{2}\omega V=\star_h d\alpha.
+d\mathscr{V}+\frac{1}{2}\omega \mathscr{V}=\star_h d\alpha.
 \ee
-on $W$, where $V$ is a function and $\alpha$ is a one--form, and conformally ASD four--metrics
+on $W$, where $\mathscr{V}$ is a function and $\alpha$ is a one--form, and conformally ASD four--metrics
 \be \label{eq:monopole_correspondence}
-g=Vh-V^{-1}(dx +\alpha)^2
+g=\mathscr{V}h-\mathscr{V}^{-1}(dx +\alpha)^2
 \ee
 over $W$ with an isometry $K=\p/\p x$.
 \end{enumerate}
@@ -563,7 +563,7 @@ and is given by
 \end{split}
 \nonumber
 \ee
-Note that the  formulae (\ref{ew_neat}) are independent of the coordinate $v$, and therefore have a symmetry. This was unexpected because there is no other symmetry of $(M,g)$ that commutes with $K_3$. However, it is possible for symmetries to appear in the Einstein-Weyl structure without a corresponding symmetry of the ASD conformal structure. This can be seen from the general formula (\ref{EWgen}); the function $V$ may depend on the coordinate $v$ so that $g$ depends on $v$ even though $h$ does not. For example, the Gibbons-Hawking metrics \cite{GH} give a trivial Einstein--Weyl structure with the maximal symmetry group, but the four-metric is in general not so symmetric. Our discovery of this unexpected symmetry motivated a more concrete description of a symmetry of a Weyl structure.
+Note that the  formulae (\ref{ew_neat}) are independent of the coordinate $v$, and therefore have a symmetry. This was unexpected because there is no other symmetry of $(M,g)$ that commutes with $K_3$. However, it is possible for symmetries to appear in the Einstein-Weyl structure without a corresponding symmetry of the ASD conformal structure. This can be seen from the general formula (\ref{eq:monopole_correspondence}); the function $\mathscr{V}$ may depend on the coordinate $v$ so that $g$ depends on $v$ even though $h$ does not. For example, the Gibbons-Hawking metrics \cite{GH} give a trivial Einstein--Weyl structure with the maximal symmetry group, but the four-metric is in general not so symmetric. Our discovery of this unexpected symmetry motivated a more concrete description of a symmetry of a Weyl structure.
 
 \begin{defi}
 An infinitesimal symmetry of a Weyl structure $(W,\mathscr{D},[h])$ is a vector field $\mathcal{K}$ which is both an affine vector field with respect to the connection\footnote{Recall that an affine vector field of a connection $\mathscr{D}$ is one which preserves its components, i.e. $\mathcal{L}_\mathcal{K}\Gamma^i_{jk}=0$.} $\mathscr{D}$ and a conformal Killing vector with respect to the conformal structure $[h]$.
@@ -838,7 +838,7 @@ ${\mathcal A}$ in the twisted--photon Ward bundle over the twistor space
 of $(M, g)$.
 \subsection{The twisted photon}
 \mynote{Still not 100 per cent sure I have got this right. Does it matter what $\mathbb{C}^*$ bundle over $\mathscr{T}$ we are talking about? What would happen if we instead regarded $\mathscr{T}$ as $\PP(T\CP^2)$, and used our parametrisation (\ref{sl3curves}) but projectivised the $l$ part instead of the $p$ part?}
-Ward \cite{wardtf} shows that there is a correspondence between ASD Maxwell potentials on $M$ and $\mathbb{C}^*$ bundles over $\mathscr{T}$ which are trivial on twistor lines\footnote{Recall that a principal bundle $\PP\rightarrow\mathscr{T}$ with structure group $G$ is trivial if there exists a map $\chi:\PP\rightarrow\mathscr{T}\times G$. Let $\{\chi_\alpha:\mathcal{U}_\alpha\rightarrow\mathscr{T}\times G\}$ be local trivialisations related by transition functions $F_{\alpha\beta}=\chi_\beta\circ\chi^{-1}_\alpha\in G$. If $F_{\alpha\beta}=H_\beta H_\alpha^{-1}$ for some splitting elements $H_\alpha,H_\beta\in G$ on $\mathcal{U}_\alpha,\mathcal{U}_\beta$ respectively, then there exist $\tilde{\chi}_\alpha=H_\alpha^{-1}\circ\chi_\alpha$ and $\tilde{\chi}_\beta=H_\beta^{-1}\circ\chi_\beta$ such that $\tilde{F}_{\alpha\beta}=H_\beta^{-1}H_\beta H_\alpha^{-1}H_\alpha=Id$, so that the bundle is trivial.}. The purpose of this section is to uncover the $\mathbb{C}^*$ bundle over $\mathscr{T}$ corresponding to the ASD Maxwell potential $\mathcal{A}=z_{A'}dx^{A'}$ on $M$.
+Ward \cite{wardtf} shows that there is a correspondence between ASD Maxwell potentials on $M$ and $\mathbb{C}^*$ bundles over $\mathscr{T}$ which are trivial on twistor lines\footnote{Recall that a principal bundle $\PP\rightarrow\mathscr{T}$ with structure group $G$ is trivial if there exists a map $\chi:\PP\rightarrow\mathscr{T}\times G$. Let $\{\chi_\alpha:\mathcal{U}_\alpha\rightarrow\mathscr{T}\times G\}$ be local trivialisations related by transition functions $F_{\alpha\beta}=\chi_\beta\circ\chi^{-1}_\alpha\in G$. If $F_{\alpha\beta}=f_\beta f_\alpha^{-1}$ for some splitting elements $f_\alpha,f_\beta\in G$ on $\mathcal{U}_\alpha,\mathcal{U}_\beta$ respectively, then there exist $\tilde{\chi}_\alpha=f_\alpha^{-1}\circ\chi_\alpha$ and $\tilde{\chi}_\beta=f_\beta^{-1}\circ\chi_\beta$ such that $\tilde{F}_{\alpha\beta}=f_\beta^{-1}f_\beta f_\alpha^{-1}f_\alpha=Id$, so that the bundle is trivial.}. The purpose of this section is to uncover the $\mathbb{C}^*$ bundle over $\mathscr{T}$ corresponding to the ASD Maxwell potential $\mathcal{A}=z_{A'}dx^{A'}$ on $M$.
 
 The twistor space $F_{12}$ described in \S\ref{twist_SSS} can be identified with the projectivised tangent bundle ${\PP(T\CP^{2*})}$ of the minitwistor space of the flat projective structure, since a point $(p,l)$ in $F_{12}\subset\CP^2\times\CP^{2*}$ consists of a point $l\in\CP^{2*}$, and a line $p\subset\CP^{2*}$ through $l$ which we can identify with a direction in the tangent space $T_l\CP^{2*}$. Thus the twistor space of $M$ is the correspondence space (in a twistorial sense) of $\CP^2$ and its twistor space ${\CP^2}^*$. An obvious $\mathbb{C}^*$ bundle over ${\PP(T\CP^{2*})}$ is $T\CP^{2*}$.
 
@@ -867,27 +867,27 @@ F=\ln{(p_2/p_3)}.
 
 Now we follow the procedure of \cite{wardtf}: restrict $F$ to a twistor line,
 and split it.
-The holomorphic splitting is $F=H-\widetilde{H}$, where
-$H=\ln{(p_2)}$ is holomorphic in the pre--image of $U$ in the correspondence space, and 
-$\widetilde{H}=\ln{(p_3)}$ is holomorphic in the pre--image of
+The holomorphic splitting is $F=f-\widetilde{f}$, where
+$f=\ln{(p_2)}$ is holomorphic in the pre--image of $U$ in the correspondence space, and 
+$\widetilde{f}=\ln{(p_3)}$ is holomorphic in the pre--image of
 $\widetilde{U}$. Note that $F$ is a twistor  function, but 
-$H, \widetilde{H}$ are not. Therefore
+$f, \widetilde{f}$ are not. Therefore
 $L_{A}F=0$, where the twistor distribution $L_{A}$
-is given by (\ref{tdistribution}). This implies that $L_{A}H=L_{A}\widetilde{H}$. Since each side of this equation is holomorphic on an open subset of $\CP^1$, and since $\CP^1$ can be covered with such subsets, both sides are globally holomorphic and therefore linear in $\pi^{A'}$ by the Liouville theorem. Hence
+is given by (\ref{tdistribution}). This implies that $L_{A}f=L_{A}\widetilde{f}$. Since each side of this equation is holomorphic on an open subset of $\CP^1$, and since $\CP^1$ can be covered with such subsets, both sides are globally holomorphic and therefore linear in $\pi^{A'}$ by the Liouville theorem. Hence
 \[
-L_{A}H=L_{A}\widetilde{H}=\pi^{A'}\mathcal{A}_{AA'}
+L_{A}f=L_{A}\widetilde{f}=\pi^{A'}\mathcal{A}_{AA'}
 \]
 for some one--form $\mathcal{A}$ on $M$.
 
 To construct this one--form recall the parametrisation
 of twistor curves (\ref{sl3curves}). This gives
 \[
-H=\ln{(z\cdot\pi)}, \quad\widetilde{H}=\ln{((z\cdot\pi)x^{1'}-\pi^{1'})}
+f=\ln{(z\cdot\pi)}, \quad\widetilde{f}=\ln{((z\cdot\pi)x^{1'}-\pi^{1'})}
 \]
 and
 \[
-L_{1}(H)=L_{1}(\widetilde{H})=0, \quad
-L_{0}(H)=L_{0}(\widetilde{H})=\pi\cdot z.
+L_{1}(f)=L_{1}(\widetilde{f})=0, \quad
+L_{0}(f)=L_{0}(\widetilde{f})=\pi\cdot z.
 \]
 Therefore ${\mathcal A}_{1A'}=0, {\mathcal A}_{0A'}=z_{A'}$
 which gives ${\mathcal A}=z_{A'}dx^{A'}$, and $d{\mathcal A}$

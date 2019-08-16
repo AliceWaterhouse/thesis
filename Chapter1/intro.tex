@@ -25,7 +25,7 @@ The $2n$--dimensional space $M$ also carries a natural symplectic form $\Omega$,
 Firstly, $(M,g)$ is interesting by virtue of being an Einstein
 space. In fact, it turns out that $g$ arises as the Kaluza--Klein reduction of an Einstein metric $\mathcal{G}$ on an $\R^*$ bundle $\sigma:\mathcal{Q}\rightarrow M$ which has curvature form $\sigma^*(\Omega)$. In chapter \ref{chap:KK_lift} we will construct $\mathcal{G}$ explicitly, and give an interpretation of the manifold $(\mathcal{Q},\mathcal{G})$ in terms of the projective geometry on $N$.
 
-In chapter \ref{chap:c-proj} we show that the structure $(M,g,\Omega)$ can also be thought of as compactifiable in a certain sense. Recall that a (psuedo--)Riemannian manifold $(M,g)$ is said to be \textit{conformally compact} if there is a smooth positive function $T$ such that $T^2g$ smoothly extends to a manifold with boundary $\ov{M}=M\cup\p M$, and the set $\{p\in\ov{M}:T(p)=0\}$ is a hypersurface which coincides with the boundary $\p M$.  This is a useful concept because $(M,T^2g)$ has the same conformal structure, and hence the same \textit{causal} structure, as $(M,g)$. It has been used to study said causal structure in both general relativity \cite{penrose65} and quantum field theory \cite{witten}. It is also useful for formulating the boundary conditions of conformally invariant field equations such as those arising in Yang--Mills theory \cite{uhlen}.
+In chapter \ref{chap:c-proj} we show that the structure $(M,g,\Omega)$ can also be thought of as compactifiable in a certain sense. Recall that a (psuedo--)Riemannian manifold $(M,g)$ is said to be \textit{conformally compact} if there is a smooth positive function $T$ such that $T^2g$ smoothly extends to a manifold with boundary $\ov{M}=M\cup\p M$, and the set $\{m\in\ov{M}:T(m)=0\}$ is a hypersurface which coincides with the boundary $\p M$.  This is a useful concept because $(M,T^2g)$ has the same conformal structure, and hence the same \textit{causal} structure, as $(M,g)$. It has been used to study said causal structure in both general relativity \cite{penrose65} and quantum field theory \cite{witten}. It is also useful for formulating the boundary conditions of conformally invariant field equations such as those arising in Yang--Mills theory \cite{uhlen}.
 
 Recent work by \v Cap and Gover \cite{CG0,CG} has generalised this idea to other geometrical structures which admit some weakening which extends to a manifold with boundary. In particular, on an almost complex manifold $(M,J)$ with a connection $\nabla$ which is correctly adapted to $J$, one can define the $c$--projective equivalence class $[\nabla]$ to which $\nabla$ belongs, and show that the $c$--projective structure $(M,J,[\nabla])$ extends to a manifold with boundary $\ov{M}$ \cite{CG}. The main goal of chapter \ref{chap:c-proj} is to adapt the work of \cite{CG} to the para--$c$--projective case, and to show that the almost complex structure $J$ on $M$ has a complex connection which admits a so--called para--$c$--projective compactification. The result of this is that the manifolds $(M,g,\Omega)$ can be thought of as para--$c$--projectively compact.
 
@@ -86,13 +86,13 @@ The following proposition converts definition \ref{def:projstruct} to a to a mor
 for some one--form $\Upsilon.$
 \end{prop}
 
-{\bf Proof.} We denote by $V$ the vertical sub--bundle of $T(TN)$, where $\nu:TN\rightarrow N$ is the tangent bundle to $N$. A connection defines a splitting of the exact sequence
+{\bf Proof.} We denote by $\mathcal{V}$ the vertical sub--bundle of $T(TN)$, where $\pi_T:TN\rightarrow N$ is the tangent bundle to $N$. A connection defines a splitting of the exact sequence
 \be \label{eq:TTMsequence}
-0 \longrightarrow V \longrightarrow T(TN) \longrightarrow \nu^*TN \longrightarrow 0
+0 \longrightarrow \mathcal{V} \longrightarrow T(TN) \longrightarrow \pi_T^*TN \longrightarrow 0
 \ee
-so that each $X^i\in T_pM$ has a unique pull--back in the horizontal sub--bundle complementary to $V$. The integral curves of these pull--backs, when projected down to $N$, then define the geodesics of the connection.
+so that each $X^i\in T_pM$ has a unique pull--back in the horizontal sub--bundle complementary to $\mathcal{V}$. The integral curves of these pull--backs, when projected down to $N$, then define the geodesics of the connection.
 
-Any two connections are related by some $\delta\Gamma^k_{ij}$, which satisfies $\delta\Gamma^k_{ij}=\delta\Gamma^k_{(ij)}$ as long as both connections are torsion--free. A change of connection is equivalent to a change in the splitting of (\ref{eq:TTMsequence}). At $X^i\in T_pN$, the change is given by the homomorphism from $T_pN$ to $T_pN=V_p$ defined by the contraction $X^i\Gamma^k_{ij}$. Thus the two connections define the same geodesics if and only if $X^iX^j\Gamma^k_{ij}$ is a multiple of $X^k$ for all $X^i$. This is true if and only if there is a one--form $\Upsilon_i$ such that (\ref{eq:proj_change}) is satisfied.\footnote{To see this, take some one--form $\omega_i$ and note that $2X^iX^j\delta^k_{(i}\Upsilon_{j)}\omega_k$ vanishes if and only if $X^k\omega_k$ does.}
+Any two connections are related by some $\delta\Gamma^k_{ij}$, which satisfies $\delta\Gamma^k_{ij}=\delta\Gamma^k_{(ij)}$ as long as both connections are torsion--free. A change of connection is equivalent to a change in the splitting of (\ref{eq:TTMsequence}). At $X^i\in T_pN$, the change is given by the homomorphism from $T_pN$ to $T_pN=\mathcal{V}_p$ defined by the contraction $X^i\Gamma^k_{ij}$. Thus the two connections define the same geodesics if and only if $X^iX^j\Gamma^k_{ij}$ is a multiple of $X^k$ for all $X^i$. This is true if and only if there is a one--form $\Upsilon_i$ such that (\ref{eq:proj_change}) is satisfied.\footnote{To see this, take some one--form $\omega_i$ and note that $2X^iX^j\delta^k_{(i}\Upsilon_{j)}\omega_k$ vanishes if and only if $X^k\omega_k$ does.}
 \koniec
 
 One can show that the curvature of a connection $\nabla$ in the projective class can be uniquely decomposed as
@@ -113,18 +113,18 @@ A projective structure in dimension $n$ is said to be flat if it is diffeomorphi
 \begin{defi} \label{def:RPn}
 The real projective space $\RP^n$ of dimension $n$ is the space of unoriented lines through the origin in $\R^{n+1}$, thought of as $\RP^n=(\R^{n+1}\backslash\{0\})/\R^*$, with geodesics given by straight lines in $\R^{n+1}$ under the projection $\kappa:\R^{n+1}\rightarrow\RP^n$.
 \end{defi}
-Let $X$ denote a non--zero point in $\R^{n+1}$ with coordinates $(X^0,X^1,\dots,X^n)^T$, and let $[X]$ denote the corresponding point in $\RP^n$, labelled by homogeneous coordinates. In a patch where $X^0\neq 0$, we can write $[X]=[1,X^1/X^0,\dots,X^n/X^0]$ and define inhomogeneous coordinates on $\RP^n$ by
+Let $P$ denote a non--zero point in $\R^{n+1}$ with coordinates $(P^0,P^1,\dots,P^n)^T$, and let $[P]$ denote the corresponding point in $\RP^n$, labelled by homogeneous coordinates. In a patch where $P^0\neq 0$, we can write $[P]=[1,P^1/P^0,\dots,P^n/P^0]$ and define inhomogeneous coordinates on $\RP^n$ by
 \[
-(x^1,\dots,x^n) = (X^1/X^0,\dots,X^n/X^0).
+(x^1,\dots,x^n) = (P^1/P^0,\dots,P^n/P^0).
 \]
-If we combine this with coordinate patches where $X^i\neq 0,\ i=1,\dots,n$, we can build an atlas for $\RP^n$.
+If we combine this with coordinate patches where $P^i\neq 0,\ i=1,\dots,n$, we can build an atlas for $\RP^n$.
 
 The flat projective structure on $\RP^n$ has a special duality property which we now discuss. Consider the set of planes through the origin in $\R^{n+1}$. These can be specified by their normal vector, which is defined only up to multiplication by $\R^*$. Let us denote such a plane by a non--zero row vector $L\in\R_{n+1}$. A point $P\in\R^{n+1}$ lies in the plane defined by $L$ if and only if $L\cdot P=0$.
 
 When we projectivise the $\R^{n+1}$, any $P\neq 0$ descends to a point $[P]\in\RP^n$, and any plane descends to a line $[L]\subset\RP^n$. The incidence relation $L\cdot P=0$ is now equivalent to the point $[P]$ lying in the line $[L]$. The homogeneous coordinates $[L]$ parametrise a second projective surface which we think of as the dual to the $\RP^n$ parametrised by $[P]$, and denote $\RP_n$.
 
 Real projective space can be viewed as homogeneous space as follows. 
-The group $SL(n+1,\mathbb{R})$ acts from the left via the fundamental representation on coordinates $(X^0,\dots,X^n)^T$ in $\R^{n+1}$, and this descends to a transitive action on $\RP^n$. By the orbit stabiliser theorem, $\RP^n=SL(n+1,\R)/H$, where $H$ is a subgroup stabilising a point. If we choose the point $[1,0,\dots,0]$, the elements of $H$ are matrices of the general form
+The group $SL(n+1,\mathbb{R})$ acts from the left via the fundamental representation on coordinates $(P^0,\dots,P^n)^T$ in $\R^{n+1}$, and this descends to a transitive action on $\RP^n$. By the orbit stabiliser theorem, $\RP^n=SL(n+1,\R)/H$, where $H$ is a subgroup stabilising a point. If we choose the point $[1,0,\dots,0]$, the elements of $H$ are matrices of the general form
 \[
 \begin{pmatrix}\mathrm{det}a^{-1} & b\\
 0 & a
@@ -145,7 +145,7 @@ The theory of Cartan geometries was developed as part of Cartan's
 \textit{method of moving frames}. The idea is to pick out some adapted frames for manifolds equipped with some non-metric structure. The bundle of such frames over a manifold is then a principal bundle $\pi:P\rightarrow N$ with structure group $H$. In the projective case, the notion of a \textit{second order frame} must be introduced to obtain an object which is correctly adapted to the projective structure.
 
 The bundle $P$ is equipped with a $\mathfrak{g}$-valued one-form
-$\theta$ called the Cartan connection. It defines an isomorphism $\theta:T_{p}P\rightarrow\mathfrak{g}$ at every point $p\in P$ such that the vertical subspace $V_{p}P\subset T_{p}P$ is mapped to $\mathfrak{h}$ and the horizontal subpace $H_{p}P\subset T_{p}P$ is defined as the inverse image of $\mathfrak{g}/\mathfrak{h}$. Note that it is not a connection in the usual sense of a principal bundle connection, since it takes value in a Lie algebra larger than that of the structure group. Further details can be found in \cite{Sharpe}.
+$\theta$ called the Cartan connection. It defines an isomorphism $\theta:T_{p}P\rightarrow\mathfrak{g}$ at every point $u\in P$ such that the vertical subspace $\mathcal{V}_{u}P\subset T_{u}P$ is mapped to $\mathfrak{h}$ and the horizontal subpace $\mathcal{H}_{u}P\subset T_{u}P$ is defined as the inverse image of $\mathfrak{g}/\mathfrak{h}$. Note that it is not a connection in the usual sense of a principal bundle connection, since it takes value in a Lie algebra larger than that of the structure group. Further details can be found in \cite{Sharpe}.
 
 %The importance of the Cartan connection is that it satisfies a number of properties, in particular equivariance, i.e. $R_{h}^{*}\theta=\mathrm{Ad}(h^{-1})\theta$ for all $h\in H$. 
 
@@ -360,7 +360,7 @@ The full proof of theorem \ref{thm:DM} only appears explicitly in \cite{DM} in t
 \end{rmk}
 
 \begin{rmk}
-Note that an endomorphism $J$ which squares to the identity defines two $n$--dimensional sub--bundles of the tangent bundle $TM$ defined at each $p\in M$ as the vector subspaces of $T_pM$ which have eigenvalues $\pm 1$ with respect to $J$. These sub--bundles form a pair of smooth distributions $D_\pm$ in $TM$. Further discussion of the endomorphism $J$ will appear in chapter \ref{chap:c-proj}.
+Note that an endomorphism $J$ which squares to the identity defines two $n$--dimensional sub--bundles of the tangent bundle $TM$ defined at each $m\in M$ as the vector subspaces of $T_mM$ which have eigenvalues $\pm 1$ with respect to $J$. These sub--bundles form a pair of smooth distributions $D_\pm$ in $TM$. Further discussion of the endomorphism $J$ will appear in chapter \ref{chap:c-proj}.
 \end{rmk}
 
 \mynote{Motivate chapter \ref{chap:KK_lift} here by mentioned the alternative quotient?}
@@ -448,9 +448,9 @@ T(\cT^*)=  \pi^*TN\oplus \pi^* \cT^* .
 \end{equation}
 
 %From the usual Euler sequence of projective space (or see (\ref{useful}) in the last Section) it follows that
-We move now to the total space of $\mathbb{P} {\cT^*}$, and we note that again the tractor (equivalently, Cartan) connection determines a splitting of the tangent bundle $T(\mathbb{P} {\cT^*})$ in which the second term of the display (\ref{HV}) is replaced by a quotient of $\pi^* \cT^*(0,1)$ \cite{CGH-duke}. Indeed, if we work at a point $p\in \mathbb{P}(\cT^*)$, observe that $\pi^*\cT^*(0,1)$ has a filtration
+We move now to the total space of $\mathbb{P} {\cT^*}$, and we note that again the tractor (equivalently, Cartan) connection determines a splitting of the tangent bundle $T(\mathbb{P} {\cT^*})$ in which the second term of the display (\ref{HV}) is replaced by a quotient of $\pi^* \cT^*(0,1)$ \cite{CGH-duke}. Indeed, if we work at a point $m\in \mathbb{P}(\cT^*)$, observe that $\pi^*\cT^*(0,1)$ has a filtration
 \begin{equation}\label{quotient}
-0\to \cE (0,0)_p\stackrel{U_p}{\to}  \pi_\cM^* \cT^*(0,1)|_p \to  \pi_\cM^* \cT^*(0,1)|_p/\langle U_p \rangle \to 0
+0\to \cE (0,0)_m\stackrel{U_m}{\to}  \pi_\cM^* \cT^*(0,1)|_m \to  \pi_\cM^* \cT^*(0,1)|_m/\langle U_m \rangle \to 0
 \end{equation}
 where, as usual, $U$ is the canonical section. 
 But away from $\mathcal{Z}(\tau )$, we have that  $U$ canonically splits 
@@ -483,14 +483,14 @@ What remains to be done, is to show that (\ref{almost_there}) agrees
 with the form obtained in \cite{DM} once a trivialisation of
 $\cT^*\rightarrow N$ has been chosen.
 
-Let $p\in N$ and let ${\mathcal W}\subset N$ be an open 
-neighbourhood of $p$ with 
+Let $x\in N$ and let ${\mathcal W}\subset N$ be an open 
+neighbourhood of $x$ with 
 local coordinates $(x^1, \dots, x^n)$ such that
 $T_pN=\mbox{span}(\p/\p x^1, \dots, \p/\p x^n)$. The connection 
-(\ref{tractor_con}) gives a splitting of $T(\cT^*)$ into the horizontal and
+(\ref{eq:tractor_connection}) gives a splitting of $T(\cT^*)$ into the horizontal and
 vertical sub-bundles
 \[
-T(\cT^*)=H(\cT^*)\oplus V(\cT^*),
+T(\cT^*)=\mathcal{H}(\cT^*)\oplus \mathcal{V}(\cT^*),
 \]
 as in (\ref{HV}).
 To obtain the explicit form of this splitting, let $V_\alpha,\ \alpha=0, 1, \dots, n$ be components of a local section of $\cT^*$ in the trivialisation over ${\mathcal{W}}$.
@@ -509,10 +509,10 @@ can be read--off from (\ref{eq:tractor_connection}):
 \]
 In terms of these components we can write
 \begin{align*}
-H(\cT^*)&=\mbox{span}
+\mathcal{H}(\cT^*)&=\mbox{span}
 \Big( \frac{\p}{\p x^i}+ {\gamma_{i\alpha}^\beta} V_\beta
 \frac{\p}{\p V_{\alpha}}, i=1, \dots, n \Big), \\
- V(\cT^*)&=\mbox{span}\Big(\frac{\p}{\p V_{\alpha}}, \alpha=0, 1, 
+ \mathcal{V}(\cT^*)&=\mbox{span}\Big(\frac{\p}{\p V_{\alpha}}, \alpha=0, 1, 
 \dots, n\Big).
 \end{align*}
 Setting $\zeta_i=V_i/V_0$, where $\tau=V_0\neq 0$ %\footnote{Rod @ Maciej: I have added $V_0=\tau$. You agree, right!?}
@@ -521,10 +521,10 @@ $\mathcal{Z}(\tau)$,
   we can compute the push forwards
 of these subspaces to $\mathbb{P}(\cT^*)\setminus {\mathcal{Z}(\tau)}$:
 \[
-\kappa_* H(\cT^*)=\mbox{span}\Big(h_i\equiv
+\kappa_* \mathcal{H}(\cT^*)=\mbox{span}\Big(h_i\equiv
 \frac{\p}{\p x^i}-
 (\Rho_{ij}+\zeta_i\zeta_j  -\Gamma_{ij}^k\zeta_k)\frac{\p}{\partial \zeta_j}
-\Big), \quad \kappa_* V(\cT^*)=\mbox{span}\Big(v^i\equiv\frac{\p}{\p \zeta_i}
+\Big), \quad \kappa_* \mathcal{V}(\cT^*)=\mbox{span}\Big(v^i\equiv\frac{\p}{\p \zeta_i}
 \Big).
 \]
 The non--zero components of the  metric (\ref{almost_there}) are given by
@@ -553,7 +553,7 @@ Next we observe that $\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau)$ is an affine
 \iota : T^* N\to \mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau).
     \end{equation}
 %First, given  $\nabla$, we can represent an element $U\in
-%  \cT^*_p$ ($p\in N$) by the pair $(\tau , \mu) \in \cE (1)_p\oplus
+%  \cT^*_p$ ($x\in N$) by the pair $(\tau , \mu) \in \cE (1)_p\oplus
 %  T_p^*N(1)$,  or, if we choose coordinates on $N$, by collection
 %\be
 %\label{tractor_U}
@@ -566,7 +566,7 @@ Next we observe that $\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau)$ is an affine
 %
  % Thus, given $\nabla$, and  from the naturality of all maps, it
  % follows that the total space of $T^*N$ can be identified with $\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau)$
- % by (for each $p\in N$)
+ % by (for each $x\in N$)
 given by
 \begin{equation} \label{eq:T*N_is_M}
 T_p^*N\ni \zeta_i  \mapsto [(1,\zeta_i)]=[(\tau,\tau \zeta_i)]\in

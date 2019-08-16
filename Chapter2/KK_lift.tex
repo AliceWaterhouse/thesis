@@ -23,12 +23,12 @@ g_{\Lambda} & = &  dx^{i} \odot d\zeta_{i}+\Lambda(\zeta_{i} dx^{i})^{2}\\
 
 \begin{prop}
 The Einstein spaces $M$ corresponding to $\mathbb{RP}^{n}$
-are projections from the $2n+1$-dimensional quadrics $Q\subset\mathbb{R}^{n+1,n+1}$
+are projections from the $2n+1$-dimensional quadrics $\mathcal{Q}\subset\mathbb{R}^{n+1,n+1}$
 given by $X^{\alpha}Y_{\alpha}=\frac{1}{\Lambda}$, where $X,Y\in\mathbb{R}^{n+1}$
 are coordinates on $\mathbb{R}^{n+1,n+1}$ such that the metric is
 given by 
 \[
-G= dX^{\alpha} dY_{\alpha},
+\hat{g}= dX^{\alpha} dY_{\alpha},
 \]
  under the embedding
 \begin{eqnarray}
@@ -57,7 +57,7 @@ to be
 \end{eqnarray*}
 The metric is then given by
 \begin{eqnarray*}
-G & = & \mathrm{e}^{t}( dx^{i}+x^{i} dt)\mathrm{e}^{-t}( d\zeta_{i}-\zeta_{i} dt)\ -\ \mathrm{e}^{t} dt\mathrm{e}^{-t}\biggl[\Bigl(\frac{1}{\Lambda}-x^{k}\zeta_{k}\Bigr) dt+x^{k} d\zeta_{k}+\zeta_{k} dx^{k}\biggr]\\
+\hat{g} & = & \mathrm{e}^{t}( dx^{i}+x^{i} dt)\mathrm{e}^{-t}( d\zeta_{i}-\zeta_{i} dt)\ -\ \mathrm{e}^{t} dt\mathrm{e}^{-t}\biggl[\Bigl(\frac{1}{\Lambda}-x^{k}\zeta_{k}\Bigr) dt+x^{k} d\zeta_{k}+\zeta_{k} dx^{k}\biggr]\\
  & = &  dx^{i} d\zeta_{i}\ +\ (x^{i} d\zeta_{i}-\zeta_{i} dx^{i}) dt\ -\ (x^{i}\zeta_{i}) dt^{2}\ -\  dt\biggl[\Bigl(\frac{1}{\Lambda}-x^{k}\zeta_{k}\Bigr) dt+x^{k} d\zeta_{k}+\zeta_{k} dx^{k}\biggr]\\
  & = &  dx^{i} d\zeta_{i}\ -\ \frac{1}{\Lambda} dt^{2}\ -\ 2\zeta_{i} dx^{i} dt\\
  & = &  dx^{i} d\zeta_{i}\ +\ \Lambda(\zeta_{i} dx^{i})^{2}\ -\ \Lambda\Bigl(\frac{ dt}{\Lambda}+\zeta_{i} dx^{i}\Bigr)^{2},
@@ -95,7 +95,7 @@ the following metric.
 \begin{theo}
 The metric
 \begin{equation}
-\mathcal{G}_{\Lambda}=g_{\Lambda}-\Lambda\Bigl(\frac{ dt}{\Lambda}+\mathcal{A}\Bigr)^{2}\label{eq:G}
+\hat{g}_{\Lambda}=g_{\Lambda}-\Lambda\Bigl(\frac{ dt}{\Lambda}+\mathcal{A}\Bigr)^{2}\label{eq:G}
 \end{equation}
 on an $\R^*$--bundle $\kappa_\mathcal{Q}:\mathcal{Q}\rightarrow M$ is Einstein,
 with Ricci scalar $2n(2n+1)\Lambda$.
@@ -103,7 +103,7 @@ with Ricci scalar $2n(2n+1)\Lambda$.
 \textbf{Proof.} We prove this using the Cartan formalism. Our treatment
 parallels a calculation by Kobayashi \cite{Kob}, who considered
 principal circle bundles over K\"ahler manifolds in order to study the
-topology of the base. For the remainder of this chapter we will suppress the constant $\Lambda$, writing $\mathcal{G}\equiv\mathcal{G}_{\Lambda}$, $g\equiv g_{\Lambda}$ and $\Omega\equiv\Omega_\Lambda$ since the proof applies to any choice $\Lambda\neq0$ within this family.
+topology of the base. For the remainder of this chapter we will suppress the constant $\Lambda$, writing $\hat{g}\equiv\hat{g}_{\Lambda}$, $g\equiv g_{\Lambda}$ and $\Omega\equiv\Omega_\Lambda$ since the proof applies to any choice $\Lambda\neq0$ within this family.
 
 Consider a frame
 \begin{equation}
@@ -118,7 +118,7 @@ g=e^{1}\odot e^{n+1}+\dots+e^{n}\odot e^{2n}.\label{eq:g_cov_const}
 \end{equation}
 We are interested in the metric
 \[
-\mathcal{G}=-e^{0}\odot e^{0}+g,
+\hat{g}=-e^{0}\odot e^{0}+g,
 \]
 where
 \[
@@ -170,22 +170,22 @@ Hence we have that
 \end{eqnarray*}
 and thus, using $\mathcal{R}_{\mu\nu}=\mathcal{R}_{\rho\mu\nu}^{\ \ \ \ \rho}$,
 \begin{eqnarray*}
-\mathcal{R}_{00} & = & \Lambda\Omega_{bc}\Omega^{bc}=-2n\Lambda=2n\Lambda\mathcal{G}_{00}\\
+\mathcal{R}_{00} & = & \Lambda\Omega_{bc}\Omega^{bc}=-2n\Lambda=2n\Lambda\hat{g}_{00}\\
 \mathcal{R}_{b0} & = & \sqrt{\Lambda}\nabla_{c}\Omega_{\ b}^{c}=0\\
 \mathcal{R}_{db} & = & R_{db}+2\Lambda(\Omega_{\ b}^{c}\Omega_{cd}+\frac{1}{2}\Omega_{\ c}^{c}\Omega_{bd}-\frac{1}{2}\Omega_{\ d}^{c}\Omega_{bc})-\Lambda\Omega_{cd}\Omega_{\ b}^{c}\\
  & = & R_{db}+2\Lambda\Omega_{b}^{\ c}\Omega_{dc}\\
- & = & 2(n+1)\Lambda g_{db}-2\Lambda g_{db}=2n\Lambda g_{db}=2n\Lambda\mathcal{G}_{db}.
+ & = & 2(n+1)\Lambda g_{db}-2\Lambda g_{db}=2n\Lambda g_{db}=2n\Lambda\hat{g}_{db}.
 \end{eqnarray*}
 
 
 Note that we have used the facts that $g$ is Einstein with Ricci
 scalar $4n(n+1)\Lambda$ and the symplectic form $\Omega$ is divergence--free;
-these are justified in lemmas \ref{lem:Ricci_scalar} and \ref{lem:div_free} below. Since $\mathcal{G}_{a0}=0$,
+these are justified in lemmas \ref{lem:Ricci_scalar} and \ref{lem:div_free} below. Since $\hat{g}_{a0}=0$,
 we conclude that
 \[
-\mathcal{R}_{\mu\nu}=2n\Lambda\mathcal{G}_{\mu\nu}=\frac{\mathcal{R}}{2n+1}\mathcal{G}_{\mu\nu},
+\mathcal{R}_{\mu\nu}=2n\Lambda\hat{g}_{\mu\nu}=\frac{\mathcal{R}}{2n+1}\hat{g}_{\mu\nu},
 \]
-i.e. $\mathcal{G}$ is Einstein with Ricci scalar $2n(2n+1)\Lambda$.
+i.e. $\hat{g}$ is Einstein with Ricci scalar $2n(2n+1)\Lambda$.
 \koniec
 
 Physically, this is a Kaluza-Klein reduction with constant dilation
@@ -194,9 +194,9 @@ by $\Omega_{a}^{\ c}\Omega_{cb}=g_{ab}$. This is what allows both
 the reduced and lifted metric to be Einstein. A more general discussion
 can be found in \cite{Pope}.
 
-From the Cartan perspective, $\mathcal{G}_{\Lambda=1}$ can be thought
+From the Cartan perspective, $\hat{g}_{\Lambda=1}$ can be thought
 of as a metric on the $2n+1$-dimensional space obtained by taking
-a quotient $\tilde{q}:P\mapsto P/SL(n,\mathbb{R})=\mathcal{Q}$ of the Cartan
+a quotient $\hat{q}:P\mapsto P/SL(n,\mathbb{R})=\mathcal{Q}$ of the Cartan
 bundle, where we embed $SL(n,\mathbb{R})\subset GL(n,\mathbb{R})$
 in $H$ as in (\ref{eq:GL(n)_embedding}) but with $a$ now denoting
 an element of $SL(n,\mathbb{R})$ (so that $\mathrm{det}a^{-1}=1$).
@@ -215,21 +215,20 @@ a\omega & \phi
 so not only is the inner product $\eta\omega$ invariant but also
 the $(0,0)$-component $\theta_{\ 0}^{0}=\mathrm{-tr}\phi$, which
 is a scalar one-form whose exterior derivative is constrained by (\ref{eq:curvature_2-form}) to be $ d\theta_{\ 0}^{0}=-\theta_{\ i}^{0}\wedge\theta_{\ 0}^{i}=-\mathrm{Ant}(\eta\wedge\omega)$.
-Thus, denoting by $A$ the object on $\mathcal{Q}=P/SL(n,\mathbb{R})$
-which is such that $\tilde{q}^{*}A=\mathrm{tr}\phi$, we have that
-$ dA=\Omega$ (where we are now taking $\Omega$ and $g$
-to be defined on $\mathcal{Q}$ by $\tilde{q}^{*}\Omega=\mathrm{Ant}(\eta\wedge\omega)$
-and $\tilde{q}^{*}g=\mathrm{Sym}(\eta\wedge\omega)$ respectively,
-or equivalently redefining $\tilde{\Omega}=\kappa_\mathcal{Q}^{*}\Omega$ and
-$\tilde{g}=\kappa_\mathcal{Q}^{*}g$).
+Thus, denoting by $\mathcal{A}$ the object on $\mathcal{Q}=P/SL(n,\mathbb{R})$
+which is such that $\hat{q}^{*}\mathcal{A}=\mathrm{tr}\phi$, we have that
+$ d\mathcal{A}=\Omega$ (where we are now taking $\Omega$ and $g$
+to be defined on $\mathcal{Q}$ by $\hat{q}^{*}\Omega=\mathrm{Ant}(\eta\wedge\omega)$
+and $\hat{q}^{*}g=\mathrm{Sym}(\eta\wedge\omega)$ respectively).
+%, or equivalently redefining $\hat{\Omega}=\kappa_\mathcal{Q}^{*}\Omega$ and $\hat{g}=\kappa_\mathcal{Q}^{*}g$).
 
-We then have a natural way of constructing a metric $\mathcal{G}$
+We then have a natural way of constructing a metric $\hat{g}$
 on $\mathcal{Q}$ as a linear combination of $g$ and $e^{0}\odot e^{0}$,
 where $e^{0}$ is $A$ up to addition of some exact one-form. It turns
-out that there is choice of linear combination such that $\mathcal{G}$
+out that there is choice of linear combination such that $\hat{g}$
 is Einstein:
 \[
-\mathcal{G}=-e^{0}\odot e^{0}+g.
+\hat{g}=-e^{0}\odot e^{0}+g.
 \]
 The fact that this metric is exactly (\ref{eq:G}) can be verified
 by constructing the Cartan connection of $(N,[\nabla])$ explicitly

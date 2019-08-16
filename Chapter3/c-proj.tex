@@ -57,15 +57,15 @@ and can alternatively be specified as $(M,J,\Omega)$ or $(M,g,\Omega)$. An almos
 \mynote{I think I should probably specialise to the para case at this point.}
 
 \begin{defi}
-An almost (para--)CR structure $(\mathcal{Z},H ,J)$ on a manifold $\mathcal{Z}$ is a sub--bundle $H \subset T\mathcal{Z}$ of the tangent bundle together with a fiber--preserving endomorphism $J:H \rightarrow H $ which satisfies $J^2=Id$ or $J^2=-Id$ depending on whether or not we are talking about the ``para'' case.
+An almost (para--)CR structure $(\mathcal{Z},\mathbb{H} ,J)$ on a manifold $\mathcal{Z}$ is a sub--bundle $\mathbb{H} \subset T\mathcal{Z}$ of the tangent bundle together with a fiber--preserving endomorphism $J:\mathbb{H} \rightarrow \mathbb{H} $ which satisfies $J^2=Id$ or $J^2=-Id$ depending on whether or not we are talking about the ``para'' case.
 \end{defi}
 
-We will be interested in the case where $ H $ is a hyperplane distribution on $\mathcal{Z}$; then $(\mathcal{Z}, H ,J)$ is called an almost (para--)CR structure of \textit{hypersurface type}. An almost (para--)complex structure $(M,J)$ of dimension $2n$ defines an almost (para--)CR structure of hypersurface type on any hypersurface $\mathcal{Z}\subset M$ given by the restriction of $J$ to the hyperplane distribution $ H :=T\mathcal{Z}\cap J(T\mathcal{Z})$ on $\mathcal{Z}$. Note that this distribution must have dimension $2n-2$. An almost (para--)CR structure is a (para--)CR structure if and only if the splitting of $ H $ into eigen--bundles induced by $J$ is Frobenius integrable.
+We will be interested in the case where $ \mathbb{H} $ is a hyperplane distribution on $\mathcal{Z}$; then $(\mathcal{Z}, \mathbb{H} ,J)$ is called an almost (para--)CR structure of \textit{hypersurface type}. An almost (para--)complex structure $(M,J)$ of dimension $2n$ defines an almost (para--)CR structure of hypersurface type on any hypersurface $\mathcal{Z}\subset M$ given by the restriction of $J$ to the hyperplane distribution $ \mathbb{H} :=T\mathcal{Z}\cap J(T\mathcal{Z})$ on $\mathcal{Z}$. Note that this distribution must have dimension $2n-2$. An almost (para--)CR structure is a (para--)CR structure if and only if the splitting of $ \mathbb{H} $ into eigen--bundles induced by $J$ is Frobenius integrable.
 
-We can define the notion of non--degeneracy for an almost (para--)CR structure as follows. The Lie bracket of vector fields induces an antisymmetric $\R$--bilinear operator $\Gamma( H )\times\Gamma( H )\rightarrow\Gamma(T\mathcal{Z}/ H )$ which in fact is also bilinear over smooth functions on $\mathcal{Z}$. This means it is induced by a bundle map $\mathcal{L}: H \times H \rightarrow T\mathcal{Z}/ H $ which is called the \textit{Levi bracket}. Since it takes values in a line bundle it can be thought of as an antisymmetric bilinear form called the \textit{Levi form}. Degeneracy (or not) of the almost (para--)CR structure is defined as degeneracy (or not) of the Levi form. Note that the Levi form also defines a \textit{symmetric} bilinear form $h(\cdot\,,\cdot)=\mathcal{L}(\cdot\,,J\cdot)$ as long as $\mathcal{L}$ is (para--)Hermitian with respect to $J$, and that this symmetric bilinear form is non--degenerate if and only if $\mathcal{L}$ is.
+We can define the notion of non--degeneracy for an almost (para--)CR structure as follows. The Lie bracket of vector fields induces an antisymmetric $\R$--bilinear operator $\Gamma( \mathbb{H} )\times\Gamma( \mathbb{H} )\rightarrow\Gamma(T\mathcal{Z}/ \mathbb{H} )$ which in fact is also bilinear over smooth functions on $\mathcal{Z}$. This means it is induced by a bundle map $\mathcal{L}: \mathbb{H} \times \mathbb{H} \rightarrow T\mathcal{Z}/ \mathbb{H} $ which is called the \textit{Levi bracket}. Since it takes values in a line bundle it can be thought of as an antisymmetric bilinear form called the \textit{Levi form}. Degeneracy (or not) of the almost (para--)CR structure is defined as degeneracy (or not) of the Levi form. Note that the Levi form also defines a \textit{symmetric} bilinear form $h(\cdot\,,\cdot)=\mathcal{L}(\cdot\,,J\cdot)$ as long as $\mathcal{L}$ is (para--)Hermitian with respect to $J$, and that this symmetric bilinear form is non--degenerate if and only if $\mathcal{L}$ is.
 
 \begin{defi}
-A contact structure on a manifold $\mathcal{Z}$ of dimension $2n-1$ is a hyperplane distribution $ H \subset T\mathcal{Z}$ specified as the kernel of a one--form $\theta$ on $\mathcal{Z}$ which satisfies the complete non--integrability condition
+A contact structure on a manifold $\mathcal{Z}$ of dimension $2n-1$ is a hyperplane distribution $ \mathbb{H} \subset T\mathcal{Z}$ specified as the kernel of a one--form $\theta$ on $\mathcal{Z}$ which satisfies the complete non--integrability condition
 \be \label{eq:non_integrability}
 \theta\wedge \underbrace{(d\theta \wedge \dots\wedge d\theta)}_{n-1\ \mathrm{times}} \neq 0.
 \ee
@@ -107,9 +107,9 @@ $\p M\subset \ol{M}$, the differential $dT$ does not vanish on $\p M$, and the c
 
 
 
-It follows easily from this definition that the endomorphism $J$ on $M$ naturally extends to all of $\ol{M}$ by parallel transport with respect to $\ol{\nabla}$. It thus defines an almost para--CR structure on the hyperplane distribution $ H $ defined by $ H _x:=T_x\p M \cap J(T_x \p M)$ for all $x\in\p M$. It can be shown (see lemma 5 of \cite{CG} and modify to the case $J^2=Id$) that this almost para--CR structure is non--degenerate if and only if for any local defining function $T$ the one--form $\theta=dT\circ J$, whose restriction to $\p M$ has kernel $ H $, satisfies the complete non--integrability condition (\ref{eq:non_integrability}) making $ H $ a contact distribution on $\p M$.
+It follows easily from this definition that the endomorphism $J$ on $M$ naturally extends to all of $\ol{M}$ by parallel transport with respect to $\ol{\nabla}$. It thus defines an almost para--CR structure on the hyperplane distribution $ \mathbb{H} $ defined by $ \mathbb{H} _x:=T_x\p M \cap J(T_x \p M)$ for all $x\in\p M$. It can be shown (see lemma 5 of \cite{CG} and modify to the case $J^2=Id$) that this almost para--CR structure is non--degenerate if and only if for any local defining function $T$ the one--form $\theta=dT\circ J$, whose restriction to $\p M$ has kernel $ \mathbb{H} $, satisfies the complete non--integrability condition (\ref{eq:non_integrability}) making $ \mathbb{H} $ a contact distribution on $\p M$.
 
-To see this, first note that $\theta(X)=0\ \forall\ X\in\Gamma( H )$ implies $d\theta(\cdot\,,\cdot)=-\theta([\cdot\,,\cdot])$, so the restriction of $d\theta$ to $ H \times H $ represents the Levi form $\mathcal{L}$. This means that the almost para--CR structure on $\p M$ is non--degenerate if and only if the restriction of $d\theta(X,\cdot)$ to $ H $ is non--zero for all non--zero $X\in\Gamma( H )$. But this is equivalent to the non--integrability condition (\ref{eq:non_integrability}).
+To see this, first note that $\theta(X)=0\ \forall\ X\in\Gamma( \mathbb{H} )$ implies $d\theta(\cdot\,,\cdot)=-\theta([\cdot\,,\cdot])$, so the restriction of $d\theta$ to $ \mathbb{H} \times \mathbb{H} $ represents the Levi form $\mathcal{L}$. This means that the almost para--CR structure on $\p M$ is non--degenerate if and only if the restriction of $d\theta(X,\cdot)$ to $ \mathbb{H} $ is non--zero for all non--zero $X\in\Gamma( \mathbb{H} )$. But this is equivalent to the non--integrability condition (\ref{eq:non_integrability}).
 
 %Note also the distinction between the integrability (or not) of the ($2n-2$)--dimensional distribution $ H $ and the integrability (or not) of the two ($n-1$)--dimensional distributions given by the eigenvalue decomposition of $ H $ under the action of $J$.
 
@@ -117,7 +117,7 @@ Another result of lemma 5 of \cite{CG} is that $d\theta$ is Hermitian on $\p M$ 
 \be
 \label{Nijenhuis_condition}
 \Big({\mathcal{N}^{a}}_{bc}\nabla_a T\Big)\Big|_{T=0}=0.  \ee
-Note in particular that Hermiticity of $d\theta$ on $\p M$ implies Hermiticity of $d\theta$ on $ H $, and hence the existence of a non--degenerate metric $h(\cdot\,,\cdot)=d\theta(\cdot\,,J\cdot)|_ H $ on $ H $. Both of these facts also apply in the ``para'' case.
+Note in particular that Hermiticity of $d\theta$ on $\p M$ implies Hermiticity of $d\theta$ on $ \mathbb{H} $, and hence the existence of a non--degenerate metric $h(\cdot\,,\cdot)=d\theta(\cdot\,,J\cdot)|_ \mathbb{H} $ on $ \mathbb{H} $. Both of these facts also apply in the ``para'' case.
 
 \mynote{Could check this and maybe put the proof in. It is only a couple of paragraphs.}
 
@@ -258,14 +258,14 @@ is regular at the boundary $T=0$. This is in agreement with the
 asymptotic form in Theorem \ref{CGthm} (see \cite{CG} for further details).
 
 %Note that (\ref{def_theta}) defines the one form $\theta$ on the boundary $T=0$  only up to a overall multiple of a positive function.
-The restriction $h$ to $\p M$ gives a metric on a distribution ${ H }=\mbox{Ker} (\theta|_{T=0})$
+The restriction $h$ to $\p M$ gives a metric on a distribution ${ \mathbb{H} }=\mbox{Ker} (\theta|_{T=0})$
 \begin{gather}
 \theta|_{T=0}=2\frac{dY+Z_A dX^A}{Y+Z_AX^A}, \nonumber \\
 h_0=\frac{1}{4}{(\theta|_{T=0})}^2+\frac{1}{2(Y+Z_AX^A)}(2dZ_A\odot dX^A-X^AdZ_A\odot(\theta|_{T=0})). \label{h000}
 \end{gather}
  Note that $T$ is only defined up to multiplication by a positive function. Changing the defining function in this way results in a conformal rescalling of $\theta|_{T=0}$, thus the metric on the contact distribution is also defined up to an overall conformal scale. We shall choose the scale so that
 the contact form is given  by $\theta_0\equiv K\theta|_{T=0}$ on $T(\p M)$,
-with the metric on ${ H }$ given by
+with the metric on ${ \mathbb{H} }$ given by
 %\footnote{The singular denominator $K^{-1}$ may be avoided by adopting the Pfaff %coordinates
 %\[
 %y=\ln{(Y+Z_iX^i)}, \quad z_i=Z_i, \quad x_i=-\frac{X^i}{Y+Z_iX^i},
@@ -277,7 +277,7 @@ with the metric on ${ H }$ given by
 %}
 \be
 \label{on_distri}
-h_{ H }=dZ_A\odot dX^A.
+h_{ \mathbb{H} }=dZ_A\odot dX^A.
 \ee
 
 We now move on to deal with the
@@ -329,24 +329,24 @@ Restricting $h$ to $T=0$ yields a metric which differs from
 $K$ yields the metric
 \begin{eqnarray}
 \label{met_th}
-h_{ H }&=&(dZ_A-\Xi_{AB}dX^B)\odot dX^A,\quad
+h_{ \mathbb{H} }&=&(dZ_A-\Xi_{AB}dX^B)\odot dX^A,\quad
 \mbox{where}\\
 \Xi_{AB}&=&\Gamma_{AB}^CZ_C+\Gamma_{AB}^n+
 (\Gamma_{nn}^CZ_C+\Gamma_{nn}^n)Z_AZ_B-
 2(\Gamma_{An}^CZ_C+\Gamma_{An}^n)Z_B\nonumber
 \end{eqnarray}
-defined on the contact distribution ${ H }=\mbox{Ker}(\theta_0)$, 
+defined on the contact distribution ${ \mathbb{H} }=\mbox{Ker}(\theta_0)$, 
 where $\theta_0=2(dY+Z_AdX^A)$.
 
 We now invoke theorem \ref{CGthm},  verifying
-by explicit computation that the remaining two conditions are satisfied. The first of these conditions is that the metric $h_{ H }$ is compatible with the Levi--form of the almost para--CR structure induced on $\p M$ by $J$, i.e.
+by explicit computation that the remaining two conditions are satisfied. The first of these conditions is that the metric $h_{ \mathbb{H} }$ is compatible with the Levi--form of the almost para--CR structure induced on $\p M$ by $J$, i.e.
 \be
 \label{boundary_compatibility}
-h_H(X, Y)=Cd\theta_0(JX, Y), \quad\mbox{for}\quad X\in H .
+h_\mathbb{H}(X, Y)=Cd\theta_0(JX, Y), \quad\mbox{for}\quad X\in \mathbb{H} .
 \ee
 \mynote{I think this is slightly different but I guess equivalent to the form given in the theorem. Might need a comment?}
 \mynote{Okay I'm not sure if $C$ should be negative, i.e. if the statement in the theorem is the better one because $d\theta$ is like $-\mathcal{L}$ but the statement in the theorem is the same as in \cite{CG} i.e. in the case $J^2=-Id$. Would be good to check this.}
-\mynote{In fact in the theorem we are not talking about $h$ and $d\theta$ restricted to $ H $, we are talking about $h$ and $d\theta$ on $\p M$, so maybe what I showed here is not the full condition?}
+\mynote{In fact in the theorem we are not talking about $h$ and $d\theta$ restricted to $ \mathbb{H} $, we are talking about $h$ and $d\theta$ on $\p M$, so maybe what I showed here is not the full condition?}
 The second is that the Nijenhuis tensor takes asymptotically tangential values, i.e. that (\ref{Nijenhuis_condition}) is satisfied.
 
 Both of these can be checked by computing the almost para--complex structure $J$ in the $(T, Z_A, X^A, Y)$ coordinates. We find
@@ -360,10 +360,10 @@ J|_{T=0}=\ &-\frac{\p}{\p X^A}\otimes dX^A +\frac{\p}{\p Y}\otimes dY + \frac{\p
 +\big(\Gamma^D_{nn}Z_D+\Gamma^n_{nn}\big)Z_C\frac{\p}{\p Z_C} \otimes dY.
 \end{split}
 \ee
-Restricting to vectors in $ H $ amounts to substituting $dY=\theta_0/2-Z_AdX^A$ and disregarding the terms involving $\theta_0$ as above, so that
+Restricting to vectors in $ \mathbb{H} $ amounts to substituting $dY=\theta_0/2-Z_AdX^A$ and disregarding the terms involving $\theta_0$ as above, so that
 \[
 \begin{split}
-J|_{ H }= &-\frac{\p}{\p X^A}\otimes dX^A +Z_A\frac{\p}{\p Y}\otimes dX^A + \frac{\p}{\p Z_A} \otimes dZ_A + \frac{\p}{\p T}\otimes dT \\
+J|_{ \mathbb{H} }= &-\frac{\p}{\p X^A}\otimes dX^A +Z_A\frac{\p}{\p Y}\otimes dX^A + \frac{\p}{\p Z_A} \otimes dZ_A + \frac{\p}{\p T}\otimes dT \\
 &-\frac{2Z_B}{K}\frac{\p}{\p T}\otimes dX^B -\Xi_{AB}\frac{\p}{\p Z_A}\otimes dX^B
 \end{split}
 \]
@@ -392,7 +392,7 @@ Note that this agrees with (\ref{J_T=0}) when $T=0$. We use it to calculate ${\m
 \subsection{Two--dimensional projective structures}
 In the case if $n=2$ the coordinates on $\p M$ are $(X, Y, Z)$,  and (\ref{met_th}) yields
 \[
-h_{ H }=dZ\odot dX-[\Gamma_{11}^2+(\Gamma_{11}^1-2\Gamma_{12}^2)Z+(\Gamma_{22}^2-2\Gamma_{12}^2)Z^2+
+h_{ \mathbb{H} }=dZ\odot dX-[\Gamma_{11}^2+(\Gamma_{11}^1-2\Gamma_{12}^2)Z+(\Gamma_{22}^2-2\Gamma_{12}^2)Z^2+
 \Gamma_{22}^1Z^3]dX\odot dX,
 \]
 which is transparently invariant under the projective changes 
@@ -423,7 +423,7 @@ are one--forms on a three--dimensional manifold $B=\PP(T^*N)$ with local coordin
 to (\ref{ODE}) as long as $\theta_2\equiv dX$ does not vanish. In terms of these three one--forms
 the contact structure, and the metric on the contact distribution are given by
 $
-\theta_0,  h_{ H }=\theta_1\odot\theta_2.
+\theta_0,  h_{ \mathbb{H} }=\theta_1\odot\theta_2.
 $
 
 \section{An alternative approach to theorem \ref{our_thm}}
@@ -432,12 +432,12 @@ $
 
 It would be possible to show that the structures $(M,g,\Omega)$ arising in the projective to Einstein correspondence are para--$c$--projectively compact using a purely tractor--based approach, without relying on theorem \ref{CGthm} and the local form (\ref{eq:coord_form}). The basis for this alternative method is the \textit{curved orbit decompositions} appearing in \cite{CGH-duke}, which arise from \textit{holonomy reductions} of Cartan geometries.
 
-Recall first that a connection $\theta$ on a principal $H$--bundle $\pi:P\rightarrow M$ defines a unique horizontal lift of any smooth curve on $M$, and the we can define the \textit{holonomy group} of $\theta$ based at $p\in P$ as
+Recall first that a connection $\theta$ on a principal $H$--bundle $\pi:P\rightarrow M$ defines a unique horizontal lift of any smooth curve on $M$, and the we can define the \textit{holonomy group} of $\theta$ based at $u\in P$ as
 \begin{align*}
-\mathrm{Hol}_p(\theta)=\{h\in H\ |&\ p\mbox{ can be joined to }ph\mbox{ by the}\\
-&\mbox{ horizontal lift of a loop in }M\mbox{ based at }\pi(p)\}.
+\mathrm{Hol}_u(\theta)=\{h\in H\ |&\ u\mbox{ can be joined to }uh\mbox{ by the}\\
+&\mbox{ horizontal lift of a loop in }M\mbox{ based at }\pi(u)\}.
 \end{align*}
-Then $\mathrm{Hol}_p(\theta)$ is a subgroup of $H$, and if $M$ is connected then holonomy groups at different basepoints are related by conjugation in $H$. We can thus forget about the basepoint $p$ by defining $\mathrm{Hol}(\theta)$ as a conjugacy class of subgroups of $H$.
+Then $\mathrm{Hol}_u(\theta)$ is a subgroup of $H$, and if $M$ is connected then holonomy groups at different basepoints are related by conjugation in $H$. We can thus forget about the basepoint $u$ by defining $\mathrm{Hol}(\theta)$ as a conjugacy class of subgroups of $H$.
 
 Any subgroup $\tilde{H}$ such that $\mathrm{Hol}(\theta)\subset \tilde{H}\subset H$ defines a reduced bundle $P\times_H H/\tilde{H}$ with structure group $\tilde{H}$ on which $\theta$ induces a connection. In particular, if some associated vector bundle to $P$ carries some addition structure which is parallel with respect to the associated connection, then the symmetry group of this structure is an example of a possible subgroup $\tilde{H}$.
 
