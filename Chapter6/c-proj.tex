@@ -6,7 +6,7 @@
 
 
 
-\chapter{Para--$c$--projective compactification of $(M,g,\Omega)$} \label{chap:c-proj}
+\chapter{Para--$c$--projective compactification of $M$} \label{chap:c-proj}
 In \cite{CG} the concept of $c$--projective compactification was
 defined. It is based on almost $c$--projective geometry \cite{c_proj},
 an analogue of projective geometry defined for almost complex
@@ -147,9 +147,153 @@ Note that the statement in  Theorem \ref{CGthm} does not depend on the choice of
 
 \section{Compactifying the Dunajski--Mettler Class} 
 
-In section \ref{sec:trac_construction} it was shown that the manifolds $M$ arising in the projective to Einstein correspondence can be identified with the projectivised cotractor bundle of $N$ where the zero locus of the canonical density $\tau$ has been removed. Note that by construction in section \ref{sec:trac_construction} it is easily verified that the zero locus of $\tau$ is a smoothly embedded hypersurface in $\mathcal{M}$,  and from (\ref{eq:T*N_is_M}) it follows at once that this may be identified with the total space of the fibrewise projectivisation $\mathbb{P}(T^*N)$ (which is well known to have an almost para--CR structure). \mynote{Is there a way to justify this "well known" fact?}
+In order to construct the para--$c$--projective compactification of the manifolds $M$ arising in the projective to Einstein correspondence, we will need to understand them from a tractor perspective. This is the goal of the following subsection.
 
-As noted in chapter \ref{chap:intro}, in the special case where $N=\RP^n$ and $[\nabla]$ is projectively flat, the manifold $M=SL(n+1, \R)/GL(n, \R)$ can be identified with the projectivisation of $\R^{n+1}\times \R_{n+1}\setminus {\mathcal Z}$, where ${\mathcal Z}$ denotes the set of incident pairs (point, hyperplane). The compactification procedure described in the theorem \ref{our_thm} below will, for the model, attach these incident pairs back to $M$, and more generally (in case of a curved projective structure $(N,[\nabla])$) will attach the zero locus of $\tau$ back into $\mathbb{P}(\cT^*)$. The boundary $\p M \cong \mathcal{Z}(\tau)$ from definition \ref{defi_1} will play the role of a submanifold
+\subsection{Tractor construction of $M$}
+
+In section \ref{sec:trac_construction} it was shown that the projectivised cotractor bundle of $N$ is stratified by the canonical density $\tau=X\hook U$, where $X$ is the pull back of the canonical tractor along $\pi:\cT^*\rightarrow N$ and $U$ is the tautological section of $\pi^*(\cT^*)$. It is easily verified that the zero locus $\mathcal{Z}(\tau)$ of $\tau$ is a smoothly embedded hypersurface in $\mathcal{M}:=\PP(\cT^*)$. %  and from (\ref{eq:T*N_is_M}) it follows at once that this may be identified with the total space of the fibrewise projectivisation $\mathbb{P}(T^*N)$ (which is well known to have an almost para--CR structure). \mynote{Is there a way to justify this "well known" fact?}
+In the following theorem, we show that $\mathcal{M}\backslash\mathcal{Z}(\tau)$ can be identified with $M$.
+
+\begin{theo}\cite{DGW}\label{metric} 
+There is a metric $g$ and two--form $\Omega$ on $\mathcal{M}\setminus \mathcal{Z}(\tau)$ determined by the canonical pairing of the horizontal and vertical subspaces of $T(\cT^*)$. The pair $(g,\Omega)$ agrees with (\ref{eq:coord_form}).
+\end{theo}
+\noindent {\bf Proof.}
+ Considering first the total space $\cT^*$ and then its tangent
+ bundle, note that there is an exact sequence
+  \begin{equation}\label{TM}
+0\to \pi^* \cT^*\to T(\cT^*)\to \pi^*TN\to 0,
+  \end{equation}
+  where we have identified $\pi^* \cT^*$ as the vertical sub-bundle of $T(\cT^*)$.
+The tractor connection on the vector bundle $\cT^*\to N$ is equivalent to a splitting of this sequence, identifying $\pi^*TN$ with a distinguished  sub-bundle of horizontal subspaces in 
+$ T(\cT^*)$ so that we have 
+\begin{equation}\label{HV}
+T(\cT^*)=  \pi^*TN\oplus \pi^* \cT^* .
+\end{equation}
+
+%From the usual Euler sequence of projective space (or see (\ref{useful}) in the last Section) it follows that
+We move now to the total space of $\mathbb{P} {\cT^*}$, and we note that again the tractor (equivalently, Cartan) connection determines a splitting of the tangent bundle $T(\mathbb{P} {\cT^*})$ in which the second term of the display (\ref{HV}) is replaced by a quotient of $\pi^* \cT^*(0,1)$ \cite{CGH-duke}. Indeed, if we work at a point $m\in \mathbb{P}(\cT^*)$, observe that $\pi^*\cT^*(0,1)$ has a filtration
+\begin{equation}\label{quotient}
+0\to \cE (0,0)_m\stackrel{U_m}{\to}  \pi_\cM^* \cT^*(0,1)|_m \to  \pi_\cM^* \cT^*(0,1)|_m/\langle U_m \rangle \to 0
+\end{equation}
+where, as usual, $U$ is the canonical section. 
+But away from $\mathcal{Z}(\tau )$, we have that  $U$ canonically splits 
+the appropriately re-weighted pull back of  the sequence (\ref{eq:T*sequence})
+$$
+0\to \pi_\cM^* T^*N(1,1)   \to \pi_\cM^* \cT^*(0,1) \stackrel{X/\tau}{\to} \cE(0,0) \to 0 .
+$$
+This identifies the quotient in (\ref{quotient}), and thus we have canonically
+$$
+T(\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau))=  \pi_\cM^*TN\oplus \pi_\cM^*T^*N(1,1).
+$$
+It follows that on  $\mathcal{M}$
+there is canonically a metric $\boldsymbol{g}$ and symplectic form $\boldsymbol{\Omega}$ taking values in $\cE(1,1)$, given by
+\begin{eqnarray*}
+\boldsymbol{g}(w_1,w_2)&=& \frac{1}{2}\Big(
+\pp_H(w_1)\hook \pp_V(w_2)+\pp_H(w_2)\hook\pp_V(w_1)\Big) \quad \mbox{and} \\
+\boldsymbol{\Omega}(w_1,w_2)&=& \frac{1}{2}\Big(\pp_H(w_1)\hook \pp_V(w_2)-\pp_H(w_2)\hook\pp_V(w_1)\Big)
+\end{eqnarray*}
+where
+$$
+\pp_H: T(\mathcal{M}\setminus \mathcal{Z}(\tau))\to \pi_\cM^*TN \quad \mbox{and} \quad \pp_V: T(\mathcal{M}\setminus \mathcal{Z}(\tau))\to \pi_\cM^* T^*N(1,1)
+$$
+are the projections.
+Then we obtain the metric and symplectic form by
+\be
+\label{almost_there}
+g:=\frac{1}{\tau}\boldsymbol{g} \qquad \mbox{and} \qquad \Omega:=\frac{1}{\tau}\boldsymbol{\Omega} .
+\ee
+What remains to be done, is to show that (\ref{almost_there}) agrees
+with the form obtained in \cite{DM} once a trivialisation of
+$\cT^*\rightarrow N$ has been chosen.
+
+Let $x\in N$ and let ${\mathcal W}\subset N$ be an open 
+neighbourhood of $x$ with 
+local coordinates $(x^1, \dots, x^n)$ such that
+$T_pN=\mbox{span}(\p/\p x^1, \dots, \p/\p x^n)$. The connection 
+(\ref{eq:tractor_connection}) gives a splitting of $T(\cT^*)$ into the horizontal and
+vertical sub-bundles
+\[
+T(\cT^*)=\mathcal{H}(\cT^*)\oplus \mathcal{V}(\cT^*),
+\]
+as in (\ref{HV}).
+To obtain the explicit form of this splitting, let $V_\alpha,\ \alpha=0, 1, \dots, n$ be components of a local section of $\cT^*$ in the trivialisation over ${\mathcal{W}}$.
+Then
+\[
+\nabla^{\cT^*} V_\beta=d V_\beta-\gamma_{\beta}^{\alpha} V_\alpha,
+\]
+where $\gamma_{\alpha}^\beta= \gamma_{i\alpha}^\beta dx^i$, and the components
+of the co-tractor connection 
+$\gamma_{i\alpha}^\beta$  are given in terms of the connection
+$\nabla$ on $N$, and its Schouten tensor, and 
+can be read--off from (\ref{eq:tractor_connection}):
+\[
+\gamma_{i0}^0=0, \quad \gamma_{i0}^j=\delta_i^j,\quad
+\gamma_{ij}^k=\Gamma_{ij}^k, \quad \gamma_{ij}^0=-\Rho_{ij}.
+\]
+In terms of these components we can write
+\begin{align*}
+\mathcal{H}(\cT^*)&=\mbox{span}
+\Big( \frac{\p}{\p x^i}+ {\gamma_{i\alpha}^\beta} V_\beta
+\frac{\p}{\p V_{\alpha}}, i=1, \dots, n \Big), \\
+ \mathcal{V}(\cT^*)&=\mbox{span}\Big(\frac{\p}{\p V_{\alpha}}, \alpha=0, 1, 
+\dots, n\Big).
+\end{align*}
+Setting $\zeta_i=V_i/V_0$, where $\tau=V_0\neq 0$ %\footnote{Rod @ Maciej: I have added $V_0=\tau$. You agree, right!?}
+on the complement of 
+$\mathcal{Z}(\tau)$, 
+  we can compute the push forwards
+of these subspaces to $\mathbb{P}(\cT^*)\setminus {\mathcal{Z}(\tau)}$:
+\[
+\kappa_* \mathcal{H}(\cT^*)=\mbox{span}\Big(h_i\equiv
+\frac{\p}{\p x^i}-
+(\Rho_{ij}+\zeta_i\zeta_j  -\Gamma_{ij}^k\zeta_k)\frac{\p}{\partial \zeta_j}
+\Big), \quad \kappa_* \mathcal{V}(\cT^*)=\mbox{span}\Big(v^i\equiv\frac{\p}{\p \zeta_i}
+\Big).
+\]
+The non--zero components of the  metric (\ref{almost_there}) are given by
+\[
+g(v^i, h_j)={\delta^i}_j.
+\]
+This is identical to the form appearing in \cite{DM}.
+\koniec
+
+\begin{rmk}
+Note that the shift (\ref{eq:zeta_change}) in the fiber coordinates $\zeta_{i}$ corresponding to a change of projective connection can be motivated from the change (\ref{eq:chi_mu_change}) in the splitting of $\cT^*$ and the definitions of $V_i$ and $\zeta_i$.
+\end{rmk}
+
+\begin{rmk} We can also understand $\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau)$ as an affine bundle modelled on $T^* N$. Given a connection in the projective class and hence a decomposition (\ref{eq:T*splitting}), there is a smooth fibre bundle isomorphism
+  \begin{equation}\label{key-id}
+\iota : T^* N\to \mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau).
+    \end{equation}
+%First, given  $\nabla$, we can represent an element $U\in
+%  \cT^*_p$ ($x\in N$) by the pair $(\tau , \mu) \in \cE (1)_p\oplus
+%  T_p^*N(1)$,  or, if we choose coordinates on $N$, by collection
+%\be
+%\label{tractor_U}
+%U=(\tau, \mu_i), \quad i=1, \dots, n .
+%\ee
+%  Then, dropping the choice $\nabla \in [\nabla]$, $U\in
+%  \cT^*_p$ is an equivalence class of such pairs by the equivalence
+%  relation (\ref{ttrans}) that covers the
+%  equivalence relation between elements of $[\nabla]$. 
+%
+ % Thus, given $\nabla$, and  from the naturality of all maps, it
+ % follows that the total space of $T^*N$ can be identified with $\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau)$
+ % by (for each $x\in N$)
+given by
+\begin{equation} \label{eq:T*N_is_M}
+T_p^*N\ni \zeta_i  \mapsto [(1,\zeta_i)]=[(\tau,\tau \zeta_i)]\in
+\mathbb{P}(\cT_p^*)\setminus \mathcal{Z}(\tau) .
+\end{equation}
+\end{rmk}
+
+%\begin{rmk}
+%A feature of this construction is that in each dimension $n$ (of $N$) either the hypersurface $\mathcal{Z}(\tau)$ (if $n$ odd) is not orientable, or $\mathcal{M}$ (if $n$ even) is not orientable.
+%\end{rmk} 
+
+\subsection{The compactification theorem}
+
+As noted in chapter \ref{chap:intro2}, in the special case where $N=\RP^n$ and $[\nabla]$ is projectively flat, the manifold $M=SL(n+1, \R)/GL(n, \R)$ can be identified with the projectivisation of $\R^{n+1}\times \R_{n+1}\setminus {\mathcal Z}$, where ${\mathcal Z}$ denotes the set of incident pairs (point, hyperplane). The compactification procedure described in the theorem \ref{our_thm} below will, for the model, attach these incident pairs back to $M$, and more generally (in case of a curved projective structure $(N,[\nabla])$) will attach the zero locus of $\tau$ back into $\mathbb{P}(\cT^*)$. The boundary $\p M \cong \mathcal{Z}(\tau)$ from definition \ref{defi_1} will play the role of a submanifold
 separating two open sets in $\mathbb{P}(\cT^*)$ which have $\tau>0$ and $\tau<0$ respectively. The method of the proof will be to show that near
 the boundary ${\mathcal{Z}}(\tau)=0$ of $\ol{M}$ the metric 
 (\ref{eq:coord_form}) can be put in the local normal form of theorem 
@@ -172,11 +316,11 @@ the boundary ${\mathcal{Z}}(\tau)=0$ of $\ol{M}$ the metric
 The Einstein almost para--K\"ahler metric $(M, g, \Omega)$ given by 
 (\ref{eq:coord_form}) admits a para--$c$--projective compactification
 $\ol{M}$. The structure on the
-$(2n-1)$--dimensional boundary $\p M\cong \mathbb{P}(T^* N)$ of $\ol{M}$ includes a contact structure together with a conformal structure 
+$(2n-1)$--dimensional boundary $\p M\cong \mathcal{Z}(\tau)$ of $\ol{M}$ includes a contact structure together with a conformal structure 
 and a para--CR structure
 defined on the contact distribution.
 \end{theo}
-\mynote{Here we stated that $\p M\cong \mathbb{P}(T^* N)$ but unless I can justify why this carries a para--CR structure it might be better to leave this out or put $\p M\cong \mathcal{Z}(\tau)$.}
+%\mynote{Here we stated that $\p M\cong \mathbb{P}(T^* N)$ but unless I can justify why this carries a para--CR structure it might be better to leave this out or put $\p M\cong \mathcal{Z}(\tau)$.}
 \noindent
 {\bf Proof.}
 In the proof below we shall explicitly construct the boundary $\p M$ together with the contact structure and the associated conformal structure on the contact distribution. We shall

@@ -112,7 +112,7 @@ maximal, three dimensional family of $\alpha$--surfaces exists in $M$ if and onl
 \ee
 where $\{\tilde{\mathsf{e}}_{AA'}\}$ are the lifts of the null tetrad $\{\mathsf{e}_{AA'}\}$ to $\spp'$ (which are uniquely defined from the connection on $\spp'$ inherited from the Levi--Civita connection of $g$ on $TM$). We call $\mathcal{D}$ the \textit{twistor distribution}.
 
-In fact, Penrose considers four dimensional \textit{complex} manifolds\footnote{Note that familiar facts from real geometry such as a unique Levi--Civita connection and the Frobenius theorem carry over to holomorphic geometry. See \cite{LeBrun83} for details.} $M$ carrying a metric which is \textit{holomorphic} in the sense that the metric components depend on the coordinates on $M$ and not on their complex conjugates. Then $\spp,\spp'$ are complex vector bundles over $M$ and $\varepsilon,\varepsilon'$ are holomorphic symplectic forms. A real conformally ASD metric in a given signature can then be obtained by choosing the correct reality conditions. In neutral signature this amounts to identifying spinors with their complex conjugates. \mynote{right?}
+In fact, Penrose considers four dimensional \textit{complex} manifolds\footnote{Note that familiar facts from real geometry such as a unique Levi--Civita connection and the Frobenius theorem carry over to holomorphic geometry. See \cite{LeBrun83} for details.} $M$ carrying a metric which is \textit{holomorphic} in the sense that the metric components depend on the coordinates on $M$ and not on their complex conjugates. Then $\spp,\spp'$ are complex vector bundles over $M$ and $\varepsilon,\varepsilon'$ are holomorphic symplectic forms. A real conformally ASD metric in a given signature can then be obtained by choosing the correct reality conditions. In neutral signature, complex conjugation is a map from $\spp$ to itself (or from $\spp'$ to itself) which simply replaces each component of a spinor with its complex conjugate. Thus the reality conditions in neutral signature amount to identifying spinors with their complex conjugates.
 
 The \textit{twistor space} $\mathscr{T}$ of $M$ is then defined as the three--dimensional complex manifold comprising the set of all $\alpha$--surfaces in $M$. Each point $m\in M$ corresponds to a subset $\mathscr{L}_m\subset\mathscr{T}$ of $\alpha$--surfaces which pass through $m$. Since an $\alpha$--surface at $m$ is defined by a $\pi^{A'}\in\spp'|_m$ up to scale, $\mathscr{L}_m$ is an embedding $\CP^1\subset\mathscr{T}$. The \textit{correspondence space} $\mathcal{F}=M\times\CP^1$ has local coordinates $(x^a,\lambda):=(x^a,\pi_{0'}/\pi_{1'})$, where $\pi^{A'}$ parametrises the set of $\alpha$--surfaces through the point in $M$ with coordinates $x^a$. Note that $\mathcal{F}$ can be obtained from the primed spin bundle $\spp'\rightarrow M$ by projectivising each fibre, and carries a distribution $\tilde{\mathcal{D}}=\mathrm{span}\{\tilde{L}_A\}$ given by the push forward of the twistor distribution $\mathcal{D}$ to $\mathcal{F}=\PP(\spp')$. We also call $\tilde{\mathcal{D}}$ the twistor distribution. Note that $\mathcal{F}$ has the alternative definition $\mathcal{F}=\{(Z,m)\in \mathscr{T}\times M \ :\  Z\in L_m\}$, leading to the double fibration
 \[
@@ -189,7 +189,7 @@ In our coordinates $D$ is the kernel of the two--form $\Sigma=dx^{0'}\wedge dx^{
 \label{beta_eq}
 ^g\nabla\Sigma=6\mathcal{A}\otimes \Sigma,
 \ee
-where $d\mathcal{A}=\Omega$, and $\Omega$ is the symplectic form on $M$. Writing $\Sigma_{ab}=\iota_A\iota_B\epsilon_{A'B'}$, (\ref{beta_eq}) implies (\ref{dm3}) for a rescaling of $\mathcal{A}$, so it is the anti--self--duality of $\Omega$ which makes $D$ ASD in the sense of Calderbank. \mynote{I believe this is the first time we have mentioned the ASD'ty of $\Omega$. Can we also justify this? It is justified in section \ref{sec:model} for the model, but not in general.}
+where $d\mathcal{A}=\Omega$, and $\Omega$ is the symplectic form on $M$. Writing $\Sigma_{ab}=\iota_A\iota_B\epsilon_{A'B'}$, (\ref{beta_eq}) implies (\ref{dm3}) for a rescaling of $\mathcal{A}$, so it is the anti--self--duality of $\Omega$ which makes $D$ ASD in the sense of Calderbank.
 
 In section \ref{sec:model} we will consider the model case where $M$ is constructed from the flat projective structure on $\RP^2$. In this case, we can explicitly describe the ASD Maxwell two--form $\Omega$ in terms of the twistor space of $M$,
 and we will find that $M$ carries a so--called \textit{pseudo--hyper--Hermitian} structure, in which $\mathcal{A}$ plays an important role.
@@ -212,7 +212,6 @@ A Weyl Structure $(W,\mathscr{D},[h])$ is a conformal equivalence class of metri
 \mathscr{D}h=\omega\otimes h.
 \]
 \end{defi}
-\mynote{h is also the name of a metric in c-proj...}
 A pair $(h,\omega)$ uniquely defines the connection and hence the Weyl structure, so we can alternatively specify a Weyl structure as a triple $(W,h,\omega)$. However, there is an equivalence class of such pairs which define the same Weyl structure. These are related by transformations
 \be
 \label{weyl_tr}
@@ -701,7 +700,7 @@ with a normalisation $P\cdot L=1$ to recover the metric (\ref{special_ein}).
 \subsection{Twistor space}
 \label{twist_SSS}
 \mynote{As I understand it, this section could be rephrased as a proposition that the conformal structure described above is reproduced by the twistor space $F_{12}$.}
-To understand $(M,[g])$ from the twistor perspective, we need to move to the complex picture. In what follows, we will view $M$ as the set of non--incident pairs in $\CP^2\times\CP^{2*}$. \mynote{Is it obvious that this is the right thing to do?} Let $F_{12}(\mathbb{C}^3)\subset \CP^2\times {\CP^2}^*$ be set of incident pairs 
+To understand $(M,[g])$ from the twistor perspective, we need to move to the complex picture. In what follows, we will view $M$ as the set of non--incident pairs in $\CP^2\times\CP^{2*}$. Let $F_{12}(\mathbb{C}^3)\subset \CP^2\times {\CP^2}^*$ be set of incident pairs 
 $(p, l)$, so that $p\cdot l=0$. Note that, since $l$ and $p$ correspond to planes and lines in $\mathbb{C}^3$ respectively, and since $p\cdot l=0$ is the condition for the line $p$ lying in the plane $l$, $F_{12}(\mathbb{C}^3)$ coincides with the flag manifold of type $(1,2)$ in $\mathbb{C}^3$, i.e. the collection of one-- and two--dimensional vector subspaces $(p,l)$ in $\mathbb{C}^3$ such that $p\subset l$. This is the twistor space of $(M, g)$.
 A $\CP^1$ embedding corresponding to a point $(P, L)\in M$
 consists of all lines $l$ thorough $P$, and all points
@@ -717,7 +716,7 @@ p=L\wedge \tL, \quad l=P\wedge \tP,
 \]
 where $[L\wedge\tL]^{\alpha}=\epsilon^{\alpha\beta\gamma}L_{\alpha}\tL_{\beta}$ etc.
 The pair $(p,l)$ lies in $F_{12}$ if $p$ lies on $l$, i.e. if $p\cdot l=0$, so that $(P, L)$ and $(\tP, \tL)$ are null--separated with respect to the conformal structure
-(\ref{dm1}). Then $(p,l)$ is the intersection of the $\CP^1$ embeddings corresponding to $(P, L)$ and $(\tP, \tL)$. The contact structure on $F_{12}$ is $(l\cdot dp-p\cdot dl)/2=p\cdot dl$. \mynote{Contact structure on $F_{12}$?}
+(\ref{dm1}). Then $(p,l)$ is the intersection of the $\CP^1$ embeddings corresponding to $(P, L)$ and $(\tP, \tL)$. %The contact structure on $F_{12}$ is $(l\cdot dp-p\cdot dl)/2=p\cdot dl$. \mynote{Contact structure on $F_{12}$?}
 
 We shall now give an explicit parametrisation of twistor lines, and show how 
 the metric (\ref{dm_metric}) arises from the Penrose condition 

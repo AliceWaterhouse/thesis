@@ -3,14 +3,14 @@
 %****************************** Chapter 2: KK_lift *********************************
 %*******************************************************************************
 
-\chapter{An Einstein metric on an $S^1$--bundle over $(M,g_\Lambda,\Omega_\Lambda)$}
+\chapter{An Einstein metric on an $\R^*$--bundle over $M$}
 \label{chap:KK_lift}
 In this chapter, we show that there is a canonical Einstein of metric on an $\R^*$--bundle over $M$, with a connection whose curvature is the pull--back
 of the symplectic structure from $M$. This metric is interesting in the context of Kaluza-Klein theory. The material covered here is based on material appearing in \cite{DW}.
 
 \mynote{I would like to understand this section from the tractor perspective. Try comparing my lifted metric to what can be obtained by slightly modifying the tractor construction of $g$.}
 
-\section{Flat case} \label{sec:quadric}
+\section{The model case} \label{sec:quadric}
 
 We first note that taking the flat projective structure on $\mathbb{RP}^{n}$
 results in a one--parameter family of $2n$-dimensional Einstein spaces $M$ which are a Kaluza-Klein
@@ -71,7 +71,7 @@ of the potential term $\zeta_{i} dx^{i}$, implying a possible
 generalisation to the curved case.
 
 
-\section{Curved case}
+\section{The general case}
 
 We now return to a general projective structure $(N,[\nabla])$. Since
 symplectic form picks out the antisymmetric part of the Schouten tensor,
@@ -124,8 +124,9 @@ where
 \[
 e^{0}=\sqrt{\Lambda}\biggl(\frac{ d\lambda}{\Lambda}+\mathcal{A}\biggr).
 \]
-\mynote{Can we have $\Lambda<0$? I think so. Then what do we mean by $\sqrt{\Lambda}$?}
- We reserve Roman indices $a,b,\dots$ for the $2n$-metric components
+Note that for $\Lambda<0$ one can instead take the absolute value of $\Lambda$ inside the square root, and change the sign of $e^{0}\odot e^{0}$ in the definition of $\hat{g}$.
+
+We reserve Roman indices $a,b,\dots$ for the $2n$-metric components
 $1,\dots,2n$ and allow greek indices $\mu,\nu,\dots$ to take values
 $0,1,\dots,2n$. The dual basis to $\{e^{\mu}\}$ will be denoted
 $\{E_{\mu}\}$ and will act on functions as vector fields in the usual
