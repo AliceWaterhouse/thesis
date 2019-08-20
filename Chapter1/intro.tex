@@ -6,24 +6,17 @@
 
 \chapter{Introduction}\label{chap:intro}
 
-%The relationship of geometry to non--linear PDEs is close and has long been known.
-%\begin{itemize}
-%%\item Can define objects on a manifold satisfying certain properties expressed in terms of PDEs in the coordinates. e.g. GR. Generalises to projective and conformal geometry. (chapters \ref{chap:KK_lift} and \ref{chap:c-proj})
-%\item Results from integrable systems reveal unexpected examples of PDEs which can be expressed in terms of geometrical conditions. (Ward). (chapter \ref{chap:EW_and_toda})
-%\item Geometry also important in the theory of solitons (e.g. Manton and Sutcliffe.) (chapter \ref{chap:wormhole}).
-%\end{itemize} 
 
-This thesis splits naturally into two parts. In the first chapter, we discuss a solitonic solution of the equations of motion associated with $\phi^4$ field theory on a wormhole spacetime. \mynote{More detail here. Motivate it I guess, rather than just repeating what's in the abstract.} 
+This thesis splits naturally into two parts. In chapter \ref{chap:wormhole}, we discuss $\phi^4$ field theory on a wormhole spacetime with two asymptotically flat ends. This theory has two distinct vacua, and permits static, finite energy ``kink'' solutions which interpolate between the two vacua as one moves from one asymptotically flat end to the other. We study the stability of such solutions from various perspectives, with explicit comparison to the kinks arising in $\phi^4$ theory on $\R^{1,1}$.
 
 The remainder of the thesis is concerned with a class of Einstein manifolds which can be canonically constructed from projective structures as shown in recent work by Dunajski and Mettler \cite{DM}. A projective structure on a manifold specifies a preferred curve in every direction at every point. It can be understood as an equivalence class of affine connections which share the same geodesics up to parametrisation. Because it is defined at the level of the connection rather than a first order structure such as a metric, it is an intrinsically second order object.
 
 Given a projective structure on a manifold $N$ of dimension $n$,
 Dunajski and Mettler \cite{DM} canonically construct a neutral signature Einstein metric $g$ with non-zero
 scalar curvature on a certain rank $n$ affine bundle $M\rightarrow N$. They thus convert a second order object into a first order object on a larger manifold.
-The $2n$--dimensional space $M$ also carries a natural symplectic form $\Omega$, and an endomorphism $J:TM\rightarrow TM$ which is such that $J^2$ is the identity and $g(\cdot\,,\cdot)=\Omega(\cdot\,,J\cdot)$. This makes $(M,g,\Omega)$ a so--called \textit{almost para--K\"ahler} structure. It is interesting for a number of different reasons.
+The $2n$--dimensional space $M$ also carries a natural symplectic form $\Omega$, and an endomorphism $J:TM\rightarrow TM$ which is such that $J^2$ is the identity and $g(\cdot\,,\cdot)=\Omega(\cdot\,,J\cdot)$. This makes $(M,g,\Omega)$ a so--called \textit{almost para--K\"ahler} structure. We review their construction in chapter \ref{chap:intro2}.
 
-Firstly, $(M,g)$ is interesting by virtue of being an Einstein
-space. In fact, it turns out that $g$ arises as the Kaluza--Klein reduction of an Einstein metric $\hat{g}$ on an $\R^*$ bundle $\kappa_\mathcal{Q}:\mathcal{Q}\rightarrow M$ which has curvature form $\kappa_\mathcal{Q}^*(\Omega)$. In chapter \ref{chap:KK_lift} we will construct $\hat{g}$ explicitly, and give an interpretation of the manifold $(\mathcal{Q},\hat{g})$ in terms of the projective geometry on $N$.
+In chapter \ref{chap:KK_lift} we show that $g$ arises as the Kaluza--Klein reduction of an Einstein metric $\hat{g}$ on an $\R^*$ bundle $\kappa_\mathcal{Q}:\mathcal{Q}\rightarrow M$ which has curvature form $\kappa_\mathcal{Q}^*(\Omega)$. We will construct $\hat{g}$ explicitly, and give an interpretation of the manifold $(\mathcal{Q},\hat{g})$ in terms of the projective geometry on $N$.
 
 The work in chapter \ref{chap:EW_and_toda} is based on the fact that for $n=2$ (so that $M$ has dimension $4$), the conformal
 curvature of $g$ is anti-self-dual. Recall that the Hodge operator
@@ -55,20 +48,7 @@ In chapter \ref{chap:c-proj} we return to projective structures of any dimension
 
 Recent work by \v Cap and Gover \cite{CG0,CG} has generalised this idea to other geometrical structures which admit some weakening which extends to a manifold with boundary. In particular, on an almost complex manifold $(M,J)$ with a connection $\nabla$ which is correctly adapted to $J$, one can define the $c$--projective equivalence class $[\nabla]$ to which $\nabla$ belongs, and show that the $c$--projective structure $(M,J,[\nabla])$ extends to a manifold with boundary $\ov{M}$ \cite{CG}. The main goal of chapter \ref{chap:c-proj} is to adapt the work of \cite{CG} to the para--$c$--projective case, and to show that the almost complex structure $J$ on $M$ has a complex connection which admits a so--called para--$c$--projective compactification. The result of this is that the manifolds $(M,g,\Omega)$ can be thought of as para--$c$--projectively compact.
 
-\mynote{some notation and conventions e.g. $i,j,k=1,...,n$ are indices for coordinates on $n$? and $\Gamma$ are connection components which are defined by... Curvature is defined by}
-\begin{itemize}
-\item We denote the bundle of anti--symmetrised covariant tensors of degree $m$ as $\Lambda^m$, and call sections of this bundle $m$--forms.
-\item Note that our conventions are $(d\omega)_{ab\dots c}=\partial_{[a}\omega_{b\dots c]},$
-$(\eta\wedge\omega)_{a\dots d}=\eta_{[a\dots b}\omega_{c\dots d]},$
-$\omega=\omega_{a\dots b}dx^{a}\wedge\dots\wedge dx^{b},$
-and $F_{ab}{d}x^{a}\wedge{d}x^{b}=F_{[ab]}{d}x^{a}\otimes{d}x^{b}$
-implying ${d}x^{a}\wedge{d}x^{b}=\frac{1}{2}({d}x^{a}\otimes{d}x^{b}-{d}x^{b}\otimes{d}x^{a})$.
-%\item $N$ is oriented. \mynote{Although $\RP^n$ is not oriented right?? also something about which part of $SL(n+1)$ we mean?}
-\item Probably a convention for the Hodge operator
-\item Probably a convention for $\varepsilon_{AB}$ and matching indices descending to the right
-\item Line projectivisation except where stated otherwise.
-\item $\R_n$ means...
-\end{itemize}
+Chapter \ref{chap:wormhole} has its own notation and conventions; notation and conventions for chapters \ref{chap:intro2} to \ref{chap:c-proj} will be introduced at the beginning of chapter \ref{chap:intro2}.
 
 
 
