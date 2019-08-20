@@ -35,7 +35,7 @@ The equations of motion are
 \label{eom:R11}
 \phi_{tt}=\phi_{xx} + 2\phi(1-\phi^2)
 \end{equation}
-and we find a static solution $\phi=\mathrm{tanh}(x-c)$ which we call the flat kink. It interpolates between the two vacua and thus has topological charge $N=1$. The constant of integration $c$ can be thought of as the position of the kink. We will henceforth use $\Phi_0$ to denote the static kink at the origin, that is, $\Phi_0(x)=\mathrm{tanh}(x)$. It is evident that no finite energy deformation can affect $N$. For this reason, we say that the kink is \textit{topologically stable}.
+and we find a static solution $\phi=\mathrm{tanh}(x-c)$ which we call the flat kink. It interpolates between the two vacua and thus has topological charge $N=1$. The constant of integration $c$ can be thought of as the position of the kink. We will henceforth use $\Phi_0$ to denote the static kink at the origin, that is, $\Phi_0(x)=\mathrm{tanh}(x)$. It is evident that no finite energy deformation can affect $N$. For this reason, we say that the kink is \textit{topologically stable}. \mynote{Maciej says explain this better.}
 
 \subsection{Linear Stability}
 
@@ -196,7 +196,7 @@ f_2(r) &=\mathrm{sinh}(2r)\big[8\mathrm{log}(2\mathrm{cosh}(r))-1\big] + \mathrm
 f_3(r) &= \frac{\pi^2}{2} + 6r^2 +6\mathrm{Li}_2(-\mathrm{e}^{-2r}),
 \end{split}
 \ee
-and $\mathrm{Li}_2(z)$ is the dilogarithm function.
+and $\mathrm{Li}_2(z)$ is the dilogarithm function. \mynote{Explain what this is.}
 
 To show that $\Phi_1(r)$ is odd, note that $\mathrm{sech}^2r$ is an even function, and that $f_1$ and $f_2$ are constructed from products of even and odd functions, and hence are odd. To see that $f_3$ is also odd, we use Landen identity for the dilogarithm:
 \be
@@ -480,14 +480,14 @@ One problem with this method is that we need the number of zeros in the interval
 
 For the finite integration range which is accessible based on the shooting method, the odd state disappears at $a_1 \approx 0.8$ and the even state disappears at $a_0 \approx 0.3$.
 
-It is well known that the condition
+For a potential $\mathcal{V}(r)$ which decays sufficiently quickly as $r\rightarrow\pm\infty$, it is well known that the condition
 \be
 \label{eq:integral_condition}
 I:=\int_{-\infty}^{\infty}\mathcal{V}(r)dr<0
 \ee
-is sufficient to ensure that the potential $\mathcal{V}(r)$ has at least one bound state. In fact, the condition $I\leq 0$ is sufficient \cite{BarrySimon}. However, (\ref{eq:integral_condition}) is not a necessary condition: there are potentials which have at least one bound state where (\ref{eq:integral_condition}) is not satisfied. It is interesting to investigate the disappearance of our ground state in this context.
+is sufficient to ensure that the operator $-\p_r\p_r + \mathcal{V}(r)$ has at least one bound state. In fact, the condition $I\leq 0$ is sufficient \cite{BarrySimon}. However, (\ref{eq:integral_condition}) is not a necessary condition: there are potentials which have at least one bound state where (\ref{eq:integral_condition}) is not satisfied. It is interesting to investigate the disappearance of our ground state in this context.
 
-Note that $\mathcal{V}(r)$ must go to zero as $r\rightarrow\pm\infty$ to ensure that the integral converges, meaning that the relevant choice for us is $\mathcal{V}(r)=V(r)-4$. We then examine the value of this integral for the critical value $a=a_0$ when the ground state disappears. We find that $I\approx0$ at the critical value of $a_0 \approx 0.3$ given above. We can also search numerically for the value of $a$ at which $I=0$; this also occurs at around $a_0 \approx 0.3$. Thus our results would be consistent with the conjecture that (\ref{schrod}) has no bound states for $I>0$.
+For us the relevant choice is $\mathcal{V}(r)=V(r)-4$ so that $\mathcal{V}(r)$ vanishes at the boundary. We then examine the value of this integral for the critical value $a=a_0$ when the ground state disappears. We find that $I\approx0$ at the critical value of $a_0 \approx 0.3$ given above. We can also search numerically for the value of $a$ at which $I=0$; this also occurs at around $a_0 \approx 0.3$. Thus our results would be consistent with the conjecture that (\ref{schrod}) has no bound states for $I>0$.
 
 \section{Resonant Coupling of the Internal Modes to the Continuous Spectrum} \label{sec:dynamics}
 We now move on to consider time dependent perturbations of the form

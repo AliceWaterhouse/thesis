@@ -103,14 +103,14 @@ Any two--dimensional distribution on a four--manifold $M$ can be expressed as th
 \be \label{eq:alpha_dist}
 D_\alpha = \{\iota^A\pi^{A'},\iota^{A}\in\Gamma(\spp)\}=\mathrm{span}\{\pi^{A'}\mathsf{e}_{AA'}\},
 \ee
-where $\{\mathsf{e}_{AA'}\}$ is a null tetrad of vector fields. \mynote{Do I need to write this in terms of an orthonormal basis for $\spp,\spp'$?}
+where $\{\mathsf{e}_{AA'}\}$ is a null tetrad of vector fields.
 
 An $\alpha$--surface (respectively $\beta$--surface) is a two--dimensional surface in $M$ which is tangent to an $\alpha$--($\beta$--)distribution at every point. A foliation by $\alpha$--surfaces exists if and only if the corresponding distribution (\ref{eq:alpha_dist}) is Frobenius integrable. Penrose's Nonlinear Graviton Theorem \cite{penrose} states that a 
 maximal, three dimensional family of $\alpha$--surfaces exists in $M$ if and only if its conformal curvature is ASD, i.e. $C_+=0$. Existence of such a family is equivalent to the distribution (\ref{eq:alpha_dist}) being integrable for any $\pi^{A'}$. We can state this condition more as integrability of the lift of the distribution (\ref{eq:alpha_dist}) to $\spp'$. This is given by
 \be \label{eq:twistor_dist}
 \mathcal{D}=\mathrm{span}\{L_A:=\pi^{A'}\tilde{\mathsf{e}}_{AA'}\},
 \ee
-where $\{\tilde{\mathsf{e}}_{AA'}\}$ are the lifts of the null tetrad $\{\mathsf{e}_{AA'}\}$ to $\spp'$ (which are uniquely defined from the connection on $\spp'$ inherited from the Levi--Civita connection of $g$ on $TM$). We call $\mathcal{D}$ the \textit{twistor distribution}.
+where $\{\tilde{\mathsf{e}}_{AA'}\}$ are the lifts of the null tetrad $\{\mathsf{e}_{AA'}\}$ to $\spp'$ (which are uniquely defined from the spin connection on $\spp'$ inherited from the Levi--Civita connection of $g$ on $TM$). We call $\mathcal{D}$ the \textit{twistor distribution}. \mynote{Write what the lifts of the null tetrad are.}
 
 In fact, Penrose considers four dimensional \textit{complex} manifolds\footnote{Note that familiar facts from real geometry such as a unique Levi--Civita connection and the Frobenius theorem carry over to holomorphic geometry. See \cite{LeBrun83} for details.} $M$ carrying a metric which is \textit{holomorphic} in the sense that the metric components depend on the coordinates on $M$ and not on their complex conjugates. Then $\spp,\spp'$ are complex vector bundles over $M$ and $\varepsilon,\varepsilon'$ are holomorphic symplectic forms. A real conformally ASD metric in a given signature can then be obtained by choosing the correct reality conditions. In neutral signature, complex conjugation is a map from $\spp$ to itself (or from $\spp'$ to itself) which simply replaces each component of a spinor with its complex conjugate. Thus the reality conditions in neutral signature amount to identifying spinors with their complex conjugates.
 
@@ -124,7 +124,7 @@ The Nonlinear Graviton allows us to express an ASD conformal structure in terms 
 
 In order to understand this correspondence at an infinitesimal level and thereby explicitly recover an ASD conformal structure from $\mathscr{T}$, we need to understand the \textit{normal bundle} $\mathbb{N}(\mathscr{L}_p):=\cup_{Z\in \mathscr{L}_p}\{T_Z\mathscr{T}/T_Z\mathscr{L}_p\}$ over a $\CP^1$ embedding $\mathscr{L}_p$. This is evidently a complex vector bundle, and in fact it is a \textit{holomorphic} vector bundle, meaning that the total space is a complex manifold and the projection $\mathbb{N}(\mathscr{L}_p)\rightarrow\mathscr{L}_p$ is holomorphic. It is thus subject to the following theorem due to Birkhoff and Grothendieck (see for example \cite{complex_mfds} for a proof).
 \begin{theo}[Birkhoff--Grothendieck]
-Any rank $k$ holomorphic vector bundle is isomorphic to a direct sum of $k$ complex line bundles $\mathcal{O}(m_i),1\leq i\leq k$, each with first Chern class $m_i$. 
+Any rank $k$ holomorphic vector bundle over $\CP^1$ is isomorphic to a direct sum of $k$ complex line bundles $\mathcal{O}(m_i),1\leq i\leq k$, each with first Chern class $m_i$. 
 \end{theo}
 
 The first Chern class completely classifies complex line bundles topologically. For us, $\mathcal{O}(n),n\in\mathbb{Z}$ will mean a line bundle over $\CP^1=\mathcal{U}_0\cup\mathcal{U}_1$, where $\mathcal{U}_i=\{Z_i\neq 0\}\subset\CP^1$ for homogeneous coordinates $[Z_0,Z_1]^T$ on $\CP^1$, with transition functions such that local trivialisations $(\lambda_i,v_i)\in\mathcal{U}_i\times\mathbb{C}$ are related on the overlap by $v_1=\lambda_0^{-n}v_0$, where $\lambda_0=\lambda_1^{-1}=Z_1/Z_0$. Note that $\mathcal{O}(-n)$ is dual to $\mathcal{O}(n)$, and $\mathcal{O}(n)$ is the tensor product of $n$ copies of $\mathcal{O}(1)$. A section of $\mathcal{O}(n)$ is represented by functions $s_i(\lambda_i)$ such that $(\lambda_0,s_0(\lambda_0))$ and $(\lambda_1,s_1(\lambda_1))$ correspond to the same point, i.e.
@@ -159,7 +159,7 @@ If we expand these as power series in the local coordinates and use the fact tha
 
 The Nonlinear Graviton Theorem can now be stated as follows.
 \begin{theo}[\cite{penrose}]
-There is a one--to--one correspondence between complex ASD conformal structures and three--dimensional complex manifolds containing a four--parameter family of $\CP^1$ embeddings with normal bundle $\mathcal{O}(1)\oplus\mathcal{O}(1)$.
+There is a one--to--one correspondence between holomorphic ASD conformal structures and three--dimensional complex manifolds containing a four--parameter family of $\CP^1$ embeddings with normal bundle $\mathcal{O}(1)\oplus\mathcal{O}(1)$.
 \end{theo}
 \noindent
 From the results of Kodaira \cite{Kodaira} we have that a vector at a point $m\in M$ corresponds to a holomorphic section of the normal bundle $\mathcal{O}(1)\oplus\mathcal{O}(1)$ of the curve $\mathscr{L}_m$ in $\mathscr{T}$ (which we know from above belongs to a four--dimensional space). Penrose shows that we obtain an ASD conformal structure from $\mathscr{T}$ by defining a vector to be null if the corresponding holomorphic section of $\mathcal{O}(1)\oplus\mathcal{O}(1)$ has a zero. This is the infinitesimal version of the intersection condition on $\mathscr{L}_{m_1}$ and $\mathscr{L}_{m_2}$ above. %Note that the vanishing of such a section is a quadratic condition, since $V^{AA'}\pi_{A'}$ can be solved for $\pi_{A'}$ if $\mathrm{det}(V^{AA'})=0$.
@@ -177,7 +177,7 @@ where $d\mathcal{A}$ is an (A)SD Maxwell field. Then $D_\beta$ is (A)SD in the s
  
 \subsubsection{Local characterisation of the Einstein manifolds $(M,g)$}
 
-A general ASD metric depends, in the real--analytic category, on six arbitrary functions of the variables. Theorem \ref{thm:DM} gives an explicit subclass of such metrics which are additionally constrained by the following local characterisation.
+A general ASD metric depends, in the real--analytic category, on six arbitrary functions of three variables. \mynote{Cite Ferepontov, Kruglikov, MD} Theorem \ref{thm:DM} gives an explicit subclass of such metrics which are additionally constrained by the following local characterisation.
 
 \begin{theo}\cite{DM} \label{thm:DMcharacterisation}
 Let $(M,g)$ be an real ASD Einstein manifold with scalar curvature $24$ admitting a totally null distribution $D$ which is ASD in the sense of Calderbank and parallel in the sense that $^g\nabla_XY\in\Gamma(D)$ for all $X\in \Gamma(TM),\ Y\in\Gamma(D)$. Then $(M,g)$ is conformally flat, or it is locally isometric to (\ref{eq:g4}).
@@ -785,7 +785,8 @@ for any vector field $V$ on $M$.
 
 Given a pseudo--hyper--complex structure $(M,\{I,S,T\})$ and any vector field $V$ on $M$, the frame $(V,IV,SV,TV)$ defines a conformal structure on $M$. With a natural choice of orientation
 which makes the fundamental two--forms of $I, S, T$  self--dual, 
-this conformal structure is anti--self--dual. \mynote{Can we justify this?}
+this conformal structure is anti--self--dual.
+
 Let $\Sigma^{A'B'}$ be a basis of SD two--forms on $M$. The following result is proved in \cite{D99} (see also \cite{boyer}) in the Riemannian (i.e. hyper--complex) case.
 \begin{theo}[\cite{D99}]\label{thm:D99}
 A four--manifold $M$ equipped with a neutral signature metric $g$ is pseudo--hyper--Hermitian if there exists a one--form $A$ depending only on $g$ such that
@@ -852,7 +853,7 @@ $(l_1\neq 0, p^3\neq 0)$, and  $(l_2/l_1, l_3/l_1, p^2/p^3)$
 are coordinates. Now consider the total
 space of $T\CP^{2*}$ (or perhaps it is $T\CP^{2*}$ tensored
 with some power of the canonical bundle to make it trivial on twistor
-lines) \mynote{what do we mean here by the canonical bundle?}, and restrict it to the intersection of (pre--images in
+lines) \mynote{by the canonical bundle we mean the bundle of volume forms.}, and restrict it to the intersection of (pre--images in
 $T\CP^{2*}$
 of) $U$ and $\widetilde{U}$. The coordinates on $T\CP^{2*}$ in these
 region are $(l_2/l_1, l_3/l_1, p^2/p^1, p^3/p^1)$, and the fibre
