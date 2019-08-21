@@ -52,11 +52,11 @@ $C_+-2\Lambda$&$\phi$\\ &\\
 \cline{1-2}&\\
 $\phi$ & $C_--2\Lambda$\\&\\
 \end{tabular}
-} \right) ,
+} \right).
 \ee
-where $C_{\pm}$ are the SD and ASD parts 
-of the conformal Weyl tensor\footnote{Note this is a different object to the projective Weyl tensor discussed in chapter \ref{chap:intro}.}, $\phi$ is  the
-trace-free Ricci curvature, and $-24\Lambda$ is the scalar curvature which acts
+Here $C_{\pm}$ are the SD and ASD parts 
+of the Weyl conformal curvature tensor\footnote{Note this is a different object to the projective Weyl tensor discussed in chapter \ref{chap:intro2}.}, $\phi$ is  the
+trace-free Ricci curvature, and $-24\Lambda$\mynote{This minus sign...?} is the scalar curvature which acts
 by scalar multiplication. The metric $g$ is Einstein if $\phi=0$, and the corresponding conformal structure $[g]$ is ASD if $C_+=0$. We will call $g$ \textit{conformally ASD} if it has ASD Weyl tensor. If both of these conditions are satisfied then the Riemann tensor is also anti-self-dual.
 
 \subsubsection{Two--component spinors}
@@ -64,7 +64,7 @@ The symmetry group of a metric in signature $(+,+,-,-)$ decomposes under the Lie
 \[
 SO(2,2)\cong SL(2,\R) \times SL(2,\R)/\mathbb{Z}_2.
 \]
-Locally\footnote{$\spp,\spp'$ are defined globally if $M$ satisfies some topological restrictions; see \cite{penroserindler}.} there exist real rank two vector bundles $\spp, \spp'$  (spin bundles) over $M$ equipped with parallel symplectic structures
+Locally there exist real rank two vector bundles $\spp, \spp'$  (spin bundles) over $M$ equipped with parallel symplectic structures
 $\ep, \ep'$ such that \cite{penroserindler}
 \be
 \label{can_bun_iso}
@@ -179,15 +179,15 @@ where $d\mathcal{A}$ is an (A)SD Maxwell field. Then $D_\beta$ is (A)SD in the s
 
 A general ASD metric depends, in the real--analytic category, on six arbitrary functions of three variables. \mynote{Cite Ferepontov, Kruglikov, MD} Theorem \ref{thm:DM} gives an explicit subclass of such metrics which are additionally constrained by the following local characterisation.
 
-\begin{theo}\cite{DM} \label{thm:DMcharacterisation}
-Let $(M,g)$ be an real ASD Einstein manifold with scalar curvature $24$ admitting a totally null distribution $D$ which is ASD in the sense of Calderbank and parallel in the sense that $^g\nabla_XY\in\Gamma(D)$ for all $X\in \Gamma(TM),\ Y\in\Gamma(D)$. Then $(M,g)$ is conformally flat, or it is locally isometric to (\ref{eq:g4}).
+\begin{theo}[\cite{DM}] \label{thm:DMcharacterisation}
+Let $(M,g)$ be an real ASD Einstein manifold with scalar curvature $24$ admitting a totally null distribution $D_\beta$ which is ASD in the sense of Calderbank and parallel in the sense that $^{\bf g}\nabla_XY\in\Gamma(D_\beta)$ for all $X\in \Gamma(TM),\ Y\in\Gamma(D_\beta)$. Then $(M,g)$ is conformally flat, or it is locally isometric to (\ref{eq:g4}).
 \end{theo}
 \noindent
 
-In our coordinates $D$ is the kernel of the two--form $\Sigma=dx^{0'}\wedge dx^{1'}$, and can be written as ${D}=\mathrm{span}\{\p/\p z_{0'},\p/\p z_{1'}\}$. We find that
+In our coordinates $D_\beta$ is the kernel of the two--form $\Sigma=dx^{0'}\wedge dx^{1'}$, and can be written as ${D_\beta}=\mathrm{span}\{\p/\p z_{0'},\p/\p z_{1'}\}$. We find that
 \be
 \label{beta_eq}
-^g\nabla\Sigma=6\mathcal{A}\otimes \Sigma,
+^{\bf g}\nabla\Sigma=6\mathcal{A}\otimes \Sigma,
 \ee
 where $d\mathcal{A}=\Omega$, and $\Omega$ is the symplectic form on $M$. Writing $\Sigma_{ab}=\iota_A\iota_B\epsilon_{A'B'}$, (\ref{beta_eq}) implies (\ref{dm3}) for a rescaling of $\mathcal{A}$, so it is the anti--self--duality of $\Omega$ which makes $D$ ASD in the sense of Calderbank.
 
@@ -223,7 +223,11 @@ Physically, the Weyl condition in Lorentzian signature corresponds to the statem
 If additionally the symmetric part of the Ricci tensor of $\mathscr{D}$ is a scalar multiple of $h$, then $W$ is said to carry an Einstein-Weyl structure.
 This condition is invariant under (\ref{weyl_tr}). A trivial Einstein--Weyl structure is one whose one--form $\omega$ is closed, so that it is locally exact and thus may be set to zero by a change of scale (\ref{weyl_tr}). Then $\mathscr{D}$ is the Levi--Civita connection of some representative $h\in[h]$, and this representative is Einstein.
 
-In three dimensions, the Einstein--Weyl equations give a set of five non--linear PDEs on the pair $(h, \omega)$ which are integrable by the twistor transform of Hitchin \cite{hitchin}. Hitchin shows that there is a one--to--one correspondence between three--dimensional Einstein--Weyl structures and two--dimensional complex manifolds containing a three--parameter family of $\CP^1$ embeddings with normal bundle $\mathcal{O}(2)$. The conformal structure $[h]$ is obtained by demanding that a vector on $W$ is null if and only if the corresponding section of $\mathcal{O}(2)$ has a single zero. This condition is equivalent to the quadratic function $s(\lambda)$ which represents the section having vanishing discriminant.
+In three dimensions, the Einstein--Weyl equations give a set of five non--linear PDEs on the pair $(h, \omega)$ which are integrable by the twistor transform of Hitchin \cite{hitchin}.
+\begin{theo}[\cite{hitchin}]
+There is a one--to--one correspondence between 3--dimensional Einstein--Weyl structures and two--dimensional complex manifolds containing a three--parameter family of $\CP^1$ embeddings with normal bundle $\mathcal{O}(2)$.
+\end{theo}
+The conformal structure $[h]$ is obtained by demanding that a vector on $W$ is null if and only if the corresponding section of $\mathcal{O}(2)$ has a single zero. This condition is equivalent to the quadratic function $s(\lambda)$ which represents the section having vanishing discriminant.
 
 Hitchin's results can be regarded as a reduction of Penrose's twistor transform for ASD conformal structures by the following theorem of Tod.
 \begin{theo}\cite{JT} \label{theo_tod1} \begin{enumerate} \item Let $(M, g)$ be a neutral signature, conformally ASD four--manifold with a conformal Killing vector $K$. Let
@@ -361,7 +365,7 @@ The whole construction can now be summarised in the following diagram
 We now consider each of the above projective structures in turn, constructing the corresponding ASD Einstein manifold $(M,g)$ and discussing some examples of Einstein--Weyl structures and $SU(\infty)$--Toda fields that can be obtained from them.
 
 
-\section{The general projective surface with symmetry}
+\section{The most general case}
 \label{general}
 
 Consider the most general Einstein--Weyl structure arising from the combination
@@ -413,8 +417,8 @@ the rescaled self--dual derivative of $K$
 \vartheta\equiv c^3\Big(\frac{1}{2}(d{\bf K}+*_g d{\bf K})\Big)
 \]
 is parallel with respect to $\hat{g}=c^2 g$.
-The metric $\hat{g}$ is K\"ahler with  self--dual 
-K\"ahler form $\vartheta$, and admits a Killing vector $K$, as
+The metric $\hat{g}$ is para--K\"ahler with  self--dual 
+para--K\"ahler form $\vartheta$, and admits a Killing vector $K$, as
 ${\mathcal L}_K(c)=0$.
 \item
 Define a function $Z:M\rightarrow \R$ to be the moment map:
@@ -461,7 +465,7 @@ e^U=\frac{Z^4}{8T^3 (G')^2}, \quad Y=G+G'T\Big(\frac{4T}{Z^2}-1\Big), \quad
 X^2=\frac{4T^4(G')^2}{Z^2}\Big(\frac{2}{T}-\frac{4}{Z^2} \Big).
 \]
 Eliminating $(T, y)$ between these three equations gives one relation between $(X, Y, Z)$ and  $U$ which is our implicit solution.
-The elimination can be carried over explicitly if $G=y^k$ for any integer $k$, or if $G=\exp{y}$. In the later case the solution is given by
+The elimination can be carried over explicitly if $G=y^k$ for any integer $k$, or if $G=\exp{y}$. In the latter case the solution is given by
 \[
 4Y^2e^U(e^UX^2-Z^2)^3+(2e^{2U}X^4-3e^UX^2Z^2+Z^4+2Z^2)^2=0.
 \]
@@ -496,15 +500,15 @@ Let us call the solution $(\mathscr{V},\alpha)$ arising in Proposition \ref{prop
 arises
 as a symmetry reduction of the ASD Maxwell potential
 \[
-{\mathcal A}=pdx+qdy=-\mathscr{V}_M K+\alpha_M,
+{\mathcal A}=pdx+qdy=-\mathscr{V}_M {\bf K}+\alpha_M,
 \]
-where $K=K_{\mu}dx^{\mu}$ is the Killing one--form, and
+where ${\bf K}$ is the Killing one--form, and
 we find
 \[
 \mathscr{V}_M=-p\mathscr{V}, \quad \alpha_M=qdy-p\alpha.
 \]
 \mynote{I want to understand and explain this better.}
-\section{The submaximally symmetric projective surface}
+\section{The submaximally symmetric case}
 \label{neat}
 \mynote{Say something about $\mathrm{Aff}(1)$?}
 Choosing a representative connection from the projective class defined by (\ref{eq:submaxODE}), we obtain from (\ref{eq:g4}) an
@@ -521,7 +525,7 @@ K_1=x\frac{\p}{\p x} - p\frac{\p}{\p p} - y\frac{\p}{\p y} + q\frac{\p}{\p q},\q
 K_2=x\frac{\p}{\p y} - q\frac{\p}{\p p}, \quad
 K_3=y\frac{\p}{\p x} - p\frac{\p}{\p q}.
 \]
-These are lifts of the projective vector fields corresponding to the $\mathfrak{sl}(2)$ elements
+These are lifts of the projective vector fields corresponding to the $\mathfrak{sl}(2,\R)$ elements
 \[
 T_1=\begin{pmatrix}\epsilon & 0\\
 0 & -\epsilon
@@ -639,19 +643,19 @@ In the case of the Weyl structure (\ref{ew_neat}), the infinitesimal symmetry is
 \mathcal{K}=\frac{\p}{\p v}.
 \]
 Since we have chosen a scale such that $\mathcal{K}$ is in fact a Killing vector of $h$, we have that $\mathcal{K}\hook d(\mathrm{ln}(\mathrm{det}(h))=0$, so the one--form $\omega$ is also preserved by $\mathcal{K}$. This is consistent with the fact that it has no explicit $v$--dependence.
-\section{The flat projective surface}
+\section{The model case}
 \label{sec:model}
 In the following section we discuss the four--manifold $(M,g)$ obtained from the maximally symmetric flat 
-projective surface $N=\RP^2$. In this case, $g$ is the indefinite analogue of the Fubini--Study metric given by the quotient $SL(3)/GL(2)$, and is not only almost para--K\"ahler but in fact para--K\"ahler, since the symplectic form $\Omega$ is parallel with respect to the Levi--Civita connection of $g$. Chosing a representative connection with
-$\Gamma_{AB}^C=0$ gives $g$ as
+projective surface $N=\RP^2$. In this case, $g$ is not only almost para--K\"ahler but in fact para--K\"ahler, since the symplectic form $\Omega$ is parallel with respect to the Levi--Civita connection of $g$. Chosing a representative connection with
+$\Gamma_{A'B'}^{C'}=0$ gives $g$ as
 \be
 \label{special_ein}
 g=dz_{A'}\odot dx^{A'}+ z_{A'}z_{B'} dx^{A'}\odot dx^{B'}.
 \ee
 
 We begin by discussing the  conformal structure
-of (\ref{special_ein}), both explicitly and in terms of its twistor space. We then note a pseudo--hyper--Hermiticity property which is unique to the model case, and find that the twistor space fibers holomorphicaly over $\CP^1$. Finally, we present a classification of the Einstein--Weyl structures which can be obtained by Jones--Tod factorisation of $SL(3)/GL(2)$ and exhibit an explicit example of such a factorisation from the twistor perspective, reconstructing the conformal structure on $W$ from minitwistor curves.
-\subsection{Conformal Structure}
+of (\ref{special_ein}), both explicitly and in terms of its twistor space. We then note a pseudo--hyper--Hermiticity property which is unique to the model case, and find some special structure on the twistor space. Finally, we present a classification of the Einstein--Weyl structures which can be obtained by Jones--Tod factorisation, and exhibit an explicit example of such a factorisation from the twistor perspective, reconstructing the conformal structure on $W$ from minitwistor curves.
+\subsection{Conformal Structure on $M$}
 \label{model_conf}
 Recall that points $P\in\R^3$ and $L\in\R_3$ respectively define lines and planes in $\R^3$ which are preserved by multiplication of $P,L$ by members of $\R^*$, and that these lines and planes respectively descend to points $[P]$ and lines $[L]$ in $\RP^2$. In what follows we will drop the square brackets and understand points $[P]\in\RP^2$ and lines $[L]\in\RP^{2*}$ to be represented by vectors $P\in\R^3$ and $L\in\R_3$. Let $M\subset \RP^2\times {\RP^2}^*$ be the set of non--incident pairs 
 $(P, L)$.
@@ -697,7 +701,7 @@ P=[x^{A'}, 1],\quad L=[z_{A'}, 1-x^{A'}z_{A'}]
 \ee 
 with a normalisation $P\cdot L=1$ to recover the metric (\ref{special_ein}).
 \koniec
-\subsection{Twistor space}
+\subsection{Twistor space of $M$}
 \label{twist_SSS}
 \mynote{As I understand it, this section could be rephrased as a proposition that the conformal structure described above is reproduced by the twistor space $F_{12}$.}
 To understand $(M,[g])$ from the twistor perspective, we need to move to the complex picture. In what follows, we will view $M$ as the set of non--incident pairs in $\CP^2\times\CP^{2*}$. Let $F_{12}(\mathbb{C}^3)\subset \CP^2\times {\CP^2}^*$ be set of incident pairs 
@@ -728,8 +732,8 @@ l=P\wedge \pi, \quad \mbox{where}\quad  \pi\sim a\pi+b P,
 where $a\in \R^*, b\in \R$. \mynote{Should these $\R$s be $\mathbb{C}$s?} Thus $\pi$ parametrises a projective line $\CP^1$,
 and by making a choice of $b$ we can take
 $
-\pi=[\pi^0, \pi^1, 0], 
-$ where $\pi^A=[\pi^0, \pi^1]\in \CP^1$. The constraint $P\cdot l=0$ now holds.
+\pi=[\pi^{0'}, \pi^{1'}, 0], 
+$ where $\pi^{A'}=[\pi^{0'}, \pi^{1'}]\in \CP^1$. The constraint $P\cdot l=0$ now holds.
 To satisfy the remaining constraints in (\ref{dm2}) we take
 \be \label{eq:p=Lwedgel}
 p=L\wedge l=(L\cdot\pi)P-(L\cdot P)\pi.
@@ -738,7 +742,7 @@ Substituting (\ref{DM_parameter}) gives
 the corresponding twistor line parametrised by $[\pi]\in\CP^1$ 
 \be
 \label{sl3curves}
-p^{\alpha}=[(z\cdot \pi)x^{A'}-\pi^A, z\cdot \pi], \quad l_\alpha=[\pi_A, -\pi\cdot x],
+p^{\alpha}=[(z\cdot \pi)x^{A'}-\pi^{A'}, z\cdot \pi], \quad l_\alpha=[\pi_{A'}, -\pi\cdot x],
 \ee
 where the spinor indices are raised and lowered with $\epsilon^{AB}$ and its inverse, and  $z\cdot x\equiv z_{A'}x^{A'}$. 
 
@@ -768,7 +772,7 @@ Setting $L\cdot P=1$ this gives the conformal structure
 (\ref{dm_metric}).
 %\mynote{Is it possible to write this in the language of vectors, like we do in the mini--twistor section? To make it about a section of the normal bundle rather than the neighbouring line? I guess you'd divide (\ref{sl3curves}) by $\pi^{0'}$ like we do in the minitwistor section.}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Pseudo--hyper--Hermitian structure}
+\subsection{Pseudo--hyper--Hermitian structure on $M$}
 A pseudo--hyper--complex structure on a four manifold $M$ is a triple of endomorphisms
 $I, S, T$ of $TM$ which satisfy
 \[
@@ -797,14 +801,14 @@ d\Sigma^{A'B}+A\wedge \Sigma^{A'B'} = 0.
 \noindent In fact, this condition is necessary and sufficient for hyper--Hermiticity \cite{D99,boyer}. Given some $(M,g)$ which is conformally ASD, it can also be shown (see Lemma 2 in \cite{D99} and Theorem  7.1 in \cite{Cal2}) that a lack of vertical $\p/\p \pi$ terms in the twistor distribution (\ref{eq:twistor_dist}) implies hyper--Hermiticity of $(M,g)$. \mynote{This is not clear to me from a brief look at \cite{D99,Cal2}...}
 \begin{prop}
 \label{propHH}
-The Einstein metric (\ref{special_ein}) on $SL(3)/GL(2)$ is pseudo--hyper--Hermitian.
+The Einstein metric (\ref{special_ein}) is pseudo--hyper--Hermitian.
 \end{prop}
 \noindent
 {\bf Proof.}
 The null frame for the 4-metric is
 \be \label{eq:null_frame}
 e^{0A'}=dx^{A'}, \quad e^{1A'}=dz^{A'}+z^{A'}(z\cdot dx), \quad\mbox{so that}\quad
-g=\epsilon_{A'B'}\epsilon_{AB}e^{AA'}e^{BB'}.
+g=\varepsilon_{A'B'}\varepsilon_{AB}e^{AA'}e^{BB'}.
 \ee
 Thus the forms $\Sigma=dx^{0'}\wedge dx^{1'}$ and $\Omega=dz_{A'}\wedge dx^{A'}$ are ASD. The basis of SD two forms is spanned by
 \[
@@ -831,12 +835,12 @@ L_{1}=\pi\cdot\frac{\p}{\p z},
 \ee
 which have no vertical terms. We can easily verify that it is Frobenius integrable, as $[L_{0}, L_{1}]=-(\pi\cdot z)L_{1}$. The SD part of the
 spin connection is given in terms of ${\mathcal A}$ as
-$\Gamma_{AA'B'C'}=-2{\mathcal A}_{A(B'}\epsilon_{C')A'}$.
+$\Gamma_{AA'B'C'}=-2{\mathcal A}_{A(B'}\varepsilon_{C')A'}$.
 \koniec
 In the next section we shall show how to encode
 ${\mathcal A}$ in the twisted--photon Ward bundle over the twistor space
 of $(M, g)$.
-\subsection{The twisted photon}
+\subsection{A line bundle over the twistor space of $M$}
 \mynote{Still not 100 per cent sure I have got this right. Does it matter what $\mathbb{C}^*$ bundle over $\mathscr{T}$ we are talking about? What would happen if we instead regarded $\mathscr{T}$ as $\PP(T\CP^2)$, and used our parametrisation (\ref{sl3curves}) but projectivised the $l$ part instead of the $p$ part?}
 Ward \cite{wardtf} shows that there is a correspondence between ASD Maxwell potentials on $M$ and $\mathbb{C}^*$ bundles over $\mathscr{T}$ which are trivial on twistor lines\footnote{Recall that a principal bundle $\PP\rightarrow\mathscr{T}$ with structure group $G$ is trivial if there exists a map $\chi:\PP\rightarrow\mathscr{T}\times G$. Let $\{\chi_\alpha:\mathcal{U}_\alpha\rightarrow\mathscr{T}\times G\}$ be local trivialisations related by transition functions $F_{\alpha\beta}=\chi_\beta\circ\chi^{-1}_\alpha\in G$. If $F_{\alpha\beta}=f_\beta f_\alpha^{-1}$ for some splitting elements $f_\alpha,f_\beta\in G$ on $\mathcal{U}_\alpha,\mathcal{U}_\beta$ respectively, then there exist $\tilde{\chi}_\alpha=f_\alpha^{-1}\circ\chi_\alpha$ and $\tilde{\chi}_\beta=f_\beta^{-1}\circ\chi_\beta$ such that $\tilde{F}_{\alpha\beta}=f_\beta^{-1}f_\beta f_\alpha^{-1}f_\alpha=Id$, so that the bundle is trivial.}. The purpose of this section is to uncover the $\mathbb{C}^*$ bundle over $\mathscr{T}$ corresponding to the ASD Maxwell potential $\mathcal{A}=z_{A'}dx^{A'}$ on $M$.
 
@@ -848,17 +852,17 @@ The $\mathbb{C}^*$ bundle $T\CP^{2*}\rightarrow\PP(T\CP^{2*})=F_{12}$ is trivial
  
 \noindent {\bf Proof.} There are many open sets needed to cover
 $\PP(T\CP^{2*})$, but it is sufficient to consider two:
-$U$, where $(l_1, \neq 0, p^2\neq 0)$, and $(l_2/l_1, l_3/l_1, p^3/p^2)$ are coordinates, and $\widetilde{U}$ where
+$\mathcal{U}$, where $(l_1, \neq 0, p^2\neq 0)$, and $(l_2/l_1, l_3/l_1, p^3/p^2)$ are coordinates, and $\widetilde{\mathcal{U}}$ where
 $(l_1\neq 0, p^3\neq 0)$, and  $(l_2/l_1, l_3/l_1, p^2/p^3)$
 are coordinates. Now consider the total
 space of $T\CP^{2*}$ (or perhaps it is $T\CP^{2*}$ tensored
 with some power of the canonical bundle to make it trivial on twistor
 lines) \mynote{by the canonical bundle we mean the bundle of volume forms.}, and restrict it to the intersection of (pre--images in
 $T\CP^{2*}$
-of) $U$ and $\widetilde{U}$. The coordinates on $T\CP^{2*}$ in these
+of) $\mathcal{U}$ and $\widetilde{\mathcal{U}}$. The coordinates on $T\CP^{2*}$ in these
 region are $(l_2/l_1, l_3/l_1, p^2/p^1, p^3/p^1)$, and the fibre
-coordinates over $\tau$ over $U$ and $\tilde{\tau}$ over 
-$\widetilde{U}$ are related by\footnote{Here we are following Ward \cite{wardtf},
+coordinates over $\tau$ over $\mathcal{U}$ and $\tilde{\tau}$ over 
+$\widetilde{\mathcal{U}}$ are related by\footnote{Here we are following Ward \cite{wardtf},
 and thinking of a $\mathbb{C}^*$ bundle.}
 \[
 \tilde \tau=\exp(F)\tau, \quad\mbox{where}\quad  
@@ -868,9 +872,9 @@ F=\ln{(p_2/p_3)}.
 Now we follow the procedure of \cite{wardtf}: restrict $F$ to a twistor line,
 and split it.
 The holomorphic splitting is $F=f-\widetilde{f}$, where
-$f=\ln{(p_2)}$ is holomorphic in the pre--image of $U$ in the correspondence space, and 
+$f=\ln{(p_2)}$ is holomorphic in the pre--image of $\mathcal{U}$ in the correspondence space, and 
 $\widetilde{f}=\ln{(p_3)}$ is holomorphic in the pre--image of
-$\widetilde{U}$. Note that $F$ is a twistor  function, but 
+$\widetilde{\mathcal{U}}$. Note that $F$ is a twistor  function, but 
 $f, \widetilde{f}$ are not. Therefore
 $L_{A}F=0$, where the twistor distribution $L_{A}$
 is given by (\ref{tdistribution}). This implies that $L_{A}f=L_{A}\widetilde{f}$. Since each side of this equation is holomorphic on an open subset of $\CP^1$, and since $\CP^1$ can be covered with such subsets, both sides are globally holomorphic and therefore linear in $\pi^{A'}$ by the Liouville theorem. Hence
@@ -898,16 +902,16 @@ is indeed the ASD para--K\"ahler structure $\Omega$.
 %\label{ptp}
 %p=[p^1, p^2, p^3], \quad Z=-\frac{p^3}{p^2}=\frac{z^0+X %z^1}{-1+(z^0+X z^1)x^1}.
 %\ee
-\subsection{Factoring $SL(3)/GL(2)$ to Einstein-Weyl}
+\subsection{Factoring the model to Einstein-Weyl}
 \label{neat2}
-If a metric with ASD Weyl tensor has more than one conformal symmetry, then distinct Einstein--Weyl structures are obtained on the space of orbits of conformal Killing vectors which are not conjugate with respect to an isometry \cite{PT}. We can thus classify the Einstein--Weyl structures obtainable from $SL(3)/GL(2)$ by first classifying its symmetries up to conjugation.
+If a metric with ASD Weyl tensor has more than one conformal symmetry, then distinct Einstein--Weyl structures are obtained on the space of orbits of conformal Killing vectors which are not conjugate with respect to an isometry \cite{PT}. We can thus classify the Einstein--Weyl structures obtainable from the model by first classifying its symmetries up to conjugation.
 \begin{prop}
-The non--trivial Einstein--Weyl structures obtainable from the ASD Einstein metric (\ref{special_ein}) on $SL(3)/GL(2)$ by the Jones--Tod correspondence consist of a two--parameter family, and two additional cases which do not belong to this family.
+The non--trivial Einstein--Weyl structures obtainable from the ASD Einstein metric (\ref{special_ein}) by the Jones--Tod correspondence consist of a two--parameter family, and two additional cases which do not belong to this family.
 \end{prop}
 \noindent
-{\bf Proof. }Since we have an isomorphism between the Lie algebra of projective vector fields on $(N,[\nabla])$ and the Lie algebra of Killing vectors on $(M,g)$, the problem of classifying the symmetries of (\ref{special_ein}) on $M=SL(3)/GL(2)$ is reduced to a classification of the infinitesimal  projective symmetries of $\RP^2$, i.e. the near--identity elements of $SL(3)$, up to conjugation.
+{\bf Proof. }Since we have an isomorphism between the Lie algebra of projective vector fields on $(N,[\nabla])$ and the Lie algebra of Killing vectors on $(M,g)$, the problem of classifying the symmetries of (\ref{special_ein}) is reduced to a classification of the infinitesimal  projective symmetries of $\RP^2$, i.e. the near--identity elements of $SL(3,\R)$, up to conjugation.
 
-Non--singular complex matrices are determined up to similarity by their Jordan normal form (JNF). While real matrices do not have such a canonical form, all of the information they contain is determined (up to similarity) by the JNF that they would have if they were considered as complex matrices. Thus we can still discuss the JNF of a real matrix, even if it cannot always be obtained from the real matrix by a real similarity transformation. The possible non--trivial Jordan normal forms of matrices in $SL(3)$ are shown below.
+Non--singular complex matrices are determined up to similarity by their Jordan normal form (JNF). While real matrices do not have such a canonical form, all of the information they contain is determined (up to similarity) by the JNF that they would have if they were considered as complex matrices. Thus we can still discuss the JNF of a real matrix, even if it cannot always be obtained from the real matrix by a real similarity transformation. The possible non--trivial Jordan normal forms of matrices in $SL(3,\R)$ are shown below.
 \[
 \begin{pmatrix}\lambda & 0 & 0\\
 0 & \mu & 0\\
@@ -935,7 +939,7 @@ Non--singular complex matrices are determined up to similarity by their Jordan n
 \end{pmatrix}
 \]
 
-It is possible that two matrices in $SL(3)$ with the same JNF may be related by a complex similarity transformation, and thus not conjugate in $SL(3)$. However, if the JNF is a real matrix, then the required similarity transformation just consists of the eigenvectors and generalised eigenvectors of the matrix, which must also be real since they are defined by real linear simultaneous equations. This means we only have to worry about matrices with complex eigenvalues, and since these occur in complex conjugate pairs, they will only be a problem when we have three distinct eigenvalues.
+It is possible that two matrices in $SL(3,\R)$ with the same JNF may be related by a complex similarity transformation, and thus not conjugate in $SL(3,\R)$. However, if the JNF is a real matrix, then the required similarity transformation just consists of the eigenvectors and generalised eigenvectors of the matrix, which must also be real since they are defined by real linear simultaneous equations. This means we only have to worry about matrices with complex eigenvalues, and since these occur in complex conjugate pairs, they will only be a problem when we have three distinct eigenvalues.
 
 In this case, we can always make a real similarity transformation such that the matrix is block diagonal, with the real eigenvalue in the bottom right. Then we have limited choice from the $2\times 2$ matrix in the top left. Let us parametrise such a $2\times 2$ matrix by $a,\,b,\,c,\,d\in\mathbb{R}$ as follows:
 \[
@@ -950,13 +954,13 @@ This has characteristic polynomial
 \]
 Evidently the important degrees of freedom are $a+d$ and $ad-bc$, so we can use these to encode every near--identity element of the class with three distinct eigenvalues. The bottom--right entry will be determined by our choice of $a+d$ and $ad-bc$.
 
-Taking a projective vector field on $\mathbb{RP}^2$, we can find the corresponding Killing vector on $SL(3)/GL(2)$ using (\ref{eq:kvf_from_pvf}), and factor to Einstein--Weyl using (\ref{EWgen}). We find by explicit calculation that vector fields arising from the second and fourth JNFs above give trivial Einstein--Weyl structures, so restricting to the non--trivial cases we have a two--parameter family of Einstein--Weyl structures coming from the first class, and two additional Einstein--Weyl structures coming from the third and fifth, as claimed.
+Taking a projective vector field on $\mathbb{RP}^2$, we can find the corresponding Killing vector of (\ref{special_ein}) using (\ref{eq:kvf_from_pvf}), and factor to Einstein--Weyl using (\ref{EWgen}). We find by explicit calculation that vector fields arising from the second and fourth JNFs above give trivial Einstein--Weyl structures, so restricting to the non--trivial cases we have a two--parameter family of Einstein--Weyl structures coming from the first class, and two additional Einstein--Weyl structures coming from the third and fifth, as claimed.
 \koniec
 
 \mynote{Why does the third class not give a one--parameter family?}
 
 \mynote{Give the example corresponding to the mini--twistor factorisation below.}
-\subsection{Mini--twistor correspondence}
+\subsection{An example of the mini--twistor correspondence}
 \label{mini_twistor}
 Below we investigate a one--parameter subfamily of the two--parameter family. We use the holomorphic vector field on 
 the twistor space
@@ -1032,4 +1036,4 @@ h=4(u^2v+uv^2+uv)dt^2 - 4tv(a(v+1)+u)dtdu + 4tu(u-av+2v+1)dtdv \\
 -t^2du^2 + 2t^2(2av+a+2u)dvdu - t^2(a^2+4u(a-1))dv^2.
 \end{split}
 \ee
-This is the same conformal structure that we obtain by Jones-Tod factorisation of $SL(3)/GL(2)$ by (\ref{modelK}) using the formula (\ref{EWgen}).
+This is the same conformal structure that we obtain by Jones-Tod factorisation of the metric (\ref{special_ein}) by (\ref{modelK}) using the formula (\ref{EWgen}).

@@ -12,7 +12,7 @@
 
 The soliton resolution conjecture \cite{TT} states that solutions to solitonic equations with generic initial data should, after some non--linear behaviour, eventually resolve into a finite number of solitons plus a radiative term. This conjecture is intimately tied to soliton stability, which has been investigated for a number of solitonic equations, including that of $\phi^4$ theory on $\mathbb{R}^{1,1}$. In this chapter, we study a modification of this theory on a $3+1$ dimensional wormhole spacetime which has a spherical throat of radius $a$, with a focus on the stability properties of the modified kink. In particular, we prove that the modified kink is linearly stable, and compare its discrete spectrum to that of the $\phi^4$ kink on $\mathbb{R}^{1,1}$. We also study the resonant coupling between the discrete modes and the continuous spectrum for small but non--linear perturbations. Some numerical and analytical evidence for asymptotic stability is presented for the range of $a$ where the kink has exactly one discrete mode. This chapter is almost identical to the preprint \cite{me}.
 
-\section{The $\phi^4$ kink on $\mathbb{R}^{1,1}$}
+\section{Background: the $\phi^4$ kink on $\mathbb{R}^{1,1}$}
 
 One dimensional $\phi^4$ theory is well--documented in the literature (see for example \cite{Manton&Sutcliffe}). The aim of this section is to introduce some notation and some ideas about stability which will be useful when we come to consider the modified theory.
 
@@ -260,11 +260,11 @@ where the potential is given by
 V(r)=\frac{a^2}{(r^2+a^2)^2}-2(1-3\Phi^2).
 \ee
 
-Figure \ref{fig:several_potentials} shows the potential $V(r)$ for several values of $a$. Note that for large $a$ it has a single well with a minimum at $r=0$, close to the potential $V_0$ corresponding to the flat kink. As $a$ decreases, the critical point at $r=0$ becomes a maximum with minima on either side, creating a double well. We find numerically that this happens at about $a=0.55$.
+Figure \ref{fig:several_potentials} shows the potential $V(r)$ for several values of $a$. Note that for large $a$ it has a single well with a minimum at $r=0$, close to the potential $V_0$ corresponding to the flat kink. As $a$ decreases, the critical point at $r=0$ becomes a maximum with minima on either side, creating a double well. We find numerically that this happens at about $a=0.55$. Note that those potentials with $a<1/\sqrt{2}$ are everywhere positive.
 
 \begin{figure}
 \includegraphics[width=14cm]{several_potentials.pdf}
-\caption{\label{fig:several_potentials}The potential of the 1--dimensional quantum mechanics problem arising from the study of stability of the soliton for values of $a$ between $a=10$ and $a=0.3$. In particular, note that those with $a<1/\sqrt{2}$ are everywhere positive.}
+\caption{\label{fig:several_potentials}The potential of the 1--dimensional quantum mechanics problem arising from the study of stability of the soliton for values of $a$ between $a=10$ and $a=0.3$.}
 \end{figure}
 
 \begin{prop}
@@ -435,16 +435,16 @@ In the first term the integrand is a total derivative, and the second term is ea
 \label{eq:xi}
 \xi = 1 + 12\int_{-\infty}^{\infty}\Phi_0\Phi_1v_0^2dr,
 \ee
-which we can evaluate for each of the solutions (\ref{eq:flat_vib_modes}) using the symbolic computation facility in Mathematica. We find $\xi=2$ in the case of the zero mode and $\xi=\pi^2-7$ in the case of the first non--trivial vibrational mode. We can check these values by finding $(v,\omega)$ numerically for a range of small values of $\epsilon$ and comparing $\omega^2$ to the $\omega^2_0+\xi\epsilon^2$ predicted here. The corresponding plots are shown in figures \ref{fig:xi_zero_mode} and \ref{fig:xi_other_mode}.
+which we can evaluate for each of the solutions (\ref{eq:flat_vib_modes}) using the symbolic computation facility in Mathematica. We find $\xi=2$ in the case of the zero mode and $\xi=\pi^2-7$ in the case of the first non--trivial vibrational mode. We can check these values by finding $(v,\omega)$ numerically as described in section \ref{sec:finding_bound_states_numerically} for a range of small values of $\epsilon$ and comparing $\omega^2$ to the $\omega^2_0+\xi\epsilon^2$ predicted here. The corresponding plots are shown in figures \ref{fig:xi_zero_mode} and \ref{fig:xi_other_mode}.
 
 \begin{figure}
 \includegraphics[width=14cm]{xi_zero_mode.pdf}
-\caption{\label{fig:xi_zero_mode}A comparison of the predicted and numerical calculations for the energy of the zero mode as a function of $\epsilon^2$ for small $\epsilon$. The numerical calculations were executed by finding the even bound states and their energies as described in section \ref{sec:finding_bound_states_numerically}.}
+\caption{\label{fig:xi_zero_mode}A comparison of the predicted and numerical calculations for the energy of the zero mode as a function of $\epsilon^2$ for small $\epsilon$.}
 \end{figure}
 
 \begin{figure}
 \includegraphics[width=14cm]{xi_other_mode.pdf}
-\caption{\label{fig:xi_other_mode}A comparison of the predicted and numerical calculations for the energy of the odd vibrational mode as a function of $\epsilon^2$ for small $\epsilon$. The numerical calculations were executed by finding the odd bound states and their energies as described in section \ref{sec:finding_bound_states_numerically}.}
+\caption{\label{fig:xi_other_mode}A comparison of the predicted and numerical calculations for the energy of the odd vibrational mode as a function of $\epsilon^2$ for small $\epsilon$.}
 \end{figure}
 
 %The fact that both of these values of $\xi$ are positive supports the conjecture that the eigenvalue problem (\ref{schrod}) has no negative eigenvalues: we find no bound states for $a$ less than about $0.3$, and as $a$ approaches this critical value from above, the energy of the ground state is approaching $4$ from below, disappearing into the continuous spectrum. As $a\rightarrow\infty$ we find that the energy of the ground state approaches zero from above. In between these two extremes, all numerical calculations of the ground state reveal positive ground states energies between zero and $4$. The next section provides a further investigation into the conjecture that (\ref{schrod}) has no negative eigenvalues.
@@ -688,7 +688,7 @@ The so--called Fermi Golden Rule then reads
 
 \begin{figure}
 \includegraphics[width=14cm]{ic_comparison_0002.pdf}
-\caption{\label{fig:decay} The decay of internal mode oscillations for various initial conditions when $a=0.5$. Note that $\phi(0,s)$ is used as a proxy for the internal mode amplitude, and we use a log--log scale to elucidate the dependence on $s^{-1/2}$ in the large $s$ limit. The lines are labelled in the legend by the initial conditions which produced them, with the exception of the gradient line $4.2s^{-1/2}$.}
+\caption{\label{fig:decay} The decay of internal mode oscillations for various initial conditions when $a=0.5$.}
 \end{figure}
 
 In order to integrate the PDE (\ref{eom.coords}) to large times $t$, we employ the method of hyperboloidal foliations and scri--fixing \cite{hyp_foliations}. Following \cite{wavemaps, SG}, we define
@@ -716,7 +716,7 @@ to obtain the first order symmetric hyperbolic system
 \end{align}
 which we solve numerically using the method of lines. Kreiss--Oliger dissipation is required to reduce unphysical high--frequency noise. We also add the term $-0.1(\Psi-\p_yF)$ to the right hand side of equation (\ref{eq:Psi}) to suppress violation of the constraint $\Psi=\p_yF$.
 
-We are interested in the range of values $a_0<a<a_1$ for which the kink has exactly one internal mode. We find that, for fixed but arbitrary $y$, $F(s,y)$ oscillates in $s$ with a frequency close to the internal mode frequency, and that these oscillations tend towards a decay rate of $s^{-1/2}$, as we expect from section \ref{sec:conjecture}. Plots demonstrating this decay at $y=0$ for $a=0.5$ are shown in figure \ref{fig:decay}. Note that the constant $4.2$ is related to $\Gamma$ as defined in (\ref{eq:decay_behaviou}).
+We are interested in the range of values $a_0<a<a_1$ for which the kink has exactly one internal mode. We find that, for fixed but arbitrary $y$, $F(s,y)$ oscillates in $s$ with a frequency close to the internal mode frequency, and that these oscillations tend towards a decay rate of $s^{-1/2}$, as we expect from section \ref{sec:conjecture}. Plots demonstrating this decay at $y=0$ for $a=0.5$ are shown in figure \ref{fig:decay}. Note that $\phi(0,s)$ is used as a proxy for the internal mode amplitude, and we use a log--log scale to elucidate the dependence on $s^{-1/2}$ in the large $s$ limit. The lines are labelled in the legend by the initial conditions which produced them, with the exception of the gradient line $4.2s^{-1/2}$. The constant $4.2$ is related to $\Gamma$ as defined in (\ref{eq:decay_behaviou}).
 
 \subsection{Expected decay rates in other regimes}
 From figure \ref{fig:omega_vs_a}, we see that the second internal mode appears before the frequency of the first internal mode moves out of the range $(m/2,m)$. In the presence of more than one internal mode, we expect complicated coupling between their amplitudes, making the behaviour at large times very difficult to predict. However, if we restrict to odd initial data, the solution to (\ref{eq:nonsmall_pert}) remains odd. This means that the even internal mode can never be excited, so the system effectively has only one internal mode. In this case, the analysis in section \ref{sec:conjecture} still applies, since the frequency of the odd internal mode always lies in the range $(m/2,m)$, so we expect its amplitude to decay like $s^{-1/2}$.
@@ -724,12 +724,6 @@ From figure \ref{fig:omega_vs_a}, we see that the second internal mode appears b
 For general initial data and wormhole radii $a>a_1$, we cannot produce a concrete conjecture about the decay rate. However, we expect the behaviour of the system to depend on the locations of the two internal mode frequencies within the mass gap. The analysis in section \ref{sec:conjecture} for a single internal mode suggests that for frequencies less than $m/2$, a real contribution to $\dot{A}$ does not appear until at least $\mathcal{O}(A^4)$. In this case, we require another change of variable in the radiation equation to rule out the contribution of the radiative term at higher order. We then expect to solve an equivalent of (\ref{eq:solve_for_b}) where $k+l=3$ to find the required change of variable. If $9\omega^2<m^2$ so that the solution is still real, we can proceed by induction, changing the variable until the solution is complex. A real contribution to (\ref{eq:A2}) will only be obtained for $k+l=N$ such that $N^2\omega^2>m^2$. This would mean a real contribution to $\dot{A}$ at $\mathcal{O}(A^{N+1})$, and hence result in a decay rate of $s^{-1/N}$. Further detail can be found in \cite{SG}.
 
 Although the presence of a second internal mode complicates the dynamics, we still expect the smallest $N$ such that the even internal mode frequency $\omega$ satisfies $N^2\omega^2>m^2$ to be an important factor in the behaviour at large $s$. The axis ticks in figure \ref{fig:omega_vs_a} show the value of $N$ for a range of $a$.
-
-\section{Summary and Discussion}
-
-We have found that the modified kink is topologically and linearly stable, and investigated its asymptotic stability for the range of $a$ where exactly one discrete mode is present. It would be interesting to expand the investigation in section \ref{sec:dynamics} to the case when both discrete modes are present. This problem is much more complicated because of the extra terms in (\ref{eq:eta}) and (\ref{eq:alpha}) coming from the amplitude of the second internal mode. Similar problems have been discussed in \cite{Weinstein}, although no such analysis has been done for non--linear Klein--Gordon equation of this type with two discrete modes. The $\phi^4$ theory on the wormhole presents a useful setting to undertake such analysis because the kink has exactly two discrete modes for any $a>a_1$, and because their frequencies can be controlled by the parameter $a$.
-
-This model shares an interesting property with its sine--Gordon counterpart in that we expect a discontinuous change in decay behaviour when $a$ moves out of the range $a_0<a<a_1$. Insight from the $\phi^4$ case may help to elucidate the character of such discontinuous changes.
 
  
 

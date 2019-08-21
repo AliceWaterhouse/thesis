@@ -13,10 +13,9 @@ an analogue of projective geometry defined for almost complex
 manifolds, i.e., even--dimensional manifolds $M$ carrying a smooth endomorphism $J$ of $TM$ which satisfies $J^2=-Id$. In $c$--projective geometry, the equivalence class of torsion--free connections is replaced by an equivalence class of connections which are adapted to the almost complex structure $J$ in a natural way. In this chapter we discuss a notion of compactification which is modified to the {\it{``para''}} case, i.e. where the endomorphism $J$ squares to $Id$ rather than $-Id$. We show that the natural almost para--complex structure $J$ on any manifold $M$ arising in the projective to Einstein correspondence admits a type of compactification which we call \textit{para}--$c$--projective. The content of this chapter is based on material appearing in \cite{DGW}.
 
 \section{Background and definitions}
+The purpose of this section is to introduce the definitions which are required to state the main results of \cite{CG}.
 
 \subsection{Almost (para--)complex geometry}
-
-The purpose of this section is to introduce the definitions which are required to state the main results of \cite{CG}.
 
 \begin{defi}
 The Nijenhuis tensor of an endomorphism $J$ of $TM$ is defined by
@@ -29,7 +28,7 @@ where $X,Y$ are vector fields on $M$ and $[\cdot\,,\cdot]$ denotes the Lie brack
 \ee
 \end{defi}
 
-Let $M$ be a complex manifold of (complex) dimension $n$, in the sense of having complex coordinates and complex transition functions. Then multiplication of the coordinates by $i$ defines an endomorphism $J$ of $TM$ which squares to $-Id$, so complex manifolds are a subset of almost complex manifolds. In this case, $J$ has eigenvalues $\pm i$, and the corresponding splitting of $TM$ into eigen--bundles is Frobenius integrable. The Newlander--Nirenberg theorem describes complex manifolds in terms of the Nijenhuis tensor (\ref{eq:Nijenhuis_def}).
+Let $M$ be a complex manifold of (complex) dimension $n$, in the sense of having complex coordinates and complex transition functions. Then multiplication of the coordinates by $i$ defines an endomorphism $J$ of $TM$ which squares to $-Id$, so complex manifolds are a subset of almost complex manifolds. In this case, $J$ has eigenvalues $\pm i$, and the corresponding splitting of $TM$ into eigen--bundles is Frobenius integrable. The Newlander--Nirenberg theorem describes complex manifolds in terms of the Nijenhuis tensor (\ref{eq:Nijenhuis_def}) of $J$.
 
 \begin{theo}[\cite{CG}]
 An almost complex manifold $(M,J)$ is a complex manifold if and only if the Nijenhuis tensor of $J$ vanishes. In this case, we call the almost complex structure $J$ integrable.
@@ -96,12 +95,12 @@ Note that the para--$c$--projective change of connection differs from the $c$--p
 
 \subsection{Para--$c$--projective compactification}
 
-We now specialise to the ``para'' case, where $J^2=Id$. Note that all the corresponding results for $J^2=-Id$ can be found in the original paper \cite{CG}.
+We now specialise to the ``para'' case, where $J^2=Id$. Note that all the corresponding results for $J^2=-Id$ can be found in \cite{CG}.
 
 \begin{defi}
 \label{defi_1}  Let $(M,J)$ be an almost para--complex manifold, and let $\nabla$ be a complex minimal connection. The structure $(M,J)$ admits a para--$c$--projective compactification to a manifold with boundary $\ol{M}=M\cup\p M$
-if there exists a function $T:\ol{M}\rightarrow \R$ such that $\mathcal{Z}(T)$ is the boundary
-$\p M\subset \ol{M}$, the differential $dT$ does not vanish on $\p M$, and the connection $\ol{\nabla}$ related to $\nabla$ by (\ref{eq:c-proj_change}) with $\Upsilon = dT/(2T)$ extends to $\ol{M}$.
+if there exists a function $T:\ol{M}\rightarrow \R$ such that the zero locus $\mathcal{Z}(T)$ is the boundary
+$\p M\subset \ol{M}$, the differential $dT$ does not vanish on $\p M$, and the connection $\ol{\nabla}$, related to $\nabla$ by (\ref{eq:c-proj_change}) with $\Upsilon = dT/(2T)$, extends to $\ol{M}$.
 \end{defi}
 
 
@@ -137,11 +136,11 @@ ${\mathcal{U}}$ of $x$ in $\ol{M}$, a local defining function $T$ defined on
 ${\mathcal{U}}$, and a non--zero constant $C$ such that
 \begin{itemize}
 \item $h_{T,C}$ admits a smooth extension to all of $\mathcal{U}$
-\item for all vector fields $X,Y$ on $U$ with $dT(Y)=\theta(Y)=0$, the function $h_{T,C}(X,JY)$ approaches $Cd\theta(X,Y)$ at the boundary.
+\item for all vector fields $X,Y$ on $\mathcal{U}$ with $dT(Y)=\theta(Y)=0$, the function $h_{T,C}(X,JY)$ approaches $Cd\theta(X,Y)$ at the boundary.
 \end{itemize}
 Then $g$ is $c$--projectively compact.
 \end{theo}
-Note that the statement in  Theorem \ref{CGthm} does not depend on the choice of $T$. Different choices of $T$ result in rescalings of the contact form $\theta$ on the boundary by a nowhere vanishing function.
+Note that the statement in  Theorem \ref{CGthm} does not depend on the choice of $T$. Different choices of $T$ result in rescalings of the one--form $\theta$ on the boundary by a nowhere vanishing function.
 
 
 \section{Compactifying the Dunajski--Mettler Class} 
@@ -163,14 +162,14 @@ There is a metric $g$ and two--form $\Omega$ on $\mathcal{M}\setminus \mathcal{Z
 0\to \pi^* \cT^*\to T(\cT^*)\to \pi^*TN\to 0,
   \end{equation}
   where we have identified $\pi^* \cT^*$ as the vertical sub-bundle of $T(\cT^*)$.
-The tractor connection on the vector bundle $\cT^*\to N$ is equivalent to a splitting of this sequence, identifying $\pi^*TN$ with a distinguished  sub-bundle of horizontal subspaces in 
+The tractor connection on the vector bundle $\cT^*\to N$ is equivalent to a splitting of this sequence, identifying $\pi^*TN$ with a distinguished  sub--bundle of horizontal subspaces in 
 $ T(\cT^*)$ so that we have 
 \begin{equation}\label{HV}
 T(\cT^*)=  \pi^*TN\oplus \pi^* \cT^* .
 \end{equation}
 
 %From the usual Euler sequence of projective space (or see (\ref{useful}) in the last Section) it follows that
-We move now to the total space of $\mathbb{P} {\cT^*}$, and we note that again the tractor (equivalently, Cartan) connection determines a splitting of the tangent bundle $T(\mathbb{P} {\cT^*})$ in which the second term of the display (\ref{HV}) is replaced by a quotient of $\pi^* \cT^*(0,1)$ \cite{CGH-duke}. Indeed, if we work at a point $m\in \mathbb{P}(\cT^*)$, observe that $\pi^*\cT^*(0,1)$ has a filtration
+We move now to the total space of $\mathbb{P}( {\cT^*})$, and we note that again the tractor (equivalently, Cartan) connection determines a splitting of the tangent bundle $T(\mathbb{P} {\cT^*})$ in which the second term of the display (\ref{HV}) is replaced by a quotient of $\pi^* \cT^*(0,1)$ \cite{CGH-duke}. Indeed, if we work at a point $m\in \mathbb{P}(\cT^*)$, observe that $\pi^*\cT^*(0,1)$ has a filtration
 \begin{equation}\label{quotient}
 0\to \cE (0,0)_m\stackrel{U_m}{\to}  \pi_\cM^* \cT^*(0,1)|_m \to  \pi_\cM^* \cT^*(0,1)|_m/\langle U_m \rangle \to 0
 \end{equation}
@@ -184,7 +183,7 @@ This identifies the quotient in (\ref{quotient}), and thus we have canonically
 $$
 T(\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau))=  \pi_\cM^*TN\oplus \pi_\cM^*T^*N(1,1).
 $$
-It follows that on  $\mathcal{M}$
+It follows that on  $M:=\mathcal{M}\backslash\mathcal{Z}(\tau)$
 there is canonically a metric $\boldsymbol{g}$ and symplectic form $\boldsymbol{\Omega}$ taking values in $\cE(1,1)$, given by
 \begin{eqnarray*}
 \boldsymbol{g}(w_1,w_2)&=& \frac{1}{2}\Big(
@@ -193,7 +192,7 @@ there is canonically a metric $\boldsymbol{g}$ and symplectic form $\boldsymbol{
 \end{eqnarray*}
 where
 $$
-\pp_H: T(\mathcal{M}\setminus \mathcal{Z}(\tau))\to \pi_\cM^*TN \quad \mbox{and} \quad \pp_V: T(\mathcal{M}\setminus \mathcal{Z}(\tau))\to \pi_\cM^* T^*N(1,1)
+\pp_H: TM\to \pi_\cM^*TN \quad \mbox{and} \quad \pp_V: TM\to \pi_\cM^* T^*N(1,1)
 $$
 are the projections.
 Then we obtain the metric and symplectic form by
@@ -205,7 +204,7 @@ What remains to be done, is to show that (\ref{almost_there}) agrees
 with the form obtained in \cite{DM} once a trivialisation of
 $\cT^*\rightarrow N$ has been chosen.
 
-Let $x\in N$ and let ${\mathcal W}\subset N$ be an open 
+Let $x\in N$ and let ${\mathcal U}\subset N$ be an open 
 neighbourhood of $x$ with 
 local coordinates $(x^1, \dots, x^n)$ such that
 $T_pN=\mbox{span}(\p/\p x^1, \dots, \p/\p x^n)$. The connection 
@@ -215,10 +214,10 @@ vertical sub-bundles
 T(\cT^*)=\mathcal{H}(\cT^*)\oplus \mathcal{V}(\cT^*),
 \]
 as in (\ref{HV}).
-To obtain the explicit form of this splitting, let $V_\alpha,\ \alpha=0, 1, \dots, n$ be components of a local section of $\cT^*$ in the trivialisation over ${\mathcal{W}}$.
+To obtain the explicit form of this splitting, let $V_\alpha,\ \alpha=0, 1, \dots, n$ be components of a local section of $\cT^*$ in the trivialisation over ${\mathcal{U}}$.
 Then
 \[
-\nabla^{\cT^*} V_\beta=d V_\beta-\gamma_{\beta}^{\alpha} V_\alpha,
+\nabla^{\cT} V_\beta=d V_\beta-\gamma_{\beta}^{\alpha} V_\alpha,
 \]
 where $\gamma_{\alpha}^\beta= \gamma_{i\alpha}^\beta dx^i$, and the components
 of the co-tractor connection 
@@ -281,8 +280,8 @@ Note that the shift (\ref{eq:zeta_change}) in the fiber coordinates $\zeta_{i}$ 
  % by (for each $x\in N$)
 given by
 \begin{equation} \label{eq:T*N_is_M}
-T_p^*N\ni \zeta_i  \mapsto [(1,\zeta_i)]=[(\tau,\tau \zeta_i)]\in
-\mathbb{P}(\cT_p^*)\setminus \mathcal{Z}(\tau) .
+T_x^*N\ni \zeta_i  \mapsto [(1,\zeta_i)]=[(\tau,\tau \zeta_i)]\in
+\mathbb{P}(\cT_x^*)\setminus \mathcal{Z}(\tau) .
 \end{equation}
 \end{rmk}
 
@@ -312,29 +311,18 @@ the boundary ${\mathcal{Z}}(\tau)=0$ of $\ol{M}$ the metric
 
 \begin{theo}
 \label{our_thm}
-The Einstein almost para--K\"ahler metric $(M, g, \Omega)$ given by 
+The Einstein almost para--K\"ahler structure $(M, g, \Omega)$ given by 
 (\ref{eq:coord_form}) admits a para--$c$--projective compactification
 $\ol{M}$. The structure on the
 $(2n-1)$--dimensional boundary $\p M\cong \mathcal{Z}(\tau)$ of $\ol{M}$ includes a contact structure together with a conformal structure 
-and a para--CR structure
+and an almost para--CR structure
 defined on the contact distribution.
 \end{theo}
 %\mynote{Here we stated that $\p M\cong \mathbb{P}(T^* N)$ but unless I can justify why this carries a para--CR structure it might be better to leave this out or put $\p M\cong \mathcal{Z}(\tau)$.}
 \noindent
 {\bf Proof.}
 In the proof below we shall explicitly construct the boundary $\p M$ together with the contact structure and the associated conformal structure on the contact distribution. We shall
-first deal with the model $M=SL(n+1)/GL(n)$, and then explain how the curvature
-of $(N, [\nabla])$ modifies the compactification.
-
-In the model case we can define coordinates $x^i$ on $N=\mathbb{RP}^n$ by taking $X=(1,x^1,\dots,x^n)$, where $(X^0,\dots,X^n)$ are homogeneous coordinates and we are working in an open set where $X^0\neq 0$. The ${x^i}$ are flat coordinates, so the connection components (and hence the Schouten tensor) vanish and (\ref{eq:coord_form}) reduces to
-\be
-\label{model_metric}
-g=d\zeta_i\odot dx^i + \zeta_i\zeta_jdx^i\odot dx^j, \qquad
-\Omega=d \zeta_i\wedge d x^i \quad
-\mbox{where}\quad
-i, j =1, \dots, n.
-\ee
-As noted in section \ref{sec:trac_construction}, we can use (\ref{eq:T*N_is_M}) relate the affine coordinates $\zeta_i$ on the fibres of $T^*N$ to the tractor coordinates (\ref{eq:T*coords}) by setting $\zeta_i=\mu_i/\tau$ on the complement of the zero locus ${\mathcal Z}(\tau)$ of $\tau$.
+first deal with the model case (\ref{eq:intro_model_g}), and then explain how the addition of non--vanishing projective curvature modifies the compactification.
 
 Now consider an open set  ${\mathcal U}\subset M$ given
 by  $\zeta_ix^i>0$, and define the function $T$ on ${\mathcal U}$ by
@@ -360,13 +348,13 @@ by
 \be
 \label{def_theta}
 V\hook \theta=J(V)\hook d T, \quad\mbox{or equivalently}\quad 
-\theta_a=\Omega_{ac}g^{bc}{{\nabla}^{\bf g}}_b T, \quad a, b, c=1, \dots, 2n
+\theta_a=\Omega_{ac}g^{bc}\,({{^{\bf g}\nabla}}_b T), \quad a, b, c=1, \dots, 2n
 \ee
-where $J$ is the para--complex structure of $(g,  \Omega)$. Using (\ref{model_metric}) this  gives
+where $J$ is the para--complex structure of $(g,  \Omega)$. Using (\ref{eq:intro_model_g}) this  gives
 \[
 \theta=2T(1-T)\zeta_id x^i-dT.
 \]
-We need $n$  open sets $U_1, \dots, U_n$ such that $\zeta_k\neq 0$ on $U_k$
+We need $n$  open sets $\mathcal{U}_1, \dots, \mathcal{U}_n$ such that $\zeta_k\neq 0$ on $\mathcal{U}_k$
 to cover the zero locus of $T$. Here we chose $k=n$, and use
 a coordinate system given by
 \[
@@ -512,7 +500,7 @@ J|_{ \mathbb{H} }= &-\frac{\p}{\p X^A}\otimes dX^A +Z_A\frac{\p}{\p Y}\otimes dX
 \]
 and (\ref{boundary_compatibility}) is satisfied.
 
-For the Nijenhuis condition, we use the formula (\ref{eq:Nijenhuis_index_def}). Note that we need only consider components of this with $a=T$, and thus only need to work with the $\p/\p T$ components of $J$ to find the terms which look like $\p J$. This is a one--form which we shall call $J^{(T)}$ and find to be
+For the Nijenhuis condition, we use the formula (\ref{eq:Nijenhuis_index_def}). Note that we need only consider components of this with $a=T$, and thus only need to work with the $\p/\p T$ components of $J$ to find the terms which look like $\p J$.\mynote{What did I mean by this?} This is a one--form which we shall call $J^{(T)}$ and find to be
 \[
 \begin{split}
 J^{(T)}=&\bigg(-\frac{Z_B}{K} + \frac{T[2Z_B + (\Gamma^D_{AB}Z_D+\Gamma^n_{AB})X^A + (\Gamma^D_{nB}Z_D+\Gamma^n_{nB})Y]}{K} \\
@@ -521,7 +509,7 @@ J^{(T)}=&\bigg(-\frac{Z_B}{K} + \frac{T[2Z_B + (\Gamma^D_{AB}Z_D+\Gamma^n_{AB})X
 &\qquad - T^2[\Rho_{An}X^A+\Rho_{nn}Y]\bigg)dY.
 \end{split}
 \]
-Note that this agrees with (\ref{J_T=0}) when $T=0$. We use it to calculate ${\mathcal{N}^{a}}_{bc}\nabla_a T$, dropping terms which vanish when $T=0$ to verify (\ref{Nijenhuis_condition}).
+Note that this agrees with (\ref{J_T=0}) when $T=0$. We use it to calculate ${\mathcal{N}^{a}}_{bc}{^{\bf g}}\nabla_a T$, dropping terms which vanish when $T=0$ to verify (\ref{Nijenhuis_condition}).
 
 %The only non--vanising components of the torsion of the Libermann connection (\ref{lib}) on
 %the boundary $\p M$ are tangential to $\p M$,
@@ -562,7 +550,7 @@ ideal ${\mathcal I}=<\theta_0, \theta_1>$, where
 \theta_0=dY+ZdX, \quad \theta_1=dZ-\Big(\Gamma_{11}^2+(\Gamma_{11}^1-2\Gamma_{12}^2)Z+(\Gamma_{22}^2-2\Gamma_{12}^1)Z^2+
 \Gamma_{22}^1Z^3\Big)dX
 \]
-are one--forms on a three--dimensional manifold $B=\PP(T^*N)$ with local coordinates $(X, Y, Z)$. If $f:C\rightarrow B$ is an immersion, then $f^*(\theta_0)=0, f^*(\theta_1)=0$ is equivalent
+are one--forms on a three--dimensional manifold $\mathcal{Z}=\PP(T^*N)$ with local coordinates $(X, Y, Z)$. If $f:C\rightarrow \mathcal{Z}$ is an immersion, then $f^*(\theta_0)=0, f^*(\theta_1)=0$ is equivalent
 to (\ref{ODE}) as long as $\theta_2\equiv dX$ does not vanish. In terms of these three one--forms
 the contact structure, and the metric on the contact distribution are given by
 $
@@ -604,10 +592,10 @@ the main results then follow from the general holonomy theory in
 In this section we describe the homogeneous model case as an orbit decomposition. Recall from section \ref{sec:intro_model} that the flat projective structure on $N=\RP^n$ gives rise to 
 the neutral signature para--K\"ahler Einstein metric (\ref{eq:intro_model_g}) on the manifold
 \begin{align*}
-M=SL(n+1)/GL(n)=&\{([P],[L])\in\RP^n\times\RP_n\ |\ P\cdot L\neq 0\} \\
+M=&\{([P],[L])\in\RP^n\times\RP_n\ |\ P\cdot L\neq 0\} \\
 =& \mathcal{M}\backslash\mathcal{Z}(\tau),
 \end{align*}
-where $\mathcal{M}$ was the projectivised cotractor bundle $\PP(\cT^*)$ of $\RP^n$ and $\mathcal{Z}(\tau)$ was the zero locus of the density $\tau$.
+where $\mathcal{M}$ was the projectivised cotractor bundle $\PP(\cT^*)$ of $\RP^n$ and $\mathcal{Z}$ was the zero locus of the density $\tau$, or equivalently the set of incident pairs in $\RP^n\times\RP_n$.
 
 Here we shall instead take $N$ to be the sphere $S^n$ with its standard flat projective structure where the geodesics are great circles, so that $N$ is orientable in all dimensions and the cotractor bundle is trivial. Note that $S^n$ is a double cover of $\RP^n$ which consists of the set of \textit{oriented} lines in $\R^{n+1}$. We obtain it by taking an analogous quotient of $\R^{n+1}$ where points are considered equivalent only up to multiplication by a \textit{positive} number. We call this ray projectivisation and denote it $\PP_+(\R^{n+1})$.
 
@@ -660,7 +648,7 @@ M_-=\{ ([X],[U])\in \mathcal{M} \mid U(X)<0 \}.
 $$
 We may think of $\mathcal{Z}$ as the `boundary' (at infinity) for the open orbits $M_\pm$, each of which is a copy of our para--K\"ahler Einstein manifold $M$.
 
-We therefore have an orbit decomposition of the homogeneous space $G/H$, where the additional structure $I$ has induced a reduction of the holonomy group by $\tilde{H}$. Based on the results of \cite{CGH-duke} for the analogous c-projective case, we expect the closed orbit $\mathcal{Z}$ to carry a para--CR structure and the open orbits $M_\pm$ to carry para--K\"ahler Einstein metrics which are induced by the dual pairing between $V$ and $V^*$ just as we saw in section \ref{sec:trac_construction}.
+We therefore have an orbit decomposition of the homogeneous space $G/H$, where the additional structure $I$ has induced a reduction of the holonomy group by $\tilde{H}$. Based on the results of \cite{CGH-duke} for the analogous $c$--projective case, we expect the closed orbit $\mathcal{Z}$ to carry a para--CR structure and the open orbits $M_\pm$ to carry para--K\"ahler Einstein metrics which are induced by the dual pairing between $V$ and $V^*$ just as we saw in section \ref{sec:trac_construction}.
 
 \mynote{I think maybe they're para--K\"ahler because $\pi^*{\cT}\oplus\pi^*{\cT^*}$ is the para--$c$--proj tractor bundle, and Einstein because this is also somehow a projective tractor bundle? But I'm not totally clear on this.}
 

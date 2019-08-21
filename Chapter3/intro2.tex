@@ -10,7 +10,7 @@ The purpose of this chapter is to introduce the preliminaries that are required 
 
 \mynote{some notation and conventions e.g. $i,j,k=1,...,n$ are indices for coordinates on $n$? and $\Gamma$ are connection components which are defined by... Curvature is defined by}
 \begin{itemize}
-\item We denote the bundle of anti--symmetrised covariant tensors of degree $m$ as $\Lambda^m$, and call sections of this bundle $m$--forms.
+\item Sym and antisym brackets
 \item Note that our conventions are $(d\omega)_{ab\dots c}=\partial_{[a}\omega_{b\dots c]},$
 $(\eta\wedge\omega)_{a\dots d}=\eta_{[a\dots b}\omega_{c\dots d]},$
 $\omega=\omega_{a\dots b}dx^{a}\wedge\dots\wedge dx^{b},$
@@ -21,6 +21,7 @@ implying ${d}x^{a}\wedge{d}x^{b}=\frac{1}{2}({d}x^{a}\otimes{d}x^{b}-{d}x^{b}\ot
 \item Probably a convention for $\varepsilon_{AB}$ and matching indices descending to the right
 \item Line projectivisation except where stated otherwise.
 \item $\R_n$ means...
+\item $\pi$ for maps to $N$, $\kappa$ for maps to $M$.
 \end{itemize}
 
 
@@ -29,7 +30,7 @@ implying ${d}x^{a}\wedge{d}x^{b}=\frac{1}{2}({d}x^{a}\otimes{d}x^{b}-{d}x^{b}\ot
 Our discussion follows Eastwood \cite{Eastwood}.
 
 \begin{defi}\label{def:projstruct} A projective structure $(N,[\nabla])$
-on a manifold $N$ is an equivalence class $[\nabla]$ of torsion--free affine connections on $N$ which have the same unparametrised geodesics.
+on a manifold $N$ is an equivalence class $[\nabla]$ of torsion--free affine connections on $N$ which have the same geodesics as unparametrised curves.
 \end{defi}
 
 The following proposition converts definition \ref{def:projstruct} to a more operational form.
@@ -45,9 +46,9 @@ for some one--form $\Upsilon.$
 \be \label{eq:TTMsequence}
 0 \longrightarrow \mathcal{V} \longrightarrow T(TN) \longrightarrow \pi_T^*TN \longrightarrow 0
 \ee
-so that each $X^i\in T_pM$ has a unique pull--back in the horizontal sub--bundle complementary to $\mathcal{V}$. The integral curves of these pull--backs, when projected down to $N$, then define the geodesics of the connection.
+so that each $\xi^i\in T_xN$ has a unique pull--back in the horizontal sub--bundle complementary to $\mathcal{V}_x$. The integral curves of these pull--backs, when projected down to $N$, then define the geodesics of the connection.
 
-Any two connections are related by some $\delta\Gamma^k_{ij}$, which satisfies $\delta\Gamma^k_{ij}=\delta\Gamma^k_{(ij)}$ as long as both connections are torsion--free. A change of connection is equivalent to a change in the splitting of (\ref{eq:TTMsequence}). At $X^i\in T_xN$, the change is given by the homomorphism from $T_xN$ to $T_xN=\mathcal{V}_p$ defined by the contraction $X^i\Gamma^k_{ij}$. Thus the two connections define the same geodesics if and only if $X^iX^j\Gamma^k_{ij}$ is a multiple of $X^k$ for all $X^i$. This is true if and only if there is a one--form $\Upsilon_i$ such that (\ref{eq:proj_change}) is satisfied.\footnote{To see this, take some one--form $\omega_i$ and note that $2X^iX^j\delta^k_{(i}\Upsilon_{j)}\omega_k$ vanishes if and only if $X^k\omega_k$ does.}
+Any two connections are related by some $\delta\Gamma^k_{ij}$, which satisfies $\delta\Gamma^k_{ij}=\delta\Gamma^k_{(ij)}$ as long as both connections are torsion--free. A change of connection is equivalent to a change in the splitting of (\ref{eq:TTMsequence}). At $\xi^i\in T_xN$, the change is given by the homomorphism from $T_xN$ to $T_xN=\mathcal{V}_x$ defined by the contraction $\xi^i\Gamma^k_{ij}$. Thus the two connections define the same geodesics if and only if $\xi^i\xi^j\Gamma^k_{ij}$ is a multiple of $\xi^k$ for all $\xi^i$. This is true if and only if there is a one--form $\Upsilon_i$ such that (\ref{eq:proj_change}) is satisfied.\footnote{To see this, take some one--form $\omega_i$ and note that $2\xi^i\xi^j\delta^k_{(i}\Upsilon_{j)}\omega_k$ vanishes if and only if $\xi^k\omega_k$ does.}
 \koniec
 
 One can show that the curvature of a connection $\nabla$ in the projective class can be uniquely decomposed as
@@ -62,22 +63,32 @@ The objects $W_{ijk}^{\ \ \ l}$ and $\Rho_{ij}$ transform as
 \be \label{eq:schout_change}
 \ov{W}_{ijk}^{\ \ \ l} = W_{ijk}^{\ \ \ l}, \qquad \ov{\Rho}_{ij} = \Rho_{ij} - \nabla_i\Upsilon_j + \Upsilon_i\Upsilon_j
 \ee
-under a change of representative connection (\ref{eq:proj_change}). Note that for $n=2$ the Weyl tensor is always vanishing.
+under a change of representative connection (\ref{eq:proj_change}). Note that for $n=2$ the Weyl tensor always vanishes.
 
 A projective structure in dimension $n$ is said to be flat if it is diffeomorphic to the real projective space $\RP^n$ with its standard flat projective structure.
 \begin{defi} \label{def:RPn}
-The real projective space $\RP^n$ of dimension $n$ is the space of unoriented lines through the origin in $\R^{n+1}$, thought of as $\RP^n=(\R^{n+1}\backslash\{0\})/\R^*$, with geodesics given by straight lines in $\R^{n+1}$ under the projection $\pi_\PP:\R^{n+1}\rightarrow\RP^n$.
+The real projective space $\RP^n$ of dimension $n$ is the space of unoriented lines through the origin in $\R^{n+1}$, thought of as $\RP^n=(\R^{n+1}\backslash\{0\})/\R^*$, where the quotient identifies points $P\in\R^{n+1}$ under the equivalence relation
+\[
+(P^0,\dots,P^n)\sim (cP^0,\dots,cP^n)\ \forall\ c\in\R^*.
+\]
+The geodesics on $\RP^n$ are given by planes through the origin in $\R^{n+1}$ under the projection $\pi_\PP:\R^{n+1}\rightarrow\RP^n$.
 \end{defi}
-Let $P$ denote a non--zero point in $\R^{n+1}$ with coordinates $(P^0,P^1,\dots,P^n)^T$, and let $[P]$ denote the corresponding point in $\RP^n$, labelled by homogeneous coordinates. In a patch where $P^0\neq 0$, we can write $[P]=[1,P^1/P^0,\dots,P^n/P^0]$ and define inhomogeneous coordinates on $\RP^n$ by
+
+\begin{rmk}
+Let $P$ denote a non--zero point in $\R^{n+1}$ with coordinates $(P^0,\dots,P^n)^T$, and let $[P]$ denote the corresponding point in $\RP^n$, labelled by homogeneous coordinates. In a patch $\mathcal{U}_0$ where $P^0\neq 0$, we can write $[P]=[1,P^1/P^0,\dots,P^n/P^0]$ and define inhomogeneous coordinates on $\RP^n$ by
 \[
 (x^1,\dots,x^n) = (P^1/P^0,\dots,P^n/P^0).
 \]
-If we combine this with coordinate patches where $P^i\neq 0,\ i=1,\dots,n$, we can build an atlas for $\RP^n$.
+If we combine this with coordinate patches $\mathcal{U}_i$ where $P^i\neq 0,\ i=1,\dots,n$, we can build an atlas for $\RP^n$.
+\end{rmk}
 
+\begin{rmk}
 The flat projective structure on $\RP^n$ has a special duality property which we now discuss. Consider the set of planes through the origin in $\R^{n+1}$. These can be specified by their normal vector, which is defined only up to multiplication by $\R^*$. Let us denote such a plane by a non--zero row vector $L\in\R_{n+1}$. A point $P\in\R^{n+1}$ lies in the plane defined by $L$ if and only if $L\cdot P=0$.
 
 When we projectivise the $\R^{n+1}$, any $P\neq 0$ descends to a point $[P]\in\RP^n$, and any plane descends to a line $[L]\subset\RP^n$. The incidence relation $L\cdot P=0$ is now equivalent to the point $[P]$ lying in the line $[L]$. The homogeneous coordinates $[L]$ parametrise a second projective surface which we think of as the dual to the $\RP^n$ parametrised by $[P]$, and denote $\RP_n$.
+\end{rmk}
 
+\begin{rmk}
 Real projective space can be viewed as homogeneous space as follows. 
 The group $SL(n+1,\mathbb{R})$ acts from the left via the fundamental representation on coordinates $(P^0,\dots,P^n)^T$ in $\R^{n+1}$, and this descends to a transitive action on $\RP^n$. By the orbit stabiliser theorem, $\RP^n=SL(n+1,\R)/S$, where $S$ is a subgroup stabilising a point. If we choose the point $[1,0,\dots,0]$, the elements of $S$ are matrices of the general form
 \[
@@ -85,14 +96,17 @@ The group $SL(n+1,\mathbb{R})$ acts from the left via the fundamental representa
 0 & a
 \end{pmatrix}
 \]
-for some $a\in GL(n,\mathbb{R})$ and $b\in\mathbb{R}_{n}$. 
+for some $a\in GL(n,\mathbb{R})$ and $b\in\mathbb{R}_{n}$.
+\end{rmk} 
 
+\begin{rmk}
 It can be shown that a projective structure in dimension $n>2$ is flat if and only if its Weyl projective curvature tensor vanishes. The necessary and sufficient condition in dimension $n=2$ is the vanishing of the Cotton tensor $\nabla_{[i}\Rho_{j]k}$ for any choice of representative connection.
+\end{rmk}
 
 \subsection{The Cartan bundle}
 
-One way of understanding the construction of $(M,g)$ in \cite{DM}
-is via the Cartan bundle \cite{Cartan} of the projective structure $(N,[\nabla])$ (see also \cite{KobNag}). Cartan geometries generalise Klein's Erlangen programme \cite{Klein}, a study of homogeneous spaces $G/S$, to the curved case, in which the total space $G$ is replaced by a principal right $S$-bundle over a manifold $N$ such that the tangent space to $N$ at every point is isomorphic to the Lie algebra quotient $\mathfrak{g}/\mathfrak{s}$. Since projective structures are modelled on $\mathbb{RP}^{n}$, which can be viewed as a homogeneous space, they constitute a type of Cartan geometry.
+One way of understanding the construction in \cite{DM}
+is via the Cartan bundle \cite{Cartan} of the projective structure $(N,[\nabla])$ (see also \cite{KobNag,Sharpe}). Cartan geometries generalise Klein's Erlangen programme \cite{Klein}, a study of homogeneous spaces $G/S$, to the curved case, in which the total space $G$ is replaced by a principal right $S$-bundle over a manifold $N$ such that the tangent space to $N$ at every point is isomorphic to the Lie algebra quotient $\mathfrak{g}/\mathfrak{s}$. Since projective structures are modelled on $\mathbb{RP}^{n}$, which can be viewed as a homogeneous space, they constitute a type of Cartan geometry.
 
 In the Riemannian case, the model space is $\mathbb{R}^{n}\cong\mathrm{Euc}(n)/SO(n)$. The corresponding Cartan geometry is a general, curved Riemannian manifold. One has an obvious subclass of frames which are ``adapted'' to the metric, i.e. those which are orthonormal. We can thus think of a curved Riemannian manifold as a principal $SO(n)$ bundle whose tangent spaces are modelled on $\mathbb{R}^{n}\cong\mathfrak{Euc}(n)/\mathfrak{so}(n)$. We say that Riemannian manifolds are Cartan geometries of type $(\mathrm{Euc}(n),SO(n))$.
 
@@ -112,7 +126,7 @@ In the projective case, if we choose the point which is stabilised by $S$ to be 
 \ee
 where $\omega$, $\eta$ and $\phi$ are one-forms valued in $\mathbb{R}^{n}$, $\mathbb{R}_{n}$ and $\mathfrak{gl}(n,\mathbb{R})$ respectively.
 We will refer to the components of $\omega$ and $\eta$ with respect
-to the natural basis of $\mathfrak{sl}(n+1,\mathbb{R})$ as $\{\omega^{(i)}\}$ and $\{\eta_{(i)}\}$, so that $\omega^{(i)}$ and $\eta_{(i)}$ are both one-forms.
+to the natural basis of $\mathfrak{sl}(n+1,\mathbb{R})$ as $\{\omega^{(i)}\}$ and $\{\eta_{(i)}\}$, so that $\omega^{(i)}$ and $\eta_{(i)}$ are both one-forms taking values in $\R$.
 
 \begin{defi}
 The Cartan geometry of a projective structure $(N,[\nabla])$ consists of a principal right $S$--bundle $\pi_\mathcal{G}:\mathcal{G}\rightarrow N$, where the right--action of some $s\in S$ on $\mathcal{G}$ is denoted by $R_s$, and a one--form $\theta$ on $\mathcal{G}$ called the Cartan connection, which takes values in $\mathfrak{sl}(n+1,\mathbb{R})$. The Cartan connection can be written in the form (\ref{eq:cartan_connection}) and has the following properties:
@@ -137,7 +151,7 @@ where $L$ and $W$ are smooth curvature functions valued in $\mathrm{Hom}(\R^n\we
 
 \begin{rmk} \label{rmk:theta_symmetry}
 For every open set $\mathcal{U}\subset N$, projective vector fields on $\mathcal{U}$ are in one-to-one correspondence with vector fields on $\pi_\mathcal{G}^{-1}(\mathcal{U})$
-which preserve $\theta$ and are equivariant under the principal $S$-action.
+which preserve $\theta$ and are equivariant under the principal $S$--action.
 \end{rmk}
 
 
@@ -149,7 +163,7 @@ where points in $\mathcal{G}\times_{\rho_\mathcal{B}} \mathcal{B}$ are equivalen
 (u_1,v_1)\sim (u_2,v_2) \quad \Leftrightarrow \quad \exists\ s\ \mbox{such that}\  u_2=u_1 s,\  v_2 = \rho_\mathcal{B}(s^{-1}) v_1.
 \]
 
-We thus obtain a vector bundle over $N$ whose fibers are diffeomorphic to $\mathcal{B}$. A section $\tilde{\sigma}:N\rightarrow \mathcal{G}\times_{\rho_\mathcal{B}} \mathcal{B}$ is represented by a map ${\sigma}:\mathcal{G}\rightarrow \mathcal{B}$ which is equivariant in the sense that ${\sigma}(us)=\rho_\mathcal{B}(s^{-1}){\sigma}(u)$ for all $s\in S$. Importantly, any such bundle inherits a connection from the Cartan connection $\theta$ on $\mathcal{G}$.
+We thus obtain a vector bundle over $N$ whose fibers are diffeomorphic to $\mathcal{B}$. A section $\tilde{\sigma}:N\rightarrow \mathcal{G}\times_{\rho_\mathcal{B}} \mathcal{B}$ is represented by a map ${\sigma}:\mathcal{G}\rightarrow \mathcal{B}$ which is equivariant in the sense that ${\sigma}(us)=\rho_\mathcal{B}(s^{-1}){\sigma}(u)$ for all $s\in S$. Importantly, any such bundle inherits a connection from the Cartan connection $\theta$ on $\mathcal{G}$. The concept of an associated bundle applies to any principal bundle, but we call vector bundles which are associated to a Cartan bundle \textit{tractor} bundles, and the connections that they inherit from the Cartan connection are called tractor connections.
 \end{rmk}
 
 
@@ -259,7 +273,7 @@ where we have used (\ref{eq:chi_mu_change}) in the first line, (\ref{eq:tractor_
 \end{align*}
 using (\ref{eq:tractor_connection}) and the change of splitting (\ref{eq:chi_mu_change}) adapted to the tensor product of $T^*N$ and $ \cT^*$ of which the derivative is a section.
 
-Any bundle associated to $\mathcal{G}$ via some $S$--module is equipped with a tractor connection which is inherited from the connection on the standard cotractor bundle, or equivalently from the Cartan connection. It is this connection, with its special equivariance property, that allows us to construct an Einstein metric as in invariant of the projective structure. This construction is the subject of the following section.
+Any tensor product of $\cT,\cT^*$ and $\cE(1)$ is equipped with a tractor connection which is inherited from the connection on the standard cotractor bundle. Equivalently, any such tensor product can be thought of as an associated vector bundle to the Cartan bundle $\mathcal{G}$, with its connection inherited from the Cartan connection via the corresponding representation of $S$. It is this connection, with its special equivariance property, that allows us to construct an Einstein metric as in invariant of the projective structure. This construction is the subject of the following section.
 
 \section{The projective to Einstein correspondence}
 Consider a quotient of the total space $\mathcal{G}$ of the
@@ -289,7 +303,7 @@ subgroup. It thus descends to a naturally defined object on the quotient
 $M=\mathcal{G}/GL(n,\mathbb{R})$.
 
 \begin{theo}{\cite{DM}}\label{thm:DM}
-There exist a metric and two-form
+There exist a metric and two--form
 $(g,\Omega)$ on $\mbox{\ensuremath{M=\mathcal{G}/GL(n,\mathbb{R})}}$ such
 that the quotient map $\kappa_q:P\rightarrow M$ gives
 \begin{eqnarray} 
@@ -298,7 +312,7 @@ that the quotient map $\kappa_q:P\rightarrow M$ gives
 \end{eqnarray}
 where $\mathrm{Sym}$ and $\mathrm{Ant}$ denote the symmetric and
 anti-symmetric parts of the $(0,2)$ tensor $\eta\omega$. Moreover,
-$\Omega$ is closed as a consequence of the Bianchi identity, $g$
+$\Omega$ is closed as a consequence of the Bianchi identity satisfied by the curvature two--form (\ref{eq:curvature_2-form}), $g$
 is Einstein with non-zero scalar curvature, and the two are related
 by an endomorphism $J$ satisying $J^{2}=Id$. Hence $(g,\Omega)$
 is an almost para--Kahler structure on $M$.
@@ -364,7 +378,7 @@ Note that an endomorphism $J$ which squares to the identity defines two $n$--dim
 \subsection{Symmetries of $M$}
 
 Recall that a projective vector field on any manifold with a connection
-generates a 1-parameter family of transformations which preserve the
+generates a one--parameter family of transformations which preserve the
 geodesics of that connection up to parametrisation. Projective vectors
 fields thus naturally arise as the symmetries of a projective structure.
 Explicitly, a vector field $\widehat{K}$ is projective if it satisfies
@@ -382,7 +396,7 @@ by
 One consequence of the symmetry property of the Cartan connection discussed in remark \ref{rmk:theta_symmetry} is that for every open set $\mathcal{U}\subset N$ we have an isomorphism between the Lie algebra of projective vector fields on $\mathcal{U}$ and the Lie algebra of vector fields on $\pi_\mathcal{G}^{-1}(\mathcal{U})$ preserving the natural contraction $\eta\omega$. Such vector fields must descend to vector fields on $\pi_\cM^{-1}(\mathcal{U})$ preserving $(g,\Omega)$. In fact, it can be shown that every Killing vector field of $(M,g_\Lambda)$ is also symplectic with respect to $\Omega_\Lambda$ and is therefore the lift of a projective vector field on $(N,[\nabla])$.
 
 Explicitly, for every projective vector field $\widehat{K}$ of $(N,[\nabla])$
-there is a corresponding Killing vector $K$ of $(M,g_{\Lambda})$
+there is a corresponding symmetry $K$ of $(M,g_{\Lambda},\Omega_\Lambda)$
 given in local coordinates by 
 \begin{equation}
 {K}=\widehat{K}-\zeta_{i}\frac{\partial \widehat{K}^{j}}{\partial x^{i}}\frac{\partial}{\partial \zeta_{j}}+\frac{1}{\Lambda}\Upsilon_{i}\frac{\partial}{\partial \zeta_{i}},\label{eq:kvf_from_pvf}
@@ -441,10 +455,10 @@ M=\{([P],[L])\in\RP^n\times\RP_n\ |\ P\cdot L\neq 0\}.
 
 As discussed in section \ref{sec:projgeom}, a point $[L]\in\RP_n$ represents a line $[L]\subset\RP^n$ which passes through $P\in\RP^n$ if and only if $L\cdot P=0$. In chapter \ref{chap:EW_and_toda} we will show that the conformal structure on $M$ can be obtained by demanding that two pairs $([P], [L])$ and $([\tP], [\tL])$ are null--separated if there exists a line which contains the three points $([P], [\tP], [L]\cap [\tL])$.
 
-We also find in the model case that the symplectic form $\Omega$ is parallel with respect to the Levi--Civita connection $^g\nabla$ of $g$, meaning that the endomorphism $J$ of $TM$ which relates $g$ and $\Omega$ is also parallel. As a result of this, the distributions $D_\pm$ defined by the two $n$--dimensional eigen--bundles of $J$ are parallel in the sense that $^g\nabla_{\xi_1}\xi_2\in\Gamma(D_\pm)$ for all $\xi_1\in \Gamma(TM),\ \xi_2\in\Gamma(D_\pm)$. This makes the distributions \textit{Frobenius integrable}, meaning that the Lie bracket of any two sections of either distribution is also a section of that distribution, or equivalently (as shown by Frobenius) that each of the two distributions is tangent to a foliation of sub--manifolds of dimension $n$ at every point.
+We also find in the model case that the symplectic form $\Omega$ is parallel with respect to the Levi--Civita connection $^g\nabla$ of $g$, meaning that the endomorphism $J$ of $TM$ which relates $g$ and $\Omega$ is also parallel. As a result of this, the distributions $D_\pm$ defined by the two $n$--dimensional eigen--bundles of $J$ are parallel in the sense that $^g\nabla_{\xi_1}\xi_2\in\Gamma(D_\pm)$ for all $\xi_1\in \Gamma(TM),\ \xi_2\in\Gamma(D_\pm)$. This makes the distributions \textit{Frobenius integrable}, meaning that the Lie bracket of any two sections of $D_\pm$ is also a section of $D_\pm$, or equivalently (as shown by Frobenius) that each of the two distributions is tangent to a foliation of sub--manifolds of dimension $n$ at every point.
 
 To see that a parallel distribution is necessarily Frobenius integrable, note that the Lie bracket can be written
 \[
-[\xi_1,\xi_2]= \nabla_{\xi_1}\xi_2- \nabla_{\xi_2}\xi_1\in\Gamma(D_\pm)\quad\mbox{for all}\quad \xi_1,\xi_2\in\Gamma(D_\pm),
+[\xi_1,\xi_2]= \nabla_{\xi_1}\xi_2- \nabla_{\xi_2}\xi_1\in\Gamma(D)\quad\mbox{for all}\quad \xi_1,\xi_2\in\Gamma(D),
 \]
 where $D$ is a distribution which is parallel with respect to a connection $\nabla$. The Frobenius integrability of $D_\pm$ makes $(M,g,\Omega)$ not only almost para--K\"ahler but also para--K\"ahler. Further discussion about this distinction can be found in chapter \ref{chap:c-proj}.

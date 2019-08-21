@@ -12,7 +12,7 @@ of the symplectic structure from $M$. This metric is interesting in the context 
 
 \section{The model case} \label{sec:quadric}
 
-We first note that the flat projective structure on $\mathbb{RP}^{n}$ gives a one--parameter family of $2n$-dimensional Einstein spaces $M$ which are a Kaluza-Klein reductions of quadrics in $\mathbb{R}^{n+1,n+1}$. For $N=\RP^n$, the family $\{(g_\Lambda,\Omega_\Lambda)\,;\,\Lambda\neq 0\}$ is given by
+We first note that the flat projective structure on $\mathbb{RP}^{n}$ gives a one--parameter family of $2n$-dimensional Einstein spaces $M$ which are a Kaluza--Klein reductions of quadrics in $\mathbb{R}^{n+1,n+1}$. For $N=\RP^n$, the family $\{(g_\Lambda,\Omega_\Lambda)\,;\,\Lambda\neq 0\}$ is given by
 \begin{eqnarray}
 g_{\Lambda} & = &  dx^{i} \odot d\zeta_{i}+\Lambda\zeta_{i}\zeta_j dx^{i}\odot dx^j \label{eq:g_LambdaModel}\\
 \Omega_{\Lambda} & = &  d\zeta_{i}\wedge dx^{i}.\nonumber
@@ -113,9 +113,9 @@ In this basis the metric takes the form
 g=e^{1}\odot e^{n+1}+\dots+e^{n}\odot e^{2n}.\label{eq:g_cov_const}
 \end{equation}
 We are interested in the metric
-\[
+\be \label{eq:lifted_metric}
 \hat{g}=-e^{0}\odot e^{0}+g,
-\]
+\ee
 where
 \[
 e^{0}=\sqrt{\Lambda}\biggl(\frac{ d\lambda}{\Lambda}+\mathcal{A}\biggr).
@@ -152,23 +152,23 @@ tensor of $\mathcal{Q}$. Note that we use the notation $\psi_{\ b}^{a}=\psi_{\ b
 \hat{\Psi}_{\ b}^{a} & = & {d}\hat{\psi}_{\ b}^{a}+\hat{\psi}_{\ c}^{a}\wedge\hat{\psi}_{\ b}^{c}+\hat{\psi}_{\ 0}^{a}\wedge\hat{\psi}_{\ b}^{0}\\
  & = & {d}\psi_{\ b}^{a}+{\sqrt{\Lambda}{d}}(\Omega_{\ b}^{a}e^{0})+\psi_{\ c}^{a}\wedge\psi_{\ b}^{c}+\sqrt{\Lambda}\Omega_{\ c}^{a}e^{0}\wedge\psi_{\ b}^{c}+\sqrt{\Lambda}\Omega_{\ b}^{c}\psi_{\ c}^{a}\wedge e^{0}+\Lambda\Omega_{\ [c}^{a}\Omega_{|b|d]}e^{c}\wedge e^{d}\\
  & = & \Psi_{\ b}^{a}+\sqrt{\Lambda}E_{c}(\Omega_{\ b}^{a})e^{c}\wedge e^{0}+\Lambda(\Omega_{\ b}^{a}\Omega_{cd}+\Omega_{\ [c}^{a}\Omega_{|b|d]})e^{c}\wedge e^{d}+\sqrt{\Lambda}(\Omega_{\ b}^{c}\psi_{\ cd}^{a}-\Omega_{\ c}^{a}\psi_{\ bd}^{c})e^{d}\wedge e^{0}\\
- & = & \Psi_{\ b}^{a}+\sqrt{\Lambda}{^g\nabla}_{c}\Omega_{\ b}^{a}e^{c}\wedge e^{0}+\Lambda(\Omega_{\ b}^{a}\Omega_{cd}+\Omega_{\ [c}^{a}\Omega_{|b|d]})e^{c}\wedge e^{d}.\\
+ & = & \Psi_{\ b}^{a}+\sqrt{\Lambda}{^{\bf g}\nabla}_{c}\Omega_{\ b}^{a}e^{c}\wedge e^{0}+\Lambda(\Omega_{\ b}^{a}\Omega_{cd}+\Omega_{\ [c}^{a}\Omega_{|b|d]})e^{c}\wedge e^{d}.\\
 \hat{\Psi}_{\ a}^{0} & = & {d}\hat{\psi}_{\ a}^{0}+\hat{\psi}_{\ b}^{0}\wedge\hat{\psi}_{\ a}^{b}\\
  & = & \sqrt{\Lambda}E_{[c}(\Omega_{|a|b]})\theta^{c}\wedge\theta^{b}-\sqrt{\Lambda}\Omega_{ab}\psi_{\ c}^{b}\wedge e^{c}+\sqrt{\Lambda}\Omega_{bc}e^{c}\wedge(\psi_{\ a}^{b}+\sqrt{\Lambda}\Omega_{\ a}^{b}e^{0})\\
  & = & \sqrt{\Lambda}(E_{[d}(\Omega_{|a|b]})-\Omega_{ac}\psi_{\ [bd]}^{c}+\Omega_{c[d}\psi_{\ |a|b]}^{c})e^{d}\wedge e^{b}+\Lambda\Omega_{bc}\Omega_{\ a}^{b}e^{c}\wedge e^{0}\\
- & = & \sqrt{\Lambda}{^g\nabla}_{[c}\Omega_{|a|d]}e^{c}\wedge e^{d}+\Lambda\Omega_{bc}\Omega_{\ a}^{b}e^{c}\wedge e^{0}.
+ & = & \sqrt{\Lambda}{^{\bf g}\nabla}_{[c}\Omega_{|a|d]}e^{c}\wedge e^{d}+\Lambda\Omega_{bc}\Omega_{\ a}^{b}e^{c}\wedge e^{0}.
 \end{eqnarray*}
 Hence we have that
 \begin{eqnarray*}
 \hat{R}_{cdb}^{\ \ \ a} & = & R_{cdb}^{\ \ \ a}+2\Lambda(\Omega_{\ b}^{a}\Omega_{cd}+\Omega_{\ [c}^{a}\Omega_{|b|d]})\\
-\hat{R}_{c0b}^{\ \ \ a} & = & \sqrt{\Lambda}{^g\nabla}_{c}\Omega_{\ b}^{a}\\
-\hat{R}_{cda}^{\ \ \ 0} & = & 2\sqrt{\Lambda}{^g\nabla}_{[c}\Omega_{|a|d]}\\
+\hat{R}_{c0b}^{\ \ \ a} & = & \sqrt{\Lambda}{^{\bf g}\nabla}_{c}\Omega_{\ b}^{a}\\
+\hat{R}_{cda}^{\ \ \ 0} & = & 2\sqrt{\Lambda}{^{\bf g}\nabla}_{[c}\Omega_{|a|d]}\\
 \hat{R}_{c0a}^{\ \ \ 0} & = & \Lambda\Omega_{bc}\Omega_{\ a}^{b},
 \end{eqnarray*}
 and thus, using $\hat{R}_{\mu\nu}=\hat{R}_{\rho\mu\nu}^{\ \ \ \ \rho}$,
 \begin{eqnarray*}
 \hat{R}_{00} & = & \Lambda\Omega_{bc}\Omega^{bc}=-2n\Lambda=2n\Lambda\hat{g}_{00}\\
-\hat{R}_{b0} & = & \sqrt{\Lambda}{^g\nabla}_{c}\Omega_{\ b}^{c}=0\\
+\hat{R}_{b0} & = & \sqrt{\Lambda}{^{\bf g}\nabla}_{c}\Omega_{\ b}^{c}=0\\
 \hat{R}_{db} & = & R_{db}+2\Lambda(\Omega_{\ b}^{c}\Omega_{cd}+\frac{1}{2}\Omega_{\ c}^{c}\Omega_{bd}-\frac{1}{2}\Omega_{\ d}^{c}\Omega_{bc})-\Lambda\Omega_{cd}\Omega_{\ b}^{c}\\
  & = & R_{db}+2\Lambda\Omega_{b}^{\ c}\Omega_{dc}\\
  & = & 2(n+1)\Lambda g_{db}-2\Lambda g_{db}=2n\Lambda g_{db}=2n\Lambda\hat{g}_{db}.
@@ -193,7 +193,7 @@ can be found in \cite{Pope}.
 
 From the Cartan perspective, $\hat{g}_{\Lambda=1}$ can be thought
 of as a metric on the $2n+1$-dimensional space obtained by taking
-a quotient $\hat{\kappa}_q:\mathcal{G}\mapsto \mathcal{G}/SL(n,\mathbb{R})=\mathcal{Q}$ of the Cartan
+a quotient $\hat{\kappa}_q:\mathcal{G}\rightarrow \mathcal{G}/SL(n,\mathbb{R})=\mathcal{Q}$ of the Cartan
 bundle, where we embed $SL(n,\mathbb{R})\subset GL(n,\mathbb{R})$
 in $S$ as in (\ref{eq:GL(n)_embedding}) but with $a$ now denoting
 an element of $SL(n,\mathbb{R})$ (so that $\mathrm{det}a^{-1}=1$).
@@ -220,12 +220,8 @@ $ d\mathcal{A}=\Omega$ (where we are now taking $\Omega$ to be defined on $\math
 We then have a natural way of constructing a metric $\hat{g}$
 on $\mathcal{Q}$ as a linear combination of $g$ and $e^{0}\odot e^{0}$,
 where $e^{0}$ is $\mathcal{A}$ up to addition of some exact one-form. It turns
-out that there is choice of linear combination with $e^0=\mathcal{A}$ such that $\hat{g}$
-is Einstein:
-\[
-\hat{g}=-e^{0}\odot e^{0}+g.
-\]
-The fact that this metric is exactly (\ref{eq:G}) can be verified
+out that there is choice (\ref{eq:lifted_metric}) of linear combination with $e^0=\mathcal{A}$ such that $\hat{g}$
+is Einstein. The fact that this metric is exactly (\ref{eq:G}) can be verified
 by constructing the Cartan connection of $(N,[\nabla])$ explicitly
 in terms of a representative connection $\nabla\in[\nabla]$.
 
@@ -233,7 +229,7 @@ in terms of a representative connection $\nabla\in[\nabla]$.
 
 \begin{lemma} \label{lem:div_free} The symplectic form $\Omega\equiv\Omega_\Lambda$ on $M$ is divergence--free. In index notation,
 \[
-{^g\nabla}^c\Omega_{cb}=0.
+{^{\bf g}\nabla}^c\Omega_{cb}=0.
 \]
 \end{lemma}
 
@@ -244,7 +240,7 @@ and
 \Omega=\sum_{i=1}^{n}e^{i}\wedge e^{i+n}\quad\implies\quad\Omega_{ab}=\sum_{i=1}^{n}\delta_{[a}^{i}\delta_{b]}^{i+n}.
 \]
 Note that from now on we will omit the summation sign and use the
-summation convention regardless of whether $i,j$-indices are up or
+summation convention regardless of whether $i,j$ indices are up or
 down. As in section \ref{sec:quadric}, we look for $\psi_{\ b}^{a}$
 by considering $ de^{a}$ (recall that $i,j=1,\dots,n$ and
 $a,b=1,\dots,2n$):
@@ -258,7 +254,7 @@ $a,b=1,\dots,2n$):
  & = & \bigl[\Lambda^{-1}{\nabla}_{m}\Rho_{ij}-({\nabla}_{m}\Gamma_{ij}^{k})\zeta_{k}-2\zeta_{(i}\Rho_{j)m}\bigr]e^{m}\wedge e^{j}+(2\Lambda \zeta_{(i}\delta_{j)}^{k}-\Gamma_{ij}^{k})e^{k+n}\wedge e^{j}\\
 \end{eqnarray*}
 Note that we have used ${\nabla}$ to denote the chosen connection on $N$
-with components $\Gamma_{jk}^{i}$; it is a different object to the Levi--Civita connection $^g\nabla$ on $M$. Next we wish to read off the spin
+with components $\Gamma_{jk}^{i}$; it is a different object to the Levi--Civita connection $^{\bf g}\nabla$ on $M$. Next we wish to read off the spin
 connection $\psi_{\ b}^{a}$ such that ${d}e^{a}=-\psi_{\ b}^{a}\wedge e^{b}$
 and the following index symmetries are satisfied:
 \begin{eqnarray*}
@@ -275,15 +271,15 @@ We find that
 One can check that these satisfy both the index symmetries above and
 are such that $ de^{a}=-\psi_{\ b}^{a}\wedge e^{b}$, and
 we know from theory that there is a unique set of $\psi_{\ b}^{a}$
-that have both of these properties. Note that we have used $P^{\mathrm{S}}$
-and $P^{\mathrm{A}}$ to denote the symmetric and antisymmetric parts
-of $P$ in order to avoid too much confusion from having multiple
+that have both of these properties. Note that we have used $\Rho^{\mathrm{S}}$
+and $\Rho^{\mathrm{A}}$ to denote the symmetric and antisymmetric parts
+of $\Rho$ in order to avoid too much confusion from having multiple
 symmetrisation brackets in the indices.
 
 We are now ready to calculate the divergence of $\Omega$. Since it
 is covariantly constant in this basis, we obtain
 \[
-{^g\nabla}_{c}\Omega_{ab}=-\psi_{\ ac}^{d}\Omega_{db}-\psi_{\ bc}^{d}\Omega_{ad}=-\psi_{\ ac}^{d}\Omega_{db}+\psi_{\ bc}^{d}\Omega_{da}=2\Omega_{d[a}\psi_{\ b]c}^{d}.
+{^{\bf g}\nabla}_{c}\Omega_{ab}=-\psi_{\ ac}^{d}\Omega_{db}-\psi_{\ bc}^{d}\Omega_{ad}=-\psi_{\ ac}^{d}\Omega_{db}+\psi_{\ bc}^{d}\Omega_{da}=2\Omega_{d[a}\psi_{\ b]c}^{d}.
 \]
 We can split the right hand side into
 \begin{eqnarray*}
@@ -294,11 +290,11 @@ We can split the right hand side into
 The first two terms are the same but with $a\leftrightarrow b$, so
 are lost in the antisymmetrisation. Thus
 \[
-{^g\nabla}_{c}\Omega_{ab}=-\delta_{[a}^{k}\delta_{b]}^{l}\delta_{c}^{m}A_{klm}.
+{^{\bf g}\nabla}_{c}\Omega_{ab}=-\delta_{[a}^{k}\delta_{b]}^{l}\delta_{c}^{m}A_{klm}.
 \]
 Tracing amounts to contracting this with $g^{ac}$:
 \[
-{^g\nabla}^{c}\Omega_{cb}=-\delta_{[a}^{k}\delta_{b]}^{l}g^{ac}\delta_{c}^{m}A_{klm}=-\delta_{[a}^{k}\delta_{b]}^{l}g^{am}A_{klm},
+{^{\bf g}\nabla}^{c}\Omega_{cb}=-\delta_{[a}^{k}\delta_{b]}^{l}g^{ac}\delta_{c}^{m}A_{klm}=-\delta_{[a}^{k}\delta_{b]}^{l}g^{am}A_{klm},
 \]
 but $g^{am}$ is non-zero only when $a=m+n>n$ and $\delta_{[a}^{k}\delta_{b]}^{l}$
 is non-zero only when $a=k\leq n$ or $a=l\leq n$. We can therefore
