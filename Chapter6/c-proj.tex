@@ -20,9 +20,9 @@ The purpose of this section is to introduce the definitions which are required t
 \begin{defi}
 The Nijenhuis tensor of an endomorphism $J$ of $TM$ is defined by
 \be \label{eq:Nijenhuis_def}
-\mathcal{N}(X,Y):=[X,Y] - [JX,JY] + J([JX,Y] + [X,JY]),
+\mathcal{N}(\xi_1,\xi_2):=[\xi_1,\xi_2] - [J\xi_1,J\xi_2] + J([J\xi_1,\xi_2] + [\xi_1,J\xi_2]),
 \ee
-where $X,Y$ are vector fields on $M$ and $[\cdot\,,\cdot]$ denotes the Lie bracket of vector fields. This is equivalent to
+where $\xi_1,\xi_2$ are vector fields on $M$ and $[\cdot\,,\cdot]$ denotes the Lie bracket of vector fields. This is equivalent to
 \be \label{eq:Nijenhuis_index_def}
 \mathcal{N}^a_{bc}=J^d_{\ [b}\p_{|d|}J^a_{\ c]}-J^d_{\ [b}\p_{c]}J^a_{\ d}.
 \ee
@@ -65,9 +65,9 @@ We will be interested in the case where $ \mathbb{H} $ is a hyperplane distribut
 We can define the notion of non--degeneracy for an almost (para--)CR structure as follows. The Lie bracket of vector fields induces an antisymmetric $\R$--bilinear operator $\Gamma( \mathbb{H} )\times\Gamma( \mathbb{H} )\rightarrow\Gamma(T\mathcal{Z}/ \mathbb{H} )$ which in fact is also bilinear over smooth functions on $\mathcal{Z}$. This means it is induced by a bundle map $\mathcal{L}: \mathbb{H} \times \mathbb{H} \rightarrow T\mathcal{Z}/ \mathbb{H} $ which is called the \textit{Levi bracket}. Since it takes values in a line bundle it can be thought of as an antisymmetric bilinear form called the \textit{Levi form}. Degeneracy (or not) of the almost (para--)CR structure is defined as degeneracy (or not) of the Levi form. Note that the Levi form also defines a \textit{symmetric} bilinear form $h(\cdot\,,\cdot)=\mathcal{L}(\cdot\,,J\cdot)$ as long as $\mathcal{L}$ is (para--)Hermitian with respect to $J$, and that this symmetric bilinear form is non--degenerate if and only if $\mathcal{L}$ is.
 
 \begin{defi}
-A contact structure on a manifold $\mathcal{Z}$ of dimension $2n-1$ is a hyperplane distribution $ \mathbb{H} \subset T\mathcal{Z}$ specified as the kernel of a one--form $\theta$ on $\mathcal{Z}$ which satisfies the complete non--integrability condition
+A contact structure on a manifold $\mathcal{Z}$ of dimension $2n-1$ is a hyperplane distribution $ \mathbb{H} \subset T\mathcal{Z}$ specified as the kernel of a one--form $\beta$ on $\mathcal{Z}$ which satisfies the complete non--integrability condition
 \be \label{eq:non_integrability}
-\theta\wedge \underbrace{(d\theta \wedge \dots\wedge d\theta)}_{n-1\ \mathrm{times}} \neq 0.
+\beta\wedge \underbrace{(d\beta \wedge \dots\wedge d\beta)}_{n-1\ \mathrm{times}} \neq 0.
 \ee
 \end{defi}
 
@@ -105,17 +105,17 @@ $\p M\subset \ol{M}$, the differential $dT$ does not vanish on $\p M$, and the c
 
 
 
-It follows easily from this definition that the endomorphism $J$ on $M$ naturally extends to all of $\ol{M}$ by parallel transport with respect to $\ol{\nabla}$. It thus defines an almost para--CR structure on the hyperplane distribution $ \mathbb{H} $ defined by $ \mathbb{H} _x:=T_x\p M \cap J(T_x \p M)$ for all $x\in\p M$. It can be shown (see lemma 5 of \cite{CG} and modify to the case $J^2=Id$) that this almost para--CR structure is non--degenerate if and only if for any local defining function $T$ the one--form $\theta=dT\circ J$, whose restriction to $\p M$ has kernel $ \mathbb{H} $, satisfies the complete non--integrability condition (\ref{eq:non_integrability}) making $ \mathbb{H} $ a contact distribution on $\p M$.
+It follows easily from this definition that the endomorphism $J$ on $M$ naturally extends to all of $\ol{M}$ by parallel transport with respect to $\ol{\nabla}$. It thus defines an almost para--CR structure on the hyperplane distribution $ \mathbb{H} $ defined by $ \mathbb{H} _m:=T_m\p M \cap J(T_m \p M)$ for all $m\in\p M$. It can be shown that this almost para--CR structure is non--degenerate if and only if for any local defining function $T$ the one--form $\beta=dT\circ J$, whose restriction to $\p M$ has kernel $ \mathbb{H} $, satisfies the complete non--integrability condition (\ref{eq:non_integrability}) making $ \mathbb{H} $ a contact distribution on $\p M$.
 
-To see this, first note that $\theta(X)=0\ \forall\ X\in\Gamma( \mathbb{H} )$ implies $d\theta(\cdot\,,\cdot)=-\theta([\cdot\,,\cdot])$, so the restriction of $d\theta$ to $ \mathbb{H} \times \mathbb{H} $ represents the Levi form $\mathcal{L}$. This means that the almost para--CR structure on $\p M$ is non--degenerate if and only if the restriction of $d\theta(X,\cdot)$ to $ \mathbb{H} $ is non--zero for all non--zero $X\in\Gamma( \mathbb{H} )$. But this is equivalent to the non--integrability condition (\ref{eq:non_integrability}).
+To see this, first note that $\beta(\xi)=0\ \forall\ \xi\in\Gamma( \mathbb{H} )$ implies $d\beta(\cdot\,,\cdot)=-\beta([\cdot\,,\cdot])$, so the restriction of $d\beta$ to $ \mathbb{H} \times \mathbb{H} $ represents the Levi form $\mathcal{L}$. This means that the almost para--CR structure on $\p M$ is non--degenerate if and only if the restriction of $d\beta(\xi,\cdot)$ to $ \mathbb{H} $ is non--zero for all non--zero $\xi\in\Gamma( \mathbb{H} )$. But this is equivalent to the non--integrability condition (\ref{eq:non_integrability}).
 
 %Note also the distinction between the integrability (or not) of the ($2n-2$)--dimensional distribution $ H $ and the integrability (or not) of the two ($n-1$)--dimensional distributions given by the eigenvalue decomposition of $ H $ under the action of $J$.
 
-Another result of lemma 5 of \cite{CG} is that $d\theta$ is Hermitian on $\p M$ if and only if the Nijenhuis tensor (\ref{eq:Nijenhuis_def}) of $J$ takes so--called \textit{asymptotically tangential values}. This is equivalent to the following statement in index notation:
+Another result of lemma 5 of \cite{CG} is that $d\beta$ is Hermitian on $\p M$ if and only if the Nijenhuis tensor (\ref{eq:Nijenhuis_def}) of $J$ takes so--called \textit{asymptotically tangential values}. This is equivalent to the following statement in index notation:
 \be
 \label{Nijenhuis_condition}
 \Big({\mathcal{N}^{a}}_{bc}\nabla_a T\Big)\Big|_{T=0}=0.  \ee
-Note in particular that Hermiticity of $d\theta$ on $\p M$ implies Hermiticity of $d\theta$ on $ \mathbb{H} $, and hence the existence of a non--degenerate metric $h(\cdot\,,\cdot)=d\theta(\cdot\,,J\cdot)|_ \mathbb{H} $ on $ \mathbb{H} $. Both of these facts also apply in the ``para'' case.
+Note in particular that Hermiticity of $d\beta$ on $\p M$ implies Hermiticity of $d\beta$ on $ \mathbb{H} $, and hence the existence of a non--degenerate metric $h(\cdot\,,\cdot)=d\beta(\cdot\,,J\cdot)|_ \mathbb{H} $ on $ \mathbb{H} $. Both of these facts also apply in the ``para'' case.
 
 \mynote{Could check this and maybe put the proof in. It is only a couple of paragraphs.}
 
@@ -125,22 +125,22 @@ The first main result of \cite{CG} is  Theorem 8 in this reference, which gives 
 \cite{CG}, and so further details may be obtained from that source.
 \begin{theo}[\cite{CG}] \label{CGthm}
 Let $\ol{M}$ be a smooth manifold with boundary $\p M$ and interior $M$. Let $J$ be an almost para--complex structure on $\ol{M}$, such that $\p M$ is non--degenerate and the Nijenhuis tensor $\mathcal{N}$ of $J$ has asymptotically tangential values. Let $g$ be an admissible pseudo--Riemannian Hermitian metric on $M$. For a local defining function $T$ for the boundary defined on an open 
-subset ${\mathcal U}\subset \ol{M}$, put $\theta=dT\circ J$ and, given a non--zero real 
+subset ${\mathcal U}\subset \ol{M}$, put $\beta=dT\circ J$ and, given a non--zero real 
 constant $C$, define a Hermitian tensor field $h_{T,C}$ on 
 ${\mathcal U}\cap M$ by
 \[
-h_{T,C}:=Tg+\frac{C}{T}(dT^2-\theta^2).
+h_{T,C}:=Tg+\frac{C}{T}(dT^2-\beta^2).
 \]
 Suppose that for each $x\in\p M$ there is an open neighbourhood 
 ${\mathcal{U}}$ of $x$ in $\ol{M}$, a local defining function $T$ defined on 
 ${\mathcal{U}}$, and a non--zero constant $C$ such that
 \begin{itemize}
 \item $h_{T,C}$ admits a smooth extension to all of $\mathcal{U}$
-\item for all vector fields $X,Y$ on $\mathcal{U}$ with $dT(Y)=\theta(Y)=0$, the function $h_{T,C}(X,JY)$ approaches $Cd\theta(X,Y)$ at the boundary.
+\item for all vector fields $\xi_1,\xi_2$ on $\mathcal{U}$ with $dT(\xi_2)=\beta(\xi_2)=0$, the function $h_{T,C}(\xi_1,J\xi_2)$ approaches $Cd\beta(\xi_1,\xi_2)$ at the boundary.
 \end{itemize}
 Then $g$ is $c$--projectively compact.
 \end{theo}
-Note that the statement in  Theorem \ref{CGthm} does not depend on the choice of $T$. Different choices of $T$ result in rescalings of the one--form $\theta$ on the boundary by a nowhere vanishing function.
+Note that the statement in  Theorem \ref{CGthm} does not depend on the choice of $T$. Different choices of $T$ result in rescalings of the one--form $\beta$ on the boundary by a nowhere vanishing function.
 
 
 \section{Compactifying the Dunajski--Mettler Class} 
@@ -149,7 +149,7 @@ In order to construct the para--$c$--projective compactification of the manifold
 
 \subsection{Tractor construction of $M$}
 
-In section \ref{sec:trac_construction} it was shown that the projectivised cotractor bundle of $N$ is stratified by the canonical density $\tau=X\hook U$, where $X$ is the pull back of the canonical tractor along $\pi:\cT^*\rightarrow N$ and $U$ is the tautological section of $\pi^*(\cT^*)$. It is easily verified that the zero locus $\mathcal{Z}(\tau)$ of $\tau$ is a smoothly embedded hypersurface in $\mathcal{M}:=\PP(\cT^*)$. %  and from (\ref{eq:T*N_is_M}) it follows at once that this may be identified with the total space of the fibrewise projectivisation $\mathbb{P}(T^*N)$ (which is well known to have an almost para--CR structure). \mynote{Is there a way to justify this "well known" fact?}
+In section \ref{sec:trac_construction} it was shown that the projectivised cotractor bundle of $N$ is stratified by the canonical density $\tau=V\hook W$, where $V$ is the pull back of the canonical tractor along $\pi_\cT:\cT^*\rightarrow N$ and $W$ is the tautological section of $\pi_\cT^*(\cT^*)$. It is easily verified that the zero locus $\mathcal{Z}(\tau)$ of $\tau$ is a smoothly embedded hypersurface in $\mathcal{M}:=\PP(\cT^*)$. %  and from (\ref{eq:T*N_is_M}) it follows at once that this may be identified with the total space of the fibrewise projectivisation $\mathbb{P}(T^*N)$ (which is well known to have an almost para--CR structure). \mynote{Is there a way to justify this "well known" fact?}
 In the following theorem, we show that $\mathcal{M}\backslash\mathcal{Z}(\tau)$ can be identified with $M$.
 
 \begin{theo}\cite{DGW}\label{metric} 
@@ -159,25 +159,25 @@ There is a metric $g$ and two--form $\Omega$ on $\mathcal{M}\setminus \mathcal{Z
  Considering first the total space $\cT^*$ and then its tangent
  bundle, note that there is an exact sequence
   \begin{equation}\label{TM}
-0\to \pi^* \cT^*\to T(\cT^*)\to \pi^*TN\to 0,
+0\to \pi_\cT^* \cT^*\to T(\cT^*)\to \pi_\cT^*TN\to 0,
   \end{equation}
-  where we have identified $\pi^* \cT^*$ as the vertical sub-bundle of $T(\cT^*)$.
-The tractor connection on the vector bundle $\cT^*\to N$ is equivalent to a splitting of this sequence, identifying $\pi^*TN$ with a distinguished  sub--bundle of horizontal subspaces in 
+  where we have identified $\pi_\cT^* \cT^*$ as the vertical sub-bundle of $T(\cT^*)$.
+The tractor connection on the vector bundle $\cT^*\to N$ is equivalent to a splitting of this sequence, identifying $\pi_\cT^*TN$ with a distinguished  sub--bundle of horizontal subspaces in 
 $ T(\cT^*)$ so that we have 
 \begin{equation}\label{HV}
-T(\cT^*)=  \pi^*TN\oplus \pi^* \cT^* .
+T(\cT^*)=  \pi_\cT^*TN\oplus \pi_\cT^* \cT^* .
 \end{equation}
 
 %From the usual Euler sequence of projective space (or see (\ref{useful}) in the last Section) it follows that
-We move now to the total space of $\mathbb{P}( {\cT^*})$, and we note that again the tractor (equivalently, Cartan) connection determines a splitting of the tangent bundle $T(\mathbb{P} {\cT^*})$ in which the second term of the display (\ref{HV}) is replaced by a quotient of $\pi^* \cT^*(0,1)$ \cite{CGH-duke}. Indeed, if we work at a point $m\in \mathbb{P}(\cT^*)$, observe that $\pi^*\cT^*(0,1)$ has a filtration
+We move now to the total space of $\cM:=\mathbb{P}( {\cT^*})$, and we note that again the tractor (equivalently, Cartan) connection determines a splitting of the tangent bundle $T(\mathbb{P} {\cT^*})$ in which the second term of the display (\ref{HV}) is replaced by a quotient of $\pi_\cT^* \cT^*(0,1)$ \cite{CGH-duke}. Indeed, if we work at a point $m\in \mathbb{P}(\cT^*)$, observe that $\pi_\cT^*\cT^*(0,1)$ has a filtration
 \begin{equation}\label{quotient}
-0\to \cE (0,0)_m\stackrel{U_m}{\to}  \pi_\cM^* \cT^*(0,1)|_m \to  \pi_\cM^* \cT^*(0,1)|_m/\langle U_m \rangle \to 0
+0\longrightarrow \cE (0,0)_m\xrightarrow{W_m}  \pi_\cM^* \cT^*(0,1)|_m \longrightarrow  \pi_\cM^* \cT^*(0,1)|_m/\langle W_m \rangle \longrightarrow 0
 \end{equation}
-where, as usual, $U$ is the canonical section. 
-But away from $\mathcal{Z}(\tau )$, we have that  $U$ canonically splits 
+where, as usual, $W$ is the canonical section. 
+But away from $\mathcal{Z}(\tau )$, we have that  $W$ canonically splits 
 the appropriately re-weighted pull back of  the sequence (\ref{eq:T*sequence})
 $$
-0\to \pi_\cM^* T^*N(1,1)   \to \pi_\cM^* \cT^*(0,1) \stackrel{X/\tau}{\to} \cE(0,0) \to 0 .
+0\longrightarrow \pi_\cM^* T^*N(1,1)   \longrightarrow \pi_\cM^* \cT^*(0,1) \xrightarrow{V/\tau} \cE(0,0) \longrightarrow 0 .
 $$
 This identifies the quotient in (\ref{quotient}), and thus we have canonically
 $$
@@ -207,17 +207,17 @@ $\cT^*\rightarrow N$ has been chosen.
 Let $x\in N$ and let ${\mathcal U}\subset N$ be an open 
 neighbourhood of $x$ with 
 local coordinates $(x^1, \dots, x^n)$ such that
-$T_pN=\mbox{span}(\p/\p x^1, \dots, \p/\p x^n)$. The connection 
+$T_xN=\mbox{span}(\p/\p x^1, \dots, \p/\p x^n)$. The connection 
 (\ref{eq:tractor_connection}) gives a splitting of $T(\cT^*)$ into the horizontal and
 vertical sub-bundles
 \[
 T(\cT^*)=\mathcal{H}(\cT^*)\oplus \mathcal{V}(\cT^*),
 \]
 as in (\ref{HV}).
-To obtain the explicit form of this splitting, let $V_\alpha,\ \alpha=0, 1, \dots, n$ be components of a local section of $\cT^*$ in the trivialisation over ${\mathcal{U}}$.
+To obtain the explicit form of this splitting, let $\sigma_\alpha,\ \alpha=0, 1, \dots, n$ be components of a local section of $\cT^*$ in the trivialisation over ${\mathcal{U}}$.
 Then
 \[
-\nabla^{\cT} V_\beta=d V_\beta-\gamma_{\beta}^{\alpha} V_\alpha,
+\nabla^{\cT} \sigma_\beta=d \sigma_\beta-\gamma_{\beta}^{\alpha} \sigma_\alpha,
 \]
 where $\gamma_{\alpha}^\beta= \gamma_{i\alpha}^\beta dx^i$, and the components
 of the co-tractor connection 
@@ -231,12 +231,12 @@ can be read--off from (\ref{eq:tractor_connection}):
 In terms of these components we can write
 \begin{align*}
 \mathcal{H}(\cT^*)&=\mbox{span}
-\Big( \frac{\p}{\p x^i}+ {\gamma_{i\alpha}^\beta} V_\beta
-\frac{\p}{\p V_{\alpha}}, i=1, \dots, n \Big), \\
- \mathcal{V}(\cT^*)&=\mbox{span}\Big(\frac{\p}{\p V_{\alpha}}, \alpha=0, 1, 
+\Big( \frac{\p}{\p x^i}+ {\gamma_{i\alpha}^\beta} \sigma_\beta
+\frac{\p}{\p \sigma_{\alpha}}, i=1, \dots, n \Big), \\
+ \mathcal{V}(\cT^*)&=\mbox{span}\Big(\frac{\p}{\p \sigma_{\alpha}}, \alpha=0, 1, 
 \dots, n\Big).
 \end{align*}
-Setting $\zeta_i=V_i/V_0$, where $\tau=V_0\neq 0$ %\footnote{Rod @ Maciej: I have added $V_0=\tau$. You agree, right!?}
+Setting $\zeta_i=\sigma_i/\sigma_0$, where $\tau=\sigma_0\neq 0$ %\footnote{Rod @ Maciej: I have added $\sigma_0=\tau$. You agree, right!?}
 on the complement of 
 $\mathcal{Z}(\tau)$, 
   we can compute the push forwards
@@ -256,12 +256,12 @@ This is identical to the form appearing in \cite{DM}.
 \koniec
 
 \begin{rmk}
-Note that the shift (\ref{eq:zeta_change}) in the fiber coordinates $\zeta_{i}$ corresponding to a change of projective connection can be motivated from the change (\ref{eq:chi_mu_change}) in the splitting of $\cT^*$ and the definitions of $V_i$ and $\zeta_i$.
+Note that the shift (\ref{eq:zeta_change}) in the fiber coordinates $\zeta_{i}$ corresponding to a change of projective connection can be motivated from the change (\ref{eq:chi_mu_change}) in the splitting of $\cT^*$ and the definitions of $\sigma_i$ and $\zeta_i$.
 \end{rmk}
 
 \begin{rmk} We can also understand $\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau)$ as an affine bundle modelled on $T^* N$. Given a connection in the projective class and hence a decomposition (\ref{eq:T*splitting}), there is a smooth fibre bundle isomorphism
   \begin{equation}\label{key-id}
-\iota : T^* N\to \mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau).
+\kappa_A : T^* N\to \mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau).
     \end{equation}
 %First, given  $\nabla$, we can represent an element $U\in
 %  \cT^*_p$ ($x\in N$) by the pair $(\tau , \mu) \in \cE (1)_p\oplus
@@ -291,7 +291,7 @@ T_x^*N\ni \zeta_i  \mapsto [(1,\zeta_i)]=[(\tau,\tau \zeta_i)]\in
 
 \subsection{The compactification theorem}
 
-As noted in chapter \ref{chap:intro2}, in the special case where $N=\RP^n$ and $[\nabla]$ is projectively flat, the manifold $M=SL(n+1, \R)/GL(n, \R)$ can be identified with the projectivisation of $\R^{n+1}\times \R_{n+1}\setminus {\mathcal Z}$, where ${\mathcal Z}$ denotes the set of incident pairs (point, hyperplane). The compactification procedure described in the theorem \ref{our_thm} below will, for the model, attach these incident pairs back to $M$, and more generally (in case of a curved projective structure $(N,[\nabla])$) will attach the zero locus of $\tau$ back into $\mathbb{P}(\cT^*)$. The boundary $\p M \cong \mathcal{Z}(\tau)$ from definition \ref{defi_1} will play the role of a submanifold
+As noted in chapter \ref{chap:intro2}, in the model case where $N=\RP^n$ and $[\nabla]$ is projectively flat, the manifold $M=SL(n+1, \R)/GL(n, \R)$ can be identified with the projectivisation of $\R^{n+1}\times \R_{n+1}\setminus {\mathcal Z}$, where ${\mathcal Z}$ denotes the set of incident pairs (point, hyperplane). The compactification procedure described in the theorem \ref{our_thm} below will, for the model, attach these incident pairs back to $M$, and more generally (in case of a curved projective structure $(N,[\nabla])$) will attach the zero locus of $\tau$ back into $\mathbb{P}(\cT^*)$. The boundary $\p M \cong \mathcal{Z}(\tau)$ from definition \ref{defi_1} will play the role of a submanifold
 separating two open sets in $\mathbb{P}(\cT^*)$ which have $\tau>0$ and $\tau<0$ respectively. The method of the proof will be to show that near
 the boundary ${\mathcal{Z}}(\tau)=0$ of $\ol{M}$ the metric 
 (\ref{eq:coord_form}) can be put in the local normal form of theorem 
@@ -313,8 +313,8 @@ the boundary ${\mathcal{Z}}(\tau)=0$ of $\ol{M}$ the metric
 \label{our_thm}
 The Einstein almost para--K\"ahler structure $(M, g, \Omega)$ given by 
 (\ref{eq:coord_form}) admits a para--$c$--projective compactification
-$\ol{M}$. The structure on the
-$(2n-1)$--dimensional boundary $\p M\cong \mathcal{Z}(\tau)$ of $\ol{M}$ includes a contact structure together with a conformal structure 
+$\ol{M}$. The
+$(2n-1)$--dimensional boundary $\p M\cong \mathcal{Z}(\tau)$ of $\ol{M}$ carries a contact structure together with a conformal structure 
 and an almost para--CR structure
 defined on the contact distribution.
 \end{theo}
@@ -343,16 +343,16 @@ $\mathcal{U}$, such that near the boundary the metric $g$ takes a form
 as in Theorem \ref{CGthm}.
 
 
-First define $\theta\in \Lambda^1(\ol{M})$ $\ov{M}$
+First define $\beta\in \Lambda^1(\ol{M})$ $\ov{M}$
 by 
 \be
 \label{def_theta}
-V\hook \theta=J(V)\hook d T, \quad\mbox{or equivalently}\quad 
-\theta_a=\Omega_{ac}g^{bc}\,({{^{\bf g}\nabla}}_b T), \quad a, b, c=1, \dots, 2n
+\xi\hook \beta=J(\xi)\hook d T, \quad\mbox{or equivalently}\quad 
+\beta_a=\Omega_{ac}g^{bc}\,({{^{\bf g}\nabla}}_b T), \quad a, b, c=1, \dots, 2n
 \ee
-where $J$ is the para--complex structure of $(g,  \Omega)$. Using (\ref{eq:intro_model_g}) this  gives
+where $J$ is the para--complex structure of $(g,  \Omega)$ and $\xi$ is a vector field on $M$. Using (\ref{eq:intro_model_g}) this  gives
 \[
-\theta=2T(1-T)\zeta_id x^i-dT.
+\beta=2T(1-T)\zeta_id x^i-dT.
 \]
 We need $n$  open sets $\mathcal{U}_1, \dots, \mathcal{U}_n$ such that $\zeta_k\neq 0$ on $\mathcal{U}_k$
 to cover the zero locus of $T$. Here we chose $k=n$, and use
@@ -369,33 +369,33 @@ A=1, \dots, n-1.
 \]
 We compute
 \[
-\theta=2(1-T)\frac{dY+Z_AdX^A}{K}-dT, \quad
+\beta=2(1-T)\frac{dY+Z_AdX^A}{K}-dT, \quad
 \zeta_n=\frac{1}{KT}, \quad \mbox{where}\quad K\equiv Y+Z_AX^A,
 \]
 and substitute
 \[
 \zeta_i dx^i=\frac{1}{KT}(dY+Z_AdX^A)
 \]
-into (\ref{model_metric}). This gives
+into (\ref{eq:coord_form}). This gives
 \be
 \label{CG_Form}
-g=\frac{\theta^2-dT^2}{4T^2}+\frac{1}{T}h,
+g=\frac{\beta^2-dT^2}{4T^2}+\frac{1}{T}h_T,
 \ee
 where 
 \[
-h=\frac{1}{4(1-T)}(\theta^2-dT^2)+\frac{1}{K}\Big(dZ_A\odot dX^A-\frac{1}{2(1-T)}X^A dZ_A\odot(\theta+dT)\Big)
+h_T=\frac{1}{4(1-T)}(\beta^2-dT^2)+\frac{1}{K}\Big(dZ_A\odot dX^A-\frac{1}{2(1-T)}X^A dZ_A\odot(\beta+dT)\Big)
 \]
 is regular at the boundary $T=0$. This is in agreement with the 
 asymptotic form in Theorem \ref{CGthm} (see \cite{CG} for further details).
 
-%Note that (\ref{def_theta}) defines the one form $\theta$ on the boundary $T=0$  only up to a overall multiple of a positive function.
-The restriction $h$ to $\p M$ gives a metric on a distribution ${ \mathbb{H} }=\mbox{Ker} (\theta|_{T=0})$
+%Note that (\ref{def_theta}) defines the one form $\beta$ on the boundary $T=0$  only up to a overall multiple of a positive function.
+The restriction of $h_T$ to $\p M$ gives a metric on the distribution ${ \mathbb{H} }=\mbox{Ker} (\beta|_{T=0})$
 \begin{gather}
-\theta|_{T=0}=2\frac{dY+Z_A dX^A}{Y+Z_AX^A}, \nonumber \\
-h_0=\frac{1}{4}{(\theta|_{T=0})}^2+\frac{1}{2(Y+Z_AX^A)}(2dZ_A\odot dX^A-X^AdZ_A\odot(\theta|_{T=0})). \label{h000}
+\beta|_{T=0}=2\frac{dY+Z_A dX^A}{Y+Z_AX^A}, \nonumber \\
+h_T|_{T=0}=\frac{1}{4}{(\beta|_{T=0})}^2+\frac{1}{2(Y+Z_AX^A)}(2dZ_A\odot dX^A-X^AdZ_A\odot(\beta|_{T=0})). \label{h000}
 \end{gather}
- Note that $T$ is only defined up to multiplication by a positive function. Changing the defining function in this way results in a conformal rescalling of $\theta|_{T=0}$, thus the metric on the contact distribution is also defined up to an overall conformal scale. We shall choose the scale so that
-the contact form is given  by $\theta_0\equiv K\theta|_{T=0}$ on $T(\p M)$,
+ Note that $T$ is only defined up to multiplication by a positive function. Changing the defining function in this way results in a conformal rescalling of $\beta|_{T=0}$, thus the metric on the contact distribution is also defined up to an overall conformal scale. We shall choose the scale so that
+the contact form is given  by $\beta_0\equiv K\beta|_{T=0}$ on $T(\p M)$,
 with the metric on ${ \mathbb{H} }$ given by
 %\footnote{The singular denominator $K^{-1}$ may be avoided by adopting the Pfaff %coordinates
 %\[
@@ -403,7 +403,7 @@ with the metric on ${ \mathbb{H} }$ given by
 %\]
 %which yields
 %\[
-%\theta_0=2(dy+x^idz_i), \quad h_{ H }=-(dx^i+x^idy)\odot dz_i.
+%\beta_0=2(dy+x^idz_i), \quad h_{ H }=-(dx^i+x^idy)\odot dz_i.
 %\]
 %}
 \be
@@ -416,14 +416,14 @@ curved case where the metric on $M$ is given by
 (\ref{eq:coord_form}).
 %g=\left(d\zeta_a-\left(\Gamma_{ab}^c \zeta_c- \zeta_a\zeta_b- \Rho_{ab}\right)\d %x^b\right)\odot \d x^a%
 The coordinate system $(T, Z_A, X^A, Y)$ is as above, and
-the one--form $\theta$ in (\ref{def_theta}) is given by
+the one--form $\beta$ in (\ref{def_theta}) is given by
 \[
-\theta=2T(1-T)\zeta_idx^i-dT+2T^2(\Rho_{ij}-\Gamma_{ij}^k\zeta_k)x^idx^j,
+\beta=2T(1-T)\zeta_idx^i-dT+2T^2(\Rho_{ij}-\Gamma_{ij}^k\zeta_k)x^idx^j,
 \]
 or in the $(T, Z_A, X^A, Y)$ coordinates,
 \[
 \begin{split}
-\theta=\ 2&(1-T)\frac{Z_AdX^A+dY}{K} - dT \\
+\beta=\ 2&(1-T)\frac{Z_AdX^A+dY}{K} - dT \\
 +& 2T^2\Bigg[\bigg(\Rho_{AB}-\frac{\Gamma^C_{AB}Z_C+\Gamma^n_{AB}}{TK}\bigg)X^AdX^B 
 +\bigg(\Rho_{nB}-\frac{\Gamma^C_{nB}Z_C+\Gamma^n_{nB}}{TK}\bigg)YdX^B \\
 +& \bigg(\Rho_{An}-\frac{\Gamma^C_{An}Z_C+\Gamma^n_{An}}{TK}\bigg)X^AdY 
@@ -438,14 +438,14 @@ or in the $(T, Z_A, X^A, Y)$ coordinates,
 
 Guided by the formula (\ref{CG_Form}) we define
 \[
-h=Tg-\frac{1}{4T}(\theta^2-dT^2),
+h_T=Tg-\frac{1}{4T}(\beta^2-dT^2),
 \]
 which we find to be
 \begin{equation*}
 \begin{split}
-h=&
-\frac{1}{4(1-T)}(\theta^2-dT^2)+\frac{1}{K}\Big(dZ_A\odot dX^A-\frac{1}{2(1-T)}
-X^A dZ_A\odot (\theta+dT)\Big)\\
+h_T=&
+\frac{1}{4(1-T)}(\beta^2-dT^2)+\frac{1}{K}\Big(dZ_A\odot dX^A-\frac{1}{2(1-T)}
+X^A dZ_A\odot (\beta+dT)\Big)\\
 &-\frac{1}{K}\Big(
 (\Gamma_{AB}^CZ_C+\Gamma_{AB}^n)dX^A\odot dX^B+
 (\Gamma_{nn}^CZ_C+\Gamma_{nn}^n)dY\odot dY \\
@@ -455,8 +455,8 @@ X^A dZ_A\odot (\theta+dT)\Big)\\
 \end{equation*}
 This is  smooth as $T\rightarrow 0$.
 
-Restricting $h$ to $T=0$ yields a metric which differs from
-(\ref{h000}) by the curved contribution given by the components of the  connection, but not the Schouten tensor. Substituting $dY=K\theta|_{T=0}/2-Z_AdX^A$, disregarding the terms involving $\theta|_{T=0}$ in $h$, and conformally rescalling by 
+Restricting $h_T$ to $T=0$ yields a metric which differs from
+(\ref{h000}) by the curved contribution given by the components of the  connection, but not the Schouten tensor. Substituting $dY=K\beta|_{T=0}/2-Z_AdX^A$, disregarding the terms involving $\beta|_{T=0}$ in $h_T$, and conformally rescalling by 
 $K$ yields the metric
 \begin{eqnarray}
 \label{met_th}
@@ -466,32 +466,32 @@ h_{ \mathbb{H} }&=&(dZ_A-\Xi_{AB}dX^B)\odot dX^A,\quad
 (\Gamma_{nn}^CZ_C+\Gamma_{nn}^n)Z_AZ_B-
 2(\Gamma_{An}^CZ_C+\Gamma_{An}^n)Z_B\nonumber
 \end{eqnarray}
-defined on the contact distribution ${ \mathbb{H} }=\mbox{Ker}(\theta_0)$, 
-where $\theta_0=2(dY+Z_AdX^A)$.
+defined on the contact distribution ${ \mathbb{H} }=\mbox{Ker}(\beta_0)$, 
+where $\beta_0=2(dY+Z_AdX^A)$.
 
 We now invoke theorem \ref{CGthm},  verifying
 by explicit computation that the remaining two conditions are satisfied. The first of these conditions is that the metric $h_{ \mathbb{H} }$ is compatible with the Levi--form of the almost para--CR structure induced on $\p M$ by $J$, i.e.
 \be
 \label{boundary_compatibility}
-h_\mathbb{H}(X, Y)=Cd\theta_0(JX, Y), \quad\mbox{for}\quad X\in \mathbb{H} .
+h_\mathbb{H}(X, Y)=Cd\beta_0(JX, Y), \quad\mbox{for}\quad X\in \mathbb{H} .
 \ee
 \mynote{I think this is slightly different but I guess equivalent to the form given in the theorem. Might need a comment?}
-\mynote{Okay I'm not sure if $C$ should be negative, i.e. if the statement in the theorem is the better one because $d\theta$ is like $-\mathcal{L}$ but the statement in the theorem is the same as in \cite{CG} i.e. in the case $J^2=-Id$. Would be good to check this.}
-\mynote{In fact in the theorem we are not talking about $h$ and $d\theta$ restricted to $ \mathbb{H} $, we are talking about $h$ and $d\theta$ on $\p M$, so maybe what I showed here is not the full condition?}
+\mynote{Okay I'm not sure if $C$ should be negative, i.e. if the statement in the theorem is the better one because $d\beta$ is like $-\mathcal{L}$ but the statement in the theorem is the same as in \cite{CG} i.e. in the case $J^2=-Id$. Would be good to check this.}
+\mynote{In fact in the theorem we are not talking about $h$ and $d\beta$ restricted to $ \mathbb{H} $, we are talking about $h$ and $d\beta$ on $\p M$, so maybe what I showed here is not the full condition?}
 The second is that the Nijenhuis tensor takes asymptotically tangential values, i.e. that (\ref{Nijenhuis_condition}) is satisfied.
 
 Both of these can be checked by computing the almost para--complex structure $J$ in the $(T, Z_A, X^A, Y)$ coordinates. We find
 \be
 \begin{split}
 \label{J_T=0}
-J|_{T=0}=\ &-\frac{\p}{\p X^A}\otimes dX^A +\frac{\p}{\p Y}\otimes dY + \frac{\p}{\p Z_A} \otimes dZ_A + \frac{\p}{\p T}\otimes dT \\
+\mathcal{J}:=J|_{T=0}=\ &-\frac{\p}{\p X^A}\otimes dX^A +\frac{\p}{\p Y}\otimes dY + \frac{\p}{\p Z_A} \otimes dZ_A + \frac{\p}{\p T}\otimes dT \\
 &-\frac{Z_B}{K}\frac{\p}{\p T}\otimes dX^B - \frac{1}{K}\frac{\p}{\p T}\otimes dY \\
 &-\big(\Gamma^D_{AB}Z_D+\Gamma^n_{AB}\big)\frac{\p}{\p Z_A} \otimes dX^B + \big(\Gamma^D_{nB}Z_D+\Gamma^n_{nB}\big)Z_C\frac{\p}{\p Z_C} \otimes dX^B \\
 &-\big(\Gamma^D_{An}Z_D+\Gamma^n_{An}\big)\frac{\p}{\p Z_A} \otimes dY
 +\big(\Gamma^D_{nn}Z_D+\Gamma^n_{nn}\big)Z_C\frac{\p}{\p Z_C} \otimes dY.
 \end{split}
 \ee
-Restricting to vectors in $ \mathbb{H} $ amounts to substituting $dY=\theta_0/2-Z_AdX^A$ and disregarding the terms involving $\theta_0$ as above, so that
+Restricting to vectors in $ \mathbb{H} $ amounts to substituting $dY=\beta_0/2-Z_AdX^A$ and disregarding the terms involving $\beta_0$ as above, so that
 \[
 \begin{split}
 J|_{ \mathbb{H} }= &-\frac{\p}{\p X^A}\otimes dX^A +Z_A\frac{\p}{\p Y}\otimes dX^A + \frac{\p}{\p Z_A} \otimes dZ_A + \frac{\p}{\p T}\otimes dT \\
@@ -500,7 +500,7 @@ J|_{ \mathbb{H} }= &-\frac{\p}{\p X^A}\otimes dX^A +Z_A\frac{\p}{\p Y}\otimes dX
 \]
 and (\ref{boundary_compatibility}) is satisfied.
 
-For the Nijenhuis condition, we use the formula (\ref{eq:Nijenhuis_index_def}). Note that we need only consider components of this with $a=T$, and thus only need to work with the $\p/\p T$ components of $J$ to find the terms which look like $\p J$.\mynote{What did I mean by this?} This is a one--form which we shall call $J^{(T)}$ and find to be
+For the Nijenhuis condition, note that we need only consider components of $\mathcal{N}$ with $a=T$ to verify (\ref{Nijenhuis_condition}). Let us use the notation $J^{(T)}$ for the one--form comprising the $\p/\p T$ components of $J$. We find this to be
 \[
 \begin{split}
 J^{(T)}=&\bigg(-\frac{Z_B}{K} + \frac{T[2Z_B + (\Gamma^D_{AB}Z_D+\Gamma^n_{AB})X^A + (\Gamma^D_{nB}Z_D+\Gamma^n_{nB})Y]}{K} \\
@@ -509,7 +509,11 @@ J^{(T)}=&\bigg(-\frac{Z_B}{K} + \frac{T[2Z_B + (\Gamma^D_{AB}Z_D+\Gamma^n_{AB})X
 &\qquad - T^2[\Rho_{An}X^A+\Rho_{nn}Y]\bigg)dY.
 \end{split}
 \]
-Note that this agrees with (\ref{J_T=0}) when $T=0$. We use it to calculate ${\mathcal{N}^{a}}_{bc}{^{\bf g}}\nabla_a T$, dropping terms which vanish when $T=0$ to verify (\ref{Nijenhuis_condition}).
+Note that this agrees with (\ref{J_T=0}) when $T=0$. Using the formula (\ref{eq:Nijenhuis_index_def}), we now calculate
+\[
+{\mathcal{N}^{a}}_{bc}{^{\bf g}}\nabla_a T|_{T=0}=\Big(\mathcal{J}^d_{\ [b}\p_{|d|}J^{(T)}_{\ \ c]}-\mathcal{J}^d_{\ [b}\p_{c]}J^{(T)}_{\ \ d}\Big)\Big|_{T=0}
+\]
+to verify (\ref{Nijenhuis_condition}).
 
 %The only non--vanising components of the torsion of the Libermann connection (\ref{lib}) on
 %the boundary $\p M$ are tangential to $\p M$,
@@ -545,16 +549,16 @@ the first derivatives (see, e.g. \cite{BDE})
 where the integral curves of (\ref{ODE}) are the unparametrised geodesics of $\nabla$. 
 The integral curves $C$ of $(\ref{ODE})$ are integral submanifolds
 of a  differential
-ideal ${\mathcal I}=<\theta_0, \theta_1>$, where
+ideal ${\mathcal I}=<\beta_0, \beta_1>$, where
 \[
-\theta_0=dY+ZdX, \quad \theta_1=dZ-\Big(\Gamma_{11}^2+(\Gamma_{11}^1-2\Gamma_{12}^2)Z+(\Gamma_{22}^2-2\Gamma_{12}^1)Z^2+
+\beta_0=dY+ZdX, \quad \beta_1=dZ-\Big(\Gamma_{11}^2+(\Gamma_{11}^1-2\Gamma_{12}^2)Z+(\Gamma_{22}^2-2\Gamma_{12}^1)Z^2+
 \Gamma_{22}^1Z^3\Big)dX
 \]
-are one--forms on a three--dimensional manifold $\mathcal{Z}=\PP(T^*N)$ with local coordinates $(X, Y, Z)$. If $f:C\rightarrow \mathcal{Z}$ is an immersion, then $f^*(\theta_0)=0, f^*(\theta_1)=0$ is equivalent
-to (\ref{ODE}) as long as $\theta_2\equiv dX$ does not vanish. In terms of these three one--forms
+are one--forms on a three--dimensional manifold $\mathcal{Z}=\PP(T^*N)$ with local coordinates $(X, Y, Z)$. If $f:C\rightarrow \mathcal{Z}$ is an immersion, then $f^*(\beta_0)=0, f^*(\beta_1)=0$ is equivalent
+to (\ref{ODE}) as long as $\beta_2\equiv dX$ does not vanish. In terms of these three one--forms
 the contact structure, and the metric on the contact distribution are given by
 $
-\theta_0,  h_{ \mathbb{H} }=\theta_1\odot\theta_2.
+\beta_0,  h_{ \mathbb{H} }=\beta_1\odot\beta_2.
 $
 
 \section{An alternative approach to theorem \ref{our_thm}}
@@ -587,7 +591,7 @@ the main results then follow from the general holonomy theory in
 \cite{CGH-duke}.
 
 
-\subsection{The alternative approach in the model case}
+\subsection{The model case}
 
 In this section we describe the homogeneous model case as an orbit decomposition. Recall from section \ref{sec:intro_model} that the flat projective structure on $N=\RP^n$ gives rise to 
 the neutral signature para--K\"ahler Einstein metric (\ref{eq:intro_model_g}) on the manifold
