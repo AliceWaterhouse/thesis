@@ -8,20 +8,30 @@
 
 The purpose of this chapter is to introduce the preliminaries that are required to understand the remainder of the thesis. We will first review projective geometry, including the Cartan and tractor bundles associated with a projective structure, before moving on to the projective to Einstein correspondence of \cite{DM}. We begin with some notation and conventions.
 
-\mynote{some notation and conventions e.g. $i,j,k=1,...,n$ are indices for coordinates on $n$? and $\Gamma$ are connection components which are defined by... Curvature is defined by}
+\subsubsection{Notation and conventions}
 \begin{itemize}
-\item Sym and antisym brackets
-\item Note that our conventions are $(d\omega)_{ab\dots c}=\partial_{[a}\omega_{b\dots c]},$
-$(\eta\wedge\omega)_{a\dots d}=\eta_{[a\dots b}\omega_{c\dots d]},$
-$\omega=\omega_{a\dots b}dx^{a}\wedge\dots\wedge dx^{b},$
-and $F_{ab}{d}x^{a}\wedge{d}x^{b}=F_{[ab]}{d}x^{a}\otimes{d}x^{b}$
-implying ${d}x^{a}\wedge{d}x^{b}=\frac{1}{2}({d}x^{a}\otimes{d}x^{b}-{d}x^{b}\otimes{d}x^{a})$.
-%\item $N$ is oriented. \mynote{Although $\RP^n$ is not oriented right?? also something about which part of $SL(n+1)$ we mean?}
-\item Probably a convention for the Hodge operator
-\item Probably a convention for $\varepsilon_{AB}$ and matching indices descending to the right
-\item Line projectivisation except where stated otherwise.
-\item $\R_n$ means...
-\item $\pi$ for maps to $N$, $\kappa$ for maps to $M$.
+\item We use $\R^n$ to mean the real vector space of dimension $n$, and $\R_n$ to mean its dual. We think of vectors in $\R^n$ as column vectors, and vectors in $\R_n$ as row vectors.
+\item We will projectivise vector spaces by \textit{line projectivisation}, that is, we will take the space of \textit{unoriented} lines through the origin, unless stated otherwise.
+\item When we refer to the projective to Einstein correspondence, the projective manifold will be called $N$ and will have dimension $n$, whilst the Einstein manifold will be called $M$ and will have dimension $2n$.
+\item We use the letter $\pi$ for maps to $N$, and the letter $\kappa$ for maps to $M$. We will attach subscripts to $\pi$ and $\kappa$ to give information about the preimage or the significance of the map.
+\item We use lower case Latin indices $i,j,k,\dots=1,\dots,n$ for tensorial objects on $N$ and $a,b,c,\dots=1,\dots,2n$ for tensorial objects on $M$.
+\item We use $\odot$ and $\wedge$ to denote the symmetrised and antisymmetrised tensor product respectively. That is,
+\[
+A\odot B = \frac{1}{2}(A\otimes B + B\otimes A),\qquad A\wedge B = \frac{1}{2}(A\otimes B - B\otimes A).
+\]
+We we also occasionally write $A^2$ for $A\odot A$.
+\item Where indices have been symmetrised or antisymmetrised over, we will enclose them in round or square brackets respectively.
+\item Our conventions for differential forms are
+\[
+(d\omega)_{ab\dots c}=\partial_{[a}\omega_{b\dots c]},\qquad (\eta\wedge\omega)_{a\dots d}=\eta_{[a\dots b}\omega_{c\dots d]},\]
+\[
+\omega=\omega_{a\dots b}\,dx^{a}\wedge\dots\wedge dx^{b}, \qquad F_{ab}\,{d}x^{a}\wedge{d}x^{b}=F_{[ab]}\,{d}x^{a}\otimes{d}x^{b}.
+\]
+\item The Riemann curvature tensor $R_{abc}^{\quad d}$ of a connection $\nabla_a$ is defined by
+\[
+(\nabla_a\nabla_b - \nabla_b\nabla_a)X^d = R_{abc}^{\quad d}X^c,
+\]
+where $X$ is any vector field.
 \end{itemize}
 
 
@@ -163,7 +173,7 @@ where points in $\mathcal{G}\times_{\rho_\mathcal{B}} \mathcal{B}$ are equivalen
 (u_1,v_1)\sim (u_2,v_2) \quad \Leftrightarrow \quad \exists\ s\ \mbox{such that}\  u_2=u_1 s,\  v_2 = \rho_\mathcal{B}(s^{-1}) v_1.
 \]
 
-We thus obtain a vector bundle over $N$ whose fibers are diffeomorphic to $\mathcal{B}$. A section $\tilde{\sigma}:N\rightarrow \mathcal{G}\times_{\rho_\mathcal{B}} \mathcal{B}$ is represented by a map ${\sigma}:\mathcal{G}\rightarrow \mathcal{B}$ which is equivariant in the sense that ${\sigma}(us)=\rho_\mathcal{B}(s^{-1}){\sigma}(u)$ for all $s\in S$. Importantly, any such bundle inherits a connection from the Cartan connection $\theta$ on $\mathcal{G}$. The concept of an associated bundle applies to any principal bundle, but we call vector bundles which are associated to a Cartan bundle \textit{tractor} bundles, and the connections that they inherit from the Cartan connection are called tractor connections.
+We thus obtain a vector bundle over $N$ whose fibres are diffeomorphic to $\mathcal{B}$. A section $\tilde{\sigma}:N\rightarrow \mathcal{G}\times_{\rho_\mathcal{B}} \mathcal{B}$ is represented by a map ${\sigma}:\mathcal{G}\rightarrow \mathcal{B}$ which is equivariant in the sense that ${\sigma}(us)=\rho_\mathcal{B}(s^{-1}){\sigma}(u)$ for all $s\in S$. Importantly, any such bundle inherits a connection from the Cartan connection $\theta$ on $\mathcal{G}$. The concept of an associated bundle applies to any principal bundle, but we call vector bundles which are associated to a Cartan bundle \textit{tractor} bundles, and the connections that they inherit from the Cartan connection are called tractor connections.
 \end{rmk}
 
 
@@ -296,9 +306,9 @@ It is easily verified that
 (\mathrm{det}a)a\omega & 0
 \end{pmatrix},
 \]
-for any $a\in GL(n,\mathbb{R})$, meaning that due to the equivarience
+for any $a\in GL(n,\mathbb{R})$, meaning that due to the equivariance
 property of the Cartan connection, the natural contraction $\eta\omega:=\sum_{i}\eta_{(i)}\otimes\omega^{(i)}$
-defined by $\theta$ is presevered by the adjoint action of this $GL(n,\mathbb{R})$
+defined by $\theta$ is preserved by the adjoint action of this $GL(n,\mathbb{R})$
 subgroup. It thus descends to a naturally defined object on the quotient
 $M=\mathcal{G}/GL(n,\mathbb{R})$.
 
@@ -314,18 +324,18 @@ where $\mathrm{Sym}$ and $\mathrm{Ant}$ denote the symmetric and
 anti-symmetric parts of the $(0,2)$ tensor $\eta\omega$. Moreover,
 $\Omega$ is closed as a consequence of the Bianchi identity satisfied by the curvature two--form (\ref{eq:curvature_2-form}), $g$
 is Einstein with non-zero scalar curvature, and the two are related
-by an endomorphism $J$ satisying $J^{2}=Id$. Hence $(g,\Omega)$
-is an almost para--Kahler structure on $M$.
+by an endomorphism $J$ satisfying $J^{2}=Id$. Hence $(g,\Omega)$
+is an almost para--K\"ahler structure on $M$.
 \end{theo}
 
 
 \begin{rmk}
-The full proof of theorem \ref{thm:DM} only appears explicitly in \cite{DM} in the case $n=2$, although it can be generalised to $n>2$. This generalisation is discussed in their appendix. They show that the Ricci scalar of $g$ is $24$ in the case $n=2$. In chapter \ref{chap:KK_lift} we will need the Ricci scalar for general $n$. We will calculate this under the assumption (stated without proof in \cite{DM}) that $g$ is Einstein.
+The full proof of Theorem \ref{thm:DM} only appears explicitly in \cite{DM} in the case $n=2$, although it can be generalised to $n>2$. This generalisation is discussed in their appendix. They show that the Ricci scalar of $g$ is $24$ in the case $n=2$. In Chapter \ref{chap:KK_lift} we will need the Ricci scalar for general $n$. We will calculate this under the assumption (stated without proof in \cite{DM}) that $g$ is Einstein.
 \end{rmk}
 
 \begin{rmk}
 The quotient $M$ turns out to be an affine bundle over $N$ with
-structure group $H$, i.e. $H$ acts affinely on the fibers of $\pi_M:M\rightarrow N$,
+structure group $H$, i.e. $H$ acts affinely on the fibres of $\pi_M:M\rightarrow N$,
 and sections of this bundle are in one-to-one correspondence with
 representative connections $\nabla\in[\nabla]$. This means that given
 some choice of connection $\nabla\in[\nabla]$ we have a diffeomorphism
@@ -339,7 +349,7 @@ the cotangent bundle, we find
 Here $\Gamma_{jk}^{i}$ are the connection components of the representative
 connection $\nabla$ that we chose, and its Schouten tensor is denoted $\Rho_{ij}$. This can be shown to be projectively invariant
 in the sense that a different choice of $\nabla\in[\nabla]$ corresponds
-to shifting the fiber coordinates $\zeta_{i}$, i.e. metrics on $T^{*}N$
+to shifting the fibre coordinates $\zeta_{i}$, i.e. metrics on $T^{*}N$
 resulting from pulling back $g$ using different representative connections
 are isometric. Explicitly, a projective transformation (\ref{eq:proj_change})
 corresponds to a change
@@ -358,21 +368,21 @@ g_{\Lambda} & = &  d\zeta_{i}\odot dx^{i}-(\Gamma_{ij}^{k}\zeta_{k}-\Lambda \zet
 \Omega_{\Lambda} & = &  d\zeta_{i}\wedge dx^{i}+\frac{1}{\Lambda}\Rho_{ij} dx^{i}\wedge dx^{j},\qquad i,j=1,\dots ,n.\label{eq:general_omega}
 \end{eqnarray}
 Metrics of the form (\ref{eq:general_g}) are a subclass of so-called
-Osserman metrics. More details can be found in \cite{osserman}. They are all Einstein with non--zero scalar curvature $24\Lambda$, but for $\Lambda\neq1$ the relation to projective geometry is lost. For the remainder of the thesis we will write $g$ for $g_{\Lambda=1}$ unless stated otherwise. Note that $\{g_\Lambda\}$ will be the subject of chapter \ref{chap:KK_lift}, whilst in chapters  \ref{chap:EW_and_toda} and \ref{chap:c-proj} we will restrict our attention to $g$ because the projective geometry is a key aspect of the content of these chapters.
+Osserman metrics. More details can be found in \cite{osserman}. They are all Einstein with non--zero scalar curvature $24\Lambda$, but for $\Lambda\neq1$ the relation to projective geometry is lost. For the remainder of the thesis we will write $g$ for $g_{\Lambda=1}$ unless stated otherwise. Note that $\{g_\Lambda\}$ will be the subject of Chapter \ref{chap:KK_lift}, whilst in Chapters  \ref{chap:EW_and_toda} and \ref{chap:c-proj} we will restrict our attention to $g$ because the projective geometry is a key aspect of the content of these chapters.
 \end{rmk}
 
 
 
 \begin{rmk}
-One could also consider taking a quotient of $\mathcal{G}$ by a different subgroup of $S$. The $\R^*$ bundle over $M$ which we will discuss in chapter \ref{chap:KK_lift} will turn out to be a quotient of $\mathcal{G}$ by $SL(n,\R)$.
+One could also consider taking a quotient of $\mathcal{G}$ by a different subgroup of $S$. The $\R^*$ bundle over $M$ which we will discuss in Chapter \ref{chap:KK_lift} will turn out to be a quotient of $\mathcal{G}$ by $SL(n,\R)$.
 \end{rmk}
 
 \begin{rmk}
-As mentioned above, in the special case where the $(N,[\nabla])$ is a projective surface, $M$ has dimension four, and so anti--self--duality is defined. It turns out that both the symplectic form $\Omega$ and the conformal curvature of $g$ are ASD. Both of these facts will play an important role in chapter \ref{chap:EW_and_toda}.
+As mentioned above, in the special case where the $(N,[\nabla])$ is a projective surface, $M$ has dimension four, and so anti--self--duality is defined. It turns out that both the symplectic form $\Omega$ and the conformal curvature of $g$ are ASD. Both of these facts will play an important role in Chapter \ref{chap:EW_and_toda}.
 \end{rmk}
 
 \begin{rmk}
-Note that an endomorphism $J$ which squares to the identity defines two $n$--dimensional sub--bundles of the tangent bundle $TM$ defined at each $m\in M$ as the vector subspaces of $T_mM$ which have eigenvalues $\pm 1$ with respect to $J$. These sub--bundles form a pair of smooth distributions $D_\pm$ in $TM$. Further discussion of the endomorphism $J$ will appear in chapter \ref{chap:c-proj}.
+Note that an endomorphism $J$ which squares to the identity defines two $n$--dimensional sub--bundles of the tangent bundle $TM$ defined at each $m\in M$ as the vector subspaces of $T_mM$ which have eigenvalues $\pm 1$ with respect to $J$. These sub--bundles form a pair of smooth distributions $D_\pm$ in $TM$. Further discussion of the endomorphism $J$ will appear in Chapter \ref{chap:c-proj}.
 \end{rmk}
 
 \subsection{Symmetries of $M$}
@@ -405,7 +415,7 @@ where $\Upsilon_{i}$ is defined by (\ref{eq:proj_transf}).
 
 \subsection{Tractor perspective} \label{sec:trac_construction}
 
-From the tractor perspective, the space $M$ will turn out to be the projectivised cotractor bundle of $N$ with an $\RP^{n-1}$ sub--bundle removed from each fiber. We can understand what this $\RP^{n-1}$ sub--bundle is as follows.
+From the tractor perspective, the space $M$ will turn out to be the projectivised cotractor bundle of $N$ with an $\RP^{n-1}$ sub--bundle removed from each fibre. We can understand what this $\RP^{n-1}$ sub--bundle is as follows.
 
 On the total space of $\cT^*$ we pull back $\pi_\mathcal{T}:\cT^*\to N$ along $\pi_\mathcal{T}$ to get $\pi_\mathcal{T}^*(\cT^*)\to \cT^*$ as a vector bundle over the total space $\cT^*$. By construction this bundle has a tautological section $W\in \Gamma (\pi_\cT^*(\cT^*))$.  We also have $\pi_\cT^*(\cT(w))$ for any weight $w$, and we shall write simply $V\in \Gamma(\pi_\cT^*(\cT(1)))$ for the pull back to $\cT^*$ of the canonical tractor $V$ on $N$.
 
@@ -414,7 +424,7 @@ Now define
 \label{projection_map}
 \kappa_\PP: \cT^*\longrightarrow \mathcal{M}:=\mathbb{P}(\cT^*)
 \ee
-by the fibrewise projectivisation, and use $\pi_\cM$ for the map
+by the fibre--wise projectivisation, and use $\pi_\cM$ for the map
 $$
 \pi_\cM:\mathcal{M}\to N.
 $$
@@ -436,7 +446,7 @@ Note that $\tau$ is homogeneous of degree 1 up the fibres of the
 map $\kappa_\PP:\cT^*\to \mathcal{M}$. Thus $\tau$ determines, and is equivalent
 to, a section (that we also denote) $\tau$ of the density bundle $\cE(1,1)$. So $\mathcal{M}$ is stratified according to
 whether or not $\tau$ is vanishing, and we write $\mathcal{Z}(\tau)$
-to denote, in particular, the zero locus of $\tau$. We will show in chapter \ref{chap:c-proj} that $M$ can be identified with $\mathcal{M}\setminus \mathcal{Z}(\tau)$.
+to denote, in particular, the zero locus of $\tau$. We will show in Chapter \ref{chap:c-proj} that $M$ can be identified with $\mathcal{M}\setminus \mathcal{Z}(\tau)$.
 
 %\rs{Note the
 %  second density bundle is not necessarily orientable.}
@@ -453,7 +463,7 @@ We can thus write $M$ as
 M=\{([P],[L])\in\RP^n\times\RP_n\ |\ P\cdot L\neq 0\}.
 \]
 
-As discussed in section \ref{sec:projgeom}, a point $[L]\in\RP_n$ represents a line $[L]\subset\RP^n$ which passes through $P\in\RP^n$ if and only if $L\cdot P=0$. In chapter \ref{chap:EW_and_toda} we will show that the conformal structure on $M$ can be obtained by demanding that two pairs $([P], [L])$ and $([\tP], [\tL])$ are null--separated if there exists a line which contains the three points $([P], [\tP], [L]\cap [\tL])$.
+As discussed in Section \ref{sec:projgeom}, a point $[L]\in\RP_n$ represents a line $[L]\subset\RP^n$ which passes through $P\in\RP^n$ if and only if $L\cdot P=0$. In Chapter \ref{chap:EW_and_toda} we will show that the conformal structure on $M$ can be obtained by demanding that two pairs $([P], [L])$ and $([\tP], [\tL])$ are null--separated if there exists a line which contains the three points $([P], [\tP], [L]\cap [\tL])$.
 
 We also find in the model case that the symplectic form $\Omega$ is parallel with respect to the Levi--Civita connection $^g\nabla$ of $g$, meaning that the endomorphism $J$ of $TM$ which relates $g$ and $\Omega$ is also parallel. As a result of this, the distributions $D_\pm$ defined by the two $n$--dimensional eigen--bundles of $J$ are parallel in the sense that $^g\nabla_{\xi_1}\xi_2\in\Gamma(D_\pm)$ for all $\xi_1\in \Gamma(TM),\ \xi_2\in\Gamma(D_\pm)$. This makes the distributions \textit{Frobenius integrable}, meaning that the Lie bracket of any two sections of $D_\pm$ is also a section of $D_\pm$, or equivalently (as shown by Frobenius) that each of the two distributions is tangent to a foliation of sub--manifolds of dimension $n$ at every point.
 
@@ -461,4 +471,4 @@ To see that a parallel distribution is necessarily Frobenius integrable, note th
 \[
 [\xi_1,\xi_2]= \nabla_{\xi_1}\xi_2- \nabla_{\xi_2}\xi_1\in\Gamma(D)\quad\mbox{for all}\quad \xi_1,\xi_2\in\Gamma(D),
 \]
-where $D$ is a distribution which is parallel with respect to a connection $\nabla$. The Frobenius integrability of $D_\pm$ makes $(M,g,\Omega)$ not only almost para--K\"ahler but also para--K\"ahler. Further discussion about this distinction can be found in chapter \ref{chap:c-proj}.
+where $D$ is a distribution which is parallel with respect to a connection $\nabla$. The Frobenius integrability of $D_\pm$ makes $(M,g,\Omega)$ not only almost para--K\"ahler but also para--K\"ahler. Further discussion about this distinction can be found in Chapter \ref{chap:c-proj}.

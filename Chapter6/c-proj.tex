@@ -35,7 +35,7 @@ An almost complex manifold $(M,J)$ is a complex manifold if and only if the Nije
 \end{theo}
 
 
-As discussed in chapter \ref{chap:intro}, an endomorphism $J$ which squares to $Id$ defines an analogous splitting of the tangent bundle into sub--bundles with eigenvalues $\pm 1$, and this splitting is also Frobenius integrable if and only if the Nijenhuis tensor of $J$ vanishes. We thus call an almost para--complex structure $J$ with vanishing Nijenhuis tensor a para--complex structure, and say that in this case $J$ is integrable. In all the definitions below, the word \textit{almost} can be removed if the (para--)complex structure $J$ is integrable.
+As discussed in Chapter \ref{chap:intro2}, an endomorphism $J$ which squares to $Id$ defines an analogous splitting of the tangent bundle into sub--bundles with eigenvalues $\pm 1$, and this splitting is also Frobenius integrable if and only if the Nijenhuis tensor of $J$ vanishes. We thus call an almost para--complex structure $J$ with vanishing Nijenhuis tensor a para--complex structure, and say that in this case $J$ is integrable. In all the definitions below, the word \textit{almost} can be removed if the (para--)complex structure $J$ is integrable.
 
 \begin{defi}
 A (para--)Hermitian metric on an almost (para--)complex manifold $(M,J)$ is a metric $g$ satisfying
@@ -54,7 +54,7 @@ and can alternatively be specified as $(M,J,\Omega)$ or $(M,g,\Omega)$. An almos
 \subsection{Almost (para--)CR structures and contact distributions}
 
 \begin{defi}
-An almost (para--)CR structure $(\mathcal{Z},\mathbb{H} ,J)$ on a manifold $\mathcal{Z}$ is a sub--bundle $\mathbb{H} \subset T\mathcal{Z}$ of the tangent bundle together with a fiber--preserving endomorphism $J:\mathbb{H} \rightarrow \mathbb{H} $ which satisfies $J^2=Id$ or $J^2=-Id$ depending on whether or not we are talking about the ``para'' case.
+An almost (para--)CR structure $(\mathcal{Z},\mathbb{H} ,J)$ on a manifold $\mathcal{Z}$ is a sub--bundle $\mathbb{H} \subset T\mathcal{Z}$ of the tangent bundle together with a fibre--preserving endomorphism $J:\mathbb{H} \rightarrow \mathbb{H} $ which satisfies $J^2=Id$ or $J^2=-Id$ depending on whether or not we are talking about the ``para'' case.
 \end{defi}
 
 We will be interested in the case where $ \mathbb{H} $ is a hyperplane distribution on $\mathcal{Z}$; then $(\mathcal{Z}, \mathbb{H} ,J)$ is called an almost (para--)CR structure of \textit{hypersurface type}. An almost (para--)complex structure $(M,J)$ of dimension $2n$ defines an almost (para--)CR structure of hypersurface type on any hypersurface $\mathcal{Z}\subset M$ given by the restriction of $J$ to the hyperplane distribution $ \mathbb{H} :=T\mathcal{Z}\cap J(T\mathcal{Z})$ on $\mathcal{Z}$. Note that this distribution must have dimension $2n-2$. An almost (para--)CR structure is a (para--)CR structure if and only if the splitting of $ \mathbb{H} $ into eigen--bundles induced by $J$ is Frobenius integrable.
@@ -149,7 +149,7 @@ In order to construct the para--$c$--projective compactification of the manifold
 
 \subsection{Tractor construction of $M$}\label{sec:trac_construction_g}
 
-In section \ref{sec:trac_construction} it was shown that the projectivised cotractor bundle of $N$ is stratified by the canonical density $\tau=V\hook W$, where $V$ is the pull back of the canonical tractor along $\pi_\cT:\cT^*\rightarrow N$ and $W$ is the tautological section of $\pi_\cT^*(\cT^*)$. It is easily verified that the zero locus $\mathcal{Z}(\tau)$ of $\tau$ is a smoothly embedded hypersurface in $\mathcal{M}:=\PP(\cT^*)$. %  and from (\ref{eq:T*N_is_M}) it follows at once that this may be identified with the total space of the fibrewise projectivisation $\mathbb{P}(T^*N)$ (which is well known to have an almost para--CR structure). \mynote{Is there a way to justify this "well known" fact?}
+In Section \ref{sec:trac_construction} it was shown that the projectivised cotractor bundle of $N$ is stratified by the canonical density $\tau=V\hook W$, where $V$ is the pull back of the canonical tractor along $\pi_\cT:\cT^*\rightarrow N$ and $W$ is the tautological section of $\pi_\cT^*(\cT^*)$. It is easily verified that the zero locus $\mathcal{Z}(\tau)$ of $\tau$ is a smoothly embedded hypersurface in $\mathcal{M}:=\PP(\cT^*)$. %  and from (\ref{eq:T*N_is_M}) it follows at once that this may be identified with the total space of the fibrewise projectivisation $\mathbb{P}(T^*N)$ (which is well known to have an almost para--CR structure). \mynote{Is there a way to justify this "well known" fact?}
 In the following theorem, we show that $\mathcal{M}\backslash\mathcal{Z}(\tau)$ can be identified with $M$.
 
 \begin{theo}\cite{DGW}\label{metric} 
@@ -186,14 +186,14 @@ $$
 It follows that on  $M:=\mathcal{M}\backslash\mathcal{Z}(\tau)$
 there is canonically a metric $\boldsymbol{g}$ and symplectic form $\boldsymbol{\Omega}$ taking values in $\cE(1,1)$, given by
 \begin{eqnarray*}
-\boldsymbol{g}(w_1,w_2)&=& \frac{1}{2}\Big(
-\pp_H(w_1)\hook \pp_V(w_2)+\pp_H(w_2)\hook\pp_V(w_1)\Big) \quad \mbox{and} \\
-\boldsymbol{\Omega}(w_1,w_2)&=& \frac{1}{2}\Big(\pp_H(w_1)\hook \pp_V(w_2)-\pp_H(w_2)\hook\pp_V(w_1)\Big)
+\boldsymbol{g}(w_1,w_2)&=& \frac{1}{2}\Bigl(
+\Pi_H(w_1)\hook \Pi_V(w_2)+\Pi_H(w_2)\hook\Pi_V(w_1)\Bigl) \quad \mbox{and} \\
+\boldsymbol{\Omega}(w_1,w_2)&=& \frac{1}{2}\Bigl(\Pi_H(w_1)\hook \Pi_V(w_2)-\Pi_H(w_2)\hook\Pi_V(w_1)\Bigl)
 \end{eqnarray*}
 where
-$$
-\pp_H: TM\to \pi_\cM^*TN \quad \mbox{and} \quad \pp_V: TM\to \pi_\cM^* T^*N(1,1)
-$$
+\[
+\Pi_H: TM\rightarrow \pi_\cM^*TN \quad \mbox{and} \quad \Pi_V: TM\rightarrow \pi_\cM^* T^*N(1,1)
+\]
 are the projections.
 Then we obtain the metric and symplectic form by
 \be
@@ -256,7 +256,7 @@ This is identical to the form appearing in \cite{DM}.
 \koniec
 
 \begin{rmk}
-Note that the shift (\ref{eq:zeta_change}) in the fiber coordinates $\zeta_{i}$ corresponding to a change of projective connection can be motivated from the change (\ref{eq:chi_mu_change}) in the splitting of $\cT^*$ and the definitions of $\sigma_i$ and $\zeta_i$.
+Note that the shift (\ref{eq:zeta_change}) in the fibre coordinates $\zeta_{i}$ corresponding to a change of projective connection can be motivated from the change (\ref{eq:chi_mu_change}) in the splitting of $\cT^*$ and the definitions of $\sigma_i$ and $\zeta_i$.
 \end{rmk}
 
 \begin{rmk} We can also understand $\mathbb{P}(\cT^*)\setminus \mathcal{Z}(\tau)$ as an affine bundle modelled on $T^* N$. Given a connection in the projective class and hence a decomposition (\ref{eq:T*splitting}), there is a smooth fibre bundle isomorphism
@@ -291,10 +291,10 @@ T_x^*N\ni \zeta_i  \mapsto [(1,\zeta_i)]=[(\tau,\tau \zeta_i)]\in
 
 \subsection{The compactification theorem}
 
-As noted in chapter \ref{chap:intro2}, in the model case where $N=\RP^n$ and $[\nabla]$ is projectively flat, the manifold $M=SL(n+1, \R)/GL(n, \R)$ can be identified with the projectivisation of $\R^{n+1}\times \R_{n+1}\setminus {\mathcal Z}$, where ${\mathcal Z}$ denotes the set of incident pairs (point, hyperplane). The compactification procedure described in the theorem \ref{our_thm} below will, for the model, attach these incident pairs back to $M$, and more generally (in case of a curved projective structure $(N,[\nabla])$) will attach the zero locus of $\tau$ back into $\mathbb{P}(\cT^*)$. The boundary $\p M \cong \mathcal{Z}(\tau)$ from definition \ref{defi_1} will play the role of a submanifold
+As noted in Chapter \ref{chap:intro2}, in the model case where $N=\RP^n$ and $[\nabla]$ is projectively flat, the manifold $M=SL(n+1, \R)/GL(n, \R)$ can be identified with the projectivisation of $\R^{n+1}\times \R_{n+1}\setminus {\mathcal Z}$, where ${\mathcal Z}$ denotes the set of incident pairs (point, hyperplane). The compactification procedure described in the Theorem \ref{our_thm} below will, for the model, attach these incident pairs back to $M$, and more generally (in case of a curved projective structure $(N,[\nabla])$) will attach the zero locus of $\tau$ back into $\mathbb{P}(\cT^*)$. The boundary $\p M \cong \mathcal{Z}(\tau)$ from definition \ref{defi_1} will play the role of a submanifold
 separating two open sets in $\mathbb{P}(\cT^*)$ which have $\tau>0$ and $\tau<0$ respectively. The method of the proof will be to show that near
 the boundary ${\mathcal{Z}}(\tau)=0$ of $\ol{M}$ the metric 
-(\ref{eq:coord_form}) can be put in the local normal form of theorem 
+(\ref{eq:coord_form}) can be put in the local normal form of Theorem 
 \ref{CGthm}.
 
 %Before we state the theorem, we note that the Libermann connection $\nabla^{L}$ \cite{Lieb} associated to $(M,g,\Omega)$ is given by
@@ -394,7 +394,7 @@ The restriction of $h_T$ to $\p M$ gives a metric on the distribution ${ \mathbb
 \beta|_{T=0}=2\frac{dY+Z_A dX^A}{Y+Z_AX^A}, \nonumber \\
 h_T|_{T=0}=\frac{1}{4}{(\beta|_{T=0})}^2+\frac{1}{2(Y+Z_AX^A)}(2dZ_A\odot dX^A-X^AdZ_A\odot(\beta|_{T=0})). \label{h000}
 \end{gather}
- Note that $T$ is only defined up to multiplication by a positive function. Changing the defining function in this way results in a conformal rescalling of $\beta|_{T=0}$, thus the metric on the contact distribution is also defined up to an overall conformal scale. We shall choose the scale so that
+ Note that $T$ is only defined up to multiplication by a positive function. Changing the defining function in this way results in a conformal rescaling of $\beta|_{T=0}$, thus the metric on the contact distribution is also defined up to an overall conformal scale. We shall choose the scale so that
 the contact form is given  by $\beta_0\equiv K\beta|_{T=0}$ on $T(\p M)$,
 with the metric on ${ \mathbb{H} }$ given by
 %\footnote{The singular denominator $K^{-1}$ may be avoided by adopting the Pfaff %coordinates
@@ -456,7 +456,7 @@ X^A dZ_A\odot (\beta+dT)\Big)\\
 This is  smooth as $T\rightarrow 0$.
 
 Restricting $h_T$ to $T=0$ yields a metric which differs from
-(\ref{h000}) by the curved contribution given by the components of the  connection, but not the Schouten tensor. Substituting $dY=K\beta|_{T=0}/2-Z_AdX^A$, disregarding the terms involving $\beta|_{T=0}$ in $h_T$, and conformally rescalling by 
+(\ref{h000}) by the curved contribution given by the components of the  connection, but not the Schouten tensor. Substituting $dY=K\beta|_{T=0}/2-Z_AdX^A$, disregarding the terms involving $\beta|_{T=0}$ in $h_T$, and conformally rescaling by 
 $K$ yields the metric
 \begin{eqnarray}
 \label{met_th}
@@ -469,7 +469,7 @@ h_{ \mathbb{H} }&=&(dZ_A-\Xi_{AB}dX^B)\odot dX^A,\quad
 defined on the contact distribution ${ \mathbb{H} }=\mbox{Ker}(\beta_0)$, 
 where $\beta_0=2(dY+Z_AdX^A)$.
 
-We now invoke theorem \ref{CGthm},  verifying
+We now invoke Theorem \ref{CGthm},  verifying
 by explicit computation that the remaining two conditions are satisfied. The first of these conditions is that the metric $h_{T}$ is compatible with the Levi--form of the almost para--CR structure on the boundary. %, i.e.
 %\be
 %\label{boundary_compatibility}
@@ -537,7 +537,7 @@ which is transparently invariant under the projective changes
 of $\nabla$.
 In the  two-dimensional case the 
 projective
-structures $(N, [\nabla])$ are equivalent to second order ODEs which are cubic in
+structures $(N, [\nabla])$ are equivalent to second order ordinary differential equations which are cubic in
 the first derivatives (see, e.g. \cite{BDE})
 \begin{equation}
 \label{ODE}
@@ -563,7 +563,7 @@ $
 
 \section{An alternative approach to Theorem \ref{our_thm}}
 
-It would be possible to show that the structures $(M,g,\Omega)$ arising in the projective to Einstein correspondence are para--$c$--projectively compact using a purely tractor--based approach, without relying on theorem \ref{CGthm} and the local form (\ref{eq:coord_form}). The basis for this alternative method is the \textit{curved orbit decompositions} appearing in \cite{CGH-duke}, which arise from \textit{holonomy reductions} of Cartan geometries.
+It would be possible to show that the structures $(M,g,\Omega)$ arising in the projective to Einstein correspondence are para--$c$--projectively compact using a purely tractor--based approach, without relying on Theorem \ref{CGthm} and the local form (\ref{eq:coord_form}). The basis for this alternative method is the \textit{curved orbit decompositions} appearing in \cite{CGH-duke}, which arise from \textit{holonomy reductions} of Cartan geometries.
 
 Recall first that a connection $\theta$ on a principal $S$--bundle $\pi:\mathcal{G}\rightarrow M$ defines a unique horizontal lift of any smooth curve on $M$, and the we can define the \textit{holonomy group} of $\theta$ based at $u\in \mathcal{G}$ as
 \begin{align*}
@@ -580,7 +580,7 @@ By our construction above it follows that $\mathcal{M}$ has a canonical para--$c
 
 \subsection{The model case}
 
-Recall from section \ref{sec:intro_model} that the flat projective structure on $N=\RP^n$ gives rise to 
+Recall from Section \ref{sec:intro_model} that the flat projective structure on $N=\RP^n$ gives rise to 
 the neutral signature para--K\"ahler Einstein metric (\ref{eq:intro_model_g}) on the manifold
 \begin{align*}
 M=&\{([P],[L])\in\RP^n\times\RP_n\ |\ P\cdot L\neq 0\} \\
@@ -590,7 +590,7 @@ where $\mathcal{M}$ was the projectivised cotractor bundle $\PP(\cT^*)$ of $\RP^
 
 Here we shall instead take $N$ to be the sphere $S^n$ with its standard flat projective structure where the geodesics are great circles, so that $N$ is orientable in all dimensions and the cotractor bundle is trivial. Note that $S^n$ is a double cover of $\RP^n$ which consists of the set of \textit{oriented} lines in $\R^{n+1}$. We obtain it by taking an analogous quotient of $\R^{n+1}$ where points are considered equivalent only up to multiplication by a \textit{positive} number. We call this ray projectivisation and denote it $\PP_+(\R^{n+1})$.
 
-Replacing $\RP^n$ with $S^n$ allows us to write the cotractor bundle of $N$ as $\cT^*=S^n\times\R_3$, and if we also projectify the fibers by ray projectivisation, we obtain a larger manifold
+Replacing $\RP^n$ with $S^n$ allows us to write the cotractor bundle of $N$ as $\cT^*=S^n\times\R_3$, and if we also projectivise the fibres by ray projectivisation, we obtain a larger manifold
 \[
 \widetilde{\mathcal{M}}=\PP_+(\cT^*)=S^n\times S_n,
 \]
@@ -600,15 +600,14 @@ Consider first two vector spaces $\mathbb{V},\mathbb{W}$ each isomorphic to $\ma
 \[
 \mathbb{P}_+(\mathbb{V}) \times \mathbb{P}_+(\mathbb{W})=G/S=\big( SL(\mathbb{V})/P_V \big)\times \big( SL(\mathbb{W})/P_W \big)
 \]
-where $P_V$ (resp.\ $P_W$) is the parabolic subgroup in $SL(\mathbb{V})$
-that stabilises a point $[V]$ in $\mathbb{P}_+(\mathbb{V})$ (resp.\ $[W] \in \mathbb{P}_+(\mathbb{W})$
-), and $S$ is the group product $P_V\times P_W$ which itself is a
+where $P_V$ (respectively\ $P_W$) is the parabolic subgroup in $SL(\mathbb{V})$
+that stabilises a point $[V]$ in $\mathbb{P}_+(\mathbb{V})$ (respectively\ $[W] \in \mathbb{P}_+(\mathbb{W})$), and $S$ is the group product $P_V\times P_W$ which itself is a
 parabolic subgroup of the semisimple group $G$.
 Since the action of $SL(\mathbb{V})$ descends to a transitive action on the ray projectivisation $\mathbb{P}_+(\mathbb{V})$ and similarly $SL(\mathbb{W})$ acts
 transitively on $\mathbb{P}_+(\mathbb{W})$, we have that $G:= SL(\mathbb{V})\times SL(\mathbb{W})$ acts transitively on the manifold $\mathbb{P}_+(\mathbb{V}) \times \mathbb{P}_+(\mathbb{W})$.
 
 Note that we may consider $\mathbb{V}$ and $\mathbb{W}$ as the $\pm 1$ eigenspaces of the single vector space $\mathbb{V}\oplus \mathbb{W}$ equipped with an endomorphism
-$\mathbb{J}$ such that $\mathbb{J}^2=1$. Then the quotient $G/S$ is exactly analogous to model for $c$--projective geometry discussed in section \ref{sec:c-proj_geom}. We can therefore expect $G/S$ to be the model for para--$c$--projective geometry.
+$\mathbb{J}$ such that $\mathbb{J}^2=1$. Then the quotient $G/S$ is exactly analogous to model for $c$--projective geometry discussed in Section \ref{sec:c-proj_geom}. We can therefore expect $G/S$ to be the model for para--$c$--projective geometry.
 
 
 Now introduce an additional structure which breaks the $G$
@@ -638,7 +637,7 @@ M_-=\{ ([V],[W])\in \mathcal{M} \mid W(V)<0 \}.
 $$
 We may think of $\mathcal{Z}$ as the `boundary' (at infinity) for the open orbits $M_\pm$, each of which is a copy of our para--K\"ahler Einstein manifold $M$.
 
-We therefore have an orbit decomposition of the homogeneous space $G/S$, where the additional structure $I$ has induced a reduction of the holonomy group by ${H}$. Based on the results of \cite{CGH-duke} for the analogous $c$--projective case, we expect the closed orbit $\mathcal{Z}$ to carry a para--CR structure and the open orbits $M_\pm$ to carry para--K\"ahler metrics which are induced by the dual pairing between $\mathbb{V}$ and $\mathbb{V}^*$ just as we saw in section \ref{sec:trac_construction_g}.
+We therefore have an orbit decomposition of the homogeneous space $G/S$, where the additional structure $I$ has induced a reduction of the holonomy group by ${H}$. Based on the results of \cite{CGH-duke} for the analogous $c$--projective case, we expect the closed orbit $\mathcal{Z}$ to carry a para--CR structure and the open orbits $M_\pm$ to carry para--K\"ahler metrics which are induced by the dual pairing between $\mathbb{V}$ and $\mathbb{V}^*$ just as we saw in Section \ref{sec:trac_construction_g}.
 
 
 

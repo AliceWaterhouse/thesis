@@ -53,10 +53,11 @@ to be
 \end{eqnarray*}
 The metric is then given by
 \begin{eqnarray*}
-\hat{g} & = & \mathrm{e}^{t}( dx^{i}+x^{i} dt)\mathrm{e}^{-t}( d\zeta_{i}-\zeta_{i} dt)\ -\ \mathrm{e}^{t} dt\mathrm{e}^{-t}\biggl[\Bigl(\frac{1}{\Lambda}-x^{k}\zeta_{k}\Bigr) dt+x^{k} d\zeta_{k}+\zeta_{k} dx^{k}\biggr]\\
- & = &  dx^{i} d\zeta_{i}\ +\ (x^{i} d\zeta_{i}-\zeta_{i} dx^{i}) dt\ -\ (x^{i}\zeta_{i}) dt^{2}\ -\  dt\biggl[\Bigl(\frac{1}{\Lambda}-x^{k}\zeta_{k}\Bigr) dt+x^{k} d\zeta_{k}+\zeta_{k} dx^{k}\biggr]\\
- & = &  dx^{i} d\zeta_{i}\ -\ \frac{1}{\Lambda} dt^{2}\ -\ 2\zeta_{i} dx^{i} dt\\
- & = &  dx^{i} d\zeta_{i}\ +\ \Lambda(\zeta_{i} dx^{i})^{2}\ -\ \Lambda\Bigl(\frac{ dt}{\Lambda}+\zeta_{i} dx^{i}\Bigr)^{2},
+\hat{g} &=& \mathrm{e}^{t}( dx^{i}+x^{i} dt)\odot\mathrm{e}^{-t}( d\zeta_{i}-\zeta_{i} dt)\ -\ \mathrm{e}^{t} dt\odot\mathrm{e}^{-t}\biggl[\Bigl(\frac{1}{\Lambda}-x^{k}\zeta_{k}\Bigr) dt+x^{k} d\zeta_{k}+\zeta_{k} dx^{k}\biggr]\\
+ &=&  dx^{i}\odot d\zeta_{i}\ +\ (x^{i} d\zeta_{i}-\zeta_{i} dx^{i})\odot dt\ -\ (x^{i}\zeta_{i}) dt^2\\
+ & &-\  dt\odot\biggl[\Bigl(\frac{1}{\Lambda}-x^{k}\zeta_{k}\Bigr) dt+x^{k} d\zeta_{k}+\zeta_{k} dx^{k}\biggr]\\
+ &=&  dx^{i}\odot d\zeta_{i}\ -\ \frac{1}{\Lambda} dt^2\ -\ 2\zeta_{i} dx^{i}\odot dt\\
+ &=&  dx^{i}\odot d\zeta_{i}\ +\ \Lambda\zeta_{i}\zeta_j dx^{i}\odot dx^j\ -\ \Lambda\Bigl(\frac{ dt}{\Lambda}+\zeta_{i} dx^{i}\Bigr)^{2},
 \end{eqnarray*}
 which is clearly going to give $g_{\Lambda}$ under Kaluza-Klein reduction
 by $\frac{\partial}{\partial t}$.
@@ -150,8 +151,10 @@ where $\hat{R}_{\rho\sigma\nu}^{\ \ \ \ \mu}$ is the Riemann
 tensor of $\mathcal{Q}$. Note that we use the notation $\psi_{\ b}^{a}=\psi_{\ bc}^{a}e^{c}$. 
 \begin{eqnarray*}
 \hat{\Psi}_{\ b}^{a} & = & {d}\hat{\psi}_{\ b}^{a}+\hat{\psi}_{\ c}^{a}\wedge\hat{\psi}_{\ b}^{c}+\hat{\psi}_{\ 0}^{a}\wedge\hat{\psi}_{\ b}^{0}\\
- & = & {d}\psi_{\ b}^{a}+{\sqrt{\Lambda}{d}}(\Omega_{\ b}^{a}e^{0})+\psi_{\ c}^{a}\wedge\psi_{\ b}^{c}+\sqrt{\Lambda}\Omega_{\ c}^{a}e^{0}\wedge\psi_{\ b}^{c}+\sqrt{\Lambda}\Omega_{\ b}^{c}\psi_{\ c}^{a}\wedge e^{0}+\Lambda\Omega_{\ [c}^{a}\Omega_{|b|d]}e^{c}\wedge e^{d}\\
- & = & \Psi_{\ b}^{a}+\sqrt{\Lambda}E_{c}(\Omega_{\ b}^{a})e^{c}\wedge e^{0}+\Lambda(\Omega_{\ b}^{a}\Omega_{cd}+\Omega_{\ [c}^{a}\Omega_{|b|d]})e^{c}\wedge e^{d}+\sqrt{\Lambda}(\Omega_{\ b}^{c}\psi_{\ cd}^{a}-\Omega_{\ c}^{a}\psi_{\ bd}^{c})e^{d}\wedge e^{0}\\
+ & = & {d}\psi_{\ b}^{a}+{\sqrt{\Lambda}{d}}(\Omega_{\ b}^{a}e^{0})+\psi_{\ c}^{a}\wedge\psi_{\ b}^{c}+\sqrt{\Lambda}\Omega_{\ c}^{a}e^{0}\wedge\psi_{\ b}^{c}\\
+ & &+ \sqrt{\Lambda}\Omega_{\ b}^{c}\psi_{\ c}^{a}\wedge e^{0}+\Lambda\Omega_{\ [c}^{a}\Omega_{|b|d]}e^{c}\wedge e^{d}\\
+& = & \Psi_{\ b}^{a}+\sqrt{\Lambda}E_{c}(\Omega_{\ b}^{a})e^{c}\wedge e^{0}+\Lambda(\Omega_{\ b}^{a}\Omega_{cd}+\Omega_{\ [c}^{a}\Omega_{|b|d]})e^{c}\wedge e^{d}\\
+& &+\sqrt{\Lambda}(\Omega_{\ b}^{c}\psi_{\ cd}^{a}-\Omega_{\ c}^{a}\psi_{\ bd}^{c})e^{d}\wedge e^{0}\\
  & = & \Psi_{\ b}^{a}+\sqrt{\Lambda}{^{\bf g}\nabla}_{c}\Omega_{\ b}^{a}e^{c}\wedge e^{0}+\Lambda(\Omega_{\ b}^{a}\Omega_{cd}+\Omega_{\ [c}^{a}\Omega_{|b|d]})e^{c}\wedge e^{d}.\\
 \hat{\Psi}_{\ a}^{0} & = & {d}\hat{\psi}_{\ a}^{0}+\hat{\psi}_{\ b}^{0}\wedge\hat{\psi}_{\ a}^{b}\\
  & = & \sqrt{\Lambda}E_{[c}(\Omega_{|a|b]})\theta^{c}\wedge\theta^{b}-\sqrt{\Lambda}\Omega_{ab}\psi_{\ c}^{b}\wedge e^{c}+\sqrt{\Lambda}\Omega_{bc}e^{c}\wedge(\psi_{\ a}^{b}+\sqrt{\Lambda}\Omega_{\ a}^{b}e^{0})\\
@@ -177,7 +180,7 @@ and thus, using $\hat{R}_{\mu\nu}=\hat{R}_{\rho\mu\nu}^{\ \ \ \ \rho}$,
 
 Note that we have used the facts that $g$ is Einstein with Ricci
 scalar $4n(n+1)\Lambda$ and the symplectic form $\Omega$ is divergence--free;
-these are justified in lemmas \ref{lem:Ricci_scalar} and \ref{lem:div_free} below. Since $\hat{g}_{a0}=0$,
+these are justified in Lemmas \ref{lem:Ricci_scalar} and \ref{lem:div_free} below. Since $\hat{g}_{a0}=0$,
 we conclude that
 \[
 \hat{R}_{\mu\nu}=2n\Lambda\hat{g}_{\mu\nu}=\frac{\hat{R}}{2n+1}\hat{g}_{\mu\nu},
@@ -241,7 +244,7 @@ and
 \]
 Note that from now on we will omit the summation sign and use the
 summation convention regardless of whether $i,j$ indices are up or
-down. As in section \ref{sec:quadric}, we look for $\psi_{\ b}^{a}$
+down. As in Section \ref{sec:quadric}, we look for $\psi_{\ b}^{a}$
 by considering $ de^{a}$ (recall that $i,j=1,\dots,n$ and
 $a,b=1,\dots,2n$):
 \begin{eqnarray*}

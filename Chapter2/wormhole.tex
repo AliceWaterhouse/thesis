@@ -39,7 +39,7 @@ and we find a static solution $\phi=\mathrm{tanh}(x-c)$ which we call the flat k
 
 \subsection{Linear Stability}
 
-A second notion of stability which will be important to our discussion is linear stability. On discarding non--linear terms, we find that small pertubations $\phi(t,x)=\Phi_0(x)+\mathrm{e}^{i\omega t}v_0(x)$ satisfy the Schr\"odinger equation
+A second notion of stability which will be important to our discussion is linear stability. On discarding non--linear terms, we find that small perturbations $\phi(t,x)=\Phi_0(x)+\mathrm{e}^{i\omega t}v_0(x)$ satisfy the Schr\"odinger equation
 \begin{equation}
 \label{eq:zero_order}
 L_0v_0:=-v_0^{\prime\prime} - 2(1-3\Phi_0^2)v_0 = \omega^2_0v_0.
@@ -61,7 +61,7 @@ where we have chosen the normalisation constant such that $\int_{-\infty}^{\inft
 
 The first of these is the zero mode of the kink. Its existence is guaranteed by the translation invariance of (\ref{eom:R11}), and up to a multiplicative constant it is equal to $\Phi_0^\prime(x)$. Excitation of this state corresponds to performing a Lorentz boost. In the non--relativistic limit, this amounts to replacing $\Phi_0(x)$ with $\Phi_0(x-vt)$ for some $v\ll 1$ \cite{Manton&Sutcliffe}.
 
-The second normalisable solution, called an \textit{internal mode}, has non--zero frequency $\omega$, and is thus time periodic. In the full non--linear theory, it decays through resonant coupling to the continuous spectrum \cite{Manton&Merabet}. This phenomenon is of considerable interest in non--linear PDEs, and was studied in a more general setting in \cite{SW98}. The corresponding process in the modified theory will be discussed in section \ref{sec:dynamics}.
+The second normalisable solution, called an \textit{internal mode}, has non--zero frequency $\omega$, and is thus time periodic. In the full non--linear theory, it decays through resonant coupling to the continuous spectrum \cite{Manton&Merabet}. This phenomenon is of considerable interest in non--linear PDEs, and was studied in a more general setting in \cite{SW98}. The corresponding process in the modified theory will be discussed in Section \ref{sec:dynamics}.
 
 Linear stability of the kink is equivalent to the Schr\"odinger operator $L_0$ in (\ref{eq:zero_order}) having no negative eigenvalues, so that linearised perturbations cannot grow exponentially with time. One way to see that the kink is linearly stable is via the Sturm oscillation theorem:
 
@@ -100,7 +100,7 @@ e^\prime(\mu)= \begin{cases}
 \]
 Since $E_1$, $E_2$ and $\mu$ are all positive, the derivative can only have a zero only when $n$ and $2-n$ have the same sign, which only happens when $n=1$. We thus conclude that no static, finite energy solutions to the equations of motion exist for $n>1$.
 
-In order to construct a higher dimensional $\phi^4$ kink, we must add curvature. In the next section we introduce a curved background, and show that a modified $\phi^4$ kink exists on this background. We will also examine a limit in which the modified kink reduces to the flat kink. In section \ref{sec:linearised_pert} we consider linearised perturbations around the modified kink, proving that it is linearly stable and comparing its discrete spectrum to that of the flat kink. In section \ref{sec:dynamics} we examine the mode of decay to the modified kink in the full non--linear theory, in particular the resonant coupling of its internal modes to the continuous spectrum.
+In order to construct a higher dimensional $\phi^4$ kink, we must add curvature. In the next section we introduce a curved background, and show that a modified $\phi^4$ kink exists on this background. We will also examine a limit in which the modified kink reduces to the flat kink. In Section \ref{sec:linearised_pert} we consider linearised perturbations around the modified kink, proving that it is linearly stable and comparing its discrete spectrum to that of the flat kink. In Section \ref{sec:dynamics} we examine the mode of decay to the modified kink in the full non--linear theory, in particular the resonant coupling of its internal modes to the continuous spectrum.
 
 \section{The static kink on a wormhole}
 
@@ -151,8 +151,8 @@ which, imagining $r$ as a time coordinate, can be thought of as a Newtonian equa
 
 In addition to the two vacuum solutions, we have a single soliton solution which interpolates between the saddle points at $(-1,0)$ and $(1,0)$ in the in the $(\phi,\phi^\prime)$ plane. Its existence and uniqueness among odd parity solutions follow from a shooting argument: suppose the particle lies at $\phi=0$ when $r=0$. If its velocity $\phi^\prime(0)$ is too small, it will never reach the local maximum of the potential at $\phi=1$, but if $\phi^\prime(0)$ is too large it will overshoot the maximum so that $\mathcal{U}(\phi)\rightarrow -\infty$ as $r\rightarrow\infty$, thus having infinite energy. Continuity ensures that there is some critical velocity $\phi^\prime(0)$ such that the particle reaches $\phi=1$ in infinite time and has zero velocity upon arrival. This corresponds to the non--trivial kink solution, which we call $\Phi(r)$. Time reversal implies that $\phi\rightarrow -1$ as $r\rightarrow -\infty$, and that the anti--kink $\phi(r)=-\Phi(r)$ is also a solution.
 
-We can find $\Phi(r)$ numerically using a shooting method for the gradient at $r=0$. %For $a=1$ we find $\phi^\prime(0)=1.379602$. A plot of the corresponding soliton is shown in figure \ref{fig:soliton}.
-method for the gradient at $r=0$. Figure \ref{fig:several_kinks} shows such numerically generated kinks for several values of $a$. Note that the absolute value of $\Phi(r)$ is always greater than or equal to that of the flat kink $\Phi_0(r)$, and that at fixed non--zero $r$, the absolute value of $\Phi$ decreases as $a$ increases. The reason for this will become clear in section \ref{sec:linearised_pert}. In section \ref{sec:large_a} we examine $\Phi(r)$ in the limit where $a$ is large, finding that it reduces to the flat kink $\Phi_0(r)$, and examining its departure from the flat kink at first order in $1/a^2$.
+We can find $\Phi(r)$ numerically using a shooting method for the gradient at $r=0$. %For $a=1$ we find $\phi^\prime(0)=1.379602$. A plot of the corresponding soliton is shown in Figure \ref{fig:soliton}.
+method for the gradient at $r=0$. Figure \ref{fig:several_kinks} shows such numerically generated kinks for several values of $a$. Note that the absolute value of $\Phi(r)$ is always greater than or equal to that of the flat kink $\Phi_0(r)$, and that at fixed non--zero $r$, the absolute value of $\Phi$ decreases as $a$ increases. The reason for this will become clear in Section \ref{sec:linearised_pert}. In Section \ref{sec:large_a} we examine $\Phi(r)$ in the limit where $a$ is large, finding that it reduces to the flat kink $\Phi_0(r)$, and examining its departure from the flat kink at first order in $1/a^2$.
 
 We again label the values at the boundary as
 \[
@@ -229,7 +229,7 @@ f_2(r)&=\frac{1}{2}\mathrm{e}^{2r}(8r+8\mathrm{e}^{-2r}-1)
 &=4r\mathrm{e}^{2r} +\frac{r}{2}\mathrm{e}^{4r}+\mathcal{O}(\mathrm{e}^r),
 \end{split}
 \ee 
-so $f_1(r)+f_2(r)=\mathcal{O}(\mathrm{e}^r)$. Since $f_3(r)=\mathcal{O}(r^2)$ for large $r$, we see that $\Phi_1(r)$ vanishes as $r\rightarrow\infty$, as we expect. Note that its vanishing as $r\rightarrow-\infty$ then follows using parity. A plot of $\Phi_1(r)$ is shown in figure \ref{fig:Phi_1}.
+so $f_1(r)+f_2(r)=\mathcal{O}(\mathrm{e}^r)$. Since $f_3(r)=\mathcal{O}(r^2)$ for large $r$, we see that $\Phi_1(r)$ vanishes as $r\rightarrow\infty$, as we expect. Note that its vanishing as $r\rightarrow-\infty$ then follows using parity. A plot of $\Phi_1(r)$ is shown in Figure \ref{fig:Phi_1}.
 
 \begin{figure}
 \includegraphics[width=14cm]{Phi_1.pdf}
@@ -244,7 +244,7 @@ To study the linear stability of the kink, we first plug
 \label{eq:pert}
 \phi(t,r)=\Phi(r)+w(t,r)
 \ee
-into equation (\ref{eom.coords}), discarding terms non--linear in $w$. Imposing the fact that $\Phi(r)$ satifies (\ref{eom.static}), we find
+into equation (\ref{eom.coords}), discarding terms non--linear in $w$. Imposing the fact that $\Phi(r)$ satisfies (\ref{eom.static}), we find
 \be
 \nonumber
 w_{tt}=w_{rr}+\frac{2r}{r^2+a^2}w_r+2w(1-3\Phi^2).
@@ -292,15 +292,15 @@ Multiplying the equations (\ref{eq:particles}) by $\Phi_0^\prime$ and $\Phi^\pri
 \frac{1}{2}(\Phi_0^\prime)^2 + \mathcal{U}(\Phi_0) = 0,\qquad
 \frac{1}{2}(\Phi^\prime)^2 + \mathcal{U}(\Phi) = \int_r^\infty\frac{2r}{r^2+a^2}(\Phi^\prime)^2dr.
 \ee
-These equations are equivalent to conservation of energy for each of the particles. Note that the integral on the RHS is non--negative for $r\geq 0$, and vanishes only at $r=\infty$. In particular, when $r=0$ we have $\mathcal{U}(\Phi)=\mathcal{U}(\Phi_0)=-1/2$, so $\Phi^\prime(0)>\Phi_0^\prime(0)$. This means $V_1(r)$ is initially increasing from zero.
+These equations are equivalent to conservation of energy for each of the particles. Note that the integral on the right hand side is non--negative for $r\geq 0$, and vanishes only at $r=\infty$. In particular, when $r=0$ we have $\mathcal{U}(\Phi)=\mathcal{U}(\Phi_0)=-1/2$, so $\Phi^\prime(0)>\Phi_0^\prime(0)$. This means $V_1(r)$ is initially increasing from zero.
 
-For $V_1(r)$ to return to zero at some finite $r=r_0$, we would need that $\Phi(r_0)=\Phi_0(r_0)$ at a point where $\Phi^\prime(r_0)\leq\Phi_0^\prime(r_0)$. However, this is made impossible by equations (\ref{eq:energy}), since at such a point $\mathcal{U}(\Phi)=\mathcal{U}(\Phi_0)$ and the integral on the RHS is positive. Hence $V_1(r)$ remains non--negative for all $r>0$, and thus for all $r$ since it is even in $r$.
+For $V_1(r)$ to return to zero at some finite $r=r_0$, we would need that $\Phi(r_0)=\Phi_0(r_0)$ at a point where $\Phi^\prime(r_0)\leq\Phi_0^\prime(r_0)$. However, this is made impossible by equations (\ref{eq:energy}), since at such a point $\mathcal{U}(\Phi)=\mathcal{U}(\Phi_0)$ and the integral on the right hand side is positive. Hence $V_1(r)$ remains non--negative for all $r>0$, and thus for all $r$ since it is even in $r$.
 \koniec
 
 
 %{\bf Almost--proof relying on a bit of numerical evidence.} Suppose $v_g(r)$ is the ground state of (\ref{schrod}) and has $\mathcal{E}_g<0$. Our aim is to reach a contradiction. We know that $v_g(r)$ has even parity, and (by the Sturm oscillation theorem) no zeros, so we can make the choice $v_g(0)>0, v_g^\prime(0)=0$. Additionally, since it is a bound state, $v_g^\prime(r)\rightarrow 0$ from below as $r\rightarrow\infty$.
 
-%First note that for $a<1/\sqrt{2}\approx 0.7$, $V(0)>0$. We find that in fact $V(r)$ is everywhere positive for $a<1/\sqrt{2}$ (see figure \ref{fig:several_potentials} for the numerical evidence for this claim). By (\ref{schrod}) this implies that $v_g^{\prime\prime}(r)$ is everywhere negative. This is impossible, since $v_g^\prime(r)$ must vanish at $r=0$ and $r=\infty$. Thus there are no negative energy bound states for $a<1/\sqrt{2}$.
+%First note that for $a<1/\sqrt{2}\approx 0.7$, $V(0)>0$. We find that in fact $V(r)$ is everywhere positive for $a<1/\sqrt{2}$ (see Figure \ref{fig:several_potentials} for the numerical evidence for this claim). By (\ref{schrod}) this implies that $v_g^{\prime\prime}(r)$ is everywhere negative. This is impossible, since $v_g^\prime(r)$ must vanish at $r=0$ and $r=\infty$. Thus there are no negative energy bound states for $a<1/\sqrt{2}$.
 
 %For $a>1/\sqrt{2}$, we observe numerically that $V(r)$ only has one critical point: a minimum at $r=0$, and so is monotonically increasing for $0<r<\infty$. By (\ref{schrod}), this means that $v_g^{\prime\prime}(r)$ can have a maximum of one zero in this range, hence $v_g^\prime(r)$ cannot have any zeros other than those at $r=0$ and $r=\infty$. This implies that $v_g(r)$ is monotonically decreasing for $0<r<\infty$, which will be important in what follows.
 
@@ -371,9 +371,9 @@ Bound states of the potential (\ref{QMpotential}) correspond to internal modes o
 \end{enumerate}
 This procedure will only be effective within the range of $r$ for which $\Phi(r)$ is calculated.
 
-For large $a$, the potential has both an even and an odd bound state which look qualitatively similar to the internal modes (\ref{eq:flat_vib_modes}) of the $\phi^4$ kink on $\mathbb{R}^{1,1}$. The bound states for several values of $a$ can be found in figures \ref{fig:even_states} and \ref{fig:odd_states}. As $a$ decreases, the eigenvalues $\omega^2$ of the bound states increase, until they disappear into the continuous spectrum ($\omega^2>4$). This disappearance will be further discussed in section \ref{sec:a_crit}. The internal mode frequencies are plotted against $a$ in figure \ref{fig:omega_vs_a}. The choice of axis ticks will be motivated in section \ref{sec:dynamics}.
+For large $a$, the potential has both an even and an odd bound state which look qualitatively similar to the internal modes (\ref{eq:flat_vib_modes}) of the $\phi^4$ kink on $\mathbb{R}^{1,1}$. The bound states for several values of $a$ can be found in Figures \ref{fig:even_states} and \ref{fig:odd_states}. As $a$ decreases, the eigenvalues $\omega^2$ of the bound states increase, until they disappear into the continuous spectrum ($\omega^2>4$). This disappearance will be further discussed in Section \ref{sec:a_crit}. The internal mode frequencies are plotted against $a$ in Figure \ref{fig:omega_vs_a}. The choice of axis ticks will be motivated in Section \ref{sec:dynamics}.
 
-%As $a$ decreases, the eigenvalues $\omega^2$ of the bound states increase, until they disappear into the continuous spectrum ($\omega^2>4$). The odd state disappears around $a=0.8$, and the even state disappears around $a=0.3$. A plot of both the even and odd bound state for $a=5$ shown in figure \ref{fig:bound_states}. For $a=0.4$, a plot of the single even bound state is shown in figure \ref{fig:bound_state}. Note that for small values of $a$, there is a  local maximum of the potential located at $r=0$, with local minima on either side. For $a=0.4$, this is reflected in the local maxima of the even bound state either side of $r=0$.
+%As $a$ decreases, the eigenvalues $\omega^2$ of the bound states increase, until they disappear into the continuous spectrum ($\omega^2>4$). The odd state disappears around $a=0.8$, and the even state disappears around $a=0.3$. A plot of both the even and odd bound state for $a=5$ shown in Figure \ref{fig:bound_states}. For $a=0.4$, a plot of the single even bound state is shown in Figure \ref{fig:bound_state}. Note that for small values of $a$, there is a  local maximum of the potential located at $r=0$, with local minima on either side. For $a=0.4$, this is reflected in the local maxima of the even bound state either side of $r=0$.
 
 %\begin{figure}
 %\includegraphics[width=14cm]{bound_states.pdf}
@@ -402,7 +402,7 @@ For large $a$, the potential has both an even and an odd bound state which look 
 
 \subsection{Large $a$ limit}
 
-We can also perturbatively expand the eigenvalues of the eigenvalue problem (\ref{schrod}). Consider solutions to (\ref{eom.coords}) of the form\footnote{Note that in section \ref{sec:linearised_pert} we considered perturbations $v(r)$ which differ from $v_\epsilon(r)$ by a factor of $(r^2+a^2)^{-1/2}$, since such perturbations are described by a Schr\"odinger problem. Here it will be simpler to remove this factor; however there is a one--to--one correspondence between $v(r)$ and $v_\epsilon(r)$.} $\phi_\epsilon(r)=\Phi_\epsilon(r)+\mathrm{e}^{i\omega t}v_\epsilon(r)$, where $v_\epsilon$ is small.
+We can also perturbatively expand the eigenvalues of the eigenvalue problem (\ref{schrod}). Consider solutions to (\ref{eom.coords}) of the form\footnote{Note that in Section \ref{sec:linearised_pert} we considered perturbations $v(r)$ which differ from $v_\epsilon(r)$ by a factor of $(r^2+a^2)^{-1/2}$, since such perturbations are described by a Schr\"odinger problem. Here it will be simpler to remove this factor; however there is a one--to--one correspondence between $v(r)$ and $v_\epsilon(r)$.} $\phi_\epsilon(r)=\Phi_\epsilon(r)+\mathrm{e}^{i\omega t}v_\epsilon(r)$, where $v_\epsilon$ is small.
 These satisfy
 \be
 \label{eq:perturbed_large_a}
@@ -435,7 +435,7 @@ In the first term the integrand is a total derivative, and the second term is ea
 \label{eq:xi}
 \xi = 1 + 12\int_{-\infty}^{\infty}\Phi_0\Phi_1v_0^2dr,
 \ee
-which we can evaluate for each of the solutions (\ref{eq:flat_vib_modes}) using the symbolic computation facility in Mathematica. We find $\xi=2$ in the case of the zero mode and $\xi=\pi^2-7$ in the case of the first non--trivial vibrational mode. We can check these values by finding $(v,\omega)$ numerically as described in section \ref{sec:finding_bound_states_numerically} for a range of small values of $\epsilon$ and comparing $\omega^2$ to the $\omega^2_0+\xi\epsilon^2$ predicted here. The corresponding plots are shown in figures \ref{fig:xi_zero_mode} and \ref{fig:xi_other_mode}.
+which we can evaluate for each of the solutions (\ref{eq:flat_vib_modes}) using the symbolic computation facility in Mathematica. We find $\xi=2$ in the case of the zero mode and $\xi=\pi^2-7$ in the case of the first non--trivial vibrational mode. We can check these values by finding $(v,\omega)$ numerically as described in Section \ref{sec:finding_bound_states_numerically} for a range of small values of $\epsilon$ and comparing $\omega^2$ to the $\omega^2_0+\xi\epsilon^2$ predicted here. The corresponding plots are shown in Figures \ref{fig:xi_zero_mode} and \ref{fig:xi_other_mode}.
 
 \begin{figure}
 \includegraphics[width=14cm]{xi_zero_mode.pdf}
@@ -510,7 +510,7 @@ suppressing the dependence of $f$ on $r$ to simplify the notation. We will not h
 If $a$ is large enough to allow internal modes, then these can only decay through resonant coupling to the continuous spectrum of $L$. The analogous process of decay to the $\phi^4$ kink on $\mathbb{R}^{1,1}$ was discussed in \cite{Manton&Merabet}, and the general theory was developed in \cite{SW98}. In the following sections we investigate this decay in the case of a single internal mode, before comparing our result with numerical data.
 
 \subsection{Conjectured decay rate in the presence of a single internal mode} \label{sec:conjecture}
-In this section we follow the analysis in \cite{SG}. Looking at figure \ref{fig:omega_vs_a}, we note that for $a\in(0.3,0.8)$ we have
+In this section we follow the analysis in \cite{SG}. Looking at Figure \ref{fig:omega_vs_a}, we note that for $a\in(0.3,0.8)$ we have
 \be \label{eq:spec_L}
 \mathrm{spec}\ L=\{\omega^2\}\cap [m^2,\infty), \qquad \omega^2<m^2<4\omega^2
 \ee
@@ -538,7 +538,7 @@ These equations have initial conditions $\alpha(0)$ and $\eta(0,r)$ such that
 \dot{\phi}(0,r) &= (r^2+a^2)^{-1/2}(\dot{\alpha}(0)v(r) + \dot{\eta}(0,r)).
 \end{align*}
 
-In the following analysis we investigate decay of $\alpha(t)$. Equation (\ref{eq:alpha}) has a homogeneous solution consisting of oscillations with frequency $\omega$. Since $2\omega$ lies within the continuous spectrum of $L$, there will be a resonant interaction between the these oscillations and the radiation modes in $\eta$ with frequencies $\pm 2 \omega$, arising from the term of order $\alpha^2$ in the RHS of (\ref{eq:eta}). Thus, to leading order, (\ref{eq:eta}) is a driven wave equation with driving frequency $2\omega$. This resonant part of $\eta$ will have a back--reaction on $\alpha$ through (\ref{eq:alpha}), which will result in decay of the internal mode oscillations.
+In the following analysis we investigate decay of $\alpha(t)$. Equation (\ref{eq:alpha}) has a homogeneous solution consisting of oscillations with frequency $\omega$. Since $2\omega$ lies within the continuous spectrum of $L$, there will be a resonant interaction between the these oscillations and the radiation modes in $\eta$ with frequencies $\pm 2 \omega$, arising from the term of order $\alpha^2$ in the right hand side of (\ref{eq:eta}). Thus, to leading order, (\ref{eq:eta}) is a driven wave equation with driving frequency $2\omega$. This resonant part of $\eta$ will have a back--reaction on $\alpha$ through (\ref{eq:alpha}), which will result in decay of the internal mode oscillations.
 
 We now define $\alpha_1=\alpha,\ \omega\alpha_2=\dot{\alpha}_1$  so that (\ref{eq:alpha}) becomes
 \[
@@ -559,7 +559,7 @@ where $A=\alpha_1 + i\alpha_2$. Next we write $\eta_1=\eta,\ \eta_2=\dot{\eta}_1
 \end{cases}
 \]
 
-We will regard the right hand sides of (\ref{eq:A}) and (\ref{eq:eta2}) as power series in $A$ and $\eta$. Terms which we expect to be higher order will not be treated rigorously; for this reason, our analysis will produce only a conjecture about the decay rate. Numerical evidence concerning the conjecture will be discussed in section \ref{sec:numerics}.
+We will regard the right hand sides of (\ref{eq:A}) and (\ref{eq:eta2}) as power series in $A$ and $\eta$. Terms which we expect to be higher order will not be treated rigorously; for this reason, our analysis will produce only a conjecture about the decay rate. Numerical evidence concerning the conjecture will be discussed in Section \ref{sec:numerics}.
 
 It will be helpful to introduce the notation $\cO_p(A,\eta)$ to mean terms of at least order $p$ in $A,\bar{A},\eta_1,\eta_2$, so that $A^2$, $\eta_1^2 $ and $\bar{A}\eta_1$ are all examples of terms which are $\cO_2(A,\eta)$. Currently, the coupling between (\ref{eq:A}) and (\ref{eq:eta2}) is $\cO_2(A,\eta)$. We will write
 \[
@@ -577,7 +577,7 @@ P^\perp\bigg[ f\bigg( \frac{1}{2} (A+\bar{A}) v + \eta_1\bigg) \bigg] = \sum_{k+
 
 
 
-Terms in (\ref{eq:A}) with imaginary coefficients correspond to rotation in the complex plane, and thus to oscillatory behaviour in $\alpha$. At first order, $A$ oscillates with frequency $\omega$. This is exactly the behaviour expected in the linearised theory discussed in section \ref{sec:linearised_pert}. In fact, a priori, all the terms in the power series for $\dot{A}$ have coefficients which are purely imaginary.
+Terms in (\ref{eq:A}) with imaginary coefficients correspond to rotation in the complex plane, and thus to oscillatory behaviour in $\alpha$. At first order, $A$ oscillates with frequency $\omega$. This is exactly the behaviour expected in the linearised theory discussed in Section \ref{sec:linearised_pert}. In fact, a priori, all the terms in the power series for $\dot{A}$ have coefficients which are purely imaginary.
 
 The next step in our analysis will be to attempt a change of variable $\eta_i\mapsto\tilde{\eta}_i$ in (\ref{eq:eta2}) so that its right hand side is $\cO_3(A,\tilde{\eta})$, meaning $\tilde{\eta}$ is $\cO(A^3)$. It will turn out that the required change of variables is complex. The result will be a term in (\ref{eq:A}) which is $\cO(A^3)$ and has a real coefficient. This will be the lowest order term with a real coefficient, and thus the key resonant damping term. %The remaining terms in (\ref{eq:A}) which are $\cO_2(A,\tilde{\eta})$ will be proportional to $A\tilde{\eta}_1$ and $\tilde{\eta}_1^2$. These will be ignored, because $\tilde{\eta}$ is at least third order in $A$.
 
@@ -609,7 +609,7 @@ The change of variables (\ref{eq:eta_change}) is now given by the solution to
 \be \label{eq:solve_for_b}
 \big(L-\omega^2(k-l)^2\big)b_{kl}=P^\perp[f_{kl}].
 \ee
-Because of the spectrum of $L$ given in (\ref{eq:spec_L}), for $(k,l)\in(2,0)\cup (0,2)$ the solution $b_{kl}$ is in general a complex function of $r$, whilst for $k=l=1$ the solution is real and decaying. The reason for this can be understood using the variation of parameters method for inhomogeneous ODEs.
+Because of the spectrum of $L$ given in (\ref{eq:spec_L}), for $(k,l)\in(2,0)\cup (0,2)$ the solution $b_{kl}$ is in general a complex function of $r$, whilst for $k=l=1$ the solution is real and decaying. The reason for this can be understood using the variation of parameters method for inhomogeneous ordinary differential equations.
 
 Let $g(r)$ be such that $\langle g,g \rangle$ is finite, and $\lambda\geq 0$ a constant. The general solution of
 \[
@@ -716,14 +716,14 @@ to obtain the first order symmetric hyperbolic system
 \end{align}
 which we solve numerically using the method of lines. Kreiss--Oliger dissipation is required to reduce unphysical high--frequency noise. We also add the term $-0.1(\Psi-\p_yF)$ to the right hand side of equation (\ref{eq:Psi}) to suppress violation of the constraint $\Psi=\p_yF$.
 
-We are interested in the range of values $a_0<a<a_1$ for which the kink has exactly one internal mode. We find that, for fixed but arbitrary $y$, $F(s,y)$ oscillates in $s$ with a frequency close to the internal mode frequency, and that these oscillations tend towards a decay rate of $s^{-1/2}$, as we expect from section \ref{sec:conjecture}. Plots demonstrating this decay at $y=0$ for $a=0.5$ are shown in figure \ref{fig:decay}. Note that $\phi(0,s)$ is used as a proxy for the internal mode amplitude, and we use a log--log scale to elucidate the dependence on $s^{-1/2}$ in the large $s$ limit. The lines are labelled in the legend by the initial conditions which produced them, with the exception of the gradient line $4.2s^{-1/2}$. The constant $4.2$ is related to $\Gamma$ as defined in (\ref{eq:decay_behaviou}).
+We are interested in the range of values $a_0<a<a_1$ for which the kink has exactly one internal mode. We find that, for fixed but arbitrary $y$, $F(s,y)$ oscillates in $s$ with a frequency close to the internal mode frequency, and that these oscillations tend towards a decay rate of $s^{-1/2}$, as we expect from Section \ref{sec:conjecture}. Plots demonstrating this decay at $y=0$ for $a=0.5$ are shown in Figure \ref{fig:decay}. Note that $\phi(0,s)$ is used as a proxy for the internal mode amplitude, and we use a log--log scale to elucidate the dependence on $s^{-1/2}$ in the large $s$ limit. The lines are labelled in the legend by the initial conditions which produced them, with the exception of the gradient line $4.2s^{-1/2}$. The constant $4.2$ is related to $\Gamma$ as defined in (\ref{eq:decay_behaviou}).
 
 \subsection{Expected decay rates in other regimes}
-From figure \ref{fig:omega_vs_a}, we see that the second internal mode appears before the frequency of the first internal mode moves out of the range $(m/2,m)$. In the presence of more than one internal mode, we expect complicated coupling between their amplitudes, making the behaviour at large times very difficult to predict. However, if we restrict to odd initial data, the solution to (\ref{eq:nonsmall_pert}) remains odd. This means that the even internal mode can never be excited, so the system effectively has only one internal mode. In this case, the analysis in section \ref{sec:conjecture} still applies, since the frequency of the odd internal mode always lies in the range $(m/2,m)$, so we expect its amplitude to decay like $s^{-1/2}$.
+From Figure \ref{fig:omega_vs_a}, we see that the second internal mode appears before the frequency of the first internal mode moves out of the range $(m/2,m)$. In the presence of more than one internal mode, we expect complicated coupling between their amplitudes, making the behaviour at large times very difficult to predict. However, if we restrict to odd initial data, the solution to (\ref{eq:nonsmall_pert}) remains odd. This means that the even internal mode can never be excited, so the system effectively has only one internal mode. In this case, the analysis in Section \ref{sec:conjecture} still applies, since the frequency of the odd internal mode always lies in the range $(m/2,m)$, so we expect its amplitude to decay like $s^{-1/2}$.
 
-For general initial data and wormhole radii $a>a_1$, we cannot produce a concrete conjecture about the decay rate. However, we expect the behaviour of the system to depend on the locations of the two internal mode frequencies within the mass gap. The analysis in section \ref{sec:conjecture} for a single internal mode suggests that for frequencies less than $m/2$, a real contribution to $\dot{A}$ does not appear until at least $\mathcal{O}(A^4)$. In this case, we require another change of variable in the radiation equation to rule out the contribution of the radiative term at higher order. We then expect to solve an equivalent of (\ref{eq:solve_for_b}) where $k+l=3$ to find the required change of variable. If $9\omega^2<m^2$ so that the solution is still real, we can proceed by induction, changing the variable until the solution is complex. A real contribution to (\ref{eq:A2}) will only be obtained for $k+l=N$ such that $N^2\omega^2>m^2$. This would mean a real contribution to $\dot{A}$ at $\mathcal{O}(A^{N+1})$, and hence result in a decay rate of $s^{-1/N}$. Further detail can be found in \cite{SG}.
+For general initial data and wormhole radii $a>a_1$, we cannot produce a concrete conjecture about the decay rate. However, we expect the behaviour of the system to depend on the locations of the two internal mode frequencies within the mass gap. The analysis in Section \ref{sec:conjecture} for a single internal mode suggests that for frequencies less than $m/2$, a real contribution to $\dot{A}$ does not appear until at least $\mathcal{O}(A^4)$. In this case, we require another change of variable in the radiation equation to rule out the contribution of the radiative term at higher order. We then expect to solve an equivalent of (\ref{eq:solve_for_b}) where $k+l=3$ to find the required change of variable. If $9\omega^2<m^2$ so that the solution is still real, we can proceed by induction, changing the variable until the solution is complex. A real contribution to (\ref{eq:A2}) will only be obtained for $k+l=N$ such that $N^2\omega^2>m^2$. This would mean a real contribution to $\dot{A}$ at $\mathcal{O}(A^{N+1})$, and hence result in a decay rate of $s^{-1/N}$. Further detail can be found in \cite{SG}.
 
-Although the presence of a second internal mode complicates the dynamics, we still expect the smallest $N$ such that the even internal mode frequency $\omega$ satisfies $N^2\omega^2>m^2$ to be an important factor in the behaviour at large $s$. The axis ticks in figure \ref{fig:omega_vs_a} show the value of $N$ for a range of $a$.
+Although the presence of a second internal mode complicates the dynamics, we still expect the smallest $N$ such that the even internal mode frequency $\omega$ satisfies $N^2\omega^2>m^2$ to be an important factor in the behaviour at large $s$. The axis ticks in Figure \ref{fig:omega_vs_a} show the value of $N$ for a range of $a$.
 
  
 
