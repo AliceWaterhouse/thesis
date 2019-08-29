@@ -3,23 +3,23 @@
 %****************************** Chapter 2: KK_lift *********************************
 %*******************************************************************************
 
-\chapter{An Einstein metric on an $\R^*$--bundle over $M$}
+\chapter{An Einstein metric on an $\R^*$ bundle over $M$}
 \label{chap:KK_lift}
-In this chapter, we show that there is a canonical Einstein of metric on an $\R^*$--bundle over $M$, with a connection whose curvature is the pull--back
-of the symplectic structure from $M$. This metric is interesting in the context of Kaluza-Klein theory. The material covered here is based on material appearing in \cite{DW}.
+In this chapter, we show that there is a canonical Einstein of metric on an $\R^*$ bundle over $M$, with a connection whose curvature is the pull--back
+of the symplectic structure from $M$. This metric is interesting in the context of Kaluza--Klein theory. The material covered here is based on material appearing in \cite{DW}.
 
 %\mynote{I would like to understand this section from the tractor perspective. Try comparing my lifted metric to what can be obtained by slightly modifying the tractor construction of $g$.}
 
 \section{The model case} \label{sec:quadric}
 
-We first note that the flat projective structure on $\mathbb{RP}^{n}$ gives a one--parameter family of $2n$-dimensional Einstein spaces $M$ which are a Kaluza--Klein reductions of quadrics in $\mathbb{R}^{n+1,n+1}$. For $N=\RP^n$, the family $\{(g_\Lambda,\Omega_\Lambda)\,;\,\Lambda\neq 0\}$ is given by
+We first note that the flat projective structure on $\mathbb{RP}^{n}$ gives a one--parameter family of $2n$--dimensional Einstein spaces $M$ which are a Kaluza--Klein reductions of quadrics in $\mathbb{R}^{n+1,n+1}$. For $N=\RP^n$, the family $\{(g_\Lambda,\Omega_\Lambda)\,;\,\Lambda\neq 0\}$ is given by
 \begin{eqnarray}
 g_{\Lambda} & = &  dx^{i} \odot d\zeta_{i}+\Lambda\zeta_{i}\zeta_j dx^{i}\odot dx^j \label{eq:g_LambdaModel}\\
 \Omega_{\Lambda} & = &  d\zeta_{i}\wedge dx^{i}.\nonumber
 \end{eqnarray}
 
 \begin{prop}
-The Einstein spaces $M$ carrying metric and symplectic form (\ref{eq:g_LambdaModel}) are projections from the $2n+1$-dimensional quadrics $\mathcal{Q}\subset\mathbb{R}^{n+1,n+1}$
+The Einstein spaces $M$ carrying metric and symplectic form (\ref{eq:g_LambdaModel}) are projections from the $(2n+1)$--dimensional quadrics $\mathcal{Q}\subset\mathbb{R}^{n+1,n+1}$
 given by $P^{\alpha}L_{\alpha}=\frac{1}{\Lambda}$, where $P,L\in\mathbb{R}^{n+1}$
 are coordinates on $\mathbb{R}^{n+1,n+1}$ such that the metric is
 given by 
@@ -37,7 +37,7 @@ L_{\alpha} & = & \begin{cases}
 \mathrm{e}^{-t}\Bigl(\frac{1}{\Lambda}-x^{k}\zeta_{k}\Bigr), & \alpha=n+1
 \end{cases}\label{eq:embedding-1}
 \end{eqnarray}
-following Kaluza-Klein reduction by the vector $\frac{\partial}{\partial t}.$
+following Kaluza--Klein reduction by the vector $\frac{\partial}{\partial t}.$
 \end{prop}
 \textbf{Proof. }We find the basis of coordinate 1-forms $\{ dP^{\alpha}, dL_{\alpha}\}$
 to be
@@ -59,7 +59,7 @@ The metric is then given by
  &=&  dx^{i}\odot d\zeta_{i}\ -\ \frac{1}{\Lambda} dt^2\ -\ 2\zeta_{i} dx^{i}\odot dt\\
  &=&  dx^{i}\odot d\zeta_{i}\ +\ \Lambda\zeta_{i}\zeta_j dx^{i}\odot dx^j\ -\ \Lambda\Bigl(\frac{ dt}{\Lambda}+\zeta_{i} dx^{i}\Bigr)^{2},
 \end{eqnarray*}
-which is clearly going to give $g_{\Lambda}$ under Kaluza-Klein reduction
+which is clearly going to give $g_{\Lambda}$ under Kaluza--Klein reduction
 by $\frac{\partial}{\partial t}$.
 \koniec
 
@@ -81,20 +81,20 @@ where
 \[
 \mathcal{A}=\zeta_{i} dx^{i}-\frac{\Gamma_{ik}^{k}}{\Lambda(n+1)} dx^{i}.
 \]
-This is a trivialisation of the Kaluza-Klein bundle which we are about
+This is a trivialisation of the Kaluza--Klein bundle which we are about
 to construct. Note that for $\Lambda=1$, under a change of projective
 connection (\ref{eq:proj_change}) the corresponding change in the
-fiber coordinates (\ref{eq:zeta_change}) ensures that $\Omega$ and
+fibre coordinates (\ref{eq:zeta_change}) ensures that $\Omega$ and
 $\mathcal{A}$ are unchanged.
 
-Motivated by the Kaluza-Klein reduction in the flat case, we consider
+Motivated by the Kaluza--Klein reduction in the flat case, we consider
 the following metric.
 \begin{theo}
 The metric
 \begin{equation}
 \hat{g}_{\Lambda}=g_{\Lambda}-\Lambda\Bigl(\frac{ dt}{\Lambda}+\mathcal{A}\Bigr)^{2}\label{eq:G}
 \end{equation}
-on an $\R^*$--bundle $\kappa_\mathcal{Q}:\mathcal{Q}\rightarrow M$ is Einstein,
+on an $\R^*$ bundle $\kappa_\mathcal{Q}:\mathcal{Q}\rightarrow M$ is Einstein,
 with Ricci scalar $2n(2n+1)\Lambda$.
 \end{theo}
 \textbf{Proof.} We prove this using the Cartan formalism. Our treatment
@@ -119,12 +119,12 @@ We are interested in the metric
 \ee
 where
 \[
-e^{0}=\sqrt{\Lambda}\biggl(\frac{ d\lambda}{\Lambda}+\mathcal{A}\biggr).
+e^{0}=\sqrt{\Lambda}\biggl(\frac{ dt}{\Lambda}+\mathcal{A}\biggr).
 \]
 Note that for $\Lambda<0$ one can instead take the absolute value of $\Lambda$ inside the square root, and change the sign of $e^{0}\odot e^{0}$ in the definition of $\hat{g}$.
 
-We reserve Roman indices $a,b,\dots$ for the $2n$-metric components
-$1,\dots,2n$ and allow greek indices $\mu,\nu,\dots$ to take values
+We reserve Latin indices $a,b,\dots$ for the $2n$-metric components
+$1,\dots,2n$ and allow Greek indices $\mu,\nu,\dots$ to take values
 $0,1,\dots,2n$. The dual basis to $\{e^{\mu}\}$ will be denoted
 $\{E_{\mu}\}$ and will act on functions as vector fields in the usual
 way. We wish to find the new connection 1-forms $\hat{\psi}_{\ \nu}^{\mu}$
@@ -157,7 +157,7 @@ tensor of $\mathcal{Q}$. Note that we use the notation $\psi_{\ b}^{a}=\psi_{\ b
 & &+\sqrt{\Lambda}(\Omega_{\ b}^{c}\psi_{\ cd}^{a}-\Omega_{\ c}^{a}\psi_{\ bd}^{c})e^{d}\wedge e^{0}\\
  & = & \Psi_{\ b}^{a}+\sqrt{\Lambda}{^{\bf g}\nabla}_{c}\Omega_{\ b}^{a}e^{c}\wedge e^{0}+\Lambda(\Omega_{\ b}^{a}\Omega_{cd}+\Omega_{\ [c}^{a}\Omega_{|b|d]})e^{c}\wedge e^{d}.\\
 \hat{\Psi}_{\ a}^{0} & = & {d}\hat{\psi}_{\ a}^{0}+\hat{\psi}_{\ b}^{0}\wedge\hat{\psi}_{\ a}^{b}\\
- & = & \sqrt{\Lambda}E_{[c}(\Omega_{|a|b]})\theta^{c}\wedge\theta^{b}-\sqrt{\Lambda}\Omega_{ab}\psi_{\ c}^{b}\wedge e^{c}+\sqrt{\Lambda}\Omega_{bc}e^{c}\wedge(\psi_{\ a}^{b}+\sqrt{\Lambda}\Omega_{\ a}^{b}e^{0})\\
+ & = & \sqrt{\Lambda}E_{[c}(\Omega_{|a|b]})e^{c}\wedge e^{b}-\sqrt{\Lambda}\Omega_{ab}\psi_{\ c}^{b}\wedge e^{c}+\sqrt{\Lambda}\Omega_{bc}e^{c}\wedge(\psi_{\ a}^{b}+\sqrt{\Lambda}\Omega_{\ a}^{b}e^{0})\\
  & = & \sqrt{\Lambda}(E_{[d}(\Omega_{|a|b]})-\Omega_{ac}\psi_{\ [bd]}^{c}+\Omega_{c[d}\psi_{\ |a|b]}^{c})e^{d}\wedge e^{b}+\Lambda\Omega_{bc}\Omega_{\ a}^{b}e^{c}\wedge e^{0}\\
  & = & \sqrt{\Lambda}{^{\bf g}\nabla}_{[c}\Omega_{|a|d]}e^{c}\wedge e^{d}+\Lambda\Omega_{bc}\Omega_{\ a}^{b}e^{c}\wedge e^{0}.
 \end{eqnarray*}
@@ -188,14 +188,14 @@ we conclude that
 i.e. $\hat{g}$ is Einstein with Ricci scalar $2n(2n+1)\Lambda$.
 \koniec
 
-Physically, this is a Kaluza-Klein reduction with constant dilation
+Physically, this is a Kaluza--Klein reduction with constant dilation
 field and where the Maxwell two-form is related to the reduced metric
 by $\Omega_{a}^{\ c}\Omega_{cb}=g_{ab}$. This is what allows both
 the reduced and lifted metric to be Einstein. A more general discussion
 can be found in \cite{Pope}.
 
 From the Cartan perspective, $\hat{g}_{\Lambda=1}$ can be thought
-of as a metric on the $2n+1$-dimensional space obtained by taking
+of as a metric on the $(2n+1)$--dimensional space obtained by taking
 a quotient $\hat{\kappa}_q:\mathcal{G}\rightarrow \mathcal{G}/SL(n,\mathbb{R})=\mathcal{Q}$ of the Cartan
 bundle, where we embed $SL(n,\mathbb{R})\subset GL(n,\mathbb{R})$
 in $S$ as in (\ref{eq:GL(n)_embedding}) but with $a$ now denoting
