@@ -97,7 +97,7 @@ D_\alpha = \{\iota^A\pi^{A'},\iota^{A}\in\Gamma(\spp)\}=\mathrm{span}\{\pi^{A'}\
 where $\{\mathsf{e}_{AA'}\}$ is a null tetrad of vector fields.
 
 An $\alpha$--surface (respectively $\beta$--surface) is a two dimensional surface in $M$ which is tangent to an $\alpha$--($\beta$--)distribution at every point. A foliation by $\alpha$--surfaces exists if and only if the corresponding distribution (\ref{eq:alpha_dist}) is Frobenius integrable. Penrose's nonlinear graviton Theorem \cite{penrose} states that a 
-maximal, three dimensional family of $\alpha$--surfaces exists in $M$ if and only if its conformal curvature is ASD, i.e. $C_+=0$. Existence of such a family is equivalent to the distribution (\ref{eq:alpha_dist}) being integrable for any $\pi^{A'}$. We can state this condition more as integrability of the lift of the distribution (\ref{eq:alpha_dist}) to $\spp'$. This is given by
+maximal, three dimensional family of $\alpha$--surfaces exists in $M$ if and only if its conformal curvature is ASD, i.e. $C_+=0$. Existence of such a family is equivalent to the distribution (\ref{eq:alpha_dist}) being integrable for any $\pi^{A'}$. We can state this condition as integrability of the lift of the distribution (\ref{eq:alpha_dist}) to $\spp'$. This is given by
 \be \label{eq:twistor_dist}
 \mathcal{D}=\mathrm{span}\{L_A:=\pi^{A'}\tilde{\mathsf{e}}_{AA'}\},
 \ee
@@ -161,12 +161,14 @@ From the results of Kodaira \cite{Kodaira} we have that a vector at a point $m\i
 
 
 \subsubsection{(Anti--)self--duality in the sense of Calderbank}
-Although a $\beta$--distribution is intrinsically ASD, there are two subclasses of $\beta$--distribution which we shall call SD or ASD \textit{in the sense of Calderbank} \cite{Cal1} (see also \cite{West}). Let $D_\beta$ be a $\beta$--distribution defined by an ASD two--form $\Sigma_{ab}=\iota_A\iota_B\epsilon_{A'B'}$, and  such that the spinor $\iota_A$ satisfies
+Although a $\beta$--distribution is intrinsically ASD in the sense that it is defined by an ASD two--form, there are two subclasses of $\beta$--distribution which we shall call \textit{Calderbank--SD} or \textit{Calderbank--ASD}. In \cite{Cal1}, Calderbank associates to any given $\beta$--distribution a unique connection. When the curvature of this connection is (A)SD, the $\beta$--distribution is called Calderbank--(A)SD. This has nothing to do with the anti--self-duality of the two--form defining the $\beta$--distribution; in a sense, a $\beta$--distribution which is Calderbank--ASD is doubly ASD. See \cite{Cal1} (also \cite{West}) for further details.
+
+We can express Calderbank (anti--)self--duality in twistor language as follows. Let $D_\beta$ be a $\beta$--distribution defined by an ASD two--form $\Sigma_{ab}=\iota_A\iota_B\epsilon_{A'B'}$, and  such that the spinor $\iota_A$ satisfies
 \be
 \label{dm3}
 \nabla_{A'(A}\iota_{B)}=\mathcal{A}_{A'(A}\iota_{B)}
 \ee
-where $d\mathcal{A}$ is an (A)SD Maxwell field. Then $D_\beta$ is (A)SD in the sense of Calderbank.
+where $d\mathcal{A}$ is an (A)SD Maxwell field. Then $D_\beta$ is Calderbank--(A)SD.
 
  
 \subsubsection{Local characterisation of the Einstein manifolds $(M,g)$}
@@ -174,7 +176,7 @@ where $d\mathcal{A}$ is an (A)SD Maxwell field. Then $D_\beta$ is (A)SD in the s
 A general ASD metric depends, in the real--analytic category, on six arbitrary functions of three variables \cite{DFK}. Theorem \ref{thm:DM} gives an explicit subclass of such metrics which are additionally constrained by the following local characterisation.
 
 \begin{theo}[\cite{DM}] \label{thm:DMcharacterisation}
-Let $(M,g)$ be an real ASD Einstein manifold with scalar curvature $24$ admitting a totally null distribution $D_\beta$ which is ASD in the sense of Calderbank and parallel in the sense that $^{\bf g}\nabla_{\xi} \tilde{\xi}\in\Gamma(D_\beta)$ for all $\xi\in \Gamma(TM),\ \tilde{\xi}\in\Gamma(D_\beta)$. Then $(M,g)$ is conformally flat, or it is locally isometric to (\ref{eq:g4}).
+Let $(M,g)$ be an real ASD Einstein manifold with scalar curvature $24$ admitting a totally null distribution $D_\beta$ which is Calderbank--ASD and parallel in the sense that $^{\bf g}\nabla_{\xi} \tilde{\xi}\in\Gamma(D_\beta)$ for all $\xi\in \Gamma(TM),\ \tilde{\xi}\in\Gamma(D_\beta)$. Then $(M,g)$ is conformally flat, or it is locally isometric to (\ref{eq:g4}).
 \end{theo}
 \noindent
 
@@ -183,7 +185,7 @@ In our coordinates $D_\beta$ is the kernel of the two--form $\Sigma=dx^{0'}\wedg
 \label{beta_eq}
 ^{\bf g}\nabla\Sigma=6\mathcal{A}\otimes \Sigma,
 \ee
-where $d\mathcal{A}=\Omega$, and $\Omega$ is the symplectic form on $M$. Writing $\Sigma_{ab}=\iota_A\iota_B\epsilon_{A'B'}$, (\ref{beta_eq}) implies (\ref{dm3}) for a rescaling of $\mathcal{A}$, so it is the anti--self--duality of $\Omega$ which makes $D$ ASD in the sense of Calderbank.
+where $d\mathcal{A}=\Omega$, and $\Omega$ is the symplectic form on $M$. Writing $\Sigma_{ab}=\iota_A\iota_B\epsilon_{A'B'}$, (\ref{beta_eq}) implies (\ref{dm3}) for a rescaling of $\mathcal{A}$, so it is the anti--self--duality of $\Omega$ which makes $D$ Calderbank--ASD.
 
 In Section \ref{sec:model} we will consider the model case where $M$ is constructed from the flat projective structure on $\RP^2$. In this case, we can explicitly describe the ASD Maxwell two--form $\Omega$ in terms of the twistor space of $M$,
 and we will find that $M$ carries a so--called \textit{pseudo--hyper--Hermitian} structure, in which $\mathcal{A}$ plays an important role.
@@ -223,7 +225,7 @@ There is a one--to--one correspondence between three dimensional Einstein--Weyl 
 \end{theo}
 \noindent The conformal structure $[h]$ is obtained by demanding that a vector on $\mathcal{W}$ is null if and only if the corresponding section of $\mathcal{O}(2)$ has a single zero. This condition is equivalent to the quadratic function $\sigma(\lambda)$ which represents the section having vanishing discriminant.
 
-Hitchin's results can be regarded as a reduction of Penrose's twistor transform for ASD conformal structures by the following theorem of Tod.
+Hitchin's results can be regarded as a reduction of Penrose's twistor transform for ASD conformal structures by the following theorem of Jones and Tod.
 \begin{theo}\cite{JT} \label{theo_tod1} \begin{enumerate} \item Let $(M, g)$ be a neutral signature, conformally ASD four--manifold with a conformal Killing vector $K$. Let
 \be 
 \label{EWgen}
@@ -287,7 +289,7 @@ with $\epsilon=1$.
 %\end{enumerate}
 \end{theo}
 
-Note that the assumptions about the signature of $h$ and the timelike character of $dZ$ in the above theorem are satisfied for all the Einstein--Weyl structures that can be obtained from the projective to Einstein correspondence.
+Note that the assumptions about the signature of $h$ and the timelike character of $dZ$ in the above theorem are satisfied for all the Einstein--Weyl structures that can be obtained from the projective to Einstein correspondence. An invariant procedure for obtaining the coordinate system $(X,Y,Z)$ is discussed in section \ref{steps_sec}.
 
 %\mynote{Need to define a congruence and its shear and twist, or modify the statement of Tod's theorem to be independent of the congruence.}
 
@@ -384,7 +386,7 @@ from the procedure (\ref{diagram}) is locally equivalent to
 \begin{eqnarray}
 \label{ew_final}
 h&=&\frac{1}{\mathscr{V}}\big((Bq -Ap+ q^2)dy+dq\big)dy
--\Big({pq+A}dy+\frac{1}{2}dp\Big)^2, \label{genh} \\
+-\Big((pq+A)dy+\frac{1}{2}dp\Big)^2, \label{genh} \\
 \varphi&=&\mathscr{V}(4dq+2 pdp), \quad\mbox{where}\quad \mathscr{V}=
 ({B}+ p^2+q)^{-1}.\nonumber
 \end{eqnarray}
@@ -597,7 +599,7 @@ so we have
 \]
 Setting this equal to $\mathcal{L}_\mathcal{K}(\varphi_ih_{jk})=(\mathcal{L}_\mathcal{K}\varphi_i)h_{jk}+f\varphi_ih_{jk}$ and cancelling $f\varphi_ih_{jk}$ with $f\mathscr{D}_ih_{jk}$, we find
 \begin{eqnarray}
-(\mathcal{L}_\mathcal{K}\varphi_i)g_{jk} &=& \p_ifh_{jk} - (\p_i\p_j\mathcal{K}^l)h_{lk} - (\p_i\p_k\mathcal{K}^l)h_{jl}\nonumber \\
+(\mathcal{L}_\mathcal{K}\varphi_i)h_{jk} &=& \p_ifh_{jk} - (\p_i\p_j\mathcal{K}^l)h_{lk} - (\p_i\p_k\mathcal{K}^l)h_{jl}\nonumber \\
 \label{liederivom}
 \implies\ \mathcal{L}_\mathcal{K}\varphi_i &=& \p_if - \frac{2}{N}\p_i\p_j\mathcal{K}^j.
 \end{eqnarray}
@@ -622,13 +624,13 @@ $\square$
 
 We can easily verify the invariance of (\ref{EWsym}) under Weyl transformations. Let $(\bar{h},\bar{\varphi})$ be a new metric and one--form related to the old ones by (\ref{weyl_tr}). Then
 \[
-\mathcal{L}_\mathcal{K}\bar{\varphi}=\mathcal{L}_\mathcal{K}\varphi + 2\mathcal{K}\hook d\mathrm{ln}(\rho)
+\mathcal{L}_\mathcal{K}\bar{\varphi}=\mathcal{L}_\mathcal{K}\varphi + 2d[\mathcal{K}\hook d\mathrm{ln}(\rho)]
 \]
 from (\ref{weyl_tr}), and from (\ref{EWsym}) we have
 \begin{align*}
 \mathcal{L}_\mathcal{K}\bar{\varphi} & = \frac{1}{N}d[\mathcal{K}\hook d(\mathrm{ln}(\rho^{2N}\mathrm{det}(h)))] \\
-& = \frac{1}{N}d[\mathcal{K}\hook d(\mathrm{ln}(\mathrm{det}(h)))] + \frac{2N}{N}\mathcal{K}\hook d\mathrm{ln}(\rho) \\
-& = \mathcal{L}_\mathcal{K}\varphi + 2\mathcal{K}\hook d\mathrm{ln}(\rho),
+& = \frac{1}{N}d[\mathcal{K}\hook d(\mathrm{ln}(\mathrm{det}(h)))] + \frac{2N}{N}d[\mathcal{K}\hook d\mathrm{ln}(\rho)] \\
+& = \mathcal{L}_\mathcal{K}\varphi + 2d[\mathcal{K}\hook d\mathrm{ln}(\rho)],
 \end{align*}
 as above. Note that the function $f$ in (\ref{EWsym}) will change according to
 \[
@@ -664,7 +666,7 @@ if there exists
 a line which contains the three points $(P, \tP, L\cap \tL)$. 
 \end{prop}
 {\bf Proof.}
-First not that the  null condition of Proposition \ref{prop_cone}
+First note that the  null condition of Proposition \ref{prop_cone}
 defines a co--dimension one cone in $TN$: 
 generically there is no line through three given points. To make explicit the condition for such a line to exist, consider two pairs  $(P, L)$ and $(\tP, \tL)$ 
 of non--incident points and lines. By thinking of $L,\tL$ as normal vectors to planes in $\R^3$, we see that $L+t\tL$ is a plane which intersects $L$ and $tL$ at their intersection, thus defining a line in $\RP^2$ which intersects the lines $L,\tL\subset\RP^2$ at their intersection.
@@ -791,7 +793,7 @@ Let $\Sigma^{A'B'}$ be a basis of SD two--forms on $M$. The following result is 
 \begin{theo}[\cite{D99}]\label{thm:D99}
 A four--manifold $M$ equipped with a neutral signature metric $g$ is pseudo--hyper--Hermitian if there exists a one--form $A$ depending only on $g$ such that
 \[
-d\Sigma^{A'B}+A\wedge \Sigma^{A'B'} = 0.
+d\Sigma^{A'B'}+A\wedge \Sigma^{A'B'} = 0.
 \]
 \end{theo}
 \noindent In fact, this condition is necessary and sufficient for hyper--Hermiticity \cite{D99,boyer}. Given some $(M,g)$ which is conformally ASD, it can also be shown (see Lemma 2 in \cite{D99} and Theorem  7.1 in \cite{Cal2}) that a lack of vertical $\p/\p \pi$ terms in the twistor distribution (\ref{eq:twistor_dist}) implies hyper--Hermiticity of $(M,g)$. %\mynote{This is not clear to me from a brief look at \cite{D99,Cal2}...}
@@ -900,7 +902,7 @@ is indeed the ASD para--K\"ahler structure $\Omega$.
 %\ee
 \subsection{Factoring the model to Einstein--Weyl}
 \label{neat2}
-As stated above, we expect distinct Einstein--Weyl structures if we factor $M$ by conformal killing vectors which are not conjugate with respect to an isometry \cite{PT}. We can thus classify the Einstein--Weyl structures obtainable from the model by first classifying its symmetries up to conjugation.
+As stated above, we expect distinct Einstein--Weyl structures if we factor $M$ by conformal Killing vectors which are not conjugate with respect to an isometry \cite{PT}. We can thus classify the Einstein--Weyl structures obtainable from the model by first classifying its symmetries up to conjugation.
 \begin{prop}
 The non--trivial Einstein--Weyl structures obtainable from the ASD Einstein metric (\ref{special_ein}) by the Jones--Tod correspondence consist of a two parameter family, and two additional cases which do not belong to this family.
 \end{prop}
@@ -980,7 +982,7 @@ In order to preserve the relations
 \[
 p\cdot L=0,\quad P\cdot l=0,\quad p\cdot l=0, 
 \]
-the corresponding holomorphic action on $(p,l)$ must be $p\mapsto gp$, $l\mapsto g^{-1}l$, thus the holomorphic vector field $ K_\mathscr{T}$ on $F_{12}$ is
+the corresponding holomorphic action on $(p,l)$ must be $p\mapsto gp$, $l\mapsto lg^{-1}$, thus the holomorphic vector field $ K_\mathscr{T}$ on $F_{12}$ is
 \[
  K_\mathscr{T}=p^1\frac{\partial}{\partial p^1} - l_1\frac{\partial}{\partial l_1}+ap^2\frac{\partial}{\partial p^2} - al_2\frac{\partial}{\partial l_2}.
 \]

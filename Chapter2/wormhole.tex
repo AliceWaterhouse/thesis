@@ -19,7 +19,7 @@ One dimensional $\phi^4$ theory is well--documented in the literature (see for e
 \subsection{Topological stability and the kink solution}
 The action takes the form
 \[
-S=\int_\R\bigg( \frac{1}{2}\eta^{ab}\partial_a\phi\partial_b\phi + \frac{1}{2}(1-\phi^2)^2\bigg)dx,
+S=\int_{\R^2}\bigg( \frac{1}{2}\eta^{ab}\partial_a\phi\partial_b\phi + \frac{1}{2}(1-\phi^2)^2\bigg)dxdt,
 \]
 where $x^a=(t,x)$ are coordinates on $\mathbb{R}^{1,1}$ and $\eta^{ab}$ is the Minkowski metric with signature $(-,+)$. Note that it has two vacua, given by $\phi=\pm 1$. Finiteness of the associated conserved energy
 \be \label{eq:E_integral_flat}
@@ -39,12 +39,12 @@ and we find a static solution $\phi=\mathrm{tanh}(x-c)$ which we call the flat k
 
 \subsection{Linear stability}
 
-A second notion of stability which will be important to our discussion is linear stability. On discarding non--linear terms, we find that small perturbations $\phi(t,x)=\Phi_0(x)+\mathrm{e}^{i\omega t}v_0(x)$ satisfy the Schr\"odinger equation
+A second notion of stability which will be important to our discussion is linear stability. On discarding non--linear terms, we find that small perturbations $\phi(t,x)=\Phi_0(x)+\mathrm{e}^{i\omega_0 t}v_0(x)$ satisfy the Schr\"odinger equation
 \begin{equation}
 \label{eq:zero_order}
 L_0v_0:=-v_0^{\prime\prime} - 2(1-3\Phi_0^2)v_0 = \omega^2_0v_0.
 \end{equation}
-The potential $V_0(x)=-2[1-3\Phi_0(x)^2]$ exhibits a so--called ``mass gap'', meaning that it takes a finite positive value in the limits $x\rightarrow\pm\infty$. In this case, $V_0(\pm\infty)=4$. For $\omega^2>4$, (\ref{eq:zero_order}) admits a continuous spectrum of wave--like solutions.
+The potential $V_0(x)=-2[1-3\Phi_0(x)^2]$ exhibits a so--called ``mass gap'', meaning that it takes a finite positive value in the limits $x\rightarrow\pm\infty$. In this case, $V_0(\pm\infty)=4$. For $\omega_0^2>4$, (\ref{eq:zero_order}) admits a continuous spectrum of wave--like solutions.
 
 %\begin{figure}
 %\includegraphics[width=14cm]{flatQMpotential.pdf}
@@ -61,7 +61,7 @@ where we have chosen the normalisation constant such that $\int_{-\infty}^{\inft
 
 The first of these is the zero mode of the kink. Its existence is guaranteed by the translation invariance of (\ref{eom:R11}), and up to a multiplicative constant it is equal to $\Phi_0^\prime(x)$. Excitation of this state corresponds to performing a Lorentz boost. In the non--relativistic limit, this amounts to replacing $\Phi_0(x)$ with $\Phi_0(x-vt)$ for some $v\ll 1$ \cite{Manton&Sutcliffe}.
 
-The second normalisable solution, called an \textit{internal mode}, has non--zero frequency $\omega$, and is thus time periodic. In the full non--linear theory, it decays through resonant coupling to the continuous spectrum \cite{Manton&Merabet}. This phenomenon is of considerable interest in non--linear PDEs, and was studied in a more general setting in \cite{SW98}. The corresponding process in the modified theory will be discussed in Section \ref{sec:dynamics}.
+The second normalisable solution, called an \textit{internal} or \textit{discrete} mode, has non--zero frequency $\omega_0$, and is thus time periodic. In the full non--linear theory, it decays through resonant coupling to the continuous spectrum \cite{Manton&Merabet}. This phenomenon is of considerable interest in non--linear PDEs, and was studied in a more general setting in \cite{SW98}. The corresponding process in the modified theory will be discussed in Section \ref{sec:dynamics}.
 
 Linear stability of the kink is equivalent to the Schr\"odinger operator $L_0$ in (\ref{eq:zero_order}) having no negative eigenvalues, so that linearised perturbations cannot grow exponentially with time. One way to see that the kink is linearly stable is via the Sturm oscillation theorem:
 
@@ -73,13 +73,13 @@ on the smooth square integrable functions $u$ on the interval $[0,\infty)$, with
 \end{theo}
 
 Note that the symmetry of (\ref{eq:zero_order}) under $x\mapsto -x$ means that any solution on the interval $[0,\infty)$ has a corresponding solution on the interval $(-\infty,0]$, and these solutions can be pieced together to make a smooth solution on $(-\infty,\infty)$ as long as the boundary conditions at $x=0$ are chosen to ensure parity $\pm1$. Thus there is a one--to--one correspondence between solutions on $[0,\infty)$ and solutions on $(-\infty,\infty)$ which are smooth at $x=0$.
-Since the eigenfunctions (\ref{eq:flat_vib_modes}) have no zeros on the interval $[0,\infty)$, it follows that there can be no eigenfunctions with $\omega^2<\omega_0^2=0$, and thus the kink is linearly stable.
+Since the eigenfunctions (\ref{eq:flat_vib_modes}) have no zeros on the interval $[0,\infty)$, it follows that there can be no eigenfunctions with $\omega_0^2<0$, and thus the kink is linearly stable.
 
 \subsection{Asymptotic stability}
-The final notion of stability that we will consider is that of asymptotic stability. Stated simply, asymptotic stability of the kink means that for sufficiently small initial pertubations, solutions of (\ref{eom:R11}) will converge locally to $\Phi_0(r)$ or its Lorentz boosted counterpart. This was proved in \cite{KowalczykMM} for odd perturbations, but has not been proved in the general case.
+The final notion of stability that we will consider is that of asymptotic stability. Stated simply, asymptotic stability of the kink means that for sufficiently small initial pertubations, solutions of (\ref{eom:R11}) will converge locally to $\Phi_0(x)$ or its Lorentz boosted counterpart. This was proved in \cite{KowalczykMM} for odd perturbations, but has not been proved in the general case.
 
 \subsection{Derrick's scaling argument}
-Generalisation of the finite energy $\phi^4$ kink to higher dimensional Minkowski spacetimes is prohibited by a scaling argument due to Derrick \cite{Derrick}. Suppose $\Phi_d({\bf x})$ is a static, finite energy solution to the equation of motion of the $\phi^4$ theory on $\mathbb{R}^{1,n}$. Then it is a minimiser of the (static) energy
+Generalisation of the finite energy $\phi^4$ kink to higher dimensional Minkowski spacetimes is prohibited by a scaling argument due to Derrick \cite{Derrick}. Suppose $\Phi_n({\bf x})$ is a static, finite energy solution to the equation of motion of the $\phi^4$ theory on $\mathbb{R}^{1,n}$. Then it is a minimiser of the (static) energy
 \[
 E(\Phi_n)=\int\Big(\nabla\Phi_n({\bf x})\cdot\nabla\Phi_n({\bf x}) + U(\Phi_n)\Big)d^nx=:E_1+E_2,
 \]
@@ -91,7 +91,7 @@ e(\mu)= E(\Phi_n(\mu{\bf x}))=&\int\Big(\nabla(\Phi_n(\mu {\bf x}))\cdot\nabla(\
 \end{align*}
 where we have obtained the last line by a change of variables from ${\bf x}$ to $\mu{\bf x}$.
 
-If $\Phi_n({\bf x})$ is a minimiser of $E$ then it $\mu=1$ must also be a stationary point of $e(\mu)$. Evaluating the derivative yields
+If $\Phi_n({\bf x})$ is a minimiser of $E$ then $\mu=1$ must also be a stationary point of $e(\mu)$. Evaluating the derivative yields
 \[
 e^\prime(\mu)= \begin{cases}
       -n\mu^{-n-1}E_2, & \text{if}\ n=2 \\
@@ -111,7 +111,7 @@ g=-dt^2+dr^2+(r^2+a^2)(d\vartheta^2 + \sin^2\vartheta d\varphi^2)
 \ee
 for some constant $a>0$, and $-\infty<r<\infty$. This spacetime was first studied by Ellis \cite{Ellis} and Bronnikov \cite{Bronnikov}, and has featured in a number of recent studies about kinks and their stability \cite{wavemaps,SG}. Note the presence of asymptotically flat ends as $r\rightarrow\pm\infty$, connected by a spherical throat of radius $a$ at $r=0$.
 
-Our action is the modified by the presence of a non-flat metric:
+Our action is modified by the presence of a non-flat metric:
 \be
 \nonumber
 S=\int\bigg( \frac{1}{2}g^{ab}\p_a\phi\p_b\phi + \frac{1}{2}(1-\phi^2)^2\bigg)\sqrt{-g}dx,
@@ -129,7 +129,7 @@ where $x^a$ are now local coordinates on $M$. Variation with respect to $\phi$ g
 \label{eom.coordfree}
 \square_g\phi+2\phi(1-\phi^2)=0
 \ee
-where $\square_g\phi=\frac{1}{\sqrt{-g}}\p_a(g^{ab}\sqrt{-g}\p_b\phi)$. We assume $\phi$ is independent of the angular coordinates $(\vartheta,\varphi)$, so (\ref{eom.coordfree}) can be written explicitly as
+where $\square_g\phi=\frac{1}{\sqrt{-g}}\p_a(g^{ab}\sqrt{-g}\p_b\phi)$. We will always assume $\phi$ is independent of the angular coordinates $(\vartheta,\varphi)$, so (\ref{eom.coordfree}) can be written explicitly as
 \be
 \label{eom.coords}
 \phi_{tt}=\phi_{rr}+\frac{2r}{r^2+a^2}\phi_r+2\phi(1-\phi^2).
@@ -149,10 +149,10 @@ Static solutions $\phi(r)$ satisfy
 \ee
 which, imagining $r$ as a time coordinate, can be thought of as a Newtonian equation of motion for a particle at position $\phi$ moving in a potential $\mathcal{U}(\phi)=-(1-\phi^2)/2$, with a time dependent friction term.
 
-In addition to the two vacuum solutions, we have a single soliton solution which interpolates between the saddle points at $(-1,0)$ and $(1,0)$ in the in the $(\phi,\phi^\prime)$ plane. Its existence and uniqueness among odd parity solutions follow from a shooting argument: suppose the particle lies at $\phi=0$ when $r=0$. If its velocity $\phi^\prime(0)$ is too small, it will never reach the local maximum of the potential at $\phi=1$, but if $\phi^\prime(0)$ is too large it will overshoot the maximum so that $\mathcal{U}(\phi)\rightarrow -\infty$ as $r\rightarrow\infty$, thus having infinite energy. Continuity ensures that there is some critical velocity $\phi^\prime(0)$ such that the particle reaches $\phi=1$ in infinite time and has zero velocity upon arrival. This corresponds to the non--trivial kink solution, which we call $\Phi(r)$. Time reversal implies that $\phi\rightarrow -1$ as $r\rightarrow -\infty$, and that the anti--kink $\phi(r)=-\Phi(r)$ is also a solution.
+In addition to the two vacuum solutions, we have a single soliton solution which interpolates between the saddle points at $(-1,0)$ and $(1,0)$ in the $(\phi,\phi^\prime)$ plane. Its existence and uniqueness among odd parity solutions follow from a shooting argument: suppose the particle lies at $\phi=0$ when $r=0$. If its velocity $\phi^\prime(0)$ is too small, it will never reach the local maximum of the potential at $\phi=1$, but if $\phi^\prime(0)$ is too large it will overshoot the maximum so that $\mathcal{U}(\phi)\rightarrow -\infty$ as $r\rightarrow\infty$, thus having infinite energy. Continuity ensures that there is some critical velocity $\phi^\prime(0)$ such that the particle reaches $\phi=1$ in infinite time and has zero velocity upon arrival. This corresponds to the non--trivial kink solution, which we call $\Phi(r)$. Time reversal implies that $\phi\rightarrow -1$ as $r\rightarrow -\infty$, and that the anti--kink $\phi(r)=-\Phi(r)$ is also a solution.
 
 We can find $\Phi(r)$ numerically using a shooting method for the gradient at $r=0$. %For $a=1$ we find $\phi^\prime(0)=1.379602$. A plot of the corresponding soliton is shown in Figure \ref{fig:soliton}.
-method for the gradient at $r=0$. Figure \ref{fig:several_kinks} shows such numerically generated kinks for several values of $a$. Note that the absolute value of $\Phi(r)$ is always greater than or equal to that of the flat kink $\Phi_0(r)$, and that at fixed non--zero $r$, the absolute value of $\Phi$ decreases as $a$ increases. The reason for this will become clear in Section \ref{sec:linearised_pert}. In Section \ref{sec:large_a} we examine $\Phi(r)$ in the limit where $a$ is large, finding that it reduces to the flat kink $\Phi_0(r)$, and examining its departure from the flat kink at first order in $1/a^2$.
+Figure \ref{fig:several_kinks} shows such numerically generated kinks for several values of $a$. Note that the absolute value of $\Phi(r)$ is always greater than or equal to that of the flat kink $\Phi_0(r)$, and that at fixed non--zero $r$, the absolute value of $\Phi$ decreases as $a$ increases. The reason for this will become clear in Section \ref{sec:linearised_pert}. In Section \ref{sec:large_a} we examine $\Phi(r)$ in the limit where $a$ is large, finding that it reduces to the flat kink $\Phi_0(r)$, and examining its departure from the flat kink at first order in $1/a^2$.
 
 We again label the values at the boundary as
 \[
@@ -268,7 +268,7 @@ Figure \ref{fig:several_potentials} shows the potential $V(r)$ for several value
 \end{figure}
 
 \begin{prop}
-The kink solution $\Phi(r)$ is linearly stable.
+The kink solution $\Phi(r)$ is linearly stable with respect to spherically symmetric perturbations.
 \end{prop} 
 
 {\bf Proof.} We first decompose the potential $V(r)$ in (\ref{schrod}) as $V=V_0+V_1+V_a$, where
@@ -538,7 +538,7 @@ These equations have initial conditions $\alpha(0)$ and $\eta(0,r)$ such that
 \dot{\phi}(0,r) &= (r^2+a^2)^{-1/2}(\dot{\alpha}(0)v(r) + \dot{\eta}(0,r)).
 \end{align*}
 
-In the following analysis we investigate decay of $\alpha(t)$. Equation (\ref{eq:alpha}) has a homogeneous solution consisting of oscillations with frequency $\omega$. Since $2\omega$ lies within the continuous spectrum of $L$, there will be a resonant interaction between the these oscillations and the radiation modes in $\eta$ with frequencies $\pm 2 \omega$, arising from the term of order $\alpha^2$ in the right hand side of (\ref{eq:eta}). Thus, to leading order, (\ref{eq:eta}) is a driven wave equation with driving frequency $2\omega$. This resonant part of $\eta$ will have a back--reaction on $\alpha$ through (\ref{eq:alpha}), which will result in decay of the internal mode oscillations.
+In the following analysis we investigate decay of $\alpha(t)$. Equation (\ref{eq:alpha}) has a homogeneous solution consisting of oscillations with frequency $\omega$. Since $2\omega$ lies within the continuous spectrum of $L$, there will be a resonant interaction between these oscillations and the radiation modes in $\eta$ with frequencies $\pm 2 \omega$, arising from the term of order $\alpha^2$ in the right hand side of (\ref{eq:eta}). Thus, to leading order, (\ref{eq:eta}) is a driven wave equation with driving frequency $2\omega$. This resonant part of $\eta$ will have a back--reaction on $\alpha$ through (\ref{eq:alpha}), which will result in decay of the internal mode oscillations.
 
 We now define $\alpha_1=\alpha,\ \omega\alpha_2=\dot{\alpha}_1$  so that (\ref{eq:alpha}) becomes
 \[
@@ -691,16 +691,16 @@ The so--called Fermi Golden Rule then reads
 \caption{\label{fig:decay} The decay of internal mode oscillations for various initial conditions when $a=0.5$.}
 \end{figure}
 
-In order to integrate the PDE (\ref{eom.coords}) to large times $t$, we employ the method of hyperboloidal foliations and scri--fixing \cite{hyp_foliations}. Following \cite{wavemaps, SG}, we define
+In order to integrate the PDE (\ref{eom.coords}) to large times $t$, we employ the method of hyperboloidal foliations and scri--fixing \cite{hyp_foliations}. This is necessary because surfaces of constant $t$ can never intersect with future null infinity, as they always reach the boundary of the spacetime at spatial infinity. In order to integrate out to large times at large $r$, i.e. to reach future null infinity, we define
 \[
 s = \frac{t}{a} - \sqrt{\frac{r^2}{a^2}+1}, \qquad y=\mathrm{arctan}\Big(\frac{r}{a}\Big),
 \]
-resulting in a hyperbolic equation
+resulting in the hyperbolic equation
 \be
 \label{eq:s_and_y}
-\p_s\p_sF + 2\mathrm{sin}(y)\p_y\p_sF + \frac{1 + \mathrm{sin}^2(y)}{\mathrm{cos}(y)}\p_sF = \mathrm{cos}^2(y)\p_y\p_yF + 2a^2\frac{F(1-F^2)}{\mathrm{cos}^2(y)}.
+\p_s\p_sF + 2\mathrm{sin}(y)\p_y\p_sF + \frac{1 + \mathrm{sin}^2(y)}{\mathrm{cos}(y)}\p_sF = \mathrm{cos}^2(y)\p_y\p_yF + 2a^2\frac{F(1-F^2)}{\mathrm{cos}^2(y)}
 \ee
-for $F(s,y)=\phi(t,r)$. %The surfaces of constant $s$ approach right future null infinity $\mathcal{J}^+_R$ along outgoing null cones of constant retarded time $t-r$, and left future null infinity $\mathcal{J}^+_L$ along outgoing null cones of constant advanced time $t+r$.
+for $F(s,y)=\phi(t,r)$. Then surfaces of constant $s$ approach right future null infinity $\mathcal{J}^+_R$ along outgoing null cones of constant retarded time $t-r$, and left future null infinity $\mathcal{J}^+_L$ along outgoing null cones of constant advanced time $t+r$. For more details see \cite{SG,hyp_foliations}.
 
 We solve the corresponding initial value problem at space--like hypersurfaces of constant $s$, specifying $\phi(s=0,y)$ and $\p_s\phi(s=0,y)$. No boundary conditions are required, since the principal symbol of (\ref{eq:s_and_y}) degenerates to $\p_s(\p_s\pm 2\p_y)$ as $y\rightarrow\pm \pi/2$, so there are no ingoing characteristics. This reflects the fact that no information comes in from future null infinity.
 

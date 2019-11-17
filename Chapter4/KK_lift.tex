@@ -5,14 +5,20 @@
 
 \chapter{An Einstein metric on an $\R^*$ bundle over $M$}
 \label{chap:KK_lift}
-In this chapter, we show that there is a canonical Einstein of metric on an $\R^*$ bundle over $M$, with a connection whose curvature is the pull--back
+In this chapter, we show that there is a canonical Einstein metric on an $\R^*$ bundle over $M$, with a connection whose curvature is the pull--back
 of the symplectic structure from $M$. This metric is interesting in the context of Kaluza--Klein theory. The material covered here is based on material appearing in \cite{DW}.
 
 %\mynote{I would like to understand this section from the tractor perspective. Try comparing my lifted metric to what can be obtained by slightly modifying the tractor construction of $g$.}
 
 \section{The model case} \label{sec:quadric}
 
-We first note that the flat projective structure on $\mathbb{RP}^{n}$ gives a one--parameter family of $2n$--dimensional Einstein spaces $M$ which are a Kaluza--Klein reductions of quadrics in $\mathbb{R}^{n+1,n+1}$. For $N=\RP^n$, the family $\{(g_\Lambda,\Omega_\Lambda)\,;\,\Lambda\neq 0\}$ is given by
+We first note that the flat projective structure on $\mathbb{RP}^{n}$ gives a one--parameter family of $2n$--dimensional Einstein spaces $M$ which are so--called Kaluza--Klein reductions of quadrics in $\R^{2n+2}$ endowed with a flat neutral signature metric. When $\R^{2n+2}$ carries such a metric, we call it $\mathbb{R}^{n+1,n+1}$. Note that the phrase Kaluza--Klein refers to a classical unified field theory of gravitation and electromagnetism. We will use it to mean the construction of $g$ from a metric in dimension $2n+1$ of the form
+\[
+g \pm f^2(A+dt)^2,
+\]
+where $g$, $A$ and $f$ are a metric, Maxwell potential and function on $M$.
+
+For $N=\RP^n$, the family $\{(g_\Lambda,\Omega_\Lambda)\,;\,\Lambda\neq 0\}$ is given by
 \begin{eqnarray}
 g_{\Lambda} & = &  dx^{i} \odot d\zeta_{i}+\Lambda\zeta_{i}\zeta_j dx^{i}\odot dx^j \label{eq:g_LambdaModel}\\
 \Omega_{\Lambda} & = &  d\zeta_{i}\wedge dx^{i}.\nonumber
@@ -70,7 +76,7 @@ generalisation to the curved case.
 
 \section{The general case}
 
-We now return to a general projective structure $(N,[\nabla])$. Since
+We now return to a general projective structure $(N,[\nabla])$, corresponding to the metric and symplectic form (\ref{eq:general_g},\ref{eq:general_omega}). Since
 symplectic form picks out the antisymmetric part of the Schouten tensor,
 it has the fairly simple form
 \[
@@ -254,16 +260,16 @@ $a,b=1,\dots,2n$):
  &  & -(\Gamma_{ij}^{k}-2\Lambda \zeta_{(i}\delta_{j)}^{k})(e^{k+n}+(\Gamma_{km}^{l}\zeta_{l}-\Lambda \zeta_{k}\zeta_{m}-\Lambda^{-1}\Rho_{km})e^{m})\wedge e^{j}\\
  & = & \bigl[\Lambda^{-1}E_{m}(\Rho_{ij})-E_{m}(\Gamma_{ij}^{k})\zeta_{k}+\Lambda^{-1}\Gamma_{ij}^{k}\Rho_{km}-\Gamma_{ij}^{k}\Gamma_{km}^{l}\zeta_{l}+\Lambda\Gamma_{ij}^{k}\zeta_{m}\zeta_{k}\\
  &  & +2\Lambda \zeta_{(i}(\Gamma_{j)m}^{l}\zeta_{l}-\Lambda \zeta_{j)}\zeta_{m}-\Lambda^{-1}\Rho_{j)m})\bigr]e^{m}\wedge e^{j}+(2\Lambda \zeta_{(i}\delta_{j)}^{k}-\Gamma_{ij}^{k})e^{k+n}\wedge e^{j}\\
- & = & \bigl[\Lambda^{-1}{\nabla}_{m}\Rho_{ij}-({\nabla}_{m}\Gamma_{ij}^{k})\zeta_{k}-2\zeta_{(i}\Rho_{j)m}\bigr]e^{m}\wedge e^{j}+(2\Lambda \zeta_{(i}\delta_{j)}^{k}-\Gamma_{ij}^{k})e^{k+n}\wedge e^{j}\\
+ & = & \bigl[\Lambda^{-1}{\nabla}_{m}\Rho_{ij}-({\nabla}_{m}\Gamma_{ij}^{k})\zeta_{k}-2\zeta_{(i}\Rho_{j)m}\bigr]e^{m}\wedge e^{j}+(2\Lambda \zeta_{(i}\delta_{j)}^{k}-\Gamma_{ij}^{k})e^{k+n}\wedge e^{j}.\\
 \end{eqnarray*}
 Note that we have used ${\nabla}$ to denote the chosen connection on $N$
 with components $\Gamma_{jk}^{i}$; it is a different object to the Levi--Civita connection $^{\bf g}\nabla$ on $M$. Next we wish to read off the spin
 connection $\psi_{\ b}^{a}$ such that ${d}e^{a}=-\psi_{\ b}^{a}\wedge e^{b}$
 and the following index symmetries are satisfied:
 \begin{eqnarray*}
-\psi_{\ j}^{i} & = & \frac{1}{2}\psi_{i+n\, j}=-\frac{1}{2}\psi_{j\, i+n}=-\psi_{\ i+n}^{j+n}\\
-\psi_{\ j+n}^{i} & = & \frac{1}{2}\psi_{i+n\, j+n}=-\frac{1}{2}\psi_{j+n\, i+n}=-\psi_{\ i+n}^{j}\\
-\psi_{\ j}^{i+n} & = & \frac{1}{2}\psi_{i\, j}=-\frac{1}{2}\psi_{j\, i}=-\psi_{\ i}^{j+n}
+\psi_{\ j}^{i} & = & \frac{1}{2}\psi_{i+n\, j}=-\frac{1}{2}\psi_{j\, i+n}=-\psi_{\ i+n}^{j+n},\\
+\psi_{\ j+n}^{i} & = & \frac{1}{2}\psi_{i+n\, j+n}=-\frac{1}{2}\psi_{j+n\, i+n}=-\psi_{\ i+n}^{j},\\
+\psi_{\ j}^{i+n} & = & \frac{1}{2}\psi_{i\, j}=-\frac{1}{2}\psi_{j\, i}=-\psi_{\ i}^{j+n}.
 \end{eqnarray*}
 We find that 
 \begin{eqnarray*}
@@ -325,7 +331,7 @@ so the only term we are interested in is
 \]
 Again, discarding the $e^{m}\wedge e^{k}$ term gives
 \[
--\Lambda(e^{j+n}\wedge e^{k}+\delta_{j}^{i}e^{k+n}\wedge e^{k})=\frac{1}{2}R_{l\, m+n\, j}^{\qquad\ i}\,e^{l}\wedge e^{m+n}+\frac{1}{2}R_{m+n\, l\, j}^{\qquad\ i}\,e^{m+n}\wedge e^{l},
+-\Lambda(\delta^i_ke^{j+n}\wedge e^{k}+\delta_{j}^{i}e^{k+n}\wedge e^{k})=\frac{1}{2}R_{l\, m+n\, j}^{\qquad\ i}\,e^{l}\wedge e^{m+n}+\frac{1}{2}R_{m+n\, l\, j}^{\qquad\ i}\,e^{m+n}\wedge e^{l},
 \]
 so we conclude
 \[

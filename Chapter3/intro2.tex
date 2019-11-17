@@ -27,11 +27,13 @@ We also occasionally write $A^2$ for $A\odot A$, and in Chapter \ref{chap:EW_and
 \[
 \omega=\omega_{a\dots b}\,dx^{a}\wedge\dots\wedge dx^{b}, \qquad F_{ab}\,{d}x^{a}\wedge{d}x^{b}=F_{[ab]}\,{d}x^{a}\otimes{d}x^{b}.
 \]
+\item We use $\hook$ to denote a contraction between a vector and a form.
 \item The Riemann curvature tensor $R_{abc}^{\quad d}$ of a connection $\nabla_a$ is defined by
 \[
 (\nabla_a\nabla_b - \nabla_b\nabla_a)X^d = R_{abc}^{\quad d}X^c,
 \]
 where $X$ is any vector field.
+\item The Ricci tensor is defined by the contraction $R_{bc} = R_{abc}^{\quad a}$.
 \end{itemize}
 
 
@@ -93,9 +95,9 @@ If we combine this with coordinate patches $\mathcal{U}_i$ where $P^i\neq 0,\ i=
 \end{rmk}
 
 \begin{rmk}
-The flat projective structure on $\RP^n$ has a special duality property which we now discuss. Consider the set of planes through the origin in $\R^{n+1}$. These can be specified by their normal vector, which is defined only up to multiplication by $\R^*$. Let us denote such a plane by a non--zero row vector $L\in\R_{n+1}$. A point $P\in\R^{n+1}$ lies in the plane defined by $L$ if and only if $L\cdot P=0$.
+The flat projective structure on $\RP^n$ has a special duality property which we now discuss. Consider the set of hyperplanes through the origin in $\R^{n+1}$. These can be specified by their normal vector, which is defined only up to multiplication by $\R^*$. Let us denote such a hyperplane by a non--zero row vector $L\in\R_{n+1}$. A point $P\in\R^{n+1}$ lies in the hyperplane defined by $L$ if and only if $L\cdot P=0$.
 
-When we projectivise the $\R^{n+1}$, any $P\neq 0$ descends to a point $[P]\in\RP^n$, and any plane descends to a line $[L]\subset\RP^n$. The incidence relation $L\cdot P=0$ is now equivalent to the point $[P]$ lying in the line $[L]$. The homogeneous coordinates $[L]$ parametrise a second projective surface which we think of as the dual to the $\RP^n$ parametrised by $[P]$, and denote $\RP_n$.
+When we projectivise the $\R^{n+1}$, any $P\neq 0$ descends to a point $[P]\in\RP^n$, and any hyperplane descends to a hypersurface $[L]\subset\RP^n$. The incidence relation $L\cdot P=0$ is now equivalent to the point $[P]$ lying in the hypersurface $[L]$. The homogeneous coordinates $[L]$ parametrise a second projective space which we think of as the dual to the $\RP^n$ parametrised by $[P]$, and denote $\RP_n$.
 \end{rmk}
 
 \begin{rmk}
@@ -110,7 +112,7 @@ for some $a\in GL(n,\mathbb{R})$ and $b\in\mathbb{R}_{n}$.
 \end{rmk} 
 
 \begin{rmk}
-It can be shown that a projective structure in dimension $n>2$ is flat if and only if its Weyl projective curvature tensor vanishes. The necessary and sufficient condition in dimension $n=2$ is the vanishing of the Cotton tensor $\nabla_{[i}\Rho_{j]k}$ for any choice of representative connection.
+The necessary and sufficient condition for flatness of a projective structure depends on the dimension of the manifold on which it is defined. In dimension $n>2$, a projective structure is flat if and only if its Weyl projective curvature tensor vanishes. However, for $n=2$ the projective Weyl tensor is always vanishing. It can be shown that a projective structure on a \textit{surface} is flat if and only if the Cotton tensor $\nabla_{[i}\Rho_{j]k}$ vanishes for any choice of representative connection.
 \end{rmk}
 
 \subsection{The Cartan bundle}
@@ -121,9 +123,9 @@ is via the Cartan bundle \cite{Cartan} of the projective structure $(N,[\nabla])
 In the Riemannian case, the model space is $\mathbb{R}^{n}\cong\mathrm{Euc}(n)/SO(n)$. The corresponding Cartan geometry is a general, curved Riemannian manifold. One has an obvious subclass of frames which are ``adapted'' to the metric, i.e. those which are orthonormal. We can thus think of a curved Riemannian manifold as a principal $SO(n)$ bundle whose tangent spaces are modelled on $\mathbb{R}^{n}\cong\mathfrak{Euc}(n)/\mathfrak{so}(n)$. We say that Riemannian manifolds are Cartan geometries of type $(\mathrm{Euc}(n),SO(n))$.
 
 The theory of Cartan geometries was developed as part of Cartan's
-\textit{method of moving frames}. The idea is to pick out some adapted frames for manifolds equipped with some non-metric structure. The bundle of such frames over a manifold is then a principal bundle $\pi_\mathcal{G}:\mathcal{G}\rightarrow N$ with structure group $S$. In the projective case, the notion of a \textit{second order frame} must be introduced to obtain an object which is correctly adapted to the projective structure.
+\textit{method of moving frames}. The idea is to pick out some adapted frames for manifolds equipped with some non-metric structure. The bundle of such frames over a manifold is then a principal bundle $\pi_\mathcal{G}:\mathcal{G}\rightarrow N$ with structure group $S$.
 
-The bundle $P$ is equipped with a $\mathfrak{g}$-valued one-form
+The bundle $\mathcal{G}$ is equipped with a $\mathfrak{g}$-valued one-form
 $\theta$ called the Cartan connection. It defines an isomorphism $\theta:T_{u}\mathcal{G}\rightarrow\mathfrak{g}$ at every point $u\in \mathcal{G}$ such that the vertical subspace $\mathcal{V}_{u}\mathcal{G}\subset T_{u}\mathcal{G}$ is mapped to $\mathfrak{s}$ and the horizontal subpace $\mathcal{H}_{u}\mathcal{G}\subset T_{u}\mathcal{G}$ is defined as the inverse image of $\mathfrak{g}/\mathfrak{s}$. Note that it is not a connection in the usual sense of a principal bundle connection, since it takes value in a Lie algebra larger than that of the structure group. Further details can be found in \cite{Sharpe}.
 
 %The importance of the Cartan connection is that it satisfies a number of properties, in particular equivariance, i.e. $R_{h}^{*}\theta=\mathrm{Ad}(h^{-1})\theta$ for all $h\in H$. 
@@ -179,7 +181,7 @@ where points in $\mathcal{G}\times_{\rho_\mathcal{B}} \mathcal{B}$ are equivalen
 
 We thus obtain a vector bundle over $N$ whose fibres are diffeomorphic to $\mathcal{B}$. A section $\tilde{\sigma}:N\rightarrow \mathcal{G}\times_{\rho_\mathcal{B}} \mathcal{B}$ is represented by a map ${\sigma}:\mathcal{G}\rightarrow \mathcal{B}$ which is equivariant in the sense that ${\sigma}(us)=\rho_\mathcal{B}(s^{-1}){\sigma}(u)$ for all $s\in S$. Importantly, any such bundle inherits a connection from the Cartan connection $\theta$ on $\mathcal{G}$. The concept of an associated bundle applies to any principal bundle, but we call vector bundles which are associated to a Cartan bundle \textit{tractor} bundles, and the connections that they inherit from the Cartan connection are called tractor connections.
 
-A particularly important example of a vector bundle associated to $\mathcal{G}$ is the \textit{cotractor bundle}, which defined by the canonical right action of $S$ on $\R_{n+1}$ given by $(s,L)\mapsto Ls^{-1}$. We call this bundle $\pi_\mathcal{T}:\cT^*\rightarrow N$. In order to describe its connection, we consider a section represented by $\sigma:\mathcal{G}\rightarrow\R_{n+1}$ and define the one--form
+A particularly important example of a vector bundle associated to $\mathcal{G}$ is the \textit{cotractor bundle}, which defined by the canonical action of $S$ on $\R_{n+1}$ given by $(s,L)\mapsto Ls^{-1}$. We call this bundle $\pi_\mathcal{T}:\cT^*\rightarrow N$. In order to describe its connection, we consider a section represented by $\sigma:\mathcal{G}\rightarrow\R_{n+1}$ and define the one--form
 \be \label{eq:df-ftheta}
 d\sigma - \sigma\theta.
 \ee
@@ -191,7 +193,7 @@ making $\sigma\mapsto d\sigma-\sigma\theta$ an equivariant connection on $\cT^*$
 
 Although this construction of $\mathcal{T}^*$ relies on the Cartan bundle, it is possible to construct it independently. In order to do so we need the notion of a \textit{projective density}.%To do so, we consider the transformation of the derivative of a volume form under a projective change (\ref{eq:proj_change}). This approach can be motivated by the fact that the special linear group $SL(n,\R)$, which we have already seen to be important in projective geometry, is the group of volume preserving transformations of $\R^n$.
 \subsubsection{Projective densities}
-From the projective change of connection (\ref{eq:proj_change}) we can derive the the corresponding change in $\nabla\chi$ for some $m$--form $\chi$ on $N$:
+From the projective change of connection (\ref{eq:proj_change}) we can derive the corresponding change in $\nabla\chi$ for some $m$--form $\chi$ on $N$:
 \be \label{eq:p-form_change}
 \ov{\nabla}_i\chi_{jk\dots l} = \nabla_i\chi_{jk\dots l} - (m+1)\Upsilon_i\chi_{jk\dots l} - (m+1)\Upsilon_{[i}\chi_{jk\dots l]}.
 \ee
@@ -398,8 +400,7 @@ Explicitly, a vector field $\widehat{K}$ is projective if it satisfies
 \mathcal{L}_{\widehat{K}}\Gamma_{ij}^{k}=\delta_{i}^{k}\Upsilon_{j}+\delta_{j}^{k}\Upsilon_{i}\label{eq:proj_transf}
 \end{equation}
 for some 1-form $\Upsilon$, where $\Gamma_{ij}^{k}$ are the connection
-components, and their Lie derivative is defined (see \cite{yano})
-by
+components, and their Lie derivative is defined by\footnote{Despite the fact that connection components are not tensorial objects, one can still define their Lie derivative with respect to a vector $\widehat{K}$ by considering how they transform when one moves infinitesimally along the curve defined by $\widehat{K}$. See \cite{yano} for further details.}
 \begin{equation}
 \mathcal{L}_{\widehat{K}}\Gamma_{ij}^{k}\equiv\frac{\partial^{2}\widehat{K}^{k}}{\partial x^{i}\partial x^{j}}+\widehat{K}^{m}\frac{\partial\Gamma_{ij}^{k}}{\partial x^{m}}-\Gamma_{ij}^{m}\frac{\partial \widehat{K}^{k}}{\partial x^{m}}+\Gamma_{im}^{k}\frac{\partial \widehat{K}^{m}}{\partial x^{j}}+\Gamma_{mj}^{k}\frac{\partial \widehat{K}^{m}}{\partial x^{i}}.\label{eq:liederivGamma}
 \end{equation}
@@ -441,7 +442,7 @@ $$
 
 On $\cT^*$ there is  a canonical density $\tau\in \Gamma(\pi_\cT^*\cE(1))$ given by
 $$
-\tau:= V\hook W .
+\tau:= V\hook W,
 $$
 %% and this is homogeneous of degree 1 up the fibres of $\pi$ in the total space $\cT^*$.
 Note that $\tau$ is homogeneous of degree 1 up the fibres of the
@@ -455,7 +456,7 @@ to denote, in particular, the zero locus of $\tau$. We will show in Chapter \ref
 
 
 \subsection{The model case} \label{sec:intro_model}
-When $(N,[\nabla])$ is the flat projective structure $\RP^n$,the metric and symplectic form (\ref{eq:coord_form}) reduce to
+When $(N,[\nabla])$ is the flat projective structure $\RP^n$, the metric and symplectic form (\ref{eq:coord_form}) reduce to
 \be \label{eq:intro_model_g}
 g = d\zeta_i\odot dx^i + \zeta_i\zeta_j\,dx^i\odot dx^j, \quad \Omega = d\zeta_i\wedge dx^i,\quad i,j=1,\dots,n.
 \ee
@@ -465,7 +466,7 @@ We can thus write $M$ as
 M=\{([P],[L])\in\RP^n\times\RP_n\ |\ P\cdot L\neq 0\}.
 \]
 
-As discussed in Section \ref{sec:projgeom}, a point $[L]\in\RP_n$ represents a line $[L]\subset\RP^n$ which passes through $P\in\RP^n$ if and only if $L\cdot P=0$. In Chapter \ref{chap:EW_and_toda} we will show that the conformal structure on $M$ can be obtained by demanding that two pairs $([P], [L])$ and $([\tP], [\tL])$ are null--separated if there exists a line which contains the three points $([P], [\tP], [L]\cap [\tL])$.
+As discussed in Section \ref{sec:projgeom}, a point $[L]\in\RP_n$ represents a line $[L]\subset\RP^n$ which passes through $P\in\RP^n$ if and only if $L\cdot P=0$. In Chapter \ref{chap:EW_and_toda} we will show that for $n=2$, the conformal structure on $M$ can be obtained by demanding that two pairs $([P], [L])$ and $([\tP], [\tL])$ are null--separated if there exists a line which contains the three points $([P], [\tP], [L]\cap [\tL])$.
 
 We also find in the model case that the symplectic form $\Omega$ is parallel with respect to the Levi--Civita connection $^{\bf g}\nabla$ of $g$, meaning that the endomorphism $J$ of $TM$ which relates $g$ and $\Omega$ is also parallel. As a result of this, the distributions $D_\pm$ defined by the two $n$--dimensional eigen--bundles of $J$ are parallel in the sense that $^{\bf g}\nabla_{\xi_1}\xi_2\in\Gamma(D_\pm)$ for all $\xi_1\in \Gamma(TM),\ \xi_2\in\Gamma(D_\pm)$. This makes the distributions \textit{Frobenius integrable}, meaning that the Lie bracket of any two sections of $D_\pm$ is also a section of $D_\pm$, or equivalently (as shown by Frobenius) that each of the two distributions is tangent to a foliation by sub--manifolds of dimension $n$ at every point.
 
